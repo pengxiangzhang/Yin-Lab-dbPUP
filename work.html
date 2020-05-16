@@ -9,8 +9,10 @@
     <link href="styles/style.css" rel="stylesheet">
    </style>
 
-<script src="https://cdn.jsdelivr.net/npm/handsontable@7.4.2/dist/handsontable.full.min.js"></script>
-<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable@7.4.2/dist/handsontable.full.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@latest/dist/handsontable.full.min.css">
+<link rel="stylesheet" type="text/css" href="https://handsontable.com/static/css/main.css">
+<script src="https://cdn.jsdelivr.net/npm/handsontable@latest/dist/handsontable.full.min.js"></script>
+
 
   </head>
 
@@ -33,7 +35,6 @@
             </ul>
         </nav>
     </header>
-    <body>
     <div class = "subHeader">
         <p>This is data library</p>
     </div>
@@ -47,11 +48,11 @@
     </div>
 
 
-<div id="example1" class="hot handsontable htColumnHeaders"></div>
+<div id="hot"></div>
 
 <script>
-function getCarData(){
-        return [{
+var dataObject = [
+            {
             "Number": "1",
             "Metabolic conversion substrate\r\nsubstrate": "C-ring cleavage quercetin",
             "strain": "Bacillus subtilis (strain 168)",
@@ -639,13 +640,10 @@ function getCarData(){
             "DOI": "10.1128/AEM.01233-19",
             "Ref": "An NADH-Dependent Reductase from Eubacterium ramulus Catalyzes the Stereospecific Heteroring Cleavage of Flavanones and Flavanonols."
         }];
-}
-
-var
-   container1 = document.getElementById('example1'),
-      hot1;
-   hot1 = new Handsontable(container1, {
-    data: getCarData(),
+var hotElement = document.querySelector('#hot');
+var hotElementContainer = hotElement.parentNode;
+var hotSettings = {
+    data: dataObject,
     colHeaders: ['Number', 'Metabolic conversion substrate\r\nsubstrate', 'strain', 'source','protein / enzyme','uniprot','pfam','status','gene','E.C','sequence','substrate','production','structure (x ray)','3D SD','Km (μM）','Vmax','Kcat','DOI','Ref'],
     columns: [
     {
@@ -729,10 +727,22 @@ var
   editor: false
 },
 
-]
- });
+],
+  stretchH: 'all',
+  width: '100%',
+  autoWrapRow: true,
+  height: 620,
+  maxRows: 22,
+  manualRowResize: true,
+  manualColumnResize: true,
+  rowHeaders: true,
+    manualRowMove: true,
+  manualColumnMove: true,
+  contextMenu: true,
+  filters: true,
+  dropdownMenu: true};
+  var hot = new Handsontable(hotElement, hotSettings);
 </script>
-</body>
       <footer>
           <ul>
               <li><a href="mailto:yhe@huskers.unl.edu">Email</a></li>
