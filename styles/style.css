@@ -1,0 +1,178 @@
+body {
+  margin:0;
+  background-image: url(../images/double-bubble-outline.png)
+}
+
+.pic {
+    width: 300px;
+}
+
+/* Header and Nav Styles*/
+.topHeader .breadcrumb {
+    margin: 0;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+    height: 90px;
+    #padding: 0 5%;
+    background-image: url(../images/DNA.jpg);
+}
+header h1 {
+    grid-column: 1 / span 6;
+    margin-top: 15px;
+    color: white;
+}
+header h1 a:link, header h1 a:visited, header h1 a:hover {
+    font-size: 60px;
+    text-decoration: none;
+    color: white;
+}
+
+header nav {
+    grid-column: 7 / span 6;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+header nav li a:link, header nav li a:hover, header nav li a:visited {
+    font-size: 2.0em;
+    color: white;
+    text-decoration: none;
+    padding: 0 2em;
+}
+
+.subHeader {
+    background-image: -webkit-linear-gradient(top, #555 0%, #333 100%);
+    background-image: linear-gradient(to bottom, #555 0%, #333 100%);
+    background-repeat: repeat-x;
+    font-size: 18px;
+    color: white;
+    font-weight: normal;
+}
+
+/* Main Section CSS*/
+.container{
+    background-color: #fff;
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 35px 5% 0 5%;
+}
+
+/*Homepage Content Styles*/
+.home {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.left_list {
+    width: 200px;
+}
+
+.list-group-item {
+    border-style: dashed;
+    border-width: 1px;
+}
+.left_list a:link, .left_list a:visited{
+    color: #337ab7;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.left_list a:hover {
+    color: #0362fc;
+}
+
+.reserved_list {
+    margin-top: 30px;
+    border: solid;
+    
+}
+
+.about {
+    grid-column: 5 / span 8;
+    padding: 0 5% 2em 2%;
+}
+
+.about h2:first-child {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.family_list {
+    margin-top: 10%;
+}
+.family_list a:link, .family_list a:visited{
+    color: #337ab7;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+.family_list a:hover {
+    color: #0362fc;
+}
+/*Work Content Styles*/
+.container ul {
+    background-color: white;
+}
+.dataTable{
+    background-color: #fff;
+    overflow: auto;
+    max-width: 1200px;
+    width: 100%;
+    height: 90%;
+    max-height: 700px;
+}
+
+tr, td {
+    border-style: dashed;
+}
+
+
+
+
+
+/* Button Style */
+.button a:link, .button a:visited {
+    color: #666;
+    text-align: center;
+    padding: 10px;
+    border: #666 thin solid;
+    display: block;
+}
+.button a:hover {
+    color: #fff;
+    background-color: #000;
+    border: #000 thin solid;
+}
+
+/* Footer Style */
+footer {
+    text-align: center;
+    border-top: solid thin;
+    padding: 1.5em;
+    margin: .5em;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul a{
+    display: block;
+    padding: 0;
+    margin: 0 1em;
+}
+
