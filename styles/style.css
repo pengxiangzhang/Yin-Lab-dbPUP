@@ -120,24 +120,34 @@ body {
 .family_list a:hover {
     color: #0362fc;
 }
-/*Work Content Styles*/
 .container ul {
     background-color: white;
 }
-
-
-
-
-
-
-
-tr, td {
-    border-style: dashed;
+/*Work Content Styles*/
+.abstractOfPage {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-image: linear-gradient(to bottom , #1e90ff, white);
+    margin:  50px 10px;
+    border-radius: .8em;
 }
 
+.cList{
+    background-color: white;
+    grid-column: 1 / span 3;
+    border-style: solid;
+    border-width: thin;
+    margin:10px 30px;
+    border-color: #0362fc;
+}
 
+.abstract {
+    grid-column: 3 / span 12;
+}
 
-
+.informationOfGene{
+       grid-column: 1 / span 12;
+}
 
 /* Button Style */
 .button a:link, .button a:visited {
