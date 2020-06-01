@@ -3,19 +3,16 @@
 {% include '_head.html'%}
 <body>
 	{% include '_header.html' %}
-	<div class="container">
-		<div class = "imageHeader">
-			<h1>
-				<a href = "index.html">{{config['title']}}</a>
-			</h1>
-			<nav>
-				<ul>
-					<li><a href = "work.html">WORK</a></li>
-				</ul>
-			</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 image-header">
+				<p id="version">Version 0.1</p>
+			</div>
 		</div>
-		<div class = "subHeader">
-			<p>This is data library</p>
+		<div class="row">
+			<div class = "col-sm-12 subHeader">
+				<p>This is data library</p>
+			</div>
 		</div>
 		{% block content %}{% endblock %}
 	</div>

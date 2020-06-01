@@ -1,0 +1,11 @@
+.image-header {
+    background-image: url("../images/DNA.jpg");
+    height:100px;
+    background-size: cover;
+}
+.navbar.navbar-default {
+    margin-bottom: 0px;
+}
+#version{
+    color:white;
+}
