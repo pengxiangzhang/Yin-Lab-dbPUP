@@ -1,9 +1,9 @@
 {
 	"database":{
-		// "username":<username>,
-		// "password":<password>,
-		// "host":<hostname>,
-		// "port":<port>
+		"username":"<username>",
+		"password":"<password>",
+		"host":"<hostname>",
+		"port":"<port>"
 	},
 	"website":{
 		"title":"Bio Test"
