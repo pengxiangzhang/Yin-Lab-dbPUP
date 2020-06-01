@@ -3,9 +3,13 @@
     height:100px;
     background-size: cover;
 }
-.navbar.navbar-default {
+/*.navbar.navbar-default {
     margin-bottom: 0px;
-}
+}*/
 #version{
     color:white;
+}
+
+.mt-3 {
+    margin-top: 5em;
 }

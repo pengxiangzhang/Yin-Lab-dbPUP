@@ -4,8 +4,11 @@
 
 {% block content%}
 <!-- Main Content Area-->
-<main class = "home">
-  <div class = "left_list">
+<div class="row">
+  <div class="col-lg-8">
+    {{content|markdown|safe}}
+  </div>
+  <div class = "col-lg-4">
     <div class = "page_list">
       <ul class="list-group">
         <li class="list-group-item"><a href="/">Home</a></li>
@@ -16,39 +19,10 @@
       </ul>
     </div>
     <div class = "reserved_list">
-
       <p>
         In version 3.6 (June 2015), 1451 new content values for lignans have been added to the database.
       </p>
     </div>
-
-  </div>   
-
-
-  <div class="about">   
-    <h2>
-      Introduction
-    </h2>
-    <p>
-      Online since 1998, CAZy is a specialist database dedicated to the display and analysis of genomic, structural and biochemical information on Carbohydrate-Active Enzymes (CAZymes).
-
-      CAZy data are accessible either by browsing sequence-based families or by browsing the content of genomes in carbohydrate-active enzymes. New genomes are added regularly shortly after they appear in the daily releases of GenBank. New families are created based on published evidence for the activity of at least one member of the family and all families are regularly updated, both in content and in description.
-
-      CAZy data are accessible either by browsing sequence-based families or by browsing the content of genomes in carbohydrate-active enzymes. New genomes are added regularly shortly after they appear in the daily releases of GenBank. New families are created based on published evidence for the activity of at least one member of the family and all families are regularly updated, both in content and in description.
-    </p>
-    <div class = "family_list">
-      <h2>
-        Glycoside Hydrolase family classification
-      </h2>
-      <ul>
-        <li><a href="/">family1</a></li>
-        <li><a href="/">family1</a></li>
-        <li><a href="/">family1</a></li>
-      </ul> 
-
-    </div>  
-
-  </div>  
-
-</main>
+  </div>
+</div>
 {% endblock %}
