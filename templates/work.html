@@ -1,26 +1,37 @@
 {% extends 'base.html' %}
 
 {% block content%}
-<div class = "abstractOfPage">
-  <div class = "cList">
-    <ul>
-      <li>P42106<span class="divider">/</span><a href = "extendSwissData.html">Swissport</a><span class="divider">/</span><a href = "extendSwissData.html">EML</a>
-      </li>
-      <li>P76113<span class="divider">/</span><a href = "extendSwissData.html">Swissport</a><span class="divider">/</span><a href = "extendSwissData.html">EML</a></li>
-      <li>M9NZ71<span class="divider">/</span><a href = "extendSwissData.html">Swissport</a><span class="divider">/</span><a href = "extendSwissData.html">EML</a></li>
-      <li>H3JYE4<span class="divider">/</span><a href = "extendSwissData.html">Swissport</a><span class="divider">/</span><a href = "extendSwissData.html">EML</a></li>
-      <li>P32106<span class="divider">/</span><a href = "extendSwissData.html">Swissport</a><span class="divider">/</span><a href = "extendSwissData.html">EML</a></li>
+<table class="table" id="data-table">
+  <thead>
+    <tr>
+      <th>db</th>
+      <th>UniqueIdentifier</th>
+      <th>EntryName</th>
+      <th>Proteinname</th>
+      <th>OrganismName</th>
+      <th>OrganismIdentifier</th>
+      <th>GeneName</th>
+      <th>ProteinExistence</th>
+      <th>SequenceVersio</th>
+      <th>Sequence</th>
     </ul>
-  </div>
-  <div class = "abstract">
-    <p>The 155 foods with retention factor data are classified in 7 classes and 32 sub-classes. Use the text-boxes below to filter on food before process, food after process, process, yield factor, and the number of associated compounds and retention factor data. Use the scrolling menu on the left to select one or several food classes or sub-classes.</p>
-  </div>
+  </thead>
+  <tbody>
+    {% for record in records:%}
+      <tr>
+        <td>{{record.db}}</td>
+        <td>{{record.uniq_id}}</td>
+        <td>{{record.entry_name}}</td>
+        <td>{{record.protein}}</td>
+        <td>{{record.organism}}</td>
+        <td>{{record.organism_id}}</td>
+        <td>{{record.gene}}</td>
+        <td>{{record.protein_exist}}</td>
+        <td>{{record.seq_versio}}</td>
+        <td>{{record.seq}}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
 
-</div>
-<ul class="breadcrumb">
-  <li><a href="index.html">Characterize</a> <span class="divider">/</span></li>
-  <li>Swissport<span class="divider">/</span></li>
-  <li class="active">EML</li>
-</ul> 
-<div id = "hot"></div>
+</table>
 {% endblock %}
