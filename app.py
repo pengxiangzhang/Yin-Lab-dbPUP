@@ -2,7 +2,8 @@ from flask import Flask, url_for, redirect
 from flask import render_template
 from flaskext.markdown import Markdown
 from flask_sqlalchemy import SQLAlchemy
-from models.record import Record
+#from models.record import Record
+from models import charRecord, swiRecord, treRecord
 import json
 
 # Application configurations
@@ -16,7 +17,7 @@ with open('config.json') as json_file:
 
 	# web info
 	app.config['title'] = configs['website']['title']
-	app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
+        #app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
 
 	# database
 	connection_stat = "mysql+pymysql://" + configs['database']['username'] \
@@ -36,10 +37,22 @@ def index():
 	c = open('content/about.md', 'r').read()
 	return render_template('index.html', content = c)
 
-@app.route('/work')
-def work():
-	records = Record.query.all()
-	return render_template('work.html', records = records)
+@app.route('/characteristic')
+def characteristic():
+	records = charRecord.CharRecord.query.all()
+	return render_template('characteristic.html', records = records)
+
+@app.route('/swissport')
+def swissport():
+	records = swiRecord.SwiRecord.query.all() 
+	print(records)
+	return render_template("swissport.html", records=records)
+
+@app.route('/trembl')
+def trembl():
+        records = treRecord.TreRecord.query.all() 
+        return render_template("trembl.html", records=records)
+
 
 @app.route('/user/<username>/<firstname>')
 def newUser(username, firstname):
