@@ -1,4 +1,4 @@
-from flask import Flask, url_for, redirect
+from flask import Flask, url_for, redirect, request
 from flask import render_template
 from flaskext.markdown import Markdown
 from flask_sqlalchemy import SQLAlchemy
@@ -37,14 +37,18 @@ def index():
 	c = open('content/about.md', 'r').read()
 	return render_template('index.html', content = c)
 
-@app.route('/characteristic')
+@app.route('/characteristic', methods=['GET', 'POST'])
 def characteristic():
-	records = charRecord.CharRecord.query.all()
-	return render_template('characteristic.html', records = records)
+	if request.method == 'POST':
+	    records = swiRecord.SwiRecord.query.all()
+ 	   
+	else:
+ 	    records = charRecord.CharRecord.query.all()
+	    return render_template("characteristic.html", records=records)
 
-@app.route('/swissport')
+@app.route('/swissport',methods=['GET', 'POST'])
 def swissport():
-	records = swiRecord.SwiRecord.query.all() 
+	records = swiRecord.SwiRecord.query.all()
 	print(records)
 	return render_template("swissport.html", records=records)
 
@@ -60,3 +64,32 @@ def newUser(username, firstname):
 	dtbs.session.add(u)
 	dtbs.session.commit()
 	return "inserted!"
+
+@app.route('/login/', methods=['GET', 'POST'])
+def login():
+    if request.method == 'GET':
+
+        return render_template('login.html')
+    else:
+        username = request.form.get('username')
+        password = request.form.get('password')
+        print('username: {}, password: {}'.format(username, password))
+        return 'name = {}, password = {}'.format(username, password)
+
+@app.route('/search/')
+def search():
+    # arguments
+    condition = request.args.get('q', 123)
+    return '用户提交的查询参数是: {}'.format(condition)
+
+@app.route("/hello", methods=['GET', 'POST'])
+def hello():
+    message = "hello"
+    return render_template('swissport.html')
+
+@app.route("/test")
+def test():
+    return render_template('test.html')
+
+if __name__ == "__main__":
+    app.run(host = '0.0.0.0')

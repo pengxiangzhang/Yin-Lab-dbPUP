@@ -11,7 +11,6 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
 	<link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
 	<link href="{{url_for('static', filename='styles/style.css')}}" rel="stylesheet">
 	<style type="text/css">
@@ -20,4 +19,37 @@
 			margin-right:1em;
 		}
 	</style>
+	<script>
+window.onload = init;
+
+function init() {
+        var button = document.querySelectorAll("button");
+        var i;
+	for(i=0; i < button.length; i++) {
+	    var family_number = button[i].innerHTML;
+	    console.log(family_number);
+	    button[i].addEventListener("click", handleButtonClick);
+	    //button[i].onclick = handleButtonClick(family_number);
+	}
+}
+
+function handleButtonClick(family_number) {
+    var data = {}
+    data['family_number'] = family_number 
+    $.ajax(
+      {
+         type: "POST",
+         url: "/characteristic",
+	 data: data,
+	 dataType: "json",         
+         success: function(family_number)
+         {
+             console.log(family_number);
+         },
+         error: function (xhr, status, error) {
+            console.log(error);
+        }
+      });
+}
+</script>
 </head>
