@@ -20,9 +20,9 @@ with open('config.json') as json_file:
 	app.config['title'] = configs['website']['title']
 	app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
 =======
-    # web info
-    app.config['title'] = configs['website']['title']
-    # app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
+        # web info
+        app.config['title'] = configs['website']['title']
+        app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
 >>>>>>> flask-He
 
     # database
