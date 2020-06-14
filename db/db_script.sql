@@ -1,6 +1,6 @@
 use bio_test;
 
-DROP TABLE characterize;
+DROP TABLE IF EXISTS characterize;
 CREATE TABLE IF NOT EXISTS characterize(
     number INT NOT NULL,
     strain CHAR(30),
@@ -27,7 +27,7 @@ value(2, 'asdf', 'adsf','asdf','bbb','asdf', 'asdf', 'asdf', 'adsf', 1, 2, 3, 'a
 INSERT INTO characterize(number, strain, protein_name, gene_name, uniq_id, ec, substrate, production, pdb, km, vmax, kcat, doi, family, seq)
 value(3, 'asdf', 'adsf','asdf','ccc','asdf', 'asdf', 'asdf', 'adsf', 1, 2, 3, 'asdf', '3', 'asdf');
 
-DROP TABLE swiss;
+DROP TABLE IF EXISTS swiss;
 CREATE TABLE IF NOT EXISTS swiss(
     protein_enzyme CHAR(30),
     strain CHAR(30),
@@ -61,7 +61,7 @@ value('some_eny','qwer','qewr','jjj','3','qewr','qwer');
 
 #value('Quercetin 2,3-dioxygenase','Bacillus subtills','qdol', 'P42106', '1.13.11.24', 'RTGFGSDFDSFADGFSDFGDFXCVXCV');
 
-DROP TABLE trembl;
+DROP TABLE IF EXISTS trembl;
 CREATE TABLE IF NOT EXISTS trembl(
     protein_enzyme CHAR(30),
     strain CHAR(30),
