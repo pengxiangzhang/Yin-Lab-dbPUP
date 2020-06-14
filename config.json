@@ -1,0 +1,12 @@
+{
+	"database":{
+		"username":"root",
+		"password":"12345678",
+		"hostname":"localhost",
+		"port":"3306",
+		"db_name":"bio_test"
+	},
+	"website":{
+		"title":"Bio Test"
+	}
+}
