@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title%}Home{% endblock %}
+
+{% block content%}
+<!-- Main Content Area-->
+<div class="row">
+  <div class="col-lg-8">
+    {{content|markdown|safe}}
+  </div>
+  <div class = "col-lg-4">
+    <div class = "page_list">
+      <ul class="list-group">
+        <li class="list-group-item"><a href="/">Home</a></li>
+        <li class="list-group-item"><a href="/work">Data Library</a></li>
+        <li class="list-group-item"><a href="/work">Home</a></li>
+        <li class="list-group-item"><a href="/work">Home</a></li>
+        <li class="list-group-item"><a href="/work">Home</a></li>
+      </ul>
+    </div>
+    <div class = "reserved_list">
+      <p>
+        In version 3.6 (June 2015), 1451 new content values for lignans have been added to the database.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

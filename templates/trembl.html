@@ -1,0 +1,48 @@
+{% extends 'base.html'%}
+
+{% block title%} treMBL Data {% endblock %}
+{% block content%}
+<div class = "abstractOfPage">
+  <div class = "informationOfGene">
+    <h1>
+      Characterize
+    </h1>
+    <p>1        C-ring cleavage quercetin       Bacillus subtilis (strain 168)  a tryptophan auxotroph isolated after X-rays mutagenesis of B. subtilis>
+  </div>
+</div>
+
+<ul class="breadcrumb">
+  <li><a href="/characterisitic">Characterize</a> <span class="divider">/</span></li>
+  <li><a href="/swissport">Swissport</a><span class="divider">/</span></li>
+  <li class="active">EML</li>
+</ul>
+
+<table class="table" id="data-table">
+  <thead>
+    <tr>
+      <th>Protein enzyme</th>
+      <th>Strain</th>
+      <th>Gene Name</th>
+      <th>Uniq ID</th>
+      <th>family</th>
+      <th>EC</th>
+      <th>Sequence</th>
+    </ul>
+  </thead>
+  <tbody>
+    {% for record in records:%}
+      <tr>
+        <td>{{record.protein_enzyme}}</td>
+        <td>{{record.strain}}</td>
+        <td>{{record.gene_name}}</td>
+        <td>{{record.uniq_id}}</td>
+        <td>{{record.family}}</td>
+	<td>{{record.ec}}</td>
+        <td>{{record.seq}}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+
+</table>
+
+{% endblock %}

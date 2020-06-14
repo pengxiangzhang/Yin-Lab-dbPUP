@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<table class="table" id="data-table">
+  <thead>
+    <tr>
+      <th>number</th>
+      <th>strain</th>
+      <th>protein name</th>
+      <th>gene name</th>
+      <th>UniqueIdentifier</th>
+      <th>E.C</th>
+      <th>substrate</th>
+      <th>production</th>
+      <th>PDB</th>
+      <th>Km(uM)</th>
+      <th>Vmax</th>
+      <th>Kcat</th>
+      <th>DOI</th>
+      <th>family</th>
+      <th>Sequence</th>
+    </ul>
+  </thead>
+  <tbody>
+    {% for record in records:%}
+      <tr>
+        <td>{{record.number}}</td>
+        <td>{{record.strain}}</td>
+	<td>{{record.protein_name}}</td>
+        <td>{{record.gene_name}}</td>
+        <td>{{record.uniq_id}}</td>
+        <td>{{record.ec}}</td>
+        <td>{{record.substrate}}</td>
+        <td>{{record.production}}</td>
+        <td>{{record.pdb}}</td>
+        <td>{{record.km}}</td>
+	<td>{{record.vmax}}</td>
+	<td>{{record.kcat}}</td>
+	<td>{{record.doi}}</td>
+	<td>{{record.family}}</td>
+	<td>{{record.seq}}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+
+</table>
+{% endblock %}
