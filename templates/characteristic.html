@@ -46,7 +46,7 @@
                 <td>{{ record.kcat }}</td>
                 <td>{{ record.doi }}</td>
                 <td>
-                    <button id="123" name="famliy_link">{{ record.family }}</button>
+                    <a href="{{ url_for('swissport', family_id = record.family) }}">{{ record.family }}</a>
                 </td>
                 <td><a href={{ url_for('detail', seq = record.seq, unid = record.uniq_id) }}>view</a></td>
             </tr>
