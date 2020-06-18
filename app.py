@@ -15,15 +15,9 @@ md = Markdown(app, extensions=['fenced_code'])
 with open('config.json') as json_file:
     configs = json.load(json_file)
 
-<<<<<<< HEAD
 	# web info
-	app.config['title'] = configs['website']['title']
-	app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
-=======
-        # web info
-        app.config['title'] = configs['website']['title']
-        app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
->>>>>>> flask-He
+    app.config['title'] = configs['website']['title']
+    app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
 
     # database
     connection_stat = "mysql+pymysql://" + configs['database']['username'] \
