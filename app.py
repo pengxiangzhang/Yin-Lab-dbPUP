@@ -67,7 +67,6 @@ def trembl(family_id):
         records = treRecord.TreRecord.query.filter_by(family=family_id)
     return render_template("trembl.html", records=records)
 
-
 @app.route('/user/<username>/<firstname>')
 def newUser(username, firstname):
     u = User(lastname=username, firstname=firstname)

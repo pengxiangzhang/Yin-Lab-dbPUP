@@ -34,6 +34,7 @@
             <th>family</th>
             <th>EC</th>
             <th>Sequence</th>
+            <th hidden></th>
             </ul>
         </thead>
         <tbody>
@@ -46,6 +47,9 @@
                 <td>{{ record.family }}</td>
                 <td>{{ record.ec }}</td>
                 <td>{{ record.seq }}</td>
+                <td>
+                    <p hidden>> Uniq_id={{record.uniq_id}} Seq={{record.seq}}</p>
+                </td>
             </tr>
         {% endfor %}
         </tbody>

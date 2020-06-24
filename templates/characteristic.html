@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="abstractOfPage" style="margin-bottom: 50px">
-        <div class="informationOfGene">
-            <h1>
-                Family Introduction
-            </h1>
-            <p>We .......</p>
-        </div>
+<div class="abstractOfPage" style="margin-bottom: 50px">
+    <div class="informationOfGene">
+        <h1>
+            Family Introduction
+        </h1>
+        <p>We .......</p>
     </div>
-    <table class="table" id="data-table">
-        <thead>
+</div>
+<table class="table" id="data-table">
+    <thead>
         <tr>
             <th>number</th>
             <th>strain</th>
@@ -27,32 +27,38 @@
             <th>DOI</th>
             <th>family</th>
             <th>Sequence</th>
+            <th hidden></th>
         </tr>
-        </thead>
-        <tbody>
+    </thead>
+    <tbody>
         {% for record in records: %}
-            <tr>
-                <td>{{ record.number }}</td>
-                <td>{{ record.strain }}</td>
-                <td>{{ record.protein_name }}</td>
-                <td>{{ record.gene_name }}</td>
-                <td>{{ record.uniq_id }}</td>
-                <td>{{ record.ec }}</td>
-                <td>{{ record.substrate }}</td>
-                <td>{{ record.production }}</td>
-                <td>{{ record.pdb }}</td>
-                <td>{{ record.km }}</td>
-                <td>{{ record.vmax }}</td>
-                <td>{{ record.kcat }}</td>
-                <td>{{ record.doi }}</td>
-                <td>
-                    <a href="{{ url_for('swissport', family_id = record.family) }}">{{ record.family }}</a>
-                </td>
-                <td><a href={{ url_for('detail', seq = record.seq, unid = record.uniq_id) }}>view</a></td>
-            </tr>
+        <tr>
+            <td>{{ record.number }}</td>
+            <td>{{ record.strain }}</td>
+            <td>{{ record.protein_name }}</td>
+            <td>{{ record.gene_name }}</td>
+            <td>{{ record.uniq_id }}</td>
+            <td>{{ record.ec }}</td>
+            <td>{{ record.substrate }}</td>
+            <td>{{ record.production }}</td>
+            <td>{{ record.pdb }}</td>
+            <td>{{ record.km }}</td>
+            <td>{{ record.vmax }}</td>
+            <td>{{ record.kcat }}</td>
+            <td>{{ record.doi }}</td>
+            <td>
+                <a href="{{ url_for('swissport', family_id = record.family) }}">{{ record.family }}</a>
+            </td>
+            <td>
+                <a href={{ url_for('detail', seq = record.seq, unid = record.uniq_id) }}>view</a>
+            </td>
+            <td>
+                <p hidden>> Uniq_id={{record.uniq_id}} Seq={{record.seq}}</p>
+            </td>
+        </tr>
         {% endfor %}
-        </tbody>
-    </table>
+    </tbody>
+</table>
 
 {% endblock %}
 

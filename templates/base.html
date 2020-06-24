@@ -12,18 +12,13 @@
 	    $('#data-table').DataTable( {
 	        dom: 'Bfrtip',
 	        buttons: [
-	            'copy',
-	            'csv',
-	            'excel',
-	            'pdf',
 	            {
-	                extend: 'print',
-	                text: 'Print all (not just selected)',
-	                exportOptions: {
-	                    modifier: {
-	                        selected: null
-	                    }
-	                }
+	            	extend: 'csvHtml5',
+	            	fieldBoundary: '',
+	            	text: 'export',
+	            	exportOptions:{
+	            		columns: [-1]
+	            	}
 	            }
 	        ],
 	        select: true
