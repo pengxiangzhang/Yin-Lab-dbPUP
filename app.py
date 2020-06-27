@@ -17,7 +17,7 @@ with open('config.json') as json_file:
 
 	# web info
     app.config['title'] = configs['website']['title']
-    app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
+#    app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
 
     # database
     connection_stat = "mysql+pymysql://" + configs['database']['username'] \

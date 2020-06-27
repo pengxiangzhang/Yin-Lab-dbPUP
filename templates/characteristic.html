@@ -53,7 +53,7 @@
                 <a href={{ url_for('detail', seq = record.seq, unid = record.uniq_id) }}>view</a>
             </td>
             <td>
-                <p hidden>> Uniq_id={{record.uniq_id}} Seq={{record.seq}}</p>
+                <p hidden>> {{record.uniq_id}} {{record.seq}}</p>
             </td>
         </tr>
         {% endfor %}

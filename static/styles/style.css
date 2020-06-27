@@ -1,3 +1,6 @@
+html {
+    background-image: url("../images/double-bubble-outline.png");
+}
 .image-header {
     background-image: url("../images/DNA.jpg");
     height:100px;
