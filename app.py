@@ -17,7 +17,7 @@ with open('config.json') as json_file:
 
 	# web info
     app.config['title'] = configs['website']['title']
-#    app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
+    app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
 
     # database
     connection_stat = "mysql+pymysql://" + configs['database']['username'] \
@@ -75,9 +75,32 @@ def newUser(username, firstname):
     return "inserted!"
 
 
-@app.route("/detail/<seq>/<unid>")
-def detail(seq, unid):
+@app.route("/detail/<unid>")
+def detail(unid):
+    records = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
+    if records is None:
+        records =  treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
+    if records is None:
+        records = swiRecord.SwiRecord.query.filter_by(uniq_id=unid).first()
+    if records is None:
+        seq = None
+    else:
+        seq = records.seq
     return render_template('detail.html', seq=seq, unid=unid)
+
+@app.route("/tree/<family_id>")
+def tree(family_id):
+    if family_id == 'all':
+        treeData = None
+    else:
+        try:
+            with open('data' + str(family_id) + '.json') as f:
+                treeData = json.load(f)
+        except Exception:
+            treeData = None
+            return render_template('tree.html', treeData = json.dumps(treeData))
+    return render_template('tree.html', treeData = json.dumps(treeData))
+
 
 
 if __name__ == "__main__":

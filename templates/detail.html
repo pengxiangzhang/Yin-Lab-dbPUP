@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Bio_test</title>
-</head>
-<body>
-    <p style="max-width: 50ch; word-wrap:break-word;"> >  {{ unid }}  {{ seq }}</p>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1 style="max-width: 50ch; word-wrap:break-word;">
+        > {{ unid }} {{ seq }}
+    </h1>
+
+{% endblock %}
+

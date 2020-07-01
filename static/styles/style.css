@@ -16,3 +16,14 @@ html {
 .mt-3 {
     margin-top: 5em;
 }
+
+.breadcrumb a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: darkred;
+    text-decoration: underline;
+    text-decoration: none;
+}

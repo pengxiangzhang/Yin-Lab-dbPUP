@@ -1,0 +1,912 @@
+[
+  {
+    "name": "",
+    "meta": {
+      "color": {},
+      "selection": {},
+      "annotation": {
+        "info": ""
+      }
+    },
+    "x0": 7241.231666666667,
+    "y0": 0,
+    "depth": 0,
+    "x_value": 7241.231666666667,
+    "y_value": 0,
+    "id": 1,
+    "children": [
+      {
+        "name": "1.000",
+        "children": [
+          {
+            "name": "1.000",
+            "children": [
+              {
+                "name": "0.959",
+                "level": "red",
+                "children": [
+                  {
+                    "name": "sp|Q39172|AER_ARATH",
+                    "length": 0.056283806,
+                    "level": "blue",
+                    "meta": {
+                      "color": {},
+                      "selection": {},
+                      "annotation": {
+                        "info": "",
+                        "url": ""
+                      }
+                    },
+                    "depth": 4,
+                    "x_value": 304.36,
+                    "y_value": 1063.0178710346668,
+                    "id": 5,
+                    "x0": 304.36,
+                    "y0": 1063.0178710346668
+                  },
+                  {
+                    "name": "sp|Q39173|P2_ARATH",
+                    "length": 0.036703226,
+                    "meta": {
+                      "color": {},
+                      "selection": {},
+                      "annotation": {
+                        "info": "",
+                        "url": ""
+                      }
+                    },
+                    "depth": 4,
+                    "x_value": 913.0799999999999,
+                    "y_value": 1039.7300345546666,
+                    "id": 6,
+                    "x0": 913.0799999999999,
+                    "y0": 1039.7300345546666
+                  }
+                ],
+                "length": 0.111753238,
+                "meta": {
+                  "color": {},
+                  "selection": {},
+                  "annotation": {
+                    "info": "",
+                    "url": ""
+                  }
+                },
+                "depth": 3,
+                "x_value": 608.72,
+                "y_value": 996.077664432,
+                "id": 4,
+                "x0": 608.72,
+                "y0": 996.077664432
+              },
+              {
+                "name": "0.948",
+                "children": [
+                  {
+                    "name": "sp|Q9SLN8|DBR_TOBAC",
+                    "length": 0.125508421,
+                    "meta": {
+                      "color": {},
+                      "selection": {},
+                      "annotation": {
+                        "info": "",
+                        "url": ""
+                      }
+                    },
+                    "depth": 4,
+                    "x_value": 1521.8000000000002,
+                    "y_value": 1122.0536517493333,
+                    "id": 8,
+                    "x0": 1521.8000000000002,
+                    "y0": 1122.0536517493333
+                  },
+                  {
+                    "name": "sp|Q6WAU0|PULR_MENPI",
+                    "length": 0.345396885,
+                    "meta": {
+                      "color": {},
+                      "selection": {},
+                      "annotation": {
+                        "info": "",
+                        "url": ""
+                      }
+                    },
+                    "depth": 4,
+                    "x_value": 2130.52,
+                    "y_value": 1383.5743315999998,
+                    "id": 9,
+                    "x0": 2130.52,
+                    "y0": 1383.5743315999998
+                  }
+                ],
+                "length": 0.092166331,
+                "meta": {
+                  "color": {},
+                  "selection": {},
+                  "annotation": {
+                    "info": "",
+                    "url": ""
+                  }
+                },
+                "depth": 3,
+                "x_value": 1826.1599999999999,
+                "y_value": 972.78230304,
+                "id": 7,
+                "x0": 1826.1599999999999,
+                "y0": 972.78230304
+              }
+            ],
+            "length": 0.385350159,
+            "meta": {
+              "color": {},
+              "selection": {},
+              "annotation": {
+                "info": "",
+                "url": ""
+              }
+            },
+            "depth": 2,
+            "x_value": 1217.44,
+            "y_value": 863.1658133706667,
+            "id": 3,
+            "x0": 1217.44,
+            "y0": 863.1658133706667
+          },
+          {
+            "name": "0.962",
+            "children": [
+              {
+                "name": "sp|Q9C0Y6|YKM8_SCHPO",
+                "length": 0.516863862,
+                "meta": {
+                  "color": {},
+                  "selection": {},
+                  "annotation": {
+                    "info": "",
+                    "url": ""
+                  }
+                },
+                "depth": 3,
+                "x_value": 2739.24,
+                "y_value": 1239.090405168,
+                "id": 11,
+                "x0": 2739.24,
+                "y0": 1239.090405168
+              },
+              {
+                "name": "0.987",
+                "children": [
+                  {
+                    "name": "sp|N4WR35|RED1_COCH4",
+                    "length": 0.482184077,
+                    "meta": {
+                      "color": {},
+                      "selection": {},
+                      "annotation": {
+                        "info": "",
+                        "url": ""
+                      }
+                    },
+                    "depth": 4,
+                    "x_value": 3347.96,
+                    "y_value": 1454.4055064266665,
+                    "id": 13,
+                    "x0": 3347.96,
+                    "y0": 1454.4055064266665
+                  },
+                  {
+                    "name": "0.869",
+                    "children": [
+                      {
+                        "name": "sp|B8NTZ8|LNAE_ASPFN",
+                        "length": 0.927800095,
+                        "meta": {
+                          "color": {},
+                          "selection": {},
+                          "annotation": {
+                            "info": "",
+                            "url": ""
+                          }
+                        },
+                        "depth": 5,
+                        "x_value": 3956.6800000000003,
+                        "y_value": 2116.3320748746664,
+                        "id": 15,
+                        "x0": 3956.6800000000003,
+                        "y0": 2116.3320748746664
+                      },
+                      {
+                        "name": "1.000",
+                        "children": [
+                          {
+                            "name": "sp|A0A0D2YG03|FUB6_FUSO4",
+                            "length": 0.024777869,
+                            "meta": {
+                              "color": {},
+                              "selection": {},
+                              "annotation": {
+                                "info": "",
+                                "url": ""
+                              }
+                            },
+                            "depth": 6,
+                            "x_value": 4565.4,
+                            "y_value": 1865.3948406293332,
+                            "id": 17,
+                            "x0": 4565.4,
+                            "y0": 1865.3948406293332
+                          },
+                          {
+                            "name": "sp|W7NCN7|FUB6_GIBM7",
+                            "length": 0.005408959,
+                            "meta": {
+                              "color": {},
+                              "selection": {},
+                              "annotation": {
+                                "info": "",
+                                "url": ""
+                              }
+                            },
+                            "depth": 6,
+                            "x_value": 5174.120000000001,
+                            "y_value": 1842.3587503359997,
+                            "id": 18,
+                            "x0": 5174.120000000001,
+                            "y0": 1842.3587503359997
+                          }
+                        ],
+                        "length": 0.692032399,
+                        "meta": {
+                          "color": {},
+                          "selection": {},
+                          "annotation": {
+                            "info": "",
+                            "url": ""
+                          }
+                        },
+                        "depth": 5,
+                        "x_value": 4869.76,
+                        "y_value": 1835.9256950986664,
+                        "id": 16,
+                        "x0": 4869.76,
+                        "y0": 1835.9256950986664
+                      }
+                    ],
+                    "length": 0.11093659,
+                    "meta": {
+                      "color": {},
+                      "selection": {},
+                      "annotation": {
+                        "info": "",
+                        "url": ""
+                      }
+                    },
+                    "depth": 4,
+                    "x_value": 4413.219999999999,
+                    "y_value": 1012.8684952213332,
+                    "id": 14,
+                    "x0": 4413.219999999999,
+                    "y0": 1012.8684952213332
+                  }
+                ],
+                "length": 0.215718267,
+                "meta": {
+                  "color": {},
+                  "selection": {},
+                  "annotation": {
+                    "info": "",
+                    "url": ""
+                  }
+                },
+                "depth": 3,
+                "x_value": 3880.59,
+                "y_value": 880.9279108479999,
+                "id": 12,
+                "x0": 3880.59,
+                "y0": 880.9279108479999
+              }
+            ],
+            "length": 0.184566391,
+            "meta": {
+              "color": {},
+              "selection": {},
+              "annotation": {
+                "info": "",
+                "url": ""
+              }
+            },
+            "depth": 2,
+            "x_value": 3309.915,
+            "y_value": 624.3669852959999,
+            "id": 10,
+            "x0": 3309.915,
+            "y0": 624.3669852959999
+          }
+        ],
+        "length": 0.34040585,
+        "meta": {
+          "color": {},
+          "selection": {},
+          "annotation": {
+            "info": "",
+            "url": ""
+          }
+        },
+        "depth": 1,
+        "x_value": 2263.6775,
+        "y_value": 404.8560242666667,
+        "id": 2,
+        "x0": 2263.6775,
+        "y0": 404.8560242666667
+      },
+      {
+        "name": "0.902",
+        "children": [
+          {
+            "name": "sp|O34812|YFMJ_BACSU",
+            "length": 0.468727755,
+            "meta": {
+              "color": {},
+              "selection": {},
+              "annotation": {
+                "info": "",
+                "url": ""
+              }
+            },
+            "depth": 2,
+            "x_value": 5782.84,
+            "y_value": 682.2735843999999,
+            "id": 20,
+            "x0": 5782.84,
+            "y0": 682.2735843999999
+          },
+          {
+            "name": "0.474",
+            "children": [
+              {
+                "name": "1.000",
+                "children": [
+                  {
+                    "name": "0.227",
+                    "children": [
+                      {
+                        "name": "sp|Q8VDQ1|PTGR2_MOUSE",
+                        "length": 0.03704954,
+                        "meta": {
+                          "color": {},
+                          "selection": {},
+                          "annotation": {
+                            "info": "",
+                            "url": ""
+                          }
+                        },
+                        "depth": 5,
+                        "x_value": 6391.5599999999995,
+                        "y_value": 1199.3472809440002,
+                        "id": 24,
+                        "x0": 6391.5599999999995,
+                        "y0": 1199.3472809440002
+                      },
+                      {
+                        "name": "1.000",
+                        "children": [
+                          {
+                            "name": "sp|Q32L99|PTGR2_BOVIN",
+                            "length": 0.048885581,
+                            "meta": {
+                              "color": {},
+                              "selection": {},
+                              "annotation": {
+                                "info": "",
+                                "url": ""
+                              }
+                            },
+                            "depth": 6,
+                            "x_value": 7000.280000000001,
+                            "y_value": 1296.1386683520002,
+                            "id": 26,
+                            "x0": 7000.280000000001,
+                            "y0": 1296.1386683520002
+                          },
+                          {
+                            "name": "0.994",
+                            "children": [
+                              {
+                                "name": "sp|Q8N8N7|PTGR2_HUMAN",
+                                "length": 0.003876195,
+                                "meta": {
+                                  "color": {},
+                                  "selection": {},
+                                  "annotation": {
+                                    "info": "",
+                                    "url": ""
+                                  }
+                                },
+                                "depth": 7,
+                                "x_value": 7609,
+                                "y_value": 1290.6743881493337,
+                                "id": 28,
+                                "x0": 7609,
+                                "y0": 1290.6743881493337
+                              },
+                              {
+                                "name": "sp|Q5R806|PTGR2_PONAB",
+                                "length": 0.004157709,
+                                "meta": {
+                                  "color": {},
+                                  "selection": {},
+                                  "annotation": {
+                                    "info": "",
+                                    "url": ""
+                                  }
+                                },
+                                "depth": 7,
+                                "x_value": 8217.720000000001,
+                                "y_value": 1291.0092021333337,
+                                "id": 29,
+                                "x0": 8217.720000000001,
+                                "y0": 1291.0092021333337
+                              }
+                            ],
+                            "length": 0.04041498,
+                            "meta": {
+                              "color": {},
+                              "selection": {},
+                              "annotation": {
+                                "info": "",
+                                "url": ""
+                              }
+                            },
+                            "depth": 6,
+                            "x_value": 7913.360000000001,
+                            "y_value": 1286.0643002293336,
+                            "id": 27,
+                            "x0": 7913.360000000001,
+                            "y0": 1286.0643002293336
+                          }
+                        ],
+                        "length": 0.069546852,
+                        "meta": {
+                          "color": {},
+                          "selection": {},
+                          "annotation": {
+                            "info": "",
+                            "url": ""
+                          }
+                        },
+                        "depth": 5,
+                        "x_value": 7456.82,
+                        "y_value": 1237.9974173493335,
+                        "id": 25,
+                        "x0": 7456.82,
+                        "y0": 1237.9974173493335
+                      }
+                    ],
+                    "length": 0.024631223,
+                    "meta": {
+                      "color": {},
+                      "selection": {},
+                      "annotation": {
+                        "info": "",
+                        "url": ""
+                      }
+                    },
+                    "depth": 4,
+                    "x_value": 6924.1900000000005,
+                    "y_value": 1155.2830280373335,
+                    "id": 23,
+                    "x0": 6924.1900000000005,
+                    "y0": 1155.2830280373335
+                  },
+                  {
+                    "name": "sp|Q5BK81|PTGR2_RAT",
+                    "length": 0.009613217,
+                    "meta": {
+                      "color": {},
+                      "selection": {},
+                      "annotation": {
+                        "info": "",
+                        "url": ""
+                      }
+                    },
+                    "depth": 4,
+                    "x_value": 8826.439999999999,
+                    "y_value": 1137.4216129013334,
+                    "id": 30,
+                    "x0": 8826.439999999999,
+                    "y0": 1137.4216129013334
+                  }
+                ],
+                "length": 0.751012788,
+                "meta": {
+                  "color": {},
+                  "selection": {},
+                  "annotation": {
+                    "info": "",
+                    "url": ""
+                  }
+                },
+                "depth": 3,
+                "x_value": 7875.315,
+                "y_value": 1125.9882934826667,
+                "id": 22,
+                "x0": 7875.315,
+                "y0": 1125.9882934826667
+              },
+              {
+                "name": "",
+                "children": [
+                  {
+                    "name": "sp|P76113|CURA_ECOLI",
+                    "length": 0,
+                    "meta": {
+                      "color": {},
+                      "selection": {},
+                      "annotation": {
+                        "info": "",
+                        "url": ""
+                      }
+                    },
+                    "depth": 4,
+                    "x_value": 9435.16,
+                    "y_value": 939.4133596746666,
+                    "id": 32,
+                    "x0": 9435.16,
+                    "y0": 939.4133596746666
+                  },
+                  {
+                    "name": "tr|B1XDG0|B1XDG0_ECODH",
+                    "length": 0,
+                    "meta": {
+                      "color": {},
+                      "selection": {},
+                      "annotation": {
+                        "info": "",
+                        "url": ""
+                      }
+                    },
+                    "depth": 4,
+                    "x_value": 10043.880000000001,
+                    "y_value": 939.4133596746666,
+                    "id": 33,
+                    "x0": 10043.880000000001,
+                    "y0": 939.4133596746666
+                  }
+                ],
+                "length": 0.594139245,
+                "meta": {
+                  "color": {},
+                  "selection": {},
+                  "annotation": {
+                    "info": "",
+                    "url": ""
+                  }
+                },
+                "depth": 3,
+                "x_value": 9739.52,
+                "y_value": 939.4133596746666,
+                "id": 31,
+                "x0": 9739.52,
+                "y0": 939.4133596746666
+              }
+            ],
+            "length": 0.090793478,
+            "meta": {
+              "color": {},
+              "selection": {},
+              "annotation": {
+                "info": "",
+                "url": ""
+              }
+            },
+            "depth": 2,
+            "x_value": 8807.4175,
+            "y_value": 232.78375095466663,
+            "id": 21,
+            "x0": 8807.4175,
+            "y0": 232.78375095466663
+          }
+        ],
+        "length": 0.10493277,
+        "meta": {
+          "color": {},
+          "selection": {},
+          "annotation": {
+            "info": "",
+            "url": ""
+          }
+        },
+        "depth": 1,
+        "x_value": 7295.12875,
+        "y_value": 124.80004111999999,
+        "id": 19,
+        "x0": 7295.12875,
+        "y0": 124.80004111999999
+      },
+      {
+        "name": "0.643",
+        "children": [
+          {
+            "name": "sp|Q03102|YMN1_YEAST",
+            "length": 1.401524037,
+            "meta": {
+              "color": {},
+              "selection": {},
+              "annotation": {
+                "info": "",
+                "url": ""
+              }
+            },
+            "depth": 2,
+            "x_value": 10652.599999999999,
+            "y_value": 1813.0675147999998,
+            "id": 35,
+            "x0": 10652.599999999999,
+            "y0": 1813.0675147999998
+          },
+          {
+            "name": "0.997",
+            "children": [
+              {
+                "name": "0.863",
+                "children": [
+                  {
+                    "name": "0.695",
+                    "children": [
+                      {
+                        "name": "sp|Q3SZJ4|PTGR1_BOVIN",
+                        "length": 0.110883941,
+                        "meta": {
+                          "color": {},
+                          "selection": {},
+                          "annotation": {
+                            "info": "",
+                            "url": ""
+                          }
+                        },
+                        "depth": 5,
+                        "x_value": 11261.32,
+                        "y_value": 902.74938496,
+                        "id": 39,
+                        "x0": 11261.32,
+                        "y0": 902.74938496
+                      },
+                      {
+                        "name": "0.896",
+                        "children": [
+                          {
+                            "name": "sp|Q14914|PTGR1_HUMAN",
+                            "length": 0.093393272,
+                            "meta": {
+                              "color": {},
+                              "selection": {},
+                              "annotation": {
+                                "info": "",
+                                "url": ""
+                              }
+                            },
+                            "depth": 6,
+                            "x_value": 11870.04,
+                            "y_value": 914.0092912533333,
+                            "id": 41,
+                            "x0": 11870.04,
+                            "y0": 914.0092912533333
+                          },
+                          {
+                            "name": "0.670",
+                            "children": [
+                              {
+                                "name": "sp|Q9EQZ5|PTGR1_CAVPO",
+                                "length": 0.133113881,
+                                "meta": {
+                                  "color": {},
+                                  "selection": {},
+                                  "annotation": {
+                                    "info": "",
+                                    "url": ""
+                                  }
+                                },
+                                "depth": 7,
+                                "x_value": 12478.759999999998,
+                                "y_value": 996.839753552,
+                                "id": 43,
+                                "x0": 12478.759999999998,
+                                "y0": 996.839753552
+                              },
+                              {
+                                "name": "sp|Q28719|PTGR1_RABIT",
+                                "length": 0.171110069,
+                                "meta": {
+                                  "color": {},
+                                  "selection": {},
+                                  "annotation": {
+                                    "info": "",
+                                    "url": ""
+                                  }
+                                },
+                                "depth": 7,
+                                "x_value": 13087.48,
+                                "y_value": 1042.02988648,
+                                "id": 44,
+                                "x0": 13087.48,
+                                "y0": 1042.02988648
+                              }
+                            ],
+                            "length": 0.029923838,
+                            "meta": {
+                              "color": {},
+                              "selection": {},
+                              "annotation": {
+                                "info": "",
+                                "url": ""
+                              }
+                            },
+                            "depth": 6,
+                            "x_value": 12783.119999999999,
+                            "y_value": 838.5229777493333,
+                            "id": 42,
+                            "x0": 12783.119999999999,
+                            "y0": 838.5229777493333
+                          }
+                        ],
+                        "length": 0.026958079,
+                        "meta": {
+                          "color": {},
+                          "selection": {},
+                          "annotation": {
+                            "info": "",
+                            "url": ""
+                          }
+                        },
+                        "depth": 5,
+                        "x_value": 12326.58,
+                        "y_value": 802.9335597546667,
+                        "id": 40,
+                        "x0": 12326.58,
+                        "y0": 802.9335597546667
+                      }
+                    ],
+                    "length": 0.025675861,
+                    "meta": {
+                      "color": {},
+                      "selection": {},
+                      "annotation": {
+                        "info": "",
+                        "url": ""
+                      }
+                    },
+                    "depth": 4,
+                    "x_value": 11793.95,
+                    "y_value": 770.8714177973334,
+                    "id": 38,
+                    "x0": 11793.95,
+                    "y0": 770.8714177973334
+                  },
+                  {
+                    "name": "sp|Q29073|PTGR1_PIG",
+                    "length": 0.062456196,
+                    "meta": {
+                      "color": {},
+                      "selection": {},
+                      "annotation": {
+                        "info": "",
+                        "url": ""
+                      }
+                    },
+                    "depth": 4,
+                    "x_value": 13696.2,
+                    "y_value": 814.615496224,
+                    "id": 45,
+                    "x0": 13696.2,
+                    "y0": 814.615496224
+                  }
+                ],
+                "length": 0.040805951,
+                "meta": {
+                  "color": {},
+                  "selection": {},
+                  "annotation": {
+                    "info": "",
+                    "url": ""
+                  }
+                },
+                "depth": 3,
+                "x_value": 12745.075,
+                "y_value": 740.334260448,
+                "id": 37,
+                "x0": 12745.075,
+                "y0": 740.334260448
+              },
+              {
+                "name": "0.896",
+                "children": [
+                  {
+                    "name": "sp|Q91YR9|PTGR1_MOUSE",
+                    "length": 0.045444753,
+                    "meta": {
+                      "color": {},
+                      "selection": {},
+                      "annotation": {
+                        "info": "",
+                        "url": ""
+                      }
+                    },
+                    "depth": 4,
+                    "x_value": 14304.92,
+                    "y_value": 819.69872592,
+                    "id": 47,
+                    "x0": 14304.92,
+                    "y0": 819.69872592
+                  },
+                  {
+                    "name": "sp|P97584|PTGR1_RAT",
+                    "length": 0.023456227,
+                    "meta": {
+                      "color": {},
+                      "selection": {},
+                      "annotation": {
+                        "info": "",
+                        "url": ""
+                      }
+                    },
+                    "depth": 4,
+                    "x_value": 14913.64,
+                    "y_value": 793.5470389973334,
+                    "id": 48,
+                    "x0": 14913.64,
+                    "y0": 793.5470389973334
+                  }
+                ],
+                "length": 0.06209141,
+                "meta": {
+                  "color": {},
+                  "selection": {},
+                  "annotation": {
+                    "info": "",
+                    "url": ""
+                  }
+                },
+                "depth": 3,
+                "x_value": 14609.279999999999,
+                "y_value": 765.649766352,
+                "id": 46,
+                "x0": 14609.279999999999,
+                "y0": 765.649766352
+              }
+            ],
+            "length": 0.458756269,
+            "meta": {
+              "color": {},
+              "selection": {},
+              "annotation": {
+                "info": "",
+                "url": ""
+              }
+            },
+            "depth": 2,
+            "x_value": 13677.177500000002,
+            "y_value": 691.8023827253334,
+            "id": 36,
+            "x0": 13677.177500000002,
+            "y0": 691.8023827253334
+          }
+        ],
+        "length": 0.122916138,
+        "meta": {
+          "color": {},
+          "selection": {},
+          "annotation": {
+            "info": "",
+            "url": ""
+          }
+        },
+        "depth": 1,
+        "x_value": 12164.88875,
+        "y_value": 146.188260128,
+        "id": 34,
+        "x0": 12164.88875,
+        "y0": 146.188260128
+      }
+    ]
+  }
+]
