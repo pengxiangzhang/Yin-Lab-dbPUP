@@ -8,7 +8,7 @@
         </h1>
         <ul class="breadcrumb" style="font-size: medium">
             {% for i in range(40) %}
-                <li><a href="{{ url_for('family', family_id = i + 1) }}">{{ i + 1 }}</a> <span class="divider"></span>
+                <li><a href="{{ url_for('characteristic', family_id = i + 1) }}">{{ i + 1 }}</a> <span class="divider"></span>
                 </li>
             {% endfor %}
 
@@ -59,7 +59,7 @@
             <td>{{ record.kcat }}</td>
             <td>{{ record.doi }}</td>
             <td>
-                <a href="{{ url_for('swissport', family_id = record.family) }}">{{ record.family }}</a>
+                <a href="{{ url_for('family', family_id = record.family) }}">{{ record.family }}</a>
             </td>
             <td>
                 <a href={{ url_for('detail', unid = record.uniq_id) }}>view</a>

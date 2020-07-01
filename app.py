@@ -39,15 +39,18 @@ def index():
     return render_template('index.html', content=c)
 
 
-@app.route('/characteristic', methods=['GET', 'POST'])
-def characteristic():
+@app.route('/characteristic/<family_id>', methods=['GET', 'POST'])
+def characteristic(family_id):
     if request.method == 'POST':
         msg = request.get_data()
         family_id = json.loads(msg)['family_id']
         records = swiRecord.SwiRecord.query.filter_by(family=family_id)
         return render_template('swissport.html', records=records)
     else:
-        records = charRecord.CharRecord.query.all()
+        if family_id == 'all':
+            records = charRecord.CharRecord.query.all()
+        else:
+            records = charRecord.CharRecord.query.filter_by(family=family_id)
         return render_template("characteristic.html", records=records)
 
 
