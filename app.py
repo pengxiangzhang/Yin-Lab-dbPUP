@@ -101,6 +101,9 @@ def tree(family_id):
             return render_template('tree.html', treeData = json.dumps(treeData))
     return render_template('tree.html', treeData = json.dumps(treeData))
 
+@app.route("/family/<family_id>")
+def family(family_id):
+    return render_template('family.html', family_id=family_id)
 
 
 if __name__ == "__main__":

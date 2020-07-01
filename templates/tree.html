@@ -23,16 +23,18 @@
 
     </style>
 
-    <h1>
-        Family List
-    </h1>
+    <div class="familyList">
+        <h1>
+            Family List
+        </h1>
+        <ul class="breadcrumb" style="font-size: medium">
+            {% for i in range(40) %}
+                <li><a href="{{ url_for('family', family_id = i + 1) }}">{{ i + 1 }}</a> <span class="divider"></span>
+                </li>
+            {% endfor %}
 
-    <ul class="breadcrumb" style="font-size: medium">
-        <li><a href="{{ url_for('tree', family_id = 1) }}">1</a> <span class="divider"></span></li>
-        <li><a href="{{ url_for('tree', family_id = 2) }}">2</a> <span class="divider"></span></li>
-        <li><a href="{{ url_for('tree', family_id = 3) }}">3</a> <span class="divider"></span></li>
-
-    </ul>
+        </ul>
+    </div>
 
     <div id="introduction">
         <p style="font-size: x-large">Tree diagrams originated in the medieval era to represent genealogical

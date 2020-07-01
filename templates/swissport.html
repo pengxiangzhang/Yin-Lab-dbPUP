@@ -2,15 +2,18 @@
 
 {% block title %} Extend Swiss Data {% endblock %}
 {% block content %}
-    <h1>
-        Family List
-    </h1>
-    <ul class="breadcrumb" style="font-size: medium">
-        <li><a href="{{ url_for('swissport', family_id = 1) }}">1</a> <span class="divider"></span></li>
-        <li><a href="{{ url_for('swissport', family_id = 2) }}">2</a> <span class="divider"></span></li>
-        <li><a href="{{ url_for('swissport', family_id = 3) }}">3</a> <span class="divider"></span></li>
+    <div class="familyList">
+        <h1>
+            Family List
+        </h1>
+        <ul class="breadcrumb" style="font-size: medium">
+            {% for i in range(40) %}
+                <li><a href="{{ url_for('family', family_id = i + 1) }}">{{ i + 1 }}</a> <span class="divider"></span>
+                </li>
+            {% endfor %}
 
-    </ul>
+        </ul>
+    </div>
 
     <div class="abstractOfPage">
         <div class="informationOfGene">
@@ -21,11 +24,6 @@
                 mutagenesis of B. subtilis>
         </div>
     </div>
-    <div class="extend">
-        <h1>Extend Resource </h1>
-        <p> View Tree</p>
-    </div>
-
 
     <table class="table" id="data-table">
         <thead>
