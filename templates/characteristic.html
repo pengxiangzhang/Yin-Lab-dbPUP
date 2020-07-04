@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <div class="row">
+        <div class="page-header">
+            <h3>This is Characterize page<small>Subtext for header</small></h3>
+
+        </div>
+    </div>
     <div class="abstractOfPage" style="margin-bottom: 50px">
         <div class="familyList">
             <h1>
@@ -65,19 +71,19 @@
                     </td>
                 {% endif %}
                 {% if record.km == -1 %}
-                <td>{{ ' ' }}</td>
+                    <td>{{ ' ' }}</td>
                 {% else %}
-                <td>{{ record.km }}</td>
+                    <td>{{ record.km }}</td>
                 {% endif %}
                 {% if record.vmax == -1 %}
-                <td>{{ ' ' }}</td>
+                    <td>{{ ' ' }}</td>
                 {% else %}
-                <td>{{ record.vmax }}</td>
+                    <td>{{ record.vmax }}</td>
                 {% endif %}
                 {% if record.kcat == -1 %}
-                <td>{{ ' ' }}</td>
+                    <td>{{ ' ' }}</td>
                 {% else %}
-                <td>{{ record.kcat }}</td>
+                    <td>{{ record.kcat }}</td>
                 {% endif %}
                 <td>
                     <a href="{{ url_for('family', family_id = record.family) }}">{{ record.family }}</a>
