@@ -63,13 +63,6 @@ def characteristic(family_id):
                 for i in range(amount):
                     pdbSplitLink.append(pdbSubLink[i].split('[')[0])
 
-        for record in records:
-            if record.km == -1:
-                record.km = ''
-            if record.vmax == -1:
-                record.vmax = ''
-            if record.kcat == -1:
-                record.kcat = ''
         return render_template("characteristic.html", records=records, amount = amount, pdbSubLink = pdbSubLink, pdbSplitLink = pdbSplitLink )
 
 
