@@ -67,16 +67,17 @@
                 <td>{{ ' ' }}</td>
                 {% else %}
                 <td>{{ record.km }}</td>
-
+                {% endif %}
                 {% if record.vmax == -1 %}
                 <td>{{ ' ' }}</td>
                 {% else %}
                 <td>{{ record.vmax }}</td>
-
+                {% endif %}
                 {% if record.kcat == -1 %}
                 <td>{{ ' ' }}</td>
                 {% else %}
                 <td>{{ record.kcat }}</td>
+                {% endif %}
                 <td>
                     <a href="{{ url_for('family', family_id = record.family) }}">{{ record.family }}</a>
                 </td>
