@@ -25,22 +25,23 @@
     <table class="table" id="data-table">
         <thead>
         <tr>
-            <th>number</th>
-            <th>strain</th>
-            <th>protein name</th>
-            <th>gene name</th>
-            <th>UniqueIdentifier</th>
-            <th>E.C</th>
-            <th>substrate</th>
-            <th>production</th>
+            <th>Number</th>
+            <th>Strain</th>
+            <th>Protein Name</th>
+            <th>Gene Name</th>
+            <th>Uniprot</th>
+            <th>EC</th>
+            <th>Substrate</th>
+            <th>Production</th>
             <th>PDB</th>
             <th>Km(uM)</th>
             <th>Vmax</th>
             <th>Kcat</th>
-            <th>family</th>
+            <th>Family</th>
             <th>Sequence</th>
-            <th hidden></th>
             <th>DOI</th>
+            <th hidden></th>
+
         </tr>
         </thead>
         <tbody>
@@ -55,7 +56,7 @@
                 <td>{{ record.substrate }}</td>
                 <td>{{ record.production }}</td>
                 {% if amount == 0 %}
-                    <td>record.pdb</td>
+                    <td>{{ record.pdb }}</td>
                 {% else %}
                     <td>
                         {% for i in range(amount) %}

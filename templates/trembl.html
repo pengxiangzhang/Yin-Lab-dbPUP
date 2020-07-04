@@ -30,18 +30,18 @@
     <table class="table" id="data-table">
         <thead>
         <tr>
-            <th>Protein enzyme</th>
+            <th>Protein Name</th>
             <th>Strain</th>
             <th>Gene Name</th>
-            <th>Uniq ID</th>
-            <th>family</th>
+            <th>Uniprot</th>
+            <th>Family</th>
             <th>EC</th>
             <th>Sequence</th>
             <th hidden></th>
-            </ul>
+        </tr>
         </thead>
         <tbody>
-        {% for record in records: %}
+        {% for record in records %}
             <tr>
                 <td>{{ record.protein_enzyme }}</td>
                 <td>{{ record.strain }}</td>
