@@ -45,13 +45,32 @@ def characteristic(family_id):
         msg = request.get_data()
         family_id = json.loads(msg)['family_id']
         records = swiRecord.SwiRecord.query.filter_by(family=family_id)
+
         return render_template('swissport.html', records=records)
     else:
         if family_id == 'all':
+            amount = 0
+            pdbSubLink = 0
+            pdbSplitLink = 0
             records = charRecord.CharRecord.query.all()
         else:
             records = charRecord.CharRecord.query.filter_by(family=family_id)
-        return render_template("characteristic.html", records=records)
+            for record in records:
+                pdbSubLink = record.pdb.split(';')
+                amount = len(pdbSubLink)
+                print(amount)
+                pdbSplitLink = []
+                for i in range(amount):
+                    pdbSplitLink.append(pdbSubLink[i].split('[')[0])
+
+        for record in records:
+            if record.km == -1:
+                record.km = ''
+            if record.vmax == -1:
+                record.vmax = ''
+            if record.kcat == -1:
+                record.kcat = ''
+        return render_template("characteristic.html", records=records, amount = amount, pdbSubLink = pdbSubLink, pdbSplitLink = pdbSplitLink )
 
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])

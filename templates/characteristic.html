@@ -1,28 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="abstractOfPage" style="margin-bottom: 50px">
-    <div class="familyList">
-        <h1>
-            Family List
-        </h1>
-        <ul class="breadcrumb" style="font-size: medium">
-            {% for i in range(40) %}
-                <li><a href="{{ url_for('characteristic', family_id = i + 1) }}">{{ i + 1 }}</a> <span class="divider"></span>
-                </li>
-            {% endfor %}
+    <div class="abstractOfPage" style="margin-bottom: 50px">
+        <div class="familyList">
+            <h1>
+                Family List
+            </h1>
+            <ul class="breadcrumb" style="font-size: medium">
+                {% for i in range(40) %}
+                    <li><a href="{{ url_for('characteristic', family_id = i + 1) }}">{{ i + 1 }}</a> <span
+                            class="divider"></span>
+                    </li>
+                {% endfor %}
 
-        </ul>
+            </ul>
+        </div>
+        <div class="informationOfGene">
+            <h1>
+                Family Introduction
+            </h1>
+            <p>We .......</p>
+        </div>
     </div>
-    <div class="informationOfGene">
-        <h1>
-            Family Introduction
-        </h1>
-        <p>We .......</p>
-    </div>
-</div>
-<table class="table" id="data-table">
-    <thead>
+    <table class="table" id="data-table">
+        <thead>
         <tr>
             <th>number</th>
             <th>strain</th>
@@ -36,41 +37,49 @@
             <th>Km(uM)</th>
             <th>Vmax</th>
             <th>Kcat</th>
-            <th>DOI</th>
             <th>family</th>
             <th>Sequence</th>
             <th hidden></th>
+            <th>DOI</th>
         </tr>
-    </thead>
-    <tbody>
+        </thead>
+        <tbody>
         {% for record in records: %}
-        <tr>
-            <td>{{ record.number }}</td>
-            <td>{{ record.strain }}</td>
-            <td>{{ record.protein_name }}</td>
-            <td>{{ record.gene_name }}</td>
-            <td>{{ record.uniq_id }}</td>
-            <td>{{ record.ec }}</td>
-            <td>{{ record.substrate }}</td>
-            <td>{{ record.production }}</td>
-            <td>{{ record.pdb }}</td>
-            <td>{{ record.km }}</td>
-            <td>{{ record.vmax }}</td>
-            <td>{{ record.kcat }}</td>
-            <td>{{ record.doi }}</td>
-            <td>
-                <a href="{{ url_for('family', family_id = record.family) }}">{{ record.family }}</a>
-            </td>
-            <td>
-                <a href={{ url_for('detail', unid = record.uniq_id) }}>view</a>
-            </td>
-            <td>
-                <p hidden>> {{record.uniq_id}} {{record.seq}}</p>
-            </td>
-        </tr>
+            <tr>
+                <td>{{ record.number }}</td>
+                <td>{{ record.strain }}</td>
+                <td>{{ record.protein_name }}</td>
+                <td>{{ record.gene_name }}</td>
+                <td><a href="https://www.uniprot.org/uniprot/{{ record.uniq_id }}">{{ record.uniq_id }}</a></td>
+                <td>{{ record.ec }}</td>
+                <td>{{ record.substrate }}</td>
+                <td>{{ record.production }}</td>
+                {% if amount == 0 %}
+                    <td>record.pdb</td>
+                {% else %}
+                    <td>
+                        {% for i in range(amount) %}
+                            <a href="https://www.rcsb.org/structure/{{ pdbSplitLink[i] }}">{{ pdbSubLink[i] }}</a>
+                        {% endfor %}
+                    </td>
+                {% endif %}
+                <td>{{ record.km }}</td>
+                <td>{{ record.vmax }}</td>
+                <td>{{ record.kcat }}</td>
+                <td>
+                    <a href="{{ url_for('family', family_id = record.family) }}">{{ record.family }}</a>
+                </td>
+                <td>
+                    <a href={{ url_for('detail', unid = record.uniq_id) }}>view</a>
+                </td>
+                <td><a href="https://doi.org/{{ record.doi }}">{{ record.doi }}</a></td>
+                <td>
+                    <p hidden>> {{ record.uniq_id }} {{ record.seq }}</p>
+                </td>
+            </tr>
         {% endfor %}
-    </tbody>
-</table>
+        </tbody>
+    </table>
 
 {% endblock %}
 
