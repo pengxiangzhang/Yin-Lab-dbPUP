@@ -58,7 +58,6 @@ def characteristic(family_id):
             for record in records:
                 pdbSubLink = record.pdb.split(';')
                 amount = len(pdbSubLink)
-                print(amount)
                 pdbSplitLink = []
                 for i in range(amount):
                     pdbSplitLink.append(pdbSubLink[i].split('[')[0])
