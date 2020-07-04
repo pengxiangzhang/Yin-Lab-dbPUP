@@ -48,10 +48,10 @@ def characteristic(family_id):
 
         return render_template('swissport.html', records=records)
     else:
+        amount = 0
+        pdbSubLink = 0
+        pdbSplitLink = 0
         if family_id == 'all':
-            amount = 0
-            pdbSubLink = 0
-            pdbSplitLink = 0
             records = charRecord.CharRecord.query.all()
         else:
             records = charRecord.CharRecord.query.filter_by(family=family_id)
