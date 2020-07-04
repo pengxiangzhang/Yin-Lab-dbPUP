@@ -28,7 +28,7 @@
             <p>We .......</p>
         </div>
     </div>
-    <table class="table" id="data-table">
+    <table class="table" id="data-table" class="display nowrap">
         <thead>
         <tr>
             <th>Number</th>
@@ -51,7 +51,7 @@
         </tr>
         </thead>
         <tbody>
-        {% for record in records: %}
+        {% for record in records %}
             <tr>
                 <td>{{ record.number }}</td>
                 <td>{{ record.strain }}</td>
