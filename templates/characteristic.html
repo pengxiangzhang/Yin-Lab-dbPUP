@@ -61,15 +61,11 @@
                 <td>{{ record.ec }}</td>
                 <td>{{ record.substrate }}</td>
                 <td>{{ record.production }}</td>
-                {% if amount == 0 %}
-                    <td>{{ record.pdb }}</td>
-                {% else %}
-                    <td>
-                        {% for i in range(amount) %}
-                            <a href="https://www.rcsb.org/structure/{{ pdbSplitLink[i] }}">{{ pdbSubLink[i] }}</a>
-                        {% endfor %}
-                    </td>
-                {% endif %}
+                <td>
+                    {% for element in rows[record.number] %}
+                        <a href="https://www.rcsb.org/structure/{{ element[1] }}">{{ element[0] }}</a>
+                    {% endfor %}
+                </td>
                 {% if record.km == -1 %}
                     <td>{{ ' ' }}</td>
                 {% else %}

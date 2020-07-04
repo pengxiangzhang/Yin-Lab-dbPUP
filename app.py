@@ -48,21 +48,38 @@ def characteristic(family_id):
 
         return render_template('swissport.html', records=records)
     else:
-        amount = 0
-        pdbSubLink = 0
-        pdbSplitLink = 0
+        row = {}
+        amount_row = 0
         if family_id == 'all':
             records = charRecord.CharRecord.query.all()
+            for record in records:
+                amount_row += 1
+                sub_row = []
+                pdbSubLink = record.pdb.split(';')
+                amount = len(pdbSubLink)
+                for i in range(amount):
+                    amount_row += 1
+                    pdb_information = []
+                    pdb_information.append(pdbSubLink[i])
+                    pdb_information.append(pdbSubLink[i].split('[')[0])
+                    sub_row.append(pdb_information)
+                row[record.number] = sub_row
+
         else:
             records = charRecord.CharRecord.query.filter_by(family=family_id)
             for record in records:
+                sub_row = []
                 pdbSubLink = record.pdb.split(';')
                 amount = len(pdbSubLink)
-                pdbSplitLink = []
                 for i in range(amount):
-                    pdbSplitLink.append(pdbSubLink[i].split('[')[0])
+                    amount_row += 1
+                    pdb_information = []
+                    pdb_information.append(pdbSubLink[i])
+                    pdb_information.append(pdbSubLink[i].split('[')[0])
+                    sub_row.append(pdb_information)
+                row[record.number] = sub_row
 
-        return render_template("characteristic.html", records=records, amount = amount, pdbSubLink = pdbSubLink, pdbSplitLink = pdbSplitLink )
+        return render_template("characteristic.html", records=records, rows = row)
 
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
