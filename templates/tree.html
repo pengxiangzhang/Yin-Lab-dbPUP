@@ -177,7 +177,13 @@
             for (var i = 0; i < children.length; i++) {
                 console.log(children[i]["y_value"]);
                 var textList = svg.append("a")
-                    .attr('xlink:href', "/")
+                    .attr('xlink:href', function (d) {
+                        if (children[i].name.search('|') != -1) {
+                            var uniq_id = children[i].name.split('|')[1];
+                            return '/detail/' + uniq_id
+                        }
+
+                    })
                     .append("svg:text")
                     .attr("x", "1200")
                     .attr("y", children[i]["x_value"])
