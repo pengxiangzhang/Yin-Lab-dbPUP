@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="page-header">
+            <h3>This is network page<small>Subtext for header</small></h3>
+
+        </div>
+    </div>
+    <div class="familyList">
+        <h1>
+            Family List
+        </h1>
+        <ul class="breadcrumb" style="font-size: medium">
+            {% for i in range(40) %}
+                <li><a href="{{ url_for('network', family_id = i + 1) }}">{{ i + 1 }}</a> <span
+                        class="divider"></span>
+                </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+    <div id="introduction">
+        <p style="font-size: x-large">Tree diagrams originated in the medieval era to represent genealogical
+            relationships.
+
+            Phylogenetic tree diagrams in the evolutionary sense date back to at least the early 19th century.
+
+            The term phylogeny for the evolutionary relationships of species through time was coined by Ernst Haeckel,
+            who went further than Darwin in proposing phylogenic histories of life. In contemporary usage, tree of life
+            refers to the compilation of comprehensive phylogenetic databases rooted at the last universal common
+            ancestor of life on Earth. The Open Tree of Life, first published September 2015, is a project to compile
+            such a database for free publ{c access.</p>
+    </div>
+    <div id="cy" style="width: 100%;
+        height: 800px;"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.15.2/cytoscape.min.js"></script>
+    <script>
+        var networkData = JSON.parse({{networkData|tojson|safe}});
+        console.log(networkData['elements']);
+        var cy = cytoscape({
+
+            container: document.getElementById('cy'),
+
+            elements: networkData['elements'],
+
+            layout: {
+                name: 'preset'
+            },
+
+            // so we can see the ids
+            style: [
+                {
+                    selector: 'node',
+                    style: {
+                        'background-color': 'red',
+                        'label': 'data(name)'
+                    }
+                }
+            ]
+
+        });
+        cy.nodes().on('click', function (e) {
+            var clickedNode = e.target;
+            window.open(clickedNode.data('href'));
+        });
+
+    </script>
+{% endblock %}
+
+
+
+

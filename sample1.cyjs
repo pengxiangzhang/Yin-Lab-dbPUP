@@ -1,0 +1,2863 @@
+{
+  "format_version" : "1.0",
+  "generated_by" : "cytoscape-3.8.0",
+  "target_cytoscapejs_version" : "~2.1",
+  "data" : {
+    "shared_name" : "PF00232.name_fl_s_90_s_70rep.e170(2)",
+    "name" : "PF00232.name_fl_s_90_s_70rep.e170(2)",
+    "SUID" : 655929,
+    "__Annotations" : [ "edgeThickness=1.0|parent=226e68c6-a40e-4d89-bcef-0494d818e82b|canvas=background|fillOpacity=100.0|type=org.cytoscape.view.presentation.annotations.ShapeAnnotation|uuid=1c7e9ba9-5f2a-4985-bed6-80e47f1e8fa4|fillColor=-9920434|shapeType=RECTANGLE|edgeColor=-16777216|edgeOpacity=100.0|name=Shape 1|x=-3204.0|width=80.0|y=4001.0|z=6|height=35.0", "edgeThickness=1.0|parent=226e68c6-a40e-4d89-bcef-0494d818e82b|canvas=background|fillOpacity=100.0|type=org.cytoscape.view.presentation.annotations.ShapeAnnotation|uuid=b8e2cc85-cdc5-40c2-abff-ccb620c715fc|fillColor=-5395138|shapeType=RECTANGLE|edgeColor=-16777216|edgeOpacity=100.0|name=Shape 1|x=-3204.0|width=80.0|y=4046.0|z=3|height=35.0", "canvas=background|fontFamily=SansSerif|color=-16777216|name=legend|x=-3214.0|y=3886.0|z=16|fontSize=14|text=Legend|type=org.cytoscape.view.presentation.annotations.TextAnnotation|fontStyle=0|uuid=70024d93-a6f8-47e1-86e4-5a82d6af0122", "parent=226e68c6-a40e-4d89-bcef-0494d818e82b|canvas=background|color=-16777216|type=org.cytoscape.view.presentation.annotations.TextAnnotation|fontStyle=0|uuid=42d3bb99-84cd-4584-a1d0-865208bebf1e|fontFamily=SansSerif|name=Text|x=-3104.0|y=4249.5|z=14|fontSize=20|text=unclassified Chloroflexi", "edgeThickness=1.0|parent=226e68c6-a40e-4d89-bcef-0494d818e82b|canvas=background|fillOpacity=100.0|type=org.cytoscape.view.presentation.annotations.ShapeAnnotation|uuid=f1dafd9b-8ab4-4390-8afe-fe1a2bbddde0|fillColor=-4497217|shapeType=RECTANGLE|edgeColor=-16777216|edgeOpacity=100.0|name=Shape 1|x=-3204.0|width=80.0|y=4181.0|z=8|height=35.0", "edgeThickness=1.0|parent=226e68c6-a40e-4d89-bcef-0494d818e82b|canvas=background|fillOpacity=100.0|type=org.cytoscape.view.presentation.annotations.ShapeAnnotation|uuid=1c30dd8a-bb88-42a2-b4b3-7fe1acf9bfcc|shapeType=RECTANGLE|edgeColor=-16777216|edgeOpacity=100.0|name=Shape 1|x=-3214.0|width=324.0|y=3946.0|z=4|height=335.0", "edgeThickness=1.0|parent=226e68c6-a40e-4d89-bcef-0494d818e82b|canvas=background|fillOpacity=100.0|type=org.cytoscape.view.presentation.annotations.ShapeAnnotation|uuid=09376c75-bcce-4c5b-a0bf-56bc399b9a9e|fillColor=-12205929|shapeType=RECTANGLE|edgeColor=-16777216|edgeOpacity=100.0|name=Shape 1|x=-3204.0|width=80.0|y=3956.0|z=12|height=35.0", "parent=226e68c6-a40e-4d89-bcef-0494d818e82b|canvas=background|color=-16777216|type=org.cytoscape.view.presentation.annotations.TextAnnotation|fontStyle=0|uuid=3fabd1a8-138c-4eb8-bb43-a03706b52036|fontFamily=SansSerif|name=Text|x=-3104.0|y=4204.5|z=1|fontSize=20|text=Clostridia", "parent=226e68c6-a40e-4d89-bcef-0494d818e82b|canvas=background|color=-16777216|type=org.cytoscape.view.presentation.annotations.TextAnnotation|fontStyle=0|uuid=9303c732-9f9a-4984-9fa4-7d054f3fe7df|fontFamily=SansSerif|name=Node Fill Color|x=-3214.0|y=3918.0|z=9|fontSize=20|text=Node Fill Color", "parent=226e68c6-a40e-4d89-bcef-0494d818e82b|canvas=background|color=-16777216|type=org.cytoscape.view.presentation.annotations.TextAnnotation|fontStyle=0|uuid=36caf19f-3e89-4d69-82a2-462f9e54de80|fontFamily=SansSerif|name=Text|x=-3104.0|y=4159.5|z=11|fontSize=20|text=Eumetazoa", "parent=226e68c6-a40e-4d89-bcef-0494d818e82b|canvas=background|color=-16777216|type=org.cytoscape.view.presentation.annotations.TextAnnotation|fontStyle=0|uuid=5a1b2323-166c-4fa5-9ed1-faa0cacf60e0|fontFamily=SansSerif|name=Text|x=-3104.0|y=4114.5|z=13|fontSize=20|text=Actinobacteria", "canvas=foreground|name=legend|x=-3214.0|y=3918.0|z=0|type=org.cytoscape.view.presentation.annotations.GroupAnnotation|uuid=226e68c6-a40e-4d89-bcef-0494d818e82b|memberUUIDs=9303c732-9f9a-4984-9fa4-7d054f3fe7df,1c30dd8a-bb88-42a2-b4b3-7fe1acf9bfcc,09376c75-bcce-4c5b-a0bf-56bc399b9a9e,4d33916c-1d88-454d-a649-de204410c8cf,1c7e9ba9-5f2a-4985-bed6-80e47f1e8fa4,c48ab0d2-7c75-45a8-8877-41ef2e7ee03b,b8e2cc85-cdc5-40c2-abff-ccb620c715fc,542c8873-ddf6-418e-89a3-22ac4a879a94,bff92ccb-8416-45f1-a96f-51bf382af0d0,5a1b2323-166c-4fa5-9ed1-faa0cacf60e0,546efc62-b315-454c-8dd7-c2ac8e60305f,36caf19f-3e89-4d69-82a2-462f9e54de80,f1dafd9b-8ab4-4390-8afe-fe1a2bbddde0,3fabd1a8-138c-4eb8-bb43-a03706b52036,f84a6241-c2f4-4c35-b2a9-0939c4d5822d,42d3bb99-84cd-4584-a1d0-865208bebf1e", "edgeThickness=1.0|parent=226e68c6-a40e-4d89-bcef-0494d818e82b|canvas=background|fillOpacity=100.0|type=org.cytoscape.view.presentation.annotations.ShapeAnnotation|uuid=bff92ccb-8416-45f1-a96f-51bf382af0d0|fillColor=-4503446|shapeType=RECTANGLE|edgeColor=-16777216|edgeOpacity=100.0|name=Shape 1|x=-3204.0|width=80.0|y=4091.0|z=10|height=35.0", "parent=226e68c6-a40e-4d89-bcef-0494d818e82b|canvas=background|color=-16777216|type=org.cytoscape.view.presentation.annotations.TextAnnotation|fontStyle=0|uuid=4d33916c-1d88-454d-a649-de204410c8cf|fontFamily=SansSerif|name=Text|x=-3104.0|y=3979.5|z=5|fontSize=20|text=Bacilli", "edgeThickness=1.0|parent=226e68c6-a40e-4d89-bcef-0494d818e82b|canvas=background|fillOpacity=100.0|type=org.cytoscape.view.presentation.annotations.ShapeAnnotation|uuid=546efc62-b315-454c-8dd7-c2ac8e60305f|fillColor=-9866793|shapeType=RECTANGLE|edgeColor=-16777216|edgeOpacity=100.0|name=Shape 1|x=-3204.0|width=80.0|y=4136.0|z=7|height=35.0", "parent=226e68c6-a40e-4d89-bcef-0494d818e82b|canvas=background|color=-16777216|type=org.cytoscape.view.presentation.annotations.TextAnnotation|fontStyle=0|uuid=c48ab0d2-7c75-45a8-8877-41ef2e7ee03b|fontFamily=SansSerif|name=Text|x=-3104.0|y=4024.5|z=0|fontSize=20|text=Others", "canvas=background|fontFamily=Serif|color=-16777216|name=legend|x=-3214.0|y=3856.0|z=17|fontSize=24|text=PF00232.name_fl_s_90_s_70rep.e170(2)|type=org.cytoscape.view.presentation.annotations.TextAnnotation|fontStyle=0|uuid=2bca15e3-afa4-4a05-bda4-0d281beba1ef", "parent=226e68c6-a40e-4d89-bcef-0494d818e82b|canvas=background|color=-16777216|type=org.cytoscape.view.presentation.annotations.TextAnnotation|fontStyle=0|uuid=542c8873-ddf6-418e-89a3-22ac4a879a94|fontFamily=SansSerif|name=Text|x=-3104.0|y=4069.5|z=15|fontSize=20|text=Erysipelotrichia", "edgeThickness=1.0|parent=226e68c6-a40e-4d89-bcef-0494d818e82b|canvas=background|fillOpacity=100.0|type=org.cytoscape.view.presentation.annotations.ShapeAnnotation|uuid=f84a6241-c2f4-4c35-b2a9-0939c4d5822d|fillColor=-11061369|shapeType=RECTANGLE|edgeColor=-16777216|edgeOpacity=100.0|name=Shape 1|x=-3204.0|width=80.0|y=4226.0|z=2|height=35.0" ],
+    "selected" : true
+  },
+  "elements" : {
+    "nodes" : [ {
+      "data" : {
+        "id" : "459856",
+        "shared_name" : "Glyco_hydro_1|tr|J9XU85|J9XU85_BIFAN",
+        "T" : "T",
+        "Column_1" : "Eumetazoa",
+        "name" : "Glyco_hydro_1|tr|J9XU85|J9XU85_BIFAN",
+        "Column_2" : "B",
+        "SUID" : 459856,
+        "Column_6" : "Eukaryota",
+        "selected" : false
+      },
+      "position" : {
+        "x" : -3197.4648384165575,
+        "y" : -2952.5351696345497
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456973",
+        "shared_name" : "tr|C3N1P2|C3N1P2_SULIA",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|C3N1P2|C3N1P2_SULIA",
+        "Column_2" : "A",
+        "SUID" : 456973,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3647.5351615834425,
+        "y" : 3455.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456972",
+        "shared_name" : "Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "T" : "T",
+        "Column_1" : "Eumetazoa",
+        "name" : "Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "Column_2" : "A",
+        "SUID" : 456972,
+        "Column_6" : "Eukaryota",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3708.5351615834425,
+        "y" : 3409.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456971",
+        "shared_name" : "tr|A0A1W6JYP4|A0A1W6JYP4_9CREN",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A1W6JYP4|A0A1W6JYP4_9CREN",
+        "Column_2" : "A",
+        "SUID" : 456971,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3642.5351615834425,
+        "y" : 3365.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456970",
+        "shared_name" : "tr|F0QYX7|F0QYX7_VULM7",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|F0QYX7|F0QYX7_VULM7",
+        "Column_2" : "A",
+        "SUID" : 456970,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3723.5351615834425,
+        "y" : 3449.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456969",
+        "shared_name" : "tr|D9PZ08|D9PZ08_ACIS3",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|D9PZ08|D9PZ08_ACIS3",
+        "Column_2" : "A",
+        "SUID" : 456969,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3692.5351615834425,
+        "y" : 3491.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456968",
+        "shared_name" : "tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH",
+        "Column_2" : "A",
+        "SUID" : 456968,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3632.5351615834425,
+        "y" : 3419.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456967",
+        "shared_name" : "tr|F2L0W3|F2L0W3_THEU7",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|F2L0W3|F2L0W3_THEU7",
+        "Column_2" : "A",
+        "SUID" : 456967,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3615.5351615834425,
+        "y" : 3491.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456966",
+        "shared_name" : "tr|E0STZ0|E0STZ0_IGNAA",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|E0STZ0|E0STZ0_IGNAA",
+        "Column_2" : "A",
+        "SUID" : 456966,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3650.5351615834425,
+        "y" : 3599.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456965",
+        "shared_name" : "tr|A0A101X1G4|A0A101X1G4_9CREN",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A101X1G4|A0A101X1G4_9CREN",
+        "Column_2" : "A",
+        "SUID" : 456965,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3645.5351615834425,
+        "y" : 3563.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456964",
+        "shared_name" : "tr|A0A218P180|A0A218P180_THECE",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A218P180|A0A218P180_THECE",
+        "Column_2" : "A",
+        "SUID" : 456964,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3768.5351615834425,
+        "y" : 3496.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456963",
+        "shared_name" : "tr|Q6KZ14|Q6KZ14_PICTO",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|Q6KZ14|Q6KZ14_PICTO",
+        "Column_2" : "A",
+        "SUID" : 456963,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3746.5351615834425,
+        "y" : 3538.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456195",
+        "shared_name" : "tr|A0A497GMY8|A0A497GMY8_9CREN",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A497GMY8|A0A497GMY8_9CREN",
+        "Column_2" : "A",
+        "SUID" : 456195,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3476.5351615834425,
+        "y" : 3515.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456962",
+        "shared_name" : "tr|Q9YGA8|Q9YGA8_9CREN",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|Q9YGA8|Q9YGA8_9CREN",
+        "Column_2" : "",
+        "SUID" : 456962,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3726.5351615834425,
+        "y" : 3574.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456194",
+        "shared_name" : "tr|A0A497GD90|A0A497GD90_9CREN",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A497GD90|A0A497GD90_9CREN",
+        "Column_2" : "A",
+        "SUID" : 456194,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3560.5351615834425,
+        "y" : 3566.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456193",
+        "shared_name" : "tr|W8W3B8|W8W3B8_9ARCH",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|W8W3B8|W8W3B8_9ARCH",
+        "Column_2" : "A",
+        "SUID" : 456193,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3550.5351615834425,
+        "y" : 3444.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456961",
+        "shared_name" : "Glyco_hydro_1|tr|Q51723|Q51723_9EURY",
+        "T" : "T",
+        "Column_1" : "Eumetazoa",
+        "name" : "Glyco_hydro_1|tr|Q51723|Q51723_9EURY",
+        "Column_2" : "A",
+        "SUID" : 456961,
+        "Column_6" : "Eukaryota",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3669.5351615834425,
+        "y" : 3527.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "455935",
+        "shared_name" : "tr|H2J7V1|H2J7V1_MARPK",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|H2J7V1|H2J7V1_MARPK",
+        "Column_2" : "B",
+        "SUID" : 455935,
+        "Column_6" : "Bacteria",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3947.5351615834425,
+        "y" : 3432.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456244",
+        "shared_name" : "tr|A0A1N5SBI0|A0A1N5SBI0_9EURY",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A1N5SBI0|A0A1N5SBI0_9EURY",
+        "Column_2" : "A",
+        "SUID" : 456244,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3822.5351615834425,
+        "y" : 3562.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456430",
+        "shared_name" : "tr|A0A2J6MY51|A0A2J6MY51_9ARCH",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A2J6MY51|A0A2J6MY51_9ARCH",
+        "Column_2" : "A",
+        "SUID" : 456430,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3392.5351615834425,
+        "y" : 3509.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456685",
+        "shared_name" : "tr|E0STV9|E0STV9_IGNAA",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|E0STV9|E0STV9_IGNAA",
+        "Column_2" : "A",
+        "SUID" : 456685,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3719.5351615834425,
+        "y" : 3635.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456429",
+        "shared_name" : "tr|A0A497GEV8|A0A497GEV8_9CREN",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A497GEV8|A0A497GEV8_9CREN",
+        "Column_2" : "A",
+        "SUID" : 456429,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3327.5351615834425,
+        "y" : 3436.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456684",
+        "shared_name" : "tr|A8F6V8|A8F6V8_PSELT",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A8F6V8|A8F6V8_PSELT",
+        "Column_2" : "B",
+        "SUID" : 456684,
+        "Column_6" : "Bacteria",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3790.5351615834425,
+        "y" : 3399.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456428",
+        "shared_name" : "tr|A0A2J4GAM4|A0A2J4GAM4_9CREN",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A2J4GAM4|A0A2J4GAM4_9CREN",
+        "Column_2" : "A",
+        "SUID" : 456428,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3308.5351615834425,
+        "y" : 3486.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456427",
+        "shared_name" : "tr|S5Z8L5|S5Z8L5_9CREN",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|S5Z8L5|S5Z8L5_9CREN",
+        "Column_2" : "A",
+        "SUID" : 456427,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3384.5351615834425,
+        "y" : 3473.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "455976",
+        "shared_name" : "tr|A0A2H5V0Z2|A0A2H5V0Z2_9ARCH",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A2H5V0Z2|A0A2H5V0Z2_9ARCH",
+        "Column_2" : "A",
+        "SUID" : 455976,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3570.5351615834425,
+        "y" : 3684.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456928",
+        "shared_name" : "tr|A0A3G1A7P3|A0A3G1A7P3_9CREN",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A3G1A7P3|A0A3G1A7P3_9CREN",
+        "Column_2" : "A",
+        "SUID" : 456928,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3347.5351615834425,
+        "y" : 3683.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456287",
+        "shared_name" : "tr|A0A101EUA7|A0A101EUA7_9THEM",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A101EUA7|A0A101EUA7_9THEM",
+        "Column_2" : "B",
+        "SUID" : 456287,
+        "Column_6" : "Bacteria",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3756.5351615834425,
+        "y" : 3359.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456927",
+        "shared_name" : "tr|A1S0U0|A1S0U0_THEPD",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A1S0U0|A1S0U0_THEPD",
+        "Column_2" : "A",
+        "SUID" : 456927,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3374.5351615834425,
+        "y" : 3642.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456286",
+        "shared_name" : "tr|A0A3D6D929|A0A3D6D929_9BACT",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A3D6D929|A0A3D6D929_9BACT",
+        "Column_2" : "B",
+        "SUID" : 456286,
+        "Column_6" : "Bacteria",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3836.5351615834425,
+        "y" : 3449.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456926",
+        "shared_name" : "tr|D7D821|D7D821_STAHD",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|D7D821|D7D821_STAHD",
+        "Column_2" : "A",
+        "SUID" : 456926,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3430.5351615834425,
+        "y" : 3678.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456925",
+        "shared_name" : "tr|A0A256XQM7|A0A256XQM7_9CREN",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A256XQM7|A0A256XQM7_9CREN",
+        "Column_2" : "A",
+        "SUID" : 456925,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3333.5351615834425,
+        "y" : 3558.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456924",
+        "shared_name" : "tr|A0A497GRR6|A0A497GRR6_9CREN",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A497GRR6|A0A497GRR6_9CREN",
+        "Column_2" : "A",
+        "SUID" : 456924,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3369.5351615834425,
+        "y" : 3595.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456923",
+        "shared_name" : "tr|A0A419KFS8|A0A419KFS8_9ARCH",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A419KFS8|A0A419KFS8_9ARCH",
+        "Column_2" : "A",
+        "SUID" : 456923,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3409.5351615834425,
+        "y" : 3554.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456922",
+        "shared_name" : "tr|A0A497G5Q1|A0A497G5Q1_9CREN",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A497G5Q1|A0A497G5Q1_9CREN",
+        "Column_2" : "A",
+        "SUID" : 456922,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3293.5351615834425,
+        "y" : 3594.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "456921",
+        "shared_name" : "tr|A0A151BN94|A0A151BN94_9ARCH",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A151BN94|A0A151BN94_9ARCH",
+        "Column_2" : "A",
+        "SUID" : 456921,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3277.5351615834425,
+        "y" : 3522.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "457752",
+        "shared_name" : "tr|A0A0U3S7P9|A0A0U3S7P9_9EURY",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A0U3S7P9|A0A0U3S7P9_9EURY",
+        "Column_2" : "A",
+        "SUID" : 457752,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3190.5351615834425,
+        "y" : 3688.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "457751",
+        "shared_name" : "tr|A0A218P8H7|A0A218P8H7_9EURY",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|A0A218P8H7|A0A218P8H7_9EURY",
+        "Column_2" : "A",
+        "SUID" : 457751,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3271.5351615834425,
+        "y" : 3751.4648303654503
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "457750",
+        "shared_name" : "tr|Q9V058|Q9V058_PYRAB",
+        "T" : "",
+        "Column_1" : "Others",
+        "name" : "tr|Q9V058|Q9V058_PYRAB",
+        "Column_2" : "A",
+        "SUID" : 457750,
+        "Column_6" : "Archaea",
+        "selected" : false
+      },
+      "position" : {
+        "x" : 3296.5351615834425,
+        "y" : 3647.4648303654503
+      },
+      "selected" : false
+    } ],
+    "edges" : [ {
+      "data" : {
+        "id" : "466733",
+        "source" : "456973",
+        "target" : "456961",
+        "shared_name" : "tr|C3N1P2|C3N1P2_SULIA (interacts with) Glyco_hydro_1|tr|Q51723|Q51723_9EURY",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|C3N1P2|C3N1P2_SULIA (interacts with) Glyco_hydro_1|tr|Q51723|Q51723_9EURY",
+        "interaction" : "interacts with",
+        "SUID" : 466733,
+        "Column_11" : 7.12E-172,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466731",
+        "source" : "456972",
+        "target" : "456961",
+        "shared_name" : "Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO (interacts with) Glyco_hydro_1|tr|Q51723|Q51723_9EURY",
+        "shared_interaction" : "interacts with",
+        "name" : "Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO (interacts with) Glyco_hydro_1|tr|Q51723|Q51723_9EURY",
+        "interaction" : "interacts with",
+        "SUID" : 466731,
+        "Column_11" : 9.98E-172,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466732",
+        "source" : "456972",
+        "target" : "456973",
+        "shared_name" : "Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "shared_interaction" : "interacts with",
+        "name" : "Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "interaction" : "interacts with",
+        "SUID" : 466732,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466729",
+        "source" : "456971",
+        "target" : "456972",
+        "shared_name" : "tr|A0A1W6JYP4|A0A1W6JYP4_9CREN (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A1W6JYP4|A0A1W6JYP4_9CREN (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "interaction" : "interacts with",
+        "SUID" : 466729,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466730",
+        "source" : "456971",
+        "target" : "456973",
+        "shared_name" : "tr|A0A1W6JYP4|A0A1W6JYP4_9CREN (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A1W6JYP4|A0A1W6JYP4_9CREN (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "interaction" : "interacts with",
+        "SUID" : 466730,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466726",
+        "source" : "456970",
+        "target" : "456971",
+        "shared_name" : "tr|F0QYX7|F0QYX7_VULM7 (interacts with) tr|A0A1W6JYP4|A0A1W6JYP4_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|F0QYX7|F0QYX7_VULM7 (interacts with) tr|A0A1W6JYP4|A0A1W6JYP4_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466726,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466727",
+        "source" : "456970",
+        "target" : "456972",
+        "shared_name" : "tr|F0QYX7|F0QYX7_VULM7 (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|F0QYX7|F0QYX7_VULM7 (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "interaction" : "interacts with",
+        "SUID" : 466727,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466728",
+        "source" : "456970",
+        "target" : "456973",
+        "shared_name" : "tr|F0QYX7|F0QYX7_VULM7 (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|F0QYX7|F0QYX7_VULM7 (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "interaction" : "interacts with",
+        "SUID" : 466728,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466723",
+        "source" : "456969",
+        "target" : "456970",
+        "shared_name" : "tr|D9PZ08|D9PZ08_ACIS3 (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|D9PZ08|D9PZ08_ACIS3 (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "interaction" : "interacts with",
+        "SUID" : 466723,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466724",
+        "source" : "456969",
+        "target" : "456972",
+        "shared_name" : "tr|D9PZ08|D9PZ08_ACIS3 (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|D9PZ08|D9PZ08_ACIS3 (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "interaction" : "interacts with",
+        "SUID" : 466724,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466725",
+        "source" : "456969",
+        "target" : "456973",
+        "shared_name" : "tr|D9PZ08|D9PZ08_ACIS3 (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|D9PZ08|D9PZ08_ACIS3 (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "interaction" : "interacts with",
+        "SUID" : 466725,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466722",
+        "source" : "456969",
+        "target" : "456971",
+        "shared_name" : "tr|D9PZ08|D9PZ08_ACIS3 (interacts with) tr|A0A1W6JYP4|A0A1W6JYP4_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|D9PZ08|D9PZ08_ACIS3 (interacts with) tr|A0A1W6JYP4|A0A1W6JYP4_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466722,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466717",
+        "source" : "456968",
+        "target" : "456971",
+        "shared_name" : "tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH (interacts with) tr|A0A1W6JYP4|A0A1W6JYP4_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH (interacts with) tr|A0A1W6JYP4|A0A1W6JYP4_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466717,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466718",
+        "source" : "456968",
+        "target" : "456970",
+        "shared_name" : "tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "interaction" : "interacts with",
+        "SUID" : 466718,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466719",
+        "source" : "456968",
+        "target" : "456972",
+        "shared_name" : "tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "interaction" : "interacts with",
+        "SUID" : 466719,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466720",
+        "source" : "456968",
+        "target" : "456973",
+        "shared_name" : "tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "interaction" : "interacts with",
+        "SUID" : 466720,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466721",
+        "source" : "456968",
+        "target" : "456969",
+        "shared_name" : "tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "interaction" : "interacts with",
+        "SUID" : 466721,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466710",
+        "source" : "456967",
+        "target" : "456194",
+        "shared_name" : "tr|F2L0W3|F2L0W3_THEU7 (interacts with) tr|A0A497GD90|A0A497GD90_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|F2L0W3|F2L0W3_THEU7 (interacts with) tr|A0A497GD90|A0A497GD90_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466710,
+        "Column_11" : 1.32E-174,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466715",
+        "source" : "456967",
+        "target" : "456970",
+        "shared_name" : "tr|F2L0W3|F2L0W3_THEU7 (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|F2L0W3|F2L0W3_THEU7 (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "interaction" : "interacts with",
+        "SUID" : 466715,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466716",
+        "source" : "456967",
+        "target" : "456969",
+        "shared_name" : "tr|F2L0W3|F2L0W3_THEU7 (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|F2L0W3|F2L0W3_THEU7 (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "interaction" : "interacts with",
+        "SUID" : 466716,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466711",
+        "source" : "456967",
+        "target" : "456971",
+        "shared_name" : "tr|F2L0W3|F2L0W3_THEU7 (interacts with) tr|A0A1W6JYP4|A0A1W6JYP4_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|F2L0W3|F2L0W3_THEU7 (interacts with) tr|A0A1W6JYP4|A0A1W6JYP4_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466711,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466712",
+        "source" : "456967",
+        "target" : "456968",
+        "shared_name" : "tr|F2L0W3|F2L0W3_THEU7 (interacts with) tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|F2L0W3|F2L0W3_THEU7 (interacts with) tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH",
+        "interaction" : "interacts with",
+        "SUID" : 466712,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466713",
+        "source" : "456967",
+        "target" : "456973",
+        "shared_name" : "tr|F2L0W3|F2L0W3_THEU7 (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|F2L0W3|F2L0W3_THEU7 (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "interaction" : "interacts with",
+        "SUID" : 466713,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466714",
+        "source" : "456967",
+        "target" : "456972",
+        "shared_name" : "tr|F2L0W3|F2L0W3_THEU7 (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|F2L0W3|F2L0W3_THEU7 (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "interaction" : "interacts with",
+        "SUID" : 466714,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466707",
+        "source" : "456966",
+        "target" : "456970",
+        "shared_name" : "tr|E0STZ0|E0STZ0_IGNAA (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|E0STZ0|E0STZ0_IGNAA (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "interaction" : "interacts with",
+        "SUID" : 466707,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466708",
+        "source" : "456966",
+        "target" : "456967",
+        "shared_name" : "tr|E0STZ0|E0STZ0_IGNAA (interacts with) tr|F2L0W3|F2L0W3_THEU7",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|E0STZ0|E0STZ0_IGNAA (interacts with) tr|F2L0W3|F2L0W3_THEU7",
+        "interaction" : "interacts with",
+        "SUID" : 466708,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466709",
+        "source" : "456966",
+        "target" : "456969",
+        "shared_name" : "tr|E0STZ0|E0STZ0_IGNAA (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|E0STZ0|E0STZ0_IGNAA (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "interaction" : "interacts with",
+        "SUID" : 466709,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466704",
+        "source" : "456966",
+        "target" : "456972",
+        "shared_name" : "tr|E0STZ0|E0STZ0_IGNAA (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|E0STZ0|E0STZ0_IGNAA (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "interaction" : "interacts with",
+        "SUID" : 466704,
+        "Column_11" : 1.68E-177,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466705",
+        "source" : "456966",
+        "target" : "456973",
+        "shared_name" : "tr|E0STZ0|E0STZ0_IGNAA (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|E0STZ0|E0STZ0_IGNAA (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "interaction" : "interacts with",
+        "SUID" : 466705,
+        "Column_11" : 1.58E-178,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466706",
+        "source" : "456966",
+        "target" : "456968",
+        "shared_name" : "tr|E0STZ0|E0STZ0_IGNAA (interacts with) tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|E0STZ0|E0STZ0_IGNAA (interacts with) tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH",
+        "interaction" : "interacts with",
+        "SUID" : 466706,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466699",
+        "source" : "456965",
+        "target" : "456972",
+        "shared_name" : "tr|A0A101X1G4|A0A101X1G4_9CREN (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A101X1G4|A0A101X1G4_9CREN (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "interaction" : "interacts with",
+        "SUID" : 466699,
+        "Column_11" : 1.45E-180,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466700",
+        "source" : "456965",
+        "target" : "456967",
+        "shared_name" : "tr|A0A101X1G4|A0A101X1G4_9CREN (interacts with) tr|F2L0W3|F2L0W3_THEU7",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A101X1G4|A0A101X1G4_9CREN (interacts with) tr|F2L0W3|F2L0W3_THEU7",
+        "interaction" : "interacts with",
+        "SUID" : 466700,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466701",
+        "source" : "456965",
+        "target" : "456970",
+        "shared_name" : "tr|A0A101X1G4|A0A101X1G4_9CREN (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A101X1G4|A0A101X1G4_9CREN (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "interaction" : "interacts with",
+        "SUID" : 466701,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466702",
+        "source" : "456965",
+        "target" : "456969",
+        "shared_name" : "tr|A0A101X1G4|A0A101X1G4_9CREN (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A101X1G4|A0A101X1G4_9CREN (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "interaction" : "interacts with",
+        "SUID" : 466702,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466697",
+        "source" : "456965",
+        "target" : "456968",
+        "shared_name" : "tr|A0A101X1G4|A0A101X1G4_9CREN (interacts with) tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A101X1G4|A0A101X1G4_9CREN (interacts with) tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH",
+        "interaction" : "interacts with",
+        "SUID" : 466697,
+        "Column_11" : 2.41E-172,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466698",
+        "source" : "456965",
+        "target" : "456973",
+        "shared_name" : "tr|A0A101X1G4|A0A101X1G4_9CREN (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A101X1G4|A0A101X1G4_9CREN (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "interaction" : "interacts with",
+        "SUID" : 466698,
+        "Column_11" : 6.2E-180,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466703",
+        "source" : "456965",
+        "target" : "456966",
+        "shared_name" : "tr|A0A101X1G4|A0A101X1G4_9CREN (interacts with) tr|E0STZ0|E0STZ0_IGNAA",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A101X1G4|A0A101X1G4_9CREN (interacts with) tr|E0STZ0|E0STZ0_IGNAA",
+        "interaction" : "interacts with",
+        "SUID" : 466703,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466691",
+        "source" : "456964",
+        "target" : "456972",
+        "shared_name" : "tr|A0A218P180|A0A218P180_THECE (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A218P180|A0A218P180_THECE (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "interaction" : "interacts with",
+        "SUID" : 466691,
+        "Column_11" : 1.29E-178,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466692",
+        "source" : "456964",
+        "target" : "456970",
+        "shared_name" : "tr|A0A218P180|A0A218P180_THECE (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A218P180|A0A218P180_THECE (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "interaction" : "interacts with",
+        "SUID" : 466692,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466693",
+        "source" : "456964",
+        "target" : "456967",
+        "shared_name" : "tr|A0A218P180|A0A218P180_THECE (interacts with) tr|F2L0W3|F2L0W3_THEU7",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A218P180|A0A218P180_THECE (interacts with) tr|F2L0W3|F2L0W3_THEU7",
+        "interaction" : "interacts with",
+        "SUID" : 466693,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466694",
+        "source" : "456964",
+        "target" : "456969",
+        "shared_name" : "tr|A0A218P180|A0A218P180_THECE (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A218P180|A0A218P180_THECE (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "interaction" : "interacts with",
+        "SUID" : 466694,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466689",
+        "source" : "456964",
+        "target" : "456968",
+        "shared_name" : "tr|A0A218P180|A0A218P180_THECE (interacts with) tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A218P180|A0A218P180_THECE (interacts with) tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH",
+        "interaction" : "interacts with",
+        "SUID" : 466689,
+        "Column_11" : 6.51E-174,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466690",
+        "source" : "456964",
+        "target" : "456973",
+        "shared_name" : "tr|A0A218P180|A0A218P180_THECE (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A218P180|A0A218P180_THECE (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "interaction" : "interacts with",
+        "SUID" : 466690,
+        "Column_11" : 7.63E-177,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466695",
+        "source" : "456964",
+        "target" : "456965",
+        "shared_name" : "tr|A0A218P180|A0A218P180_THECE (interacts with) tr|A0A101X1G4|A0A101X1G4_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A218P180|A0A218P180_THECE (interacts with) tr|A0A101X1G4|A0A101X1G4_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466695,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466696",
+        "source" : "456964",
+        "target" : "456966",
+        "shared_name" : "tr|A0A218P180|A0A218P180_THECE (interacts with) tr|E0STZ0|E0STZ0_IGNAA",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A218P180|A0A218P180_THECE (interacts with) tr|E0STZ0|E0STZ0_IGNAA",
+        "interaction" : "interacts with",
+        "SUID" : 466696,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466683",
+        "source" : "456963",
+        "target" : "456967",
+        "shared_name" : "tr|Q6KZ14|Q6KZ14_PICTO (interacts with) tr|F2L0W3|F2L0W3_THEU7",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|Q6KZ14|Q6KZ14_PICTO (interacts with) tr|F2L0W3|F2L0W3_THEU7",
+        "interaction" : "interacts with",
+        "SUID" : 466683,
+        "Column_11" : 6.87E-172,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466684",
+        "source" : "456963",
+        "target" : "456972",
+        "shared_name" : "tr|Q6KZ14|Q6KZ14_PICTO (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|Q6KZ14|Q6KZ14_PICTO (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "interaction" : "interacts with",
+        "SUID" : 466684,
+        "Column_11" : 4.02E-173,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466685",
+        "source" : "456963",
+        "target" : "456970",
+        "shared_name" : "tr|Q6KZ14|Q6KZ14_PICTO (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|Q6KZ14|Q6KZ14_PICTO (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "interaction" : "interacts with",
+        "SUID" : 466685,
+        "Column_11" : 3.57E-173,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466686",
+        "source" : "456963",
+        "target" : "456973",
+        "shared_name" : "tr|Q6KZ14|Q6KZ14_PICTO (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|Q6KZ14|Q6KZ14_PICTO (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "interaction" : "interacts with",
+        "SUID" : 466686,
+        "Column_11" : 3.42E-173,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466687",
+        "source" : "456963",
+        "target" : "456966",
+        "shared_name" : "tr|Q6KZ14|Q6KZ14_PICTO (interacts with) tr|E0STZ0|E0STZ0_IGNAA",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|Q6KZ14|Q6KZ14_PICTO (interacts with) tr|E0STZ0|E0STZ0_IGNAA",
+        "interaction" : "interacts with",
+        "SUID" : 466687,
+        "Column_11" : 9.71E-178,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466688",
+        "source" : "456963",
+        "target" : "456969",
+        "shared_name" : "tr|Q6KZ14|Q6KZ14_PICTO (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|Q6KZ14|Q6KZ14_PICTO (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "interaction" : "interacts with",
+        "SUID" : 466688,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "462195",
+        "source" : "456195",
+        "target" : "456924",
+        "shared_name" : "tr|A0A497GMY8|A0A497GMY8_9CREN (interacts with) tr|A0A497GRR6|A0A497GRR6_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497GMY8|A0A497GMY8_9CREN (interacts with) tr|A0A497GRR6|A0A497GRR6_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 462195,
+        "Column_11" : 6.01E-173,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466675",
+        "source" : "456962",
+        "target" : "456973",
+        "shared_name" : "tr|Q9YGA8|Q9YGA8_9CREN (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|Q9YGA8|Q9YGA8_9CREN (interacts with) tr|C3N1P2|C3N1P2_SULIA",
+        "interaction" : "interacts with",
+        "SUID" : 466675,
+        "Column_11" : 1.02E-173,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466676",
+        "source" : "456962",
+        "target" : "456972",
+        "shared_name" : "tr|Q9YGA8|Q9YGA8_9CREN (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|Q9YGA8|Q9YGA8_9CREN (interacts with) Glyco_hydro_1|tr|A0A0E3K5E4|A0A0E3K5E4_SACSO",
+        "interaction" : "interacts with",
+        "SUID" : 466676,
+        "Column_11" : 1.06E-174,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466677",
+        "source" : "456962",
+        "target" : "456970",
+        "shared_name" : "tr|Q9YGA8|Q9YGA8_9CREN (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|Q9YGA8|Q9YGA8_9CREN (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "interaction" : "interacts with",
+        "SUID" : 466677,
+        "Column_11" : 8.99E-179,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466678",
+        "source" : "456962",
+        "target" : "456965",
+        "shared_name" : "tr|Q9YGA8|Q9YGA8_9CREN (interacts with) tr|A0A101X1G4|A0A101X1G4_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|Q9YGA8|Q9YGA8_9CREN (interacts with) tr|A0A101X1G4|A0A101X1G4_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466678,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466679",
+        "source" : "456962",
+        "target" : "456967",
+        "shared_name" : "tr|Q9YGA8|Q9YGA8_9CREN (interacts with) tr|F2L0W3|F2L0W3_THEU7",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|Q9YGA8|Q9YGA8_9CREN (interacts with) tr|F2L0W3|F2L0W3_THEU7",
+        "interaction" : "interacts with",
+        "SUID" : 466679,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466680",
+        "source" : "456962",
+        "target" : "456969",
+        "shared_name" : "tr|Q9YGA8|Q9YGA8_9CREN (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|Q9YGA8|Q9YGA8_9CREN (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "interaction" : "interacts with",
+        "SUID" : 466680,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466681",
+        "source" : "456962",
+        "target" : "456964",
+        "shared_name" : "tr|Q9YGA8|Q9YGA8_9CREN (interacts with) tr|A0A218P180|A0A218P180_THECE",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|Q9YGA8|Q9YGA8_9CREN (interacts with) tr|A0A218P180|A0A218P180_THECE",
+        "interaction" : "interacts with",
+        "SUID" : 466681,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466682",
+        "source" : "456962",
+        "target" : "456966",
+        "shared_name" : "tr|Q9YGA8|Q9YGA8_9CREN (interacts with) tr|E0STZ0|E0STZ0_IGNAA",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|Q9YGA8|Q9YGA8_9CREN (interacts with) tr|E0STZ0|E0STZ0_IGNAA",
+        "interaction" : "interacts with",
+        "SUID" : 466682,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "462192",
+        "source" : "456194",
+        "target" : "456969",
+        "shared_name" : "tr|A0A497GD90|A0A497GD90_9CREN (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497GD90|A0A497GD90_9CREN (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "interaction" : "interacts with",
+        "SUID" : 462192,
+        "Column_11" : 6.95E-173,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "462193",
+        "source" : "456194",
+        "target" : "456966",
+        "shared_name" : "tr|A0A497GD90|A0A497GD90_9CREN (interacts with) tr|E0STZ0|E0STZ0_IGNAA",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497GD90|A0A497GD90_9CREN (interacts with) tr|E0STZ0|E0STZ0_IGNAA",
+        "interaction" : "interacts with",
+        "SUID" : 462193,
+        "Column_11" : 3.83E-173,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "462194",
+        "source" : "456194",
+        "target" : "456195",
+        "shared_name" : "tr|A0A497GD90|A0A497GD90_9CREN (interacts with) tr|A0A497GMY8|A0A497GMY8_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497GD90|A0A497GD90_9CREN (interacts with) tr|A0A497GMY8|A0A497GMY8_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 462194,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "462188",
+        "source" : "456193",
+        "target" : "456967",
+        "shared_name" : "tr|W8W3B8|W8W3B8_9ARCH (interacts with) tr|F2L0W3|F2L0W3_THEU7",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|W8W3B8|W8W3B8_9ARCH (interacts with) tr|F2L0W3|F2L0W3_THEU7",
+        "interaction" : "interacts with",
+        "SUID" : 462188,
+        "Column_11" : 1.49E-174,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "462189",
+        "source" : "456193",
+        "target" : "456969",
+        "shared_name" : "tr|W8W3B8|W8W3B8_9ARCH (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|W8W3B8|W8W3B8_9ARCH (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "interaction" : "interacts with",
+        "SUID" : 462189,
+        "Column_11" : 4.83E-175,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "462190",
+        "source" : "456193",
+        "target" : "456195",
+        "shared_name" : "tr|W8W3B8|W8W3B8_9ARCH (interacts with) tr|A0A497GMY8|A0A497GMY8_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|W8W3B8|W8W3B8_9ARCH (interacts with) tr|A0A497GMY8|A0A497GMY8_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 462190,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "462191",
+        "source" : "456193",
+        "target" : "456194",
+        "shared_name" : "tr|W8W3B8|W8W3B8_9ARCH (interacts with) tr|A0A497GD90|A0A497GD90_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|W8W3B8|W8W3B8_9ARCH (interacts with) tr|A0A497GD90|A0A497GD90_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 462191,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466667",
+        "source" : "456961",
+        "target" : "456968",
+        "shared_name" : "Glyco_hydro_1|tr|Q51723|Q51723_9EURY (interacts with) tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH",
+        "shared_interaction" : "interacts with",
+        "name" : "Glyco_hydro_1|tr|Q51723|Q51723_9EURY (interacts with) tr|A0A2R6CEE6|A0A2R6CEE6_9ARCH",
+        "interaction" : "interacts with",
+        "SUID" : 466667,
+        "Column_11" : 7.14E-173,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466668",
+        "source" : "456961",
+        "target" : "456970",
+        "shared_name" : "Glyco_hydro_1|tr|Q51723|Q51723_9EURY (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "shared_interaction" : "interacts with",
+        "name" : "Glyco_hydro_1|tr|Q51723|Q51723_9EURY (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "interaction" : "interacts with",
+        "SUID" : 466668,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466669",
+        "source" : "456961",
+        "target" : "456969",
+        "shared_name" : "Glyco_hydro_1|tr|Q51723|Q51723_9EURY (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "shared_interaction" : "interacts with",
+        "name" : "Glyco_hydro_1|tr|Q51723|Q51723_9EURY (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "interaction" : "interacts with",
+        "SUID" : 466669,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466670",
+        "source" : "456961",
+        "target" : "456967",
+        "shared_name" : "Glyco_hydro_1|tr|Q51723|Q51723_9EURY (interacts with) tr|F2L0W3|F2L0W3_THEU7",
+        "shared_interaction" : "interacts with",
+        "name" : "Glyco_hydro_1|tr|Q51723|Q51723_9EURY (interacts with) tr|F2L0W3|F2L0W3_THEU7",
+        "interaction" : "interacts with",
+        "SUID" : 466670,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466671",
+        "source" : "456961",
+        "target" : "456965",
+        "shared_name" : "Glyco_hydro_1|tr|Q51723|Q51723_9EURY (interacts with) tr|A0A101X1G4|A0A101X1G4_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "Glyco_hydro_1|tr|Q51723|Q51723_9EURY (interacts with) tr|A0A101X1G4|A0A101X1G4_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466671,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466672",
+        "source" : "456961",
+        "target" : "456962",
+        "shared_name" : "Glyco_hydro_1|tr|Q51723|Q51723_9EURY (interacts with) tr|Q9YGA8|Q9YGA8_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "Glyco_hydro_1|tr|Q51723|Q51723_9EURY (interacts with) tr|Q9YGA8|Q9YGA8_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466672,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466673",
+        "source" : "456961",
+        "target" : "456966",
+        "shared_name" : "Glyco_hydro_1|tr|Q51723|Q51723_9EURY (interacts with) tr|E0STZ0|E0STZ0_IGNAA",
+        "shared_interaction" : "interacts with",
+        "name" : "Glyco_hydro_1|tr|Q51723|Q51723_9EURY (interacts with) tr|E0STZ0|E0STZ0_IGNAA",
+        "interaction" : "interacts with",
+        "SUID" : 466673,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466674",
+        "source" : "456961",
+        "target" : "456964",
+        "shared_name" : "Glyco_hydro_1|tr|Q51723|Q51723_9EURY (interacts with) tr|A0A218P180|A0A218P180_THECE",
+        "shared_interaction" : "interacts with",
+        "name" : "Glyco_hydro_1|tr|Q51723|Q51723_9EURY (interacts with) tr|A0A218P180|A0A218P180_THECE",
+        "interaction" : "interacts with",
+        "SUID" : 466674,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "461618",
+        "source" : "455935",
+        "target" : "456286",
+        "shared_name" : "tr|H2J7V1|H2J7V1_MARPK (interacts with) tr|A0A3D6D929|A0A3D6D929_9BACT",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|H2J7V1|H2J7V1_MARPK (interacts with) tr|A0A3D6D929|A0A3D6D929_9BACT",
+        "interaction" : "interacts with",
+        "SUID" : 461618,
+        "Column_11" : 2.6E-174,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "462344",
+        "source" : "456244",
+        "target" : "456969",
+        "shared_name" : "tr|A0A1N5SBI0|A0A1N5SBI0_9EURY (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A1N5SBI0|A0A1N5SBI0_9EURY (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "interaction" : "interacts with",
+        "SUID" : 462344,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "462345",
+        "source" : "456244",
+        "target" : "456963",
+        "shared_name" : "tr|A0A1N5SBI0|A0A1N5SBI0_9EURY (interacts with) tr|Q6KZ14|Q6KZ14_PICTO",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A1N5SBI0|A0A1N5SBI0_9EURY (interacts with) tr|Q6KZ14|Q6KZ14_PICTO",
+        "interaction" : "interacts with",
+        "SUID" : 462345,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463061",
+        "source" : "456430",
+        "target" : "456922",
+        "shared_name" : "tr|A0A2J6MY51|A0A2J6MY51_9ARCH (interacts with) tr|A0A497G5Q1|A0A497G5Q1_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A2J6MY51|A0A2J6MY51_9ARCH (interacts with) tr|A0A497G5Q1|A0A497G5Q1_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 463061,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463062",
+        "source" : "456430",
+        "target" : "456925",
+        "shared_name" : "tr|A0A2J6MY51|A0A2J6MY51_9ARCH (interacts with) tr|A0A256XQM7|A0A256XQM7_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A2J6MY51|A0A2J6MY51_9ARCH (interacts with) tr|A0A256XQM7|A0A256XQM7_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 463062,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463063",
+        "source" : "456430",
+        "target" : "456924",
+        "shared_name" : "tr|A0A2J6MY51|A0A2J6MY51_9ARCH (interacts with) tr|A0A497GRR6|A0A497GRR6_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A2J6MY51|A0A2J6MY51_9ARCH (interacts with) tr|A0A497GRR6|A0A497GRR6_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 463063,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463064",
+        "source" : "456430",
+        "target" : "456923",
+        "shared_name" : "tr|A0A2J6MY51|A0A2J6MY51_9ARCH (interacts with) tr|A0A419KFS8|A0A419KFS8_9ARCH",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A2J6MY51|A0A2J6MY51_9ARCH (interacts with) tr|A0A419KFS8|A0A419KFS8_9ARCH",
+        "interaction" : "interacts with",
+        "SUID" : 463064,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463065",
+        "source" : "456430",
+        "target" : "456921",
+        "shared_name" : "tr|A0A2J6MY51|A0A2J6MY51_9ARCH (interacts with) tr|A0A151BN94|A0A151BN94_9ARCH",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A2J6MY51|A0A2J6MY51_9ARCH (interacts with) tr|A0A151BN94|A0A151BN94_9ARCH",
+        "interaction" : "interacts with",
+        "SUID" : 463065,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "464430",
+        "source" : "456685",
+        "target" : "456967",
+        "shared_name" : "tr|E0STV9|E0STV9_IGNAA (interacts with) tr|F2L0W3|F2L0W3_THEU7",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|E0STV9|E0STV9_IGNAA (interacts with) tr|F2L0W3|F2L0W3_THEU7",
+        "interaction" : "interacts with",
+        "SUID" : 464430,
+        "Column_11" : 1.17E-171,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "464435",
+        "source" : "456685",
+        "target" : "456969",
+        "shared_name" : "tr|E0STV9|E0STV9_IGNAA (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|E0STV9|E0STV9_IGNAA (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "interaction" : "interacts with",
+        "SUID" : 464435,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "464436",
+        "source" : "456685",
+        "target" : "456966",
+        "shared_name" : "tr|E0STV9|E0STV9_IGNAA (interacts with) tr|E0STZ0|E0STZ0_IGNAA",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|E0STV9|E0STV9_IGNAA (interacts with) tr|E0STZ0|E0STZ0_IGNAA",
+        "interaction" : "interacts with",
+        "SUID" : 464436,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "464437",
+        "source" : "456685",
+        "target" : "456965",
+        "shared_name" : "tr|E0STV9|E0STV9_IGNAA (interacts with) tr|A0A101X1G4|A0A101X1G4_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|E0STV9|E0STV9_IGNAA (interacts with) tr|A0A101X1G4|A0A101X1G4_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 464437,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "464431",
+        "source" : "456685",
+        "target" : "456964",
+        "shared_name" : "tr|E0STV9|E0STV9_IGNAA (interacts with) tr|A0A218P180|A0A218P180_THECE",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|E0STV9|E0STV9_IGNAA (interacts with) tr|A0A218P180|A0A218P180_THECE",
+        "interaction" : "interacts with",
+        "SUID" : 464431,
+        "Column_11" : 3.9E-174,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "464432",
+        "source" : "456685",
+        "target" : "456962",
+        "shared_name" : "tr|E0STV9|E0STV9_IGNAA (interacts with) tr|Q9YGA8|Q9YGA8_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|E0STV9|E0STV9_IGNAA (interacts with) tr|Q9YGA8|Q9YGA8_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 464432,
+        "Column_11" : 2.13E-175,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "464433",
+        "source" : "456685",
+        "target" : "456970",
+        "shared_name" : "tr|E0STV9|E0STV9_IGNAA (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|E0STV9|E0STV9_IGNAA (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "interaction" : "interacts with",
+        "SUID" : 464433,
+        "Column_11" : 1.22E-176,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "464434",
+        "source" : "456685",
+        "target" : "456961",
+        "shared_name" : "tr|E0STV9|E0STV9_IGNAA (interacts with) Glyco_hydro_1|tr|Q51723|Q51723_9EURY",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|E0STV9|E0STV9_IGNAA (interacts with) Glyco_hydro_1|tr|Q51723|Q51723_9EURY",
+        "interaction" : "interacts with",
+        "SUID" : 464434,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463059",
+        "source" : "456429",
+        "target" : "456430",
+        "shared_name" : "tr|A0A497GEV8|A0A497GEV8_9CREN (interacts with) tr|A0A2J6MY51|A0A2J6MY51_9ARCH",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497GEV8|A0A497GEV8_9CREN (interacts with) tr|A0A2J6MY51|A0A2J6MY51_9ARCH",
+        "interaction" : "interacts with",
+        "SUID" : 463059,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463060",
+        "source" : "456429",
+        "target" : "456921",
+        "shared_name" : "tr|A0A497GEV8|A0A497GEV8_9CREN (interacts with) tr|A0A151BN94|A0A151BN94_9ARCH",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497GEV8|A0A497GEV8_9CREN (interacts with) tr|A0A151BN94|A0A151BN94_9ARCH",
+        "interaction" : "interacts with",
+        "SUID" : 463060,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463055",
+        "source" : "456429",
+        "target" : "456922",
+        "shared_name" : "tr|A0A497GEV8|A0A497GEV8_9CREN (interacts with) tr|A0A497G5Q1|A0A497G5Q1_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497GEV8|A0A497GEV8_9CREN (interacts with) tr|A0A497G5Q1|A0A497G5Q1_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 463055,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463056",
+        "source" : "456429",
+        "target" : "456924",
+        "shared_name" : "tr|A0A497GEV8|A0A497GEV8_9CREN (interacts with) tr|A0A497GRR6|A0A497GRR6_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497GEV8|A0A497GEV8_9CREN (interacts with) tr|A0A497GRR6|A0A497GRR6_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 463056,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463057",
+        "source" : "456429",
+        "target" : "456925",
+        "shared_name" : "tr|A0A497GEV8|A0A497GEV8_9CREN (interacts with) tr|A0A256XQM7|A0A256XQM7_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497GEV8|A0A497GEV8_9CREN (interacts with) tr|A0A256XQM7|A0A256XQM7_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 463057,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463058",
+        "source" : "456429",
+        "target" : "456923",
+        "shared_name" : "tr|A0A497GEV8|A0A497GEV8_9CREN (interacts with) tr|A0A419KFS8|A0A419KFS8_9ARCH",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497GEV8|A0A497GEV8_9CREN (interacts with) tr|A0A419KFS8|A0A419KFS8_9ARCH",
+        "interaction" : "interacts with",
+        "SUID" : 463058,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "464428",
+        "source" : "456684",
+        "target" : "456970",
+        "shared_name" : "tr|A8F6V8|A8F6V8_PSELT (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A8F6V8|A8F6V8_PSELT (interacts with) tr|F0QYX7|F0QYX7_VULM7",
+        "interaction" : "interacts with",
+        "SUID" : 464428,
+        "Column_11" : 8.57E-173,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "464429",
+        "source" : "456684",
+        "target" : "456969",
+        "shared_name" : "tr|A8F6V8|A8F6V8_PSELT (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A8F6V8|A8F6V8_PSELT (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "interaction" : "interacts with",
+        "SUID" : 464429,
+        "Column_11" : 4.74E-175,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463051",
+        "source" : "456428",
+        "target" : "456923",
+        "shared_name" : "tr|A0A2J4GAM4|A0A2J4GAM4_9CREN (interacts with) tr|A0A419KFS8|A0A419KFS8_9ARCH",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A2J4GAM4|A0A2J4GAM4_9CREN (interacts with) tr|A0A419KFS8|A0A419KFS8_9ARCH",
+        "interaction" : "interacts with",
+        "SUID" : 463051,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463052",
+        "source" : "456428",
+        "target" : "456921",
+        "shared_name" : "tr|A0A2J4GAM4|A0A2J4GAM4_9CREN (interacts with) tr|A0A151BN94|A0A151BN94_9ARCH",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A2J4GAM4|A0A2J4GAM4_9CREN (interacts with) tr|A0A151BN94|A0A151BN94_9ARCH",
+        "interaction" : "interacts with",
+        "SUID" : 463052,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463053",
+        "source" : "456428",
+        "target" : "456925",
+        "shared_name" : "tr|A0A2J4GAM4|A0A2J4GAM4_9CREN (interacts with) tr|A0A256XQM7|A0A256XQM7_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A2J4GAM4|A0A2J4GAM4_9CREN (interacts with) tr|A0A256XQM7|A0A256XQM7_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 463053,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463054",
+        "source" : "456428",
+        "target" : "456922",
+        "shared_name" : "tr|A0A2J4GAM4|A0A2J4GAM4_9CREN (interacts with) tr|A0A497G5Q1|A0A497G5Q1_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A2J4GAM4|A0A2J4GAM4_9CREN (interacts with) tr|A0A497G5Q1|A0A497G5Q1_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 463054,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463048",
+        "source" : "456428",
+        "target" : "456429",
+        "shared_name" : "tr|A0A2J4GAM4|A0A2J4GAM4_9CREN (interacts with) tr|A0A497GEV8|A0A497GEV8_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A2J4GAM4|A0A2J4GAM4_9CREN (interacts with) tr|A0A497GEV8|A0A497GEV8_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 463048,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463049",
+        "source" : "456428",
+        "target" : "456430",
+        "shared_name" : "tr|A0A2J4GAM4|A0A2J4GAM4_9CREN (interacts with) tr|A0A2J6MY51|A0A2J6MY51_9ARCH",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A2J4GAM4|A0A2J4GAM4_9CREN (interacts with) tr|A0A2J6MY51|A0A2J6MY51_9ARCH",
+        "interaction" : "interacts with",
+        "SUID" : 463049,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463050",
+        "source" : "456428",
+        "target" : "456924",
+        "shared_name" : "tr|A0A2J4GAM4|A0A2J4GAM4_9CREN (interacts with) tr|A0A497GRR6|A0A497GRR6_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A2J4GAM4|A0A2J4GAM4_9CREN (interacts with) tr|A0A497GRR6|A0A497GRR6_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 463050,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463043",
+        "source" : "456427",
+        "target" : "456923",
+        "shared_name" : "tr|S5Z8L5|S5Z8L5_9CREN (interacts with) tr|A0A419KFS8|A0A419KFS8_9ARCH",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|S5Z8L5|S5Z8L5_9CREN (interacts with) tr|A0A419KFS8|A0A419KFS8_9ARCH",
+        "interaction" : "interacts with",
+        "SUID" : 463043,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463044",
+        "source" : "456427",
+        "target" : "456925",
+        "shared_name" : "tr|S5Z8L5|S5Z8L5_9CREN (interacts with) tr|A0A256XQM7|A0A256XQM7_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|S5Z8L5|S5Z8L5_9CREN (interacts with) tr|A0A256XQM7|A0A256XQM7_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 463044,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463045",
+        "source" : "456427",
+        "target" : "456921",
+        "shared_name" : "tr|S5Z8L5|S5Z8L5_9CREN (interacts with) tr|A0A151BN94|A0A151BN94_9ARCH",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|S5Z8L5|S5Z8L5_9CREN (interacts with) tr|A0A151BN94|A0A151BN94_9ARCH",
+        "interaction" : "interacts with",
+        "SUID" : 463045,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463046",
+        "source" : "456427",
+        "target" : "456922",
+        "shared_name" : "tr|S5Z8L5|S5Z8L5_9CREN (interacts with) tr|A0A497G5Q1|A0A497G5Q1_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|S5Z8L5|S5Z8L5_9CREN (interacts with) tr|A0A497G5Q1|A0A497G5Q1_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 463046,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463040",
+        "source" : "456427",
+        "target" : "456924",
+        "shared_name" : "tr|S5Z8L5|S5Z8L5_9CREN (interacts with) tr|A0A497GRR6|A0A497GRR6_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|S5Z8L5|S5Z8L5_9CREN (interacts with) tr|A0A497GRR6|A0A497GRR6_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 463040,
+        "Column_11" : 1.17E-178,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463041",
+        "source" : "456427",
+        "target" : "456430",
+        "shared_name" : "tr|S5Z8L5|S5Z8L5_9CREN (interacts with) tr|A0A2J6MY51|A0A2J6MY51_9ARCH",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|S5Z8L5|S5Z8L5_9CREN (interacts with) tr|A0A2J6MY51|A0A2J6MY51_9ARCH",
+        "interaction" : "interacts with",
+        "SUID" : 463041,
+        "Column_11" : 5.52E-179,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463042",
+        "source" : "456427",
+        "target" : "456429",
+        "shared_name" : "tr|S5Z8L5|S5Z8L5_9CREN (interacts with) tr|A0A497GEV8|A0A497GEV8_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|S5Z8L5|S5Z8L5_9CREN (interacts with) tr|A0A497GEV8|A0A497GEV8_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 463042,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "463047",
+        "source" : "456427",
+        "target" : "456428",
+        "shared_name" : "tr|S5Z8L5|S5Z8L5_9CREN (interacts with) tr|A0A2J4GAM4|A0A2J4GAM4_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|S5Z8L5|S5Z8L5_9CREN (interacts with) tr|A0A2J4GAM4|A0A2J4GAM4_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 463047,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "461705",
+        "source" : "455976",
+        "target" : "456194",
+        "shared_name" : "tr|A0A2H5V0Z2|A0A2H5V0Z2_9ARCH (interacts with) tr|A0A497GD90|A0A497GD90_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A2H5V0Z2|A0A2H5V0Z2_9ARCH (interacts with) tr|A0A497GD90|A0A497GD90_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 461705,
+        "Column_11" : 2.06E-172,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466468",
+        "source" : "456928",
+        "target" : "457751",
+        "shared_name" : "tr|A0A3G1A7P3|A0A3G1A7P3_9CREN (interacts with) tr|A0A218P8H7|A0A218P8H7_9EURY",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A3G1A7P3|A0A3G1A7P3_9CREN (interacts with) tr|A0A218P8H7|A0A218P8H7_9EURY",
+        "interaction" : "interacts with",
+        "SUID" : 466468,
+        "Column_11" : 1.75E-178,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466469",
+        "source" : "456928",
+        "target" : "457750",
+        "shared_name" : "tr|A0A3G1A7P3|A0A3G1A7P3_9CREN (interacts with) tr|Q9V058|Q9V058_PYRAB",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A3G1A7P3|A0A3G1A7P3_9CREN (interacts with) tr|Q9V058|Q9V058_PYRAB",
+        "interaction" : "interacts with",
+        "SUID" : 466469,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "462478",
+        "source" : "456287",
+        "target" : "456969",
+        "shared_name" : "tr|A0A101EUA7|A0A101EUA7_9THEM (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A101EUA7|A0A101EUA7_9THEM (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "interaction" : "interacts with",
+        "SUID" : 462478,
+        "Column_11" : 1.27E-173,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "462479",
+        "source" : "456287",
+        "target" : "456684",
+        "shared_name" : "tr|A0A101EUA7|A0A101EUA7_9THEM (interacts with) tr|A8F6V8|A8F6V8_PSELT",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A101EUA7|A0A101EUA7_9THEM (interacts with) tr|A8F6V8|A8F6V8_PSELT",
+        "interaction" : "interacts with",
+        "SUID" : 462479,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466467",
+        "source" : "456927",
+        "target" : "456928",
+        "shared_name" : "tr|A1S0U0|A1S0U0_THEPD (interacts with) tr|A0A3G1A7P3|A0A3G1A7P3_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A1S0U0|A1S0U0_THEPD (interacts with) tr|A0A3G1A7P3|A0A3G1A7P3_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466467,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466466",
+        "source" : "456927",
+        "target" : "457750",
+        "shared_name" : "tr|A1S0U0|A1S0U0_THEPD (interacts with) tr|Q9V058|Q9V058_PYRAB",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A1S0U0|A1S0U0_THEPD (interacts with) tr|Q9V058|Q9V058_PYRAB",
+        "interaction" : "interacts with",
+        "SUID" : 466466,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "462475",
+        "source" : "456286",
+        "target" : "456969",
+        "shared_name" : "tr|A0A3D6D929|A0A3D6D929_9BACT (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A3D6D929|A0A3D6D929_9BACT (interacts with) tr|D9PZ08|D9PZ08_ACIS3",
+        "interaction" : "interacts with",
+        "SUID" : 462475,
+        "Column_11" : 2.85E-173,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "462476",
+        "source" : "456286",
+        "target" : "456287",
+        "shared_name" : "tr|A0A3D6D929|A0A3D6D929_9BACT (interacts with) tr|A0A101EUA7|A0A101EUA7_9THEM",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A3D6D929|A0A3D6D929_9BACT (interacts with) tr|A0A101EUA7|A0A101EUA7_9THEM",
+        "interaction" : "interacts with",
+        "SUID" : 462476,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "462477",
+        "source" : "456286",
+        "target" : "456684",
+        "shared_name" : "tr|A0A3D6D929|A0A3D6D929_9BACT (interacts with) tr|A8F6V8|A8F6V8_PSELT",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A3D6D929|A0A3D6D929_9BACT (interacts with) tr|A8F6V8|A8F6V8_PSELT",
+        "interaction" : "interacts with",
+        "SUID" : 462477,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466463",
+        "source" : "456926",
+        "target" : "457750",
+        "shared_name" : "tr|D7D821|D7D821_STAHD (interacts with) tr|Q9V058|Q9V058_PYRAB",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|D7D821|D7D821_STAHD (interacts with) tr|Q9V058|Q9V058_PYRAB",
+        "interaction" : "interacts with",
+        "SUID" : 466463,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466464",
+        "source" : "456926",
+        "target" : "456928",
+        "shared_name" : "tr|D7D821|D7D821_STAHD (interacts with) tr|A0A3G1A7P3|A0A3G1A7P3_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|D7D821|D7D821_STAHD (interacts with) tr|A0A3G1A7P3|A0A3G1A7P3_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466464,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466465",
+        "source" : "456926",
+        "target" : "456927",
+        "shared_name" : "tr|D7D821|D7D821_STAHD (interacts with) tr|A1S0U0|A1S0U0_THEPD",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|D7D821|D7D821_STAHD (interacts with) tr|A1S0U0|A1S0U0_THEPD",
+        "interaction" : "interacts with",
+        "SUID" : 466465,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466461",
+        "source" : "456925",
+        "target" : "456927",
+        "shared_name" : "tr|A0A256XQM7|A0A256XQM7_9CREN (interacts with) tr|A1S0U0|A1S0U0_THEPD",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A256XQM7|A0A256XQM7_9CREN (interacts with) tr|A1S0U0|A1S0U0_THEPD",
+        "interaction" : "interacts with",
+        "SUID" : 466461,
+        "Column_11" : 1.79E-173,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466462",
+        "source" : "456925",
+        "target" : "457750",
+        "shared_name" : "tr|A0A256XQM7|A0A256XQM7_9CREN (interacts with) tr|Q9V058|Q9V058_PYRAB",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A256XQM7|A0A256XQM7_9CREN (interacts with) tr|Q9V058|Q9V058_PYRAB",
+        "interaction" : "interacts with",
+        "SUID" : 466462,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466459",
+        "source" : "456924",
+        "target" : "456928",
+        "shared_name" : "tr|A0A497GRR6|A0A497GRR6_9CREN (interacts with) tr|A0A3G1A7P3|A0A3G1A7P3_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497GRR6|A0A497GRR6_9CREN (interacts with) tr|A0A3G1A7P3|A0A3G1A7P3_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466459,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466460",
+        "source" : "456924",
+        "target" : "456925",
+        "shared_name" : "tr|A0A497GRR6|A0A497GRR6_9CREN (interacts with) tr|A0A256XQM7|A0A256XQM7_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497GRR6|A0A497GRR6_9CREN (interacts with) tr|A0A256XQM7|A0A256XQM7_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466460,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466456",
+        "source" : "456924",
+        "target" : "456926",
+        "shared_name" : "tr|A0A497GRR6|A0A497GRR6_9CREN (interacts with) tr|D7D821|D7D821_STAHD",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497GRR6|A0A497GRR6_9CREN (interacts with) tr|D7D821|D7D821_STAHD",
+        "interaction" : "interacts with",
+        "SUID" : 466456,
+        "Column_11" : 3.14E-177,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466457",
+        "source" : "456924",
+        "target" : "457750",
+        "shared_name" : "tr|A0A497GRR6|A0A497GRR6_9CREN (interacts with) tr|Q9V058|Q9V058_PYRAB",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497GRR6|A0A497GRR6_9CREN (interacts with) tr|Q9V058|Q9V058_PYRAB",
+        "interaction" : "interacts with",
+        "SUID" : 466457,
+        "Column_11" : 1.28E-177,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466458",
+        "source" : "456924",
+        "target" : "456927",
+        "shared_name" : "tr|A0A497GRR6|A0A497GRR6_9CREN (interacts with) tr|A1S0U0|A1S0U0_THEPD",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497GRR6|A0A497GRR6_9CREN (interacts with) tr|A1S0U0|A1S0U0_THEPD",
+        "interaction" : "interacts with",
+        "SUID" : 466458,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466451",
+        "source" : "456923",
+        "target" : "456927",
+        "shared_name" : "tr|A0A419KFS8|A0A419KFS8_9ARCH (interacts with) tr|A1S0U0|A1S0U0_THEPD",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A419KFS8|A0A419KFS8_9ARCH (interacts with) tr|A1S0U0|A1S0U0_THEPD",
+        "interaction" : "interacts with",
+        "SUID" : 466451,
+        "Column_11" : 4.74E-179,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466452",
+        "source" : "456923",
+        "target" : "457750",
+        "shared_name" : "tr|A0A419KFS8|A0A419KFS8_9ARCH (interacts with) tr|Q9V058|Q9V058_PYRAB",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A419KFS8|A0A419KFS8_9ARCH (interacts with) tr|Q9V058|Q9V058_PYRAB",
+        "interaction" : "interacts with",
+        "SUID" : 466452,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466453",
+        "source" : "456923",
+        "target" : "456928",
+        "shared_name" : "tr|A0A419KFS8|A0A419KFS8_9ARCH (interacts with) tr|A0A3G1A7P3|A0A3G1A7P3_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A419KFS8|A0A419KFS8_9ARCH (interacts with) tr|A0A3G1A7P3|A0A3G1A7P3_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466453,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466454",
+        "source" : "456923",
+        "target" : "456925",
+        "shared_name" : "tr|A0A419KFS8|A0A419KFS8_9ARCH (interacts with) tr|A0A256XQM7|A0A256XQM7_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A419KFS8|A0A419KFS8_9ARCH (interacts with) tr|A0A256XQM7|A0A256XQM7_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466454,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466448",
+        "source" : "456923",
+        "target" : "456194",
+        "shared_name" : "tr|A0A419KFS8|A0A419KFS8_9ARCH (interacts with) tr|A0A497GD90|A0A497GD90_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A419KFS8|A0A419KFS8_9ARCH (interacts with) tr|A0A497GD90|A0A497GD90_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466448,
+        "Column_11" : 5.03E-171,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466449",
+        "source" : "456923",
+        "target" : "456195",
+        "shared_name" : "tr|A0A419KFS8|A0A419KFS8_9ARCH (interacts with) tr|A0A497GMY8|A0A497GMY8_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A419KFS8|A0A419KFS8_9ARCH (interacts with) tr|A0A497GMY8|A0A497GMY8_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466449,
+        "Column_11" : 2.7E-172,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466450",
+        "source" : "456923",
+        "target" : "456926",
+        "shared_name" : "tr|A0A419KFS8|A0A419KFS8_9ARCH (interacts with) tr|D7D821|D7D821_STAHD",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A419KFS8|A0A419KFS8_9ARCH (interacts with) tr|D7D821|D7D821_STAHD",
+        "interaction" : "interacts with",
+        "SUID" : 466450,
+        "Column_11" : 7.59E-177,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466455",
+        "source" : "456923",
+        "target" : "456924",
+        "shared_name" : "tr|A0A419KFS8|A0A419KFS8_9ARCH (interacts with) tr|A0A497GRR6|A0A497GRR6_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A419KFS8|A0A419KFS8_9ARCH (interacts with) tr|A0A497GRR6|A0A497GRR6_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466455,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466443",
+        "source" : "456922",
+        "target" : "456928",
+        "shared_name" : "tr|A0A497G5Q1|A0A497G5Q1_9CREN (interacts with) tr|A0A3G1A7P3|A0A3G1A7P3_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497G5Q1|A0A497G5Q1_9CREN (interacts with) tr|A0A3G1A7P3|A0A3G1A7P3_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466443,
+        "Column_11" : 3.41E-172,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466444",
+        "source" : "456922",
+        "target" : "457750",
+        "shared_name" : "tr|A0A497G5Q1|A0A497G5Q1_9CREN (interacts with) tr|Q9V058|Q9V058_PYRAB",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497G5Q1|A0A497G5Q1_9CREN (interacts with) tr|Q9V058|Q9V058_PYRAB",
+        "interaction" : "interacts with",
+        "SUID" : 466444,
+        "Column_11" : 3.24E-172,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466445",
+        "source" : "456922",
+        "target" : "456924",
+        "shared_name" : "tr|A0A497G5Q1|A0A497G5Q1_9CREN (interacts with) tr|A0A497GRR6|A0A497GRR6_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497G5Q1|A0A497G5Q1_9CREN (interacts with) tr|A0A497GRR6|A0A497GRR6_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466445,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466446",
+        "source" : "456922",
+        "target" : "456925",
+        "shared_name" : "tr|A0A497G5Q1|A0A497G5Q1_9CREN (interacts with) tr|A0A256XQM7|A0A256XQM7_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497G5Q1|A0A497G5Q1_9CREN (interacts with) tr|A0A256XQM7|A0A256XQM7_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466446,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466442",
+        "source" : "456922",
+        "target" : "456927",
+        "shared_name" : "tr|A0A497G5Q1|A0A497G5Q1_9CREN (interacts with) tr|A1S0U0|A1S0U0_THEPD",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497G5Q1|A0A497G5Q1_9CREN (interacts with) tr|A1S0U0|A1S0U0_THEPD",
+        "interaction" : "interacts with",
+        "SUID" : 466442,
+        "Column_11" : 3.23E-171,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466447",
+        "source" : "456922",
+        "target" : "456923",
+        "shared_name" : "tr|A0A497G5Q1|A0A497G5Q1_9CREN (interacts with) tr|A0A419KFS8|A0A419KFS8_9ARCH",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A497G5Q1|A0A497G5Q1_9CREN (interacts with) tr|A0A419KFS8|A0A419KFS8_9ARCH",
+        "interaction" : "interacts with",
+        "SUID" : 466447,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466437",
+        "source" : "456921",
+        "target" : "457750",
+        "shared_name" : "tr|A0A151BN94|A0A151BN94_9ARCH (interacts with) tr|Q9V058|Q9V058_PYRAB",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A151BN94|A0A151BN94_9ARCH (interacts with) tr|Q9V058|Q9V058_PYRAB",
+        "interaction" : "interacts with",
+        "SUID" : 466437,
+        "Column_11" : 4.16E-171,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466438",
+        "source" : "456921",
+        "target" : "456922",
+        "shared_name" : "tr|A0A151BN94|A0A151BN94_9ARCH (interacts with) tr|A0A497G5Q1|A0A497G5Q1_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A151BN94|A0A151BN94_9ARCH (interacts with) tr|A0A497G5Q1|A0A497G5Q1_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466438,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466439",
+        "source" : "456921",
+        "target" : "456924",
+        "shared_name" : "tr|A0A151BN94|A0A151BN94_9ARCH (interacts with) tr|A0A497GRR6|A0A497GRR6_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A151BN94|A0A151BN94_9ARCH (interacts with) tr|A0A497GRR6|A0A497GRR6_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466439,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466440",
+        "source" : "456921",
+        "target" : "456925",
+        "shared_name" : "tr|A0A151BN94|A0A151BN94_9ARCH (interacts with) tr|A0A256XQM7|A0A256XQM7_9CREN",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A151BN94|A0A151BN94_9ARCH (interacts with) tr|A0A256XQM7|A0A256XQM7_9CREN",
+        "interaction" : "interacts with",
+        "SUID" : 466440,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "466441",
+        "source" : "456921",
+        "target" : "456923",
+        "shared_name" : "tr|A0A151BN94|A0A151BN94_9ARCH (interacts with) tr|A0A419KFS8|A0A419KFS8_9ARCH",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A151BN94|A0A151BN94_9ARCH (interacts with) tr|A0A419KFS8|A0A419KFS8_9ARCH",
+        "interaction" : "interacts with",
+        "SUID" : 466441,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "475334",
+        "source" : "457751",
+        "target" : "457752",
+        "shared_name" : "tr|A0A218P8H7|A0A218P8H7_9EURY (interacts with) tr|A0A0U3S7P9|A0A0U3S7P9_9EURY",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|A0A218P8H7|A0A218P8H7_9EURY (interacts with) tr|A0A0U3S7P9|A0A0U3S7P9_9EURY",
+        "interaction" : "interacts with",
+        "SUID" : 475334,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "475332",
+        "source" : "457750",
+        "target" : "457752",
+        "shared_name" : "tr|Q9V058|Q9V058_PYRAB (interacts with) tr|A0A0U3S7P9|A0A0U3S7P9_9EURY",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|Q9V058|Q9V058_PYRAB (interacts with) tr|A0A0U3S7P9|A0A0U3S7P9_9EURY",
+        "interaction" : "interacts with",
+        "SUID" : 475332,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "475333",
+        "source" : "457750",
+        "target" : "457751",
+        "shared_name" : "tr|Q9V058|Q9V058_PYRAB (interacts with) tr|A0A218P8H7|A0A218P8H7_9EURY",
+        "shared_interaction" : "interacts with",
+        "name" : "tr|Q9V058|Q9V058_PYRAB (interacts with) tr|A0A218P8H7|A0A218P8H7_9EURY",
+        "interaction" : "interacts with",
+        "SUID" : 475333,
+        "Column_11" : 0.0,
+        "selected" : false
+      },
+      "selected" : false
+    } ]
+  }
+}

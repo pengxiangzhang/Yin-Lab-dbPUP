@@ -136,6 +136,23 @@ def tree(family_id):
 def family(family_id):
     return render_template('family.html', family_id=family_id)
 
+@app.route("/network/<family_id>")
+def network(family_id):
+    try:
+        with open('sample1.cyjs') as f:
+            networkData = json.load(f)
+            for node in networkData['elements']['nodes']:
+                names = node['data']['name'].split('|')
+                if (len(names) > 3):
+                    node['data']['name'] = names[2]
+                    node['data']['href'] = '/detail/' + names[2]
+                else:
+                    node['data']['name'] = names[1]
+                    node['data']['href'] = '/detail/' + names[1]
+
+    except Exception:
+            networkData = None
+    return render_template('network.html', networkData = json.dumps(networkData))
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
