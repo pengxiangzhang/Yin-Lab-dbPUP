@@ -34,38 +34,66 @@
             ancestor of life on Earth. The Open Tree of Life, first published September 2015, is a project to compile
             such a database for free publ{c access.</p>
     </div>
+    <form id="searchForm" style="margin-top: 40px; font-size: medium">
+        <input type="text" name="s" placeholder="Search by Uniprot"/>
+        <input type="submit" value="Search Node"/>
+    </form>
     <div id="cy" style="width: 100%;
         height: 800px;"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.15.2/cytoscape.min.js"></script>
+
     <script>
         var networkData = JSON.parse({{networkData|tojson|safe}});
-        console.log(networkData['elements']);
-        var cy = cytoscape({
+        drawing(networkData);
 
-            container: document.getElementById('cy'),
+        $("#searchForm").submit(function (event) {
+            event.preventDefault();
+            var $form = $(this),
+                term = $form.find('input[name="s"]').val(),
+                url = window.location.href;
 
-            elements: networkData['elements'],
-
-            layout: {
-                name: 'preset'
-            },
-
-            // so we can see the ids
-            style: [
-                {
-                    selector: 'node',
-                    style: {
-                        'background-color': 'red',
-                        'label': 'data(name)'
-                    }
+            $.ajax({
+                type: "post",
+                url: url,
+                data: term,
+                success: function (msg) {
+                    drawing(msg);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log(errorThrown);
                 }
-            ]
+            })
 
         });
-        cy.nodes().on('click', function (e) {
-            var clickedNode = e.target;
-            window.open(clickedNode.data('href'));
-        });
+
+        function drawing(networkData) {
+            console.log(networkData['elements']);
+            var cy = cytoscape({
+
+                container: document.getElementById('cy'),
+
+                elements: networkData['elements'],
+
+                layout: {
+                    name: 'preset'
+                },
+
+                // so we can see the ids
+                style: [
+                    {
+                        selector: 'node',
+                        style: {
+                            'background-color': 'data(color)',
+                            'label': 'data(name)'
+                        }
+                    }
+                ]
+
+            });
+            cy.nodes().on('click', function (e) {
+                var clickedNode = e.target;
+                window.open(clickedNode.data('href'));
+            });
+        }
 
     </script>
 {% endblock %}
