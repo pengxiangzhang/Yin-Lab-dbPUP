@@ -136,6 +136,10 @@ def tree(family_id):
 def family(family_id):
     return render_template('family.html', family_id=family_id)
 
+@app.route("/subfamily/<family_id>")
+def subfamily(family_id):
+    return render_template('subfamily.html', family_id=family_id)
+
 @app.route("/network/<family_id>",  methods=['GET', 'POST'])
 def network(family_id):
     if request.method == 'POST':
