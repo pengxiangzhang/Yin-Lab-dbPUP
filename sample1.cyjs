@@ -12,23 +12,6 @@
   "elements" : {
     "nodes" : [ {
       "data" : {
-        "id" : "459856",
-        "shared_name" : "Glyco_hydro_1|tr|J9XU85|J9XU85_BIFAN",
-        "T" : "T",
-        "Column_1" : "Eumetazoa",
-        "name" : "Glyco_hydro_1|tr|J9XU85|J9XU85_BIFAN",
-        "Column_2" : "B",
-        "SUID" : 459856,
-        "Column_6" : "Eukaryota",
-        "selected" : false
-      },
-      "position" : {
-        "x" : -3197.4648384165575,
-        "y" : -2952.5351696345497
-      },
-      "selected" : false
-    }, {
-      "data" : {
         "id" : "456973",
         "shared_name" : "tr|C3N1P2|C3N1P2_SULIA",
         "T" : "",

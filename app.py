@@ -155,13 +155,13 @@ def network(family_id):
                         node['data']['name'] = names[2]
                         node['data']['href'] = '/detail/' + names[2]
                         if names[2] == node_name:
-                            node['data']['color'] = 'green'
+                            node['data']['color'] = '#FFF200'
 
                     else:
                         node['data']['name'] = names[1]
                         node['data']['href'] = '/detail/' + names[1]
                         if names[1] == node_name:
-                            node['data']['color'] = 'green'
+                            node['data']['color'] = '#FFF200'
         except Exception:
             networkData = None
 
