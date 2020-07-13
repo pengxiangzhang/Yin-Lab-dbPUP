@@ -89,7 +89,8 @@
                 </td>
                 <td><a href="https://doi.org/{{ record.doi }}">{{ record.doi }}</a></td>
                 <td>
-                    <p hidden>> {{ record.uniq_id }} {{ record.seq }}</p>
+                    <p hidden>>{{ record.uniq_id }} {{ record.protein_name }} {{ record.strain }}</p>
+                    <p hidden style="max-width: 50ch; word-wrap:break-word;"> {{ record.seq }}</p>
                 </td>
             </tr>
         {% endfor %}
