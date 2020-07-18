@@ -2,7 +2,6 @@ from flask import Flask, url_for, redirect, request
 from flask import render_template
 from flaskext.markdown import Markdown
 from flask_sqlalchemy import SQLAlchemy
-# from models.record import Record
 from models import charRecord, swiRecord, treRecord
 import json
 
