@@ -1,0 +1,287 @@
+{% extends 'base.html' %}
+
+{% block title %} Extend Swiss Data {% endblock %}
+{% block content %}
+
+    <style>
+
+        .node circle {
+            fill: #fff;
+            stroke: steelblue;
+            stroke-width: 3px;
+        }
+
+        .node text {
+            font: 12px sans-serif;
+        }
+
+        .link {
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 2px;
+        }
+
+    </style>
+    <div class="row">
+        <div class="page-header">
+            <h3>This is tree page<small>Subtext for header</small></h3>
+
+        </div>
+    </div>
+    <div class="familyList">
+        <h1>
+            Family List
+        </h1>
+        <ul class="breadcrumb" style="font-size: medium">
+            {% for i in range(40) %}
+                <li><a href="{{ url_for('tree', family_id = i + 1) }}">{{ i + 1 }}</a> <span class="divider"></span>
+                </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+
+    <div id="introduction">
+        <p style="font-size: x-large">Tree diagrams originated in the medieval era to represent genealogical
+            relationships.
+
+            Phylogenetic tree diagrams in the evolutionary sense date back to at least the early 19th century.
+
+            The term phylogeny for the evolutionary relationships of species through time was coined by Ernst Haeckel,
+            who went further than Darwin in proposing phylogenic histories of life. In contemporary usage, tree of life
+            refers to the compilation of comprehensive phylogenetic databases rooted at the last universal common
+            ancestor of life on Earth. The Open Tree of Life, first published September 2015, is a project to compile
+            such a database for free publ{c access.</p>
+    </div>
+
+    <div id="treeDiagram" style="margin-top: 20px">
+        <p>{Before see the tree of life, please choose a family}</p>
+    </div>
+
+
+    <script>
+        var treeData = JSON.parse({{treeData|tojson|safe}})
+
+
+        // ************** Generate the tree diagram	 *****************
+        var children = [];
+        var margin = {top: 20, right: 120, bottom: 20, left: 120},
+            width = 1200 - margin.right - margin.left,
+            height = 2500 - margin.top - margin.bottom;
+
+        var i = 0, duration = 750;
+
+        var tree = d3.layout.tree()
+            .size([height, width]);
+
+
+        var svg = d3.select("#treeDiagram").append("svg")
+            .attr("width", "90%")//width + margin.right + margin.left)
+            .attr("height", "1200")//height + margin.top + margin.bottom)
+            .call(d3.behavior.zoom().on("zoom", function () {
+                svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
+            }))
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        root = treeData[0];
+
+        update(root);
+        addlink(root);
+        function update(source) {
+
+            // Compute the new tree layout.
+            var nodes = tree.nodes(root).reverse(),
+                links = tree.links(nodes);
+
+            //The most important function: Stipulate the x, y axises value.
+            nodes.forEach(function (d) {
+                d.y = d.y_value / 2;
+                d.x = d.x_value / 10;
+                if (!d.children) {
+                    var childrenNode = {};
+                    childrenNode["x_value"] = d.x;
+                    childrenNode["y_value"] = d.y;
+                    childrenNode["name"] = d.name;
+                    children.push(childrenNode);
+                }
+            });
+
+
+            // Declare the nodes…
+            var node = svg.selectAll("g.node")
+                .data(nodes, function (d) {
+                    return d.id || (d.id = ++i);
+                });
+
+            // Enter the nodes.
+            var nodeEnter = node.enter().append("g")
+                .attr("class", "node")
+                .attr("transform", function (d) {
+                    return "translate(" + d.y + "," + d.x + ")";
+                })
+                .on("click", click);
+
+            nodeEnter.append("circle")
+                .attr("r", function (d) {
+                    return d.children || d._children ? 0 : 10;
+                })
+                .style("stroke", function (d) {
+                    return d.type;
+                })
+                .style("fill", function (d) {
+                    return d.level;
+                });
+
+
+            nodeEnter.append("text")
+                .attr("y", function (d) {
+                    return -18;
+                })
+                .attr("dy", ".35em")
+                .attr("text-anchor", "middle")
+                .text(function (d) {
+                    return d.children || d._children ? d.name : null;
+                })
+                .style("fill-opacity", 1);
+
+            nodeEnter.append('a')
+                .attr('xlink:href', function (d) {
+                    return d.children || d._children ? d.url : null;
+                });
+
+            var line = d3.svg.line()
+                .x(function (d) {
+                    return d.y;
+                })
+                .y(function (d) {
+                    return d.x;
+                })
+                .interpolate("step-before");
+
+            var link = svg.selectAll("path.link")
+                .data(tree.links(nodes), function (d) {
+                    return d.target.id;
+                });
+
+            link.enter().insert("path", "g")
+                .attr("class", "link")
+                .style("stroke", function (d) {
+                    return d.target.level;
+                })
+                .style("stroke-width", "10")
+                .attr("d", function (d) {
+                    return line([d.source, d.target]);
+                });
+
+
+            var nodeUpdate = node.transition()
+                .duration(duration)
+                .attr("transform", function (d) {
+                    return "translate(" + d.y + "," + d.x + ")";
+                });
+
+            nodeUpdate.select("circle")
+                .attr("r", function (d) {
+                    return d.children || d._children ? 5 : 10;
+                })
+                .style("stroke", function (d) {
+                    return d.children || d._children ? d.type : 'blue';
+                })
+                .style("fill", function (d) {
+                    return d.level;
+                });
+
+
+            nodeUpdate.select("text")
+                .attr("y", function (d) {
+                    return -18;
+                })
+                .attr("dy", ".35em")
+                .attr("text-anchor", "middle")
+                .text(function (d) {
+                    return d.children || d._children ? d.name : null;
+                })
+                .style("fill-opacity", 1);
+
+            var nodeExit = node.exit().transition()
+                .duration(duration)
+                .attr("transform", function (d) {
+                    return "translate(" + source.y + "," + source.x + ")";
+                })
+                .remove();
+
+            nodeExit.select("circle")
+                .attr("r", function (d) {
+                    return d.children || d._children ? 0 : 10;
+                })
+                .style("stroke", function (d) {
+                    return d.level;
+                })
+                .style("fill", function (d) {
+                    return d.level;
+                });
+
+            nodeExit.select("text")
+                .attr("y", function (d) {
+                    return -18;
+                })
+                .attr("dy", ".35em")
+                .attr("text-anchor", "middle")
+                .text(function (d) {
+                    return d.children || d._children ? d.name : null;
+                })
+                .style("fill-opacity", 1);
+
+            // Transition links to their new position.
+            link.transition()
+                .duration(duration)
+                .attr("d", function (d) {
+                    return line([d.source, d.target]);
+                });
+
+            // Transition exiting nodes to the parent's new position.
+            link.exit().transition()
+                .duration(duration)
+                .attr("d", function (d) {
+                    var o = {x: source.x, y: source.y};
+                    return line({source: o, target: o});
+                })
+                .remove();
+
+
+        }
+
+        function click(d) {
+            if (d.children) {
+                d._children = d.children;
+                d.children = null;
+            } else {
+                d.children = d._children;
+                d._children = null;
+            }
+            update(d);
+        }
+
+        function addlink() {
+            for (var i = 0; i < children.length; i++) {
+                console.log(children[i]["y_value"]);
+                var textList = svg.append("a")
+                    .attr('xlink:href', function (d) {
+                        if (children[i].name.search('|') != -1) {
+                            var uniq_id = children[i].name.split('|')[1];
+                            return '/detail/' + uniq_id
+                        }
+
+                    })
+                    .append("svg:text")
+                    .attr("x", "1200")
+                    .attr("y", children[i]["x_value"])
+                    .text(children[i]["name"])
+                    .style("fill", "blue")
+            }
+        }
+    </script>
+{% endblock %}
+
+	

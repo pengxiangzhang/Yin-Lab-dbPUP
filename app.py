@@ -1,8 +1,7 @@
-from flask import Flask, url_for, redirect
+from flask import Flask, url_for, redirect, request
 from flask import render_template
 from flaskext.markdown import Markdown
 from flask_sqlalchemy import SQLAlchemy
-#from models.record import Record
 from models import charRecord, swiRecord, treRecord
 import json
 
@@ -13,50 +12,175 @@ md = Markdown(app, extensions=['fenced_code'])
 
 # read configurations
 with open('config.json') as json_file:
-	configs = json.load(json_file)
+    configs = json.load(json_file)
 
 	# web info
-	app.config['title'] = configs['website']['title']
-	app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
+    app.config['title'] = configs['website']['title']
+    #app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
 
-	# database
-	connection_stat = "mysql+pymysql://" + configs['database']['username'] \
-					+ ":" + configs['database']['password'] + "@" \
-					+ configs['database']['hostname'] + "/" \
-				    + configs['database']['db_name']
-	print("Load connection information:")
-	print(connection_stat)
-	app.config['SQLALCHEMY_DATABASE_URI'] = connection_stat
+    # database
+    connection_stat = "mysql+pymysql://" + configs['database']['username'] \
+                      + ":" + configs['database']['password'] + "@" \
+                      + configs['database']['hostname'] + "/" \
+                      + configs['database']['db_name']
+    print("Load connection information:")
+    print(connection_stat)
+    app.config['SQLALCHEMY_DATABASE_URI'] = connection_stat
 
 dtbs = SQLAlchemy(app)
+
 
 # routing
 
 @app.route('/')
 def index():
-	c = open('content/about.md', 'r').read()
-	return render_template('index.html', content = c)
+    c = open('content/about.md', 'r').read()
+    return render_template('index.html', content=c)
 
-@app.route('/characteristic')
-def characteristic():
-	records = charRecord.CharRecord.query.all()
-	return render_template('characteristic.html', records = records)
 
-@app.route('/swissport')
-def swissport():
-	records = swiRecord.SwiRecord.query.all() 
-	print(records)
-	return render_template("swissport.html", records=records)
+@app.route('/characteristic/<family_id>', methods=['GET', 'POST'])
+def characteristic(family_id):
+    if request.method == 'POST':
+        msg = request.get_data()
+        family_id = json.loads(msg)['family_id']
+        records = swiRecord.SwiRecord.query.filter_by(family=family_id)
 
-@app.route('/trembl')
-def trembl():
-        records = treRecord.TreRecord.query.all() 
-        return render_template("trembl.html", records=records)
+        return render_template('swissport.html', records=records)
+    else:
+        row = {}
+        amount_row = 0
+        if family_id == 'all':
+            records = charRecord.CharRecord.query.all()
+            for record in records:
+                amount_row += 1
+                sub_row = []
+                pdbSubLink = record.pdb.split(';')
+                amount = len(pdbSubLink)
+                for i in range(amount):
+                    amount_row += 1
+                    pdb_information = []
+                    pdb_information.append(pdbSubLink[i])
+                    pdb_information.append(pdbSubLink[i].split('[')[0])
+                    sub_row.append(pdb_information)
+                row[record.number] = sub_row
 
+        else:
+            records = charRecord.CharRecord.query.filter_by(family=family_id)
+            for record in records:
+                sub_row = []
+                pdbSubLink = record.pdb.split(';')
+                amount = len(pdbSubLink)
+                for i in range(amount):
+                    amount_row += 1
+                    pdb_information = []
+                    pdb_information.append(pdbSubLink[i])
+                    pdb_information.append(pdbSubLink[i].split('[')[0])
+                    sub_row.append(pdb_information)
+                row[record.number] = sub_row
+
+        return render_template("characteristic.html", records=records, rows = row)
+
+
+@app.route('/swissport/<family_id>', methods=['GET', 'POST'])
+def swissport(family_id):
+    if family_id == 'all':
+        records = swiRecord.SwiRecord.query.all()
+    else:
+        records = swiRecord.SwiRecord.query.filter_by(family=family_id)
+    return render_template('swissport.html', records = records)
+
+@app.route('/trembl/<family_id>', methods=['GET', 'POST'])
+def trembl(family_id):
+    if family_id == 'all':
+        records = treRecord.TreRecord.query.all()
+    else:
+        records = treRecord.TreRecord.query.filter_by(family=family_id)
+    return render_template("trembl.html", records=records)
 
 @app.route('/user/<username>/<firstname>')
 def newUser(username, firstname):
-	u = User(lastname=username, firstname=firstname)
-	dtbs.session.add(u)
-	dtbs.session.commit()
-	return "inserted!"
+    u = User(lastname=username, firstname=firstname)
+    dtbs.session.add(u)
+    dtbs.session.commit()
+    return "inserted!"
+
+
+@app.route("/detail/<unid>")
+def detail(unid):
+    records = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
+    if records is None:
+        records =  treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
+    if records is None:
+        records = swiRecord.SwiRecord.query.filter_by(uniq_id=unid).first()
+    if records is None:
+        seq = None
+    else:
+        seq = records.seq
+    return render_template('detail.html', seq=seq, unid=unid)
+
+@app.route("/tree/<family_id>")
+def tree(family_id):
+    if family_id == 'all':
+        treeData = None
+    else:
+        try:
+            with open('data' + str(family_id) + '.json') as f:
+                treeData = json.load(f)
+        except Exception:
+            treeData = None
+            return render_template('tree.html', treeData = json.dumps(treeData))
+    return render_template('tree.html', treeData = json.dumps(treeData))
+
+@app.route("/family/<family_id>")
+def family(family_id):
+    return render_template('family.html', family_id=family_id)
+
+@app.route("/subfamily/<family_id>")
+def subfamily(family_id):
+    return render_template('subfamily.html', family_id=family_id)
+
+@app.route("/network/<family_id>",  methods=['GET', 'POST'])
+def network(family_id):
+    if request.method == 'POST':
+        msg = request.get_data()
+        node_name = msg.decode("UTF-8")
+        print(node_name)
+        try:
+            with open('sample1.cyjs') as f:
+                networkData = json.load(f)
+                for node in networkData['elements']['nodes']:
+                    names = node['data']['name'].split('|')
+                    if (len(names) > 3):
+                        node['data']['name'] = names[2]
+                        node['data']['href'] = '/detail/' + names[2]
+                        if names[2] == node_name:
+                            node['data']['color'] = '#FFF200'
+
+                    else:
+                        node['data']['name'] = names[1]
+                        node['data']['href'] = '/detail/' + names[1]
+                        if names[1] == node_name:
+                            node['data']['color'] = '#FFF200'
+        except Exception:
+            networkData = None
+
+        return networkData
+
+    try:
+        with open('sample1.cyjs') as f:
+            networkData = json.load(f)
+            for node in networkData['elements']['nodes']:
+                names = node['data']['name'].split('|')
+                if (len(names) > 3):
+                    node['data']['name'] = names[2]
+                    node['data']['href'] = '/detail/' + names[2]
+                else:
+                    node['data']['name'] = names[1]
+                    node['data']['href'] = '/detail/' + names[1]
+
+    except Exception:
+            networkData = None
+    return render_template('network.html', networkData = json.dumps(networkData))
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')

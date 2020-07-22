@@ -1,28 +1,48 @@
 {% extends 'base.html' %}
 
-{% block title%}Home{% endblock %}
+{% block title %}Home{% endblock %}
 
-{% block content%}
-<!-- Main Content Area-->
-<div class="row">
-  <div class="col-lg-8">
-    {{content|markdown|safe}}
-  </div>
-  <div class = "col-lg-4">
-    <div class = "page_list">
-      <ul class="list-group">
-        <li class="list-group-item"><a href="/">Home</a></li>
-        <li class="list-group-item"><a href="/work">Data Library</a></li>
-        <li class="list-group-item"><a href="/work">Home</a></li>
-        <li class="list-group-item"><a href="/work">Home</a></li>
-        <li class="list-group-item"><a href="/work">Home</a></li>
-      </ul>
+{% block content %}
+    <!-- Main Content Area-->
+    <div class="row">
+        <div class="page-header">
+            <h3>This is home<small>Subtext for header</small></h3>
+
+        </div>
     </div>
-    <div class = "reserved_list">
-      <p>
-        In version 3.6 (June 2015), 1451 new content values for lignans have been added to the database.
-      </p>
+    <div class="familyList">
+        <h1>
+            Family List
+        </h1>
+        <ul class="breadcrumb" style="font-size: medium">
+            {% for i in range(40) %}
+                <li><a href="{{ url_for('family', family_id = i + 1) }}">{{ i + 1 }}</a> <span class="divider"></span>
+                </li>
+            {% endfor %}
+
+        </ul>
     </div>
-  </div>
-</div>
+    <div class="row">
+        <div class="col-lg-8">
+            <image src="../static/images/seed.svg" width="100%" onclick="window.open('../static/images/seed.pdf')"></image>
+            {{ content|markdown|safe }}
+        </div>
+        <div class="col-lg-4">
+            <div class="page_list">
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="/">Home</a></li>
+                    <li class="list-group-item"><a href="/characteristic/all">Characterize</a></li>
+                    <li class="list-group-item"><a href="/swissport/all">Swissprot</a></li>
+                    <li class="list-group-item"><a href="/trembl/all">TrEMBL</a></li>
+                    <li class="list-group-item"><a href="/tree/all">Tree of Life</a></li>
+                    <li class="list-group-item"><a href="/network/all">Network</a></li>
+                </ul>
+            </div>
+            <div class="reserved_list">
+                <p>
+                    In version 3.6 (June 2015), 1451 new content values for lignans have been added to the database.
+                </p>
+            </div>
+        </div>
+    </div>
 {% endblock %}

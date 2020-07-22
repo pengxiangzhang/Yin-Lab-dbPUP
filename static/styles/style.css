@@ -1,3 +1,6 @@
+html {
+    background-image: url("../images/double-bubble-outline.png");
+}
 .image-header {
     background-image: url("../images/DNA.jpg");
     height:100px;
@@ -12,4 +15,15 @@
 
 .mt-3 {
     margin-top: 5em;
+}
+
+.breadcrumb a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: darkred;
+    text-decoration: underline;
+    text-decoration: none;
 }
