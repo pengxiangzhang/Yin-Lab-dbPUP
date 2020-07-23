@@ -167,7 +167,7 @@ def network(family_id):
         return networkData
 
     try:
-        with open('sample1.cyjs') as f:
+        with open('example.cyjs') as f:
             networkData = json.load(f)
             for node in networkData['elements']['nodes']:
                 names = node['data']['name'].split('|')
