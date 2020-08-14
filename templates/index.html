@@ -15,27 +15,44 @@
             Family List
         </h1>
         <ul class="breadcrumb" style="font-size: medium">
-            {% for i in range(40) %}
-                <li><a href="{{ url_for('family', family_id = i + 1) }}">{{ i + 1 }}</a> <span class="divider"></span>
-                </li>
-            {% endfor %}
-
+            <li><a href="{{ url_for('family', family_id = 'ORs') }}">ORs</a> <span
+                    class="divider"></span>
+            </li>
+            <li><a href="{{ url_for('family', family_id = 'FRs') }}">FRs</a> <span
+                    class="divider"></span>
+            </li>
+            <li><a href="{{ url_for('family', family_id = 'HRs') }}">HRs</a> <span
+                    class="divider"></span>
+            </li>
+            <li><a href="{{ url_for('family', family_id = 'NCRs') }}">NCRs</a> <span
+                    class="divider"></span>
+            </li>
+            <li><a href="{{ url_for('family', family_id = 'IRs') }}">IRs</a> <span
+                    class="divider"></span>
+            </li>
+            <li><a href="{{ url_for('family', family_id = 'SRs') }}">SRs</a> <span
+                    class="divider"></span>
+            </li>
+            <li><a href="{{ url_for('family', family_id = 'TRs') }}">TRs</a> <span
+                    class="divider"></span>
+            </li>
         </ul>
     </div>
     <div class="row">
         <div class="col-lg-8">
-            <image src="../static/images/seed.svg" width="100%" onclick="window.open('../static/images/seed.pdf')"></image>
+            <image src="../static/materials/characterized_protein.png" width="100%"
+                   onclick="window.open('../static/images/seed.pdf')"></image>
             {{ content|markdown|safe }}
         </div>
         <div class="col-lg-4">
             <div class="page_list">
                 <ul class="list-group">
                     <li class="list-group-item"><a href="/">Home</a></li>
-                    <li class="list-group-item"><a href="/characteristic/all">Characterize</a></li>
-                    <li class="list-group-item"><a href="/swissport/all">Swissprot</a></li>
+                    <li class="list-group-item"><a href="/characteristic/all">Evidence</a></li>
+                    <li class="list-group-item"><a href="/swissport/all">Swiss-Prot</a></li>
                     <li class="list-group-item"><a href="/trembl/all">TrEMBL</a></li>
-                    <li class="list-group-item"><a href="/tree/all">Tree of Life</a></li>
-                    <li class="list-group-item"><a href="/network/all">Network</a></li>
+                    <li class="list-group-item"><a href="/tree/all">Phylogeny</a></li>
+                    <li class="list-group-item"><a href="/network/all">Sequence Similarity Network</a></li>
                 </ul>
             </div>
             <div class="reserved_list">
