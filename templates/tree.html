@@ -20,6 +20,30 @@
             stroke: #ccc;
             stroke-width: 2px;
         }
+        #modal {
+  display: none;
+  width: 100%;
+
+  padding: 0 0 40px 0;
+  text-align: justify;
+  border-radius: 3px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+#modal .fancybox-close-small {
+  top: 15px;
+}
+
+#modal .content-header {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+}
+
+#modal .content-scroll {
+  max-height: calc(100vh - 200px);
+  overflow: auto;
+  padding: 40px 20px 0 20px;
+}
 
     </style>
     <div class="row">
@@ -54,9 +78,13 @@
             such a database for free publ{c access.</p>
     </div>
 
+      <a data-fancybox data-touch="false" href="#modal" class="btn btn-primary">Open Tree</a>
+</p>
+<div id="modal" class="content-scroll">
     <div id="treeDiagram" style="margin-top: 20px">
         <p>{Before see the tree of life, please choose a family}</p>
     </div>
+</div>
 
 
     <script>
@@ -285,3 +313,4 @@
 {% endblock %}
 
 	
+
