@@ -1,4 +1,4 @@
-use development;
+use bio_test;
 
 DROP TABLE IF EXISTS characterize;
 CREATE TABLE IF NOT EXISTS characterize(

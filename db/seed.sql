@@ -1,3 +1,4 @@
+use bio_test;
 INSERT INTO characterize(number, strain, protein_name, gene_name, uniq_id, ec, substrate, production, pdb, km, vmax, kcat, doi, family, seq)
 value(1, 'asdf', 'adsf','asdf','aaa','asdf', 'asdf', 'asdf', 'adsf', 1, 2, 3, 'asdf', '1', 'asdf');
 INSERT INTO characterize(number, strain, protein_name, gene_name, uniq_id, ec, substrate, production, pdb, km, vmax, kcat, doi, family, seq)
