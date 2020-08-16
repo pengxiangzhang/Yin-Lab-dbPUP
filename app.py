@@ -151,7 +151,7 @@ def network(family_id):
         node_name = msg.decode("UTF-8")
         print(node_name)
         try:
-            with open('sample1.cyjs') as f:
+            with open('static/materials/network_data/test.cyjs') as f:
                 networkData = json.load(f)
                 for node in networkData['elements']['nodes']:
                     names = node['data']['name'].split('|')
@@ -172,7 +172,7 @@ def network(family_id):
         return networkData
 
     try:
-        with open('example.cyjs') as f:
+        with open('static/materials/network_data/test.cyjs') as f:
             networkData = json.load(f)
             for node in networkData['elements']['nodes']:
                 names = node['data']['name'].split('|')
