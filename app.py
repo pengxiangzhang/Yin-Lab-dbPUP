@@ -1,4 +1,6 @@
-from flask import Flask, url_for, redirect, request, send_from_directory
+import gzip
+
+from flask import Flask, url_for, redirect, request, send_from_directory, make_response
 from flask import render_template
 from flaskext.markdown import Markdown
 from flask_sqlalchemy import SQLAlchemy
@@ -153,7 +155,18 @@ def network(family_id):
         try:
             with open('static/materials/network_data/test.cyjs') as f:
                 networkData = json.load(f)
+                del networkData["format_version"]
+                del networkData["generated_by"]
+                del networkData["target_cytoscapejs_version"]
+                del networkData['data']
+
                 for node in networkData['elements']['nodes']:
+                    del node['data']['border']
+                    del node['data']['shared_name']
+                    del node['data']['SUID']
+                    del node['data']['fill']
+                    del node['data']['selected']
+                    del node['selected']
                     names = node['data']['name'].split('|')
                     if (len(names) > 3):
                         node['data']['name'] = names[2]
@@ -166,6 +179,16 @@ def network(family_id):
                         node['data']['href'] = '/detail/' + names[1]
                         if names[1] == node_name:
                             node['data']['color'] = '#FFF200'
+
+                for edge in networkData['elements']['edges']:
+                    del edge['selected']
+                    del edge['data']['shared_name']
+                    del edge['data']['shared_interaction']
+                    del edge['data']['name']
+                    del edge['data']['interaction']
+                    del edge['data']['Column_3']
+                    del edge['data']['SUID']
+                    del edge['data']['selected']
         except Exception:
             networkData = None
 
@@ -174,7 +197,19 @@ def network(family_id):
     try:
         with open('static/materials/network_data/test.cyjs') as f:
             networkData = json.load(f)
+            del networkData["format_version"]
+            del networkData["generated_by"]
+            del networkData["target_cytoscapejs_version"]
+            del networkData['data']
+
+
             for node in networkData['elements']['nodes']:
+                del node['data']['border']
+                del node['data']['shared_name']
+                del node['data']['SUID']
+                del node['data']['fill']
+                del node['data']['selected']
+                del node['selected']
                 names = node['data']['name'].split('|')
                 if (len(names) > 3):
                     node['data']['name'] = names[2]
@@ -182,9 +217,26 @@ def network(family_id):
                 else:
                     node['data']['name'] = names[1]
                     node['data']['href'] = '/detail/' + names[1]
-
+                data = []
+                data.append(node['data']['id'])
+                data.append(node['data']['node'])
+                data.append(node['data']['name'])
+                data.append(node['data']['href'])
+                node['data'] = data
+                print(node)
+            for edge in networkData['elements']['edges']:
+                del edge['selected']
+                del edge['data']['shared_name']
+                del edge['data']['shared_interaction']
+                del edge['data']['name']
+                del edge['data']['interaction']
+                del edge['data']['Column_3']
+                del edge['data']['SUID']
+                del edge['data']['selected']
+                print()
     except Exception:
             networkData = None
+
     return render_template('network.html', networkData = json.dumps(networkData))
 
 if __name__ == "__main__":
