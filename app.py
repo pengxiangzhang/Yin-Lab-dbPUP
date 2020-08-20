@@ -140,7 +140,58 @@ def tree(family_id):
 
 @app.route("/family/<family_id>")
 def family(family_id):
-    return render_template('family.html', family_id=family_id)
+    amount = 0
+    if family_id == 'FR1':
+        amount = 3
+    if family_id == 'FR2':
+        amount = 1
+    if family_id == 'FR3':
+        amount = 1
+    if family_id == 'FR4':
+        amount = 1
+    if family_id == 'HR1':
+        amount = 1
+    if family_id == 'HR2':
+        amount = 1
+    if family_id == 'HR3':
+        amount = 4
+    if family_id == 'HR4':
+        amount = 2
+    if family_id == 'HR5':
+        amount = 2
+    if family_id == 'HR6':
+        amount = 1
+    if family_id == 'HR7':
+        amount = 4
+    if family_id == 'HR8':
+        amount = 2
+    if family_id == 'IR1':
+        amount = 1
+    if family_id == 'IR2':
+        amount = 1
+    if family_id == 'NCR1':
+        amount = 1
+    if family_id == 'OR1':
+        amount = 1
+    if family_id == 'OR2':
+        amount = 1
+    if family_id == 'OR3':
+        amount = 1
+    if family_id == 'OR4':
+        amount = 1
+    if family_id == 'OR5':
+        amount = 1
+    if family_id == 'OR6':
+        amount = 1
+    if family_id == 'OR7':
+        amount = 1
+    if family_id == 'OR8':
+        amount = 2
+    if family_id == 'OR9':
+        amount = 1
+    if family_id == 'OR10':
+        amount = 1
+    return render_template('family.html', family_id=family_id, amount = amount)
 
 @app.route("/subfamily/<family_id>")
 def subfamily(family_id):
@@ -195,15 +246,19 @@ def network(family_id):
         return networkData
 
     try:
-        with open('static/materials/network_data/test.cyjs') as f:
+        with open('static/materials/network_data/uniprot_ssn/' + family_id + '.cyjs') as f:
             networkData = json.load(f)
             del networkData["format_version"]
             del networkData["generated_by"]
             del networkData["target_cytoscapejs_version"]
             del networkData['data']
 
-
             for node in networkData['elements']['nodes']:
+                if '_' in family_id:
+                    node['data']['fill_color'] = node['data']['fill']
+                else:
+                    node['data']['fill_color'] = node['data']['node']
+                del node['data']['node']
                 del node['data']['border']
                 del node['data']['shared_name']
                 del node['data']['SUID']
@@ -219,7 +274,7 @@ def network(family_id):
                     node['data']['href'] = '/detail/' + names[1]
                 data = []
                 data.append(node['data']['id'])
-                data.append(node['data']['node'])
+                data.append(node['data']['fill_color'])
                 data.append(node['data']['name'])
                 data.append(node['data']['href'])
                 node['data'] = data

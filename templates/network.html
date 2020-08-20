@@ -45,10 +45,10 @@
         var networkData = JSON.parse({{networkData|tojson|safe}});
         networkData['elements']['nodes'].forEach(node => {
             node['data']['id'] = node['data'][0];
-            node['data']['node'] = node['data'][1];
+            node['data']['fill_color'] = node['data'][1];
             node['data']['name'] = node['data'][2];
             node['data']['href'] = node['data'][3];
-
+            console
         });
         drawing(networkData);
 
