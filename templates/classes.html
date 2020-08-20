@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="page-header">
+            <h3>This is class page<small>Subtext for header</small></h3>
+
+        </div>
+    </div>
+    <!-- Main Content Area-->
+    {% if class_id == 'all' %}
+        <div class="ClassInformation">
+            <h1>Class Information</h1>
+            <p style="font-size: medium">Please go to Home page to select a family.</p>
+        </div>
+    {% endif %}
+
+    {% if class_id != 'all' %}
+        <div class="familyInformation">
+            <h1>Class Information</h1>
+            <p style="font-size: medium">Family (Latin: familia, plural familiae) is one of the eight major hierarchical
+                taxonomic ranks in Linnaean taxonomy; it is classified between order and genus. A family may be divided
+                into
+                subfamilies, which are intermediate ranks between the ranks of family and genus. The official family
+                names
+                are Latin in origin; however, popular names are often used: for example, walnut trees and hickory trees
+                belong to the family Juglandaceae, but that family is commonly referred to as being the "walnut
+                family".</p>
+        </div>
+        <div class="class">
+            <h1>Class</h1>
+            <ul class="breadcrumb" style="font-size: medium">
+                {% if class_id == 'ORs' %}
+                    {% for i in range(10) %}
+                        {% set family_id = class_id + (i + 1)|string() %}
+                        <li><a href="{{ url_for('family', family_id = family_id) }}">{{ family_id }}</a> <span
+                                class="divider"></span>
+                        </li>
+                    {% endfor %}
+                {% elif class_id == 'FRs' %}
+                    {% for i in range(4) %}
+                        {% set family_id = class_id + (i + 1)|string() %}
+                        <li><a href="{{ url_for('family', family_id = family_id) }}">{{ family_id }}</a> <span
+                                class="divider"></span>
+                        </li>
+                    {% endfor %}
+                {% elif class_id == 'HRs' %}
+                    {% for i in range(8) %}
+                        {% set family_id = class_id + (i + 1)|string() %}
+                        <li><a href="{{ url_for('family', family_id = family_id) }}">{{ family_id }}</a> <span
+                                class="divider"></span>
+                        </li>
+                    {% endfor %}
+                {% elif class_id == 'NCRs' %}
+                    {% for i in range(1) %}
+                        {% set family_id = class_id + (i + 1)|string() %}
+                        <li><a href="{{ url_for('family', family_id = family_id) }}">{{ family_id }}</a> <span
+                                class="divider"></span>
+                        </li>
+                    {% endfor %}
+                {% elif class_id == 'IRs' %}
+                    {% for i in range(2) %}
+                        {% set family_id = class_id + (i + 1)|string() %}
+                        <li><a href="{{ url_for('family', family_id = family_id) }}">{{ family_id }}</a> <span
+                                class="divider"></span>
+                        </li>
+                    {% endfor %}
+                {% elif class_id == 'SRs' %}
+                    {% set family_id = class_id %}
+                    <a href="{{ url_for('family', family_id = family_id) }}">{{ family_id }}</a>
+                {% elif class_id == 'TRs' %}
+                    {% set family_id = class_id %}
+                    <a href="{{ url_for('family', family_id = family_id) }}">{{ family_id }}</a>
+                {% endif %}
+
+
+            </ul>
+        </div>
+
+    {% endif %}
+{% endblock %}

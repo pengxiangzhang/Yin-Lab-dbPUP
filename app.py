@@ -239,5 +239,9 @@ def network(family_id):
 
     return render_template('network.html', networkData = json.dumps(networkData))
 
+@app.route("/classes/<class_id>")
+def classes(class_id):
+    return render_template('classes.html', class_id=class_id)
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
