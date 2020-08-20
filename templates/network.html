@@ -39,17 +39,11 @@
         <input type="submit" value="Search Node"/>
     </form>
     <div id="cy" style="width: 80%;
-        height: 800px;"></div>
+        height: 700px;"></div>
 
     <script>
         var networkData = JSON.parse({{networkData|tojson|safe}});
-        networkData['elements']['nodes'].forEach(node => {
-            node['data']['id'] = node['data'][0];
-            node['data']['fill_color'] = node['data'][1];
-            node['data']['name'] = node['data'][2];
-            node['data']['href'] = node['data'][3];
-            console
-        });
+
         drawing(networkData);
 
         $("#searchForm").submit(function (event) {
@@ -73,7 +67,12 @@
         });
 
         function drawing(networkData) {
-            console.log(networkData['elements']);
+            networkData['elements']['nodes'].forEach(node => {
+                node['data']['id'] = node['data'][0];
+                node['data']['fill_color'] = node['data'][1];
+                node['data']['name'] = node['data'][2];
+                node['data']['href'] = node['data'][3];
+            });
             var cy = cytoscape({
 
                 container: document.getElementById('cy'),

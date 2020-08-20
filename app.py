@@ -204,7 +204,7 @@ def network(family_id):
         node_name = msg.decode("UTF-8")
         print(node_name)
         try:
-            with open('static/materials/network_data/test.cyjs') as f:
+            with open('static/materials/network_data/uniprot_ssn/' + family_id + '.cyjs') as f:
                 networkData = json.load(f)
                 del networkData["format_version"]
                 del networkData["generated_by"]
@@ -212,6 +212,11 @@ def network(family_id):
                 del networkData['data']
 
                 for node in networkData['elements']['nodes']:
+                    if '_' in family_id:
+                        node['data']['fill_color'] = node['data']['fill']
+                    else:
+                        node['data']['fill_color'] = node['data']['node']
+                    del node['data']['node']
                     del node['data']['border']
                     del node['data']['shared_name']
                     del node['data']['SUID']
@@ -223,13 +228,20 @@ def network(family_id):
                         node['data']['name'] = names[2]
                         node['data']['href'] = '/detail/' + names[2]
                         if names[2] == node_name:
-                            node['data']['color'] = '#FFF200'
+                            node['data']['fill_color'] = '#92d9d0'
 
                     else:
                         node['data']['name'] = names[1]
                         node['data']['href'] = '/detail/' + names[1]
                         if names[1] == node_name:
-                            node['data']['color'] = '#FFF200'
+                            node['data']['fill_color'] = '#92d9d0'
+                    data = []
+                    data.append(node['data']['id'])
+                    data.append(node['data']['fill_color'])
+                    data.append(node['data']['name'])
+                    data.append(node['data']['href'])
+                    node['data'] = data
+                    print(node)
 
                 for edge in networkData['elements']['edges']:
                     del edge['selected']
@@ -278,7 +290,7 @@ def network(family_id):
                 data.append(node['data']['name'])
                 data.append(node['data']['href'])
                 node['data'] = data
-                print(node)
+
             for edge in networkData['elements']['edges']:
                 del edge['selected']
                 del edge['data']['shared_name']
@@ -288,7 +300,7 @@ def network(family_id):
                 del edge['data']['Column_3']
                 del edge['data']['SUID']
                 del edge['data']['selected']
-                print()
+
     except Exception:
             networkData = None
 
