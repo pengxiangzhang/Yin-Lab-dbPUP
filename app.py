@@ -131,8 +131,9 @@ def tree(family_id):
         treeData = None
     else:
         try:
-            with open('data' + str(family_id) + '.json') as f:
+            with open('static/materials/tree/test.json') as f:
                 treeData = json.load(f)
+                print(treeData)
         except Exception:
             treeData = None
             return render_template('tree.html', treeData = json.dumps(treeData))

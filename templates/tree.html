@@ -20,30 +20,31 @@
             stroke: #ccc;
             stroke-width: 2px;
         }
+
         #modal {
-  display: none;
-  width: 100%;
+            display: none;
+            width: 100%;
 
-  padding: 0 0 40px 0;
-  text-align: justify;
-  border-radius: 3px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
+            padding: 0 0 40px 0;
+            text-align: justify;
+            border-radius: 3px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        }
 
-#modal .fancybox-close-small {
-  top: 15px;
-}
+        #modal .fancybox-close-small {
+            top: 15px;
+        }
 
-#modal .content-header {
-  border-bottom: 1px solid #eee;
-  padding: 20px;
-}
+        #modal .content-header {
+            border-bottom: 1px solid #eee;
+            padding: 20px;
+        }
 
-#modal .content-scroll {
-  max-height: calc(100vh - 200px);
-  overflow: auto;
-  padding: 40px 20px 0 20px;
-}
+        #modal .content-scroll {
+            max-height: calc(100vh - 200px);
+            overflow: auto;
+            padding: 40px 20px 0 20px;
+        }
 
     </style>
     <div class="row">
@@ -78,30 +79,29 @@
             such a database for free publ{c access.</p>
     </div>
 
-      <a data-fancybox data-touch="false" href="#modal" class="btn btn-primary">Open Tree</a>
-</p>
-<div id="modal" class="content-scroll">
-    <div id="treeDiagram" style="margin-top: 20px">
-        <p>{Before see the tree of life, please choose a family}</p>
+    <a data-fancybox data-touch="false" href="#modal" class="btn btn-primary">Open Tree</a>
+    </p>
+    <div id="modal" class="content-scroll">
+        <div id="treeDiagram" style="margin-top: 20px">
+            <p>{Before see the tree of life, please choose a family}</p>
+        </div>
     </div>
-</div>
 
 
     <script>
-        var treeData = JSON.parse({{treeData|tojson|safe}})
+        var treeData = JSON.parse({{treeData|tojson|safe}});
 
 
         // ************** Generate the tree diagram	 *****************
         var children = [];
         var margin = {top: 20, right: 120, bottom: 20, left: 120},
-            width = 1200 - margin.right - margin.left,
-            height = 2500 - margin.top - margin.bottom;
+            width = 2000 - margin.right - margin.let,
+            height = 3000 - margin.top - margin.bottom;
 
         var i = 0, duration = 750;
 
         var tree = d3.layout.tree()
             .size([height, width]);
-
 
         var svg = d3.select("#treeDiagram").append("svg")
             .attr("width", "90%")//width + margin.right + margin.left)
@@ -113,9 +113,9 @@
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         root = treeData[0];
-
         update(root);
         addlink(root);
+
         function update(source) {
 
             // Compute the new tree layout.
@@ -124,8 +124,8 @@
 
             //The most important function: Stipulate the x, y axises value.
             nodes.forEach(function (d) {
-                d.y = d.y_value / 2;
-                d.x = d.x_value / 10;
+                d.y = d.y_value ;
+                d.x =( d.x_value - 10000) / 3;
                 if (!d.children) {
                     var childrenNode = {};
                     childrenNode["x_value"] = d.x;
@@ -195,7 +195,7 @@
             link.enter().insert("path", "g")
                 .attr("class", "link")
                 .style("stroke", function (d) {
-                    return d.target.level;
+                    return d.target.meta.color.clade;
                 })
                 .style("stroke-width", "10")
                 .attr("d", function (d) {
@@ -292,8 +292,13 @@
         }
 
         function addlink() {
+            max_y = 0;
             for (var i = 0; i < children.length; i++) {
-                console.log(children[i]["y_value"]);
+                if (max_y <= children[i]["y_value"]) {
+                    max_y = children[i]["y_value"];
+                }
+            }
+            for (var i = 0; i < children.length; i++) {
                 var textList = svg.append("a")
                     .attr('xlink:href', function (d) {
                         if (children[i].name.search('|') != -1) {
@@ -303,7 +308,7 @@
 
                     })
                     .append("svg:text")
-                    .attr("x", "1200")
+                    .attr("x", max_y)
                     .attr("y", children[i]["x_value"])
                     .text(children[i]["name"])
                     .style("fill", "blue")
@@ -311,6 +316,4 @@
         }
     </script>
 {% endblock %}
-
-	
 
