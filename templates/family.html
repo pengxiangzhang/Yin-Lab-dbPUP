@@ -32,48 +32,12 @@
         <div class="subFamily">
             <h1>Subfamily</h1>
             <ul class="breadcrumb" style="font-size: medium">
-                {% if family_id == 'ORs' %}
-                    {% for i in range(10) %}
-                        {% set family_id = family_id + '_' + (i + 1)|string() %}
-                        <li><a href="{{ url_for('subfamily', family_id = family_id) }}">{{ family_id }}</a> <span
-                                class="divider"></span>
-                        </li>
-                    {% endfor %}
-                {% elif family_id == 'FRs' %}
-                    {% for i in range(4) %}
-                        {% set family_id = family_id + '_' + (i + 1)|string() %}
-                        <li><a href="{{ url_for('subfamily', family_id = family_id) }}">{{ family_id }}</a> <span
-                                class="divider"></span>
-                        </li>
-                    {% endfor %}
-                {% elif family_id == 'HRs' %}
-                    {% for i in range(8) %}
-                        {% set family_id = family_id + '_' + (i + 1)|string() %}
-                        <li><a href="{{ url_for('subfamily', family_id = family_id) }}">{{ family_id }}</a> <span
-                                class="divider"></span>
-                        </li>
-                    {% endfor %}
-                {% elif family_id == 'NCRs' %}
-                    {% for i in range(1) %}
-                        {% set family_id = family_id + '_' + (i + 1)|string() %}
-                        <li><a href="{{ url_for('subfamily', family_id = family_id) }}">{{ family_id }}</a> <span
-                                class="divider"></span>
-                        </li>
-                    {% endfor %}
-                {% elif family_id == 'IRs' %}
-                    {% for i in range(2) %}
-                        {% set family_id = family_id + '_' + (i + 1)|string() %}
-                        <li><a href="{{ url_for('subfamily', family_id = family_id) }}">{{ family_id }}</a> <span
-                                class="divider"></span>
-                        </li>
-                    {% endfor %}
-                {% elif family_id == 'SRs' %}
-                    <p> No subfamily. </p>
-                {% elif family_id == 'TRs' %}
-                    <p> No subfamily. </p>
-                {% endif %}
-
-
+                {% for i in range(amount) %}
+                    {% set family_id = family_id + '_' + (i + 1)|string() %}
+                    <li><a href="{{ url_for('subfamily', family_id = family_id) }}">{{ family_id }}</a> <span
+                            class="divider"></span>
+                    </li>
+                {% endfor %}
             </ul>
         </div>
 
