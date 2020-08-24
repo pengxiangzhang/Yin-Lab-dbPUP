@@ -58,14 +58,14 @@
                 <td>{{ record.protein_name }}</td>
                 <td>{{ record.gene_name }}</td>
                 <td><a href="https://www.uniprot.org/uniprot/{{ record.uniq_id }}">{{ record.uniq_id }}</a></td>
-                {% if record.ec == -1 %}
+                {% if record.ec == '-1' %}
                     <td>{{ ' ' }}</td>
                 {% else %}
                     <td>{{ record.ec }}</td>
                 {% endif %}
                 <td>{{ record.substrate }}</td>
                 <td>{{ record.production }}</td>
-                {% if record.pdb  == -1 %}
+                {% if record.pdb  == '-1' %}
                     <td>{{ ' ' }}</td>
                 {% else %}
                     <td>
