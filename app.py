@@ -131,7 +131,7 @@ def tree(family_id):
         treeData = None
     else:
         try:
-            with open('static/materials/tree/test.json') as f:
+            with open('static/materials/tree/' + family_id +'.json') as f:
                 treeData = json.load(f)
                 print(treeData)
         except Exception:
@@ -203,7 +203,6 @@ def network(family_id):
     if request.method == 'POST':
         msg = request.get_data()
         node_name = msg.decode("UTF-8")
-        print(node_name)
         try:
             with open('static/materials/network_data/uniprot_ssn/' + family_id + '.cyjs') as f:
                 networkData = json.load(f)
@@ -211,7 +210,7 @@ def network(family_id):
                 del networkData["generated_by"]
                 del networkData["target_cytoscapejs_version"]
                 del networkData['data']
-
+                print(networkData)
                 for node in networkData['elements']['nodes']:
                     if '_' in family_id:
                         node['data']['fill_color'] = node['data']['fill']
@@ -234,15 +233,16 @@ def network(family_id):
                     else:
                         node['data']['name'] = names[1]
                         node['data']['href'] = '/detail/' + names[1]
-                        if names[1] == node_name:
+                        if node['data']['name'] == node_name:
                             node['data']['fill_color'] = '#92d9d0'
+
                     data = []
                     data.append(node['data']['id'])
                     data.append(node['data']['fill_color'])
                     data.append(node['data']['name'])
                     data.append(node['data']['href'])
                     node['data'] = data
-                    print(node)
+
 
                 for edge in networkData['elements']['edges']:
                     del edge['selected']
@@ -254,7 +254,7 @@ def network(family_id):
                     del edge['data']['SUID']
                     del edge['data']['selected']
         except Exception:
-            networkData = None
+            print("error")
 
         return networkData
 

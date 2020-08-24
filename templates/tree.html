@@ -53,18 +53,6 @@
 
         </div>
     </div>
-    <div class="familyList">
-        <h1>
-            Family List
-        </h1>
-        <ul class="breadcrumb" style="font-size: medium">
-            {% for i in range(40) %}
-                <li><a href="{{ url_for('tree', family_id = i + 1) }}">{{ i + 1 }}</a> <span class="divider"></span>
-                </li>
-            {% endfor %}
-
-        </ul>
-    </div>
 
     <div id="introduction">
         <p style="font-size: x-large">Tree diagrams originated in the medieval era to represent genealogical
@@ -124,8 +112,8 @@
 
             //The most important function: Stipulate the x, y axises value.
             nodes.forEach(function (d) {
-                d.y = d.y_value ;
-                d.x =( d.x_value - 10000) / 3;
+                d.y = d.y_value - 1000;
+                d.x =( d.x_value - 10000) * 2;
                 if (!d.children) {
                     var childrenNode = {};
                     childrenNode["x_value"] = d.x;
