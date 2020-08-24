@@ -211,7 +211,7 @@ def network(family_id):
                 del networkData["generated_by"]
                 del networkData["target_cytoscapejs_version"]
                 del networkData['data']
-                print(networkData)
+    
                 for node in networkData['elements']['nodes']:
                     if '_' in family_id:
                         node['data']['fill_color'] = node['data']['fill']
