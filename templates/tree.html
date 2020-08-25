@@ -112,8 +112,8 @@
 
             //The most important function: Stipulate the x, y axises value.
             nodes.forEach(function (d) {
-                d.y = d.y_value - 1000;
-                d.x =( d.x_value - 10000) * 2;
+                d.y = d.y_value;
+                d.x = d.x_value;
                 if (!d.children) {
                     var childrenNode = {};
                     childrenNode["x_value"] = d.x;
@@ -218,7 +218,8 @@
                 .text(function (d) {
                     return d.children || d._children ? d.name : null;
                 })
-                .style("fill-opacity", 1);
+                .style("fill-opacity", 1)
+                .style("font-size", root['fontsize']);
 
             var nodeExit = node.exit().transition()
                 .duration(duration)
@@ -279,8 +280,9 @@
             update(d);
         }
 
-        function addlink() {
+        function addlink(root) {
             max_y = 0;
+            fontsize = root['fontsize'];
             for (var i = 0; i < children.length; i++) {
                 if (max_y <= children[i]["y_value"]) {
                     max_y = children[i]["y_value"];
@@ -298,6 +300,7 @@
                     .append("svg:text")
                     .attr("x", max_y)
                     .attr("y", children[i]["x_value"])
+                    .style("font-size", fontsize)
                     .text(children[i]["name"])
                     .style("fill", "blue")
             }
