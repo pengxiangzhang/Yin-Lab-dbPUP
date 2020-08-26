@@ -71,7 +71,6 @@
     </p>
     <div id="modal" class="content-scroll">
         <div id="treeDiagram" style="margin-top: 20px">
-            <p>{Before see the tree of life, please choose a family}</p>
         </div>
     </div>
 
@@ -219,7 +218,7 @@
                     return d.children || d._children ? d.name : null;
                 })
                 .style("fill-opacity", 1)
-                .style("font-size", root['fontsize']);
+                .style("font-size", root['nodefontsize']);
 
             var nodeExit = node.exit().transition()
                 .duration(duration)
@@ -282,7 +281,7 @@
 
         function addlink(root) {
             max_y = 0;
-            fontsize = root['fontsize'];
+            fontsize = root['idfontsize'];
             for (var i = 0; i < children.length; i++) {
                 if (max_y <= children[i]["y_value"]) {
                     max_y = children[i]["y_value"];
