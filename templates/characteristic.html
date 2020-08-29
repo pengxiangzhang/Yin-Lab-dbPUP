@@ -28,6 +28,7 @@
             <p>We .......</p>
         </div>
     </div>
+<div class="container-wrap">
     <table class="table" id="data-table" class="display nowrap">
         <thead>
         <tr>
@@ -58,14 +59,23 @@
                 <td>{{ record.protein_name }}</td>
                 <td>{{ record.gene_name }}</td>
                 <td><a href="https://www.uniprot.org/uniprot/{{ record.uniq_id }}">{{ record.uniq_id }}</a></td>
-                <td>{{ record.ec }}</td>
+                {% if record.ec == '-1' %}
+                    <td>{{ ' ' }}</td>
+                {% else %}
+                    <td>{{ record.ec }}</td>
+                {% endif %}
                 <td>{{ record.substrate }}</td>
                 <td>{{ record.production }}</td>
-                <td>
-                    {% for element in rows[record.number] %}
-                        <a href="https://www.rcsb.org/structure/{{ element[1] }}">{{ element[0] }}</a>
-                    {% endfor %}
-                </td>
+                {% if record.pdb  == '-1' %}
+                    <td>{{ ' ' }}</td>
+                {% else %}
+                    <td>
+                        {% for element in rows[record.number] %}
+                            <a href="https://www.rcsb.org/structure/{{ element[1] }}">{{ element[0] }}</a>
+                        {% endfor %}
+                    </td>
+                {% endif %}
+
                 {% if record.km == -1 %}
                     <td>{{ ' ' }}</td>
                 {% else %}
@@ -96,7 +106,7 @@
         {% endfor %}
         </tbody>
     </table>
-
+</div>
 {% endblock %}
 
 

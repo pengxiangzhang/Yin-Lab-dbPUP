@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="page-header">
+            <h3>This is network page<small>Subtext for header</small></h3>
+
+        </div>
+    </div>
+    <div class="familyList">
+        <h1>
+            Family List
+        </h1>
+        <ul class="breadcrumb" style="font-size: medium">
+            {% for i in range(40) %}
+                <li><a href="{{ url_for('network', family_id = i + 1) }}">{{ i + 1 }}</a> <span
+                        class="divider"></span>
+                </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+    <div id="introduction">
+        <p style="font-size: x-large">Tree diagrams originated in the medieval era to represent genealogical
+            relationships.
+
+            Phylogenetic tree diagrams in the evolutionary sense date back to at least the early 19th century.
+
+            The term phylogeny for the evolutionary relationships of species through time was coined by Ernst Haeckel,
+            who went further than Darwin in proposing phylogenic histories of life. In contemporary usage, tree of life
+            refers to the compilation of comprehensive phylogenetic databases rooted at the last universal common
+            ancestor of life on Earth. The Open Tree of Life, first published September 2015, is a project to compile
+            such a database for free publ{c access.</p>
+    </div>
+
+    <div>
+
+
+    <form id="searchForm"
+          style="margin-left: 10px; margin-top: 30px; font-size: medium; margin-bottom: 10px; width: 40%; ">
+        <input type="text" name="s" placeholder="Search by Uniprot"/>
+        <input type="submit" value="Search Node"/>
+    </form>
+
+    <p id="notice"
+       style="margin-left: 10px; font-style:italic;font-size: medium;  width: 50%; float: left">
+        notice</p>
+    <div id="cy" style="width: 80%;
+        height: 900px; border: #333333 solid;"></div>
+    </div>
+
+    <script>
+
+        var networkData = JSON.parse({{networkData|tojson|safe}});
+        networkData['elements']['nodes'].forEach(node => {
+            node['data']['id'] = node['data'][0];
+            node['data']['node'] = node['data'][1];
+            node['data']['name'] = node['data'][2];
+            node['data']['href'] = node['data'][3];
+        });
+        networkData['elements']['nodes'].forEach(node => {
+            console.log(node['data']['href']);
+        });
+        document.getElementById('notice').innerHTML = "Wait a second, the graph is being drawing...."
+        drawing(networkData);
+        document.getElementById('notice').innerHTML = "Done"
+        $("#searchForm").submit(function (event) {
+            event.preventDefault();
+            var $form = $(this),
+                term = $form.find('input[name="s"]').val(),
+                url = window.location.href;
+
+            $.ajax({
+                type: "post",
+                url: url,
+                data: term,
+                success: function (msg) {
+                    drawing(msg);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log(errorThrown);
+                }
+            })
+
+        });
+
+        function drawing(networkData) {
+            console.log(networkData['elements']);
+            var cy = cytoscape({
+
+                container: document.getElementById('cy'),
+
+                elements: networkData['elements'],
+                hideEdgesOnViewport: true,
+                hideLabelsOnViewport: true,
+                textureOnViewport: true,
+                motionBlur: true,
+                motionBlurOpacity: 0.2,
+                wheelSensitivity: 1,
+                pixelRatio: 'auto',
+                layout: {
+                    name: 'preset'
+                },
+
+                // so we can see the ids
+                style: [
+                    {
+                        selector: 'node',
+                        style: {
+                            'background-color': 'data(fill_color)',
+                            'label': 'data(name)'
+                        }
+                    },
+                    {
+                        selector: 'edge',
+                        style: {
+                            'width': 0.1,
+                        }
+                    }
+                ]
+
+            });
+            cy.nodes().on('click', function (e) {
+                var clickedNode = e.target;
+                window.open(clickedNode.data('href'));
+            });
+        }
+
+    </script>
+{% endblock %}
+
+
+
+
