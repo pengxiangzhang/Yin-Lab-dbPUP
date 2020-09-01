@@ -4,11 +4,14 @@ dtbs = SQLAlchemy()
 
 class SwiRecord(dtbs.Model):
         __tablename__= 'swiss'
-        protein_enzyme = dtbs.Column(dtbs.VARCHAR(100))
-        strain=dtbs.Column(dtbs.VARCHAR(100))
-        database=dtbs.Column(dtbs.VARCHAR(100))
-        uniq_id=dtbs.Column(dtbs.VARCHAR(100),primary_key=True)
-        family=dtbs.Column(dtbs.VARCHAR(100))
-        ec=dtbs.Column(dtbs.VARCHAR(100))
-        seq = dtbs.Column(dtbs.VARCHAR(1000))
+        protein_enzyme = dtbs.Column(dtbs.VARCHAR(50))
+        strain=dtbs.Column(dtbs.VARCHAR(50))
+        db=dtbs.Column(dtbs.VARCHAR(2))
+        uniq_id=dtbs.Column(dtbs.VARCHAR(10),primary_key=True)
+        pdb=dtbs.Column(dtbs.VARCHAR(50))
+        ec=dtbs.Column(dtbs.VARCHAR(50))
+        family=dtbs.Column(dtbs.VARCHAR(10))
+        seq=dtbs.Column(dtbs.VARCHAR(1000))
+        type=dtbs.Column(dtbs.VARCHAR(10))
+        web_id=dtbs.Column(dtbs.Integer)
 
