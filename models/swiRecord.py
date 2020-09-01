@@ -4,8 +4,9 @@ dtbs = SQLAlchemy()
 
 class SwiRecord(dtbs.Model):
         __tablename__= 'swiss'
-        protein_enzyme = dtbs.Column(dtbs.VARCHAR(50))
-        strain=dtbs.Column(dtbs.VARCHAR(50))
+        id=dtbs.Column(dtbs.Integer)
+        protein_enzyme = dtbs.Column(dtbs.VARCHAR(100))
+        strain=dtbs.Column(dtbs.VARCHAR(100))
         db=dtbs.Column(dtbs.VARCHAR(2))
         uniq_id=dtbs.Column(dtbs.VARCHAR(10),primary_key=True)
         pdb=dtbs.Column(dtbs.VARCHAR(50))

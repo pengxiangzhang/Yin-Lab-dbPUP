@@ -8,19 +8,19 @@
         </div>
     </div>
     <div class="abstractOfPage" style="margin-bottom: 50px">
-        <div class="familyList">
-            <h1>
-                Family List
-            </h1>
-            <ul class="breadcrumb" style="font-size: medium">
-                {% for i in range(40) %}
-                    <li><a href="{{ url_for('characteristic', family_id = i + 1) }}">{{ i + 1 }}</a> <span
-                            class="divider"></span>
-                    </li>
-                {% endfor %}
+        <!--<div class="familyList">-->
+        <!--    <h1>-->
+        <!--        Family List-->
+        <!--    </h1>-->
+        <!--    <ul class="breadcrumb" style="font-size: medium">-->
+        <!--        {% for i in range(40) %}-->
+        <!--            <li><a href="{{ url_for('characteristic', family_id = i + 1) }}">{{ i + 1 }}</a> <span-->
+        <!--                    class="divider"></span>-->
+        <!--            </li>-->
+        <!--        {% endfor %}-->
 
-            </ul>
-        </div>
+        <!--    </ul>-->
+        <!--</div>-->
         <div class="informationOfGene">
             <h1>
                 Family Introduction
@@ -28,6 +28,34 @@
             <p>We .......</p>
         </div>
     </div>
+
+    <script defer type="text/javascript">
+    $(document).ready(function () {
+    $('#data-table').DataTable({
+        lengthMenu: [[ 10, 25, 50, -1 ],[ '10 rows', '25 rows', '50 rows', 'Show all' ]],
+        dom: 'Bfrtip',
+        buttons: [
+            {
+                extend: 'csvHtml5',
+                fieldBoundary: '',
+                text: 'export',
+                exportOptions: {
+                    columns: [-1]
+                }
+            },
+            {
+                extend: 'copy',
+                fieldBoundary: '',
+                text: 'copy',
+                exportOptions: {
+                    columns: [-1]
+                }
+            },'pageLength'
+        ],
+        select: true
+    });
+});
+</script>
 <div class="container-wrap">
     <table class="table" id="data-table" class="display nowrap">
         <thead>
@@ -62,7 +90,7 @@
                 {% if record.ec == '-1' %}
                     <td>{{ ' ' }}</td>
                 {% else %}
-                    <td>{{ record.ec }}</td>
+                    <td><a href="https://www.brenda-enzymes.org/enzyme.php?ecno={{ record.ec }}">{{ record.ec }}</a></td>
                 {% endif %}
                 <td>{{ record.substrate }}</td>
                 <td>{{ record.production }}</td>
