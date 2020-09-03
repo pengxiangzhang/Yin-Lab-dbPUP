@@ -59,7 +59,7 @@
             <th>Uniprot</th>
             <th>EC</th>
             <th>Substrate</th>
-            <th>Production</th>
+            <th>Product</th>
             <th>PDB</th>
             <th>Km(uM)</th>
             <th>Vmax</th>
@@ -85,7 +85,7 @@
                     <td><a href="https://www.brenda-enzymes.org/enzyme.php?ecno={{ record.ec }}">{{ record.ec }}</a></td>
                 {% endif %}
                 <td>{{ record.substrate }}</td>
-                <td>{{ record.production }}</td>
+                <td>{{ record.product }}</td>
                 {% if record.pdb  == '-1' %}
                     <td>{{ ' ' }}</td>
                 {% else %}
