@@ -119,10 +119,10 @@ def characteristic(family_id):
                     ec.append(link)
                 ec_link[record.number] = ec
 
-                ex_link =  'https://pubchem.ncbi.nlm.nih.gov/compound/phloretin;https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl%20sulfate' #record.pubchem_s
+                ex_link = 'https://pubchem.ncbi.nlm.nih.gov/compound/phloretin;https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl%20sulfate'
                 sub_links = ex_link.split(';')
                 flag = len(sub_links)
-                ex = 'phloretin;4-Nitrophenyl sulfate (quercetin/resveratrol/6-Hydroxyflavone); yes' #record.substrate
+                ex = 'phloretin;4-Nitrophenyl sulfate (quercetin/resveratrol/6-Hydroxyflavone); yes'
                 subs = ex.split(';')
                 length = len(subs)
                 i = 0
