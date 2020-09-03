@@ -80,8 +80,10 @@
 
                 {% endif %}
                 <td>
-                    {% for element in sub %}
-                        <a href= {{ element[1] }}>{{ element[0] }}</a>
+                    {% for s_sub in sub[record.number] %}
+                        {% for element in s_sub %}
+                            <a href= {{ element[1] }}>{{ element[0] }}</a>
+                        {% endfor %}
                     {% endfor %}
                 </td>
                 <td>{{ record.product }}</td>

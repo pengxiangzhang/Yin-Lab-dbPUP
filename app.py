@@ -75,7 +75,7 @@ def characteristic(family_id):
     else:
         row = {}
         ec_link = {}
-        substrates = []
+        sub = {}
         amount_row = 0
         if family_id == 'all':
             records = charRecord.CharRecord.query.all()
@@ -96,7 +96,6 @@ def characteristic(family_id):
                 for link in ec_sub_link:
                     ec.append(link)
                 ec_link[record.number] = ec
-
                 ex_link = 'https://pubchem.ncbi.nlm.nih.gov/compound/phloretin;https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl%20sulfate'
                 sub_links = ex_link.split(';')
                 flag = len(sub_links)
@@ -104,6 +103,7 @@ def characteristic(family_id):
                 subs = ex.split(';')
                 length = len(subs)
                 i = 0
+                substrates = []
                 while i < length:
                     tuple = ["", ""]
                     tuple[0] = subs[i]
@@ -111,7 +111,7 @@ def characteristic(family_id):
                         tuple[1] = sub_links[i]
                     substrates.append(tuple)
                     i += 1
-
+                sub[record.number] = substrates
         else:
             records = charRecord.CharRecord.query.filter_by(family=family_id)
             for record in records:
@@ -143,7 +143,7 @@ def characteristic(family_id):
                 subs = ex.split(';')
                 length = len(subs)
                 i = 0
-
+                substrates = []
                 while i < length:
                     tuple = ["", ""]
                     tuple[0] = subs[i]
@@ -151,7 +151,8 @@ def characteristic(family_id):
                         tuple[1] = sub_links[i]
                     substrates.append(tuple)
                     i += 1
-        return render_template("characteristic.html", records=records, rows = row, ec = ec_link, sub = substrates)
+                sub[record.number] = substrates
+        return render_template("characteristic.html", records=records, rows = row, ec = ec_link, sub = sub)
 
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
