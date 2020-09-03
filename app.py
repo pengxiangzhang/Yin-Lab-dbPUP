@@ -119,16 +119,11 @@ def trembl(family_id):
         records = treRecord.TreRecord.query.filter_by(family=family_id)
     return render_template("trembl.html", records=records)
 
-@app.route('/user/<username>/<firstname>')
-def newUser(username, firstname):
-    u = User(lastname=username, firstname=firstname)
-    dtbs.session.add(u)
-    dtbs.session.commit()
-    return "inserted!"
 
 
 @app.route("/detail/<unid>")
 def detail(unid):
+
     records = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
     if records is None:
         records =  treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
