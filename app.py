@@ -16,9 +16,9 @@ md = Markdown(app, extensions=['fenced_code'])
 with open('config.json') as json_file:
     configs = json.load(json_file)
 
-    # web info
+	# web info
     app.config['title'] = configs['website']['title']
-    # app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
+    #app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
 
     # database
     connection_stat = "mysql+pymysql://" + configs['database']['username'] \
@@ -38,7 +38,6 @@ dtbs = SQLAlchemy(app)
 @app.route('/sitemap.xml')
 def static_from_root():
     return send_from_directory(app.static_folder, request.path[1:])
-
 
 @app.route('/')
 def index():
@@ -101,30 +100,16 @@ def characteristic(family_id):
                     ec.append(link)
                 ec_link[record.number] = ec
 
-        return render_template("characteristic.html", records=records, rows=row, ec=ec_link)
+        return render_template("characteristic.html", records=records, rows = row, ec = ec_link)
 
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
 def swissport(family_id):
-    ec_link = {}
     if family_id == 'all':
         records = swiRecord.SwiRecord.query.all()
-
     else:
         records = swiRecord.SwiRecord.query.filter_by(family=family_id)
-        for record in records:
-            ec_sub_link = record.ec.split(';')
-            ec = []
-            for link in ec_sub_link:
-                ec.append(link)
-            ec_sub_link = record.ec.split(';')
-            ec = []
-            for link in ec_sub_link:
-                ec.append(link)
-            ec_link[record.number] = ec
-
-    return render_template('swissport.html', records=records, ec = ec_link)
-
+    return render_template('swissport.html', records = records)
 
 @app.route('/trembl/<family_id>', methods=['GET', 'POST'])
 def trembl(family_id):
@@ -135,11 +120,13 @@ def trembl(family_id):
     return render_template("trembl.html", records=records)
 
 
+
 @app.route("/detail/<unid>")
 def detail(unid):
+
     records = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
     if records is None:
-        records = treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
+        records =  treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
     if records is None:
         records = swiRecord.SwiRecord.query.filter_by(uniq_id=unid).first()
     if records is None:
@@ -148,21 +135,19 @@ def detail(unid):
         seq = records.seq
     return render_template('detail.html', seq=seq, unid=unid)
 
-
 @app.route("/tree/<family_id>")
 def tree(family_id):
     if family_id == 'all':
         treeData = None
     else:
         try:
-            with open('static/materials/tree/' + family_id + '.json') as f:
+            with open('static/materials/tree/' + family_id +'.json') as f:
                 treeData = json.load(f)
                 print(treeData)
         except Exception:
             treeData = None
-            return render_template('tree.html', treeData=json.dumps(treeData))
-    return render_template('tree.html', treeData=json.dumps(treeData))
-
+            return render_template('tree.html', treeData = json.dumps(treeData))
+    return render_template('tree.html', treeData = json.dumps(treeData))
 
 @app.route("/family/<family_id>")
 def family(family_id):
@@ -218,15 +203,13 @@ def family(family_id):
     if family_id == 'OR10':
         amount = 1
 
-    return render_template('family.html', family_id=family_id, amount=amount)
-
+    return render_template('family.html', family_id=family_id, amount = amount)
 
 @app.route("/subfamily/<family_id>")
 def subfamily(family_id):
     return render_template('subfamily.html', family_id=family_id)
 
-
-@app.route("/network/<family_id>", methods=['GET', 'POST'])
+@app.route("/network/<family_id>",  methods=['GET', 'POST'])
 def network(family_id):
     if request.method == 'POST':
         msg = request.get_data()
@@ -270,6 +253,7 @@ def network(family_id):
                     data.append(node['data']['name'])
                     data.append(node['data']['href'])
                     node['data'] = data
+
 
                 for edge in networkData['elements']['edges']:
                     del edge['selected']
@@ -334,15 +318,13 @@ def network(family_id):
                 del edge['data']['selected']
 
     except Exception:
-        networkData = None
+            networkData = None
 
-    return render_template('network.html', networkData=json.dumps(networkData))
-
+    return render_template('network.html', networkData = json.dumps(networkData))
 
 @app.route("/classes/<class_id>")
 def classes(class_id):
     return render_template('classes.html', class_id=class_id)
-
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
