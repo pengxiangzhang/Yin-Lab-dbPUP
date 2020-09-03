@@ -82,7 +82,10 @@
                 {% if record.ec == '-1' %}
                     <td>{{ ' ' }}</td>
                 {% else %}
-                    <td><a href="https://www.brenda-enzymes.org/enzyme.php?ecno={{ record.ec }}">{{ record.ec }}</a></td>
+                    <td>
+                        {% for element in ec[record.number] %}
+                             <a href="https://www.brenda-enzymes.org/enzyme.php?ecno={{ element[1] }}">{{ element[0] }}</a>
+                        {% endfor %}
                 {% endif %}
                 <td>{{ record.substrate }}</td>
                 <td>{{ record.product }}</td>
@@ -91,7 +94,7 @@
                 {% else %}
                     <td>
                         {% for element in rows[record.number] %}
-                            <a href="https://www.rcsb.org/structure/{{ element[1] }}">{{ element[0] }}</a>
+                            <a href="https://www.rcsb.org/structure/{{element[1]}}">{{ element[0] }}</a>
                         {% endfor %}
                     </td>
                 {% endif %}
