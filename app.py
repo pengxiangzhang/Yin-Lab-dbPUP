@@ -119,10 +119,10 @@ def characteristic(family_id):
                     ec.append(link)
                 ec_link[record.number] = ec
 
-                ex_link = record.pubchem_s
+                ex_link =  'https://pubchem.ncbi.nlm.nih.gov/compound/phloretin;https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl%20sulfate' #record.pubchem_s
                 sub_links = ex_link.split(';')
                 flag = len(sub_links)
-                ex = record.substrate
+                ex = 'phloretin;4-Nitrophenyl sulfate (quercetin/resveratrol/6-Hydroxyflavone); yes' #record.substrate
                 subs = ex.split(';')
                 length = len(subs)
                 i = 0
@@ -134,7 +134,7 @@ def characteristic(family_id):
                         tuple[1] = sub_links[i]
                     substrates.append(tuple)
                     i += 1
-        return render_template("characteristic.html", records=records, rows = row, ec = ec_link)
+        return render_template("characteristic.html", records=records, rows = row, ec = ec_link, sub = substrates)
 
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
