@@ -91,7 +91,7 @@
                 {% else %}
                     <td>
                         {% for element in rows[record.number] %}
-                            <td> <a href="https://www.rcsb.org/structure/{{ element[1] }}">{{ element[0] }}</a> </td>
+                            <a href="https://www.rcsb.org/structure/{{ element[1] }}">{{ element[0] }}</a><br> 
                         {% endfor %}
                     </td>
                 {% endif %}
