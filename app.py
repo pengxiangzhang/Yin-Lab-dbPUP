@@ -55,6 +55,7 @@ def characteristic(family_id):
         return render_template('swissport.html', records=records)
     else:
         row = {}
+        ec_link = {}
         amount_row = 0
         if family_id == 'all':
             records = charRecord.CharRecord.query.all()
@@ -70,7 +71,11 @@ def characteristic(family_id):
                     pdb_information.append(pdbSubLink[i].split('[')[0])
                     sub_row.append(pdb_information)
                 row[record.number] = sub_row
-
+                ec_sub_link = record.ec.split(';')
+                ec = []
+                for link in ec_sub_link:
+                    ec.append(link)
+                ec_link[record.number] = ec
         else:
             records = charRecord.CharRecord.query.filter_by(family=family_id)
             for record in records:
@@ -85,7 +90,17 @@ def characteristic(family_id):
                     sub_row.append(pdb_information)
                 row[record.number] = sub_row
 
-        return render_template("characteristic.html", records=records, rows = row)
+                ec_sub_link = record.ec.split(';')
+                ec = []
+                for link in ec_sub_link:
+                    ec.append(link)
+                ec_sub_link = record.ec.split(';')
+                ec = []
+                for link in ec_sub_link:
+                    ec.append(link)
+                ec_link[record.number] = ec
+
+        return render_template("characteristic.html", records=records, rows = row, ec = ec_link)
 
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
