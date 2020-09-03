@@ -4,7 +4,6 @@ dtbs = SQLAlchemy()
 
 class TreRecord(dtbs.Model):
         __tablename__= 'trembl'
-        id=dtbs.Column(dtbs.Integer)
         protein_enzyme = dtbs.Column(dtbs.VARCHAR(100))
         strain=dtbs.Column(dtbs.VARCHAR(100))
         db=dtbs.Column(dtbs.VARCHAR(2))

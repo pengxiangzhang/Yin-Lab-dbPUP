@@ -202,7 +202,7 @@ def family(family_id):
         amount = 1
     if family_id == 'OR10':
         amount = 1
-
+        
     return render_template('family.html', family_id=family_id, amount = amount)
 
 @app.route("/subfamily/<family_id>")
