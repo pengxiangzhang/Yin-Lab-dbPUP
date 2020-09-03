@@ -4,7 +4,9 @@
 
 {% block content %}
     <!-- Main Content Area-->
-
+    {% for element in sub %}
+        <a href= {{ element[1] }}>{{  element[0] }}</a>
+    {% endfor %}
     <div class="row">
         <div class="page-header">
             <h3>This is home<small>Subtext for header</small></h3>

@@ -134,8 +134,7 @@ def characteristic(family_id):
                         tuple[1] = sub_links[i]
                     substrates.append(tuple)
                     i += 1
-
-        return render_template("characteristic.html", records=records, rows = row, ec = ec_link, sub = substrates)
+        return render_template("characteristic.html", records=records, rows = row, ec = ec_link)
 
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
