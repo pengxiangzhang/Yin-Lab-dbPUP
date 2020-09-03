@@ -75,6 +75,7 @@ def characteristic(family_id):
     else:
         row = {}
         ec_link = {}
+        substrates = []
         amount_row = 0
         if family_id == 'all':
             records = charRecord.CharRecord.query.all()
@@ -95,6 +96,22 @@ def characteristic(family_id):
                 for link in ec_sub_link:
                     ec.append(link)
                 ec_link[record.number] = ec
+
+                ex_link = 'https://pubchem.ncbi.nlm.nih.gov/compound/phloretin;https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl%20sulfate'
+                sub_links = ex_link.split(';')
+                flag = len(sub_links)
+                ex = 'phloretin;4-Nitrophenyl sulfate (quercetin/resveratrol/6-Hydroxyflavone); yes'
+                subs = ex.split(';')
+                length = len(subs)
+                i = 0
+                while i < length:
+                    tuple = ["", ""]
+                    tuple[0] = subs[i]
+                    if i < flag:
+                        tuple[1] = sub_links[i]
+                    substrates.append(tuple)
+                    i += 1
+
         else:
             records = charRecord.CharRecord.query.filter_by(family=family_id)
             for record in records:
@@ -126,7 +143,7 @@ def characteristic(family_id):
                 subs = ex.split(';')
                 length = len(subs)
                 i = 0
-                substrates = []
+
                 while i < length:
                     tuple = ["", ""]
                     tuple[0] = subs[i]
