@@ -77,6 +77,14 @@
                 {% elif class_id == 'TRs' %}
                     {% set family_id = 'TR' %}
                     <a href="{{ url_for('family', family_id = family_id) }}">{{ family_id }}</a>
+                {% elif class_id == 'UCs' %}
+                    {% for i in range(2) %}
+                        {% set family_id = 'UC'+ (i + 1)|string() %}
+
+                        <li><a href="{{ url_for('family', family_id = family_id) }}">{{ family_id }}</a> <span
+                                class="divider"></span>
+                        </li>
+                    {% endfor %}
                 {% endif %}
 
 
