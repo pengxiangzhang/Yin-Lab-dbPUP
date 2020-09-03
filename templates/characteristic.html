@@ -8,19 +8,6 @@
         </div>
     </div>
     <div class="abstractOfPage" style="margin-bottom: 50px">
-        <!--<div class="familyList">-->
-        <!--    <h1>-->
-        <!--        Family List-->
-        <!--    </h1>-->
-        <!--    <ul class="breadcrumb" style="font-size: medium">-->
-        <!--        {% for i in range(40) %}-->
-            <!--            <li><a href="{{ url_for('characteristic', family_id = i + 1) }}">{{ i + 1 }}</a> <span-->
-            <!--                    class="divider"></span>-->
-            <!--            </li>-->
-            <!--        {% endfor %}-->
-
-        <!--    </ul>-->
-        <!--</div>-->
         <div class="informationOfGene">
             <h1>
                 Family Introduction
@@ -48,24 +35,7 @@
             });
         });
     </script>
-    <script>
-    $(function() {  
-    $("[data-toggle='popover']").popover({  
-        html : true,    
-        title: title(),    
-        delay:{show:500, hide:1000},  
-        content: function() {  
-          return content();    
-        }   
-    });  
-});  
-    </script>
 
-    <script>
-    $(function () { 
-    	$("[data-toggle='popover']").popover({trigger:'hover'});
-    });
-    </script>
     <div class="container-wrap">
         <table class="table" id="data-table" class="display nowrap">
             <thead>
