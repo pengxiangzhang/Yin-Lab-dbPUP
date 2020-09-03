@@ -48,6 +48,24 @@
             });
         });
     </script>
+    <script>
+    $(function() {  
+    $("[data-toggle='popover']").popover({  
+        html : true,    
+        title: title(),    
+        delay:{show:500, hide:1000},  
+        content: function() {  
+          return content();    
+        }   
+    });  
+});  
+    </script>
+
+    <script>
+    $(function () { 
+    	$("[data-toggle='popover']").popover({trigger:'hover'});
+    });
+    </script>
     <div class="container-wrap">
         <table class="table" id="data-table" class="display nowrap">
             <thead>
@@ -74,7 +92,9 @@
             <tbody>
             {% for record in records %}
                 <tr>
-                    <td>{{ record.number }}</td>
+                    <td title="Popover title"  
+			data-container="body" data-toggle="popover" data-placement="bottom" 
+			data-content="右侧的 Popover 中的一些内容">{{ record.number }}</td>
                     <td>{{ record.strain }}</td>
                     <td>{{ record.protein_name }}</td>
                     <td>{{ record.gene_name }}</td>
@@ -133,5 +153,3 @@
         </table>
     </div>
 {% endblock %}
-
-
