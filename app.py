@@ -105,11 +105,19 @@ def characteristic(family_id):
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
 def swissport(family_id):
-    if family_id == 'all':
-        records = swiRecord.SwiRecord.query.all()
-    else:
-        records = swiRecord.SwiRecord.query.filter_by(family=family_id)
-    return render_template('swissport.html', records = records)
+    ec_link = {}
+    records = swiRecord.SwiRecord.query.filter_by(family=family_id)
+    for record in records:
+        ec_sub_link = record.ec.split(';')
+        ec = []
+        for link in ec_sub_link:
+            ec.append(link)
+        ec_sub_link = record.ec.split(';')
+        ec = []
+        for link in ec_sub_link:
+            ec.append(link)
+        ec_link[record.number] = ec
+    return render_template('swissport.html', records = records, ec = ec_link)
 
 @app.route('/trembl/<family_id>', methods=['GET', 'POST'])
 def trembl(family_id):
