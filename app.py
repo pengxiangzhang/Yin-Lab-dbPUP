@@ -41,8 +41,27 @@ def static_from_root():
 
 @app.route('/')
 def index():
+    ex_link = 'https://pubchem.ncbi.nlm.nih.gov/compound/phloretin;https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl%20sulfate'
+    sub_links = ex_link.split(';')
+    flag = len(sub_links)
+    ex = 'phloretin;4-Nitrophenyl sulfate (quercetin/resveratrol/6-Hydroxyflavone); yes'
+    subs = ex.split(';')
+    length = len(subs)
+    i = 0
+    substrates = []
+    while i < length:
+        tuple = ["", ""]
+        tuple[0] = subs[i]
+        if i < flag:
+            tuple[1] = sub_links[i]
+        substrates.append(tuple)
+        i += 1
+
+
+
+
     c = open('content/about.md', 'r').read()
-    return render_template('index.html', content=c)
+    return render_template('index.html', content=c, sub = substrates)
 
 
 @app.route('/characteristic/<family_id>', methods=['GET', 'POST'])
@@ -100,7 +119,23 @@ def characteristic(family_id):
                     ec.append(link)
                 ec_link[record.number] = ec
 
-        return render_template("characteristic.html", records=records, rows = row, ec = ec_link)
+                ex_link = record.pubchem_s
+                sub_links = ex_link.split(';')
+                flag = len(sub_links)
+                ex = record.substrate
+                subs = ex.split(';')
+                length = len(subs)
+                i = 0
+                substrates = []
+                while i < length:
+                    tuple = ["", ""]
+                    tuple[0] = subs[i]
+                    if i < flag:
+                        tuple[1] = sub_links[i]
+                    substrates.append(tuple)
+                    i += 1
+
+        return render_template("characteristic.html", records=records, rows = row, ec = ec_link, sub = substrates)
 
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
@@ -121,11 +156,19 @@ def swissport(family_id):
 
 @app.route('/trembl/<family_id>', methods=['GET', 'POST'])
 def trembl(family_id):
-    if family_id == 'all':
-        records = treRecord.TreRecord.query.all()
-    else:
-        records = treRecord.TreRecord.query.filter_by(family=family_id)
-    return render_template("trembl.html", records=records)
+    ec_link = {}
+    records = treRecord.TreRecord.query.filter_by(family=family_id)
+    for record in records:
+        ec_sub_link = record.ec.split(';')
+        ec = []
+        for link in ec_sub_link:
+            ec.append(link)
+        ec_sub_link = record.ec.split(';')
+        ec = []
+        for link in ec_sub_link:
+            ec.append(link)
+        ec_link[record.number] = ec
+    return render_template("trembl.html", records=records, ec = ec_link)
 
 
 

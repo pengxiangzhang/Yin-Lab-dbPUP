@@ -62,9 +62,9 @@
             <tbody>
             {% for record in records %}
                 <tr>
-                    <td title="Popover title"  
-			data-container="body" data-toggle="popover" data-placement="bottom" 
-			data-content="右侧的 Popover 中的一些内容">{{ record.number }}</td>
+                    <td title="Popover title"
+                        data-container="body" data-toggle="popover" data-placement="bottom"
+                        data-content="右侧的 Popover 中的一些内容">{{ record.number }}</td>
                     <td>{{ record.strain }}</td>
                     <td>{{ record.protein_name }}</td>
                     <td>{{ record.gene_name }}</td>
@@ -74,12 +74,16 @@
                     {% else %}
                         <td>
                             {% for element in ec[record.number] %}
-                                <a href="https://www.brenda-enzymes.org/enzyme.php?ecno={{ element}}">{{ element}}</a>
+                                <a href="https://www.brenda-enzymes.org/enzyme.php?ecno={{ element }}">{{ element }}</a>
                             {% endfor %}
                         </td>
 
                     {% endif %}
-                    <td>{{ record.substrate }}</td>
+                    <td>
+                        {% for element in sub %}
+                            <a href= {{ element[1] }}>{{ element[0] }}</a>
+                        {% endfor %}
+                    </td>
                     <td>{{ record.product }}</td>
                     {% if record.pdb  == '-1' %}
                         <td>{{ ' ' }}</td>
