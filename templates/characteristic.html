@@ -21,6 +21,7 @@
             $('#data-table').DataTable({
                 lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
                 dom: 'Bfrtip',
+                "scrollX": true,
                 buttons: [
                     {
                         extend: 'csvHtml5',
@@ -36,7 +37,6 @@
         });
     </script>
 
-    <div class="container-wrap">
         <table class="table" id="data-table" class="display nowrap">
             <thead>
             <tr>
@@ -125,5 +125,4 @@
             {% endfor %}
             </tbody>
         </table>
-    </div>
 {% endblock %}

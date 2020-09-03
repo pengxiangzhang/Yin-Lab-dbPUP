@@ -20,6 +20,7 @@
 
 
     <script defer type="text/javascript">
+<<<<<<< HEAD
         $(document).ready(function () {
             $('#data-table').DataTable({
                 lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
@@ -91,6 +92,80 @@
                 select: true
             });
         });
+=======
+    $(document).ready(function () {
+    $('#data-table').DataTable({
+        lengthMenu: [[ 10, 25, 50, -1 ],[ '10 rows', '25 rows', '50 rows', 'Show all' ]],
+        dom: 'Bfrtip',
+        "scrollX": true,
+        columnDefs: [{
+        targets: 7,
+        searchable: true,
+        visible: false
+        }],
+        buttons: [
+            {
+                extend: 'csvHtml5',
+                fieldBoundary: '',
+                text: 'export',
+                exportOptions: {
+                    columns: [-1]
+                }
+            },
+            {
+                extend: 'copy',
+                fieldBoundary: '',
+                text: 'copy',
+                exportOptions: {
+                    columns: [-2]
+                }
+            },
+            {
+                text: 'All',
+                action: function () {
+                    location.reload(true);
+                }
+            },
+            {
+                text: 'Bacteria',
+                action: function () {
+                    var table = $('#data-table').DataTable();
+                    table.column(7).search('Bacteria').draw();
+                }
+            },
+            {
+                text: 'Archaea',
+                action: function () {
+                    var table = $('#data-table').DataTable();
+                    table.column(7).search('Archaea').draw();
+                }
+            },
+            {
+                text: 'Eukaryota',
+                action: function () {
+                    var table = $('#data-table').DataTable();
+                    table.column(7).search('Eukaryota').draw();
+                }
+            },
+            {
+                text: 'Viruses',
+                action: function () {
+                    var table = $('#data-table').DataTable();
+                    table.column(7).search('Viruses').draw();
+                }
+            },
+            {
+                text: 'Unclassified',
+                action: function () {
+                    var table = $('#data-table').DataTable();
+                    table.column(7).search('unclassified').draw();
+                }
+            },'pageLength'
+        ],
+        select: true
+    });
+});
+>>>>>>> d95b8fe3539e83906e5144e3e1980aa3898059c0
     </script>
 
     <table class="table" id="data-table">
