@@ -76,6 +76,7 @@ def characteristic(family_id):
         row = {}
         ec_link = {}
         sub = {}
+        prod = {}
         amount_row = 0
         if family_id == 'all':
             records = charRecord.CharRecord.query.all()
@@ -91,15 +92,17 @@ def characteristic(family_id):
                     pdb_information.append(pdbSubLink[i].split('[')[0])
                     sub_row.append(pdb_information)
                 row[record.number] = sub_row
+
                 ec_sub_link = record.ec.split(';')
                 ec = []
                 for link in ec_sub_link:
                     ec.append(link)
                 ec_link[record.number] = ec
-                ex_link = 'https://pubchem.ncbi.nlm.nih.gov/compound/phloretin;https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl%20sulfate'
+
+                ex_link = record.pubchem_s #'https://pubchem.ncbi.nlm.nih.gov/compound/phloretin;https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl%20sulfate'
                 sub_links = ex_link.split(';')
                 flag = len(sub_links)
-                ex = 'phloretin;4-Nitrophenyl sulfate (quercetin/resveratrol/6-Hydroxyflavone); yes'
+                ex = record.substrate #'phloretin;4-Nitrophenyl sulfate (quercetin/resveratrol/6-Hydroxyflavone); yes'
                 subs = ex.split(';')
                 length = len(subs)
                 i = 0
@@ -112,6 +115,26 @@ def characteristic(family_id):
                     substrates.append(tuple)
                     i += 1
                 sub[record.number] = substrates
+
+                ex_link = record.pubchem_p
+                sub_links = ex_link.split(';')
+                flag = len(sub_links)
+                ex = record.product
+                subs = ex.split(';')
+                length = len(subs)
+                i = 0
+                product = []
+                while i < length:
+                    tuple = ["", ""]
+                    tuple[0] = subs[i]
+                    if i < flag:
+                        tuple[1] = sub_links[i]
+                    product.append(tuple)
+                    i += 1
+                prod[record.number] = product
+
+
+
         else:
             records = charRecord.CharRecord.query.filter_by(family=family_id)
             for record in records:
@@ -152,7 +175,7 @@ def characteristic(family_id):
                     substrates.append(tuple)
                     i += 1
                 sub[record.number] = substrates
-        return render_template("characteristic.html", records=records, rows = row, ec = ec_link, sub = sub)
+        return render_template("characteristic.html", records=records, rows = row, ec = ec_link, sub = sub, product = prod)
 
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])

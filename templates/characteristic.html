@@ -89,7 +89,10 @@
                         <a href= {{ element[1] }}>{{ element[0] }}</a>
                     {% endfor %}
                 </td>
-                <td>{{ record.product }}</td>
+                <td> {% for element in product[record.number] %}
+                        <a href= {{ element[1] }}>{{ element[0] }}</a>
+                    {% endfor %}
+                </td>
                 {% if record.pdb  == '-1' %}
                     <td>{{ ' ' }}</td>
                 {% else %}
