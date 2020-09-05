@@ -42,7 +42,7 @@ def static_from_root():
 @app.route('/')
 def index():
     c = open('content/about.md', 'r').read()
-    return render_template('index.html', content=c, sub = substrates)
+    return render_template('index.html', content=c)
 
 
 @app.route('/characteristic/<family_id>', methods=['GET', 'POST'])
