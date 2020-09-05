@@ -22,6 +22,11 @@
                 lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
                 dom: 'Bfrtip',
                 "scrollX": true,
+                columnDefs: [{
+                targets: 15,
+                searchable: true,
+                visible: false
+                }],
                 buttons: [
                     {
                         extend: 'csvHtml5',
@@ -40,22 +45,22 @@
     <table class="table" id="data-table" class="display nowrap">
         <thead>
         <tr>
-            <th>Number</th>
-            <th>Strain</th>
-            <th>Protein Name</th>
-            <th>Gene Name</th>
-            <th>Uniprot</th>
-            <th>EC</th>
-            <th>Substrate</th>
-            <th>Product</th>
-            <th>PDB</th>
-            <th>Km(uM)</th>
-            <th>Vmax(uM/s)</th>
-            <th>Kcat(s<sup>-1</sup>)</th>
-            <th>Family</th>
-            <th>Sequence</th>
-            <th>DOI</th>
-            <th hidden></th>
+            <th style="white-space: nowrap">Number</th>
+            <th style="white-space: nowrap">Strain</th>
+            <th style="white-space: nowrap">Protein Name</th>
+            <th style="white-space: nowrap">Gene Name</th>
+            <th style="white-space: nowrap">Uniprot</th>
+            <th style="white-space: nowrap">EC</th>
+            <th style="white-space: nowrap">Substrate</th>
+            <th style="white-space: nowrap">Product</th>
+            <th style="white-space: nowrap">PDB</th>
+            <th style="white-space: nowrap">Km(μM)</th>
+            <th style="white-space: nowrap">Vmax(uM/s)</th>
+            <th style="white-space: nowrap">Kcat(s<sup>-1</sup>)</th>
+            <th style="white-space: nowrap">Family</th>
+            <th style="white-space: nowrap">Sequence</th>
+            <th style="white-space: nowrap">DOI</th>
+            <th>hide</th>
 
         </tr>
         </thead>

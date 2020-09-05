@@ -20,79 +20,6 @@
 
 
     <script defer type="text/javascript">
-<<<<<<< HEAD
-        $(document).ready(function () {
-            $('#data-table').DataTable({
-                lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
-                dom: 'Bfrtip',
-                columnDefs: [{
-                    targets: 7,
-                    searchable: true,
-                    visible: false
-                }],
-                buttons: [
-                    {
-                        extend: 'csvHtml5',
-                        fieldBoundary: '',
-                        text: 'export',
-                        exportOptions: {
-                            columns: [-1]
-                        }
-                    },
-                    {
-                        extend: 'copy',
-                        fieldBoundary: '',
-                        text: 'copy',
-                        exportOptions: {
-                            columns: [-2]
-                        }
-                    },
-                    {
-                        text: 'All',
-                        action: function () {
-                            location.reload(true);
-                        }
-                    },
-                    {
-                        text: 'Bacteria',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(7).search('Bacteria').draw();
-                        }
-                    },
-                    {
-                        text: 'Archaea',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(7).search('Archaea').draw();
-                        }
-                    },
-                    {
-                        text: 'Eukaryota',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(7).search('Eukaryota').draw();
-                        }
-                    },
-                    {
-                        text: 'Viruses',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(7).search('Viruses').draw();
-                        }
-                    },
-                    {
-                        text: 'Unclassified',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(7).search('unclassified').draw();
-                        }
-                    }, 'pageLength'
-                ],
-                select: true
-            });
-        });
-=======
     $(document).ready(function () {
     $('#data-table').DataTable({
         lengthMenu: [[ 10, 25, 50, -1 ],[ '10 rows', '25 rows', '50 rows', 'Show all' ]],
@@ -100,6 +27,10 @@
         "scrollX": true,
         columnDefs: [{
         targets: 7,
+        searchable: true,
+        visible: false
+        },{
+        targets: 6,
         searchable: true,
         visible: false
         }],
@@ -165,20 +96,19 @@
         select: true
     });
 });
->>>>>>> d95b8fe3539e83906e5144e3e1980aa3898059c0
     </script>
 
     <table class="table" id="data-table">
         <thead>
         <tr>
-            <th>Protein Name</th>
-            <th>Strain</th>
-            <th>Uniprot</th>
-            <th>Family</th>
-            <th>EC</th>
-            <th>Sequence</th>
-            <th hidden></th>
-            <th>type</th>
+            <th style="white-space: nowrap">Protein Name</th>
+            <th style="white-space: nowrap">Strain</th>
+            <th style="white-space: nowrap">Uniprot</th>
+            <th style="white-space: nowrap">Family</th>
+            <th style="white-space: nowrap">EC</th>
+            <th style="white-space: nowrap">Sequence</th>
+            <th style="white-space: nowrap">hidden</th>
+            <th style="white-space: nowrap">type</th>
         </tr>
         </thead>
         <tbody>
