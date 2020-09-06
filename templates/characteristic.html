@@ -21,7 +21,6 @@
             $('#data-table').DataTable({
                 lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
                 dom: 'Bfrtip',
-                "scrollX": true,
                 columnDefs: [{
                 targets: 15,
                 searchable: true,
@@ -41,7 +40,7 @@
             });
         });
     </script>
-
+<div class="container-wrap">
     <table class="table" id="data-table" class="display nowrap">
         <thead>
         <tr>
@@ -67,9 +66,7 @@
         <tbody>
         {% for record in records %}
             <tr>
-                <td title="Popover title"
-                    data-container="body" data-toggle="popover" data-placement="bottom"
-                    data-content="右侧的 Popover 中的一些内容">{{ record.number }}</td>
+                <td>{{ record.number }}</td>
                 <td>{{ record.strain }}</td>
                 <td>{{ record.protein_name }}</td>
                 <td>{{ record.gene_name }}</td>
@@ -133,4 +130,5 @@
         {% endfor %}
         </tbody>
     </table>
+</div>
 {% endblock %}
