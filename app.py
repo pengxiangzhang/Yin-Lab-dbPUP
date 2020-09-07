@@ -64,7 +64,7 @@ def index():
 
 
     c = open('content/about.md', 'r').read()
-    return render_template('index.html', content=c, sub = substrates)
+    return render_template('index.html', content=c, sub = s)
 
 
 @app.route('/characteristic/<family_id>', methods=['GET', 'POST'])
@@ -111,15 +111,10 @@ def characteristic(family_id):
                 i = 0
                 substrates = []
                 while i < length:
-                    tuple = ["", "", ""]
-                    s_subs = subs[i].split('(')
-                    if len(s_subs) > 1:
-                        tuple[0] = s_subs[0]
-                        tuple[1] = "(" + s_subs[1]
-                    else:
-                        tuple[0] = s_subs[0]
+                    tuple = ["", ""]
+                    tuple[0] = subs[i]
                     if i < flag:
-                        tuple[2] = sub_links[i]
+                        tuple[1] = sub_links[i]
                     substrates.append(tuple)
                     i += 1
                 sub[record.number] = substrates
@@ -137,7 +132,7 @@ def characteristic(family_id):
                     tuple[0] = subs[i]
                     if i < flag:
                         tuple[1] = sub_links[i]
-                    substrates.append(tuple)
+                    product.append(tuple)
                     i += 1
                 prod[record.number] = product
 
