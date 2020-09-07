@@ -41,8 +41,30 @@ def static_from_root():
 
 @app.route('/')
 def index():
+    ex_link =  'https://pubchem.ncbi.nlm.nih.gov/compound/phloretin;https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl%20sulfate'
+    sub_links = ex_link.split(';')
+    flag = len(sub_links)
+    ex =  'phloretin;4-Nitrophenyl sulfate (quercetin/resveratrol/6-Hydroxyflavone)'
+    subs = ex.split(';')
+    length = len(subs)
+    i = 0
+    substrates = []
+    while i < length:
+        tuple = ["", "", ""]
+        s_subs = subs[i].split('(')
+        if len(s_subs) > 1:
+            tuple[0] = s_subs[0]
+            tuple[1] = "(" + s_subs[1]
+        else:
+            tuple[0] = s_subs[0]
+        if i < flag:
+            tuple[2] = sub_links[i]
+        substrates.append(tuple)
+        i += 1
+
+
     c = open('content/about.md', 'r').read()
-    return render_template('index.html', content=c)
+    return render_template('index.html', content=c, sub = substrates)
 
 
 @app.route('/characteristic/<family_id>', methods=['GET', 'POST'])
@@ -89,10 +111,15 @@ def characteristic(family_id):
                 i = 0
                 substrates = []
                 while i < length:
-                    tuple = ["", ""]
-                    tuple[0] = subs[i]
+                    tuple = ["", "", ""]
+                    s_subs = subs[i].split('(')
+                    if len(s_subs) > 1:
+                        tuple[0] = s_subs[0]
+                        tuple[1] = "(" + s_subs[1]
+                    else:
+                        tuple[0] = s_subs[0]
                     if i < flag:
-                        tuple[1] = sub_links[i]
+                        tuple[2] = sub_links[i]
                     substrates.append(tuple)
                     i += 1
                 sub[record.number] = substrates
@@ -106,11 +133,16 @@ def characteristic(family_id):
                 i = 0
                 product = []
                 while i < length:
-                    tuple = ["", ""]
-                    tuple[0] = subs[i]
+                    tuple = ["", "", ""]
+                    s_subs = subs[i].split('(')
+                    if len(s_subs) > 1:
+                        tuple[0] = s_subs[0]
+                        tuple[1] = "(" + s_subs[1]
+                    else:
+                        tuple[0] = s_subs[0]
                     if i < flag:
-                        tuple[1] = sub_links[i]
-                    product.append(tuple)
+                        tuple[2] = sub_links[i]
+                    substrates.append(tuple)
                     i += 1
                 prod[record.number] = product
 
@@ -149,10 +181,15 @@ def characteristic(family_id):
                 i = 0
                 substrates = []
                 while i < length:
-                    tuple = ["", ""]
-                    tuple[0] = subs[i]
+                    tuple = ["", "", ""]
+                    s_subs = subs[i].split('(')
+                    if len(s_subs) > 1:
+                        tuple[0] = s_subs[0]
+                        tuple[1] = "(" + s_subs[1]
+                    else:
+                        tuple[0] = s_subs[0]
                     if i < flag:
-                        tuple[1] = sub_links[i]
+                        tuple[2] = sub_links[i]
                     substrates.append(tuple)
                     i += 1
                 sub[record.number] = substrates
