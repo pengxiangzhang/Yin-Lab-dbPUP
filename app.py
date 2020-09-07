@@ -111,10 +111,15 @@ def characteristic(family_id):
                 i = 0
                 substrates = []
                 while i < length:
-                    tuple = ["", ""]
-                    tuple[0] = subs[i]
+                    tuple = ["", "", ""]
+                    s_subs = subs[i].split('(')
+                    if len(s_subs) > 1:
+                        tuple[0] = s_subs[0]
+                        tuple[1] = "(" + s_subs[1]
+                    else:
+                        tuple[0] = s_subs[0]
                     if i < flag:
-                        tuple[1] = sub_links[i]
+                        tuple[2] = sub_links[i]
                     substrates.append(tuple)
                     i += 1
                 sub[record.number] = substrates
@@ -171,13 +176,35 @@ def characteristic(family_id):
                 i = 0
                 substrates = []
                 while i < length:
+                    tuple = ["", "", ""]
+                    s_subs = subs[i].split('(')
+                    if len(s_subs) > 1:
+                        tuple[0] = s_subs[0]
+                        tuple[1] = "(" + s_subs[1]
+                    else:
+                        tuple[0] = s_subs[0]
+                    if i < flag:
+                        tuple[2] = sub_links[i]
+                    substrates.append(tuple)
+                    i += 1
+                sub[record.number] = substrates
+
+                ex_link = record.pubchem_p
+                sub_links = ex_link.split(';')
+                flag = len(sub_links)
+                ex = record.product
+                subs = ex.split(';')
+                length = len(subs)
+                i = 0
+                product = []
+                while i < length:
                     tuple = ["", ""]
                     tuple[0] = subs[i]
                     if i < flag:
                         tuple[1] = sub_links[i]
-                    substrates.append(tuple)
+                    product.append(tuple)
                     i += 1
-                sub[record.number] = substrates
+                prod[record.number] = product
         return render_template("characteristic.html", records=records, rows = row, ec = ec_link, sub = sub, product = prod)
 
 

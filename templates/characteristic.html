@@ -22,9 +22,9 @@
                 lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
                 dom: 'Bfrtip',
                 columnDefs: [{
-                targets: 15,
-                searchable: true,
-                visible: false
+                    targets: 15,
+                    searchable: true,
+                    visible: false
                 }],
                 buttons: [
                     {
@@ -40,103 +40,107 @@
             });
         });
     </script>
-<div class="container-wrap">
-    <table class="table" id="data-table" class="display nowrap">
-        <thead>
-        <tr>
-            <th style="white-space: nowrap">Number</th>
-            <th style="white-space: nowrap">Strain</th>
-            <th style="white-space: nowrap">Protein Name</th>
-            <th style="white-space: nowrap">Gene Name</th>
-            <th style="white-space: nowrap">Uniprot</th>
-            <th style="white-space: nowrap">EC</th>
-            <th style="white-space: nowrap">Substrate</th>
-            <th style="white-space: nowrap">Product</th>
-            <th style="white-space: nowrap">PDB</th>
-            <th style="white-space: nowrap">Km(μM)</th>
-            <th style="white-space: nowrap">Vmax(μM/s)</th>
-            <th style="white-space: nowrap">Kcat(s<sup>-1</sup>)</th>
-            <th style="white-space: nowrap">Family</th>
-            <th style="white-space: nowrap">Sequence</th>
-            <th style="white-space: nowrap">DOI</th>
-            <th>hide</th>
-
-        </tr>
-        </thead>
-        <tbody>
-        {% for record in records %}
+    <div class="container-wrap">
+        <table class="table" id="data-table" class="display nowrap">
+            <thead>
             <tr>
-                <td>{{ record.number }}</td>
-                <td>{{ record.strain }}</td>
-                <td>{{ record.protein_name }}</td>
-                <td>{{ record.gene_name }}</td>
-                <td><a href="https://www.uniprot.org/uniprot/{{ record.uniq_id }}">{{ record.uniq_id }}</a></td>
-                {% if record.ec == '-1' %}
-                    <td>{{ ' ' }}</td>
-                {% else %}
-                    <td>
-                        {% for element in ec[record.number] %}
-                            <a href="https://www.brenda-enzymes.org/enzyme.php?ecno={{ element }}">{{ element }}</a>
-                        {% endfor %}
-                    </td>
+                <th style="white-space: nowrap">Number</th>
+                <th style="white-space: nowrap">Strain</th>
+                <th style="white-space: nowrap">Protein Name</th>
+                <th style="white-space: nowrap">Gene Name</th>
+                <th style="white-space: nowrap">Uniprot</th>
+                <th style="white-space: nowrap">EC</th>
+                <th style="white-space: nowrap">Substrate</th>
+                <th style="white-space: nowrap">Product</th>
+                <th style="white-space: nowrap">PDB</th>
+                <th style="white-space: nowrap">Km(μM)</th>
+                <th style="white-space: nowrap">Vmax(μM/s)</th>
+                <th style="white-space: nowrap">Kcat(s<sup>-1</sup>)</th>
+                <th style="white-space: nowrap">Family</th>
+                <th style="white-space: nowrap">Sequence</th>
+                <th style="white-space: nowrap">DOI</th>
+                <th>hide</th>
 
-                {% endif %}
-                <td>
-                    {% for element in sub[record.number] %}
-                        <a href= {{ element[1] }}>{{ element[0] }};</a>
-                    {% endfor %}
-                </td>
-                <td> {% for element in product[record.number] %}
-                        <a href= {{ element[1] }}>{{ element[0] }};</a>
-                    {% endfor %}
-                </td>
-                {% if record.pdb  == '-1' %}
-                    <td>{{ ' ' }}</td>
-                {% else %}
-                    <td>
-                        {% for element in rows[record.number] %}
-                            <a href="https://www.rcsb.org/structure/{{ element[1] }}">{{ element[0] }}</a>
-                        {% endfor %}
-                    </td>
-                {% endif %}
-
-                {% if record.km == '-1' %}
-                    <td>{{ ' ' }}</td>
-                {% else %}
-                    {% if record.number == '39' %}
-                    <td>4±0.9[Mn<sup>2+</sup>]</td>
-                    {% else %}
-                    <td>{{ record.km }}</td>
-                    {% endif %}
-                {% endif %}
-                {% if record.vmax == '-1' %}
-                    <td>{{ ' ' }}</td>
-                {% else %}
-                    <td>{{ record.vmax }}</td>
-                {% endif %}
-                {% if record.kcat == '-1' %}
-                    <td>{{ ' ' }}</td>
-                {% else %}
-                    {% if record.number == '39' %}
-                    <td>25±1[Mn<sup>2+</sup>]</td>
-                    {% else %}
-                    <td>{{ record.km }}</td>
-                    {% endif %}
-                {% endif %}
-                <td>
-                    <a href="{{ url_for('family', family_id = record.family) }}">{{ record.family }}</a>
-                </td>
-                <td>
-                    <a href={{ url_for('detail', unid = record.uniq_id) }}>view</a>
-                </td>
-                <td><a href="https://doi.org/{{ record.doi }}">{{ record.doi }}</a></td>
-                <td>
-                    <p hidden>>{{ record.uniq_id }} {{ record.protein_name }} OS={{ record.strain }}</p>
-                    <p hidden style="max-width: 40ch; word-wrap:break-word;"> {{ record.seq }}</p>
-                </td>
             </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-</div>
+            </thead>
+            <tbody>
+            {% for record in records %}
+                <tr>
+                    <td>{{ record.number }}</td>
+                    <td>{{ record.strain }}</td>
+                    <td>{{ record.protein_name }}</td>
+                    <td>{{ record.gene_name }}</td>
+                    <td><a href="https://www.uniprot.org/uniprot/{{ record.uniq_id }}">{{ record.uniq_id }}</a></td>
+                    {% if record.ec == '-1' %}
+                        <td>{{ ' ' }}</td>
+                    {% else %}
+                        <td>
+                            {% for element in ec[record.number] %}
+                                <a href="https://www.brenda-enzymes.org/enzyme.php?ecno={{ element }}">{{ element }}</a>
+                            {% endfor %}
+                        </td>
+
+                    {% endif %}
+                    <td>
+                        {% for element in sub[record.number] %}
+                            {% if element[2] == ''%}
+                                {{ element[0] }}{{ element[1] }};
+                            {% else %}
+                                <a href= {{ element[2] }}>{{ element[0] }}</a>{{ element[1] }};
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> {% for element in product[record.number] %}
+                        <a href= {{ element[1] }}>{{ element[0] }};</a>
+                    {% endfor %}
+                    </td>
+                    {% if record.pdb  == '-1' %}
+                        <td>{{ ' ' }}</td>
+                    {% else %}
+                        <td>
+                            {% for element in rows[record.number] %}
+                                <a href="https://www.rcsb.org/structure/{{ element[1] }}">{{ element[0] }}</a>
+                            {% endfor %}
+                        </td>
+                    {% endif %}
+
+                    {% if record.km == '-1' %}
+                        <td>{{ ' ' }}</td>
+                    {% else %}
+                        {% if record.number == '39' %}
+                            <td>4±0.9[Mn<sup>2+</sup>]</td>
+                        {% else %}
+                            <td>{{ record.km }}</td>
+                        {% endif %}
+                    {% endif %}
+                    {% if record.vmax == '-1' %}
+                        <td>{{ ' ' }}</td>
+                    {% else %}
+                        <td>{{ record.vmax }}</td>
+                    {% endif %}
+                    {% if record.kcat == '-1' %}
+                        <td>{{ ' ' }}</td>
+                    {% else %}
+                        {% if record.number == '39' %}
+                            <td>25±1[Mn<sup>2+</sup>]</td>
+                        {% else %}
+                            <td>{{ record.km }}</td>
+                        {% endif %}
+                    {% endif %}
+                    <td>
+                        <a href="{{ url_for('family', family_id = record.family) }}">{{ record.family }}</a>
+                    </td>
+                    <td>
+                        <a href={{ url_for('detail', unid = record.uniq_id) }}>view</a>
+                    </td>
+                    <td><a href="https://doi.org/{{ record.doi }}">{{ record.doi }}</a></td>
+                    <td>
+                        <p hidden>>{{ record.uniq_id }} {{ record.protein_name }} OS={{ record.strain }}</p>
+                        <p hidden style="max-width: 40ch; word-wrap:break-word;"> {{ record.seq }}</p>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
 {% endblock %}
