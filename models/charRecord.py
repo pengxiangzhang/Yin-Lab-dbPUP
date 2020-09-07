@@ -13,7 +13,7 @@ class CharRecord(dtbs.Model):
 	substrate = dtbs.Column(dtbs.VARCHAR(100))
 	product = dtbs.Column(dtbs.VARCHAR(100))
 	pdb = dtbs.Column(dtbs.VARCHAR(60))
-	km = dtbs.Column(dtbs.VARCHAR(10))
+	km = dtbs.Column(dtbs.VARCHAR(30))
 	vmax = dtbs.Column(dtbs.VARCHAR(30))
 	kcat = dtbs.Column(dtbs.VARCHAR(30))
 	family = dtbs.Column(dtbs.VARCHAR(10))

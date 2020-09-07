@@ -21,7 +21,6 @@
             $('#data-table').DataTable({
                 lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
                 dom: 'Bfrtip',
-                "scrollX": true,
                 columnDefs: [{
                 targets: 15,
                 searchable: true,
@@ -41,7 +40,7 @@
             });
         });
     </script>
-
+<div class="container-wrap">
     <table class="table" id="data-table" class="display nowrap">
         <thead>
         <tr>
@@ -55,7 +54,7 @@
             <th style="white-space: nowrap">Product</th>
             <th style="white-space: nowrap">PDB</th>
             <th style="white-space: nowrap">Km(μM)</th>
-            <th style="white-space: nowrap">Vmax(uM/s)</th>
+            <th style="white-space: nowrap">Vmax(μM/s)</th>
             <th style="white-space: nowrap">Kcat(s<sup>-1</sup>)</th>
             <th style="white-space: nowrap">Family</th>
             <th style="white-space: nowrap">Sequence</th>
@@ -67,9 +66,7 @@
         <tbody>
         {% for record in records %}
             <tr>
-                <td title="Popover title"
-                    data-container="body" data-toggle="popover" data-placement="bottom"
-                    data-content="右侧的 Popover 中的一些内容">{{ record.number }}</td>
+                <td>{{ record.number }}</td>
                 <td>{{ record.strain }}</td>
                 <td>{{ record.protein_name }}</td>
                 <td>{{ record.gene_name }}</td>
@@ -106,7 +103,11 @@
                 {% if record.km == '-1' %}
                     <td>{{ ' ' }}</td>
                 {% else %}
+                    {% if record.number == '39' %}
+                    <td>4±0.9[Mn<sup>2+</sup>]</td>
+                    {% else %}
                     <td>{{ record.km }}</td>
+                    {% endif %}
                 {% endif %}
                 {% if record.vmax == '-1' %}
                     <td>{{ ' ' }}</td>
@@ -116,7 +117,11 @@
                 {% if record.kcat == '-1' %}
                     <td>{{ ' ' }}</td>
                 {% else %}
-                    <td>{{ record.kcat }}</td>
+                    {% if record.number == '39' %}
+                    <td>25±1[Mn<sup>2+</sup>]</td>
+                    {% else %}
+                    <td>{{ record.km }}</td>
+                    {% endif %}
                 {% endif %}
                 <td>
                     <a href="{{ url_for('family', family_id = record.family) }}">{{ record.family }}</a>
@@ -133,4 +138,5 @@
         {% endfor %}
         </tbody>
     </table>
+</div>
 {% endblock %}
