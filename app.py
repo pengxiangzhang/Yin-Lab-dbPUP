@@ -445,7 +445,8 @@ def network(family_id):
 
 @app.route("/classes/<class_id>")
 def classes(class_id):
-    return render_template('classes.html', class_id=class_id)
+    c = open('content/test_OR.md', 'r').read()
+    return render_template('classes.html', class_id=class_id, content = c)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
