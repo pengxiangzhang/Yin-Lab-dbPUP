@@ -99,6 +99,7 @@
             <th style="white-space: nowrap">Protein Name</th>
             <th style="white-space: nowrap">Strain</th>
             <th style="white-space: nowrap">Uniprot</th>
+            <th style="white-space: nowrap">PDB</th>
             <th style="white-space: nowrap">Family</th>
             <th style="white-space: nowrap">EC</th>
             <th style="white-space: nowrap">Sequence</th>
@@ -114,6 +115,15 @@
                     <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={{ record.web_id }}">{{ record.strain }}</a>
                 </td>
                 <td><a href="https://www.uniprot.org/uniprot/{{ record.uniq_id }}">{{ record.uniq_id }}</a></td>
+
+                    {% if record.pdb  == '-1' %}
+                        <td>{{ ' ' }}</td>
+                    {% else %}
+                        <td>
+                            {{ record.pdb }}
+                        </td>
+                    {% endif %}
+
                 <td>{{ record.family }}</td>
                 {% if record.ec == '-1' %}
                     <td>{{ ' ' }}</td>
