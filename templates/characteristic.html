@@ -93,7 +93,7 @@
                     <td> {% for element in product[record.number] %}
                         {% if ('A1' in element[0] or 'A2' in element[0]  or 'A3' in element[0]) %}
                             {{ element[0] }};
-                        {% elif (element[1] == ''%}
+                        {% elif (element[1] == '') %}
                             {{ element[0] }};
                         {% else %}
                             <a href= {{ element[1] }}>{{ element[0] }};</a>
