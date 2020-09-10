@@ -120,7 +120,9 @@
                         <td>{{ ' ' }}</td>
                     {% else %}
                         <td>
-                            {{ record.pdb }}
+                            {% for element in rows[record.number] %}
+                                <a href="https://www.rcsb.org/structure/{{ element[1] }}">{{ element[0] }}</a>
+                            {% endfor %}
                         </td>
                     {% endif %}
 
