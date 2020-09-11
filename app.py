@@ -234,7 +234,12 @@ def trembl(family_id):
     ec_link = {}
     row = {}
     amount_row = 0
-    records = treRecord.TreRecord.query.filter_by(family=family_id)
+    if '_' in family_id:
+        records = swiRecord.SwiRecord.query.filter_by(family=family_id)
+    else:
+        family_id = family_id + "%"
+        records = swiRecord.SwiRecord.query.filter(swiRecord.SwiRecord.family.like(family_id))
+        
     for record in records:
         ec_sub_link = record.ec.split(';')
         ec = []
