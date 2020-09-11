@@ -16,7 +16,7 @@ class CharRecord(dtbs.Model):
 	km = dtbs.Column(dtbs.VARCHAR(30))
 	vmax = dtbs.Column(dtbs.VARCHAR(30))
 	kcat = dtbs.Column(dtbs.VARCHAR(30))
-	family = dtbs.Column(dtbs.VARCHAR(10))
+	family = dtbs.Column(dtbs.VARCHAR(20))
 	seq = dtbs.Column(dtbs.VARCHAR(1000))
 	doi = dtbs.Column(dtbs.VARCHAR(50))
 	tax_id = dtbs.Column(dtbs.VARCHAR(10))
