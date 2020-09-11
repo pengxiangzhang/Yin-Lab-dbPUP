@@ -211,6 +211,8 @@ def characteristic(family_id):
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
 def swissport(family_id):
     ec_link = {}
+    row = {}
+    amount_row = 0
     if '_' in family_id:
         records = swiRecord.SwiRecord.query.filter_by(family=family_id)
     else:
@@ -227,7 +229,19 @@ def swissport(family_id):
         for link in ec_sub_link:
             ec.append(link)
         ec_link[record.number] = ec
-    return render_template('swissport.html', records = records, ec = ec_link)
+
+        amount_row += 1
+        sub_row = []
+        pdbSubLink = record.pdb.split(';')
+        amount = len(pdbSubLink)
+        for i in range(amount):
+            amount_row += 1
+            pdb_information = []
+            pdb_information.append(pdbSubLink[i])
+            pdb_information.append(pdbSubLink[i].split('[')[0])
+            sub_row.append(pdb_information)
+        row[record.number] = sub_row
+    return render_template('swissport.html', records = records, ec = ec_link, rows = row)
 
 @app.route('/trembl/<family_id>', methods=['GET', 'POST'])
 def trembl(family_id):
@@ -239,7 +253,7 @@ def trembl(family_id):
     else:
         family_id = family_id + "%"
         records = swiRecord.SwiRecord.query.filter(swiRecord.SwiRecord.family.like(family_id))
-        
+
     for record in records:
         ec_sub_link = record.ec.split(';')
         ec = []
