@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $('#data-table').DataTable({
-        lengthMenu: [[ 10, 25, 50, -1 ],[ '10 rows', '25 rows', '50 rows', 'Show all' ]],
+        lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
         dom: 'Bfrtip',
         buttons: [
             {
@@ -38,7 +38,7 @@ $(document).ready(function () {
                     var table = $('#data-table').DataTable();
                     table.column(4).search('ccc').draw();
                 }
-            },'pageLength'
+            }, 'pageLength'
         ],
         select: true
     });

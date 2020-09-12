@@ -83,7 +83,7 @@
                     {% endif %}
                     <td>
                         {% for element in sub[record.number] %}
-                            {% if element[2] == ''%}
+                            {% if element[2] == '' %}
                                 {{ element[0] }}{{ element[1] }};
                             {% else %}
                                 <a href= {{ element[2] }}>{{ element[0] }}</a>{{ element[1] }};
@@ -122,9 +122,9 @@
                     {% if record.vmax == '-1' %}
                         <td>{{ ' ' }}</td>
                     {% elif record.number == '16' %}
-                    <td>76 (μmol min<sup>-1</sup> mg<sup>-1</sup>)</td>
+                        <td>76 (μmol min<sup>-1</sup> mg<sup>-1</sup>)</td>
                     {% elif record.number == '15' %}
-                    <td>1 (μmol min<sup>-1</sup> mg<sup>-1</sup>)</td>
+                        <td>1 (μmol min<sup>-1</sup> mg<sup>-1</sup>)</td>
                     {% else %}
                         <td>{{ record.vmax }}</td>
                     {% endif %}

@@ -1,11 +1,10 @@
-import gzip
-
-from flask import Flask, url_for, redirect, request, send_from_directory, make_response
-from flask import render_template
-from flaskext.markdown import Markdown
-from flask_sqlalchemy import SQLAlchemy
-from models import charRecord, swiRecord, treRecord
 import json
+
+from flask import Flask, request, send_from_directory
+from flask import render_template
+from flask_sqlalchemy import SQLAlchemy
+from flaskext.markdown import Markdown
+from models import charRecord, swiRecord, treRecord
 
 # Application configurations
 
@@ -16,9 +15,9 @@ md = Markdown(app, extensions=['fenced_code'])
 with open('config.json') as json_file:
     configs = json.load(json_file)
 
-	# web info
+    # web info
     app.config['title'] = configs['website']['title']
-    #app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
+    # app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
 
     # database
     connection_stat = "mysql+pymysql://" + configs['database']['username'] \
@@ -39,12 +38,13 @@ dtbs = SQLAlchemy(app)
 def static_from_root():
     return send_from_directory(app.static_folder, request.path[1:])
 
+
 @app.route('/')
 def index():
-    ex_link =  'https://pubchem.ncbi.nlm.nih.gov/compound/phloretin;https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl%20sulfate'
+    ex_link = 'https://pubchem.ncbi.nlm.nih.gov/compound/phloretin;https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl%20sulfate'
     sub_links = ex_link.split(';')
     flag = len(sub_links)
-    ex =  'phloretin;4-Nitrophenyl sulfate (quercetin/resveratrol/6-Hydroxyflavone)'
+    ex = 'phloretin;4-Nitrophenyl sulfate (quercetin/resveratrol/6-Hydroxyflavone)'
     subs = ex.split(';')
     length = len(subs)
     i = 0
@@ -61,7 +61,6 @@ def index():
             tuple[2] = sub_links[i]
         substrates.append(tuple)
         i += 1
-
 
     c = open('content/about.md', 'r').read()
     return render_template('index.html', content=c)
@@ -102,10 +101,10 @@ def characteristic(family_id):
                     ec.append(link)
                 ec_link[record.number] = ec
 
-                ex_link = record.pubchem_s #'https://pubchem.ncbi.nlm.nih.gov/compound/phloretin;https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl%20sulfate'
+                ex_link = record.pubchem_s  # 'https://pubchem.ncbi.nlm.nih.gov/compound/phloretin;https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl%20sulfate'
                 sub_links = ex_link.split(';')
                 flag = len(sub_links)
-                ex = record.substrate #'phloretin;4-Nitrophenyl sulfate (quercetin/resveratrol/6-Hydroxyflavone); yes'
+                ex = record.substrate  # 'phloretin;4-Nitrophenyl sulfate (quercetin/resveratrol/6-Hydroxyflavone); yes'
                 subs = ex.split(';')
                 length = len(subs)
                 i = 0
@@ -167,10 +166,10 @@ def characteristic(family_id):
                     ec.append(link)
                 ec_link[record.number] = ec
 
-                ex_link = record.pubchem_s  #'https://pubchem.ncbi.nlm.nih.gov/compound/phloretin;https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl%20sulfate'
+                ex_link = record.pubchem_s  # 'https://pubchem.ncbi.nlm.nih.gov/compound/phloretin;https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl%20sulfate'
                 sub_links = ex_link.split(';')
                 flag = len(sub_links)
-                ex = record.substrate #'phloretin;4-Nitrophenyl sulfate (quercetin/resveratrol/6-Hydroxyflavone); yes'
+                ex = record.substrate  # 'phloretin;4-Nitrophenyl sulfate (quercetin/resveratrol/6-Hydroxyflavone); yes'
                 subs = ex.split(';')
                 length = len(subs)
                 i = 0
@@ -205,7 +204,7 @@ def characteristic(family_id):
                     product.append(tuple)
                     i += 1
                 prod[record.number] = product
-        return render_template("characteristic.html", records=records, rows = row, ec = ec_link, sub = sub, product = prod)
+        return render_template("characteristic.html", records=records, rows=row, ec=ec_link, sub=sub, product=prod)
 
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
@@ -242,7 +241,8 @@ def swissport(family_id):
             pdb_information.append(pdbSubLink[i].split('[')[0])
             sub_row.append(pdb_information)
         row[record.number] = sub_row
-    return render_template('swissport.html', records = records, ec = ec_link, rows = row, fname=fname)
+    return render_template('swissport.html', records=records, ec=ec_link, rows=row, fname=fname)
+
 
 @app.route('/trembl/<family_id>', methods=['GET', 'POST'])
 def trembl(family_id):
@@ -279,16 +279,14 @@ def trembl(family_id):
             sub_row.append(pdb_information)
         row[record.number] = sub_row
 
-    return render_template("trembl.html", records=records, ec = ec_link, rows = row, fname=fname)
-
+    return render_template("trembl.html", records=records, ec=ec_link, rows=row, fname=fname)
 
 
 @app.route("/detail/<unid>")
 def detail(unid):
-
     records = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
     if records is None:
-        records =  treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
+        records = treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
     if records is None:
         records = swiRecord.SwiRecord.query.filter_by(uniq_id=unid).first()
     if records is None:
@@ -297,19 +295,21 @@ def detail(unid):
         seq = records.seq
     return render_template('detail.html', seq=seq, unid=unid)
 
+
 @app.route("/tree/<family_id>")
 def tree(family_id):
     if family_id == 'all':
         treeData = None
     else:
         try:
-            with open('static/materials/tree/' + family_id +'.json') as f:
+            with open('static/materials/tree/' + family_id + '.json') as f:
                 treeData = json.load(f)
                 print(treeData)
         except Exception:
             treeData = None
-            return render_template('tree.html', treeData = json.dumps(treeData))
-    return render_template('tree.html', treeData = json.dumps(treeData))
+            return render_template('tree.html', treeData=json.dumps(treeData))
+    return render_template('tree.html', treeData=json.dumps(treeData))
+
 
 @app.route("/family/<family_id>")
 def family(family_id):
@@ -365,13 +365,15 @@ def family(family_id):
     if family_id == 'OR10':
         amount = 1
 
-    return render_template('family.html', family_id=family_id, amount = amount)
+    return render_template('family.html', family_id=family_id, amount=amount)
+
 
 @app.route("/subfamily/<family_id>")
 def subfamily(family_id):
     return render_template('subfamily.html', family_id=family_id)
 
-@app.route("/network/<family_id>",  methods=['GET', 'POST'])
+
+@app.route("/network/<family_id>", methods=['GET', 'POST'])
 def network(family_id):
     if request.method == 'POST':
         msg = request.get_data()
@@ -415,7 +417,6 @@ def network(family_id):
                     data.append(node['data']['name'])
                     data.append(node['data']['href'])
                     node['data'] = data
-
 
                 for edge in networkData['elements']['edges']:
                     del edge['selected']
@@ -480,14 +481,16 @@ def network(family_id):
                 del edge['data']['selected']
 
     except Exception:
-            networkData = None
+        networkData = None
 
-    return render_template('network.html', networkData = json.dumps(networkData))
+    return render_template('network.html', networkData=json.dumps(networkData))
+
 
 @app.route("/classes/<class_id>")
 def classes(class_id):
     c = open('content/test_OR.md', 'r').read()
-    return render_template('classes.html', class_id=class_id, content = c)
+    return render_template('classes.html', class_id=class_id, content=c)
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')

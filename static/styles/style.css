@@ -1,16 +1,18 @@
 html {
     background-image: url("../images/double-bubble-outline.png");
 }
+
 .image-header {
     background-image: url("../images/DNA.jpg");
-    height:100px;
+    height: 100px;
     background-size: cover;
 }
+
 /*.navbar.navbar-default {
     margin-bottom: 0px;
 }*/
-#version{
-    color:white;
+#version {
+    color: white;
 }
 
 .mt-3 {

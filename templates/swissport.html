@@ -85,22 +85,22 @@
                             var table = $('#data-table').DataTable();
                             table.column(-1).search('unclassified').draw();
                         }
-                    },{
+                    }, {
                         text: '{{fname}}',
                         action: function () {
                             var table = $('#data-table').DataTable();
                             table.column(4).search("^((?!" + '{{fname}}' + "-).)*$", true, false, true).draw();
                         }
-                        
+
                     },
-                        {
+                    {
                         text: '{{fname}}-like clusters',
                         action: function () {
                             var table = $('#data-table').DataTable();
                             table.column(4).search('{{fname}}-like clusters').draw();
                         }
                     }
-                        
+
                 ],
                 select: true
             });
