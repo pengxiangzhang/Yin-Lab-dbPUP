@@ -216,7 +216,7 @@ def swissport(family_id):
     if '_' in family_id:
         records = swiRecord.SwiRecord.query.filter_by(family=family_id)
     else:
-        family_id = family_id + "%"
+        family_id = "^(" + family_id + ")|(" + family_id + "_%)|(" + family_id + "-like clusters)$"
         records = swiRecord.SwiRecord.query.filter(swiRecord.SwiRecord.family.like(family_id))
 
     for record in records:
@@ -251,7 +251,7 @@ def trembl(family_id):
     if '_' in family_id:
         records = swiRecord.SwiRecord.query.filter_by(family=family_id)
     else:
-        family_id = family_id + "%"
+        family_id = "^(" + family_id + ")|(" + family_id + "_%)|(" + family_id + "-like clusters)$"
         records = swiRecord.SwiRecord.query.filter(swiRecord.SwiRecord.family.like(family_id))
 
     for record in records:
