@@ -30,6 +30,7 @@
                         visible: false
                     }],
                     buttons: [
+                        'pageLength',
                         {
                             extend: 'csvHtml5',
                             fieldBoundary: '',
@@ -56,37 +57,52 @@
                             text: 'Bacteria',
                             action: function () {
                                 var table = $('#data-table').DataTable();
-                                table.column(7).search('Bacteria').draw();
+                                table.column(-1).search('Bacteria').draw();
                             }
                         },
                         {
                             text: 'Archaea',
                             action: function () {
                                 var table = $('#data-table').DataTable();
-                                table.column(7).search('Archaea').draw();
+                                table.column(-1).search('Archaea').draw();
                             }
                         },
                         {
                             text: 'Eukaryota',
                             action: function () {
                                 var table = $('#data-table').DataTable();
-                                table.column(7).search('Eukaryota').draw();
+                                table.column(-1).search('Eukaryota').draw();
                             }
                         },
                         {
                             text: 'Viruses',
                             action: function () {
                                 var table = $('#data-table').DataTable();
-                                table.column(7).search('Viruses').draw();
+                                table.column(-1).search('Viruses').draw();
                             }
                         },
                         {
                             text: 'Unclassified',
                             action: function () {
                                 var table = $('#data-table').DataTable();
-                                table.column(7).search('unclassified').draw();
+                                table.column(-1).search('unclassified').draw();
                             }
-                        }, 'pageLength'
+                            
+                        },{
+                        text: '{{fname}}',
+                        action: function () {
+                            var table = $('#data-table').DataTable();
+                            table.column(4).search("^((?!" + '{{fname}}' + "-).)*$", true, false, true).draw();
+                        }
+                            
+                        },
+                        {
+                        text: '{{fname}}-like clusters',
+                        action: function () {
+                            var table = $('#data-table').DataTable();
+                            table.column(4).search('{{fname}}-like clusters').draw();
+                        }
+                        }
                     ],
                     select: true
                 });

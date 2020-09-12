@@ -210,6 +210,7 @@ def characteristic(family_id):
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
 def swissport(family_id):
+    fname = family_id
     ec_link = {}
     row = {}
     amount_row = 0
@@ -241,11 +242,12 @@ def swissport(family_id):
             pdb_information.append(pdbSubLink[i].split('[')[0])
             sub_row.append(pdb_information)
         row[record.number] = sub_row
-    return render_template('swissport.html', records = records, ec = ec_link, rows = row)
+    return render_template('swissport.html', records = records, ec = ec_link, rows = row, fname=fname)
 
 @app.route('/trembl/<family_id>', methods=['GET', 'POST'])
 def trembl(family_id):
     ec_link = {}
+    fname = family_id
     row = {}
     amount_row = 0
     if '_' in family_id:
@@ -277,7 +279,7 @@ def trembl(family_id):
             sub_row.append(pdb_information)
         row[record.number] = sub_row
 
-    return render_template("trembl.html", records=records, ec = ec_link, rows = row)
+    return render_template("trembl.html", records=records, ec = ec_link, rows = row, fname=fname)
 
 
 
