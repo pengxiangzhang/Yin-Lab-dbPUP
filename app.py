@@ -316,54 +316,18 @@ def family(family_id):
     amount = 0
     if family_id == 'FR1':
         amount = 3
-    if family_id == 'FR2':
-        amount = 1
-    if family_id == 'FR3':
-        amount = 1
-    if family_id == 'FR4':
-        amount = 1
-    if family_id == 'HR1':
-        amount = 1
-    if family_id == 'HR2':
-        amount = 1
     if family_id == 'HR3':
         amount = 4
     if family_id == 'HR4':
         amount = 2
     if family_id == 'HR5':
         amount = 2
-    if family_id == 'HR6':
-        amount = 1
     if family_id == 'HR7':
         amount = 4
     if family_id == 'HR8':
         amount = 2
-    if family_id == 'IR1':
-        amount = 1
-    if family_id == 'IR2':
-        amount = 1
-    if family_id == 'NCR1':
-        amount = 1
-    if family_id == 'OR1':
-        amount = 1
-    if family_id == 'OR2':
-        amount = 1
-    if family_id == 'OR3':
-        amount = 1
-    if family_id == 'OR4':
-        amount = 1
-    if family_id == 'OR5':
-        amount = 1
-    if family_id == 'OR6':
-        amount = 1
-    if family_id == 'OR7':
-        amount = 1
     if family_id == 'OR8':
         amount = 2
-    if family_id == 'OR9':
-        amount = 1
-    if family_id == 'OR10':
-        amount = 1
 
     return render_template('family.html', family_id=family_id, amount = amount)
 
