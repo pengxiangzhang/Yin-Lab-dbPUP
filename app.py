@@ -251,10 +251,10 @@ def trembl(family_id):
     row = {}
     amount_row = 0
     if '_' in family_id:
-        records = swiRecord.SwiRecord.query.filter_by(family=family_id)
+        records = treRecord.TreRecord.query.filter_by(family=family_id)
     else:
         family_id = family_id + "%"
-        records = swiRecord.SwiRecord.query.filter(swiRecord.SwiRecord.family.like(family_id))
+        records = treRecord.TreRecord.query.filter(swiRecord.SwiRecord.family.like(family_id))
 
     for record in records:
         ec_sub_link = record.ec.split(';')
