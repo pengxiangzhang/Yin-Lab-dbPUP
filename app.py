@@ -254,7 +254,7 @@ def trembl(family_id):
         records = treRecord.TreRecord.query.filter_by(family=family_id)
     else:
         family_id = family_id + "%"
-        records = treRecord.TreRecord.query.filter(swiRecord.SwiRecord.family.like(family_id))
+        records = treRecord.TreRecord.query.filter(treRecord.TreRecord.family.like(family_id))
 
     for record in records:
         ec_sub_link = record.ec.split(';')
