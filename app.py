@@ -70,7 +70,7 @@ def index():
 
 
     c = open('content/about.md', 'r').read()
-    return render_template('index.html', content=c)
+    return render_template('index.html', content=c, description="")
 
 
 @app.route('/characteristic/<family_id>', methods=['GET', 'POST'])
@@ -80,7 +80,7 @@ def characteristic(family_id):
         family_id = json.loads(msg)['family_id']
         records = swiRecord.SwiRecord.query.filter_by(family=family_id)
 
-        return render_template('swissport.html', records=records)
+        return render_template('swissport.html', records=records,description="")
     else:
         row = {}
         ec_link = {}
@@ -211,7 +211,7 @@ def characteristic(family_id):
                     product.append(tuple)
                     i += 1
                 prod[record.number] = product
-        return render_template("characteristic.html", records=records, rows = row, ec = ec_link, sub = sub, product = prod)
+        return render_template("characteristic.html", records=records, rows = row, ec = ec_link, sub = sub, product = prod, description="")
 
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
@@ -248,7 +248,7 @@ def swissport(family_id):
             pdb_information.append(pdbSubLink[i].split('[')[0])
             sub_row.append(pdb_information)
         row[record.number] = sub_row
-    return render_template('swissport.html', records = records, ec = ec_link, rows = row, fname=fname)
+    return render_template('swissport.html', records = records, ec = ec_link, rows = row, fname=fname, description="")
 
 @app.route('/trembl/<family_id>', methods=['GET', 'POST'])
 def trembl(family_id):
@@ -285,7 +285,7 @@ def trembl(family_id):
             sub_row.append(pdb_information)
         row[record.number] = sub_row
 
-    return render_template("trembl.html", records=records, ec = ec_link, rows = row, fname=fname)
+    return render_template("trembl.html", records=records, ec = ec_link, rows = row, fname=fname, description="")
 
 
 
@@ -301,7 +301,7 @@ def detail(unid):
         seq = None
     else:
         seq = records.seq
-    return render_template('detail.html', seq=seq, unid=unid)
+    return render_template('detail.html', seq=seq, unid=unid, description="")
 
 @app.route("/tree/<family_id>")
 def tree(family_id):
@@ -314,8 +314,8 @@ def tree(family_id):
                 print(treeData)
         except Exception:
             treeData = None
-            return render_template('tree.html', treeData = json.dumps(treeData))
-    return render_template('tree.html', treeData = json.dumps(treeData))
+            return render_template('tree.html', treeData = json.dumps(treeData),description="")
+    return render_template('tree.html', treeData = json.dumps(treeData),description="")
 
 @app.route("/family/<family_id>")
 def family(family_id):
@@ -336,11 +336,11 @@ def family(family_id):
         amount = 2
     c = open('content/family_OR1_test.md', 'r').read()
 
-    return render_template('family.html', family_id=family_id, amount = amount, content = c)
+    return render_template('family.html', family_id=family_id, amount = amount, content = c, description="")
 
 @app.route("/subfamily/<family_id>")
 def subfamily(family_id):
-    return render_template('subfamily.html', family_id=family_id)
+    return render_template('subfamily.html', family_id=family_id, description="")
 
 @app.route("/network/<family_id>",  methods=['GET', 'POST'])
 def network(family_id):
@@ -453,12 +453,12 @@ def network(family_id):
     except Exception:
             networkData = None
 
-    return render_template('network.html', networkData = json.dumps(networkData))
+    return render_template('network.html', networkData = json.dumps(networkData),description="")
 
 @app.route("/classes/<class_id>")
 def classes(class_id):
     c = open('content/class_ORs.md', 'r').read()
-    return render_template('classes.html', class_id=class_id, content = c)
+    return render_template('classes.html', class_id=class_id, content = c,description="")
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
