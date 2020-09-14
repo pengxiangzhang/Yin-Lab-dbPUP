@@ -45,8 +45,12 @@
     </div>
     <div class="row">
         <div class="col-lg-8">
-            <image src="../static/materials/characterized_protein.png" width="100%"
-                   onclick="window.open('../static/images/seed.pdf')"></image>
+            <picture>
+              <source srcset="../static/materials/characterized_protein.webp" type="image/webp">
+              <source srcset="../static/materials/characterized_protein.png" type="image/png"> 
+              <img src="../static/materials/characterized_protein.png" width="100%"
+                   onclick="window.open('../static/images/seed.pdf')" alt="characterized protein">
+            </picture>
             {{ content|markdown|safe }}
         </div>
         <div class="col-lg-4">

@@ -28,13 +28,15 @@
                 }],
                 buttons: [
                     {
+                        'pageLength',
                         extend: 'csvHtml5',
                         fieldBoundary: '',
                         text: 'export',
                         exportOptions: {
                             columns: [-1]
-                        }
-                    }, 'copy', 'pageLength'
+                            }
+                        },
+                        'copy'
                 ],
                 select: true
             });

@@ -18,6 +18,7 @@ with open('config.json') as json_file:
 
 	# web info
     app.config['title'] = configs['website']['title']
+    app.config['keywords'] = configs['website']['keywords']
     #app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
 
     # database
@@ -38,6 +39,11 @@ dtbs = SQLAlchemy(app)
 @app.route('/sitemap.xml')
 def static_from_root():
     return send_from_directory(app.static_folder, request.path[1:])
+
+# Error Page
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 @app.route('/')
 def index():
