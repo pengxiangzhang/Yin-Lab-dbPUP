@@ -73,8 +73,8 @@ def index():
     return render_template('index.html', content=c, description="")
 
 
-@app.route('/characteristic/<family_id>', methods=['GET', 'POST'])
-def characteristic(family_id):
+@app.route('/evidence/<family_id>', methods=['GET', 'POST'])
+def evidence(family_id):
     if request.method == 'POST':
         msg = request.get_data()
         family_id = json.loads(msg)['family_id']
@@ -211,7 +211,7 @@ def characteristic(family_id):
                     product.append(tuple)
                     i += 1
                 prod[record.number] = product
-        return render_template("characteristic.html", records=records, rows = row, ec = ec_link, sub = sub, product = prod, description="")
+        return render_template("evidence.html", records=records, rows = row, ec = ec_link, sub = sub, product = prod, description="")
 
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
