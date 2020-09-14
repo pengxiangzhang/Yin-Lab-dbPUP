@@ -328,8 +328,9 @@ def family(family_id):
         amount = 2
     if family_id == 'OR8':
         amount = 2
+    c = open('content/family_OR1_test.md', 'r').read()
 
-    return render_template('family.html', family_id=family_id, amount = amount)
+    return render_template('family.html', family_id=family_id, amount = amount, content = c)
 
 @app.route("/subfamily/<family_id>")
 def subfamily(family_id):
