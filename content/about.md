@@ -149,7 +149,7 @@ Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 ## Images
 
-![Minion](../static/images/chemical_structure/OR1/[L1]curcumin.png)
+![Minion](../static/images/DNA.jpg)
 ![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
 
 Like links, Images also have a footnote style syntax
