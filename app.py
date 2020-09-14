@@ -37,6 +37,7 @@ dtbs = SQLAlchemy(app)
 
 @app.route('/robots.txt')
 @app.route('/sitemap.xml')
+
 def static_from_root():
     return send_from_directory(app.static_folder, request.path[1:])
 
@@ -459,6 +460,10 @@ def network(family_id):
 def classes(class_id):
     c = open('content/class_ORs.md', 'r').read()
     return render_template('classes.html', class_id=class_id, content = c,description="")
+
+@app.route("/about")
+def about():
+    return render_template('about.html',description="")
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
