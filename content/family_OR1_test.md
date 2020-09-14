@@ -49,7 +49,7 @@ Date: Mon Jul 20 14:32:16 2020
 [dihydrocurcumin](https://pubchem.ncbi.nlm.nih.gov/compound/dihydrocurcumin)  [NADPH](https://pubchem.ncbi.nlm.nih.gov/compound/5884) + [H<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/1038) &rArr; [tetrahydrocurcumin](https://pubchem.ncbi.nlm.nih.gov/compound/tetrahydrocurcumin) + [NADP<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/15938972)
 
 
-![Minion]("../static/images/chemical_structure/OR1/[L1]curcumin.png" alt="[L1]curcumin"）
+![Minion](../static/images/chemical_structure/OR1/[L1]curcumin.png）
 
 <figure>
     <img src="../static/images/chemical_structure/common_symbol/right_arrow.png" alt="right_arrow" style="zoom:20%"/>
