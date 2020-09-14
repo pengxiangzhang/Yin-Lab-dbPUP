@@ -18,7 +18,7 @@ with open('config.json') as json_file:
 
 	# web info
     app.config['title'] = configs['website']['title']
-    app.config['keywords'] = configs['website']['keywords']
+    #app.config['keywords'] = configs['website']['keywords']
     #app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
 
     # database
