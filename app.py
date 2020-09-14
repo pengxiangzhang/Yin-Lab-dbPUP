@@ -1,11 +1,12 @@
 import gzip
 
-from flask import Flask, url_for, redirect, request, send_from_directory, make_response
-from flask import render_template
+from flask import Flask, url_for, redirect, request, send_from_directory, make_response, flash, render_template
 from flaskext.markdown import Markdown
 from flask_sqlalchemy import SQLAlchemy
 from models import charRecord, swiRecord, treRecord
 import json
+from flask_mail import Mail,Message
+from forms import ContactForm
 
 # Application configurations
 
@@ -18,8 +19,20 @@ with open('config.json') as json_file:
 
 	# web info
     app.config['title'] = configs['website']['title']
-    #app.config['keywords'] = configs['website']['keywords']
+    app.config['keywords'] = configs['website']['keywords']
     #app.config['TEMPLATES_AUTO_RELOAD'] = configs['development']['TEMPLATES_AUTO_RELOAD']
+    
+    mail= Mail(app)
+    app.config['MAIL_SERVER']=configs['email']['MAIL_SERVER']
+    app.config['MAIL_PORT'] = configs['email']['MAIL_PORT']
+    app.config['MAIL_USERNAME'] = configs['email']['MAIL_USERNAME']
+    app.config['MAIL_PASSWORD'] = configs['email']['MAIL_PASSWORD']
+    app.config['MAIL_USE_TLS'] = configs['email']['MAIL_USE_TLS']
+    app.config['MAIL_USE_SSL'] = configs['email']['MAIL_USE_SSL']
+    app.config['RECAPTCHA_PUBLIC_KEY'] = configs['recaptcha']['RECAPTCHA_PUBLIC_KEY']
+    app.config['RECAPTCHA_PRIVATE_KEY'] = configs['recaptcha']['RECAPTCHA_PRIVATE_KEY']
+    mail = Mail(app)
+    app.secret_key = configs['website']['key']
 
     # database
     connection_stat = "mysql+pymysql://" + configs['database']['username'] \
@@ -460,10 +473,27 @@ def network(family_id):
 def classes(class_id):
     c = open('content/class_ORs.md', 'r').read()
     return render_template('classes.html', class_id=class_id, content = c,description="")
+    
 
-@app.route("/about")
+@app.route("/about", methods=["GET", "POST"])
 def about():
-    return render_template('about.html',description="")
+    form = ContactForm()
+    if request.method == 'POST':
+        if form.validate() == False:
+          flash('All fields are required.')
+          return render_template('about.html', form = form)
+        else:
+            name=request.form.get('name')
+            email = request.form.get('email')
+            subject=app.config['title'] +" Contact Form - "+request.form.get('subject')
+            contant = request.form.get('message')
+            msg = Message(subject,sender=app.config['MAIL_USERNAME'], recipients=[app.config['MAIL_USERNAME']],reply_to=email)
+            msg.body = "Name: "+name+"\nEmail: "+email+"\nSubject: "+subject+"\nMessage: "+contant
+            mail.send(msg)
+            return render_template('successful.html')
+    elif request.method == 'GET':
+        return render_template('about.html', form = form)
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
