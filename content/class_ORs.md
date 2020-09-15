@@ -1,6 +1,18 @@
 # <font color=#074987>Oxidation/Reduction Reactions (ORs) Family Classification</font>
 
-[TOC]
+<div class="md-toc" mdtype="toc">
+    <p class="md-toc-content" role="list">
+        <span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#font-color074987oxidationreduction-reactions-ors-family-classificationfont">Oxidation/Reduction Reactions (ORs) Family Classification</a></span>
+        <span role="listitem" class="md-toc-item md-toc-h2" data-ref="n3"><a class="md-toc-inner" href="#font-color074987introductionfont">Introduction</a></span>
+        <span role="listitem" class="md-toc-item md-toc-h2" data-ref="n9"><a class="md-toc-inner" href="#font-color074987reactionfont">Reaction</a></span>
+        <span role="listitem" class="md-toc-item md-toc-h2" data-ref="n18"><a class="md-toc-inner" href="#font-color074987pfam-informationfont">Pfam Information</a></span>
+        <span role="listitem" class="md-toc-item md-toc-h2" data-ref="n61"><a class="md-toc-inner" href="#font-color074987ors-subfamily-numberfont">ORs Subfamily Number</a></span>
+        <span role="listitem" class="md-toc-item md-toc-h2" data-ref="n64"><a class="md-toc-inner" href="#font-color074987ec-in-or-families-sorted-by-countsfont">EC in OR families (Sorted by counts)</a></span>
+        <span role="listitem" class="md-toc-item md-toc-h2" data-ref="n75"><a class="md-toc-inner" href="#font-color074987referencesfont">References</a></span>
+    </p>
+</div>
+
+[toc]
 
 ## <font color=#074987>Introduction</font>
 
@@ -34,17 +46,7 @@ For a detailed  information on class, subclass or sub-subclass of oxidoreductase
 
 ## <font color=#074987>Pfam Information</font>
 
-| Family Number | Characterized                                      | pfam                                                         |
-| ------------- | -------------------------------------------------- | ------------------------------------------------------------ |
-| OR1           | B1XDG0                                             | [ADH_zinc_N](https://pfam.xfam.org/family/ADH_zinc_N); [ADH_N_2](https://pfam.xfam.org/family/ADH_N_2) |
-| OR2           | Q52028                                             | [Rieske](https://pfam.xfam.org/family/Rieske); [Ring_hydroxyl_A](https://pfam.xfam.org/family/Ring_hydroxyl_A) |
-| OR3           | A0A0U1WKA6; E1CIA4; F7V1S0; H3JUE4; M9NZ71; V9P074 | [Oxidored_FMN](https://pfam.xfam.org/family/Oxidored_FMN); [Pyr_redox_2](https://pfam.xfam.org/family/Pyr_redox_2) |
-| OR4           | E7FL40; F7V1S3; H3JUE2; M9P0B3                     | [FAD_binding_2](https://pfam.xfam.org/family/FAD_binding_2)  |
-| OR5           | E7FL41; F7V1S2; H3JUE3; M9NYU8                     | [adh_short_C2](https://pfam.xfam.org/family/adh_short_C2)    |
-| OR6           | Q2EYY8                                             | [HpaB](https://pfam.xfam.org/family/HpaB); [HpaB_N](https://pfam.xfam.org/family/HpaB_N) |
-| OR7           | Q74HL7; Q74HL8                                     | [FMN_red](https://pfam.xfam.org/family/FMN_red)              |
-| OR8           | P42106; A2VA43                                     | [Cupin_2](https://pfam.xfam.org/family/Cupin_2)              |
-| OR9           | G2IMF2; Q2G4H9                                     | [NAD_binding_10](https://pfam.xfam.org/family/NAD_binding_10) |
+<table><thead><tr><th><span>Family Number</span></th><th><span>Characterized</span></th><th><span>Pfam</span></th></tr></thead><tbody><tr><td><span>OR1</span></td><td><a href="https://www.uniprot.org/uniprot/B1XDG0"><span>B1XDG0</span></a></td><td><a href="https://pfam.xfam.org/family/ADH_zinc_N"><span>ADH_zinc_N</span></a><span>; </span><a href="https://pfam.xfam.org/family/ADH_N_2"><span>ADH_N_2</span></a></td></tr><tr><td><span>OR2</span></td><td><a href="https://www.uniprot.org/uniprot/Q52028"><span>Q52028</span></a></td><td><a href="https://pfam.xfam.org/family/Rieske"><span>Rieske</span></a><span>; </span><a href="https://pfam.xfam.org/family/Ring_hydroxyl_A"><span>Ring_hydroxyl_A</span></a></td></tr><tr><td><span>OR3</span></td><td><a href="https://www.uniprot.org/uniprot/A0A0U1WKA6"><span>A0A0U1WKA6</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/E1CIA4"><span>E1CIA4</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/F7V1S0"><span>F7V1S0</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/H3JUE4"><span>H3JUE4</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/M9NZ71"><span>M9NZ71</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/V9P074"><span>V9P074</span></a></td><td><a href="https://pfam.xfam.org/family/Oxidored_FMN"><span>Oxidored_FMN</span></a><span>; </span><a href="https://pfam.xfam.org/family/Pyr_redox_2"><span>Pyr_redox_2</span></a></td></tr><tr><td><span>OR4</span></td><td><a href="https://www.uniprot.org/uniprot/E7FL40"><span>E7FL40</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/F7V1S3"><span>F7V1S3</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/H3JUE2"><span>H3JUE2</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/M9P0B3"><span>M9P0B3</span></a></td><td><a href="https://pfam.xfam.org/family/FAD_binding_2"><span>FAD_binding_2</span></a></td></tr><tr><td><span>OR5</span></td><td><a href="https://www.uniprot.org/uniprot/E7FL41"><span>E7FL41</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/F7V1S2"><span>F7V1S2</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/H3JUE3"><span>H3JUE3</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/M9NYU8"><span>M9NYU8</span></a></td><td><a href="https://pfam.xfam.org/family/adh_short_C2"><span>adh_short_C2</span></a></td></tr><tr><td><span>OR6</span></td><td><a href="https://www.uniprot.org/uniprot/Q2EYY8"><span>Q2EYY8</span></a></td><td><a href="https://pfam.xfam.org/family/HpaB"><span>HpaB</span></a><span>; </span><a href="https://pfam.xfam.org/family/HpaB_N"><span>HpaB_N</span></a></td></tr><tr><td><span>OR7</span></td><td><a href="https://www.uniprot.org/uniprot/Q74HL7"><span>Q74HL7</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/Q74HL8"><span>Q74HL8</span></a></td><td><a href="https://pfam.xfam.org/family/FMN_red"><span>FMN_red</span></a></td></tr><tr><td><span>OR8</span></td><td><a href="https://www.uniprot.org/uniprot/P42106"><span>P42106</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/A2VA43"><span>A2VA43</span></a></td><td><a href="https://pfam.xfam.org/family/Cupin_2"><span>Cupin_2</span></a></td></tr><tr><td><span>OR9</span></td><td><a href="https://www.uniprot.org/uniprot/G2IMF2"><span>G2IMF2</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/Q2G4H9"><span>Q2G4H9</span></a></td><td><a href="https://pfam.xfam.org/family/NAD_binding_10"><span>NAD_binding_10</span></a></td></tr></tbody></table>
 
 ---
 
@@ -86,7 +88,6 @@ For a detailed  information on class, subclass or sub-subclass of oxidoreductase
 ---
 
 ## <font color=#074987>References</font>
-
 [^1]:Eric J. Toone (2006). Advances in Enzymology and Related Areas of Molecular Biology, Protein Evolution (Volume 75 ed.). Wiley-Interscience. ISBN 0471205036.
 
 [^2]:  Nicholas C. Price; Lewis Stevens (1999). Fundamentals of Enzymology: The Cell and Molecular Biology of Catalytic Proteins (Third ed.). USA: Oxford University Press. ISBN 019850229X.
