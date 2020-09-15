@@ -1,4 +1,4 @@
-from flask_wtf import Form,RecaptchaField, Recaptcha
+from flask_wtf import Form,RecaptchaField,Recaptcha
 from wtforms import TextField, IntegerField, TextAreaField, SubmitField, RadioField, SelectField
 from wtforms import validators, ValidationError
 
@@ -9,4 +9,3 @@ class ContactForm(Form):
     message = TextField("message",[validators.Required("Please enter the message.")])
     recaptcha = RecaptchaField(validators=[Recaptcha(message="Please complete the Recaptcha")])
     submit = SubmitField("submit")
-

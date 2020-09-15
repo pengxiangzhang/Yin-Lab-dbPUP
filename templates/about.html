@@ -88,9 +88,9 @@
                     </div>
                 </div>
                 <!--Grid row-->
-
+                {{ form.recaptcha }}
             </form>
-            {{ form.recaptcha }}
+            
                 {% for message in form.recaptcha.errors %}
                 <div style="color:red;">{{ message }}</div>
                 {% endfor %}
