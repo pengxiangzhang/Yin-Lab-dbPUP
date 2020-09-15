@@ -20,6 +20,6 @@ config.json
 test.*
 
 bioenv/
-static/materials/
+static/materials/network_data/uniprot_ssn
 
 (')
