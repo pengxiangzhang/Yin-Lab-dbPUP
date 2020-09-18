@@ -7,9 +7,9 @@
 		"db_name":"db"
 	},
 	"website":{
-		"title":"Bio Test",
-		"keywords":"biology",
-		"key":"Random_Key"
+		"title":"Website Title",
+		"keywords":"Keywords for SEO",
+		"key":"Something Random here"
 	},
 	"email":{
 	    "MAIL_SERVER":"smtp.office365.com",
@@ -20,7 +20,7 @@
 	    "MAIL_USE_SSL": false
 	},
 	"recaptcha":{
-	#Apply at https://www.google.com/recaptcha/admin, V2
+	# Apply at https://www.google.com/recaptcha/admin, V2
 	    "RECAPTCHA_PUBLIC_KEY":"key-wXv5P7101gC",
 	    "RECAPTCHA_PRIVATE_KEY":"key-zkklxfw3HkIcdyk"
 	}
