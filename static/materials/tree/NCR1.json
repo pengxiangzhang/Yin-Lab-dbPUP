@@ -1,0 +1,855 @@
+[
+	{
+		"children": [
+			{
+				"name": "0.814",
+				"children": [
+					{
+						"name": "0.954",
+						"children": [
+							{
+								"name": "tr|Q60FX6|Q60FX6_RHIRD|35-325|3.3e-47|0.931",
+								"length": 0.388800318,
+								"meta": {
+									"color": {
+										"clade": "#ff0000"
+									},
+									"selection": {
+										"clade": false
+									},
+									"annotation": {
+										"info": "",
+										"url": ""
+									}
+								},
+								"depth": 3,
+								"x_value": 59.52380952380952,
+								"y_value": 818.8920774210001,
+								"id": 4,
+								"x0": 59.52380952380952,
+								"y0": 818.8920774210001
+							},
+							{
+								"name": "0.261",
+								"children": [
+									{
+										"name": "0.987",
+										"children": [
+											{
+												"name": "sp|P80402|DBD23_ASPOR|38-331|4.8e-37",
+												"length": 0.364053937,
+												"meta": {
+													"color": {
+														"clade": "#ff0000"
+													},
+													"selection": {
+														"clade": false
+													},
+													"annotation": {
+														"info": "",
+														"url": ""
+													}
+												},
+												"depth": 5,
+												"x_value": 178.57142857142856,
+												"y_value": 1127.803886319,
+												"id": 7,
+												"x0": 178.57142857142856,
+												"y0": 1127.803886319
+											},
+											{
+												"name": "sp|P0CT50|SDC_CUTMO|71-343|3.1e-29",
+												"length": 0.350411846,
+												"meta": {
+													"color": {
+														"clade": "#ff0000"
+													},
+													"selection": {
+														"clade": false
+													},
+													"annotation": {
+														"info": "",
+														"url": ""
+													}
+												},
+												"depth": 5,
+												"x_value": 297.6190476190476,
+												"y_value": 1115.9489092400002,
+												"id": 8,
+												"x0": 297.6190476190476,
+												"y0": 1115.9489092400002
+											}
+										],
+										"length": 0.291410418,
+										"meta": {
+											"color": {
+												"clade": "#ff0000"
+											},
+											"selection": {
+												"clade": false
+											},
+											"annotation": {
+												"info": "",
+												"url": ""
+											}
+										},
+										"depth": 4,
+										"x_value": 238.09523809523808,
+										"y_value": 811.4410150660001,
+										"id": 6,
+										"x0": 238.09523809523808,
+										"y0": 811.4410150660001
+									},
+									{
+										"name": "sp|Q5AUW9|ORSB_EMENI|66-325|1.9e-42",
+										"length": 0.916124522,
+										"meta": {
+											"color": {
+												"clade": "#ff0000"
+											},
+											"selection": {
+												"clade": false
+											},
+											"annotation": {
+												"info": "",
+												"url": ""
+											}
+										},
+										"depth": 4,
+										"x_value": 416.66666666666665,
+										"y_value": 1354.3175714420002,
+										"id": 9,
+										"x0": 416.66666666666665,
+										"y0": 1354.3175714420002
+									}
+								],
+								"length": 0.088815605,
+								"meta": {
+									"color": {
+										"clade": "#ff0000"
+									},
+									"selection": {
+										"clade": false
+									},
+									"annotation": {
+										"info": "",
+										"url": ""
+									}
+								},
+								"depth": 3,
+								"x_value": 327.3809523809524,
+								"y_value": 558.2053618240001,
+								"id": 5,
+								"x0": 327.3809523809524,
+								"y0": 558.2053618240001
+							}
+						],
+						"length": 0.34922141,
+						"meta": {
+							"color": {
+								"clade": "#ff0000"
+							},
+							"selection": {
+								"clade": false
+							},
+							"annotation": {
+								"info": "",
+								"url": ""
+							}
+						},
+						"depth": 2,
+						"x_value": 193.45238095238097,
+						"y_value": 481.02460107900006,
+						"id": 3,
+						"x0": 193.45238095238097,
+						"y0": 481.02460107900006
+					},
+					{
+						"name": "0.851",
+						"children": [
+							{
+								"name": "sp|P55567|Y4MH_SINFN|7-297|1.6e-49",
+								"length": 1.918251427,
+								"meta": {
+									"color": {},
+									"selection": {
+										"clade": false
+									},
+									"annotation": {
+										"info": "",
+										"url": ""
+									}
+								},
+								"depth": 3,
+								"x_value": 535.7142857142857,
+								"y_value": 2166.0345079119999,
+								"id": 11,
+								"x0": 535.7142857142857,
+								"y0": 2166.0345079119999
+							},
+							{
+								"name": "0.998",
+								"children": [
+									{
+										"name": "sp|A9CEQ7|GLI_AGRFC|49-287|3.7e-25",
+										"length": 0.834744965,
+										"meta": {
+											"color": {},
+											"selection": {
+												"clade": false
+											},
+											"annotation": {
+												"info": "",
+												"url": ""
+											}
+										},
+										"depth": 4,
+										"x_value": 654.7619047619048,
+										"y_value": 2207.3578633039999,
+										"id": 13,
+										"x0": 654.7619047619048,
+										"y0": 2207.3578633039999
+									},
+									{
+										"name": "0.903",
+										"children": [
+											{
+												"name": "0.998",
+												"children": [
+													{
+														"name": "sp|Q93PS7|LIGI_COMTE|29-301|6e-51",
+														"length": 0.309593522,
+														"meta": {
+															"color": {},
+															"selection": {
+																"clade": false
+															},
+															"annotation": {
+																"info": "",
+																"url": ""
+															}
+														},
+														"depth": 6,
+														"x_value": 773.8095238095239,
+														"y_value": 2532.780169051,
+														"id": 16,
+														"x0": 773.8095238095239,
+														"y0": 2532.780169051
+													},
+													{
+														"name": "sp|O87170|LIGI_SPHSK|26-289|1.3e-42",
+														"length": 0.312071686,
+														"meta": {
+															"color": {},
+															"selection": {
+																"clade": false
+															},
+															"annotation": {
+																"info": "",
+																"url": ""
+															}
+														},
+														"depth": 6,
+														"x_value": 892.8571428571429,
+														"y_value": 2534.933693567,
+														"id": 17,
+														"x0": 892.8571428571429,
+														"y0": 2534.933693567
+													}
+												],
+												"length": 0.535521339,
+												"meta": {
+													"color": {},
+													"selection": {
+														"clade": false
+													},
+													"annotation": {
+														"info": "",
+														"url": ""
+													}
+												},
+												"depth": 5,
+												"x_value": 833.3333333333333,
+												"y_value": 2263.743398433,
+												"id": 15,
+												"x0": 833.3333333333333,
+												"y0": 2263.743398433
+											},
+											{
+												"name": "0.968",
+												"children": [
+													{
+														"name": "sp|A6XIG7|SLMH_RHIRD|32-298|1.4e-37",
+														"length": 0.310896646,
+														"meta": {
+															"color": {},
+															"selection": {
+																"clade": false
+															},
+															"annotation": {
+																"info": "",
+																"url": ""
+															}
+														},
+														"depth": 6,
+														"x_value": 1011.9047619047619,
+														"y_value": 2360.933250896,
+														"id": 19,
+														"x0": 1011.9047619047619,
+														"y0": 2360.933250896
+													},
+													{
+														"name": "sp|A6XIG6|SLMH_HYDIT|32-298|3.2e-32",
+														"length": 0.26648684500000005,
+														"meta": {
+															"color": {},
+															"selection": {
+																"clade": false
+															},
+															"annotation": {
+																"info": "",
+																"url": ""
+															}
+														},
+														"depth": 6,
+														"x_value": 1130.952380952381,
+														"y_value": 2322.3411338270004,
+														"id": 20,
+														"x0": 1130.952380952381,
+														"y0": 2322.3411338270004
+													}
+												],
+												"length": 0.33646572,
+												"meta": {
+													"color": {},
+													"selection": {
+														"clade": false
+													},
+													"annotation": {
+														"info": "",
+														"url": ""
+													}
+												},
+												"depth": 5,
+												"x_value": 1071.4285714285714,
+												"y_value": 2090.7640655220004,
+												"id": 18,
+												"x0": 1071.4285714285714,
+												"y0": 2090.7640655220004
+											}
+										],
+										"length": 0.364109167,
+										"meta": {
+											"color": {},
+											"selection": {
+												"clade": false
+											},
+											"annotation": {
+												"info": "",
+												"url": ""
+											}
+										},
+										"depth": 4,
+										"x_value": 952.3809523809523,
+										"y_value": 1798.375354842,
+										"id": 14,
+										"x0": 952.3809523809523,
+										"y0": 1798.375354842
+									}
+								],
+								"length": 1.13105923,
+								"meta": {
+									"color": {},
+									"selection": {
+										"clade": false
+									},
+									"annotation": {
+										"info": "",
+										"url": ""
+									}
+								},
+								"depth": 3,
+								"x_value": 803.5714285714287,
+								"y_value": 1481.964488719,
+								"id": 12,
+								"x0": 803.5714285714287,
+								"y0": 1481.964488719
+							}
+						],
+						"length": 0.36999174,
+						"meta": {
+							"color": {},
+							"selection": {
+								"clade": false
+							},
+							"annotation": {
+								"info": "",
+								"url": ""
+							}
+						},
+						"depth": 2,
+						"x_value": 669.6428571428571,
+						"y_value": 499.07401784900005,
+						"id": 10,
+						"x0": 669.6428571428571,
+						"y0": 499.07401784900005
+					}
+				],
+				"length": 0.204316681,
+				"meta": {
+					"color": {},
+					"selection": {
+						"clade": false
+					},
+					"annotation": {
+						"info": "",
+						"url": ""
+					}
+				},
+				"depth": 1,
+				"x_value": 431.54761904761906,
+				"y_value": 177.551195789,
+				"id": 2,
+				"x0": 431.54761904761906,
+				"y0": 177.551195789
+			},
+			{
+				"name": "1.000",
+				"children": [
+					{
+						"name": "sp|Q8T8B9|ACMSD_CAEEL|15-392|1.6e-80",
+						"length": 0.562339121,
+						"meta": {
+							"color": {},
+							"selection": {
+								"clade": false
+							},
+							"annotation": {
+								"info": "",
+								"url": ""
+							}
+						},
+						"depth": 2,
+						"x_value": 1250,
+						"y_value": 1200.8089091460002,
+						"id": 22,
+						"x0": 1250,
+						"y0": 1200.8089091460002
+					},
+					{
+						"name": "0.716",
+						"children": [
+							{
+								"name": "sp|Q54LN9|ACMSD_DICDI|26-354|2.7e-59",
+								"length": 0.35694043,
+								"meta": {
+									"color": {},
+									"selection": {
+										"clade": false
+									},
+									"annotation": {
+										"info": "",
+										"url": ""
+									}
+								},
+								"depth": 3,
+								"x_value": 1369.0476190476193,
+								"y_value": 1090.069619111,
+								"id": 24,
+								"x0": 1369.0476190476193,
+								"y0": 1090.069619111
+							},
+							{
+								"name": "0.995",
+								"children": [
+									{
+										"name": "0.913",
+										"children": [
+											{
+												"name": "sp|Q8R5M5|ACMSD_RAT|3-331|3e-72",
+												"length": 0.027915662,
+												"meta": {
+													"color": {},
+													"selection": {
+														"clade": false
+													},
+													"annotation": {
+														"info": "",
+														"url": ""
+													}
+												},
+												"depth": 5,
+												"x_value": 1488.095238095238,
+												"y_value": 1001.482718049,
+												"id": 27,
+												"x0": 1488.095238095238,
+												"y0": 1001.482718049
+											},
+											{
+												"name": "sp|Q8R519|ACMSD_MOUSE|3-331|5e-73",
+												"length": 0.012320926,
+												"meta": {
+													"color": {},
+													"selection": {
+														"clade": false
+													},
+													"annotation": {
+														"info": "",
+														"url": ""
+													}
+												},
+												"depth": 5,
+												"x_value": 1607.1428571428574,
+												"y_value": 987.930892465,
+												"id": 28,
+												"x0": 1607.1428571428574,
+												"y0": 987.930892465
+											}
+										],
+										"length": 0.034344877,
+										"meta": {
+											"color": {},
+											"selection": {
+												"clade": false
+											},
+											"annotation": {
+												"info": "",
+												"url": ""
+											}
+										},
+										"depth": 4,
+										"x_value": 1547.6190476190478,
+										"y_value": 977.2240077710001,
+										"id": 26,
+										"x0": 1547.6190476190478,
+										"y0": 977.2240077710001
+									},
+									{
+										"name": "0.970",
+										"children": [
+											{
+												"name": "sp|Q8TDX5|ACMSD_HUMAN|3-331|3.8e-71",
+												"length": 0.048082833,
+												"meta": {
+													"color": {},
+													"selection": {
+														"clade": false
+													},
+													"annotation": {
+														"info": "",
+														"url": ""
+													}
+												},
+												"depth": 5,
+												"x_value": 1726.1904761904762,
+												"y_value": 1036.904748319,
+												"id": 30,
+												"x0": 1726.1904761904762,
+												"y0": 1036.904748319
+											},
+											{
+												"name": "sp|Q0II68|ACMSD_BOVIN|3-331|2.5e-69",
+												"length": 0.06083498,
+												"meta": {
+													"color": {},
+													"selection": {
+														"clade": false
+													},
+													"annotation": {
+														"info": "",
+														"url": ""
+													}
+												},
+												"depth": 5,
+												"x_value": 1845.2380952380955,
+												"y_value": 1047.986364062,
+												"id": 31,
+												"x0": 1845.2380952380955,
+												"y0": 1047.986364062
+											}
+										],
+										"length": 0.054939536,
+										"meta": {
+											"color": {},
+											"selection": {
+												"clade": false
+											},
+											"annotation": {
+												"info": "",
+												"url": ""
+											}
+										},
+										"depth": 4,
+										"x_value": 1785.7142857142858,
+										"y_value": 995.120766442,
+										"id": 29,
+										"x0": 1785.7142857142858,
+										"y0": 995.120766442
+									}
+								],
+								"length": 0.192738693,
+								"meta": {
+									"color": {},
+									"selection": {
+										"clade": false
+									},
+									"annotation": {
+										"info": "",
+										"url": ""
+									}
+								},
+								"depth": 3,
+								"x_value": 1666.6666666666666,
+								"y_value": 947.378309658,
+								"id": 25,
+								"x0": 1666.6666666666666,
+								"y0": 947.378309658
+							}
+						],
+						"length": 0.077965676,
+						"meta": {
+							"color": {},
+							"selection": {
+								"clade": false
+							},
+							"annotation": {
+								"info": "",
+								"url": ""
+							}
+						},
+						"depth": 2,
+						"x_value": 1517.8571428571427,
+						"y_value": 779.8883854410001,
+						"id": 23,
+						"x0": 1517.8571428571427,
+						"y0": 779.8883854410001
+					}
+				],
+				"length": 0.819489313,
+				"meta": {
+					"color": {},
+					"selection": {
+						"clade": false
+					},
+					"annotation": {
+						"info": "",
+						"url": ""
+					}
+				},
+				"depth": 1,
+				"x_value": 1383.9285714285716,
+				"y_value": 712.136212997,
+				"id": 21,
+				"x0": 1383.9285714285716,
+				"y0": 712.136212997
+			},
+			{
+				"name": "0.504",
+				"children": [
+					{
+						"name": "sp|G2IQQ5|LIGJ_SPHSK|5-331|2.9e-58",
+						"length": 1.226309778,
+						"meta": {
+							"color": {},
+							"selection": {
+								"clade": false
+							},
+							"annotation": {
+								"info": "",
+								"url": ""
+							}
+						},
+						"depth": 2,
+						"x_value": 1964.2857142857143,
+						"y_value": 1154.7961742680002,
+						"id": 33,
+						"x0": 1964.2857142857143,
+						"y0": 1154.7961742680002
+					},
+					{
+						"name": "1.000",
+						"children": [
+							{
+								"name": "sp|G3Y417|YANB_ASPNA|4-324|7.7e-29",
+								"length": 0.429366753,
+								"meta": {
+									"color": {},
+									"selection": {
+										"clade": false
+									},
+									"annotation": {
+										"info": "",
+										"url": ""
+									}
+								},
+								"depth": 3,
+								"x_value": 2083.3333333333337,
+								"y_value": 1318.7261461330002,
+								"id": 35,
+								"x0": 2083.3333333333337,
+								"y0": 1318.7261461330002
+							},
+							{
+								"name": "0.536",
+								"children": [
+									{
+										"name": "sp|G1XU02|AR281_ARTOA|9-320|2.1e-38",
+										"length": 0.298391172,
+										"meta": {
+											"color": {},
+											"selection": {
+												"clade": false
+											},
+											"annotation": {
+												"info": "",
+												"url": ""
+											}
+										},
+										"depth": 4,
+										"x_value": 2202.3809523809525,
+										"y_value": 1289.268997907,
+										"id": 37,
+										"x0": 2202.3809523809525,
+										"y0": 1289.268997907
+									},
+									{
+										"name": "1.000",
+										"children": [
+											{
+												"name": "sp|A1CFL4|PATG_ASPCL|4-315|3.5e-38",
+												"length": 0.104970363,
+												"meta": {
+													"color": {},
+													"selection": {
+														"clade": false
+													},
+													"annotation": {
+														"info": "",
+														"url": ""
+													}
+												},
+												"depth": 5,
+												"x_value": 2321.4285714285717,
+												"y_value": 1425.5318642180003,
+												"id": 39,
+												"x0": 2321.4285714285717,
+												"y0": 1425.5318642180003
+											},
+											{
+												"name": "sp|A0A075TXZ1|PATG_PENEN|4-314|2.6e-38",
+												"length": 0.125144208,
+												"meta": {
+													"color": {},
+													"selection": {
+														"clade": false
+													},
+													"annotation": {
+														"info": "",
+														"url": ""
+													}
+												},
+												"depth": 5,
+												"x_value": 2440.4761904761905,
+												"y_value": 1443.0629355230004,
+												"id": 40,
+												"x0": 2440.4761904761905,
+												"y0": 1443.0629355230004
+											}
+										],
+										"length": 0.350225028,
+										"meta": {
+											"color": {},
+											"selection": {
+												"clade": false
+											},
+											"annotation": {
+												"info": "",
+												"url": ""
+											}
+										},
+										"depth": 4,
+										"x_value": 2380.9523809523809,
+										"y_value": 1334.3126187710003,
+										"id": 38,
+										"x0": 2380.9523809523809,
+										"y0": 1334.3126187710003
+									}
+								],
+								"length": 0.097077827,
+								"meta": {
+									"color": {},
+									"selection": {
+										"clade": false
+									},
+									"annotation": {
+										"info": "",
+										"url": ""
+									}
+								},
+								"depth": 3,
+								"x_value": 2291.6666666666667,
+								"y_value": 1029.9670694390002,
+								"id": 36,
+								"x0": 2291.6666666666667,
+								"y0": 1029.9670694390002
+							}
+						],
+						"length": 0.98558511,
+						"meta": {
+							"color": {},
+							"selection": {
+								"clade": false
+							},
+							"annotation": {
+								"info": "",
+								"url": ""
+							}
+						},
+						"depth": 2,
+						"x_value": 2187.5,
+						"y_value": 945.6064377760001,
+						"id": 34,
+						"x0": 2187.5,
+						"y0": 945.6064377760001
+					}
+				],
+				"length": 0.102569594,
+				"meta": {
+					"color": {},
+					"selection": {
+						"clade": false
+					},
+					"annotation": {
+						"info": "",
+						"url": ""
+					}
+				},
+				"depth": 1,
+				"x_value": 2075.8928571428575,
+				"y_value": 89.132977186,
+				"id": 32,
+				"x0": 2075.8928571428575,
+				"y0": 89.132977186
+			}
+		],
+		"name": "",
+		"meta": {
+			"color": {},
+			"selection": {
+				"clade": false
+			},
+			"annotation": {
+				"info": "",
+				"url": ""
+			}
+		},
+		"x0": 1297.123015873016,
+		"y0": 0,
+		"depth": 0,
+		"x_value": 1297.123015873016,
+		"y_value": 0,
+		"id": 1,
+		"idfontsize": "80",
+		"nodefontsize":  "35"
+	}
+]

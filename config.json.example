@@ -1,0 +1,28 @@
+{
+	"database":{
+		"username":"root",
+		"password":"12345678",
+		"hostname":"localhost",
+		"port":"3306",
+		"db_name":"db"
+	},
+	"website":{
+		"title":"Website Title",
+		"keywords":"Keywords for SEO",
+		"key":"Something Random here"
+	},
+	"email":{
+	    "MAIL_SERVER":"smtp.office365.com",
+	    "MAIL_PORT":"587",
+	    "MAIL_USERNAME":"example@hotmail.com",
+	    "MAIL_PASSWORD":"password",
+	    "MAIL_USE_TLS": true,
+	    "MAIL_USE_SSL": false
+	},
+	"recaptcha":{
+	# Apply at https://www.google.com/recaptcha/admin, V2
+	    "RECAPTCHA_PUBLIC_KEY":"key-wXv5P7101gC",
+	    "RECAPTCHA_PRIVATE_KEY":"key-zkklxfw3HkIcdyk"
+	}
+}
+

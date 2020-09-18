@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS swiss;
 CREATE TABLE IF NOT EXISTS swiss(
     protein_enzyme CHAR(30),
     strain CHAR(30),
-    gene_name CHAR(30),
+    database CHAR(30),
     uniq_id CHAR(30) PRIMARY KEY,
     ec CHAR(30),
     family CHAR(30),
@@ -35,7 +35,7 @@ DROP TABLE IF EXISTS trembl;
 CREATE TABLE IF NOT EXISTS trembl(
     protein_enzyme CHAR(30),
     strain CHAR(30),
-    gene_name CHAR(30),
+    database CHAR(30),
     uniq_id CHAR(30) PRIMARY KEY,
     ec CHAR(30),
     family CHAR(30),
