@@ -336,6 +336,9 @@ def tree(family_id):
 @app.route("/family/<family_id>")
 def family(family_id):
     amount = 0
+    c = open('content/nothing.md', 'r').read()
+    if family_id == 'OR1':
+        c = open('content/family_OR1.md', 'r').read()
     if family_id == 'FR1':
         amount = 3
     if family_id == 'HR3':
@@ -350,8 +353,6 @@ def family(family_id):
         amount = 2
     if family_id == 'OR8':
         amount = 2
-    c = open('content/family_OR1_test.md', 'r').read()
-
     return render_template('family.html', family_id=family_id, amount=amount, content=c, description="")
 
 
@@ -476,6 +477,23 @@ def network(family_id):
 @app.route("/classes/<class_id>")
 def classes(class_id):
     c = open('content/class_ORs.md', 'r').read()
+    if class_id == 'HRs':
+        c = open('content/nothing.md', 'r').read()
+    if class_id == 'SRs':
+        c = open('content/nothing.md', 'r').read()
+    if class_id == 'FRs':
+        c = open('content/class_FRs.md', 'r').read()
+    if class_id == 'IRs':
+        c = open('content/class_IRs.md', 'r').read()
+    if class_id == 'NCRs':
+        c = open('content/class_NCRs.md', 'r').read()
+    if class_id == 'ORs':
+        c = open('content/class_ORs.md', 'r').read()
+    if class_id == 'TRs':
+        c = open('content/class_TRs.md', 'r').read()
+    if class_id == 'UCs':
+        c = open('content/class_UCs.md', 'r').read()
+    
     return render_template('classes.html', class_id=class_id, content=c, description="")
 
 
