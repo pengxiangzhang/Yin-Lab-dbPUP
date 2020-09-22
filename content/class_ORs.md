@@ -1,25 +1,11 @@
-# <font color=#074987>Oxidation/Reduction Reactions (ORs) Family Classification</font>
+# Oxidation/Reduction Reactions (ORs) Family Classification
 
-<div class="md-toc" mdtype="toc">
-    <p class="md-toc-content" role="list">
-        <ul>
-        <li><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n38"><a class="md-toc-inner" href="#<font color=#074987>Oxidation/Reduction Reactions (ORs) Family Classification</font>">Oxidation/Reduction Reactions (ORs) Family Classification</a></span></li>
-        	<ul>
-       			<li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n130"><a class="md-toc-inner" href="#font-color074987introductionfont">Introduction</a></span></li>
-        		<li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n48"><a class="md-toc-inner" href="#font-color074987reactionfont">Reaction</a></span></li>
-                <li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n57"><a class="md-toc-inner" href="#font-color074987pfam-informationfont">Pfam Information</a></span></li>
-                <li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n60"><a class="md-toc-inner" href="#font-color074987ors-subfamily-numberfont">ORs Subfamily Number</a></span></li>
-                <li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n63"><a class="md-toc-inner" href="#font-color074987ec-in-ors-families-sorted-by-countsfont">EC in ORs Families (sorted by counts)</a></span></li>
-                <li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n72"><a class="md-toc-inner" href="#font-color074987referencesfont">References</a></span></li>
-            </ul>
-    </ul>
-    </p>
-</div>
+[TOC]
 
 
-## <font color=#074987>Introduction</font>
+## Introduction
 
-**Oxidation/Reduction Reactions** can be catalyzed by  oxidoreductase that involves the transfer of electrons from one molecule, the reductant, also called the electron donor, to another, the oxidant, also called the electron acceptor. Oxidoreductase usually utilizes NADP or NAD<sup>+</sup> as cofactors<sup class="md-footnote"><a href="#dfref-footnote-1" name="ref-footnote-1">1</a></sup> <sup class="md-footnote"><a href="#dfref-footnote-2" name="ref-footnote-2">2</a></sup>.
+**Oxidation/Reduction Reactions** can be catalyzed by  oxidoreductase that involves the transfer of electrons from one molecule, the reductant, also called the electron donor, to another, the oxidant, also called the electron acceptor. Oxidoreductase usually utilizes NADP or NAD<sup>+</sup> as cofactors. [^1] [^2]
 
 The substrate oxidized is regarded as a hydrogen or electron donor. The classification is based on 'donor:acceptor oxidoreductase'. The common name is 'dehydrogenase', wherever this is possible; as an alternative, 'acceptor reductase' can be used. 'Oxidase' is used only where O<sub>2</sub> is an acceptor. Classification is difficult in some cases, because of the lack of specificity towards the acceptor.
 
@@ -29,7 +15,7 @@ Oxidoreductases are sorted as **EC 1** in the EC number classification of enzyme
 
 ---
 
-## <font color=#074987>Reaction</font>
+## Reaction
 
 The catalyzed reactions are similar to the following reaction:
 
@@ -47,19 +33,21 @@ For a detailed  information on class, subclass or sub-subclass of oxidoreductase
 
 ---
 
-## <font color=#074987>Pfam Information</font>
+## Pfam Information
 
-<table><thead><tr><th><span>Family Number</span></th><th><span>Characterized</span></th><th><span>Pfam</span></th></tr></thead><tbody><tr><td><span>OR1</span></td><td><a href="https://www.uniprot.org/uniprot/B1XDG0"><span>B1XDG0</span></a></td><td><a href="https://pfam.xfam.org/family/ADH_zinc_N"><span>ADH_zinc_N</span></a><span>; </span><a href="https://pfam.xfam.org/family/ADH_N_2"><span>ADH_N_2</span></a></td></tr><tr><td><span>OR2</span></td><td><a href="https://www.uniprot.org/uniprot/Q52028"><span>Q52028</span></a></td><td><a href="https://pfam.xfam.org/family/Rieske"><span>Rieske</span></a><span>; </span><a href="https://pfam.xfam.org/family/Ring_hydroxyl_A"><span>Ring_hydroxyl_A</span></a></td></tr><tr><td><span>OR3</span></td><td><a href="https://www.uniprot.org/uniprot/A0A0U1WKA6"><span>A0A0U1WKA6</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/E1CIA4"><span>E1CIA4</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/F7V1S0"><span>F7V1S0</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/H3JUE4"><span>H3JUE4</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/M9NZ71"><span>M9NZ71</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/V9P074"><span>V9P074</span></a></td><td><a href="https://pfam.xfam.org/family/Oxidored_FMN"><span>Oxidored_FMN</span></a><span>; </span><a href="https://pfam.xfam.org/family/Pyr_redox_2"><span>Pyr_redox_2</span></a></td></tr><tr><td><span>OR4</span></td><td><a href="https://www.uniprot.org/uniprot/E7FL40"><span>E7FL40</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/F7V1S3"><span>F7V1S3</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/H3JUE2"><span>H3JUE2</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/M9P0B3"><span>M9P0B3</span></a></td><td><a href="https://pfam.xfam.org/family/FAD_binding_2"><span>FAD_binding_2</span></a></td></tr><tr><td><span>OR5</span></td><td><a href="https://www.uniprot.org/uniprot/E7FL41"><span>E7FL41</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/F7V1S2"><span>F7V1S2</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/H3JUE3"><span>H3JUE3</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/M9NYU8"><span>M9NYU8</span></a></td><td><a href="https://pfam.xfam.org/family/adh_short_C2"><span>adh_short_C2</span></a></td></tr><tr><td><span>OR6</span></td><td><a href="https://www.uniprot.org/uniprot/Q2EYY8"><span>Q2EYY8</span></a></td><td><a href="https://pfam.xfam.org/family/HpaB"><span>HpaB</span></a><span>; </span><a href="https://pfam.xfam.org/family/HpaB_N"><span>HpaB_N</span></a></td></tr><tr><td><span>OR7</span></td><td><a href="https://www.uniprot.org/uniprot/Q74HL7"><span>Q74HL7</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/Q74HL8"><span>Q74HL8</span></a></td><td><a href="https://pfam.xfam.org/family/FMN_red"><span>FMN_red</span></a></td></tr><tr><td><span>OR8</span></td><td><a href="https://www.uniprot.org/uniprot/P42106"><span>P42106</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/A2VA43"><span>A2VA43</span></a></td><td><a href="https://pfam.xfam.org/family/Cupin_2"><span>Cupin_2</span></a></td></tr><tr><td><span>OR9</span></td><td><a href="https://www.uniprot.org/uniprot/G2IMF2"><span>G2IMF2</span></a><span>; </span><a href="https://www.uniprot.org/uniprot/Q2G4H9"><span>Q2G4H9</span></a></td><td><a href="https://pfam.xfam.org/family/NAD_binding_10"><span>NAD_binding_10</span></a></td></tr></tbody></table>
+| Family Number | Characterized                                    | Pfam                                                         |
+| ------------- | ------------------------------------------------ | ------------------------------------------------------------ |
+| OR1           | [B1XDG0](https://www.uniprot.org/uniprot/B1XDG0) | [ADH_zinc_N](https://pfam.xfam.org/family/ADH_zinc_N); [ADH_N_2](https://pfam.xfam.org/family/ADH_zinc_N) |
 
 ---
 
-## <font color=#074987>ORs Subfamily Number</font>
+## ORs Subfamily Number
 
 **OR8**: OR8_1 / OR8_2
 
 ---
 
-## <font color=#074987>EC in ORs Families (sorted by counts)</font>
+## EC in ORs Families (sorted by counts)
 
 **OR1**
 [1.3.1.48](https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.48); [1.3.1.74](https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.74); [1.3.1.n3](https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.n3)
@@ -84,7 +72,8 @@ For a detailed  information on class, subclass or sub-subclass of oxidoreductase
 
 ---
 
-## <font color=#074987>References</font>
-<div class="footnote-line"><span class="md-fn-count">1</span> <span>Eric J. Toone (2006). Advances in Enzymology and Related Areas of Molecular Biology, Protein Evolution (Volume 75 ed.). Wiley-Interscience. ISBN 0471205036.</span> <a name="dfref-footnote-1" href="#ref-footnote-1" title="back to document" class="reversefootnote">↩</a></div>
-<div class="footnote-line"><span class="md-fn-count">2</span> <span>Nicholas C. Price; Lewis Stevens (1999). Fundamentals of Enzymology: The Cell and Molecular Biology of Catalytic Proteins (Third ed.). USA: Oxford University Press. ISBN 019850229X.</span> <a name="dfref-footnote-2" href="#ref-footnote-2" title="back to document" class="reversefootnote">↩</a></div>
+## References
+
+[^1]:Eric J. Toone (2006). Advances in Enzymology and Related Areas of Molecular Biology, Protein Evolution (Volume 75 ed.). Wiley-Interscience. ISBN 0471205036.
+[^2]:Nicholas C. Price; Lewis Stevens (1999). Fundamentals of Enzymology: The Cell and Molecular Biology of Catalytic Proteins (Third ed.). USA: Oxford University Press. ISBN 019850229X.
 

@@ -11,7 +11,7 @@ from forms import ContactForm
 # Application configurations
 
 app = Flask(__name__, static_url_path='/static')
-md = Markdown(app, extensions=['fenced_code'])
+md = Markdown(app, extensions=['extra','toc','smarty','sane_lists',])
 
 # read configurations
 with open('config.json') as json_file:

@@ -691,4 +691,3 @@ var hotSettings = {
     licenseKey: 'non-commercial-and-evaluation'
 };
 var hot = new Handsontable(hotElement, hotSettings);
-
