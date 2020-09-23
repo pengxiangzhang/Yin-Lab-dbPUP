@@ -11,7 +11,7 @@ from forms import ContactForm
 # Application configurations
 
 app = Flask(__name__, static_url_path='/static')
-md = Markdown(app, extensions=['extra','toc','smarty','sane_lists'])
+md = Markdown(app, extensions=['extra', 'toc', 'smarty', 'sane_lists'])
 
 # read configurations
 with open('config.json') as json_file:
@@ -20,7 +20,7 @@ with open('config.json') as json_file:
     # web info
     app.config['title'] = configs['website']['title']
     app.config['keywords'] = configs['website']['keywords']
-    
+
     mail = Mail(app)
     app.config['MAIL_SERVER'] = configs['email']['MAIL_SERVER']
     app.config['MAIL_PORT'] = configs['email']['MAIL_PORT']
@@ -83,7 +83,7 @@ def index():
         i += 1
 
     c = open('content/nothing.md', 'r').read()
-    return render_template('index.html', content=c, description="",title=title)
+    return render_template('index.html', content=c, description="", title=title)
 
 
 @app.route('/evidence/<family_id>', methods=['GET', 'POST'])
@@ -94,7 +94,7 @@ def evidence(family_id):
         family_id = json.loads(msg)['family_id']
         records = swiRecord.SwiRecord.query.filter_by(family=family_id)
 
-        return render_template('swissport.html', records=records, description="",title=title)
+        return render_template('swissport.html', records=records, description="", title=title)
     else:
         row = {}
         ec_link = {}
@@ -225,12 +225,13 @@ def evidence(family_id):
                     product.append(tuple)
                     i += 1
                 prod[record.number] = product
-        return render_template("evidence.html", records=records, rows=row, ec=ec_link, sub=sub, product=prod,description="",title=title)
+        return render_template("evidence.html", records=records, rows=row, ec=ec_link, sub=sub, product=prod,
+                               description="", title=title)
 
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
 def swissport(family_id):
-    title = " - Swissport - "+family_id
+    title = " - Swissport - " + family_id
     fname = family_id
     ec_link = {}
     row = {}
@@ -263,12 +264,13 @@ def swissport(family_id):
             pdb_information.append(pdbSubLink[i].split('[')[0])
             sub_row.append(pdb_information)
         row[record.number] = sub_row
-    return render_template('swissport.html', records=records, ec=ec_link, rows=row, fname=fname, description="",title=title)
+    return render_template('swissport.html', records=records, ec=ec_link, rows=row, fname=fname, description="",
+                           title=title)
 
 
 @app.route('/Trembl/<family_id>', methods=['GET', 'POST'])
 def trembl(family_id):
-    title = " - Trembl - "+family_id
+    title = " - Trembl - " + family_id
     ec_link = {}
     fname = family_id
     row = {}
@@ -302,12 +304,13 @@ def trembl(family_id):
             sub_row.append(pdb_information)
         row[record.number] = sub_row
 
-    return render_template("trembl.html", records=records, ec=ec_link, rows=row, fname=fname, description="",title=title)
+    return render_template("trembl.html", records=records, ec=ec_link, rows=row, fname=fname, description="",
+                           title=title)
 
 
 @app.route("/detail/<unid>")
 def detail(unid):
-    title = " - Detail - "+unid
+    title = " - Detail - " + unid
     records = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
     if records is None:
         records = treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
@@ -317,12 +320,12 @@ def detail(unid):
         seq = None
     else:
         seq = records.seq
-    return render_template('detail.html', seq=seq, unid=unid, description="",title=title)
+    return render_template('detail.html', seq=seq, unid=unid, description="", title=title)
 
 
 @app.route("/tree/<family_id>")
 def tree(family_id):
-    title = " - Tree - "+family_id
+    title = " - Tree - " + family_id
     if family_id == 'all':
         treeData = None
     else:
@@ -333,12 +336,12 @@ def tree(family_id):
         except Exception:
             treeData = None
             return render_template('tree.html', treeData=json.dumps(treeData), description="")
-    return render_template('tree.html', treeData=json.dumps(treeData), description="",title=title)
+    return render_template('tree.html', treeData=json.dumps(treeData), description="", title=title)
 
 
 @app.route("/family/<family_id>")
 def family(family_id):
-    title = " - Family - "+family_id
+    title = " - Family - " + family_id
     amount = 0
     c = open('content/nothing.md', 'r').read()
     if family_id == 'OR1':
@@ -357,18 +360,18 @@ def family(family_id):
         amount = 2
     if family_id == 'OR8':
         amount = 2
-    return render_template('family.html', family_id=family_id, amount=amount, content=c, description="",title=title)
+    return render_template('family.html', family_id=family_id, amount=amount, content=c, description="", title=title)
 
 
 @app.route("/subfamily/<family_id>")
 def subfamily(family_id):
-    title = " - Subfamily - "+family_id
-    return render_template('subfamily.html', family_id=family_id, description="",title=title)
+    title = " - Subfamily - " + family_id
+    return render_template('subfamily.html', family_id=family_id, description="", title=title)
 
 
 @app.route("/network/<family_id>", methods=['GET', 'POST'])
 def network(family_id):
-    title = " - Network - "+family_id
+    title = " - Network - " + family_id
     if request.method == 'POST':
         msg = request.get_data()
         node_name = msg.decode("UTF-8")
@@ -477,12 +480,12 @@ def network(family_id):
     except Exception:
         networkData = None
 
-    return render_template('network.html', networkData=json.dumps(networkData), description="",title=title)
+    return render_template('network.html', networkData=json.dumps(networkData), description="", title=title)
 
 
 @app.route("/classes/<class_id>")
 def classes(class_id):
-    title = " - Classes - "+class_id
+    title = " - Classes - " + class_id
     c = open('content/class_ORs.md', 'r').read()
     if class_id == 'HRs':
         c = open('content/nothing.md', 'r').read()
@@ -500,8 +503,8 @@ def classes(class_id):
         c = open('content/class_TRs.md', 'r').read()
     if class_id == 'UCs':
         c = open('content/class_UCs.md', 'r').read()
-    
-    return render_template('classes.html', class_id=class_id, content=c, description="",title=title)
+
+    return render_template('classes.html', class_id=class_id, content=c, description="", title=title)
 
 
 @app.route("/about", methods=["GET", "POST"])
@@ -521,9 +524,9 @@ def about():
                           reply_to=email)
             msg.body = "Name: " + name + "\nEmail: " + email + "\nSubject: " + subject + "\nMessage: " + contant
             mail.send(msg)
-            return render_template('successful.html',title=" - Contact Form Submitted")
+            return render_template('successful.html', title=" - Contact Form Submitted")
     elif request.method == 'GET':
-        return render_template('about.html', form=form,title=title)
+        return render_template('about.html', form=form, title=title)
 
 
 if __name__ == "__main__":
