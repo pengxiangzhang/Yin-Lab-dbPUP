@@ -284,10 +284,12 @@
         function addlink(root) {
             max_y = 0;
             fontsize = root['idfontsize'];
+            console.log(root)
             for (var i = 0; i < children.length; i++) {
                 if (max_y <= children[i]["y_value"]) {
                     max_y = children[i]["y_value"];
                 }
+
             }
             for (var i = 0; i < children.length; i++) {
                 var textList = svg.append("a")
@@ -303,7 +305,15 @@
                     .attr("y", children[i]["x_value"])
                     .style("font-size", fontsize)
                     .text(children[i]["name"])
-                    .style("fill", "blue")
+                    .style("fill", function (d) {
+                        if (root["nodecolor"][children[i]["name"]]) {
+                            return root["nodecolor"][children[i]["name"]]
+                        }
+                        else {
+                            return "blue"
+                        }
+                    })
+                    .style("font-size", "85px")
             }
         }
     </script>
