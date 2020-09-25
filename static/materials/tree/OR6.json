@@ -1,527 +1,530 @@
 [
-  {
-    "children": [
-      {
-        "name": "sp|Q5SJP8|HPAB_THET8",
-        "length": 0.364108374,
-        "meta": {
-          "color": {},
-          "selection": {
-            "clade": false
-          },
-          "annotation": {
-            "info": "",
-            "url": ""
-          }
-        },
-        "depth": 1,
-        "x_value": 47.84615384615385,
-        "y_value": 408.286856712,
-        "id": 2,
-        "x0": 47.84615384615385,
-        "y0": 408.286856712
-      },
-      {
-        "name": "0.981",
-        "children": [
-          {
-            "name": "sp|A4IT51|HPAH_GEOTN",
-            "length": 0.690062823,
-            "meta": {
-              "color": {},
-              "selection": {
-                "clade": false
-              },
-              "annotation": {
-                "info": "",
-                "url": ""
-              }
-            },
-            "depth": 2,
-            "x_value": 143.53846153846156,
-            "y_value": 1036.7802731773332,
-            "id": 4,
-            "x0": 143.53846153846156,
-            "y0": 1036.7802731773332
-          },
-          {
-            "name": "0.972",
-            "children": [
-              {
-                "name": "0.867",
-                "children": [
-                  {
-                    "name": "sp|P55792|HDVD_CLOAM",
-                    "length": 1.48616093,
-                    "meta": {
-                      "color": {},
-                      "selection": {
-                        "clade": false
-                      },
-                      "annotation": {
-                        "info": "",
-                        "url": ""
-                      }
-                    },
-                    "depth": 4,
-                    "x_value": 239.23076923076926,
-                    "y_value": 2531.1278321653337,
-                    "id": 18,
-                    "x0": 239.23076923076926,
-                    "y0": 2531.1278321653337
-                  },
-                  {
-                    "name": "0.998",
-                    "children": [
-                      {
-                        "name": "sp|O87009|TFTD_BURCE",
-                        "length": 0.643785885,
-                        "meta": {
-                          "color": {},
-                          "selection": {
-                            "clade": false
-                          },
-                          "annotation": {
-                            "info": "",
-                            "url": ""
-                          }
-                        },
-                        "depth": 5,
-                        "x_value": 334.9230769230769,
-                        "y_value": 2263.515273084,
-                        "id": 20,
-                        "x0": 334.9230769230769,
-                        "y0": 2263.515273084
-                      },
-                      {
-                        "name": "sp|Q6F4M8|NPCA_RHOOP",
-                        "length": 0.515629813,
-                        "meta": {
-                          "color": {},
-                          "selection": {
-                            "clade": false
-                          },
-                          "annotation": {
-                            "info": "",
-                            "url": ""
-                          }
-                        },
-                        "depth": 5,
-                        "x_value": 430.6153846153846,
-                        "y_value": 2119.809597681333,
-                        "id": 21,
-                        "x0": 430.6153846153846,
-                        "y0": 2119.809597681333
-                      }
-                    ],
-                    "length": 0.603719374,
-                    "meta": {
-                      "color": {},
-                      "selection": {
-                        "clade": false
-                      },
-                      "annotation": {
-                        "info": "",
-                        "url": ""
-                      }
-                    },
-                    "depth": 4,
-                    "x_value": 382.7692307692308,
-                    "y_value": 1541.6167007039999,
-                    "id": 19,
-                    "x0": 382.7692307692308,
-                    "y0": 1541.6167007039999
-                  }
-                ],
-                "length": 0.255112137,
-                "meta": {
-                  "color": {},
-                  "selection": {
-                    "clade": false
-                  },
-                  "annotation": {
-                    "info": "",
-                    "url": ""
-                  }
-                },
-                "depth": 3,
-                "x_value": 311,
-                "y_value": 864.6460426586667,
-                "id": 17,
-                "x0": 311,
-                "y0": 864.6460426586667
-              },
-              {
-                "name": "1.000",
-                "children": [
-                  {
-                    "name": "sp|O30372|PVCC_PSEAE",
-                    "length": 0.521425208,
-                    "meta": {
-                      "color": {
-                        "clade": "#ff0000"
-                      },
-                      "selection": {
-                        "clade": false
-                      },
-                      "annotation": {
-                        "info": "",
-                        "url": ""
-                      }
-                    },
-                    "depth": 4,
-                    "x_value": 526.3076923076923,
-                    "y_value": 1797.9303945093334,
-                    "id": 7,
-                    "x0": 526.3076923076923,
-                    "y0": 1797.9303945093334
-                  },
-                  {
-                    "name": "0.972",
-                    "children": [
-                      {
-                        "name": "1.000",
-                        "children": [
-                          {
-                            "name": "sp|Q8RQQ0|NPHA1_RHOSO",
-                            "length": 0.168441708,
-                            "meta": {
-                              "color": {
-                                "clade": "#ff0000"
-                              },
-                              "selection": {
-                                "clade": false
-                              },
-                              "annotation": {
-                                "info": "",
-                                "url": ""
-                              }
-                            },
-                            "depth": 6,
-                            "x_value": 622,
-                            "y_value": 1966.6806686586666,
-                            "id": 10,
-                            "x0": 622,
-                            "y0": 1966.6806686586666
-                          },
-                          {
-                            "name": "tr|Q2EYY8|Q2EYY8_9PSEU",
-                            "length": 0.130809429,
-                            "meta": {
-                              "color": {
-                                "clade": "#ff0000"
-                              },
-                              "selection": {
-                                "clade": false
-                              },
-                              "annotation": {
-                                "info": "",
-                                "url": ""
-                              }
-                            },
-                            "depth": 6,
-                            "x_value": 717.6923076923076,
-                            "y_value": 1924.4823398066665,
-                            "id": 11,
-                            "x0": 717.6923076923076,
-                            "y0": 1924.4823398066665
-                          }
-                        ],
-                        "length": 0.296776775,
-                        "meta": {
-                          "color": {
-                            "clade": "#ff0000"
-                          },
-                          "selection": {
-                            "clade": false
-                          },
-                          "annotation": {
-                            "info": "",
-                            "url": ""
-                          }
-                        },
-                        "depth": 5,
-                        "x_value": 669.8461538461538,
-                        "y_value": 1777.8013667546666,
-                        "id": 9,
-                        "x0": 669.8461538461538,
-                        "y0": 1777.8013667546666
-                      },
-                      {
-                        "name": "1.000",
-                        "children": [
-                          {
-                            "name": "sp|Q9HWT7|HPAB_PSEAE",
-                            "length": 0.176912294,
-                            "meta": {
-                              "color": {
-                                "clade": "#ff0000"
-                              },
-                              "selection": {
-                                "clade": false
-                              },
-                              "annotation": {
-                                "info": "",
-                                "url": ""
-                              }
-                            },
-                            "depth": 6,
-                            "x_value": 813.3846153846154,
-                            "y_value": 1965.0851167306667,
-                            "id": 13,
-                            "x0": 813.3846153846154,
-                            "y0": 1965.0851167306667
-                          },
-                          {
-                            "name": "1.000",
-                            "children": [
-                              {
-                                "name": "sp|Q48440|HPAB_KLEOX",
-                                "length": 0.03828509,
-                                "meta": {
-                                  "color": {
-                                    "clade": "#ff0000"
-                                  },
-                                  "selection": {
-                                    "clade": false
-                                  },
-                                  "annotation": {
-                                    "info": "",
-                                    "url": ""
-                                  }
-                                },
-                                "depth": 7,
-                                "x_value": 909.076923076923,
-                                "y_value": 2011.1529975946667,
-                                "id": 15,
-                                "x0": 909.076923076923,
-                                "y0": 2011.1529975946667
-                              },
-                              {
-                                "name": "sp|Q57160|HPAB_ECOLX",
-                                "length": 0.034610064,
-                                "meta": {
-                                  "color": {
-                                    "clade": "#ff0000"
-                                  },
-                                  "selection": {
-                                    "clade": false
-                                  },
-                                  "annotation": {
-                                    "info": "",
-                                    "url": ""
-                                  }
-                                },
-                                "depth": 7,
-                                "x_value": 1004.7692307692308,
-                                "y_value": 2007.03206844,
-                                "id": 16,
-                                "x0": 1004.7692307692308,
-                                "y0": 2007.03206844
-                              }
-                            ],
-                            "length": 0.179710332,
-                            "meta": {
-                              "color": {
-                                "clade": "#ff0000"
-                              },
-                              "selection": {
-                                "clade": false
-                              },
-                              "annotation": {
-                                "info": "",
-                                "url": ""
-                              }
-                            },
-                            "depth": 6,
-                            "x_value": 956.923076923077,
-                            "y_value": 1968.222650008,
-                            "id": 14,
-                            "x0": 956.923076923077,
-                            "y0": 1968.222650008
-                          }
-                        ],
-                        "length": 0.286883283,
-                        "meta": {
-                          "color": {
-                            "clade": "#ff0000"
-                          },
-                          "selection": {
-                            "clade": false
-                          },
-                          "annotation": {
-                            "info": "",
-                            "url": ""
-                          }
-                        },
-                        "depth": 5,
-                        "x_value": 885.1538461538462,
-                        "y_value": 1766.707464392,
-                        "id": 12,
-                        "x0": 885.1538461538462,
-                        "y0": 1766.707464392
-                      }
-                    ],
-                    "length": 0.206697457,
-                    "meta": {
-                      "color": {
-                        "clade": "#ff0000"
-                      },
-                      "selection": {
-                        "clade": false
-                      },
-                      "annotation": {
-                        "info": "",
-                        "url": ""
-                      }
-                    },
-                    "depth": 4,
-                    "x_value": 777.5,
-                    "y_value": 1445.015676388,
-                    "id": 8,
-                    "x0": 777.5,
-                    "y0": 1445.015676388
-                  }
-                ],
-                "length": 0.565985697,
-                "meta": {
-                  "color": {
-                    "clade": "#ff0000"
-                  },
-                  "selection": {
-                    "clade": false
-                  },
-                  "annotation": {
-                    "info": "",
-                    "url": ""
-                  }
-                },
-                "depth": 3,
-                "x_value": 651.9038461538462,
-                "y_value": 1213.2389279386667,
-                "id": 6,
-                "x0": 651.9038461538462,
-                "y0": 1213.2389279386667
-              }
-            ],
-            "length": 0.281442157,
-            "meta": {
-              "color": {},
-              "selection": {
-                "clade": false
-              },
-              "annotation": {
-                "info": "",
-                "url": ""
-              }
-            },
-            "depth": 2,
-            "x_value": 481.4519230769231,
-            "y_value": 578.5802997026667,
-            "id": 5,
-            "x0": 481.4519230769231,
-            "y0": 578.5802997026667
-          }
-        ],
-        "length": 0.23453314,
-        "meta": {
-          "color": {},
-          "selection": {
-            "clade": false
-          },
-          "annotation": {
-            "info": "",
-            "url": ""
-          }
-        },
-        "depth": 1,
-        "x_value": 312.4951923076923,
-        "y_value": 262.9898276533333,
-        "id": 3,
-        "x0": 312.4951923076923,
-        "y0": 262.9898276533333
-      },
-      {
-        "name": "0.633",
-        "children": [
-          {
-            "name": "sp|Q4L1M7|HPAH_GEOP9",
-            "length": 0.510880723,
-            "meta": {
-              "color": {},
-              "selection": {
-                "clade": false
-              },
-              "annotation": {
-                "info": "",
-                "url": ""
-              }
-            },
-            "depth": 2,
-            "x_value": 1100.4615384615384,
-            "y_value": 727.0406975586666,
-            "id": 23,
-            "x0": 1100.4615384615384,
-            "y0": 727.0406975586666
-          },
-          {
-            "name": "sp|C0SPC0|YOAI_BACSU",
-            "length": 0.731378535,
-            "meta": {
-              "color": {},
-              "selection": {
-                "clade": false
-              },
-              "annotation": {
-                "info": "",
-                "url": ""
-              }
-            },
-            "depth": 2,
-            "x_value": 1196.1538461538463,
-            "y_value": 974.2922440813334,
-            "id": 24,
-            "x0": 1196.1538461538463,
-            "y0": 974.2922440813334
-          }
-        ],
-        "length": 0.137490886,
-        "meta": {
-          "color": {},
-          "selection": {
-            "clade": false
-          },
-          "annotation": {
-            "info": "",
-            "url": ""
-          }
-        },
-        "depth": 1,
-        "x_value": 1148.3076923076924,
-        "y_value": 154.17311350133333,
-        "id": 22,
-        "x0": 1148.3076923076924,
-        "y0": 154.17311350133333
-      }
-    ],
-    "name": "",
-    "meta": {
-      "color": {},
-      "selection": {
-        "clade": false
-      },
-      "annotation": {
-        "info": "",
-        "url": ""
-      }
-    },
-    "x0": 502.88301282051278,
-    "y0": 0,
-    "depth": 0,
-    "x_value": 502.88301282051278,
-    "y_value": 0,
-    "id": 1,
-    "idfontsize": "80",
-    "nodefontsize": "35"
-  }
+	{
+		"children": [
+			{
+				"name": "sp|Q5SJP8|HPAB_THET8",
+				"length": 0.364108374,
+				"meta": {
+					"color": {},
+					"selection": {
+						"clade": false
+					},
+					"annotation": {
+						"info": "",
+						"url": ""
+					}
+				},
+				"depth": 1,
+				"x_value": 47.84615384615385,
+				"y_value": 408.286856712,
+				"id": 2,
+				"x0": 47.84615384615385,
+				"y0": 408.286856712
+			},
+			{
+				"name": "0.981",
+				"children": [
+					{
+						"name": "sp|A4IT51|HPAH_GEOTN",
+						"length": 0.690062823,
+						"meta": {
+							"color": {},
+							"selection": {
+								"clade": false
+							},
+							"annotation": {
+								"info": "",
+								"url": ""
+							}
+						},
+						"depth": 2,
+						"x_value": 143.53846153846156,
+						"y_value": 1036.7802731773332,
+						"id": 4,
+						"x0": 143.53846153846156,
+						"y0": 1036.7802731773332
+					},
+					{
+						"name": "0.972",
+						"children": [
+							{
+								"name": "0.867",
+								"children": [
+									{
+										"name": "sp|P55792|HDVD_CLOAM",
+										"length": 1.48616093,
+										"meta": {
+											"color": {},
+											"selection": {
+												"clade": false
+											},
+											"annotation": {
+												"info": "",
+												"url": ""
+											}
+										},
+										"depth": 4,
+										"x_value": 239.23076923076926,
+										"y_value": 2531.1278321653337,
+										"id": 18,
+										"x0": 239.23076923076926,
+										"y0": 2531.1278321653337
+									},
+									{
+										"name": "0.998",
+										"children": [
+											{
+												"name": "sp|O87009|TFTD_BURCE",
+												"length": 0.643785885,
+												"meta": {
+													"color": {},
+													"selection": {
+														"clade": false
+													},
+													"annotation": {
+														"info": "",
+														"url": ""
+													}
+												},
+												"depth": 5,
+												"x_value": 334.9230769230769,
+												"y_value": 2263.515273084,
+												"id": 20,
+												"x0": 334.9230769230769,
+												"y0": 2263.515273084
+											},
+											{
+												"name": "sp|Q6F4M8|NPCA_RHOOP",
+												"length": 0.515629813,
+												"meta": {
+													"color": {},
+													"selection": {
+														"clade": false
+													},
+													"annotation": {
+														"info": "",
+														"url": ""
+													}
+												},
+												"depth": 5,
+												"x_value": 430.6153846153846,
+												"y_value": 2119.809597681333,
+												"id": 21,
+												"x0": 430.6153846153846,
+												"y0": 2119.809597681333
+											}
+										],
+										"length": 0.603719374,
+										"meta": {
+											"color": {},
+											"selection": {
+												"clade": false
+											},
+											"annotation": {
+												"info": "",
+												"url": ""
+											}
+										},
+										"depth": 4,
+										"x_value": 382.7692307692308,
+										"y_value": 1541.6167007039999,
+										"id": 19,
+										"x0": 382.7692307692308,
+										"y0": 1541.6167007039999
+									}
+								],
+								"length": 0.255112137,
+								"meta": {
+									"color": {},
+									"selection": {
+										"clade": false
+									},
+									"annotation": {
+										"info": "",
+										"url": ""
+									}
+								},
+								"depth": 3,
+								"x_value": 311,
+								"y_value": 864.6460426586667,
+								"id": 17,
+								"x0": 311,
+								"y0": 864.6460426586667
+							},
+							{
+								"name": "1.000",
+								"children": [
+									{
+										"name": "sp|O30372|PVCC_PSEAE",
+										"length": 0.521425208,
+										"meta": {
+											"color": {
+												"clade": "#ff0000"
+											},
+											"selection": {
+												"clade": false
+											},
+											"annotation": {
+												"info": "",
+												"url": ""
+											}
+										},
+										"depth": 4,
+										"x_value": 526.3076923076923,
+										"y_value": 1797.9303945093334,
+										"id": 7,
+										"x0": 526.3076923076923,
+										"y0": 1797.9303945093334
+									},
+									{
+										"name": "0.972",
+										"children": [
+											{
+												"name": "1.000",
+												"children": [
+													{
+														"name": "sp|Q8RQQ0|NPHA1_RHOSO",
+														"length": 0.168441708,
+														"meta": {
+															"color": {
+																"clade": "#ff0000"
+															},
+															"selection": {
+																"clade": false
+															},
+															"annotation": {
+																"info": "",
+																"url": ""
+															}
+														},
+														"depth": 6,
+														"x_value": 622,
+														"y_value": 1966.6806686586666,
+														"id": 10,
+														"x0": 622,
+														"y0": 1966.6806686586666
+													},
+													{
+														"name": "tr|Q2EYY8|Q2EYY8_9PSEU",
+														"length": 0.130809429,
+														"meta": {
+															"color": {
+																"clade": "#ff0000"
+															},
+															"selection": {
+																"clade": false
+															},
+															"annotation": {
+																"info": "",
+																"url": ""
+															}
+														},
+														"depth": 6,
+														"x_value": 717.6923076923076,
+														"y_value": 1924.4823398066665,
+														"id": 11,
+														"x0": 717.6923076923076,
+														"y0": 1924.4823398066665
+													}
+												],
+												"length": 0.296776775,
+												"meta": {
+													"color": {
+														"clade": "#ff0000"
+													},
+													"selection": {
+														"clade": false
+													},
+													"annotation": {
+														"info": "",
+														"url": ""
+													}
+												},
+												"depth": 5,
+												"x_value": 669.8461538461538,
+												"y_value": 1777.8013667546666,
+												"id": 9,
+												"x0": 669.8461538461538,
+												"y0": 1777.8013667546666
+											},
+											{
+												"name": "1.000",
+												"children": [
+													{
+														"name": "sp|Q9HWT7|HPAB_PSEAE",
+														"length": 0.176912294,
+														"meta": {
+															"color": {
+																"clade": "#ff0000"
+															},
+															"selection": {
+																"clade": false
+															},
+															"annotation": {
+																"info": "",
+																"url": ""
+															}
+														},
+														"depth": 6,
+														"x_value": 813.3846153846154,
+														"y_value": 1965.0851167306667,
+														"id": 13,
+														"x0": 813.3846153846154,
+														"y0": 1965.0851167306667
+													},
+													{
+														"name": "1.000",
+														"children": [
+															{
+																"name": "sp|Q48440|HPAB_KLEOX",
+																"length": 0.03828509,
+																"meta": {
+																	"color": {
+																		"clade": "#ff0000"
+																	},
+																	"selection": {
+																		"clade": false
+																	},
+																	"annotation": {
+																		"info": "",
+																		"url": ""
+																	}
+																},
+																"depth": 7,
+																"x_value": 909.076923076923,
+																"y_value": 2011.1529975946667,
+																"id": 15,
+																"x0": 909.076923076923,
+																"y0": 2011.1529975946667
+															},
+															{
+																"name": "sp|Q57160|HPAB_ECOLX",
+																"length": 0.034610064,
+																"meta": {
+																	"color": {
+																		"clade": "#ff0000"
+																	},
+																	"selection": {
+																		"clade": false
+																	},
+																	"annotation": {
+																		"info": "",
+																		"url": ""
+																	}
+																},
+																"depth": 7,
+																"x_value": 1004.7692307692308,
+																"y_value": 2007.03206844,
+																"id": 16,
+																"x0": 1004.7692307692308,
+																"y0": 2007.03206844
+															}
+														],
+														"length": 0.179710332,
+														"meta": {
+															"color": {
+																"clade": "#ff0000"
+															},
+															"selection": {
+																"clade": false
+															},
+															"annotation": {
+																"info": "",
+																"url": ""
+															}
+														},
+														"depth": 6,
+														"x_value": 956.923076923077,
+														"y_value": 1968.222650008,
+														"id": 14,
+														"x0": 956.923076923077,
+														"y0": 1968.222650008
+													}
+												],
+												"length": 0.286883283,
+												"meta": {
+													"color": {
+														"clade": "#ff0000"
+													},
+													"selection": {
+														"clade": false
+													},
+													"annotation": {
+														"info": "",
+														"url": ""
+													}
+												},
+												"depth": 5,
+												"x_value": 885.1538461538462,
+												"y_value": 1766.707464392,
+												"id": 12,
+												"x0": 885.1538461538462,
+												"y0": 1766.707464392
+											}
+										],
+										"length": 0.206697457,
+										"meta": {
+											"color": {
+												"clade": "#ff0000"
+											},
+											"selection": {
+												"clade": false
+											},
+											"annotation": {
+												"info": "",
+												"url": ""
+											}
+										},
+										"depth": 4,
+										"x_value": 777.5,
+										"y_value": 1445.015676388,
+										"id": 8,
+										"x0": 777.5,
+										"y0": 1445.015676388
+									}
+								],
+								"length": 0.565985697,
+								"meta": {
+									"color": {
+										"clade": "#ff0000"
+									},
+									"selection": {
+										"clade": false
+									},
+									"annotation": {
+										"info": "",
+										"url": ""
+									}
+								},
+								"depth": 3,
+								"x_value": 651.9038461538462,
+								"y_value": 1213.2389279386667,
+								"id": 6,
+								"x0": 651.9038461538462,
+								"y0": 1213.2389279386667
+							}
+						],
+						"length": 0.281442157,
+						"meta": {
+							"color": {},
+							"selection": {
+								"clade": false
+							},
+							"annotation": {
+								"info": "",
+								"url": ""
+							}
+						},
+						"depth": 2,
+						"x_value": 481.4519230769231,
+						"y_value": 578.5802997026667,
+						"id": 5,
+						"x0": 481.4519230769231,
+						"y0": 578.5802997026667
+					}
+				],
+				"length": 0.23453314,
+				"meta": {
+					"color": {},
+					"selection": {
+						"clade": false
+					},
+					"annotation": {
+						"info": "",
+						"url": ""
+					}
+				},
+				"depth": 1,
+				"x_value": 312.4951923076923,
+				"y_value": 262.9898276533333,
+				"id": 3,
+				"x0": 312.4951923076923,
+				"y0": 262.9898276533333
+			},
+			{
+				"name": "0.633",
+				"children": [
+					{
+						"name": "sp|Q4L1M7|HPAH_GEOP9",
+						"length": 0.510880723,
+						"meta": {
+							"color": {},
+							"selection": {
+								"clade": false
+							},
+							"annotation": {
+								"info": "",
+								"url": ""
+							}
+						},
+						"depth": 2,
+						"x_value": 1100.4615384615384,
+						"y_value": 727.0406975586666,
+						"id": 23,
+						"x0": 1100.4615384615384,
+						"y0": 727.0406975586666
+					},
+					{
+						"name": "sp|C0SPC0|YOAI_BACSU",
+						"length": 0.731378535,
+						"meta": {
+							"color": {},
+							"selection": {
+								"clade": false
+							},
+							"annotation": {
+								"info": "",
+								"url": ""
+							}
+						},
+						"depth": 2,
+						"x_value": 1196.1538461538463,
+						"y_value": 974.2922440813334,
+						"id": 24,
+						"x0": 1196.1538461538463,
+						"y0": 974.2922440813334
+					}
+				],
+				"length": 0.137490886,
+				"meta": {
+					"color": {},
+					"selection": {
+						"clade": false
+					},
+					"annotation": {
+						"info": "",
+						"url": ""
+					}
+				},
+				"depth": 1,
+				"x_value": 1148.3076923076924,
+				"y_value": 154.17311350133333,
+				"id": 22,
+				"x0": 1148.3076923076924,
+				"y0": 154.17311350133333
+			}
+		],
+		"name": "",
+		"meta": {
+			"color": {},
+			"selection": {
+				"clade": false
+			},
+			"annotation": {
+				"info": "",
+				"url": ""
+			}
+		},
+		"x0": 502.88301282051278,
+		"y0": 0,
+		"depth": 0,
+		"x_value": 502.88301282051278,
+		"y_value": 0,
+		"id": 1,
+		"idfontsize": "80",
+		"nodefontsize": "35",
+		"nodecolor": {
+			"tr|Q2EYY8|Q2EYY8_9PSEU": "red"
+		}
+	}
 ]
