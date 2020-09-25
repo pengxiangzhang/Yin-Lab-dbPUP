@@ -6,7 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from models import charRecord, swiRecord, treRecord
 import json
 from flask_mail import Mail, Message
-from forms import ContactForm
+from forms import ContactForm, InputForm
 
 # Application configurations
 
@@ -506,7 +506,6 @@ def classes(class_id):
 
     return render_template('classes.html', class_id=class_id, content=c, description="", title=title)
 
-
 @app.route("/about", methods=["GET", "POST"])
 def about():
     title = " - About us"
@@ -526,8 +525,12 @@ def about():
             mail.send(msg)
             return render_template('successful.html', title=" - Contact Form Submitted")
     elif request.method == 'GET':
-        return render_template('about.html', form=form, title=title)
+        return render_template('about.html', form=form, title=title, description="")
 
-
+@app.route("/blastx", methods=["GET", "POST"])
+def blastx():
+    form = InputForm()
+    title = " - Blastx"
+    return render_template('blastx.html', form = form, title=title, description="")
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
