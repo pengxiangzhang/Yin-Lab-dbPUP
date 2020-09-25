@@ -513,7 +513,7 @@ def about():
     if request.method == 'POST':
         if form.validate() == False:
             flash('All fields are required.')
-            return render_template('about.html', form=form)
+            return render_template('about.html', form=form, title=title, description="")
         else:
             name = request.form.get('name')
             email = request.form.get('email')
@@ -531,6 +531,18 @@ def about():
 def blastx():
     form = InputForm()
     title = " - Blastx"
-    return render_template('blastx.html', form = form, title=title, description="")
+    if request.method == 'POST':
+        if form.validate() == False:
+            flash('All fields are required.')
+            return render_template('blastx.html', form=form, title=title, description="")
+        else:
+            sequence = request.form.get('id_file')
+            # file = request.form.get('id_filestring')
+            # print(file)
+            # if (sequence==""):
+            #     sequence = 
+            return render_template('successful.html', title=" - Contact Form Submitted")
+    elif request.method == 'GET':
+        return render_template('blastx.html', form = form, title=title, description="")
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
