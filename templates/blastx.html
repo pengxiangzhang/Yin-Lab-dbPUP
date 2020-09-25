@@ -44,7 +44,6 @@
 	<input type="hidden" id="id_file_text" name="id_file_text">
 </div>
 <br>
-            {{ form.recaptcha(class="form-control") }}
         </form>
                 {% for message in form.recaptcha.errors %}
                     <div style="color:red;">{{ message }}</div>
