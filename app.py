@@ -547,10 +547,21 @@ def blastx():
             return render_template('blastx.html', form=form, title=title, description="")
         else:
             # 变量是 sequence
-            if sequence == "":
-                sequence = file
-            # TODO: Your Code Here
-            return render_template('successful.html', title=" - Contact Form Submitted")
+            if sequence != "":
+                records = charRecord.CharRecord.query.filter_by(seq=sequence)
+                if records is None:
+                    records = treRecord.TreRecord.query.filter_by(seq=sequence)
+                if records is None:
+                    records = swiRecord.SwiRecord.query.filter_by(seq=sequence)
+                if records is None:
+                    flash('The sequence is not in the database')
+                    return render_template('blastx.html', form=form, title=title, description="")
+                else:
+                    print("sucessfully")
+            # if sequence == "":
+            #     sequence = file
+            # # TODO: Your Code Here
+            # return render_template('successful.html', title=" - Contact Form Submitted")
     elif request.method == 'GET':
         return render_template('blastx.html', form=form, title=title, description="")
 
