@@ -557,7 +557,7 @@ def blastx():
                     flash('The sequence is not in the database')
                     return render_template('blastx.html', form=form, title=title, description="")
                 else:
-                    return render_template('successful.html', title=" - Contact Form Submitted")
+                    print("sucessfully")
             # if sequence == "":
             #     sequence = file
             # # TODO: Your Code Here
