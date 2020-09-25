@@ -534,7 +534,7 @@ def blastx():
     form = InputForm()
     title = " - Blastx"
     if request.method == 'POST':
-        sequence = request.form.get('id_file')
+        sequence = request.form.get('id_sequences')
         file = request.form.get('id_file_text')
         if form.validate() == False:
             flash('All fields are required.')
@@ -542,14 +542,13 @@ def blastx():
         elif sequence == "" and file == "":
             flash('You need to at least have one input.')
             return render_template('blastx.html', form=form, title=title, description="")
-        # elif sequence != "" and file != "":
-        #     flash('You can only have one input.')
-        #     return render_template('blastx.html', form=form, title=title, description="")
+        elif sequence != "" and file != "":
+            flash('You can only have one input.')
+            return render_template('blastx.html', form=form, title=title, description="")
         else:
             # 变量是 sequence
             if sequence == "":
                 sequence = file
-            print(sequence)
             # TODO: Your Code Here
             return render_template('successful.html', title=" - Contact Form Submitted")
     elif request.method == 'GET':

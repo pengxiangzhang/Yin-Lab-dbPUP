@@ -49,7 +49,7 @@
                 {% for message in form.recaptcha.errors %}
                     <div style="color:red;">{{ message }}</div>
                 {% endfor %}
-            <a class="btn btn-primary" onclick="document.getElementById('blastx-form').submit();">Run Blastx</a>
+            <a class="btn btn-primary" onclick="document.getElementById('id_file').value = ''; document.getElementById('blastx-form').submit();">Run Blastx</a>
 
         <script type="text/javascript">
             function validatePaste() {
