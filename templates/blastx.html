@@ -19,7 +19,16 @@
                 href="#">here </a> to view an example BLASTX result page. </p>
 
     <div class="container">
-        <form id="contact-form" name="contact-form" action="/blastx" method="POST">
+        <form id="blastx-form" name="blastx-form" action="/blastx" method="POST">
+            {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul style="color:red;" class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
             <div style="text-align:left;">
                 <label for="subject" style="color:blue"> <b> I. Paste the sequence in the textarea. </b> </label> <br>
                 <span style="font-size:1em;">Try <a id="id_example" href="#" style="color:blue;" value="protein"> example </a> sequences.</span>
@@ -32,11 +41,15 @@
 	<label for="subject" style="color:blue"> <B> II. Or upload the sequence file. </B> </label> <br>
 	<span style="font-size: 1em;text-align:left;">File in Fasta format</span>
 	<input style="border-style: dotted;" type="file" id='id_file' name="id_file" value="" onchange='validateFasta(this.files)'/>
+	<input type="hidden" id="id_file_text" name="id_file_text">
 </div>
 <br>
             {{ form.recaptcha(class="form-control") }}
-            {{ form.submit(class="form-control") }}
         </form>
+                {% for message in form.recaptcha.errors %}
+                    <div style="color:red;">{{ message }}</div>
+                {% endfor %}
+            <a class="btn btn-primary" onclick="document.getElementById('blastx-form').submit();">Run Blastx</a>
 
         <script type="text/javascript">
             function validatePaste() {
@@ -129,6 +142,7 @@
                             }
                         }
                     }
+                    document.getElementById('id_file_text').value = text;
                 }
                 reader.readAsText(file)
                 return validFasta;

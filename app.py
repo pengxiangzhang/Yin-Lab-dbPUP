@@ -506,6 +506,7 @@ def classes(class_id):
 
     return render_template('classes.html', class_id=class_id, content=c, description="", title=title)
 
+
 @app.route("/about", methods=["GET", "POST"])
 def about():
     title = " - About us"
@@ -527,22 +528,33 @@ def about():
     elif request.method == 'GET':
         return render_template('about.html', form=form, title=title, description="")
 
+
 @app.route("/blastx", methods=["GET", "POST"])
 def blastx():
     form = InputForm()
     title = " - Blastx"
     if request.method == 'POST':
+        sequence = request.form.get('id_file')
+        file = request.form.get('id_file_text')
         if form.validate() == False:
             flash('All fields are required.')
             return render_template('blastx.html', form=form, title=title, description="")
+        elif sequence == "" and file == "":
+            flash('You need to at least have one input.')
+            return render_template('blastx.html', form=form, title=title, description="")
+        # elif sequence != "" and file != "":
+        #     flash('You can only have one input.')
+        #     return render_template('blastx.html', form=form, title=title, description="")
         else:
-            sequence = request.form.get('id_file')
-            # file = request.form.get('id_filestring')
-            # print(file)
-            # if (sequence==""):
-            #     sequence = 
+            # 变量是 sequence
+            if sequence == "":
+                sequence = file
+            print(sequence)
+            # TODO: Your Code Here
             return render_template('successful.html', title=" - Contact Form Submitted")
     elif request.method == 'GET':
-        return render_template('blastx.html', form = form, title=title, description="")
+        return render_template('blastx.html', form=form, title=title, description="")
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0')

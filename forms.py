@@ -10,8 +10,6 @@ class ContactForm(Form):
     subject = TextField("subject", [validators.Required("Please enter the subject.")])
     message = TextField("message", [validators.Required("Please enter the message.")])
     recaptcha = RecaptchaField(validators=[Recaptcha(message="Please complete the Recaptcha")])
-    submit = SubmitField("submit")
 
 class InputForm(Form):
     recaptcha = RecaptchaField(validators=[Recaptcha(message="Please complete the Recaptcha")])
-    submit = SubmitField("Run blast")
