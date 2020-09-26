@@ -100,8 +100,9 @@
                 {% for message in form.recaptcha.errors %}
                     <div style="color:red;">{{ message }}</div>
                 {% endfor %}
+                <br>
                 <div class="text-center text-md-left">
-                    <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                    <a class="btn btn-primary btn-lg btn-block" onclick="document.getElementById('contact-form').submit();">Send</a>
 
                 </div>
                 <div class="status"></div>
