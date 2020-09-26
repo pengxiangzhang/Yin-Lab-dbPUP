@@ -5,7 +5,7 @@
         <ul>
         <li><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n38"><a class="md-toc-inner" href="#<font color=#074987>Oxidation/Reduction Reactions (ORs) Family Classification</font>">Oxidation/Reduction Reactions (ORs) Family Classification</a></span></li>
         	<ul>
-       			<li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n130"><a class="md-toc-inner" href="#Introduction">Introduction</a></span></li>
+       			<li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n130"><a class="md-toc-inner" href="#font-color074987introductionfont">Introduction</a></span></li>
         		<li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n48"><a class="md-toc-inner" href="#font-color074987reactionfont">Reaction</a></span></li>
                 <li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n57"><a class="md-toc-inner" href="#font-color074987pfam-informationfont">Pfam Information</a></span></li>
                 <li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n60"><a class="md-toc-inner" href="#font-color074987ors-subfamily-numberfont">ORs Subfamily Number</a></span></li>
@@ -16,7 +16,7 @@
     </p>
 </div>
 
-## Introduction
+## <font color=#074987>Introduction</font>
 
 Sequences in this class have no significant pfams are detected but have strong evidences supporting their participation in polyphenol metabolism. These families are expanded by `PSI-Blast` rather than `hmmsearch` under a unified threshold(E-value < 0.001 and iteration number is 5). 
 

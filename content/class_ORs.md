@@ -2,7 +2,6 @@
 
 [TOC]
 
-
 ## Introduction
 
 **Oxidation/Reduction Reactions** can be catalyzed by  oxidoreductase that involves the transfer of electrons from one molecule, the reductant, also called the electron donor, to another, the oxidant, also called the electron acceptor. Oxidoreductase usually utilizes NADP or NAD<sup>+</sup> as cofactors. [^1] [^2]
