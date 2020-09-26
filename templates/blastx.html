@@ -37,6 +37,7 @@
             <textarea placeholder="DNA sequence in fasta format" style="min-height:100px" rows="10" name="id_sequences"
                       id="id_sequences" oninput="validatePaste()">
 </textarea>
+<<<<<<< HEAD
             <br>
             <div style="text-align:left;">
                 <label for="subject" style="color:blue"> <B> II. Or upload the sequence file. </B> </label> <br>
@@ -47,6 +48,18 @@
             </div>
             <br>
             {{ form.recaptcha(class="form-control") }}
+=======
+<br>
+	<div style="text-align:left;">
+	<label for="subject" style="color:blue"> <B> II. Or upload the sequence file. </B> </label> <br>
+	<span style="font-size: 1em;text-align:left;">File in Fasta format</span>
+	<input style="border-style: dotted;" type="file" id='id_file' name="id_file" value="" onchange='validateFasta(this.files)'/>
+	<input type="hidden" id="id_file_text" name="id_file_text">
+</div>
+<br>
+{{ form.recaptcha(class="form-control") }}
+
+>>>>>>> yinchao
         </form>
         {% for message in form.recaptcha.errors %}
             <div style="color:red;">{{ message }}</div>
