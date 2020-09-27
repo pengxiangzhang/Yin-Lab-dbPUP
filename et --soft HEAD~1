@@ -1,0 +1,286 @@
+[33m0f9f812[m[33m ([m[1;36mHEAD -> [m[1;32mdeployment[m[33m)[m Fix Navbar and recover code from app.py
+[33m6bf4752[m[33m ([m[1;31morigin/deployment[m[33m)[m Change Server config
+[33md0b4726[m Merge https://github.com/pengxiangzhang/BiologyLabWeb into deployment
+[33mc3a0323[m Merge branch 'yinchao' into deployment
+[33md90fcdb[m Merge branch 'deployment' of https://github.com/pengxiangzhang/BiologyLabWeb into deployment
+[33mb637c72[m[33m ([m[1;31morigin/yinchao[m[33m)[m delete duplicate
+[33m342a74e[m delete duplicate
+[33m86d28f3[m Merge branch 'yinchao' into deployment
+[33mb057ce8[m debug
+[33ma0157f7[m add blastx
+[33m2638efb[m debug
+[33m7be21bd[m debug
+[33md0bcfe5[m conflict solved of blaxs
+[33mc4641fa[m conflict solved of blaxs
+[33m7abda01[m Merge branch 'deployment' of https://github.com/pengxiangzhang/BiologyLabWeb into deployment
+[33m6614461[m merge yinchao
+[33mc759d4c[m Merge pull request #20 from pengxiangzhang/yinchao
+[33m7f86a81[m Merge branch 'deployment' into yinchao
+[33m27d87a8[m add a data_analyzer to shorter the code in app.py, add result of blastx result html
+[33m72ba486[m Change file mode and update db
+[33mc3068b2[m recover
+[33m19c0805[m ba
+[33mb6810d7[m delete re
+[33m2db3a39[m new html
+[33m90be35f[m process sequence
+[33m1603522[m Bug fix to check both have input
+[33m60f24d2[m Able to get info from front to back
+[33m11bf549[m Update tree
+[33m178e52c[m Implement from to put BLASTX data to backend.
+[33mff863da[m Merge branch 'deployment' of https://github.com/pengxiangzhang/BiologyLabWeb into deployment
+[33m53dd501[m Initial Form
+[33m0eeaec0[m tree modifition
+[33m82d5b3d[m Move sponsor css to global
+[33m743bc18[m Beautifly Code
+[33m818b829[m Change div size issue for tree
+[33mbf4a555[m Add markdown extension and enable tab
+[33mb0886b0[m Implement issue #16
+[33ma2d4f8d[m Implement issue #17
+[33mb209b6b[m Implement issue #15
+[33m476b838[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m Merge pull request #13 from pengxiangzhang/deployment
+[33m00fe987[m Update comtact form
+[33m8340083[m Update README.md
+[33me6e9e1d[m Remove family search buttom
+[33m3e94472[m Try to compress images
+[33m3e74633[m Beautifly code
+[33mbb33ccb[m Fix recaptcha
+[33mc7ed386[m add css
+[33md26c4ae[m add css
+[33m68060ec[m Add contact form
+[33me303bd1[m Merge branch 'deployment' of https://github.com/pengxiangzhang/BiologyLabWeb into deployment
+[33md674812[m Add About page
+[33m10a3701[m Merge branch 'deployment' of https://github.com/pengxiangzhang/BiologyLabWeb into deployment
+[33m38d8bba[m content
+[33mf83c413[m Change characteristic to evidence
+[33m0358dd4[m Add description for each template
+[33m4653bca[m content
+[33me916b1d[m Merge branch 'deployment' of https://github.com/pengxiangzhang/BiologyLabWeb into deployment
+[33mda0b5c5[m content
+[33m44b6fc8[m Optimize website
+[33md5dfd82[m content
+[33m57e8ce9[m content
+[33m061f29b[m content
+[33m1a1da10[m content
+[33m3d4cafe[m content
+[33m89f9f89[m content
+[33m9a0a423[m Change issue #7 error in subfamily
+[33m76fee95[m trembl
+[33m9e0e4fd[m tremble
+[33me8043e4[m Fix search if combine
+[33mbf6d419[m Revert back to 468aba40519195916427162f50e24e53e5e5d733
+[33m9684c1e[m Beautifly Code
+[33m729cb5a[m Merge branch 'deployment' of https://github.com/pengxiangzhang/BiologyLabWeb into deployment
+[33m468aba4[m Add search to filter loke clusters
+[33m9eccbfa[m Like search
+[33me30ac65[m pdb split
+[33m5ee5401[m Like Search
+[33mcd43f57[m Like Search
+[33m934ccf7[m Update new file in DB
+[33mab208c3[m update data with outgroup
+[33md5502da[m copy modification
+[33me77f8bb[m pdb modification
+[33m68715f8[m pdb modification
+[33m6ed725e[m modify pro
+[33m813a351[m modify pro
+[33m9cb231e[m updata database and modify #1,2,3,5,7
+[33md3b355a[m add content
+[33mbc784c6[m add ;
+[33m74fa326[m add ;
+[33mdfb04b3[m add ;
+[33m6a88524[m add ;
+[33m0f77cd2[m add ;
+[33mcdb1517[m add ;
+[33m5394a2f[m add ;
+[33m25b750d[m add ;
+[33m6e45e92[m add ;
+[33m3c08a32[m Merge branch 'deployment' of https://github.com/pengxiangzhang/BiologyLabWeb into deployment
+[33m67181b3[m add se
+[33m4e012e5[m Small change on database structor and new data
+[33mdf2bcdf[m Change back to css container-wrap instead of scrollX from datatable
+[33m3412e07[m modify UI
+[33ma3b8d48[m modify UI
+[33me8fc0b3[m modify product
+[33m249fbed[m modify substrate
+[33m9212c7b[m Bug fix on hiding tables
+[33m08a4fec[m Change a way to hide data on table
+[33m9c2d81e[m substrate
+[33m62ae35d[m substrate
+[33m011fc59[m substrate
+[33maef36d6[m substrate
+[33m2176118[m substrate
+[33m45990bd[m substrate
+[33mb751a6b[m substrate
+[33m1402080[m substrate
+[33md95b8fe[m change ways to wrap too long table which bring new line
+[33mb40ed62[m Finish upload db
+[33maf16514[m Add number on SP and TR Database on AI method
+[33mbea8207[m Finsih popover
+[33mfcbbb41[m Add test popup
+[33mdd5d7be[m ec
+[33m395b330[m ec
+[33mfe9b0f0[m ec
+[33mfae145c[m ec
+[33m4414886[m ec
+[33m37306e9[m ec
+[33m69942be[m Merge branch 'deployment' of https://github.com/pengxiangzhang/BiologyLabWeb into deployment
+[33m435c87e[m ec
+[33me3e8f68[m Merge branch 'deployment' of https://github.com/pengxiangzhang/BiologyLabWeb into deployment
+[33m101d1c5[m #12 add class UC
+[33me930dd0[m ec
+[33m6ad63d4[m Merge branch 'tree' into deployment
+[33m3483fdd[m[33m ([m[1;31morigin/tree[m[33m)[m recover
+[33mce25ec1[m Merge branch 'tree' into deployment
+[33m9bc5a64[m ec
+[33m2971cdb[m Merge branch 'tree' into deployment
+[33ma59e795[m recover
+[33m9209623[m Merge branch 'tree' into deployment
+[33m462c15a[m modify td
+[33mdb31c12[m Merge branch 'deployment' of https://github.com/pengxiangzhang/BiologyLabWeb into deployment
+[33m5def082[m add td
+[33m2ce7337[m update database structor file and deployment log location
+[33m91000e0[m solve -1 bug
+[33me55f315[m fix #10
+[33mbbb1509[m Fix bug on database of naming error
+[33m727aa1a[m small change for tables
+[33m31048cc[m update on data displat after datatable update
+[33med62c2c[m Update databse design as requested
+[33m8106563[m change style.css to change margin top
+[33me35b76d[m Add dropdown menu
+[33mb92a5bb[m update datebase structure
+[33m7d39c0f[m add tracking matomo
+[33mbec8a04[m modify for deployment
+[33m882d935[m Merge branch 'tree' into deployment
+[33m85f9ec3[m change the attribute name from genename to database in db, models, template
+[33m6142c61[m[33m ([m[1;33mtag: v2.1[m[33m)[m Merge pull request #12 from pengxiangzhang/deploy
+[33m3ac2276[m Allow to slece row of entry on data table
+[33m13e739a[m modify tree
+[33m691faed[m modefy tree
+[33mfe312c6[m Merge branch 'deploy' of https://github.com/pengxiangzhang/BiologyLabWeb into deploy
+[33mabae6e0[m refine -1
+[33mb495630[m Merge branch 'deploy' of https://github.com/pengxiangzhang/BiologyLabWeb into deploy
+[33mb1ff202[m Add scroll left-right CSS
+[33m4618010[m fix bugs
+[33mdabd1aa[m Merge branch 'deploy' of https://github.com/pengxiangzhang/BiologyLabWeb into deploy
+[33mad44fc4[m merge
+[33m21c5eed[m refine network
+[33md9ff7a8[m tree
+[33m892245d[m network reform
+[33m21550b9[m add network
+[33m18636d5[m add network
+[33m4865c42[m modify structure
+[33me3548c0[m Merge branch 'deploy' of https://github.com/pengxiangzhang/BiologyLabWeb into deploy
+[33mb97775a[m Backup database config
+[33m3f7fd3c[m modify network
+[33m0d67bf1[m upgrade
+[33m899ddc4[m Add fancyapps to control the desplay of the tree
+[33m73f9d47[m Configuration for web deploy
+[33m6ce6249[m Merge pull request #7 from pengxiangzhang/flask_He
+[33mf3160b6[m upload design
+[33mc7b1e54[m Merge pull request #6 from pengxiangzhang/flask
+[33me2f9f98[m Update .gitignore
+[33m80e13d0[m add color in nodes
+[33mf536259[m use new data
+[33m042c8e2[m delete duplicate
+[33md25a143[m Merge branch 'flask'
+[33mb0a776a[m sort the code, moving the script from html to static
+[33m9d1bf55[m copy
+[33m2575c84[m copy
+[33m3c96a98[m copy
+[33m523ebd5[m copy
+[33m9182d34[m width value
+[33m2de04f4[m change node color
+[33m37dde68[m add a subfamily html
+[33mffa7a9b[m search in network
+[33m89d853d[m add network
+[33mb4833d4[m update the version #
+[33m5ef570d[m add collapse into tree
+[33mc47aec9[m Merge branch 'flask_He' into flask
+[33mffa9f39[m link is refined in tree
+[33mb3db6d0[m Merge branch 'flask_He' into flask
+[33m45d8e79[m add mention into tree
+[33m6ac7524[m refine font
+[33m581f792[m Merge branch 'flask_He' into flask
+[33m4b58587[m add a picture into index.html
+[33mba6dc0e[m Merge branch 'flask_He' into flask
+[33m3530b9a[m debug pdb
+[33m31755b0[m Merge branch 'flask_He' into flask
+[33me51dc84[m add filter function
+[33m00202c9[m Merge branch 'flask_He' into flask
+[33m33affab[m modify header
+[33m8392fa3[m delete print
+[33mfc2d149[m delete print
+[33m5825cb3[m Merge branch 'flask_He' into flask
+[33mdf00024[m modify 404 error of chara html
+[33m725ec32[m Merge branch 'flask' of https://github.com/pengxiangzhang/BiologyLabWeb into flask
+[33ma8a0b70[m modify UI
+[33mbb6e121[m add endif
+[33me5da22a[m add detection in char html
+[33madaf933[m delete error of blank
+[33m97f9113[m ini file
+[33ma8487b5[m use achor to replace a normal <td> uniq_id
+[33m91d26aa[m refine the achor destination
+[33m424c40a[m add a route to family.html && change UI of all
+[33m4722a7e[m add a route to create the tree diagram && add modify navbar && change the status of seq column
+[33m00a304a[m add a copy button
+[33m8fc70c6[m change the export to only sequence
+[33m2f9765d[m remove config.json file from branch, and fix app.py
+[33m6fee866[m Merge branch 'flask' into back-end
+[33m238da8a[m modify the link method in characteristic.html
+[33m09edd20[m delete ajax
+[33m45268e2[m deleter .idea
+[33ma191545[m merge export function and sal filter
+[33mf276c8c[m add export function and SQL filter
+[33m9d5061b[m ignore .idea folder
+[33m8c35a8e[m modify navbar, add new template detail.html, and modify route
+[33m7cbf520[m[33m ([m[1;33mtag: v1[m[33m)[m Merge pull request #3 from pengxiangzhang/flask
+[33m58f0f46[m ignore config.json in the future
+[33m26bff29[m export function
+[33m97781ef[m Update db_script.sql
+[33m7214297[m Update db_script.sql
+[33m35a7b17[m Merge branch 'back-end' into flask
+[33m563a6d9[m chagne database name and add some error prevntion
+[33m6f18252[m test
+[33m2f875a5[m delete test
+[33m9f07f52[m test
+[33mb3dcfd3[m copy requriements.txt from back-end branch
+[33mf858623[m change href name, from work to characteristic
+[33m56accb3[m add two new routes, /swissport and /trembl in app.py
+[33mfd9e315[m change work.html && extendSwissData.html to characteristic.html and swissport.html seprately. Also, add trembl.html for trembl data
+[33m8f2f79e[m modify db_scripot, delete original record.py, and create new three model records for tables
+[33m8e787cd[m update requirements.txt
+[33m6a96fc5[m add record module
+[33mb223868[m add record module
+[33m7f0be44[m change the templates to decorate data
+[33m2cf9944[m delete the images folder in root directory
+[33m6eb8af2[m add simple seeding file to db
+[33meb50499[m add database connection to the application
+[33m7d7f3b8[m ignore test files
+[33m344f848[m add database initialization sequel
+[33m0e92d35[m update README.md file to match the development progress
+[33maba7b6c[m ignore config.json in the future
+[33md4eb310[m change database folder name to db
+[33m49f395d[m add markdown support
+[33m42f9c0e[m finished image header
+[33m6ded529[m menu bar
+[33m44ce254[m change configuration file
+[33m7f959c2[m fix makefile
+[33m15fe932[m add two more routers for static html files
+[33mcb2ba17[m change to form template files
+[33m9cdd953[m add more ignore files
+[33m83ea013[m add instruction to README and update gitignore
+[33m45475bd[m initialize Flask
+[33me273287[m add characterize data for database
+[33md0e5249[m delete .DS
+[33m38d9c70[m delete Example data
+[33m45fd41e[m Submit Data named Database
+[33m3f3611e[m Update Layout
+[33m51121fb[m Add a new page and add a div into work.html
+[33m550076b[m Fix page name
+[33md14ee53[m Fix layout and use external JS
+[33mcf68527[m Add License Key
+[33mb71f114[m Fix width error
+[33m30bec33[m Merge branch 'master' of github.com:YinchaoHe/BiologyLabWeb
+[33m1d7c1f1[m Add handsontable JS for table, Need overflow
+[33mec091a5[m Upload example data
+[33m0a6e536[m HTML Design
+[33m4b6af6a[m Initial commit

@@ -2,10 +2,10 @@ import json
 
 from data_analyzer import Data_analyzer
 from flask import Flask, request, send_from_directory, flash, render_template
-from flask_mail import Message
 from flask_sqlalchemy import SQLAlchemy
 from flaskext.markdown import Markdown
 from forms import ContactForm, InputForm
+from flask_mail import Mail, Message
 from models import charRecord, swiRecord, treRecord
 
 # Application configurations
@@ -20,7 +20,16 @@ with open('config.json') as json_file:
     # web info
     app.config['title'] = configs['website']['title']
     app.config['keywords'] = configs['website']['keywords']
-
+    mail = Mail(app)
+    app.config['MAIL_SERVER'] = configs['email']['MAIL_SERVER']
+    app.config['MAIL_PORT'] = configs['email']['MAIL_PORT']
+    app.config['MAIL_USERNAME'] = configs['email']['MAIL_USERNAME']
+    app.config['MAIL_PASSWORD'] = configs['email']['MAIL_PASSWORD']
+    app.config['MAIL_USE_TLS'] = configs['email']['MAIL_USE_TLS']
+    app.config['MAIL_USE_SSL'] = configs['email']['MAIL_USE_SSL']
+    app.config['RECAPTCHA_PUBLIC_KEY'] = configs['recaptcha']['RECAPTCHA_PUBLIC_KEY']
+    app.config['RECAPTCHA_PRIVATE_KEY'] = configs['recaptcha']['RECAPTCHA_PRIVATE_KEY']
+    mail = Mail(app)
     app.secret_key = configs['website']['key']
 
     # database
