@@ -1,13 +1,13 @@
-import gzip
-
-from flask import Flask, url_for, redirect, request, send_from_directory, make_response, flash, render_template
-from flaskext.markdown import Markdown
-from flask_sqlalchemy import SQLAlchemy
-from models import charRecord, swiRecord, treRecord
 import json
-from flask_mail import Mail, Message
-from forms import ContactForm, InputForm
+
 from data_analyzer import Data_analyzer
+from flask import Flask, request, send_from_directory, flash, render_template
+from flask_mail import Message
+from flask_sqlalchemy import SQLAlchemy
+from flaskext.markdown import Markdown
+from forms import ContactForm, InputForm
+from models import charRecord, swiRecord, treRecord
+
 # Application configurations
 
 app = Flask(__name__, static_url_path='/static')
@@ -20,7 +20,6 @@ with open('config.json') as json_file:
     # web info
     app.config['title'] = configs['website']['title']
     app.config['keywords'] = configs['website']['keywords']
-
 
     app.secret_key = configs['website']['key']
 
@@ -80,6 +79,7 @@ def evidence(family_id):
         return render_template("evidence.html", records=records, rows=pdb_row, ec=ec_link, sub=sub, product=prod,
                                description="", title=title)
 
+
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
 def swissport(family_id):
     title = " - Swissport - " + family_id
@@ -94,6 +94,7 @@ def swissport(family_id):
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
     return render_template('swissport.html', records=records, ec=ec_link, rows=pdb_row, fname=fname, description="",
                            title=title)
+
 
 @app.route('/Trembl/<family_id>', methods=['GET', 'POST'])
 def trembl(family_id):
@@ -345,8 +346,7 @@ def blastx():
         char_records = charRecord.CharRecord.query.filter_by(seq=sequence)
         if char_records is not None:
             for record in char_records:
-                if record.seq == sequence:
-                    records.append(record)
+                records.append(record)
 
         tre_records = treRecord.TreRecord.query.filter_by(seq=sequence)
         if tre_records is not None:
@@ -379,7 +379,7 @@ def blastx():
                                    description="",
                                    title=title)
         else:
-            flash("The sequece is not in the database")
+            flash("The sequence is not in the database.")
             return render_template('blastx.html', form=form, title=title, description="")
 
     elif request.method == 'GET':
