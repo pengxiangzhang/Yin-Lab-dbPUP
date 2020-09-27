@@ -351,12 +351,26 @@ def blastx():
         tre_records = treRecord.TreRecord.query.filter_by(seq=sequence)
         if tre_records is not None:
             for record in tre_records:
-                records.append(record)
+                record.protein_name = record.protein_enzyme
+                flag = 0
+                for item in records:
+                    if item.protein_name == record.protein_name:
+                        flag = 1
+                        break
+                if flag == 0:
+                    records.append(record)
 
         swi_records = swiRecord.SwiRecord.query.filter_by(seq=sequence)
         if swi_records is not None:
-            for record in swi_records:
-                records.append(record)
+            for record in tre_records:
+                record.protein_name = record.protein_enzyme
+                flag = 0
+                for item in records:
+                    if item.protein_name == record.protein_name:
+                        flag = 1
+                        break
+                if flag == 0:
+                    records.append(record)
 
         if len(records) > 0:
             data_analyzer = Data_analyzer(records)
