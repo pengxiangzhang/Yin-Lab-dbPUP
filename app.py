@@ -351,13 +351,25 @@ def blastx():
         tre_records = treRecord.TreRecord.query.filter_by(seq=sequence)
         if tre_records is not None:
             for record in tre_records:
-                if record.seq == sequence:
+                record.protein_name = record.protein_enzyme
+                flag = 0
+                for item in records:
+                    if item.protein_name == record.protein_name:
+                        flag = 1
+                        break
+                if flag == 0:
                     records.append(record)
 
         swi_records = swiRecord.SwiRecord.query.filter_by(seq=sequence)
         if swi_records is not None:
-            for record in swi_records:
-                if record.seq == sequence:
+            for record in tre_records:
+                record.protein_name = record.protein_enzyme
+                flag = 0
+                for item in records:
+                    if item.protein_name == record.protein_name:
+                        flag = 1
+                        break
+                if flag == 0:
                     records.append(record)
 
         if len(records) > 0:
@@ -366,6 +378,9 @@ def blastx():
             return render_template("result_blastx.html", records=records, ec=ec_link, rows=pdb_row,
                                    description="",
                                    title=title)
+        else:
+            flash("The sequece is not in the database")
+            return render_template('blastx.html', form=form, title=title, description="")
 
     elif request.method == 'GET':
         return render_template('blastx.html', form=form, title=title, description="")
