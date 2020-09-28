@@ -358,36 +358,9 @@ def blastx():
     if request.method == 'POST':
         sequence = request.form.get('id_sequences')
         file = request.form.get('id_file_text')
-        sequence = sequence.split("\n")[-1]
-        records = []
-        char_records = charRecord.CharRecord.query.filter_by(seq=sequence)
-        if char_records is not None:
-            for record in char_records:
-                records.append(record)
 
-        tre_records = treRecord.TreRecord.query.filter_by(seq=sequence)
-        if tre_records is not None:
-            for record in tre_records:
-                record.protein_name = record.protein_enzyme
-                flag = 0
-                for item in records:
-                    if item.protein_name == record.protein_name:
-                        flag = 1
-                        break
-                if flag == 0:
-                    records.append(record)
-
-        swi_records = swiRecord.SwiRecord.query.filter_by(seq=sequence)
-        if swi_records is not None:
-            for record in tre_records:
-                record.protein_name = record.protein_enzyme
-                flag = 0
-                for item in records:
-                    if item.protein_name == record.protein_name:
-                        flag = 1
-                        break
-                if flag == 0:
-                    records.append(record)
+        if sequence != "" and file == "":
+            records = search_record(sequence)
 
         if len(records) > 0:
             data_analyzer = Data_analyzer(records)
@@ -403,5 +376,39 @@ def blastx():
         return render_template('blastx.html', form=form, title=title, description="")
 
 
+def search_record(sequence):
+    sequence = sequence.split(" ")[-1]
+    records = []
+
+    char_records = charRecord.CharRecord.query.filter_by(seq=sequence)
+    if char_records is not None:
+        for record in char_records:
+            records.append(record)
+
+    tre_records = treRecord.TreRecord.query.filter_by(seq=sequence)
+    if tre_records is not None:
+        for record in tre_records:
+            record.protein_name = record.protein_enzyme
+            flag = 0
+            for item in records:
+                if item.protein_name == record.protein_name:
+                    flag = 1
+                    break
+            if flag == 0:
+                records.append(record)
+
+    swi_records = swiRecord.SwiRecord.query.filter_by(seq=sequence)
+    if swi_records is not None:
+        for record in tre_records:
+            record.protein_name = record.protein_enzyme
+            flag = 0
+            for item in records:
+                if item.protein_name == record.protein_name:
+                    flag = 1
+                    break
+            if flag == 0:
+                records.append(record)
+
+    return records
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
