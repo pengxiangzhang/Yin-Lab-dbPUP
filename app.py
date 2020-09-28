@@ -1,7 +1,7 @@
 import json
 
 from data_analyzer import Data_analyzer
-from flask import Flask, request, send_from_directory, flash, render_template
+from flask import Flask, request, send_from_directory, flash, render_template, abort
 from flask_sqlalchemy import SQLAlchemy
 from flaskext.markdown import Markdown
 from forms import ContactForm, InputForm
@@ -11,7 +11,7 @@ from models import charRecord, swiRecord, treRecord
 # Application configurations
 
 app = Flask(__name__, static_url_path='/static')
-md = Markdown(app, extensions=['extra', 'toc', 'smarty', 'sane_lists'])
+md = Markdown(app, extensions=['extra', 'toc', 'smarty', 'sane_lists'],extension_configs={'footnotes': ('PLACE_MARKER','~~~~~~~~')},safe_mode=True,output_format='html4')
 
 # read configurations
 with open('config.json') as json_file:
@@ -157,32 +157,106 @@ def tree(family_id):
 def family(family_id):
     title = " - Family - " + family_id
     amount = 0
+    name = ""
     c = open('content/nothing.md', 'r').read()
     if family_id == 'OR1':
         c = open('content/family_OR1.md', 'r').read()
-    if family_id == 'OR2':
+        name = "Oxidation/Reduction Reactions (ORs) Family 1"
+    elif family_id == 'OR2':
         c = open('content/family_OR2.md', 'r').read()
-    if family_id == 'OR3':
+        name = "Oxidation/Reduction Reactions (ORs) Family 2"
+    elif family_id == 'OR3':
         c = open('content/family_OR3.md', 'r').read()
-    if family_id == 'OR4':
+        name = "Oxidation/Reduction Reactions (ORs) Family 3"
+    elif family_id == 'OR4':
         c = open('content/family_OR4.md', 'r').read()
-    if family_id == 'OR5':
-        c = open('content/family_OR1.md', 'r').read()
-    if family_id == 'FR1':
+        name = "Oxidation/Reduction Reactions (ORs) Family 4"
+    elif family_id == 'OR5':
+        c = open('content/family_OR5.md', 'r').read()
+        name = "Oxidation/Reduction Reactions (ORs) Family 5"
+    elif family_id == 'OR6':
+        c = open('content/nothing.md', 'r').read()
+        name = "Oxidation/Reduction Reactions (ORs) Family 6"
+    elif family_id == 'OR7':
+        c = open('content/nothing.md', 'r').read()
+        name = "Oxidation/Reduction Reactions (ORs) Family 7"
+    elif family_id == 'OR8':
+        amount = 2
+        c = open('content/nothing.md', 'r').read()
+        name = "Oxidation/Reduction Reactions (ORs) Family 8"
+    elif family_id == 'OR9':
+        c = open('content/nothing.md', 'r').read()
+        name = "Oxidation/Reduction Reactions (ORs) Family 9"
+    elif family_id == 'OR10':
+        c = open('content/nothing.md', 'r').read()
+        name = "Oxidation/Reduction Reactions (ORs) Family 10"
+    elif family_id == 'FR1':
         amount = 3
-    if family_id == 'HR3':
+        c = open('content/nothing.md', 'r').read()
+        name = "null"
+    elif family_id == 'FR2':
+        c = open('content/nothing.md', 'r').read()
+        name = "null"
+    elif family_id == 'FR3':
+        c = open('content/nothing.md', 'r').read()
+        name = "null"
+    elif family_id == 'FR4':
+        c = open('content/nothing.md', 'r').read()
+        name = "null"
+    elif family_id == 'HR1':
+        c = open('content/nothing.md', 'r').read()
+        name = "null"
+    elif family_id == 'HR2':
+        c = open('content/nothing.md', 'r').read()
+        name = "null"
+    elif family_id == 'HR3':
         amount = 4
-    if family_id == 'HR4':
+        c = open('content/nothing.md', 'r').read()
+        name = "null"
+    elif family_id == 'HR4':
         amount = 2
-    if family_id == 'HR5':
+        c = open('content/nothing.md', 'r').read()
+        name = "null"
+    elif family_id == 'HR5':
         amount = 2
-    if family_id == 'HR7':
+        c = open('content/nothing.md', 'r').read()
+        name = "null"
+    elif family_id == 'HR6':
+        c = open('content/nothing.md', 'r').read()
+        name = "null"
+    elif family_id == 'HR7':
         amount = 4
-    if family_id == 'HR8':
+        c = open('content/nothing.md', 'r').read()
+        name = "null"
+    elif family_id == 'HR8':
         amount = 2
-    if family_id == 'OR8':
-        amount = 2
-    return render_template('family.html', family_id=family_id, amount=amount, content=c, description="", title=title)
+        c = open('content/nothing.md', 'r').read()
+        name = "null"
+    elif family_id == 'NCR1':
+        c = open('content/nothing.md', 'r').read()
+        name = "null"
+    elif family_id == 'IR1':
+        c = open('content/nothing.md', 'r').read()
+        name = "null"
+    elif family_id == 'IR2':
+        c = open('content/nothing.md', 'r').read()
+        name = "null"
+    elif family_id == 'SR':
+        c = open('content/nothing.md', 'r').read()
+        name = "null"
+    elif family_id == 'TR':
+        c = open('content/nothing.md', 'r').read()
+        name = "null"
+    elif family_id == 'UC1':
+        c = open('content/nothing.md', 'r').read()
+        name = "null"
+    elif family_id == 'UC2':
+        c = open('content/nothing.md', 'r').read()
+        name = "null"
+    else:
+        abort(404)
+    
+    return render_template('family.html', family_id=family_id, amount=amount, content=c, description="", title=title,name=name)
 
 
 @app.route("/subfamily/<family_id>")
@@ -308,25 +382,34 @@ def network(family_id):
 @app.route("/classes/<class_id>")
 def classes(class_id):
     title = " - Classes - " + class_id
+    name =""
     if class_id == 'HRs':
         c = open('content/class_HRs.md', 'r').read()
+        name = "Hydrolysis Reactions (HRs) Family Classification"
     elif class_id == 'SRs':
         c = open('content/class_SRs.md', 'r').read()
+        name = "unll"
     elif class_id == 'FRs':
         c = open('content/class_FRs.md', 'r').read()
+        name = "Functional Group Transfer Reactions (FRs) Family Classification"
     elif class_id == 'IRs':
         c = open('content/class_IRs.md', 'r').read()
+        name = "null"
     elif class_id == 'NCRs':
         c = open('content/class_NCRs.md', 'r').read()
+        name = "null"
     elif class_id == 'ORs':
         c = open('content/class_ORs.md', 'r').read()
+        name = "Oxidation/Reduction Reactions (ORs) Family Classification"
     elif class_id == 'TRs':
         c = open('content/class_TRs.md', 'r').read()
+        name = "null"
     elif class_id == 'UCs':
         c = open('content/class_UCs.md', 'r').read()
+        name = "Unclassified (UCs) Family Classification"
     else:
-        c = open('content/nothing.md', 'r').read()
-    return render_template('classes.html', class_id=class_id, content=c, description="", title=title)
+        abort(404)
+    return render_template('classes.html', class_id=class_id, content=c, description="", title=title,name=name)
 
 
 @app.route("/about", methods=["GET", "POST"])
@@ -350,7 +433,10 @@ def about():
     elif request.method == 'GET':
         return render_template('about.html', form=form, title=title, description="")
 
-
+@app.route("/download")
+def download():
+    title = " - Download"
+    return render_template('download.html', title=title, description="")
 @app.route("/blastx", methods=["GET", "POST"])
 def blastx():
     form = InputForm()

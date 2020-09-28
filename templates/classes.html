@@ -5,22 +5,11 @@
 {% block content %}
     <div class="row">
         <div class="page-header">
-            <h3>This is class page<small>Subtext for header</small></h3>
+            <h3>{{ name }}</h3>
 
         </div>
     </div>
     <!-- Main Content Area-->
-    {% if class_id == 'all' %}
-        <div class="ClassInformation">
-            <h1>Class Information</h1>
-            <p style="font-size: medium">Please go to Home page to select a family.</p>
-        </div>
-    {% endif %}
-
-    {% if class_id != 'all' %}
-        <div class="familyInformation">
-            {{ content|markdown }}
-        </div>
         <div class="Family">
             <h1>Family</h1>
             <ul class="breadcrumb" style="font-size: medium">
@@ -78,10 +67,11 @@
                         </li>
                     {% endfor %}
                 {% endif %}
-
-
             </ul>
         </div>
+        <br>
+                <div class="familyInformation">
+            {{ content|markdown }}
+        </div>
 
-    {% endif %}
 {% endblock %}
