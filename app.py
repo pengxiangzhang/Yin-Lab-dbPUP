@@ -59,20 +59,22 @@ def page_not_found(e):
 
 @app.route('/')
 def index():
+    name = app.config['title']
     title = ""
     c = open('content/nothing.md', 'r').read()
-    return render_template('index.html', content=c, description="", title=title)
+    return render_template('index.html', content=c, description="", title=title, name=name)
 
 
 @app.route('/evidence/<family_id>', methods=['GET', 'POST'])
 def evidence(family_id):
     title = " - Evidence"
+    name = "Evidence"
     if request.method == 'POST':
         msg = request.get_data()
         family_id = json.loads(msg)['family_id']
         records = swiRecord.SwiRecord.query.filter_by(family=family_id)
 
-        return render_template('swissport.html', records=records, description="", title=title)
+        return render_template('swissport.html', records=records, description="", title=title,name=name)
     else:
         if family_id == 'all':
             records = charRecord.CharRecord.query.all()
@@ -86,13 +88,14 @@ def evidence(family_id):
             ec_link, pdb_row = data_analyzer.ec_pdb_split()
             sub, prod = data_analyzer.substrate_product_split()
         return render_template("evidence.html", records=records, rows=pdb_row, ec=ec_link, sub=sub, product=prod,
-                               description="", title=title)
+                               description="", title=title,name=name)
 
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
 def swissport(family_id):
     title = " - Swissport - " + family_id
     fname = family_id
+    name="Swissport for "+family_id
     if '_' in family_id:
         records = swiRecord.SwiRecord.query.filter_by(family=family_id)
     else:
@@ -102,14 +105,14 @@ def swissport(family_id):
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
     return render_template('swissport.html', records=records, ec=ec_link, rows=pdb_row, fname=fname, description="",
-                           title=title)
+                           title=title,name=name)
 
 
 @app.route('/Trembl/<family_id>', methods=['GET', 'POST'])
 def trembl(family_id):
     title = " - Trembl - " + family_id
     fname = family_id
-
+    name="Trembl for "+family_id
     if '_' in family_id:
         records = treRecord.TreRecord.query.filter_by(family=family_id)
     else:
@@ -119,12 +122,13 @@ def trembl(family_id):
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
     return render_template("trembl.html", records=records, ec=ec_link, rows=pdb_row, fname=fname, description="",
-                           title=title)
+                           title=title,name=name)
 
 
 @app.route("/detail/<unid>")
 def detail(unid):
-    title = " - Detail - " + unid
+    title = " - Sequence - " + unid
+    name = "Sequence for "+unid
     records = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
     if records is None:
         records = treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
@@ -134,7 +138,7 @@ def detail(unid):
         seq = None
     else:
         seq = records.seq
-    return render_template('detail.html', seq=seq, unid=unid, description="", title=title)
+    return render_template('detail.html', seq=seq, unid=unid, description="", title=title,name=name)
 
 
 @app.route("/tree/<family_id>")
@@ -262,7 +266,8 @@ def family(family_id):
 @app.route("/subfamily/<family_id>")
 def subfamily(family_id):
     title = " - Subfamily - " + family_id
-    return render_template('subfamily.html', family_id=family_id, description="", title=title)
+    name = "Subfamily for "+family_id
+    return render_template('subfamily.html', family_id=family_id, description="", title=title,name=name)
 
 
 @app.route("/network/<family_id>", methods=['GET', 'POST'])
