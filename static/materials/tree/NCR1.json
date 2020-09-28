@@ -850,6 +850,9 @@
 		"y_value": 0,
 		"id": 1,
 		"idfontsize": "80",
-		"nodefontsize":  "35"
+		"nodefontsize": "35",
+		"nodecolor": {
+			"tr|Q60FX6|Q60FX6_RHIRD|35-325|3.3e-47|0.931": "red"
+		}
 	}
 ]

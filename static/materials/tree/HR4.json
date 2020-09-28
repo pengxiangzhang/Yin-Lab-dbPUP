@@ -20497,7 +20497,12 @@
 		"x_value": 161.51095712014195,
 		"y_value": 0,
 		"id": 1,
-        "idfontsize": "80",
-		"nodefontsize":  "35"
+		"idfontsize": "80",
+		"nodefontsize": "35",
+		"nodecolor": {
+			"tr|A0A0E3TKF2|A0A0E3TKF2_9FIRM|30-205|1.1e-18|0.914": "red",
+			"tr|I5AX48|I5AX48_EUBCE|29-207|1.4e-18|0.914": "red",
+			"tr|I5AX50|I5AX50_EUBCE|32-190|1.6e-15|0.771": "red"
+		}
 	}
 ]

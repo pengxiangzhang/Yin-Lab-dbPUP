@@ -1034,6 +1034,9 @@
 		"y_value": 0,
 		"id": 1,
 		"idfontsize": "80",
-		"nodefontsize":  "35"
+		"nodefontsize": "35",
+		"nodecolor": {
+			"tr|B1XDG0|B1XDG0_ECODH": "red"
+		}
 	}
 ]

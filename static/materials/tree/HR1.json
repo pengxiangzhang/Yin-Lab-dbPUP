@@ -8776,6 +8776,11 @@
 		"y_value": 0,
 		"id": 1,
 		"idfontsize": "80",
-		"nodefontsize":  "35"
+		"nodefontsize": "35",
+		"nodecolor": {
+			"tr|A0A0E3K5E4|A0A0E3K5E4_SACSO|122-469|1.9e-58|0.79": "red",
+			"tr|J9XU85|J9XU85_BIFAN|2-458|1.8e-146|0.991": "red",
+			"tr|Q51723|Q51723_9EURY|281-456|3.5e-37|0.393": "red"
+		}		
 	}
 ]

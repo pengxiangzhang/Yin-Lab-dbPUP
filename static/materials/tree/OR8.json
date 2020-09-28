@@ -10936,6 +10936,10 @@
 		"y_value": 0,
 		"id": 1,
 		"idfontsize": "80",
-		"nodefontsize":  "35"
+		"nodefontsize": "35",
+		"nodecolor": {
+			"tr|A2VA43|A2VA43_9ACTN|61-121|1.3e-08|0.761": "red",
+			"sp|P42106|QDOI_BACSU|226-282|5.1e-16|0.775": "red"
+		}
 	}
 ]

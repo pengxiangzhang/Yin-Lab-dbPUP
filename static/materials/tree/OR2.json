@@ -1642,6 +1642,9 @@
 		"y_value": 0,
 		"id": 1,
 		"idfontsize": "80",
-		"nodefontsize":  "35"
+		"nodefontsize": "35",
+		"nodecolor": {
+			"sp|Q52028|BPHA_PSEFK": "red"
+		}
 	}
 ]

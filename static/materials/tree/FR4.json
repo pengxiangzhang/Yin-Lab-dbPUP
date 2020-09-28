@@ -178,6 +178,9 @@
 		"y_value": 0,
 		"id": 1,
 		"idfontsize": "80",
-		"nodefontsize":  "35"
+		"nodefontsize": "35",
+		"nodecolor": {
+			"sp|Q9L9F1|NOVQ_STRNV|10-297|4.4e-112": "red"
+		}
 	}
 ]

@@ -554,6 +554,14 @@
 		"y_value": 0,
 		"id": 1,
 		"idfontsize": "80",
-		"nodefontsize":  "35"
+		"nodefontsize": "35",
+		"nodecolor": {
+			"tr|A0A0U1WKA6|A0A0U1WKA6_9ACTN": "red",
+			"tr|E1CIA4|E1CIA4_9LACT": "red",
+			"tr|F7V1S0|F7V1S0_EEGSY": "red",
+			"tr|H3JUE4|H3JUE4_9ACTN": "red",
+			"tr|M9NZ71|M9NZ71_9ACTN": "red",
+			"tr|V9P074|V9P074_EUBRA": "red"
+		}
 	}
 ]

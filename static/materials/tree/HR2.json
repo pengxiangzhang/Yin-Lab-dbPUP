@@ -3752,6 +3752,9 @@
 		"y_value": 0,
 		"id": 1,
 		"idfontsize": "80",
-		"nodefontsize":  "35"
+		"nodefontsize": "35",
+		"nodecolor": {
+			"tr|Q45VU2|Q45VU2_BACIU|31-212|6.7e-69|0.983": "red"
+		}				
 	}
 ]

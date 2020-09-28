@@ -4426,6 +4426,13 @@
 		"y_value": 0,
 		"id": 1,
 		"idfontsize": "80",
-		"nodefontsize":  "35"
+		"nodefontsize": "35",
+		"nodecolor": {
+			"tr|A0A072MRT2|A0A072MRT2_9BIFI": "red",
+			"tr|A0A072MSE8|A0A072MSE8_9BIFI": "red",
+			"tr|A0A072MX70|A0A072MX70_9BIFI": "red",
+			"tr|A0A072N4Q2|A0A072N4Q2_9BIFI": "red",
+			"tr|A1S0B1|A1S0B1_THEPD": "red"
+		}
 	}
 ]

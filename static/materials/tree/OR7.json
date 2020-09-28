@@ -16956,6 +16956,10 @@
 		"y_value": 0,
 		"id": 1,
 		"idfontsize": "80",
-		"nodefontsize":  "35"
+		"nodefontsize": "35",
+		"nodecolor": {
+			"sp|Q74HL7|NFR1_LACJO|1-145|6.6e-28": "red",
+			"sp|Q74HL8|NFR2_LACJO|1-150|2.2e-28": "red"
+		}
 	}
 ]

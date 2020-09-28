@@ -8140,6 +8140,11 @@
 		"y_value": 0,
 		"id": 1,
 		"idfontsize": "80",
-		"nodefontsize":  "35"
+		"nodefontsize": "35",
+		"nodecolor": {
+			"tr|A0A0E3TJD6|A0A0E3TJD6_9FIRM|7-131|7.5e-21|0.975": "red",
+			"tr|I5AX46|I5AX46_EUBCE|5-120|3.8e-26|0.975": "red",
+			"tr|I5AX47|I5AX47_EUBCE|4-129|1.4e-19|0.983": "red"
+		}
 	}
 ]

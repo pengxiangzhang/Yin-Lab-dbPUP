@@ -9382,6 +9382,10 @@
 		"y_value": 0,
 		"id": 1,
 		"idfontsize": "80",
-		"nodefontsize":  "35"
+		"nodefontsize": "35",
+		"nodecolor": {
+			"tr|G2IMF2|G2IMF2_SPHSK|11-194|3.4e-20|0.995": "red",
+			"tr|Q2G4H9|Q2G4H9_NOVAD|8-148|1.1e-20|0.804": "red"
+		}
 	}
 ]

@@ -7780,6 +7780,11 @@
 		"y_value": 0,
 		"id": 1,
 		"idfontsize": "80",
-		"nodefontsize":  "35"
+		"nodefontsize": "35",
+		"nodecolor": {
+			"sp|A0ZZH6|SUCP_BIFAA|35-221|3.4e-10|0.493": "red",
+			"sp|P04830|CDGT1_PAEMA|79-401|6.3e-65": "red",
+			"sp|Q9ZEU2|AMYS_NEIPO|118-337|1.1e-32": "red"
+		}		
 	}
 ]

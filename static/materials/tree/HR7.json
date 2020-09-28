@@ -436,6 +436,14 @@
 		"y_value": 0,
 		"id": 1,
 		"idfontsize": "80",
-		"nodefontsize":  "35"
+		"nodefontsize": "35",
+		"nodecolor": {
+			"tr|C4PG45|C4PG45_LACPN|194-523|2.9e-20": "red",
+			"tr|C4PG47|C4PG47_LACPN|247-574|3.1e-23": "red",
+			"tr|Q6RCI8|Q6RCI8_9CHLR|538-874|1.8e-82": "red",
+			"tr|Q6RCI9|Q6RCI9_9CHLR|425-772|1.2e-125": "red",
+			"tr|Q9S3L0|Q9S3L0_THEST|407-756|5.9e-128": "red",
+			"tr|X2CNV1|X2CNV1_9BIFI|452-808|1.4e-111": "red"
+		}
 	}
 ]

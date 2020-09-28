@@ -39667,7 +39667,13 @@
 		"x_value": 7270.636101171772,
 		"y_value": 0,
 		"id": 1,
-        "idfontsize": "80",
-		"nodefontsize":  "35"
+		"idfontsize": "80",
+		"nodefontsize": "35",
+		"nodecolor": {
+			"tr|E7FL41|E7FL41_9LACT|39-273|1.7e-45|0.991": "red",
+			"tr|F7V1S2|F7V1S2_EEGSY|39-273|4e-45|0.991": "red",
+			"tr|H3JUE3|H3JUE3_9ACTN|36-270|5e-45|0.991": "red",
+			"tr|M9NYU8|M9NYU8_9ACTN|39-273|1.3e-45|0.991": "red"
+		}
 	}
 ]

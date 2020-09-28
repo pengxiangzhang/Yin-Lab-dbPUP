@@ -1550,6 +1550,9 @@
 		"y_value": 0,
 		"id": 1,
 		"idfontsize": "80",
-		"nodefontsize":  "35"
+		"nodefontsize": "35",
+		"nodecolor": {
+			"tr|I7H868|I7H868_9LACT|10-105|6.5e-11|0.844": "red"
+		}
 	}
 ]
