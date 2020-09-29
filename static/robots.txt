@@ -17,3 +17,4 @@ Disallow: /
 Disallow: /static/materials/network_data/
 Disallow: /static/materials/tree/
 Disallow: /detail/
+Allow: /$
