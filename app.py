@@ -113,6 +113,7 @@ def trembl(family_id):
     title = " - Trembl - " + family_id
     fname = family_id
     name="Trembl for "+family_id
+    network_id = "/network/"+family_id
     if '_' in family_id:
         records = treRecord.TreRecord.query.filter_by(family=family_id)
     else:
@@ -121,8 +122,8 @@ def trembl(family_id):
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
-    return render_template("trembl.html", records=records, ec=ec_link, rows=pdb_row, fname=fname, description="",
-                           title=title,name=name)
+    return render_template("trembl.html",family_id=family_id, records=records, ec=ec_link, rows=pdb_row, fname=fname, description="",
+                           title=title,name=name,network_id=network_id)
 
 
 @app.route("/detail/<unid>")
@@ -273,6 +274,7 @@ def subfamily(family_id):
 @app.route("/network/<family_id>", methods=['GET', 'POST'])
 def network(family_id):
     title = " - Network - " + family_id
+    name = "Network for "+family_id
     if request.method == 'POST':
         msg = request.get_data()
         node_name = msg.decode("UTF-8")
@@ -380,8 +382,8 @@ def network(family_id):
 
     except Exception:
         networkData = None
-
-    return render_template('network.html', networkData=json.dumps(networkData), description="", title=title)
+    
+    return render_template('network.html', networkData=json.dumps(networkData), description="", title=title, name=name)
 
 
 @app.route("/classes/<class_id>")
