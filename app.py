@@ -96,6 +96,7 @@ def swissport(family_id):
     title = " - Swissport - " + family_id
     fname = family_id
     name="Swissport for "+family_id
+    tree_id="/tree/"+family_id
     if '_' in family_id:
         records = swiRecord.SwiRecord.query.filter_by(family=family_id)
     else:
@@ -104,8 +105,7 @@ def swissport(family_id):
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
-    return render_template('swissport.html', records=records, ec=ec_link, rows=pdb_row, fname=fname, description="",
-                           title=title,name=name)
+    return render_template('swissport.html', records=records, ec=ec_link, rows=pdb_row, fname=fname, description="",title=title,name=name,tree_id=tree_id)
 
 
 @app.route('/Trembl/<family_id>', methods=['GET', 'POST'])
@@ -245,7 +245,6 @@ def family(family_id):
         name = "null"
     elif family_id == 'IR2':
         c = open('content/nothing.md', 'r').read()
-        name = "null"
     elif family_id == 'SR':
         c = open('content/nothing.md', 'r').read()
         name = "null"
@@ -395,22 +394,22 @@ def classes(class_id):
         name = "Hydrolysis Reactions (HRs) Family Classification"
     elif class_id == 'SRs':
         c = open('content/class_SRs.md', 'r').read()
-        name = "unll"
+        name = "Synthesis Reactions (SRs) Family Classification"
     elif class_id == 'FRs':
         c = open('content/class_FRs.md', 'r').read()
         name = "Functional Group Transfer Reactions (FRs) Family Classification"
     elif class_id == 'IRs':
         c = open('content/class_IRs.md', 'r').read()
-        name = "null"
+        name = "Isomerization Reactions (IRs) Family Classification"
     elif class_id == 'NCRs':
         c = open('content/class_NCRs.md', 'r').read()
-        name = "null"
+        name = "Non-hydrolytic Cleaving Reactions (NCRs) Family Classification"
     elif class_id == 'ORs':
         c = open('content/class_ORs.md', 'r').read()
         name = "Oxidation/Reduction Reactions (ORs) Family Classification"
     elif class_id == 'TRs':
         c = open('content/class_TRs.md', 'r').read()
-        name = "null"
+        name = "Translocation Reactions (TRs) Family Classification"
     elif class_id == 'UCs':
         c = open('content/class_UCs.md', 'r').read()
         name = "Unclassified (UCs) Family Classification"
@@ -443,7 +442,7 @@ def about():
 @app.route("/download")
 def download():
     title = " - Download"
-    return render_template('download.html', title=title, description="")
+    return render_template('download.html', title=title, description="", name="Download")
 @app.route("/blastx", methods=["GET", "POST"])
 def blastx():
     form = InputForm()

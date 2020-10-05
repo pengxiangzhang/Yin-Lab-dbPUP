@@ -55,15 +55,17 @@ For a detailed  information on class, subclass or sub-subclass of hydrolase, ple
 
 ## <font color=#074987>HRs Subfamily Number</font>
 
-**HR3**: HR3_1 / HR3_2 / HR3_3 / HR3_4
+**HR3**: HR2_1 / HR2_2 / HR2_3
 
-**HR4**: HR4_1 / HR4_2
+**HR3**: HR3_1 / HR3_2 / HR3_3 / HR3_4 / HR3_5 / HR3_6 / HR3_7 / HR3_8
 
-**HR5**: HR5_1 / HR5_2s
+**HR4**: HR4_1 / HR4_10 / HR4_2 / HR4_3 / HR4_4 / HR4_6 / HR4_7 / HR4_8 / HR4_9
 
-**HR7**: HR7_1 / HR7_2 / HR7_3 / HR7_4
+**HR5**: HR5_1 / HR5_2 / HR5_3 / HR5_4 / HR5_5
 
-**HR8**: HR8_1 / HR8_2
+**HR7**: HR7_1 / HR7_2 / HR7_3 / HR7_4 / HR7_5
+
+**HR8**: HR8_1 / HR8_2 / HR8_3 / HR8_4 / HR8_5 / HR8_6
 
 ---
 
@@ -73,16 +75,16 @@ For a detailed  information on class, subclass or sub-subclass of hydrolase, ple
 [3.2.1.21](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.21); [3.2.1.85](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.85); [3.2.1.147](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.147); [3.2.1.86](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.86); [3.2.1.182](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.182); [3.2.1.31](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.31); [3.2.1.62](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.62); [3.2.1.108](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.108); [3.2.1.74](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.74); [3.2.1.188](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.188); [3.2.1.161](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.161); [2.4.1.219](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.219); [3.2.1.125](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.125); [2.4.1.300](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.300); [3.2.1.175](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.175); [3.2.1.126](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.126); [3.2.1.186](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.186); [3.2.1.38](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.38); [2.4.1.299](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.299); [3.2.1.206](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.206); [3.2.1.119](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.119); [3.5.2.17](https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.2.17); [3.2.1.105](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.105)
 
 **HR2**
-[3.2.1.8](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.8)
+[3.2.1.8](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.8); [3.1.1.72](https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.72)
 
 **HR3**
-[3.2.1.21](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.21)
+[3.2.1.21](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.21); [3.2.1.37](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.37); [3.2.1.55](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.55)
 
 **HR4**
 [3.1.21.2](https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.21.2); [4.2.1.8](https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.8); [5.1.3.22](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.22); [4.2.1.44](https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.44); [5.3.1.5](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.5); [5.3.1.22](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.22); [5.3.99.11](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.99.11); [5.3.1.35](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.35); [5.1.3.41](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.41); [5.1.3.30](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.30); [5.1.3.31](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.31); [4.2.1.118](https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.118); [5.1.3.35](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.35)
 
 **HR5**
-[1.1.1.371](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.371)
+[1.1.1.18](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.18); [1.1.1.179](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.179); [1.3.1.20](https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.20); [1.1.1.369](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.369); [3.2.1.49](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.49); [1.1.1.371](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.371); [1.1.1.370](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.370)
 
 **HR6**
 [3.2.1.31](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.31)
@@ -91,7 +93,7 @@ For a detailed  information on class, subclass or sub-subclass of hydrolase, ple
 [3.2.1.40](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.40)
 
 **HR8**
-[3.7.1.4](https://www.brenda-enzymes.org/enzyme.php?ecno=3.7.1.4)
+[3.7.1.24](https://www.brenda-enzymes.org/enzyme.php?ecno=3.7.1.24); [3.7.1.4](https://www.brenda-enzymes.org/enzyme.php?ecno=3.7.1.4)
 
 ---
 

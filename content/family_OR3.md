@@ -6,14 +6,13 @@
     <!-- herf中名字于下文id对应 -->
     <!-- 这里只改herf和tab1 -->
     <a href="#tab1" data-toggle="tab">A0A0U1WKA6</a>
-  
+  </li>
   <li><a href="#tab2" data-toggle="tab">E1CIA4</a></li>
   <li><a href="#tab3" data-toggle="tab">F7V1S0</a></li>
   <li><a href="#tab4" data-toggle="tab">H3JUE4</a></li>
   <li><a href="#tab5" data-toggle="tab">M9NZ71</a></li>
   <li><a href="#tab6" data-toggle="tab">V9P074</a></li>
 </ul>
-
 <div id="myTabContent" class="tab-content" markdown="1">
   <!-- 此处的id与上文herf对应 其他的不要改-->
   <div class="tab-pane fade in active" id="tab1" markdown="1">
@@ -110,7 +109,6 @@ Description:
 </div>
 </figure>
 
-
 ## References
 
 [^1]:Mande S S, Sarfaty S, Allen M D, et al. Protein–protein interactions in the pyruvate dehydrogenase multienzyme complex: dihydrolipoamide dehydrogenase complexed with the binding domain of dihydrolipoamide acetyltransferase[J]. Structure, 1996, 4(3): 277-286.
@@ -125,6 +123,7 @@ Description:
 [^10]:Schulz G E. Gene duplication in glutathione reductase[J]. Journal of molecular biology, 1980, 138(2): 335-347.
 [^11]:Wierenga R K. The TIM-barrel fold: a versatile framework for efficient enzymes[J]. FEBS letters, 2001, 492(3): 193-198.
 [^12]:Nagano N, Orengo C A, Thornton J M. One fold with many functions: the evolutionary relationships between TIM barrel families based on their sequences, structures and functions[J]. Journal of molecular biology, 2002, 321(5): 741-765.
+
   </div>
   <div class="tab-pane fade" id="tab2" markdown="1">
 
@@ -239,7 +238,6 @@ Description:
 </div>
 </figure>
 
-
 ## References
 
 [^1]: Mande S S, Sarfaty S, Allen M D, et al. Protein–protein interactions in the pyruvate dehydrogenase multienzyme complex: dihydrolipoamide dehydrogenase complexed with the binding domain of dihydrolipoamide acetyltransferase[J]. Structure, 1996, 4(3): 277-286.
@@ -254,6 +252,7 @@ Description:
 [^10]: Schulz G E. Gene duplication in glutathione reductase[J]. Journal of molecular biology, 1980, 138(2): 335-347.
 [^11]: Wierenga R K. The TIM-barrel fold: a versatile framework for efficient enzymes[J]. FEBS letters, 2001, 492(3): 193-198.
 [^12]: Nagano N, Orengo C A, Thornton J M. One fold with many functions: the evolutionary relationships between TIM barrel families based on their sequences, structures and functions[J]. Journal of molecular biology, 2002, 321(5): 741-765.
+
   </div>
   <div class="tab-pane fade" id="tab3" markdown="1">
 
@@ -368,7 +367,6 @@ Description:
 </div>
 </figure>
 
-
 ## References
 
 [^1]: Mande S S, Sarfaty S, Allen M D, et al. Protein–protein interactions in the pyruvate dehydrogenase multienzyme complex: dihydrolipoamide dehydrogenase complexed with the binding domain of dihydrolipoamide acetyltransferase[J]. Structure, 1996, 4(3): 277-286.
@@ -383,6 +381,7 @@ Description:
 [^10]: Schulz G E. Gene duplication in glutathione reductase[J]. Journal of molecular biology, 1980, 138(2): 335-347.
 [^11]: Wierenga R K. The TIM-barrel fold: a versatile framework for efficient enzymes[J]. FEBS letters, 2001, 492(3): 193-198.
 [^12]: Nagano N, Orengo C A, Thornton J M. One fold with many functions: the evolutionary relationships between TIM barrel families based on their sequences, structures and functions[J]. Journal of molecular biology, 2002, 321(5): 741-765.
+
   </div>
   <div class="tab-pane fade" id="tab4" markdown="1">
 
@@ -497,8 +496,6 @@ Description:
 </div>
 </figure>
 
-
-
 ## References
 
 [^1]: Mande S S, Sarfaty S, Allen M D, et al. Protein–protein interactions in the pyruvate dehydrogenase multienzyme complex: dihydrolipoamide dehydrogenase complexed with the binding domain of dihydrolipoamide acetyltransferase[J]. Structure, 1996, 4(3): 277-286.
@@ -513,6 +510,7 @@ Description:
 [^10]: Schulz G E. Gene duplication in glutathione reductase[J]. Journal of molecular biology, 1980, 138(2): 335-347.
 [^11]: Wierenga R K. The TIM-barrel fold: a versatile framework for efficient enzymes[J]. FEBS letters, 2001, 492(3): 193-198.
 [^12]: Nagano N, Orengo C A, Thornton J M. One fold with many functions: the evolutionary relationships between TIM barrel families based on their sequences, structures and functions[J]. Journal of molecular biology, 2002, 321(5): 741-765.
+
   </div>
   <div class="tab-pane fade" id="tab5" markdown="1">
 
@@ -609,8 +607,6 @@ Description:
 </div>
 </figure>
 
-
-
 ## References
 
 [^1]: Mande S S, Sarfaty S, Allen M D, et al. Protein–protein interactions in the pyruvate dehydrogenase multienzyme complex: dihydrolipoamide dehydrogenase complexed with the binding domain of dihydrolipoamide acetyltransferase[J]. Structure, 1996, 4(3): 277-286.
@@ -625,6 +621,7 @@ Description:
 [^10]: Schulz G E. Gene duplication in glutathione reductase[J]. Journal of molecular biology, 1980, 138(2): 335-347.
 [^11]: Wierenga R K. The TIM-barrel fold: a versatile framework for efficient enzymes[J]. FEBS letters, 2001, 492(3): 193-198.
 [^12]: Nagano N, Orengo C A, Thornton J M. One fold with many functions: the evolutionary relationships between TIM barrel families based on their sequences, structures and functions[J]. Journal of molecular biology, 2002, 321(5): 741-765.
+
   </div>
   <div class="tab-pane fade" id="tab6" markdown="1">
 
@@ -739,8 +736,6 @@ Description:
 </div>
 </figure>
 
-
-
 ## References
 
 [^1]: Mande S S, Sarfaty S, Allen M D, et al. Protein–protein interactions in the pyruvate dehydrogenase multienzyme complex: dihydrolipoamide dehydrogenase complexed with the binding domain of dihydrolipoamide acetyltransferase[J]. Structure, 1996, 4(3): 277-286.
@@ -755,5 +750,6 @@ Description:
 [^10]: Schulz G E. Gene duplication in glutathione reductase[J]. Journal of molecular biology, 1980, 138(2): 335-347.
 [^11]: Wierenga R K. The TIM-barrel fold: a versatile framework for efficient enzymes[J]. FEBS letters, 2001, 492(3): 193-198.
 [^12]: Nagano N, Orengo C A, Thornton J M. One fold with many functions: the evolutionary relationships between TIM barrel families based on their sequences, structures and functions[J]. Journal of molecular biology, 2002, 321(5): 741-765.
+
   </div>
 </div>

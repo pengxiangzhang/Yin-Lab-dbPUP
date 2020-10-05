@@ -1,60 +1,53 @@
-# <font color=#074987>Isomerization Reactions(IRs) Family Classification</font>
+# Synthesis Reactions (SRs) Family Classification
 
-<div class="md-toc" mdtype="toc">
-    <p class="md-toc-content" role="list">
-        <ul>
-        <li><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n38"><a class="md-toc-inner" href="#<font color=#074987>Oxidation/Reduction Reactions (ORs) Family Classification</font>">Oxidation/Reduction Reactions (ORs) Family Classification</a></span></li>
-        	<ul>
-       			<li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n130"><a class="md-toc-inner" href="#font-color074987introductionfont">Introduction</a></span></li>
-        		<li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n48"><a class="md-toc-inner" href="#font-color074987reactionfont">Reaction</a></span></li>
-                <li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n57"><a class="md-toc-inner" href="#font-color074987pfam-informationfont">Pfam Information</a></span></li>
-                <li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n60"><a class="md-toc-inner" href="#font-color074987ors-subfamily-numberfont">ORs Subfamily Number</a></span></li>
-                <li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n63"><a class="md-toc-inner" href="#font-color074987ec-in-ors-families-sorted-by-countsfont">EC in ORs Families (sorted by counts)</a></span></li>
-                <li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n72"><a class="md-toc-inner" href="#font-color074987referencesfont">References</a></span></li>
-            </ul>
-    </ul>
-    </p>
-</div>
+[TOC]
 
-## <font color=#074987>Introduction</font>
+## Introduction
 
-Isomerization reaction is the process by which one molecule is transformed into another molecule that has exactly the same atoms, but the atoms are rearranged<sup class="md-footnote"><a href="#dfref-footnote-1" name="ref-footnote-1">1</a></sup>. In some molecules and under some conditions, isomerization occurs spontaneously. Many isomers are equal or roughly equal in bond energy, and so exist in roughly equal amounts, provided that they can interconvert relatively freely, that is the energy barrier between the two isomers is not too high. When the isomerization occurs intramolecularly, it is considered a rearrangement reaction. Isomerases can lower the isomerization energy and thus increase the reaction rate.
+In biochemistry, **Synthesis reactions [SRs]** involve the joining of two large molecules by forming a new chemical bond, usually with accompanying hydrolysis of a small pendant chemical group on one of the larger molecules or the enzyme catalyzing the linking together of two compounds, e.g., enzymes that catalyze joining of C-O, C-S, C-N, etc. 
 
-Isomerases are sorted as **EC 5** in the EC number classification of enzymes and can be further classified into seven subclasses.
+The common names of ligases often contain the word "ligase", like DNA ligase, a frequently used enzyme in molecular biolaboratory to link DNA fragments together. Synthetase is another commonly adopted name for ligases since they are applied in the synthesis of new molecules. Synthetases sometimes are distinguished from synthases and sometimes treated as synonym of synthases. From the view of definition, nucleoside triphosphates such as ATP, GTP, CTP, TTP, and UTP, are employed by synthetases to produce energy, whereas synthases do not use nucleoside triphosphates. A synthase is also acknowledged as a lyase that catalyzes the cleavage of various chemical bonds through means excluding hydrolysis and oxidation without demand for any energy, whereas a synthetase is a ligase joining two chemicals or compounds with requirement for energy. The Joint Commission on Biochemical Nomenclature (JCBN) has dictated that synthase can represent any enzyme that catalyzes synthesis, while synthetase needs to be used synonymously[^1].
+
+Ligases are sorted as **EC 6** in the EC number classification of enzymes and can be further classified into six subclasses.
 
 ---
 
-## <font color=#074987>Reaction</font>
+## Reaction
 
-The general form of isomerization reaction is as follows:
+In general, a ligase catalyzes the following reaction:
 
-A-B &rarr; B-A
+Ab + C &rarr; A-C + b
 
-There is only one substrate yielding one product. This product has the same molecular formula as the substrate but differs in bond connectivity or spatial arrangement. Isomerases catalyze reactions across many biological processes, such as in glycolysis and carbohydrate metabolism.
+or sometimes:
+
+Ab + cD &rarr; A-D + b + c + d + e + f 
+
+where the lowercase letters can signify the small, dependent groups. Ligase can join two complementary fragments of nucleic acid and repair single stranded breaks that arise in double stranded DNA during replication.
 
 For a detailed  information on class, subclass or sub-subclass of oxidoreductases, please visit [**ExplorEnz**](https://www.enzyme-database.org/class.php).
 
 ---
 
-## <font color=#074987>Pfam Information</font>
+## Pfam Information
 
-<table><thead><tr><th><span>Family Number</span></th><th><span>Characterized</span></th><th><span>Pfam</span></th></tr></thead><tbody><tr><td><span>IR1</span></td><td><a href="https://www.uniprot.org/uniprot/I7H868"><span>I7H868</span></a></td><td><a href="http://pfam.xfam.org/family/Glyoxalase_4"><span>Glyoxalase_4</span></a></td></tr><tr><td><span>IR2</span></td><td><a href="https://www.uniprot.org/uniprot/V9P0A9"><span>V9P0A9</span></a></td><td><a href="http://pfam.xfam.org/family/Chalcone_N"><span>Chalcone_N</span></a></td></tr></tbody></table>
+No pfam information.
 
 ---
 
-## <font color=#074987>IRs Subfamily Number</font>
+## SRs Subfamily Number
 
 No subfamilies are found.
 
 ---
 
-## <font color=#074987>EC in IRs Families (sorted by counts)</font>
+## EC in SRs Families (sorted by counts)
 
-**IR1**
-[4.4.1.5](https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.5); [5.1.99.1](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.99.1); [1.13.11.27](https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.27); [1.13.11.46](https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.46); [5.1.3.33](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.33)
+No EC activities.
 
 ---
 
-## <font color=#074987>References</font>
-<div class="footnote-line"><span class="md-fn-count">1</span> <span>Muller P. Glossary of terms used in physical organic chemistry (IUPAC Recommendations 1994)[J]. Pure and Applied Chemistry, 1994, 66(5): 1077-1184.</span> <a name="dfref-footnote-1" href="#ref-footnote-1" title="back to document" class="reversefootnote">↩</a></div>
+## References
+[^1]:“Ligase Introduction.” https://www.creative-enzymes.com/resource/Ligase-Introduction_24.html. Retrieved 2020-09-15
+
+
 
