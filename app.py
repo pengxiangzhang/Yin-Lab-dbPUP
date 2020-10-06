@@ -1,12 +1,10 @@
-import json
-
 from data_analyzer import Data_analyzer
 from flask import Flask, request, send_from_directory, flash, render_template, abort
 from flask_sqlalchemy import SQLAlchemy
 from forms import ContactForm, InputForm
 from flask_mail import Mail, Message
 from models import charRecord, swiRecord, treRecord
-import markdown
+import markdown, json
 # Application configurations
 
 app = Flask(__name__, static_url_path='/static')
@@ -65,7 +63,7 @@ def index():
 
 @app.route('/evidence/<family_id>', methods=['GET', 'POST'])
 def evidence(family_id):
-    title = " - Evidence"
+    title = "Evidence - "
     name = "Evidence"
     if request.method == 'POST':
         msg = request.get_data()
@@ -91,7 +89,7 @@ def evidence(family_id):
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
 def swissport(family_id):
-    title = " - Swissport - " + family_id
+    title = "Swissport - " + family_id+" - "
     name=family_id
     subfamily=False
     if '_' in family_id:
@@ -108,7 +106,7 @@ def swissport(family_id):
 
 @app.route('/Trembl/<family_id>', methods=['GET', 'POST'])
 def trembl(family_id):
-    title = " - Trembl - " + family_id
+    title = "Trembl - " + family_id+" - "
     name=family_id
     subfamily=False
     if '_' in family_id:
@@ -125,7 +123,7 @@ def trembl(family_id):
 
 @app.route("/detail/<unid>")
 def detail(unid):
-    title = " - Sequence - " + unid
+    title = "Sequence - " + unid +" - "
     name = "Sequence for "+unid
     records = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
     if records is None:
@@ -141,7 +139,7 @@ def detail(unid):
 
 @app.route("/tree/<family_id>")
 def tree(family_id):
-    title = " - Tree - " + family_id
+    title = "Tree - " + family_id+" - "
     name =family_id
     if family_id == 'all':
         treeData = None
@@ -157,7 +155,7 @@ def tree(family_id):
 
 @app.route("/family/<family_id>")
 def family(family_id):
-    title = " - Family - " + family_id
+    title = "Family - " + family_id+" - "
     amount = 0
     name = ""
     c = open('content/nothing.md', 'r').read()
@@ -262,14 +260,14 @@ def family(family_id):
 
 @app.route("/subfamily/<family_id>")
 def subfamily(family_id):
-    title = " - Subfamily - " + family_id
+    title = "Subfamily - " + family_id+" - "
     name = "Subfamily for "+family_id
     return render_template('subfamily.html', family_id=family_id, description="", title=title,name=name)
 
 
 @app.route("/network/<family_id>", methods=['GET', 'POST'])
 def network(family_id):
-    title = " - Network - " + family_id
+    title = "Network - " + family_id+" - "
     name = family_id
     if request.method == 'POST':
         msg = request.get_data()
@@ -384,7 +382,7 @@ def network(family_id):
 
 @app.route("/classes/<class_id>")
 def classes(class_id):
-    title = " - Classes - " + class_id
+    title = "Classes - " + class_id+" - "
     name =""
     if class_id == 'HRs':
         c = open('content/class_HRs.md', 'r').read()
@@ -417,7 +415,7 @@ def classes(class_id):
 
 @app.route("/about", methods=["GET", "POST"])
 def about():
-    title = " - About us"
+    title = "About us - "
     form = ContactForm()
     if request.method == 'POST':
         if form.validate() == False:
@@ -438,12 +436,12 @@ def about():
 
 @app.route("/download")
 def download():
-    title = " - Download"
+    title = "Download - "
     return render_template('download.html', title=title, description="", name="Download")
 @app.route("/blastx", methods=["GET", "POST"])
 def blastx():
     form = InputForm()
-    title = " - Blastx"
+    title = "Blastx - "
     if request.method == 'POST':
         sequence = request.form.get('id_sequences')
         file = request.form.get('id_file_text')
