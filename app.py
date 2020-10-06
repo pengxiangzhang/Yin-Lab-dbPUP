@@ -11,7 +11,7 @@ from models import charRecord, swiRecord, treRecord
 # Application configurations
 
 app = Flask(__name__, static_url_path='/static')
-md = Markdown(app, extensions=['extra', 'toc', 'smarty', 'sane_lists'],extension_configs={'footnotes': ('PLACE_MARKER','~~~~~~~~')},safe_mode=True,output_format='html4')
+md = Markdown(app, extensions=['extra', 'toc', 'smarty', 'sane_lists'],extension_configs={'footnotes': ('UNIQUE_IDS','true')},safe_mode=True,output_format='html4')
 
 # read configurations
 with open('config.json') as json_file:
@@ -94,10 +94,10 @@ def evidence(family_id):
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
 def swissport(family_id):
     title = " - Swissport - " + family_id
-    fname = family_id
-    name="Swissport for "+family_id
-    tree_id="/tree/"+family_id
+    name=family_id
+    subfamily=False
     if '_' in family_id:
+        subfamily=True
         records = swiRecord.SwiRecord.query.filter_by(family=family_id)
     else:
         family_id = family_id + "%"
@@ -105,16 +105,16 @@ def swissport(family_id):
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
-    return render_template('swissport.html', records=records, ec=ec_link, rows=pdb_row, fname=fname, description="",title=title,name=name,tree_id=tree_id)
+    return render_template('swissport.html', records=records, ec=ec_link, rows=pdb_row, description="",title=title,name=name,subfamily=subfamily)
 
 
 @app.route('/Trembl/<family_id>', methods=['GET', 'POST'])
 def trembl(family_id):
     title = " - Trembl - " + family_id
-    fname = family_id
-    name="Trembl for "+family_id
-    network_id = "/network/"+family_id
+    name=family_id
+    subfamily=False
     if '_' in family_id:
+        subfamily=True
         records = treRecord.TreRecord.query.filter_by(family=family_id)
     else:
         family_id = family_id + "%"
@@ -122,8 +122,7 @@ def trembl(family_id):
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
-    return render_template("trembl.html",family_id=family_id, records=records, ec=ec_link, rows=pdb_row, fname=fname, description="",
-                           title=title,name=name,network_id=network_id)
+    return render_template("trembl.html",family_id=family_id, records=records, ec=ec_link, rows=pdb_row, description="",title=title,name=name,subfamily=subfamily)
 
 
 @app.route("/detail/<unid>")
@@ -145,17 +144,17 @@ def detail(unid):
 @app.route("/tree/<family_id>")
 def tree(family_id):
     title = " - Tree - " + family_id
+    name =family_id
     if family_id == 'all':
         treeData = None
     else:
         try:
             with open('static/materials/tree/' + family_id + '.json') as f:
                 treeData = json.load(f)
-                print(treeData)
         except Exception:
             treeData = None
             return render_template('tree.html', treeData=json.dumps(treeData), description="")
-    return render_template('tree.html', treeData=json.dumps(treeData), description="", title=title)
+    return render_template('tree.html', treeData=json.dumps(treeData), description="", title=title,name=name)
 
 
 @app.route("/family/<family_id>")
@@ -273,7 +272,7 @@ def subfamily(family_id):
 @app.route("/network/<family_id>", methods=['GET', 'POST'])
 def network(family_id):
     title = " - Network - " + family_id
-    name = "Network for "+family_id
+    name = family_id
     if request.method == 'POST':
         msg = request.get_data()
         node_name = msg.decode("UTF-8")
@@ -327,7 +326,7 @@ def network(family_id):
                     del edge['data']['SUID']
                     del edge['data']['selected']
         except Exception:
-            print("error")
+            print("error with network")
 
         return networkData
 

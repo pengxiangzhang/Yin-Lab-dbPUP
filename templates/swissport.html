@@ -4,10 +4,13 @@
 {% block content %}
     <div class="row">
         <div class="page-header">
-            <h3>{{name}}</h3>
+            <h3>Swissport for {{ name }}</h3>
 
         </div>
     </div>
+    {% if not subfamily %}
+    <a class="btn btn-primary btn-lg btn-block" href="/tree/{{name}}">Open Tree for {{name}}</a>
+    {% endif %}
     <div class="abstractOfPage">
         <div class="informationOfGene">
             <p>1 C-ring cleavage quercetin Bacillus subtilis (strain 168) a tryptophan auxotroph isolated after X-rays

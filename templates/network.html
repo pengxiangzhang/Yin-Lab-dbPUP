@@ -1,15 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-{% include '_head.html' %}
-{% include '_css.html' %}
+{% extends 'base.html' %}
 
-<body>
-<div class="container-fluid" id="material-content">
+{% block title %}Network{% endblock %}
+
+{% block content %}
     <div class="row">
         <div class="page-header">
-            <h3>{{name}}</h3>
-
+            <h3>Network for {{name}}</h3>
         </div>
+    </div>
+
+        <a class="btn btn-primary btn-lg btn-block" href="/trembl/{{name}}">Open treMBL for {{name}}</a>
+
+    <div id="introduction">
+        <p style="font-size: x-large">Tree diagrams originated in the medieval era to represent genealogical
+            relationships.
+
+            Phylogenetic tree diagrams in the evolutionary sense date back to at least the early 19th century.
+
+            The term phylogeny for the evolutionary relationships of species through time was coined by Ernst Haeckel,
+            who went further than Darwin in proposing phylogenic histories of life. In contemporary usage, tree of life
+            refers to the compilation of comprehensive phylogenetic databases rooted at the last universal common
+            ancestor of life on Earth. The Open Tree of Life, first published September 2015, is a project to compile
+            such a database for free publ{c access.</p>
     </div>
     <form id="searchForm" style="margin-top: 40px; font-size: medium">
         <input type="text" name="s" placeholder="Search by Uniprot"/>
@@ -92,7 +104,4 @@
         }
 
     </script>
-</div>
-{% include '_footer.html' %}
-</body>
-</html> 
+{% endblock %}
