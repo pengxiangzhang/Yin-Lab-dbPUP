@@ -6,7 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from forms import ContactForm, InputForm
 from flask_mail import Mail, Message
 from models import charRecord, swiRecord, treRecord
-import markdown2
+import markdown
 # Application configurations
 
 app = Flask(__name__, static_url_path='/static')
@@ -501,7 +501,7 @@ def search_record(sequence):
     return records
     
 def to_md(content):
-    return markdown2.markdown(content, extras=["footnotes","markdown-in-html","toc","tables","cuddled-lists"])
+    return markdown.markdown(content, extensions=['extra', 'toc', 'smarty', 'sane_lists'])
     
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
