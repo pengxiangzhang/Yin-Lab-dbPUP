@@ -22,28 +22,28 @@
                 {% endfor %}
             </ul>
         </div>
-{% endif %}
-        <div class="familyResource">
-            <h2>Family Sequence</h2>
-            <ul class="breadcrumb" style="font-size: medium">
-                <li>
-                    <button><a href="{{ url_for('swissport', family_id = family_id) }}">Swissport</a></button>
-                </li>
-                <li>
-                    <button><a href="{{ url_for('trembl', family_id = family_id) }}">treMBL</a></button>
-                </li>
-                <li>
-                    <button><a href="{{ url_for('tree', family_id = family_id) }}">Tree of SwissportL</a></button>
-                </li>
-                <li>
-                    <button><a href="{{ url_for('network', family_id = family_id) }}">Network</a></button>
-                </li>
+    {% endif %}
+    <div class="familyResource">
+        <h2>Family Sequence</h2>
+        <ul class="breadcrumb" style="font-size: medium">
+            <li>
+                <button><a href="{{ url_for('swissport', family_id = family_id) }}">Swissport</a></button>
+            </li>
+            <li>
+                <button><a href="{{ url_for('trembl', family_id = family_id) }}">treMBL</a></button>
+            </li>
+            <li>
+                <button><a href="{{ url_for('tree', family_id = family_id) }}">Tree of SwissportL</a></button>
+            </li>
+            <li>
+                <button><a href="{{ url_for('network', family_id = family_id) }}">Network</a></button>
+            </li>
 
 
-            </ul>
-        </div>
-        <br>
-                <div class="familyInformation">
-            {{ content|safe }}
-        </div>
+        </ul>
+    </div>
+    <br>
+    <div class="familyInformation">
+        {{ content|safe }}
+    </div>
 {% endblock %}

@@ -26,7 +26,7 @@
 
         </div>
     </div>
-    <a class="btn btn-primary btn-lg btn-block" href="/swissport/{{name}}">Open Swissport for {{name}}</a>
+    <a class="btn btn-primary btn-lg btn-block" href="/swissport/{{ name }}">Open Swissport for {{ name }}</a>
     <div id="introduction">
         <p style="font-size: x-large">Tree diagrams originated in the medieval era to represent genealogical
             relationships.
@@ -55,7 +55,8 @@
             overflow: hidden;
         }
     </style>
-    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modal" id="open_tree">
+    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modal"
+            id="open_tree">
         Open Tree
     </button>
 
@@ -69,7 +70,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="treeDiagram" id="treeDiagram" style="width:100%;height:100%;overflow: hidden;border-radius: 25px;border: 1px solid #ccc!important;padding: 20px;"></div>
+                    <div class="treeDiagram" id="treeDiagram"
+                         style="width:100%;height:100%;overflow: hidden;border-radius: 25px;border: 1px solid #ccc!important;padding: 20px;"></div>
                 </div>
             </div>
         </div>
@@ -308,8 +310,7 @@
                     .style("fill", function (d) {
                         if (root["nodecolor"][children[i]["name"]]) {
                             return root["nodecolor"][children[i]["name"]]
-                        }
-                        else {
+                        } else {
                             return "blue"
                         }
                     })
@@ -317,8 +318,8 @@
             }
         }
     </script>
-        <script>
-  document.getElementById("open_tree").click();
-</script>
+    <script>
+        document.getElementById("open_tree").click();
+    </script>
 {% endblock %}
 
