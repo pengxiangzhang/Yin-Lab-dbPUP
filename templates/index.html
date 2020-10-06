@@ -52,7 +52,7 @@
                 <img src="../static/materials/characterized_protein.png" width="100%"
                      onclick="window.open('../static/characterized_protein.pdf')" alt="characterized protein">
             </picture>
-            {{ content|markdown }}
+            {{ content| safe }}
         </div>
         <div class="col-lg-4">
             <div class="page_list">

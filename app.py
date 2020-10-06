@@ -3,15 +3,13 @@ import json
 from data_analyzer import Data_analyzer
 from flask import Flask, request, send_from_directory, flash, render_template, abort
 from flask_sqlalchemy import SQLAlchemy
-from flaskext.markdown import Markdown
 from forms import ContactForm, InputForm
 from flask_mail import Mail, Message
 from models import charRecord, swiRecord, treRecord
-
+import markdown2
 # Application configurations
 
 app = Flask(__name__, static_url_path='/static')
-md = Markdown(app, extensions=['extra', 'toc', 'smarty', 'sane_lists'],extension_configs={'footnotes': ('UNIQUE_IDS','true')},safe_mode=True,output_format='html4')
 
 # read configurations
 with open('config.json') as json_file:
@@ -62,7 +60,7 @@ def index():
     name = app.config['title']
     title = ""
     c = open('content/nothing.md', 'r').read()
-    return render_template('index.html', content=c, description="", title=title, name=name)
+    return render_template('index.html', content=to_md(c), description="", title=title, name=name)
 
 
 @app.route('/evidence/<family_id>', methods=['GET', 'POST'])
@@ -259,7 +257,7 @@ def family(family_id):
     else:
         abort(404)
     
-    return render_template('family.html', family_id=family_id, amount=amount, content=c, description="", title=title,name=name)
+    return render_template('family.html', family_id=family_id, amount=amount, content=to_md(c), description="", title=title,name=name)
 
 
 @app.route("/subfamily/<family_id>")
@@ -414,7 +412,7 @@ def classes(class_id):
         name = "Unclassified (UCs) Family Classification"
     else:
         abort(404)
-    return render_template('classes.html', class_id=class_id, content=c, description="", title=title,name=name)
+    return render_template('classes.html', class_id=class_id, content=to_md(c), description="", title=title,name=name)
 
 
 @app.route("/about", methods=["GET", "POST"])
@@ -501,5 +499,9 @@ def search_record(sequence):
                 records.append(record)
 
     return records
+    
+def to_md(content):
+    return markdown2.markdown(content, extras=["footnotes","markdown-in-html","toc","tables","cuddled-lists"])
+    
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
