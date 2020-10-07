@@ -197,43 +197,41 @@ def family(family_id):
     elif family_id == 'OR3':
         pass
     elif family_id == 'OR4':
-        pass
+        amount = 4
     elif family_id == 'OR5':
-        pass
+        amount = 12
     elif family_id == 'OR6':
         pass
     elif family_id == 'OR7':
-        pass
+        amount = 5
     elif family_id == 'OR8':
-        amount = 2
+        amount = 14
     elif family_id == 'OR9':
-        pass
-    elif family_id == 'OR10':
-       pass
+        amount = 7
     elif family_id == 'FR1':
-        amount = 3
+        amount = 4
     elif family_id == 'FR2':
         pass
     elif family_id == 'FR3':
-        pass
+        amount = 4
     elif family_id == 'FR4':
-        pass
+        amount = 4
     elif family_id == 'HR1':
         pass
     elif family_id == 'HR2':
-        pass
+        amount = 3
     elif family_id == 'HR3':
-        amount = 4
+        amount = 8
     elif family_id == 'HR4':
-        amount = 2
+        amount = 9
     elif family_id == 'HR5':
-        amount = 2
+        amount = 5
     elif family_id == 'HR6':
         pass
     elif family_id == 'HR7':
-        amount = 4
+        amount = 5
     elif family_id == 'HR8':
-        amount = 2
+        amount = 6
     elif family_id == 'NCR1':
         pass
     elif family_id == 'IR1':
@@ -245,9 +243,9 @@ def family(family_id):
     elif family_id == 'TR':
         pass
     elif family_id == 'UC1':
-        pass
+        amount = 13
     elif family_id == 'UC2':
-        pass
+        amount = 8
     else:
         abort(404)
 

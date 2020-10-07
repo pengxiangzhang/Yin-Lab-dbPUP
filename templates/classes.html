@@ -14,7 +14,7 @@
         <h2>Family</h2>
         <ul class="breadcrumb" style="font-size: medium">
             {% if class_id == 'ORs' %}
-                {% for i in range(10) %}
+                {% for i in range(9) %}
                     {% set family_id = 'OR' + (i + 1)|string() %}
                     <li><a href="{{ url_for('family', family_id = family_id) }}">{{ family_id }}</a> <span
                             class="divider"></span>

@@ -93,6 +93,5 @@ For a detailed  information on class, subclass or sub-subclass of oxidoreductase
 ---
 
 ## References
-
 [^1]:Eric J. Toone (2006). Advances in Enzymology and Related Areas of Molecular Biology, Protein Evolution (Volume 75 ed.). Wiley-Interscience. ISBN 0471205036.
 [^2]:Nicholas C. Price; Lewis Stevens (1999). Fundamentals of Enzymology: The Cell and Molecular Biology of Catalytic Proteins (Third ed.). USA: Oxford University Press. ISBN 019850229X.
