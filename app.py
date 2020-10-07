@@ -5,6 +5,7 @@ from forms import ContactForm, InputForm
 from flask_mail import Mail, Message
 from models import charRecord, swiRecord, treRecord
 import markdown, json
+from datetime import datetime
 
 # Application configurations
 
@@ -62,29 +63,30 @@ def index():
     return render_template('index.html', content=to_md(c), description="", title=title, name=name)
 
 
-@app.route('/evidence/<family_id>', methods=['GET', 'POST'])
+@app.route('/evidence/<family_id>')
 def evidence(family_id):
     title = "Evidence - "
     name = "Evidence"
-    if request.method == 'POST':
-        msg = request.get_data()
-        family_id = json.loads(msg)['family_id']
-        records = swiRecord.SwiRecord.query.filter_by(family=family_id)
+    if family_id == 'all':
+        records = charRecord.CharRecord.query.all()
+        data_analyzer = Data_analyzer(records)
+        ec_link, pdb_row = data_analyzer.ec_pdb_split()
+        sub, prod = data_analyzer.substrate_product_split()
 
-        return render_template('swissport.html', records=records, description="", title=title, name=name)
     else:
-        if family_id == 'all':
-            records = charRecord.CharRecord.query.all()
-            data_analyzer = Data_analyzer(records)
-            ec_link, pdb_row = data_analyzer.ec_pdb_split()
-            sub, prod = data_analyzer.substrate_product_split()
-
-        else:
-            records = charRecord.CharRecord.query.filter_by(family=family_id)
-            data_analyzer = Data_analyzer(records)
-            ec_link, pdb_row = data_analyzer.ec_pdb_split()
-            sub, prod = data_analyzer.substrate_product_split()
-        return render_template("evidence.html", records=records, rows=pdb_row, ec=ec_link, sub=sub, product=prod,
+        records = charRecord.CharRecord.query.filter_by(family=family_id)
+        data_analyzer = Data_analyzer(records)
+        ec_link, pdb_row = data_analyzer.ec_pdb_split()
+        sub, prod = data_analyzer.substrate_product_split()
+            
+    found = False
+    for record in records:
+        found = True
+        break
+    if not found:
+        abort(404)
+    
+    return render_template("evidence.html", records=records, rows=pdb_row, ec=ec_link, sub=sub, product=prod,
                                description="", title=title, name=name)
 
 
@@ -102,6 +104,14 @@ def swissport(family_id):
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
+    
+    found = False
+    for record in records:
+        found = True
+        break
+    if not found:
+        abort(404)
+    
     return render_template('swissport.html', records=records, ec=ec_link, rows=pdb_row, description="", title=title,
                            name=name, subfamily=subfamily)
 
@@ -120,6 +130,14 @@ def trembl(family_id):
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
+    
+    found = False
+    for record in records:
+        found = True
+        break
+    if not found:
+        abort(404)
+        
     return render_template("trembl.html", family_id=family_id, records=records, ec=ec_link, rows=pdb_row,
                            description="", title=title, name=name, subfamily=subfamily)
 
@@ -134,7 +152,7 @@ def detail(unid):
     if records is None:
         records = swiRecord.SwiRecord.query.filter_by(uniq_id=unid).first()
     if records is None:
-        seq = None
+        abort(404)
     else:
         seq = records.seq
     return render_template('detail.html', seq=seq, unid=unid, description="", title=title, name=name)
@@ -145,14 +163,14 @@ def tree(family_id):
     title = "Tree - " + family_id + " - "
     name = family_id
     if family_id == 'all':
-        treeData = None
+        abort(404)
     else:
         try:
             with open('static/materials/tree/' + family_id + '.json') as f:
                 treeData = json.load(f)
         except Exception:
             treeData = None
-            return render_template('tree.html', treeData=json.dumps(treeData), description="")
+            abort(404)
     return render_template('tree.html', treeData=json.dumps(treeData), description="", title=title, name=name)
 
 
@@ -327,6 +345,7 @@ def network(family_id):
                     del edge['data']['selected']
         except Exception:
             print("error with network")
+            abort(404)
 
         return networkData
 
@@ -380,6 +399,7 @@ def network(family_id):
 
     except Exception:
         networkData = None
+        abort(404)
 
     return render_template('network.html', networkData=json.dumps(networkData), description="", title=title, name=name)
 
@@ -509,6 +529,9 @@ def search_record(sequence):
 def to_md(content):
     return markdown.markdown(content, extensions=['extra', 'toc', 'smarty', 'sane_lists'])
 
+@app.context_processor
+def inject_now():
+    return {'now': datetime.utcnow()}
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
