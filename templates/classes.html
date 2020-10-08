@@ -9,6 +9,9 @@
 
         </div>
     </div>
+    {% if class_id == 'SRs' %}
+    {% elif class_id == 'TRs'%}
+    {% else %}
     <!-- Main Content Area-->
     <div class="Family">
         <h2>Family</h2>
@@ -52,12 +55,6 @@
                             class="divider"></span>
                     </li>
                 {% endfor %}
-            {% elif class_id == 'SRs' %}
-                {% set family_id = 'SR' %}
-                <a href="{{ url_for('family', family_id = family_id) }}">{{ family_id }}</a>
-            {% elif class_id == 'TRs' %}
-                {% set family_id = 'TR' %}
-                <a href="{{ url_for('family', family_id = family_id) }}">{{ family_id }}</a>
             {% elif class_id == 'UCs' %}
                 {% for i in range(2) %}
                     {% set family_id = 'UC'+ (i + 1)|string() %}
@@ -67,6 +64,7 @@
                     </li>
                 {% endfor %}
             {% endif %}
+        {% endif %}
         </ul>
     </div>
     <br>

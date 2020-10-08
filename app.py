@@ -238,10 +238,6 @@ def family(family_id):
         pass
     elif family_id == 'IR2':
         pass
-    elif family_id == 'SR':
-        pass
-    elif family_id == 'TR':
-        pass
     elif family_id == 'UC1':
         amount = 13
     elif family_id == 'UC2':
