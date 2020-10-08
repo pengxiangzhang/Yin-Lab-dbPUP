@@ -1,27 +1,16 @@
 {% extends 'base.html' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Network{% endblock %}
 
 {% block content %}
     <div class="row">
         <div class="page-header">
-            <h3>This is network page<small>Subtext for header</small></h3>
-
+            <h3>Network for {{ name }}</h3>
         </div>
     </div>
-    <div class="familyList">
-        <h1>
-            Family List
-        </h1>
-        <ul class="breadcrumb" style="font-size: medium">
-            {% for i in range(40) %}
-                <li><a href="{{ url_for('network', family_id = i + 1) }}">{{ i + 1 }}</a> <span
-                        class="divider"></span>
-                </li>
-            {% endfor %}
 
-        </ul>
-    </div>
+    <a class="btn btn-primary btn-lg btn-block" href="/trembl/{{ name }}">Open treMBL for {{ name }}</a>
+
     <div id="introduction">
         <p style="font-size: x-large">Tree diagrams originated in the medieval era to represent genealogical
             relationships.
@@ -39,7 +28,7 @@
         <input type="submit" value="Search Node"/>
     </form>
     <div id="cy" style="width: 80%;
-        height: 700px;"></div>
+        height: 700px;border-radius: 25px;border: 1px solid #ccc!important;padding: 20px;"></div>
 
     <script>
         var networkData = JSON.parse({{networkData|tojson|safe}});
@@ -116,6 +105,3 @@
 
     </script>
 {% endblock %}
-
-
-

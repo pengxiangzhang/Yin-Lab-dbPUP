@@ -50,9 +50,13 @@ For a detailed  information on class, subclass or sub-subclass of oxidoreductase
 ## ORs Subfamily Number
 
 **OR4**: OR4_1 / OR4_2 / OR4_3 / OR4_4
+
 **OR5**: OR5_1 / OR5_2 / OR5_3 / OR5_4 / OR5_5 / OR5_6 / OR5_7 / OR5_8 / OR5_9 / OR5_10 / OR5_11 / OR5_12
+
 **OR7**: OR7_1 / OR7_2 / OR7_3 / OR7_4 / OR7_5
+
 **OR8**: OR8_1 / OR8_2 / OR8_3 / OR8_4 / OR8_5 / OR8_6 / OR8_7 / OR8_8 / OR8_9 / OR8_10 / OR8_11 / OR8_12 / OR8_13 / OR8_14
+
 **OR9**: OR9_1 / OR9_2 / OR9_3 / OR9_4 / OR9_5 / OR9_6 / OR9_7
 
 ---
@@ -89,7 +93,5 @@ For a detailed  information on class, subclass or sub-subclass of oxidoreductase
 ---
 
 ## References
-
 [^1]:Eric J. Toone (2006). Advances in Enzymology and Related Areas of Molecular Biology, Protein Evolution (Volume 75 ed.). Wiley-Interscience. ISBN 0471205036.
 [^2]:Nicholas C. Price; Lewis Stevens (1999). Fundamentals of Enzymology: The Cell and Molecular Biology of Catalytic Proteins (Third ed.). USA: Oxford University Press. ISBN 019850229X.
-

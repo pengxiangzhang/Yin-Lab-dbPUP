@@ -100,6 +100,7 @@ No InterPro results.
   </div>
 </div>
 </figure>
+
   </div>
   <div class="tab-pane fade" id="tab2" markdown="1">
 
@@ -188,6 +189,7 @@ No InterPro results.
   </div>
 </div>
 </figure>
+
   </div>
   <div class="tab-pane fade" id="tab3" markdown="1">
 
@@ -276,6 +278,7 @@ No InterPro results.
   </div>
 </div>
 </figure>
+
   </div>
   <div class="tab-pane fade" id="tab4" markdown="1">
 
@@ -364,5 +367,6 @@ No InterPro results.
   </div>
 </div>
 </figure>
+
   </div>
 </div>

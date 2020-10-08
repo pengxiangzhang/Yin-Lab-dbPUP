@@ -2,11 +2,9 @@ attrs==19.3.0
 click==7.1.2
 coverage==5.1
 Flask==1.1.2
-Flask-Markdown==0.3
 Flask-SQLAlchemy==2.4.3
 itsdangerous==1.1.0
 Jinja2==2.11.2
-Markdown==3.2.2
 MarkupSafe==1.1.1
 more-itertools==8.3.0
 packaging==20.4
@@ -22,3 +20,4 @@ Werkzeug==1.0.1
 Flask-Mail==0.9.1
 Flask-WTF==0.14.3
 email_validator==1.1.1
+markdown==3.2.2

@@ -1,60 +1,62 @@
-# <font color=#074987>Isomerization Reactions(IRs) Family Classification</font>
+# Translocation Reactions (TRs) Family Classification
 
-<div class="md-toc" mdtype="toc">
-    <p class="md-toc-content" role="list">
-        <ul>
-        <li><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n38"><a class="md-toc-inner" href="#<font color=#074987>Oxidation/Reduction Reactions (ORs) Family Classification</font>">Oxidation/Reduction Reactions (ORs) Family Classification</a></span></li>
-        	<ul>
-       			<li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n130"><a class="md-toc-inner" href="#font-color074987introductionfont">Introduction</a></span></li>
-        		<li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n48"><a class="md-toc-inner" href="#font-color074987reactionfont">Reaction</a></span></li>
-                <li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n57"><a class="md-toc-inner" href="#font-color074987pfam-informationfont">Pfam Information</a></span></li>
-                <li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n60"><a class="md-toc-inner" href="#font-color074987ors-subfamily-numberfont">ORs Subfamily Number</a></span></li>
-                <li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n63"><a class="md-toc-inner" href="#font-color074987ec-in-ors-families-sorted-by-countsfont">EC in ORs Families (sorted by counts)</a></span></li>
-                <li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n72"><a class="md-toc-inner" href="#font-color074987referencesfont">References</a></span></li>
-            </ul>
-    </ul>
-    </p>
-</div>
+[TOC]
 
-## <font color=#074987>Introduction</font>
 
-Isomerization reaction is the process by which one molecule is transformed into another molecule that has exactly the same atoms, but the atoms are rearranged<sup class="md-footnote"><a href="#dfref-footnote-1" name="ref-footnote-1">1</a></sup>. In some molecules and under some conditions, isomerization occurs spontaneously. Many isomers are equal or roughly equal in bond energy, and so exist in roughly equal amounts, provided that they can interconvert relatively freely, that is the energy barrier between the two isomers is not too high. When the isomerization occurs intramolecularly, it is considered a rearrangement reaction. Isomerases can lower the isomerization energy and thus increase the reaction rate.
+## Introduction
 
-Isomerases are sorted as **EC 5** in the EC number classification of enzymes and can be further classified into seven subclasses.
+Translocase is a general term for a protein that assists in moving another molecule, usually across a cell membrane. These enzymes catalyze the movement of ions or molecules across membranes or their separation within membranes. The reaction is designated as a transfer from “side 1” to “side 2” because the designations “in” and “out”, which had previously been used, can be ambiguous[^1]. Translocases are the most common secretion system in Gram positive bacteria.
+
+The enzyme classification and nomenclature list was first approved by the International Union of Biochemistry in 1961. Six enzyme classes have been recognized based on the type of chemical reaction catalyzed, including oxidoreductases (EC 1), transferases (EC 2), hydrolases (EC 3), lyases (EC 4), isomerases (EC 5) and ligases (EC 6). However, it was not noticed back at the time that none of these classes clearly describe an important group of enzymes, which move ions or molecules across membranes or their separation within membranes. Although the hydrolytic reaction is not the primary function, several of these enzymes are involved the hydrolysis of ATP had been previously classified as ATPases (EC 3.6.3.-). Nowadays, these enzymes have been classified under a new EC class of translocases (EC 7).
+
+Translocase are sorted as **EC 7** in the EC number classification of enzymes and can be further classified into seven subclasses.
 
 ---
 
-## <font color=#074987>Reaction</font>
+## Reaction
 
-The general form of isomerization reaction is as follows:
+The reaction most translocases catalyse is:
 
-A-B &rarr; B-A
+AX + B<sub>side 1</sub>|| = A + X + ||B<sub>side 2</sub> [^2]
 
-There is only one substrate yielding one product. This product has the same molecular formula as the substrate but differs in bond connectivity or spatial arrangement. Isomerases catalyze reactions across many biological processes, such as in glycolysis and carbohydrate metabolism.
+A clear example of an enzyme that follows this scheme is H+-transporting two-sector ATPase:
+
+ATP + H<sub>2</sub>O + 4H<sup>+</sup><sub>side 1</sub> = ADP + phosphate + 4H<sup>+</sup><sub>side 2</sub>
+
+This ATPase carries out the dephosphorylation of ATP into ADP while it transports H+ to the other side of the membrane[^3]. However, other enzymes that also fall into this category do not follow the same reaction scheme. This is the case of ascorbate ferrireductase:
+
+ascorbate<sub>side 1</sub>	+ Fe(III)<sub>side 2</sub> = monodehydroascorbate<sub>side 1</sub> + Fe(II)<sub>side 2</sub>
+
+In which the enzyme only transports an electron in the catalysation of an oxidoreductase reaction between a molecule and an inorganic cation located on different sides of the membrane[^4].
 
 For a detailed  information on class, subclass or sub-subclass of oxidoreductases, please visit [**ExplorEnz**](https://www.enzyme-database.org/class.php).
 
 ---
 
-## <font color=#074987>Pfam Information</font>
+## Pfam Information
 
-<table><thead><tr><th><span>Family Number</span></th><th><span>Characterized</span></th><th><span>Pfam</span></th></tr></thead><tbody><tr><td><span>IR1</span></td><td><a href="https://www.uniprot.org/uniprot/I7H868"><span>I7H868</span></a></td><td><a href="http://pfam.xfam.org/family/Glyoxalase_4"><span>Glyoxalase_4</span></a></td></tr><tr><td><span>IR2</span></td><td><a href="https://www.uniprot.org/uniprot/V9P0A9"><span>V9P0A9</span></a></td><td><a href="http://pfam.xfam.org/family/Chalcone_N"><span>Chalcone_N</span></a></td></tr></tbody></table>
+No pfam information.
 
 ---
 
-## <font color=#074987>IRs Subfamily Number</font>
+## TRs Subfamily Number
 
 No subfamilies are found.
 
 ---
 
-## <font color=#074987>EC in IRs Families (sorted by counts)</font>
+## EC in TRs Families (sorted by counts)
 
-**IR1**
-[4.4.1.5](https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.5); [5.1.99.1](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.99.1); [1.13.11.27](https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.27); [1.13.11.46](https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.46); [5.1.3.33](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.33)
+No EC activities.
+
 
 ---
 
-## <font color=#074987>References</font>
-<div class="footnote-line"><span class="md-fn-count">1</span> <span>Muller P. Glossary of terms used in physical organic chemistry (IUPAC Recommendations 1994)[J]. Pure and Applied Chemistry, 1994, 66(5): 1077-1184.</span> <a name="dfref-footnote-1" href="#ref-footnote-1" title="back to document" class="reversefootnote">↩</a></div>
+## References
+[^1]:"EC class 7". ExplorEnz - The Enzyme Database. Retrieved 24 October 2019.
+[^2]:Tipton K, McDonald A. A Brief Guide to Enzyme Nomenclature and Classification[J]. 2018.
+[^3]:"ExplorEnz: EC 7.1.2.2". www.enzyme-database.org. Retrieved 2019-10-24.
+[^4]:"BRENDA - Information on EC 7.2.1.3 - ascorbate ferrireductase (transmembrane)". www.brenda-enzymes.org. Retrieved 2019-10-24.
+
+
 

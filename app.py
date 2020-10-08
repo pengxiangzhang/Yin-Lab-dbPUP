@@ -1,17 +1,15 @@
-import json
-
 from data_analyzer import Data_analyzer
-from flask import Flask, request, send_from_directory, flash, render_template
+from flask import Flask, request, send_from_directory, flash, render_template, abort
 from flask_sqlalchemy import SQLAlchemy
-from flaskext.markdown import Markdown
 from forms import ContactForm, InputForm
 from flask_mail import Mail, Message
 from models import charRecord, swiRecord, treRecord
+import markdown, json
+from datetime import datetime
 
 # Application configurations
 
 app = Flask(__name__, static_url_path='/static')
-md = Markdown(app, extensions=['extra', 'toc', 'smarty', 'sane_lists'])
 
 # read configurations
 with open('config.json') as json_file:
@@ -59,41 +57,46 @@ def page_not_found(e):
 
 @app.route('/')
 def index():
+    name = app.config['title']
     title = ""
     c = open('content/nothing.md', 'r').read()
-    return render_template('index.html', content=c, description="", title=title)
+    return render_template('index.html', content=to_md(c), description="", title=title, name=name)
 
 
-@app.route('/evidence/<family_id>', methods=['GET', 'POST'])
+@app.route('/evidence/<family_id>')
 def evidence(family_id):
-    title = " - Evidence"
-    if request.method == 'POST':
-        msg = request.get_data()
-        family_id = json.loads(msg)['family_id']
-        records = swiRecord.SwiRecord.query.filter_by(family=family_id)
+    title = "Evidence - "
+    name = "Evidence"
+    if family_id == 'all':
+        records = charRecord.CharRecord.query.all()
+        data_analyzer = Data_analyzer(records)
+        ec_link, pdb_row = data_analyzer.ec_pdb_split()
+        sub, prod = data_analyzer.substrate_product_split()
 
-        return render_template('swissport.html', records=records, description="", title=title)
     else:
-        if family_id == 'all':
-            records = charRecord.CharRecord.query.all()
-            data_analyzer = Data_analyzer(records)
-            ec_link, pdb_row = data_analyzer.ec_pdb_split()
-            sub, prod = data_analyzer.substrate_product_split()
-
-        else:
-            records = charRecord.CharRecord.query.filter_by(family=family_id)
-            data_analyzer = Data_analyzer(records)
-            ec_link, pdb_row = data_analyzer.ec_pdb_split()
-            sub, prod = data_analyzer.substrate_product_split()
-        return render_template("evidence.html", records=records, rows=pdb_row, ec=ec_link, sub=sub, product=prod,
-                               description="", title=title)
+        records = charRecord.CharRecord.query.filter_by(family=family_id)
+        data_analyzer = Data_analyzer(records)
+        ec_link, pdb_row = data_analyzer.ec_pdb_split()
+        sub, prod = data_analyzer.substrate_product_split()
+            
+    found = False
+    for record in records:
+        found = True
+        break
+    if not found:
+        abort(404)
+    
+    return render_template("evidence.html", records=records, rows=pdb_row, ec=ec_link, sub=sub, product=prod,
+                               description="", title=title, name=name)
 
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
 def swissport(family_id):
-    title = " - Swissport - " + family_id
-    fname = family_id
+    title = "Swissport - " + family_id + " - "
+    name = family_id
+    subfamily = False
     if '_' in family_id:
+        subfamily = True
         records = swiRecord.SwiRecord.query.filter_by(family=family_id)
     else:
         family_id = family_id + "%"
@@ -101,16 +104,25 @@ def swissport(family_id):
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
-    return render_template('swissport.html', records=records, ec=ec_link, rows=pdb_row, fname=fname, description="",
-                           title=title)
+    
+    found = False
+    for record in records:
+        found = True
+        break
+    if not found:
+        abort(404)
+    
+    return render_template('swissport.html', records=records, ec=ec_link, rows=pdb_row, description="", title=title,
+                           name=name, subfamily=subfamily)
 
 
 @app.route('/Trembl/<family_id>', methods=['GET', 'POST'])
 def trembl(family_id):
-    title = " - Trembl - " + family_id
-    fname = family_id
-
+    title = "Trembl - " + family_id + " - "
+    name = family_id
+    subfamily = False
     if '_' in family_id:
+        subfamily = True
         records = treRecord.TreRecord.query.filter_by(family=family_id)
     else:
         family_id = family_id + "%"
@@ -118,82 +130,140 @@ def trembl(family_id):
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
-    return render_template("trembl.html", records=records, ec=ec_link, rows=pdb_row, fname=fname, description="",
-                           title=title)
+    
+    found = False
+    for record in records:
+        found = True
+        break
+    if not found:
+        abort(404)
+        
+    return render_template("trembl.html", family_id=family_id, records=records, ec=ec_link, rows=pdb_row,
+                           description="", title=title, name=name, subfamily=subfamily)
 
 
 @app.route("/detail/<unid>")
 def detail(unid):
-    title = " - Detail - " + unid
+    title = "Sequence - " + unid + " - "
+    name = "Sequence for " + unid
     records = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
     if records is None:
         records = treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
     if records is None:
         records = swiRecord.SwiRecord.query.filter_by(uniq_id=unid).first()
     if records is None:
-        seq = None
+        abort(404)
     else:
         seq = records.seq
-    return render_template('detail.html', seq=seq, unid=unid, description="", title=title)
+    return render_template('detail.html', seq=seq, unid=unid, description="", title=title, name=name)
 
 
 @app.route("/tree/<family_id>")
 def tree(family_id):
-    title = " - Tree - " + family_id
+    title = "Tree - " + family_id + " - "
+    name = family_id
     if family_id == 'all':
-        treeData = None
+        abort(404)
     else:
         try:
             with open('static/materials/tree/' + family_id + '.json') as f:
                 treeData = json.load(f)
-                print(treeData)
         except Exception:
             treeData = None
-            return render_template('tree.html', treeData=json.dumps(treeData), description="")
-    return render_template('tree.html', treeData=json.dumps(treeData), description="", title=title)
+            abort(404)
+    return render_template('tree.html', treeData=json.dumps(treeData), description="", title=title, name=name)
 
 
 @app.route("/family/<family_id>")
 def family(family_id):
-    title = " - Family - " + family_id
+    title = "Family - " + family_id + " - "
     amount = 0
-    c = open('content/nothing.md', 'r').read()
+    name = ""
+    try:
+        with open('content/family_' + family_id + '.md') as c:
+            name = get_title(c)
+            next(c)
+            c=c.read()
+    except Exception:
+        c = open('content/nothing.md', 'r').read()
+        name="null"
+        # abort(404)
+        # TODO: Delete everything with pass
+    
     if family_id == 'OR1':
-        c = open('content/family_OR1.md', 'r').read()
-    if family_id == 'OR2':
-        c = open('content/family_OR2.md', 'r').read()
-    if family_id == 'OR3':
-        c = open('content/family_OR3.md', 'r').read()
-    if family_id == 'OR4':
-        c = open('content/family_OR4.md', 'r').read()
-    if family_id == 'OR5':
-        c = open('content/family_OR1.md', 'r').read()
-    if family_id == 'FR1':
+        pass
+    elif family_id == 'OR2':
+        pass
+    elif family_id == 'OR3':
+        pass
+    elif family_id == 'OR4':
+        amount = 4
+    elif family_id == 'OR5':
+        amount = 12
+    elif family_id == 'OR6':
+        pass
+    elif family_id == 'OR7':
+        amount = 5
+    elif family_id == 'OR8':
+        amount = 14
+    elif family_id == 'OR9':
+        amount = 7
+    elif family_id == 'FR1':
+        amount = 4
+    elif family_id == 'FR2':
+        pass
+    elif family_id == 'FR3':
+        amount = 4
+    elif family_id == 'FR4':
+        amount = 4
+    elif family_id == 'HR1':
+        pass
+    elif family_id == 'HR2':
         amount = 3
-    if family_id == 'HR3':
-        amount = 4
-    if family_id == 'HR4':
-        amount = 2
-    if family_id == 'HR5':
-        amount = 2
-    if family_id == 'HR7':
-        amount = 4
-    if family_id == 'HR8':
-        amount = 2
-    if family_id == 'OR8':
-        amount = 2
-    return render_template('family.html', family_id=family_id, amount=amount, content=c, description="", title=title)
+    elif family_id == 'HR3':
+        amount = 8
+    elif family_id == 'HR4':
+        amount = 9
+    elif family_id == 'HR5':
+        amount = 5
+    elif family_id == 'HR6':
+        pass
+    elif family_id == 'HR7':
+        amount = 5
+    elif family_id == 'HR8':
+        amount = 6
+    elif family_id == 'NCR1':
+        pass
+    elif family_id == 'IR1':
+        pass
+    elif family_id == 'IR2':
+        pass
+    elif family_id == 'SR':
+        pass
+    elif family_id == 'TR':
+        pass
+    elif family_id == 'UC1':
+        amount = 13
+    elif family_id == 'UC2':
+        amount = 8
+    else:
+        abort(404)
+
+    return render_template('family.html', family_id=family_id, amount=amount, content=to_md(c), description="",
+                           title=title, name=name)
 
 
 @app.route("/subfamily/<family_id>")
 def subfamily(family_id):
-    title = " - Subfamily - " + family_id
-    return render_template('subfamily.html', family_id=family_id, description="", title=title)
+    title = "Subfamily - " + family_id + " - "
+    name = "Subfamily for " + family_id
+    return render_template('subfamily.html', family_id=family_id, description="", title=title, name=name)
 
 
 @app.route("/network/<family_id>", methods=['GET', 'POST'])
 def network(family_id):
-    title = " - Network - " + family_id
+    title = "Network - " + family_id + " - "
+    name = family_id
     if request.method == 'POST':
         msg = request.get_data()
         node_name = msg.decode("UTF-8")
@@ -247,7 +317,8 @@ def network(family_id):
                     del edge['data']['SUID']
                     del edge['data']['selected']
         except Exception:
-            print("error")
+            print("error with network")
+            abort(404)
 
         return networkData
 
@@ -301,37 +372,29 @@ def network(family_id):
 
     except Exception:
         networkData = None
+        abort(404)
 
-    return render_template('network.html', networkData=json.dumps(networkData), description="", title=title)
+    return render_template('network.html', networkData=json.dumps(networkData), description="", title=title, name=name)
 
 
 @app.route("/classes/<class_id>")
 def classes(class_id):
-    title = " - Classes - " + class_id
-    if class_id == 'HRs':
-        c = open('content/class_HRs.md', 'r').read()
-    elif class_id == 'SRs':
-        c = open('content/class_SRs.md', 'r').read()
-    elif class_id == 'FRs':
-        c = open('content/class_FRs.md', 'r').read()
-    elif class_id == 'IRs':
-        c = open('content/class_IRs.md', 'r').read()
-    elif class_id == 'NCRs':
-        c = open('content/class_NCRs.md', 'r').read()
-    elif class_id == 'ORs':
-        c = open('content/class_ORs.md', 'r').read()
-    elif class_id == 'TRs':
-        c = open('content/class_TRs.md', 'r').read()
-    elif class_id == 'UCs':
-        c = open('content/class_UCs.md', 'r').read()
-    else:
-        c = open('content/nothing.md', 'r').read()
-    return render_template('classes.html', class_id=class_id, content=c, description="", title=title)
+    title = "Classes - " + class_id + " - "
+    name = ""
+    try:
+        with open('content/class_' + class_id + '.md') as c:
+            name = get_title(c)
+            next(c)
+            c=c.read()
+    except Exception:
+        abort(404)
+    
+    return render_template('classes.html', class_id=class_id, content=to_md(c), description="", title=title, name=name)
 
 
 @app.route("/about", methods=["GET", "POST"])
 def about():
-    title = " - About us"
+    title = "About us - "
     form = ContactForm()
     if request.method == 'POST':
         if form.validate() == False:
@@ -351,10 +414,16 @@ def about():
         return render_template('about.html', form=form, title=title, description="")
 
 
+@app.route("/download")
+def download():
+    title = "Download - "
+    return render_template('download.html', title=title, description="", name="Download")
+
+
 @app.route("/blastx", methods=["GET", "POST"])
 def blastx():
     form = InputForm()
-    title = " - Blastx"
+    title = "Blastx - "
     if request.method == 'POST':
         sequence = request.form.get('id_sequences')
         file = request.form.get('id_file_text')
@@ -410,5 +479,20 @@ def search_record(sequence):
                 records.append(record)
 
     return records
+
+
+def to_md(content):
+    return markdown.markdown(content, extensions=['extra', 'toc', 'smarty', 'sane_lists'])
+
+@app.context_processor
+def inject_now():
+    return {'now': datetime.utcnow()}
+    
+def get_title(file):
+    return file.readline()[2:]
+    
+def remove_title(file):
+    print (file[1:])
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0')

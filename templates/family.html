@@ -5,24 +5,14 @@
 {% block content %}
     <div class="row">
         <div class="page-header">
-            <h3>This is family page<small>Subtext for header</small></h3>
+            <h3>{{ name }}</h3>
 
         </div>
     </div>
     <!-- Main Content Area-->
-    {% if family_id == 'all' %}
-        <div class="familyInformation">
-            <h1>Family Information</h1>
-            <p style="font-size: medium">Please go to Home page to select a family.</p>
-        </div>
-    {% endif %}
-
-    {% if family_id != 'all' %}
-        <div class="familyInformation">
-            {{ content|markdown }}
-        </div>
+    {% if amount != 0 %}
         <div class="subFamily">
-            <h1>Subfamily</h1>
+            <h2>Subfamily</h2>
             <ul class="breadcrumb" style="font-size: medium">
                 {% for i in range(amount) %}
                     {% set family_id = family_id + '_' + (i + 1)|string() %}
@@ -32,25 +22,20 @@
                 {% endfor %}
             </ul>
         </div>
-
-        <div class="familyResource">
-            <h1>Family Resource</h1>
-            <ul class="breadcrumb" style="font-size: medium">
-                <li>
-                    <button><a href="{{ url_for('swissport', family_id = family_id) }}">Swissport</a></button>
-                </li>
-                <li>
-                    <button><a href="{{ url_for('trembl', family_id = family_id) }}">treMBL</a></button>
-                </li>
-                <li>
-                    <button><a href="{{ url_for('tree', family_id = family_id) }}">Tree of SwissportL</a></button>
-                </li>
-                <li>
-                    <button><a href="{{ url_for('network', family_id = family_id) }}">Network</a></button>
-                </li>
-
-
-            </ul>
-        </div>
     {% endif %}
+    <div class="familyResource">
+        <h2>Family Sequence</h2>
+        <ul class="breadcrumb" style="font-size: medium">
+            <li>
+                <button><a href="{{ url_for('swissport', family_id = family_id) }}">Swissport</a></button>
+            </li>
+            <li>
+                <button><a href="{{ url_for('trembl', family_id = family_id) }}">treMBL</a></button>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <div class="familyInformation">
+        {{ content|safe }}
+    </div>
 {% endblock %}

@@ -8,14 +8,14 @@
 
     <div class="row">
         <div class="page-header">
-            <h3>This is home<small>Subtext for header</small></h3>
+            <h3>{{ name }}</h3>
 
         </div>
     </div>
     <div class="familyList">
-        <h1>
+        <h2>
             Class List
-        </h1>
+        </h2>
         <ul class="breadcrumb" style="font-size: medium">
             <li><a href="{{ url_for('classes', class_id = 'ORs') }}">ORs</a> <span
                     class="divider"></span>
@@ -43,6 +43,7 @@
             </li>
         </ul>
     </div>
+    <br>
     <div class="row">
         <div class="col-lg-8">
             <picture>
@@ -51,7 +52,7 @@
                 <img src="../static/materials/characterized_protein.png" width="100%"
                      onclick="window.open('../static/characterized_protein.pdf')" alt="characterized protein">
             </picture>
-            {{ content|markdown }}
+            {{ content| safe }}
         </div>
         <div class="col-lg-4">
             <div class="page_list">
