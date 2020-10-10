@@ -252,8 +252,15 @@ def family(family_id):
 @app.route("/subfamily/<family_id>")
 def subfamily(family_id):
     title = "Subfamily - " + family_id + " - "
-    name = "Subfamily for " + family_id
-    return render_template('subfamily.html', family_id=family_id, description="", title=title, name=name)
+    try:
+        with open('content/family_' + family_id + '.md') as c:
+            name = get_title(c)
+            next(c)
+            c=c.read()
+    except Exception:
+        c = open('content/nothing.md', 'r').read()
+        name = "Subfamily for " + family_id
+    return render_template('subfamily.html',content=to_md(c), family_id=family_id, description="", title=title, name=name)
 
 
 @app.route("/network/<family_id>", methods=['GET', 'POST'])

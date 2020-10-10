@@ -1,3 +1,5 @@
+#  Oxidation/Reduction Reactions (ORs) Family 3
+
 <!--[TOC]在这里不可以用-->
 
 <ul id="myTab" class="nav nav-tabs">
@@ -16,8 +18,6 @@
 <div id="myTabContent" class="tab-content" markdown="1">
   <!-- 此处的id与上文herf对应 其他的不要改-->
   <div class="tab-pane fade in active" id="tab1" markdown="1">
-
-#  Oxidation/Reduction Reactions (ORs) Family 3
 
 ##  Literature Information
 
@@ -85,11 +85,11 @@ Description:
    The TIM-barrel fold is a closed barrel structure composed of an eight-fold repeat of beta-alpha units, where the eight parallel beta strands on the inside are covered by the eight alpha helices on the outside[^11]. It is a widely distributed fold which has been found in many enzyme families that catalyse completely unrelated reactions[^12]. The active site is always found at the C-terminal end of this domain.
 
    Proteins in this entry are a variety of NADH:flavin oxidoreductase/NADH oxidase enzymes, found mostly in bacteria or fungi, that contain a TIM-barrel fold. They commonly use FMN/FAD as cofactor and include:
-    - dimethylamine dehydrogenase
-    - trimethylamine dehydrogenase
-    - 12-oxophytodienoate reductase
-    - NADPH dehydrogenase
-    - NADH oxidase
+    \* dimethylamine dehydrogenase
+    \* trimethylamine dehydrogenase
+    \* 12-oxophytodienoate reductase
+    \* NADPH dehydrogenase
+    \* NADH oxidase
 
 - **Reaction**
 
@@ -126,8 +126,6 @@ Description:
 
   </div>
   <div class="tab-pane fade" id="tab2" markdown="1">
-
-#  Oxidation/Reduction Reactions (ORs) Family 3
 
 ##  Literature Information
 
@@ -256,8 +254,6 @@ Description:
   </div>
   <div class="tab-pane fade" id="tab3" markdown="1">
 
-#  Oxidation/Reduction Reactions (ORs) Family 3
-
 ##  Literature Information
 
 | Title    | The production of S-equol from daidzein is associated with a cluster of three genes in Eggerthella sp. YY7918 |
@@ -384,8 +380,6 @@ Description:
 
   </div>
   <div class="tab-pane fade" id="tab4" markdown="1">
-
-#  Oxidation/Reduction Reactions (ORs) Family 3
 
 ##  Literature Information
 
@@ -514,8 +508,6 @@ Description:
   </div>
   <div class="tab-pane fade" id="tab5" markdown="1">
 
-#  Oxidation/Reduction Reactions (ORs) Family 3
-
 ##  Literature Information
 
 | Title    | Identification and expression of genes involved in the conversion of daidzein and genistein by the equol-forming *Slackia isoflavoniconvertens* |
@@ -624,8 +616,6 @@ Description:
 
   </div>
   <div class="tab-pane fade" id="tab6" markdown="1">
-
-#  Oxidation/Reduction Reactions (ORs) Family 3
 
 ##  Literature Information
 

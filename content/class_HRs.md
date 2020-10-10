@@ -1,23 +1,8 @@
-# <font color=#074987>Hydrolysis Reactions (HRs) Family Classification</font>
+# Hydrolysis Reactions (HRs) Family Classification
 
-<div class="md-toc" mdtype="toc">
-    <p class="md-toc-content" role="list">
-        <ul>
-        <li><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n38"><a class="md-toc-inner" href="#<font color=#074987>Hydrolysis Reactions (HRs) Family Classification</font>">Hydrolysis Reactions (HRs) Family Classification</a></span></li>
-        	<ul>
-       			<li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n130"><a class="md-toc-inner" href="#font-color074987introductionfont">Introduction</a></span></li>
-        		<li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n48"><a class="md-toc-inner" href="#font-color074987reactionfont">Reaction</a></span></li>
-                <li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n57"><a class="md-toc-inner" href="#font-color074987pfam-informationfont">Pfam Information</a></span></li>
-                <li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n60"><a class="md-toc-inner" href="#font-color074987hrs-subfamily-numberfont">HRs Subfamily Number</a></span></li>
-                <li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n63"><a class="md-toc-inner" href="#font-color074987ec-in-hrs-families-sorted-by-countsfont">EC in HRs Families (sorted by counts)</a></span></li>
-                <li><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n72"><a class="md-toc-inner" href="#font-color074987referencesfont">References</a></span></li>
-            </ul>
-    </ul>
-    </p>
-</div>
+[TOC]
 
-
-## <font color=#074987>Introduction</font>
+## Introduction
 
 Hydrolysis reactions catalyzed by hydrolases commonly break a chemical bond in order to divide a large molecule into two smaller ones. Some common examples of hydrolase enzymes are esterases including lipases, phosphatases, glycosidases, peptidases, and nucleosidases.
 
@@ -27,7 +12,7 @@ Esterases cleave ester bonds in lipids and phosphatases cleave phosphate groups 
 
 ---
 
-## <font color=#074987>Reaction</font>
+## Reaction
 
 In biochemistry, a hydrolase is an enzyme that catalyzes the hydrolysis of a chemical bond. For example, any enzyme that catalyzes the following reaction is a hydrolase:
 
@@ -40,7 +25,7 @@ For a detailed  information on class, subclass or sub-subclass of hydrolase, ple
 
 ---
 
-## <font color=#074987>Pfam Information</font>
+## Pfam Information
 
 | Family Number | Characterized                                                | Pfam                                                         |
 | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -53,7 +38,7 @@ For a detailed  information on class, subclass or sub-subclass of hydrolase, ple
 | HR7           | [Q6RCI9](https://www.uniprot.org/uniprot/Q6RCI9); [Q9S3L0](https://www.uniprot.org/uniprot/Q9S3L0); [X2CNV1](https://www.uniprot.org/uniprot/X2CNV1); [C4PG47](https://www.uniprot.org/uniprot/C4PG47); [C4PG45](https://www.uniprot.org/uniprot/C4PG45); [Q6RCI8](https://www.uniprot.org/uniprot/Q6RCI8) | [Bac_rhamnosid6H](https://pfam.xfam.org/family/Bac_rhamnosid6H) |
 | HR8           | [Q715L4](https://www.uniprot.org/uniprot/Q715L4); [B1MK49](https://www.uniprot.org/uniprot/B1MK49) | [DAPG_hydrolase](https://pfam.xfam.org/family/DAPG_hydrolase) |
 
-## <font color=#074987>HRs Subfamily Number</font>
+## HRs Subfamily Number
 
 **HR3**: HR2_1 / HR2_2 / HR2_3
 
@@ -69,7 +54,7 @@ For a detailed  information on class, subclass or sub-subclass of hydrolase, ple
 
 ---
 
-## <font color=#074987>EC in HRs Families (sorted by counts)</font>
+## EC in HRs Families (sorted by counts)
 
 **HR1**
 [3.2.1.21](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.21); [3.2.1.85](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.85); [3.2.1.147](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.147); [3.2.1.86](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.86); [3.2.1.182](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.182); [3.2.1.31](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.31); [3.2.1.62](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.62); [3.2.1.108](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.108); [3.2.1.74](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.74); [3.2.1.188](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.188); [3.2.1.161](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.161); [2.4.1.219](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.219); [3.2.1.125](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.125); [2.4.1.300](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.300); [3.2.1.175](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.175); [3.2.1.126](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.126); [3.2.1.186](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.186); [3.2.1.38](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.38); [2.4.1.299](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.299); [3.2.1.206](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.206); [3.2.1.119](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.119); [3.5.2.17](https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.2.17); [3.2.1.105](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.105)
@@ -97,7 +82,7 @@ For a detailed  information on class, subclass or sub-subclass of hydrolase, ple
 
 ---
 
-## <font color=#074987>References</font>
+## References
 
 <div class="footnote-line"><span class="md-fn-count">1</span> <span>"Hydrolase - Chemistry Encyclopedia - water, examples, molecule". www.chemistryexplained.com. Retrieved 2018-04-29.</span> <a name="dfref-footnote-1" href="#ref-footnote-1" title="back to document" class="reversefootnote">↩</a></div>
 <div class="footnote-line"><span class="md-fn-count">2</span> <span> "Hydrolase." Britannica Academic, Encyclopædia Britannica, 9 Apr. 2018. academic-eb-com.proxy.wexler.hunter.cuny.edu/levels/collegiate/article/hydrolase/41737. Accessed 29 Apr. 2018.</span> <a name="dfref-footnote-2" href="#ref-footnote-2" title="back to document" class="reversefootnote">↩</a></div>

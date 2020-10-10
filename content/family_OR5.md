@@ -1,3 +1,5 @@
+#  Oxidation/Reduction Reactions (ORs) Family 5
+
 <!--[TOC]在这里不可以用-->
 
 <ul id="myTab" class="nav nav-tabs">
@@ -14,8 +16,6 @@
 <div id="myTabContent" class="tab-content" markdown="1">
   <!-- 此处的id与上文herf对应 其他的不要改-->
   <div class="tab-pane fade in active" id="tab1" markdown="1">
-
-#  Oxidation/Reduction Reactions (ORs) Family 5
 
 ##  Literature Information
 
@@ -104,8 +104,6 @@ No InterPro results.
   </div>
   <div class="tab-pane fade" id="tab2" markdown="1">
 
-#  Oxidation/Reduction Reactions (ORs) Family 5
-
 ##  Literature Information
 
 | Title    | The production of S-equol from daidzein is associated with a cluster of three genes in Eggerthella sp. YY7918 |
@@ -193,8 +191,6 @@ No InterPro results.
   </div>
   <div class="tab-pane fade" id="tab3" markdown="1">
 
-#  Oxidation/Reduction Reactions (ORs) Family 5
-
 ##  Literature Information
 
 | Title    | Identification of an Enzyme System for Daidzein-to-Equol Conversion in *Slackia* sp. Strain NATTS |
@@ -281,8 +277,6 @@ No InterPro results.
 
   </div>
   <div class="tab-pane fade" id="tab4" markdown="1">
-
-#  Oxidation/Reduction Reactions (ORs) Family 5
 
 ##  Literature Information
 
