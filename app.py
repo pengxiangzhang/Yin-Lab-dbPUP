@@ -78,16 +78,16 @@ def evidence(family_id):
         data_analyzer = Data_analyzer(records)
         ec_link, pdb_row = data_analyzer.ec_pdb_split()
         sub, prod = data_analyzer.substrate_product_split()
-            
+
     found = False
     for record in records:
         found = True
         break
     if not found:
         abort(404)
-    
+
     return render_template("evidence.html", records=records, rows=pdb_row, ec=ec_link, sub=sub, product=prod,
-                               description="", title=title, name=name)
+                           description="", title=title, name=name)
 
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
@@ -104,14 +104,14 @@ def swissport(family_id):
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
-    
+
     found = False
     for record in records:
         found = True
         break
     if not found:
         abort(404)
-    
+
     return render_template('swissport.html', records=records, ec=ec_link, rows=pdb_row, description="", title=title,
                            name=name, subfamily=subfamily)
 
@@ -130,14 +130,14 @@ def trembl(family_id):
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
-    
+
     found = False
     for record in records:
         found = True
         break
     if not found:
         abort(404)
-        
+
     return render_template("trembl.html", family_id=family_id, records=records, ec=ec_link, rows=pdb_row,
                            description="", title=title, name=name, subfamily=subfamily)
 
@@ -183,13 +183,13 @@ def family(family_id):
         with open('content/family_' + family_id + '.md') as c:
             name = get_title(c)
             next(c)
-            c=c.read()
+            c = c.read()
     except Exception:
         c = open('content/nothing.md', 'r').read()
-        name="null"
+        name = "null"
         # abort(404)
         # TODO: Delete everything with pass
-    
+
     if family_id == 'OR1':
         pass
     elif family_id == 'OR2':
@@ -256,11 +256,12 @@ def subfamily(family_id):
         with open('content/family_' + family_id + '.md') as c:
             name = get_title(c)
             next(c)
-            c=c.read()
+            c = c.read()
     except Exception:
         c = open('content/nothing.md', 'r').read()
         name = "Subfamily for " + family_id
-    return render_template('subfamily.html',content=to_md(c), family_id=family_id, description="", title=title, name=name)
+    return render_template('subfamily.html', content=to_md(c), family_id=family_id, description="", title=title,
+                           name=name)
 
 
 @app.route("/network/<family_id>", methods=['GET', 'POST'])
@@ -388,10 +389,10 @@ def classes(class_id):
         with open('content/class_' + class_id + '.md') as c:
             name = get_title(c)
             next(c)
-            c=c.read()
+            c = c.read()
     except Exception:
         abort(404)
-    
+
     return render_template('classes.html', class_id=class_id, content=to_md(c), description="", title=title, name=name)
 
 
@@ -487,15 +488,19 @@ def search_record(sequence):
 def to_md(content):
     return markdown.markdown(content, extensions=['extra', 'toc', 'smarty', 'sane_lists'])
 
+
 @app.context_processor
 def inject_now():
     return {'now': datetime.utcnow()}
-    
+
+
 def get_title(file):
     return file.readline()[2:]
-    
+
+
 def remove_title(file):
     print (file[1:])
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
