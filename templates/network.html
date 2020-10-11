@@ -9,7 +9,7 @@
         </div>
     </div>
 
-    <a class="btn btn-primary btn-lg btn-block" href="/trembl/{{ name }}">Open treMBL for {{ name }}</a>
+    <a class="btn btn-primary btn-lg btn-block" href="/Trembl/{{ name }}">Open treMBL for {{ name }}</a>
 
     <div id="introduction">
         <p style="font-size: x-large">Tree diagrams originated in the medieval era to represent genealogical
@@ -23,85 +23,7 @@
             ancestor of life on Earth. The Open Tree of Life, first published September 2015, is a project to compile
             such a database for free publ{c access.</p>
     </div>
-    <form id="searchForm" style="margin-top: 40px; font-size: medium">
-        <input type="text" name="s" placeholder="Search by Uniprot"/>
-        <input type="submit" value="Search Node"/>
-    </form>
-    <div id="cy" style="width: 80%;
-        height: 700px;border-radius: 25px;border: 1px solid #ccc!important;padding: 20px;"></div>
 
-    <script>
-        var networkData = JSON.parse({{networkData|tojson|safe}});
 
-        drawing(networkData);
 
-        $("#searchForm").submit(function (event) {
-            event.preventDefault();
-            var $form = $(this),
-                term = $form.find('input[name="s"]').val(),
-                url = window.location.href;
-
-            $.ajax({
-                type: "post",
-                url: url,
-                data: term,
-                dataType: "json",
-                success: function (msg) {
-                    drawing(msg);
-                },
-                error: function (jqXHR, textStatus, errorThrown) {
-                    console.log(errorThrown);
-                }
-            })
-
-        });
-
-        function drawing(networkData) {
-            networkData['elements']['nodes'].forEach(node => {
-                node['data']['id'] = node['data'][0];
-                node['data']['fill_color'] = node['data'][1];
-                node['data']['name'] = node['data'][2];
-                node['data']['href'] = node['data'][3];
-            });
-            var cy = cytoscape({
-
-                container: document.getElementById('cy'),
-
-                elements: networkData['elements'],
-                hideEdgesOnViewport: true,
-                hideLabelsOnViewport: true,
-                textureOnViewport: true,
-                motionBlur: true,
-                motionBlurOpacity: 0.2,
-                wheelSensitivity: 1,
-                pixelRatio: 'auto',
-                layout: {
-                    name: 'preset'
-                },
-
-                // so we can see the ids
-                style: [
-                    {
-                        selector: 'node',
-                        style: {
-                            'background-color': 'data(fill_color)',
-                            'label': 'data(name)'
-                        }
-                    },
-                    {
-                        selector: 'edges',
-                        style: {
-                            'width': 0.1,
-                        }
-                    }
-                ]
-
-            });
-            cy.nodes().on('click', function (e) {
-                var clickedNode = e.target;
-                window.open(clickedNode.data('href'));
-            });
-        }
-
-    </script>
 {% endblock %}
