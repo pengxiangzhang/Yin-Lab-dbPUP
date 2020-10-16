@@ -3,10 +3,10 @@
 ##  Literature Information
 
 | Title    | Discovery of the curcumin metabolic pathway involving a unique enzyme in an intestinal microorganism |
-| -------- | ------------------------------------------------------------ |
+| :------- | :----------------------------------------------------------- |
 | Author   | Azam Hassaninasab, Yoshiteru Hashimoto, Kaori Tomita-Yokotani, and Michihiko Kobayashi |
 | DOI      | [10.1073/pnas.1016217108](https://doi.org/10.1073/pnas.1016217108) |
-| Abstract | Polyphenol curcumin, a yellow pigment, derived from the rhizomes of a plant (Curcuma longa Linn) is a natural antioxidant exhibiting a variety of pharmacological activities and therapeutic properties. It has long been used as a traditional medicine and as a preservative and coloring agent in foods. Here, curcumin-converting microorganisms were isolated from human feces, the one exhibiting the highest activity being identified as Escherichia coli. We are thus unique in discovering that E. coli was able to act on curcumin. The curcumin-converting enzyme was purified from E. coli and characterized. The native enzyme had a molecular mass of about 82 kDa and consisted of two identical subunits. The enzyme has a narrow substrate spectrum, preferentially acting on curcumin. The microbial metabolism of curcumin by the purified enzyme was found to comprise a two-step reduction, ==curcumin== being converted NADPH-dependently into ==an intermediate product==, ==dihydrocurcumin==, and then the end product, ==tetrahydrocurcumin==. We named this enzyme “NADPH-dependent curcumin/dihydrocurcumin reductase” (CurA). The gene (curA) encoding this enzyme was also identified. A homology search with the BLAST program revealed that a unique enzyme involved in curcumin metabolism belongs to the medium-chain dehydrogenase/reductase superfamily. |
+| Abstract | Polyphenol curcumin, a yellow pigment, derived from the rhizomes of a plant (Curcuma longa Linn) is a natural antioxidant exhibiting a variety of pharmacological activities and therapeutic properties. It has long been used as a traditional medicine and as a preservative and coloring agent in foods. Here, curcumin-converting microorganisms were isolated from human feces, the one exhibiting the highest activity being identified as Escherichia coli. We are thus unique in discovering that E. coli was able to act on curcumin. The curcumin-converting enzyme was purified from E. coli and characterized. The native enzyme had a molecular mass of about 82 kDa and consisted of two identical subunits. The enzyme has a narrow substrate spectrum, preferentially acting on curcumin. The microbial metabolism of curcumin by the purified enzyme was found to comprise a two-step reduction, <mark>curcumin</mark> being converted NADPH-dependently into <mark>an intermediate product</mark>, <mark>dihydrocurcumin</mark>, and then the end product, <mark>tetrahydrocurcumin</mark>. We named this enzyme “NADPH-dependent curcumin/dihydrocurcumin reductase” (CurA). The gene (curA) encoding this enzyme was also identified. A homology search with the BLAST program revealed that a unique enzyme involved in curcumin metabolism belongs to the medium-chain dehydrogenase/reductase superfamily. |
 
 ---
 
@@ -62,9 +62,8 @@ Description:
    Alcohol dehydrogenase ([1.1.1.1](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=1.1.1.1)) (ADH) catalyzes the reversible oxidation of alcohols to their corresponding acetaldehyde or ketone with the concomitant reduction of NAD: alcohol + NAD = aldehyde or ketone + NADH Currently three structurally and catalytically different types of alcohol dehydrogenases are known:
 
    - Zinc-containing 'long-chain' alcohol dehydrogenases. 
-
-   * Insect-type, or 'short-chain' alcohol dehydrogenases.  
-   * Iron-containing alcohol dehydrogenases. 
+   - Insect-type, or 'short-chain' alcohol dehydrogenases.  
+   - Iron-containing alcohol dehydrogenases. 
 
    Zinc-containing ADH's[^1][^2] are dimeric or tetrameric enzymes that bind two atoms of zinc per subunit. One of the zinc atom is essential for catalytic activity while the other is not. Both zinc atoms are coordinated by either cysteine or histidine residues; the catalytic zinc is coordinated by two cysteines and one histidine. Zinc-containing ADH's are found in bacteria, mammals, plants, and in fungi. In many species there is more than one isozyme (for example, humans have at least six isozymes, yeast have three, etc.). A number of other zinc-dependent dehydrogenases are closely related to zinc ADH[^3] and are included in this family.
 

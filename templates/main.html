@@ -4,8 +4,9 @@
 
 {% block content %}
     <!-- Main Content Area-->
-
-
+<style>
+.fit{  width: 100%;  height: auto; } 
+</style>
     <div class="row">
         <div class="page-header">
             <h3>{{ name }}</h3>
@@ -45,31 +46,6 @@
     </div>
     <br>
     <div class="row">
-        <div class="col-lg-8">
-            <picture>
-                <source srcset="../static/images/characterized_protein.webp" type="image/webp">
-                <source srcset="../static/images/characterized_protein.png" type="image/png">
-                <img src="../static/materials/characterized_protein.png" width="100%"
-                     onclick="window.open('../static/characterized_protein.pdf')" alt="characterized protein">
-            </picture>
             {{ content| safe }}
         </div>
-        <div class="col-lg-4">
-            <div class="page_list">
-                <ul class="list-group">
-                    <li class="list-group-item"><a href="/">Home</a></li>
-                    <li class="list-group-item"><a href="/evidence/all">Evidence</a></li>
-                    <li class="list-group-item"><a href="/swissport/all">Swiss-Prot</a></li>
-                    <li class="list-group-item"><a href="/trembl/all">TrEMBL</a></li>
-                    <li class="list-group-item"><a href="/tree/all">Phylogeny</a></li>
-                    <li class="list-group-item"><a href="/network/all">Sequence Similarity Network</a></li>
-                </ul>
-            </div>
-            <div class="reserved_list">
-                <p>
-                    In version 3.6 (June 2015), 1451 new content values for lignans have been added to the database.
-                </p>
-            </div>
-        </div>
-    </div>
 {% endblock %}

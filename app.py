@@ -16,6 +16,7 @@ with open('config.json') as json_file:
 
     # web info
     app.config['title'] = configs['website']['title']
+    app.config['FullName'] = configs['website']['FullName']
     app.config['keywords'] = configs['website']['keywords']
     app.config['RECAPTCHA_PUBLIC_KEY'] = configs['recaptcha']['RECAPTCHA_PUBLIC_KEY']
     app.config['RECAPTCHA_PRIVATE_KEY'] = configs['recaptcha']['RECAPTCHA_PRIVATE_KEY']
@@ -32,7 +33,6 @@ with open('config.json') as json_file:
 
 dtbs = SQLAlchemy(app)
 
-
 # routing
 
 @app.route('/robots.txt')
@@ -48,11 +48,24 @@ def page_not_found(e):
 
 @app.route('/')
 def index():
-    name = app.config['title']
+    name = app.config['FullName']+" ("+app.config['title']+")"
     title = ""
-    c = open('content/nothing.md', 'r').read()
-    return render_template('index.html', content=to_md(c), description="", title=title, name=name)
+    c = open('content/Homepage.md', 'r').read()
+    return render_template('main.html', content=to_md(c), description="", title=title, name=name)
+    
+@app.route('/help')
+def help():
+    name = "Help Page"
+    title = "Help - "
+    c = open('content/Helppage.md', 'r').read()
+    return render_template('main.html', content=to_md(c), description="", title=title, name=name)
 
+@app.route('/statistics')
+def statistics():
+    name = "Statistics"
+    title = "Statistics - "
+    c = open('content/Statistics_page.md', 'r').read()
+    return render_template('main.html', content=to_md(c), description="", title=title, name=name)
 
 @app.route('/evidence/<family_id>')
 def evidence(family_id):
@@ -373,7 +386,7 @@ def search_record(sequence):
 
 
 def to_md(content):
-    return markdown.markdown(content, extensions=['extra', 'toc', 'smarty', 'sane_lists'])
+    return markdown.markdown(content, extensions=['extra', 'toc', 'smarty', 'sane_lists','pymdownx.mark'])
 
 
 @app.context_processor
