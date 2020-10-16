@@ -4,9 +4,12 @@
 
 {% block content %}
     <!-- Main Content Area-->
-<style>
-.fit{  width: 100%;  height: auto; } 
-</style>
+    <style>
+        .fit {
+            width: 100%;
+            height: auto;
+        }
+    </style>
     <div class="row">
         <div class="page-header">
             <h3>{{ name }}</h3>
@@ -46,6 +49,6 @@
     </div>
     <br>
     <div class="row">
-            {{ content| safe }}
-        </div>
+        {{ content| safe }}
+    </div>
 {% endblock %}
