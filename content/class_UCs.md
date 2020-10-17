@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Sequences in this class have no significant pfams, while experiments  have strong evidences supporting their participation in polyphenol metabolism. These families are expanded by `PSI-Blast` rather than `hmmsearch` under a unified threshold (E-value < 0.001 and run until convergence). 
+Sequences in this class have no significant pfams, while experiments  have strong evidences supporting their participation in polyphenol metabolism. These families are expanded by `PSI-Blast` rather than `hmmsearch` under a unified threshold (E-value 0.001 and run until convergence). 
 
 ---
 

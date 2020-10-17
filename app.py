@@ -1,7 +1,7 @@
 from data_analyzer import Data_analyzer
 from flask import Flask, request, send_from_directory, flash, render_template, abort
 from flask_sqlalchemy import SQLAlchemy
-from forms import ContactForm, InputForm
+from forms import InputForm
 from models import charRecord, swiRecord, treRecord
 import markdown, json, glob
 from datetime import datetime
@@ -52,24 +52,60 @@ def index():
     name = app.config['FullName'] + " (" + app.config['title'] + ")"
     title = ""
     c = open('content/Homepage.md', 'r').read()
-    return render_template('main.html', content=to_md(c), description="", title=title, name=name)
+    return render_template('index.html', content=to_md(c), description="", title=title, name=name)
 
+@app.route("/about")
+def about():
+    name = ""
+    title = "About - "
+    try:
+        with open('content/About.md') as c:
+            name = get_title(c)
+            next(c)
+            c = c.read()
+    except Exception:
+        abort(404)
+    return render_template('main.html', content=to_md(c), description="", title=title, name=name)
 
 @app.route('/help')
 def help():
-    name = "Help Page"
+    name = ""
     title = "Help - "
-    c = open('content/Helppage.md', 'r').read()
+    try:
+        with open('content/Helppage.md') as c:
+            name = get_title(c)
+            next(c)
+            c = c.read()
+    except Exception:
+        abort(404)
     return render_template('main.html', content=to_md(c), description="", title=title, name=name)
 
 
 @app.route('/statistics')
 def statistics():
-    name = "Statistics"
+    name = ""
     title = "Statistics - "
-    c = open('content/Statistics_page.md', 'r').read()
+    try:
+        with open('content/Statistics_page.md') as c:
+            name = get_title(c)
+            next(c)
+            c = c.read()
+    except Exception:
+        abort(404)
     return render_template('main.html', content=to_md(c), description="", title=title, name=name)
 
+@app.route("/download")
+def download():
+    name = ""
+    title = "Download - "
+    try:
+        with open('content/download.md') as c:
+            name = get_title(c)
+            next(c)
+            c = c.read()
+    except Exception:
+        abort(404)
+    return render_template('main.html', content=to_md(c), description="", title=title, name=name)
 
 @app.route('/evidence/<family_id>')
 def evidence(family_id):
@@ -302,31 +338,6 @@ def classes(class_id):
         abort(404)
 
     return render_template('classes.html', class_id=class_id, content=to_md(c), description="", title=title, name=name)
-
-
-@app.route("/about", methods=["GET", "POST"])
-def about():
-    title = "About us - "
-    form = ContactForm()
-    if request.method == 'POST':
-        if form.validate() == False:
-            flash('All fields are required.')
-            return render_template('about.html', form=form, title=title, description="")
-        else:
-            name = request.form.get('name')
-            email = request.form.get('email')
-            subject = app.config['title'] + " Contact Form - " + request.form.get('subject')
-            contant = request.form.get('message')
-            return render_template('successful.html', title=" - Contact Form Submitted")
-    elif request.method == 'GET':
-        return render_template('about.html', form=form, title=title, description="")
-
-
-@app.route("/download")
-def download():
-    title = "Download - "
-    return render_template('download.html', title=title, description="", name="Download")
-
 
 @app.route("/blastx", methods=["GET", "POST"])
 def blastx():

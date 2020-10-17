@@ -40,11 +40,11 @@ For a detailed  information on class, subclass or sub-subclass of hydrolase, ple
 
 ## HRs Subfamily Number
 
-**HR3**: HR2_1 / HR2_2 / HR2_3
+**HR2**: HR2_1 / HR2_2 / HR2_3
 
 **HR3**: HR3_1 / HR3_2 / HR3_3 / HR3_4 / HR3_5 / HR3_6 / HR3_7 / HR3_8
 
-**HR4**: HR4_1 / HR4_10 / HR4_2 / HR4_3 / HR4_4 / HR4_6 / HR4_7 / HR4_8 / HR4_9
+**HR4**: HR4_1 / HR4_10 / HR4_2 / HR4_3 / HR4_4 / HR4_6 / HR4_7 / HR4_8 / HR4_9 / HR4_10 / HR4_11
 
 **HR5**: HR5_1 / HR5_2 / HR5_3 / HR5_4 / HR5_5
 
