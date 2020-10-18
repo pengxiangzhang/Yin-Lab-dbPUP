@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    <a class="btn btn-primary btn-lg btn-block" href="/Trembl/{{ name }}">Open treMBL for {{ name }}</a>
+    <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('trembl', family_id = name ) }}">Open treMBL for {{ name }}</a>
 
     <div id="introduction">
         <p style="font-size: x-large">Tree diagrams originated in the medieval era to represent genealogical

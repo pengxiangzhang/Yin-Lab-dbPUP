@@ -346,20 +346,27 @@ def blastx():
     if request.method == 'POST':
         sequence = request.form.get('id_sequences')
         file = request.form.get('id_file_text')
-
-        if sequence != "" and file == "":
-            records = search_record(sequence)
-
-        if len(records) > 0:
-            data_analyzer = Data_analyzer(records)
-            ec_link, pdb_row = data_analyzer.ec_pdb_split()
-            return render_template("result_blastx.html", records=records, ec=ec_link, rows=pdb_row,
-                                   description="",
-                                   title=title)
-        else:
-            flash("The sequence is not in the database.")
+        print("a"+sequence)
+        print("b"+file)
+        if form.validate() == False:
+            flash('All fields are required.')
             return render_template('blastx.html', form=form, title=title, description="")
-
+        elif sequence == "" and file == "":
+            flash('You need to at least have one input.')
+            return render_template('blastx.html', form=form, title=title, description="")
+        elif sequence != "" and file != "":
+            flash('You can only have one input.')
+            return render_template('blastx.html', form=form, title=title, description="")
+        else:
+            if len(records) > 0:
+                data_analyzer = Data_analyzer(records)
+                ec_link, pdb_row = data_analyzer.ec_pdb_split()
+                return render_template("result_blastx.html", records=records, ec=ec_link, rows=pdb_row,
+                                       description="",
+                                       title=title)
+            else:
+                flash("The sequence is not in the database.")
+                return render_template('blastx.html', form=form, title=title, description="")
     elif request.method == 'GET':
         return render_template('blastx.html', form=form, title=title, description="")
 
