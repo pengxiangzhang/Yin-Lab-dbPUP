@@ -9,7 +9,7 @@
         </div>
     </div>
     {% if not subfamily %}
-        <a class="btn btn-primary btn-lg btn-block" href="/network/{{ name }}">Open Network for {{ name }}</a>
+        <a class="btn btn-primary btn-lg btn-block" href="/network/{{ name }}">View sequence similarity network</a>
     {% endif %}
     <div class="abstractOfPage">
         <div class="informationOfGene">
@@ -36,7 +36,7 @@
                             fieldBoundary: '',
                             text: 'export',
                             exportOptions: {
-                                columns: [-2]
+                                columns: [0,1,2,3,4,5]
                             }
                         },
                         {
@@ -151,7 +151,7 @@
                         </td>
                     {% endif %}
                     <td>
-                        <a href={{ url_for('detail', unid = record.uniq_id) }}>view</a>
+                        <a href="{{ url_for('detail', unid = record.uniq_id) }}">view</a>
                     </td>
                     <td>
                         <p hidden>>{{ record.uniq_id }} {{ record.protein_enzyme }} OS={{ record.strain }}</p>

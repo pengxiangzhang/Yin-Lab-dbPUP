@@ -1,21 +1,4 @@
-<style>
-    .linerow {
-        display: table;
-        width: 100%;
-    }
-
-    .linecolumn {
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
-    }
-
-    :target {
-        padding-top: 75px;
-    }
-</style>
-<style type='text/css'>
-    @import url('/static/font/font.css');
+   @import url('/static/font/font.css');
 
     :root {
         --side-bar-bg-color: #fff;
@@ -826,25 +809,3 @@
         text-decoration: underline;
         color: white !important;
     }
-</style>
-
-<style type="text/css">
-    .container-fluid {
-        margin-left: 1em;
-        margin-right: 1em;
-    }
-
-    .container-wrap {
-        overflow: hidden;
-        overflow-x: scroll; /* 1 */
-        -webkit-backface-visibility: hidden;
-        -webkit-perspective: 1000;
-        -webkit-overflow-scrolling: touch; /* 2 */
-        text-align: justify;
-
-    /* 3 */
-    &
-    ::-webkit-scrollbar {
-        display: none;
-    }
-</style>

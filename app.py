@@ -36,11 +36,6 @@ dtbs = SQLAlchemy(app)
 
 # routing
 
-@app.route('/robots.txt')
-def static_from_root():
-    return send_from_directory(app.static_folder, request.path[1:])
-
-
 # Error Page
 @app.errorhandler(404)
 def page_not_found(e):
@@ -267,7 +262,7 @@ def family(family_id):
     elif family_id == 'HR3':
         amount = 8
     elif family_id == 'HR4':
-        amount = 9
+        amount = 11
     elif family_id == 'HR5':
         amount = 5
     elif family_id == 'HR6':

@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="keywords" content="{{ config['keywords'] }}">
     <meta name="description" content="{{ description }}">
-    <link rel="icon" href="/static/favicon.ico">
-    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='/favicon.ico') }}">
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
@@ -59,6 +58,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"
             integrity="sha512-oJp0DdQuQQrRsKVly+Ww6fAN1GwJN7d1bi8UubpEbzDUh84WrJ2CFPBnT4LqBCcfqTcHR5OGXFFhaPe3g1/bzQ=="
             crossorigin="anonymous"></script>
+     <link href="{{ url_for('static', filename='styles/custom.css') }}" rel="stylesheet">    
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet">
+   
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162166787-4"></script>

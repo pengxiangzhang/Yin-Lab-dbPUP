@@ -48,7 +48,7 @@ Users can view a rectangular phylogenetic tree, if available, by clicking the tr
 - Click any internal tree node to collapse a clade.
 - Highlighted seed id and its closed branches.
 
-![help7](../static/images/text_content/figures/help7.png){: .fit}
+<img alt="help7" src="../static/images/text_content/figures/help7.png" style="display: block; margin-left: auto;margin-right: auto;">
 
 ### SSN visualization
 
