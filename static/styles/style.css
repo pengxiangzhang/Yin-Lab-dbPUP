@@ -30,42 +30,44 @@ html {
     text-decoration: none;
 }
 
-        .fit {
-            width: 50%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-            .linerow {
-        display: table;
-        width: 100%;
-    }
+.fit {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    .linecolumn {
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
-    }
+.linerow {
+    display: table;
+    width: 100%;
+}
 
-    :target {
-        padding-top: 75px;
-    }
-    
-    .container-fluid {
-        margin-left: 1em;
-        margin-right: 1em;
-    }
+.linecolumn {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
 
-    .container-wrap {
-        overflow: hidden;
-        overflow-x: scroll; /* 1 */
-        -webkit-backface-visibility: hidden;
-        -webkit-perspective: 1000;
-        -webkit-overflow-scrolling: touch; /* 2 */
-        text-align: justify;}
+:target {
+    padding-top: 75px;
+}
 
-    /* 3 */
-    &
-    ::-webkit-scrollbar {
-        display: none;
-    }
+.container-fluid {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.container-wrap {
+    overflow: hidden;
+    overflow-x: scroll; /* 1 */
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-overflow-scrolling: touch; /* 2 */
+    text-align: justify;
+}
+
+/* 3 */
+&
+::-webkit-scrollbar {
+    display: none;
+}

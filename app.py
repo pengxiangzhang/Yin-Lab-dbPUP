@@ -49,6 +49,7 @@ def index():
     c = open('content/Homepage.md', 'r').read()
     return render_template('index.html', content=to_md(c), description="", title=title, name=name)
 
+
 @app.route("/about")
 def about():
     name = ""
@@ -61,6 +62,7 @@ def about():
     except Exception:
         abort(404)
     return render_template('main.html', content=to_md(c), description="", title=title, name=name)
+
 
 @app.route('/help')
 def help():
@@ -89,6 +91,7 @@ def statistics():
         abort(404)
     return render_template('main.html', content=to_md(c), description="", title=title, name=name)
 
+
 @app.route("/download")
 def download():
     name = ""
@@ -101,6 +104,7 @@ def download():
     except Exception:
         abort(404)
     return render_template('main.html', content=to_md(c), description="", title=title, name=name)
+
 
 @app.route('/evidence/<family_id>')
 def evidence(family_id):
@@ -333,6 +337,7 @@ def classes(class_id):
         abort(404)
 
     return render_template('classes.html', class_id=class_id, content=to_md(c), description="", title=title, name=name)
+
 
 @app.route("/blastx", methods=["GET", "POST"])
 def blastx():
