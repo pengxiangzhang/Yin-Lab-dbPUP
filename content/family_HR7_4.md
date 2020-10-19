@@ -56,29 +56,28 @@ The six-hairpin glycoside transferase domain contains up to seven alpha-hairpins
 <figure>
 <div class="linerow">
   <div class="linecolumn">
-    <img src="../static/images/chemical_structure/HR7/HR7_3/[L1]p-nitrophenyl-α-l-rhamnopyranoside.png" alt="[L1]p-nitrophenyl-α-l-rhamnopyranoside" style="width:100%">
+    <img src="../static/images/chemical_structure/HR7/HR7_4/[L1]p-nitrophenyl-α-l-rhamnopyranoside.png" alt="[L1]p-nitrophenyl-α-l-rhamnopyranoside" style="width:100%">
   </div>
   <div class="linecolumn">
     <img src="../static/images/chemical_structure/common_symbol/plus.png" alt="plus" style="width:100%">
   </div>
   <div class="linecolumn">
-    <img src="../static/images/chemical_structure/HR7/HR7_3/[L2]water.png" alt="[L2]water" style="width:100%">
+    <img src="../static/images/chemical_structure/HR7/HR7_4/[L2]water.png" alt="[L2]water" style="width:100%">
   </div>
   <div class="linecolumn">
     <img src="../static/images/chemical_structure/common_symbol/right_arrow.png" alt="right_arrow" style="width:100%">
   </div>
   <div class="linecolumn">
-    <img src="../static/images/chemical_structure/HR7/HR7_3/[R1]L-rhamnose.png" alt="[R1]L-rhamnose" style="width:100%">
+    <img src="../static/images/chemical_structure/HR7/HR7_4/[R1]l-rhamnose.png" alt="[R1]L-rhamnose" style="width:100%">
   </div>
   <div class="linecolumn">
     <img src="../static/images/chemical_structure/common_symbol/plus.png" alt="plus" style="width:100%">
   </div>
   <div class="linecolumn">
-    <img src="../static/images/chemical_structure/HR7/HR7_3/[R2]p-nitrophenyl.png" alt="[R2]p-nitrophenyl" style="width:100%">
+    <img src="../static/images/chemical_structure/HR7/HR7_4/[R2]p-nitrophenyl.png" alt="[R2]p-nitrophenyl" style="width:100%">
   </div>
 </div>
 </figure>
-
 
 ## References
 

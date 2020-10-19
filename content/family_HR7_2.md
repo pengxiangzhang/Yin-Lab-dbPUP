@@ -68,7 +68,7 @@ The six-hairpin glycoside transferase domain contains up to seven alpha-hairpins
     <img src="../static/images/chemical_structure/common_symbol/right_arrow.png" alt="right_arrow" style="width:100%">
   </div>
   <div class="linecolumn">
-    <img src="../static/images/chemical_structure/HR7/HR7_2/[R1]L-rhamnose.png" alt="[R1]L-rhamnose" style="width:100%">
+    <img src="../static/images/chemical_structure/HR7/HR7_2/[R1]l-rhamnose.png" alt="[R1]L-rhamnose" style="width:100%">
   </div>
   <div class="linecolumn">
     <img src="../static/images/chemical_structure/common_symbol/plus.png" alt="plus" style="width:100%">
@@ -78,6 +78,7 @@ The six-hairpin glycoside transferase domain contains up to seven alpha-hairpins
   </div>
 </div>
 </figure>
+
 ## References
 
 [^1]:Zverlov V V, Hertel C, Bronnenmeier K, et al. The thermostable α‐L‐rhamnosidase RamA of Clostridium stercorarium: biochemical characterization and primary structure of a bacterial α‐L‐rhamnoside hydrolase, a new type of inverting glycoside hydrolase[J]. Molecular microbiology, 2000, 35(1): 173-179.

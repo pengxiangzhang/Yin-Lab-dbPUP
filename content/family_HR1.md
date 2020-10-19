@@ -22,7 +22,7 @@
 | :------- | :----------------------------------------------------------- |
 | Author   | Kyung-Chul Shin, Hye-Yeon Choi, Min-Ju Seo & Deok-Kun Oh     |
 | DOI      | [10.4014/jmb.1208.08028](https://doi.org/10.4014/jmb.1208.08028) |
-| Abstract | Ginsenoside compound K has been used as a key nutritional and cosmetic component because of its anti-fatigue and skin anti-aging effects. β-Glycosidase from *Sulfolobus solfataricus* (SS-BGL) is known as the most efficient enzyme for compound K production. The hydrolytic pathway from ginsenoside Rb<sub>1</sub> to compound K via Rd and F2 is the most important because Rb<sub>1</sub> is the most abundant component in ginseng extract. However, the enzymatic conversion of ginsenoside Rd to F<sub>2</sub> is a limiting step in the hydrolytic pathway because of the relatively low activity for Rd. A V209 residue obtained from error-prone PCR was related to Rd-hydrolyzing activity, and a docking pose showing an interaction with Val209 was selected from numerous docking poses. W361F was obtained by rational design using the docking pose that exhibited 4.2-fold higher activity, 3.7-fold higher catalytic efficiency, and 3.1-fold lower binding energy for Rd than the wild-type enzyme, indicating that W361F compensated for the limiting step. W361F completely converted ==Rb<sub>1</sub>== to ==compound K== with a productivity of 843 mg l<sup>-1</sup> h<sup>-1</sup> in 80 min, and showed also 7.4-fold higher activity for the flavanone, hesperidin, than the wild-type enzyme. Therefore, the W361F variant SS-BGL can be useful for hydrolysis of other glycosides as well as compound K production from Rb1, and semi-rational design is a useful tool for enhancing hydrolytic activity of β-glycosidase. |
+| Abstract | Ginsenoside compound K has been used as a key nutritional and cosmetic component because of its anti-fatigue and skin anti-aging effects. β-Glycosidase from *Sulfolobus solfataricus* (SS-BGL) is known as the most efficient enzyme for compound K production. The hydrolytic pathway from ginsenoside Rb<sub>1</sub> to compound K via Rd and F2 is the most important because Rb<sub>1</sub> is the most abundant component in ginseng extract. However, the enzymatic conversion of ginsenoside Rd to F<sub>2</sub> is a limiting step in the hydrolytic pathway because of the relatively low activity for Rd. A V209 residue obtained from error-prone PCR was related to Rd-hydrolyzing activity, and a docking pose showing an interaction with Val209 was selected from numerous docking poses. W361F was obtained by rational design using the docking pose that exhibited 4.2-fold higher activity, 3.7-fold higher catalytic efficiency, and 3.1-fold lower binding energy for Rd than the wild-type enzyme, indicating that W361F compensated for the limiting step. W361F completely converted <mark>Rb<sub>1</sub></mark> to <mark>compound K</mark> with a productivity of 843 mg l<sup>-1</sup> h<sup>-1</sup> in 80 min, and showed also 7.4-fold higher activity for the flavanone, hesperidin, than the wild-type enzyme. Therefore, the W361F variant SS-BGL can be useful for hydrolysis of other glycosides as well as compound K production from Rb1, and semi-rational design is a useful tool for enhancing hydrolytic activity of β-glycosidase. |
 
 ##  Experimental results
 
@@ -60,7 +60,7 @@ Glyco_hydro_1
 
 No Pfam abstract.
 
-[**InterPro**](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR016040/)
+[**InterPro**](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR001360/)
 
 O-Glycosyl hydrolases ([3.2.1.](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=3.2.1.)) are a widespread group of enzymes that hydrolyse the glycosidic bond between two or more carbohydrates, or between a carbohydrate and a non-carbohydrate moiety. A classification system for glycosyl hydrolases, based on sequence similarity, has led to the definition of 85 different families [^1][^2]. This classification is available on the CAZy (CArbohydrate-Active EnZymes) website.
 
@@ -98,7 +98,7 @@ Glycoside hydrolase family 1 [GH1](http://www.cazy.org/fam/GH1.html) comprises e
 | :------- | :----------------------------------------------------------- |
 | Author   | So Youn Youn , Myeong Soo Park and Geun Eog Ji               |
 | DOI      | [10.4014/jmb.1208.08028](https://doi.org/10.1186/s13568-017-0487-x) |
-| Abstract | β-Glucosidase is necessary for the bioconversion of glycosidic phytochemicals in food. Two Bifidobacterium strains (*Bifidobacterium animalis* subsp. *lactis* SH5 and *B. animalis* subsp. *lactis* RD68) with relatively high β- glucosidase activities were selected among 46 lactic acid bacteria. A β-glucosidase gene (bbg572) from B. lactis was shotgun cloned, fully sequenced, and analyzed for its transcription start site, structural gene, and deduced transcriptional terminator. The structural gene of bbg572 was 1,383 bp. Based on amino sequence similarities, bbg572 was assigned to family 1 of the glycosyl hydrolases. To overexpress bbg572 in Bifidobacterium, several bifidobacteria expression vectors were constructed by combining several promoters and a terminator sequence from different *bifidobacteria*. The maximum activity of recombinant Bbg572 was achieved when it was expressed under its own promoter and terminator. Its enzyme activity increased 31-fold compared with those of its parental strains. The optimal pH for Bbg572 was pH 6.0. Bbg572 was stable at 37-40<sup>o</sup>C. It hydrolyzed ==isoflavones==, ==quercetins==, and ==disaccharides== with various β-glucoside linkages. Bbg572 also converted the ginsenosides Rb1 and Rb2. These results suggest that this new β-glucosidase-positive Bifidobacterium transformant can be utilized for the production of specific aglycone products. |
+| Abstract | β-Glucosidase is necessary for the bioconversion of glycosidic phytochemicals in food. Two Bifidobacterium strains (*Bifidobacterium animalis* subsp. *lactis* SH5 and *B. animalis* subsp. *lactis* RD68) with relatively high β- glucosidase activities were selected among 46 lactic acid bacteria. A β-glucosidase gene (bbg572) from B. lactis was shotgun cloned, fully sequenced, and analyzed for its transcription start site, structural gene, and deduced transcriptional terminator. The structural gene of bbg572 was 1,383 bp. Based on amino sequence similarities, bbg572 was assigned to family 1 of the glycosyl hydrolases. To overexpress bbg572 in Bifidobacterium, several bifidobacteria expression vectors were constructed by combining several promoters and a terminator sequence from different *bifidobacteria*. The maximum activity of recombinant Bbg572 was achieved when it was expressed under its own promoter and terminator. Its enzyme activity increased 31-fold compared with those of its parental strains. The optimal pH for Bbg572 was pH 6.0. Bbg572 was stable at 37-40<sup>o</sup>C. It hydrolyzed <mark>isoflavones</mark>, <mark>quercetins</mark>, and <mark>disaccharides</mark> with various β-glucoside linkages. Bbg572 also converted the ginsenosides Rb1 and Rb2. These results suggest that this new β-glucosidase-positive Bifidobacterium transformant can be utilized for the production of specific aglycone products. |
 
 ##  Experimental results
 
@@ -136,7 +136,7 @@ Glyco_hydro_1
 
 No Pfam abstract.
 
-[**InterPro**](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR016040/)
+[**InterPro**](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR001360/)
 
 O-Glycosyl hydrolases ([3.2.1.](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=3.2.1.)) are a widespread group of enzymes that hydrolyse the glycosidic bond between two or more carbohydrates, or between a carbohydrate and a non-carbohydrate moiety. A classification system for glycosyl hydrolases, based on sequence similarity, has led to the definition of 85 different families [^1][^2]. This classification is available on the CAZy (CArbohydrate-Active EnZymes) website.
 
@@ -219,7 +219,7 @@ Glyco_hydro_1
 
 No Pfam abstract.
 
-[**InterPro**](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR016040/)
+[**InterPro**](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR001360/)
 
 O-Glycosyl hydrolases ([3.2.1.](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=3.2.1.)) are a widespread group of enzymes that hydrolyse the glycosidic bond between two or more carbohydrates, or between a carbohydrate and a non-carbohydrate moiety. A classification system for glycosyl hydrolases, based on sequence similarity, has led to the definition of 85 different families [^1][^2]. This classification is available on the CAZy (CArbohydrate-Active EnZymes) website.
 

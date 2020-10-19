@@ -41,7 +41,7 @@ Taxonomic identifier: [702113](https://www.uniprot.org/taxonomy/702113) [[NCBI](
 
 | Source | Domain          | Start | End  | E-value (Domain) | Coverage |
 | ------ | --------------- | ----- | ---- | ---------------- | -------- |
-| Pfam-A | Glyco_hydro_106 | 47    | 945  | 3.8e-26          | 0.999    |
+| Pfam-A | Glyco_hydro_106 | 47    | 945  | 0                | 0.999    |
 
 Program: `hmmscan`
 
@@ -65,7 +65,7 @@ No InterPro results.
 
 - **Reaction**
 
-[quercitrin](https://pubchem.ncbi.nlm.nih.gov/compound/quercitrin) + [H<sub>2</sub>O](https://pubchem.ncbi.nlm.nih.gov/compound/Water) &rArr; [L-rhamnose](https://pubchem.ncbi.nlm.nih.gov/compound/L-rhamnose) + [quercetin](https://pubchem.ncbi.nlm.nih.gov/compound/quercetin)
+[naringin](https://pubchem.ncbi.nlm.nih.gov/compound/naringin) + [H<sub>2</sub>O](https://pubchem.ncbi.nlm.nih.gov/compound/Water) &rArr; [naringenin](https://pubchem.ncbi.nlm.nih.gov/compound/naringenin) + [L-rhamnose](https://pubchem.ncbi.nlm.nih.gov/compound/L-rhamnose)
 
 <figure>
 <div class="linerow">
@@ -92,6 +92,7 @@ No InterPro results.
   </div>
 </div>
 </figure>
+
 
 
 ## References
@@ -154,7 +155,7 @@ No InterPro results.
 <figure>
 <div class="linerow">
   <div class="linecolumn">
-    <img src="../static/images/chemical_structure/HR6/Q76LC4/[L1]naringin.png" alt="[L1]naringin" style="width:100%">
+    <img src="../static/images/chemical_structure/HR6/Q76LC4/[L1]quercitrin.png" alt="[L1]quercitrin" style="width:100%">
   </div>
   <div class="linecolumn">
     <img src="../static/images/chemical_structure/common_symbol/plus.png" alt="plus" style="width:100%">
@@ -166,16 +167,17 @@ No InterPro results.
     <img src="../static/images/chemical_structure/common_symbol/right_arrow.png" alt="right_arrow" style="width:100%">
   </div>
   <div class="linecolumn">
-    <img src="../static/images/chemical_structure/HR6/Q76LC4/[R1]naringenin.png" alt="[R1]naringenin" style="width:100%">
+    <img src="../static/images/chemical_structure/HR6/Q76LC4/[R1]L-rhamnose.png" alt="[R1]L-rhamnose" style="width:100%">
   </div>
   <div class="linecolumn">
     <img src="../static/images/chemical_structure/common_symbol/plus.png" alt="plus" style="width:100%">
   </div>
   <div class="linecolumn">
-    <img src="../static/images/chemical_structure/HR6/Q76LC4/[R2]L-rhamnose.png" alt="[R2]L-rhamnose" style="width:100%">
+    <img src="../static/images/chemical_structure/HR6/Q76LC4/[R2]quercetin.png" alt="[R2]quercetin" style="width:100%">
   </div>
 </div>
 </figure>
+
 
 ## References
 
