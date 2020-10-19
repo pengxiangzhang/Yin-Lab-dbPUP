@@ -3,8 +3,9 @@ from flask import Flask, request, send_from_directory, flash, render_template, a
 from flask_sqlalchemy import SQLAlchemy
 from forms import InputForm
 from models import charRecord, swiRecord, treRecord
-import markdown, json, glob
+import markdown, json, glob, os
 from datetime import datetime
+import pandas as pd
 
 # Application configurations
 
@@ -339,73 +340,33 @@ def classes(class_id):
     return render_template('classes.html', class_id=class_id, content=to_md(c), description="", title=title, name=name)
 
 
-@app.route("/blastx", methods=["GET", "POST"])
-def blastx():
+@app.route("/blast", methods=["GET", "POST"])
+def blast():
     form = InputForm()
-    title = "Blastx - "
+    title = "Blast - "
     if request.method == 'POST':
         sequence = request.form.get('id_sequences')
         file = request.form.get('id_file_text')
-        print("a"+sequence)
-        print("b"+file)
+        print(file)
         if form.validate() == False:
             flash('All fields are required.')
-            return render_template('blastx.html', form=form, title=title, description="")
+            return render_template('blast.html', form=form, title=title, description="")
         elif sequence == "" and file == "":
             flash('You need to at least have one input.')
-            return render_template('blastx.html', form=form, title=title, description="")
+            return render_template('blast.html', form=form, title=title, description="")
         elif sequence != "" and file != "":
             flash('You can only have one input.')
-            return render_template('blastx.html', form=form, title=title, description="")
+            return render_template('blast.html', form=form, title=title, description="")
         else:
-            if len(records) > 0:
-                data_analyzer = Data_analyzer(records)
-                ec_link, pdb_row = data_analyzer.ec_pdb_split()
-                return render_template("result_blastx.html", records=records, ec=ec_link, rows=pdb_row,
-                                       description="",
-                                       title=title)
-            else:
-                flash("The sequence is not in the database.")
-                return render_template('blastx.html', form=form, title=title, description="")
+            if sequence != "" and file == "":
+                query = sequence
+            elif sequence == '' and file != '':
+                query = file
+            records = blastp(query)
+            return render_template('result_blastp.html', records = records, title=title, description="")
+
     elif request.method == 'GET':
-        return render_template('blastx.html', form=form, title=title, description="")
-
-
-def search_record(sequence):
-    sequence = sequence.split(" ")[-1]
-    records = []
-
-    char_records = charRecord.CharRecord.query.filter_by(seq=sequence)
-    if char_records is not None:
-        for record in char_records:
-            records.append(record)
-
-    tre_records = treRecord.TreRecord.query.filter_by(seq=sequence)
-    if tre_records is not None:
-        for record in tre_records:
-            record.protein_name = record.protein_enzyme
-            flag = 0
-            for item in records:
-                if item.protein_name == record.protein_name:
-                    flag = 1
-                    break
-            if flag == 0:
-                records.append(record)
-
-    swi_records = swiRecord.SwiRecord.query.filter_by(seq=sequence)
-    if swi_records is not None:
-        for record in tre_records:
-            record.protein_name = record.protein_enzyme
-            flag = 0
-            for item in records:
-                if item.protein_name == record.protein_name:
-                    flag = 1
-                    break
-            if flag == 0:
-                records.append(record)
-
-    return records
-
+        return render_template('blast.html', form=form, title=title, description="")
 
 def to_md(content):
     return markdown.markdown(content, extensions=['extra', 'toc', 'smarty', 'sane_lists', 'pymdownx.mark'])
@@ -438,7 +399,60 @@ def is_subfamily(family_id):
         return True
     else:
         return False
+        
+def blastp(query):
 
+    with open('pup_blastp/search.fsa', 'w') as f:
+        f.writelines(query)
+    command = "./blast/blastp -db pup_blastp/PUP_db -query pup_blastp/search1.fsa -out pup_blastp/results.blast -outfmt 6 -evalue 1e-5 -num_threads 4"
+    # command = "./blast/blastp -db pup_blastp/PUP_db -query " + query + " -out pup_blastp/results.blast -outfmt 6 -evalue 1e-5 -num_threads 4"
+
+    os.system(command)
+    data = pd.read_csv('pup_blastp/results.blast', sep="\t", header=None)
+    index = 0
+    processed_blastp = []
+    for unid in data[1]:
+        char_record = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
+        swis_record = swiRecord.SwiRecord.query.filter_by(uniq_id=unid).first()
+        trem_record = treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
+        if char_record != None:
+            char_result = []
+            char_result.append(data[0][index])
+            char_result.append(unid)
+            char_result.append(char_record.family)
+            char_result.append(data[2][index])
+            char_result.append(data[10][index])
+            char_result.append(char_record.protein_name)
+            char_result.append(char_record.strain)
+            char_result.append("")
+            processed_blastp.append(char_result)
+        if swis_record != None:
+            swis_result = []
+            swis_result.append(data[0][index])
+            swis_result.append(unid)
+            swis_result.append(swis_record.family)
+            swis_result.append(data[2][index])
+            swis_result.append(data[10][index])
+            swis_result.append(swis_record.protein_enzyme)
+            swis_result.append(swis_record.strain)
+            swis_result.append(swis_record.web_id)
+            processed_blastp.append(swis_result)
+        if trem_record != None:
+            trem_result = []
+            trem_result.append(data[0][index])
+            trem_result.append(unid)
+            trem_result.append(trem_record.family)
+            trem_result.append(data[2][index])
+            trem_result.append(data[10][index])
+            trem_result.append(trem_record.protein_enzyme)
+            trem_result.append(trem_record.strain)
+            trem_result.append(trem_record.web_id)
+            processed_blastp.append(trem_result)
+
+        index += 1
+    # for item in processed_blastp:
+    #     print(item)
+    return processed_blastp
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
