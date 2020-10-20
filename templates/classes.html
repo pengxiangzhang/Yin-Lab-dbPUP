@@ -9,13 +9,13 @@
 
         </div>
     </div>
-    {% if class_id == 'SRs' %}
-    {% elif class_id == 'TRs' %}
-    {% else %}
         <!-- Main Content Area-->
         <div class="Family">
         <h2>Family</h2>
         <ul class="breadcrumb" style="font-size: medium">
+        {% if class_id == 'SRs' %}
+        {% elif class_id == 'TRs' %}
+         {% else %}
         {% if class_id == 'ORs' %}
             {% for i in range(9) %}
                 {% set family_id = 'OR' + (i + 1)|string() %}

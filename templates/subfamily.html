@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}subfamily{% endblock %}
 
 {% block content %}
     <div class="row">
@@ -13,13 +13,14 @@
         <h1>Subfamily Sequences</h1>
         <ul class="breadcrumb" style="font-size: medium">
             <li>
-                <button><a href="{{ url_for('swissport', family_id = family_id) }}">Swissport</a></button>
+                <button><a href="{{ url_for('swissport', family_id = family_id) }}">Swiss-Prot</a></button>
             </li>
             <li>
-                <button><a href="{{ url_for('trembl', family_id = family_id) }}">treMBL</a></button>
+                <button><a href="{{ url_for('trembl', family_id = family_id) }}">TrEMBL</a></button>
             </li>
         </ul>
     </div>
+    <br>
     <!-- Main Content Area-->
     <div class="familyInformation">
         {{ content|safe }}

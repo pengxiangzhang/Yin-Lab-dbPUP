@@ -135,7 +135,7 @@ def evidence(family_id):
 
 @app.route('/swissport/<family_id>', methods=['GET', 'POST'])
 def swissport(family_id):
-    title = "Swissport - " + family_id + " - "
+    title = "Swiss-Prot - " + family_id + " - "
     name = family_id
     subfamily = False
     if '_' in family_id:
@@ -161,7 +161,7 @@ def swissport(family_id):
 
 @app.route('/Trembl/<family_id>', methods=['GET', 'POST'])
 def trembl(family_id):
-    title = "Trembl - " + family_id + " - "
+    title = "TrEMBL - " + family_id + " - "
     name = family_id
     subfamily = False
     if '_' in family_id:
