@@ -48,7 +48,7 @@ Users can view a rectangular phylogenetic tree, if available, by clicking the tr
 - Click any internal tree node to collapse a clade.
 - Highlighted seed id and its closed branches.
 
-<img alt="help7" src="../static/images/text_content/figures/help7.png" style="display: block; margin-left: auto;margin-right: auto;">
+![help7](../static/images/text_content/figures/help7.png){: .fit}
 
 ### SSN visualization
 
@@ -76,6 +76,3 @@ All data for dbPUP are available for download. Data files for each zip file incl
 ## Statistics
 
 The Statistics page includes a basic table about current data in dbPUP.
-
-
-

@@ -57,7 +57,7 @@ Description:
 
    No Pfam abstract.
 
-   [**InterPro**](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR017941/)
+   [**InterPro**](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR013149/)
 
    Alcohol dehydrogenase ([1.1.1.1](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=1.1.1.1)) (ADH) catalyzes the reversible oxidation of alcohols to their corresponding acetaldehyde or ketone with the concomitant reduction of NAD: alcohol + NAD = aldehyde or ketone + NADH Currently three structurally and catalytically different types of alcohol dehydrogenases are known:
 

@@ -45,18 +45,10 @@ def page_not_found(e):
 
 @app.route('/')
 def index():
-
-    title = '123'
-    with open('pup_blastp/search.fsa', 'r') as f:
-        query = f.readlines()
-    records = blastp(query)
-    return render_template('result_blastp.html', records=records, title=title, description="")
-
     name = app.config['FullName'] + " (" + app.config['title'] + ")"
     title = ""
     c = open('content/Homepage.md', 'r').read()
     return render_template('index.html', content=to_md(c), description="", title=title, name=name)
-
 
 @app.route("/about")
 def about():
@@ -411,7 +403,7 @@ def blastp(query):
 
     with open('pup_blastp/search.fsa', 'w') as f:
         f.writelines(query)
-    command = "./blast/blastp -db pup_blastp/PUP_db -query pup_blastp/search.fsa -out pup_blastp/results.blast -outfmt 6 -evalue 1e-5 -num_threads 4"
+    command = "./blast/blastp -db pup_blastp/PUP_db -query pup_blastp/search.fsa -out pup_blastp/results.blast -outfmt 6 -evalue 1e-5 -num_threads 2"
     # command = "./blast/blastp -db pup_blastp/PUP_db -query " + query + " -out pup_blastp/results.blast -outfmt 6 -evalue 1e-5 -num_threads 4"
     os.system(command)
 

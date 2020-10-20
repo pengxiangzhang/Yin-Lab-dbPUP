@@ -2,7 +2,7 @@
 
 ##  Literature Information
 
-| Title    | **Physiological and biochemical characterization of the two** **α**-L-rhamnosidases of ***Lactobacillus plantarum*** **NCC245** |
+| Title    | Physiological and biochemical characterization of the two *α*-L-rhamnosidases of *Lactobacillus plantarum* NCC245 |
 | :------- | :----------------------------------------------------------- |
 | Author   | Marta Ávila, Muriel Jaquet, Deborah Moine, Teresa Requena, Carmen Peláez, Fabrizio Arigoni, Ivana Jankovic |
 | DOI      | [10.1099/mic.0.027789-0](https://doi.org/10.1099/mic.0.027789-0) |
@@ -68,7 +68,7 @@ The six-hairpin glycoside transferase domain contains up to seven alpha-hairpins
     <img src="../static/images/chemical_structure/common_symbol/right_arrow.png" alt="right_arrow" style="width:100%">
   </div>
   <div class="linecolumn">
-    <img src="../static/images/chemical_structure/HR7/HR7_3/[R1]L-rhamnose.png" alt="[R1]L-rhamnose" style="width:100%">
+    <img src="../static/images/chemical_structure/HR7/HR7_3/[R1]l-rhamnose.png" alt="[R1]L-rhamnose" style="width:100%">
   </div>
   <div class="linecolumn">
     <img src="../static/images/chemical_structure/common_symbol/plus.png" alt="plus" style="width:100%">
@@ -78,7 +78,6 @@ The six-hairpin glycoside transferase domain contains up to seven alpha-hairpins
   </div>
 </div>
 </figure>
-
 
 ## References
 

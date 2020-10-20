@@ -44,7 +44,7 @@ Amidohydro_2
 
 These proteins are amidohydrolases that are related to [PF01979](https://pfam.xfam.org/family/PF01979)[^1].
 
-[**InterPro**](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR040518/)
+[**InterPro**](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR006680/)
 
 Proteins containing this domain are enzymes from a large metal dependent hydrolase superfamily[^1]. The family includes adenine deaminase ([3.5.4.2](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=3.5.4.2)) that hydrolyses adenine to form hypoxanthine and ammonia. This reaction is important for adenine utilisation as a purine and also as a nitrogen source[^2]. The family also includes dihydroorotase and N-acetylglucosamine-6-phosphate deacetylases ([3.5.1.25](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=3.5.1.25)). The domain is also found in the urease alpha subunit, where it is the catalytic domain[^3].
 

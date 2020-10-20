@@ -38,7 +38,7 @@ Date: Mon Jul 20 14:32:16 2020
 
 Description:
 
-DAPG_hydrolase
+Alpha-amylase 
 
 [**Pfam**](https://pfam.xfam.org/family/Alpha-amylase)
 

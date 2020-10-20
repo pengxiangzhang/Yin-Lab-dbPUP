@@ -77,8 +77,6 @@ This domain is found in 2,4-diacetylphloroglucinol hydrolase PhiG present in Pse
   </div>
 </div>
 </figure>
-
-
 ## References
 
 [^1]:He Y X, Huang L, Xue Y, et al. Crystal structure and computational analyses provide insights into the catalytic mechanism of 2, 4-diacetylphloroglucinol hydrolase PhlG from Pseudomonas fluorescens[J]. Journal of Biological Chemistry, 2010, 285(7): 4603-4611.

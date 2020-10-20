@@ -121,7 +121,7 @@ Taxonomic identifier: [633697](https://www.uniprot.org/taxonomy/633697) [[NCBI](
 
 | Source | Domain       | Start | End  | E-value (Domain) | Coverage |
 | ------ | ------------ | ----- | ---- | ---------------- | -------- |
-| Pfam-A | GFO_IDH_MocA | 7     | 130  | 7.5e-21          | 0.975    |
+| Pfam-A | GFO_IDH_MocA | 4     | 128  | 1.4e-19          | 0.983    |
 
 Program: `hmmscan`
 

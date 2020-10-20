@@ -25,7 +25,7 @@
 | :------- | :----------------------------------------------------------- |
 | Author   | Y.‐N. Gao  Q.‐H. Hao  H.‐L. Zhang  B. Zhou  X.‐M. Yu  X.‐L. Wang |
 | DOI      | [10.1111/lam.12594](https://doi.org/10.1111/lam.12594)       |
-| Abstract | Soy isoflavone metabolites are currently receiving much attention due to the stronger and wider bioactivities than that of isoflavones. Therefore, biosynthesis of isoflavone metabolites by isolated isoflavone biotransforming bacteria is important. However, the biosynthesis process must be under obligate anaerobic conditions due to the reduction reactions catalysed by isoflavone biotransforming bacteria. In this study, we cloned the daidzein and genistein reductase gene (*dgr*) from *Slackia* sp. AUH‐JLC159. The recombinant *Escherichia coli* (*E. coli*) whole‐cell was used for the first time as the biocatalyst for aerobic biosynthesis of ==dihydrodaidzein (DHD)== and ==dihydrogenistein (DHG)== from soy isoflavones daidzein and genistein. Our results indicated that the recombinant *E. coli* whole‐cell was able to reduce daidzein and genistein to DHD and DHG under aerobic conditions, while the maximal concentration of the substrate daidzein or genistein that the *E. coli* whole‐cell was able to convert efficiently was only 0·4 mmol l<sup>−1</sup>. Under the optimized conditions, the maximal concentration of daidzein or genistein that the *E. coli* whole‐cell was able to convert efficiently was increased to 1·4 mmol l<sup>−1</sup>. Our results demonstrated that *E. coli* whole‐cell is an efficient biocatalyst for biosynthesis of isoflavone metabolites under aerobic conditions. |
+| Abstract | Soy isoflavone metabolites are currently receiving much attention due to the stronger and wider bioactivities than that of isoflavones. Therefore, biosynthesis of isoflavone metabolites by isolated isoflavone biotransforming bacteria is important. However, the biosynthesis process must be under obligate anaerobic conditions due to the reduction reactions catalysed by isoflavone biotransforming bacteria. In this study, we cloned the daidzein and genistein reductase gene (*dgr*) from *Slackia* sp. AUH‐JLC159. The recombinant *Escherichia coli* (*E. coli*) whole‐cell was used for the first time as the biocatalyst for aerobic biosynthesis of ==dihydrodaidzein (DHD)== and ==dihydrogenistein (DHG)== from soy isoflavones daidzein and genistein. Our results indicated that the recombinant *E. coli* whole‐cell was able to reduce daidzein and genistein to DHD and DHG under aerobic conditions, while the maximal concentration of the substrate daidzein or genistein that the *E. coli* whole‐cell was able to convert efficiently was only 0.4 mmol l<sup>−1</sup>. Under the optimized conditions, the maximal concentration of daidzein or genistein that the *E. coli* whole‐cell was able to convert efficiently was increased to 1.4 mmol l<sup>−1</sup>. Our results demonstrated that *E. coli* whole‐cell is an efficient biocatalyst for biosynthesis of isoflavone metabolites under aerobic conditions. |
 
 ##  Experimental results
 
@@ -85,11 +85,12 @@ Description:
    The TIM-barrel fold is a closed barrel structure composed of an eight-fold repeat of beta-alpha units, where the eight parallel beta strands on the inside are covered by the eight alpha helices on the outside[^11]. It is a widely distributed fold which has been found in many enzyme families that catalyse completely unrelated reactions[^12]. The active site is always found at the C-terminal end of this domain.
 
    Proteins in this entry are a variety of NADH:flavin oxidoreductase/NADH oxidase enzymes, found mostly in bacteria or fungi, that contain a TIM-barrel fold. They commonly use FMN/FAD as cofactor and include:
-    \* dimethylamine dehydrogenase
-    \* trimethylamine dehydrogenase
-    \* 12-oxophytodienoate reductase
-    \* NADPH dehydrogenase
-    \* NADH oxidase
+   
+   - dimethylamine dehydrogenase
+   - trimethylamine dehydrogenase
+   - 12-oxophytodienoate reductase
+   - NADPH dehydrogenase
+   - NADH oxidase
 
 - **Reaction**
 

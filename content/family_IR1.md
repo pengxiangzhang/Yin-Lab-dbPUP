@@ -66,7 +66,4 @@ No InterPro results.
 </div>
 </figure>
 
-[phloretin](https://pubchem.ncbi.nlm.nih.gov/compound/phloretin) + [4-Nitrophenyl sulfate](https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl%20sulfate) &rArr; [4,4'-phloretin disulfate](https://pubchem.ncbi.nlm.nih.gov/compound/122231134)
-
-
 ## References

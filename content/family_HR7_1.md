@@ -128,7 +128,7 @@ Taxonomic identifier: [1510](https://www.uniprot.org/taxonomy/1510) [[NCBI](http
 
 | Source | Domain          | Start | End  | E-value (Domain) | Coverage |
 | ------ | --------------- | ----- | ---- | ---------------- | -------- |
-| Pfam-A | Bac_rhamnosid6H | 407   | 771  | 1.2e-125         | 0.994    |
+| Pfam-A | Bac_rhamnosid6H | 407   | 755  | 5.9e-128         | 0.994    |
 
 Program: `hmmscan`
 
