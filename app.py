@@ -405,8 +405,13 @@ def blastp(query):
         f.writelines(query)
     command = "./blast/blastp -db pup_blastp/PUP_db -query pup_blastp/search.fsa -out pup_blastp/results.blast -outfmt 6 -evalue 1e-5 -num_threads 2"
     # command = "./blast/blastp -db pup_blastp/PUP_db -query " + query + " -out pup_blastp/results.blast -outfmt 6 -evalue 1e-5 -num_threads 4"
-
     os.system(command)
+
+    with open('pup_blastp/results.blast', 'r') as f:
+        data = f.readlines()
+        if len(data) == 0:
+            return []
+        
     data = pd.read_csv('pup_blastp/results.blast', sep="\t", header=None)
     index = 0
     processed_blastp = []
