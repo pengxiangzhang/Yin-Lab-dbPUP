@@ -1,5 +1,5 @@
 from data_analyzer import Data_analyzer
-from flask import Flask, request, send_from_directory, flash, render_template, abort
+from flask import Flask, request, send_from_directory, flash, render_template, abort, redirect
 from flask_sqlalchemy import SQLAlchemy
 from forms import InputForm
 from models import charRecord, swiRecord, treRecord
@@ -9,7 +9,7 @@ import pandas as pd
 
 # Application configurations
 
-app = Flask(__name__, static_url_path='/static')
+app = Flask(__name__, static_url_path='/dbpup/static')
 
 # read configurations
 with open('config.json') as json_file:
@@ -36,21 +36,23 @@ dtbs = SQLAlchemy(app)
 
 
 # routing
-
+@app.route('/')
+def hello():
+    return redirect("/dbpup/", code=302)
 # Error Page
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
 
 
-@app.route('/')
+@app.route('/dbpup/')
 def index():
     name = app.config['FullName'] + " (" + app.config['title'] + ")"
     title = ""
     c = open('content/Homepage.md', 'r').read()
     return render_template('index.html', content=to_md(c), description="", title=title, name=name)
 
-@app.route("/about")
+@app.route("/dbpup/about")
 def about():
     name = ""
     title = "About - "
@@ -64,7 +66,7 @@ def about():
     return render_template('main.html', content=to_md(c), description="", title=title, name=name)
 
 
-@app.route('/help')
+@app.route('/dbpup/help')
 def help():
     name = ""
     title = "Help - "
@@ -78,7 +80,7 @@ def help():
     return render_template('main.html', content=to_md(c), description="", title=title, name=name)
 
 
-@app.route('/statistics')
+@app.route('/dbpup/statistics')
 def statistics():
     name = ""
     title = "Statistics - "
@@ -92,7 +94,7 @@ def statistics():
     return render_template('main.html', content=to_md(c), description="", title=title, name=name)
 
 
-@app.route("/download")
+@app.route("/dbpup/download")
 def download():
     name = ""
     title = "Download - "
@@ -106,7 +108,7 @@ def download():
     return render_template('main.html', content=to_md(c), description="", title=title, name=name)
 
 
-@app.route('/evidence/<family_id>')
+@app.route('/dbpup/evidence/<family_id>')
 def evidence(family_id):
     title = "Evidence - "
     name = "Evidence"
@@ -133,7 +135,7 @@ def evidence(family_id):
                            description="", title=title, name=name)
 
 
-@app.route('/swissport/<family_id>', methods=['GET', 'POST'])
+@app.route('/dbpup/swissport/<family_id>', methods=['GET', 'POST'])
 def swissport(family_id):
     title = "Swiss-Prot - " + family_id + " - "
     name = family_id
@@ -159,7 +161,7 @@ def swissport(family_id):
                            name=name, subfamily=subfamily)
 
 
-@app.route('/Trembl/<family_id>', methods=['GET', 'POST'])
+@app.route('/dbpup/Trembl/<family_id>', methods=['GET', 'POST'])
 def trembl(family_id):
     title = "TrEMBL - " + family_id + " - "
     name = family_id
@@ -185,7 +187,7 @@ def trembl(family_id):
                            description="", title=title, name=name, subfamily=subfamily)
 
 
-@app.route("/detail/<unid>")
+@app.route("/dbpup/detail/<unid>")
 def detail(unid):
     title = "Sequence - " + unid + " - "
     name = "Sequence for " + unid
@@ -201,7 +203,7 @@ def detail(unid):
     return render_template('detail.html', seq=seq, unid=unid, description="", title=title, name=name)
 
 
-@app.route("/tree/<family_id>")
+@app.route("/dbpup/tree/<family_id>")
 def tree(family_id):
     title = "Tree - " + family_id + " - "
     name = family_id
@@ -217,7 +219,7 @@ def tree(family_id):
     return render_template('tree.html', treeData=json.dumps(treeData), description="", title=title, name=name)
 
 
-@app.route("/family/<family_id>")
+@app.route("/dbpup/family/<family_id>")
 def family(family_id):
     title = "Family - " + family_id + " - "
     amount = 0
@@ -292,7 +294,7 @@ def family(family_id):
                            title=title, name=name)
 
 
-@app.route("/subfamily/<family_id>")
+@app.route("/dbpup/subfamily/<family_id>")
 def subfamily(family_id):
     title = "Subfamily - " + family_id + " - "
     if not is_subfamily(family_id):
@@ -309,7 +311,7 @@ def subfamily(family_id):
                            name=name)
 
 
-@app.route("/network/<family_id>")
+@app.route("/dbpup/network/<family_id>")
 def network(family_id):
     title = "Network - " + family_id + " - "
     name = family_id
@@ -324,7 +326,7 @@ def network(family_id):
     return render_template('network.html', description="", finalfile=finalfile, title=title, name=name)
 
 
-@app.route("/classes/<class_id>")
+@app.route("/dbpup/classes/<class_id>")
 def classes(class_id):
     title = "Classes - " + class_id + " - "
     name = ""
@@ -339,7 +341,7 @@ def classes(class_id):
     return render_template('classes.html', class_id=class_id, content=to_md(c), description="", title=title, name=name)
 
 
-@app.route("/blast", methods=["GET", "POST"])
+@app.route("/dbpup/blast", methods=["GET", "POST"])
 def blast():
     form = InputForm()
     title = "Blast - "

@@ -45,12 +45,11 @@
     <div id="myTabContent" class="tab-content">
         <br>
         <div class="tab-pane fade in active" id="{{ name }}">
-            <img class="myimg" src="../static/images/SSN_figures/{{ name }}.jpg"
-                 data-large="../static/images/SSN_figures/{{ name }}.jpg" alt="{{ name }}">
+            <img class="myimg" src="{{ url_for('static', filename='images/SSN_figures/') }}{{ name }}.jpg">
         </div>
         {% for i in finalfile %}
             <div class="tab-pane fade" id="{{ i }}">
-                <img class="myimg" src="../static/images/SSN_figures/{{ i }}.jpg" alt="{{ i }}">
+                <img class="myimg" src="{{ url_for('static', filename='images/SSN_figures/') }}{{ i }}.jpg" alt="{{ i }}">
             </div>
         {% endfor %}
     </div>

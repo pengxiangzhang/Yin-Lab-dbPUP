@@ -20,7 +20,7 @@
                 href="#">here </a> to view an example BLAST result page. </p>
 
     <div class="container">
-        <form id="blastx-form" name="blastx-form" action="/blast" method="POST">
+        <form id="blastx-form" name="blastx-form" action="{{ url_for('blast') }}" method="POST">
             {% with messages = get_flashed_messages() %}
                 {% if messages %}
                     <ul style="color:red;" class=flashes>
