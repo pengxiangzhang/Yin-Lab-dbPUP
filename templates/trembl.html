@@ -39,13 +39,14 @@
                             }
                         },
                         {
-                            extend: 'copy',
-                            fieldBoundary: '',
-                            text: 'copy',
-                            title: '',
-                            header: '',
-                            exportOptions: {
-                                columns: [-2]
+                        extend: 'copy',
+                        fieldBoundary: '',
+                        text: 'copy',
+                        title: '',
+                        header: '\n',
+                        exportOptions: {
+                            stripNewlines: false,
+                            columns: [-2]
                             }
                         },
                         {
@@ -116,7 +117,7 @@
                 <th style="white-space: nowrap">Family</th>
                 <th style="white-space: nowrap">EC</th>
                 <th style="white-space: nowrap">Sequence</th>
-                <th style="white-space: nowrap">hidden</th>
+                <th style="white-space: nowrap"><br></th>
                 <th style="white-space: nowrap">type</th>
             </tr>
             </thead>
