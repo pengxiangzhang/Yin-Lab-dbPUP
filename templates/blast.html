@@ -31,27 +31,23 @@
                 <span style="font-size:1em;">Try <a id="id_example" href="#" style="color:blue;" value="protein"> example </a> sequences.</span>
             </div>
             {{ form.hidden_tag() }}
-            <textarea placeholder="DNA sequence in fasta format" style="min-height:100px" rows="10" name="id_sequences"
-                      id="id_sequences">
+<textarea placeholder= "DNA sequence in fasta format" style="min-height:100px" rows="10" name="id_sequences" id="id_sequences" oninput="validatePaste()">
 </textarea>
-            <br>
-            <div style="text-align:left;">
-                <label for="subject" style="color:blue"> <B> II. Or upload the sequence file. </B> </label> <br>
-                <span style="font-size: 1em;text-align:left;">File in Fasta format</span>
-                <input style="border-style: dotted;" type="file" id='id_file' name="id_file" value=""
-                       onchange='validateFasta(this.files)'/>
-                <input type="hidden" id="id_file_text" name="id_file_text">
-            </div>
-            <br>
+<br>
+	<div style="text-align:left;">
+	<label for="subject" style="color:blue"> <B> II. Or upload the sequence file. </B> </label> <br>
+	<span style="font-size: 1em;text-align:left;">File in Fasta format</span>
+	<input style="border-style: dotted;" type="file" id='id_file' name="id_file" value="" onchange='validateFasta(this.files)'/>
+	<input type="hidden" id="id_file_text" name="id_file_text">
+</div>
+<br>
             {{ form.recaptcha(class="form-control") }}
         </form>
-        {% for message in form.recaptcha.errors %}
-            <div style="color:red;">{{ message }}</div>
-        {% endfor %}
-        <a class="btn btn-primary"
-           onclick="document.getElementById('id_file').value = ''; document.getElementById('blastx-form').submit();">Run
-            Blast</a>
-    <a id="pp" name="pp"></a>
+                {% for message in form.recaptcha.errors %}
+                    <div style="color:red;">{{ message }}</div>
+                {% endfor %}
+            <a class="btn btn-primary" onclick="document.getElementById('id_file').value = ''; document.getElementById('blastx-form').submit();">Run Blastx</a>
+
         <script type="text/javascript">
             function validatePaste() {
                 var text = document.getElementById("id_sequences").value;
@@ -115,6 +111,7 @@
                     }
                     if (seqs[0].length == 0) { //first array should be empty
                         seqs.shift();
+                        
                     } else {                   //there was stuff before first >
                         validFasta = false;
                         alert("File is not in FASTA format. There should be no data above the first header.");
@@ -130,20 +127,6 @@
                             return;
                         }
                     }
-                    prot = false;
-                    for (var i = 0; i < seqs.length; i++) {
-                        for (var j = 1; j < seqs[i].length; j++) {
-                            if (seqs[i][j].search(/[BDEFHIJKLMOPQRSUVWXYZ0123456789\s]/i) != -1) {
-                                //if(seqs[i][j].search(/[BDEFHIJKLMNOPQRSUVWXYZ0123456789\s]/i) != -1){
-                                validFasta = false;
-                                document.getElementById("file_spinner").hidden = true;
-                                alert("Illegal characters found in sequences. Nucleotides sequences can only contain A, T, C, G, or N characters.");
-                                f.value = "";
-                                return;
-                            }
-                        }
-                    }
-                    alert(text);
                     document.getElementById('id_file_text').value = text;
                 }
                 reader.readAsText(file)
@@ -199,5 +182,6 @@
                 })
             })
         </script>
+        </div>
 
 {% endblock %}

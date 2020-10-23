@@ -61,7 +61,7 @@ Proteins containing this domain are enzymes from a large metal dependent hydrola
     <img src="../static/images/chemical_structure/common_symbol/right_arrow.png" alt="right_arrow" style="width:100%">
   </div>
   <div class="linecolumn">
-    <img src="../static/images/chemical_structure/NCR1/[R1]2,6-Dihydroxy-4-[(E)-2-(4-hydroxyphenyl)ethenyl]benzoic acid.png.png" alt="[R1]2,6-Dihydroxy-4-[(E)-2-(4-hydroxyphenyl)ethenyl]benzoic acid.png" style="width:100%">
+    <img src="../static/images/chemical_structure/NCR1/[R1]2,6-Dihydroxy-4-[(E)-2-(4-hydroxyphenyl)ethenyl]benzoic acid.png" alt="[R1]2,6-Dihydroxy-4-[(E)-2-(4-hydroxyphenyl)ethenyl]benzoic acid.png" style="width:100%">
   </div>
 </div>
 </figure>

@@ -285,9 +285,14 @@ def network(family_id):
         subfile = (glob.glob('static/images/SSN_figures/' + family_id + '_??.jpg'))
     if subfile == [] and mainfile == []:
         abort(404)
+    try:
+        with open('content/ssn_page.md') as c:
+            c = c.read()
+    except Exception:
+        abort(404)
     finalfile = [s[26:][:-4] for s in subfile]
 
-    return render_template('network.html', description="", finalfile=finalfile, title=title, name=name)
+    return render_template('network.html', content=to_md(c), description="", finalfile=finalfile, title=title, name=name)
 
 
 @app.route("/dbpup/classes/<class_id>")
@@ -341,6 +346,7 @@ def blast():
     if request.method == 'POST':
         sequence = request.form.get('id_sequences')
         file = request.form.get('id_file_text')
+        print(file)
         if form.validate() == False:
             flash('All fields are required.')
             return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
