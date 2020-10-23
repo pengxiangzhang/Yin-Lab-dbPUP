@@ -9,7 +9,7 @@
 
 <div class="container">
     <h4>Characterization Data</h4>
-    <a href="/static/Download/Characterization.tar.gz" download>
+    <a href="./static/Download/Characterization.tar.gz" download>
         <button type="button" class="btn btn-primary float-right">Download</button>
     </a>
 </div>
@@ -18,7 +18,7 @@
 
 <div class="container">
     <h4>Sequence Similarity Network</h4>
-    <a href="/static/Download/Sequence_Similarity_Network.tar.gz" download>
+    <a href="./static/Download/Sequence_Similarity_Network.tar.gz" download>
         <button type="button" class="btn btn-primary float-right">Download
         </button>
     </a>
@@ -28,7 +28,7 @@
 
 <div class="container">
     <h4>SwissProt Data</h4>
-    <a href="/static/Download/Swiss-Prot.tar.gz" download>
+    <a href="./static/Download/Swiss-Prot.tar.gz" download>
         <button type="button" class="btn btn-primary float-right">Download</button>
     </a>
 </div>
@@ -37,7 +37,7 @@
 
 <div class="container">
     <h4>TrEMBL Data</h4>
-    <a href="/static/Download/TrEMBL.tar.gz" download>
+    <a href="./static/Download/TrEMBL.tar.gz" download>
         <button type="button" class="btn btn-primary float-right">Download</button>
     </a>
 </div>

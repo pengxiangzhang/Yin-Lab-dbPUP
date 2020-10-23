@@ -6,19 +6,15 @@
 
     <div class="row">
         <div class="page-header">
-            <h3>Blastx</h3>
+            <h3>{{name}}</h3>
 
         </div>
     </div>
-    <h1> Introduction to <span style="color:#000BFF"> BLAST </span> service on dbCAN-PUL database.</h1>
 
-    <p> We have curated 602 CAZyme-containing gene clusters that have been experimentally validated to act on a
-        carbohydrate substrate. Here, we provide an integrated BLAST service to find homologous genes and gene clusters
-        in dbCAN-PUL and infer a putative substrate with your <span style="color:red"> DNA sequences </span>.If you
-        would like to predict CAZyme-containing gene clusters with protein sequences, please use our <a
-                href="http://bcb.unl.edu/dbCAN2/blast.php"> dbCAN2 </a> service with CGCFinder. Click <a
-                href="#">here </a> to view an example BLAST result page. </p>
-
+    <div class="familyInformation">
+        {{ content|safe }}
+    </div>
+    <br>
     <div class="container">
         <form id="blastx-form" name="blastx-form" action="{{ url_for('blast') }}" method="POST">
             {% with messages = get_flashed_messages() %}

@@ -22,13 +22,13 @@ Proteins in Evidence (seeds) are classified into corresponding class based on th
 
 &#9658;​ [**Unclassified (UCs)**](/classes/UCs)
 
-![family_count](../static/images/text_content/figures/family_count.jpg){: .fit}
+![family_count](./static/images/text_content/figures/family_count.jpg){: .fit}
 
 ## Family
 
 Initially, Pfams were filtered out if they cannot individually prove their essential for biocatalysis of polyphenol. Subsequently, proteins in same class were further classified into different families based on Pfams in their sequences. Family then were extend by search against Swiss-Prot and TrEMBL datasets using `HMMER`. An approximately-maximum-likelihood phylogenetic tree was constructed (`FastTree`2.1.11) for sequences from Swiss-Prot in each family.  Sequences collected from TrEMBL were further filtered out by `PIS-BLAST` with a unified threshold  (E-value 0.001 and iteration number 5).
 
-![characterized_protein](../static/images/text_content/figures/characterized_protein.jpg){: .fit}
+![characterized_protein](./static/images/text_content/figures/characterized_protein.jpg){: .fit}
 
 ## Subfamily
 

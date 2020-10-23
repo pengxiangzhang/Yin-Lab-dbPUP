@@ -328,7 +328,9 @@ No InterPro results.
 
 - **Reaction**
 
-[dihydrodaidzein](https://pubchem.ncbi.nlm.nih.gov/compound/dihydrodaidzein) + [NADPH](https://pubchem.ncbi.nlm.nih.gov/compound/5884) + [H<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/1038) &rArr; [tetrahydrodaidzein](https://pubchem.ncbi.nlm.nih.gov/compound/tetrahydrodaidzein) + [NADP<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/15938972)
+*Recombined with [M9P0B3](https://www.uniprot.org/uniprot/M9P0B3)*
+
+[dihydrodaidzein](https://pubchem.ncbi.nlm.nih.gov/compound/dihydrodaidzein) &rArr; [equol](https://pubchem.ncbi.nlm.nih.gov/compound/equol)
 
 <figure>
 <div class="linerow">
@@ -336,31 +338,14 @@ No InterPro results.
     <img src="../static/images/chemical_structure/OR5/M9NYU8/[L1]dihydrodaidzein.png" alt="[L1]dihydrodaidzein" style="width:100%">
   </div>
   <div class="linecolumn">
-    <img src="../static/images/chemical_structure/common_symbol/plus.png" alt="plus" style="width:100%">
-  </div>
-  <div class="linecolumn">
-    <img src="../static/images/chemical_structure/OR5/M9NYU8/[L2]NADPH.png" alt="nadph" style="width:100%">
-  </div>
-  <div class="linecolumn">
-    <img src="../static/images/chemical_structure/common_symbol/plus.png" alt="plus" style="width:100%">
-  </div>
-  <div class="linecolumn">
-    <img src="../static/images/chemical_structure/OR5/M9NYU8/[L3]hydrogen cation.png" alt="h+" style="width:100%">
-  </div>
-  <div class="linecolumn">
     <img src="../static/images/chemical_structure/common_symbol/right_arrow.png" alt="right_arrow" style="width:100%">
   </div>
   <div class="linecolumn">
     <img src="../static/images/chemical_structure/OR5/M9NYU8/[R1]equol.png" alt="[R1]equol" style="width:100%">
   </div>
-  <div class="linecolumn">
-    <img src="../static/images/chemical_structure/common_symbol/plus.png" alt="plus" style="width:100%">
-  </div>
-  <div class="linecolumn">
-    <img src="../static/images/chemical_structure/OR5/M9NYU8/[R2]NADP+.png" alt="nadp+" style="width:100%">
-  </div>
 </div>
 </figure>
+
 
   </div>
 </div>

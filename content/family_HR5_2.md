@@ -67,6 +67,8 @@ The oxidoreductase, N-terminal domain is almost always associated with the oxido
 
 - **Reaction**
 
+*Recombined with [A0A0E3TKF2](https://www.uniprot.org/uniprot/A0A0E3TKF2)*
+
 [daidzin](https://pubchem.ncbi.nlm.nih.gov/compound/107971
 ) &rArr; [daidzein](https://pubchem.ncbi.nlm.nih.gov/compound/daidzein) + [glucose](https://pubchem.ncbi.nlm.nih.gov/compound/glucose)
 
@@ -146,6 +148,8 @@ This group of enzymes utilise NADP or NAD, and is known as the GFO/IDH/MOCA fami
 The oxidoreductase, N-terminal domain is almost always associated with the oxidoreductase, C-terminal domain (see [IPR004104](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR004104/)).
 
 - **Reaction**
+
+*Catalyse  reaction with expression of  [I5AX46](https://www.uniprot.org/uniprot/I5AX46)/[I5AX47](https://www.uniprot.org/uniprot/I5AX47)/[I5AX48](https://www.uniprot.org/uniprot/I5AX48)/[I5AX49](https://www.uniprot.org/uniprot/I5AX49)/[I5AX50](https://www.uniprot.org/uniprot/I5AX50) simultaneously*
 
 [daidzin](https://pubchem.ncbi.nlm.nih.gov/compound/107971
 ) &rArr; [daidzein](https://pubchem.ncbi.nlm.nih.gov/compound/daidzein) + [glucose](https://pubchem.ncbi.nlm.nih.gov/compound/glucose)

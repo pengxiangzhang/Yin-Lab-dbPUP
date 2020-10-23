@@ -62,17 +62,29 @@ No Pfam abstract.
 [**InterPro**](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR016040/)
 
 This entry represents NAD- and NADP-binding domains with a core Rossmann-type fold, which consists of 3-layers alpha/beta/alpha, where the six beta strands are parallel in the order 321456. Many different enzymes contain an NAD/NADP-binding domain, including:
+
  &triangleright;C-terminal domain of alcohol dehydrogenases[^1]
+
  &triangleright;Tyrosine-dependent oxidoreductases (also known as short-chain dehydrogenases)[^2]
+
  &triangleright;N-terminal domain of glyceraldehyde-3-phosphate dehydrogenase[^3]
+
  &triangleright;NAD-binding domain of formate/glycerate dehydrogenases[^4]
+
  &triangleright;N-terminal domain of sirohaem synthase[^5]
+
  &triangleright;N-terminal domain of lactate dehydrogenase[^6]
+
  &triangleright;N-terminal domain of 6-phosphogluconate dehydrogenase (the beta-sheet is extended to 8 strands)[^7]
+
  &triangleright;C-terminal domain of amino acid dehydrogenases (an extra N-terminal helix displaces the C-terminal helix[^8]
+
  &triangleright;NAD-binding domain of certain potassium channels[^9]
+
  &triangleright;C-terminal domain of the transcriptional repressor Rex[^10]
+
  &triangleright;Ornithine cyclodeaminase[^11]
+
  &triangleright;CoA-binding N-terminal domain of the alpha chain of succinyl-CoA synthetase[^12]
 
 - **Reaction**
@@ -176,17 +188,29 @@ No Pfam abstract.
 [**InterPro**](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR016040/)
 
 This entry represents NAD- and NADP-binding domains with a core Rossmann-type fold, which consists of 3-layers alpha/beta/alpha, where the six beta strands are parallel in the order 321456. Many different enzymes contain an NAD/NADP-binding domain, including:
+
  &triangleright;C-terminal domain of alcohol dehydrogenases[^1]
+
  &triangleright;Tyrosine-dependent oxidoreductases (also known as short-chain dehydrogenases)[^2]
+
  &triangleright;N-terminal domain of glyceraldehyde-3-phosphate dehydrogenase[^3]
+
  &triangleright;NAD-binding domain of formate/glycerate dehydrogenases[^4]
+
  &triangleright;N-terminal domain of sirohaem synthase[^5]
+
  &triangleright;N-terminal domain of lactate dehydrogenase[^6]
+
  &triangleright;N-terminal domain of 6-phosphogluconate dehydrogenase (the beta-sheet is extended to 8 strands)[^7]
+
  &triangleright;C-terminal domain of amino acid dehydrogenases (an extra N-terminal helix displaces the C-terminal helix[^8]
+
  &triangleright;NAD-binding domain of certain potassium channels[^9]
+
  &triangleright;C-terminal domain of the transcriptional repressor Rex[^10]
+
  &triangleright;Ornithine cyclodeaminase[^11]
+
  &triangleright;CoA-binding N-terminal domain of the alpha chain of succinyl-CoA synthetase[^12]
 
 - **Reaction**

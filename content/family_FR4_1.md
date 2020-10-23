@@ -56,49 +56,35 @@ This entry includes prenyltransferase-like proteins, including:
 
 - **Reaction**
 
-[phloretin](https://pubchem.ncbi.nlm.nih.gov/compound/phloretin) + [4-Nitrophenyl sulfate](https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl%20sulfate) &rArr; [monosulfate](https://pubchem.ncbi.nlm.nih.gov/compound/122231132)  
+[4-hydroxyphenylpyruvate](https://pubchem.ncbi.nlm.nih.gov/compound/4-hydroxyphenylpyruvate) + [dimethylallyl diphosphate](https://pubchem.ncbi.nlm.nih.gov/compound/647) &rArr; [diphosphate](https://pubchem.ncbi.nlm.nih.gov/compound/644102) + [3-dimethylallyl-4-hydroxyphenylpyruvate](https://pubchem.ncbi.nlm.nih.gov/compound/3-dimethylallyl-4-hydroxyphenylpyruvate)  
 
 <figure>
 <div class="linerow">
   <div class="linecolumn">
-    <img src="../static/images/chemical_structure/FR3/[L1]phloretin.png" alt="[L1]phloretin" style="width:100%">
+    <img src="../static/images/chemical_structure/FR4/[L1]4-hydroxyphenylpyruvate.png" alt="[L1]4-hydroxyphenylpyruvate" style="width:100%">
   </div>
   <div class="linecolumn">
     <img src="../static/images/chemical_structure/common_symbol/plus.png" alt="plus" style="width:100%">
   </div>
   <div class="linecolumn">
-    <img src="../static/images/chemical_structure/FR3/[L2]4-Nitrophenyl sulfate.png" alt="[L2]4-Nitrophenyl sulfate" style="width:100%">
+    <img src="../static/images/chemical_structure/FR4/[L2]dimethylallyl diphosphate.png" alt="[L2]dimethylallyl diphosphate" style="width:100%">
   </div>
   <div class="linecolumn">
     <img src="../static/images/chemical_structure/common_symbol/right_arrow.png" alt="right_arrow" style="width:100%">
   </div>
   <div class="linecolumn">
-    <img src="../static/images/chemical_structure/FR3/[R1]4-phloretin monosulfate.png" alt="[R1]4-phloretin monosulfate" style="width:100%">
-  </div>
-</div>
-</figure>
-[phloretin](https://pubchem.ncbi.nlm.nih.gov/compound/phloretin) + [4-Nitrophenyl sulfate](https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl%20sulfate) &rArr; [4,4'-phloretin disulfate](https://pubchem.ncbi.nlm.nih.gov/compound/122231134)
-
-<figure>
-<div class="linerow">
-  <div class="linecolumn">
-    <img src="../static/images/chemical_structure/FR3/[L1]phloretin.png" alt="[L1]phloretin" style="width:100%">
+    <img src="../static/images/chemical_structure/FR4/[R1]diphosphate.png" alt="[R1]diphosphate" style="width:100%">
   </div>
   <div class="linecolumn">
     <img src="../static/images/chemical_structure/common_symbol/plus.png" alt="plus" style="width:100%">
   </div>
   <div class="linecolumn">
-    <img src="../static/images/chemical_structure/FR3/[L2]4-Nitrophenyl sulfate.png" alt="[L2]4-Nitrophenyl sulfate" style="width:100%">
-  </div>
-  <div class="linecolumn">
-    <img src="../static/images/chemical_structure/common_symbol/right_arrow.png" alt="right_arrow" style="width:100%">
-  </div>
-  <div class="linecolumn">
-    <img src="../static/images/chemical_structure/FR3/[R2]4,4'-phloretin bisulfate.png" alt="[R1]4,4'-phloretin bisulfate" style="width:100%">
+    <img src="../static/images/chemical_structure/FR4/[R2]3-dimethylallyl-4-hydroxyphenylpyruvate.png" alt="[R2]3-dimethylallyl-4-hydroxyphenylpyruvate" style="width:100%">
   </div>
 </div>
 </figure>
-## References
+
+## ferences
 
 [^1]:Kuzuyama T, Noel J P, Richard S B. Structural basis for the promiscuous biosynthetic prenylation of aromatic natural products[J]. Nature, 2005, 435(7044): 983-987.
 

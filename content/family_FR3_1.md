@@ -82,7 +82,6 @@ This entry represents a group of arylsulphotransferase (ASST) mostly from bacter
   </div>
 </div>
 </figure>
-
 [phloretin](https://pubchem.ncbi.nlm.nih.gov/compound/phloretin) + [4-Nitrophenyl sulfate](https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl%20sulfate) &rArr; [4,4'-phloretin disulfate](https://pubchem.ncbi.nlm.nih.gov/compound/122231134)
 
 <figure>
@@ -100,16 +99,11 @@ This entry represents a group of arylsulphotransferase (ASST) mostly from bacter
     <img src="../static/images/chemical_structure/common_symbol/right_arrow.png" alt="right_arrow" style="width:100%">
   </div>
   <div class="linecolumn">
-    <img src="../static/images/chemical_structure/FR3/[R2]4,4'-phloretin bisulfate.png" alt="[R1]4,4'-phloretin bisulfate" style="width:100%">
-  </div>
-  <div class="linecolumn">
-    <img src="../static/images/chemical_structure/common_symbol/plus.png" alt="plus" style="width:100%">
-  </div>
-  <div class="linecolumn">
-    <img src="../static/images/chemical_structure/FR3/[R1]4-phloretin monosulfate.png" alt="[R1]4-phloretin monosulfate" style="width:100%">
+    <img src="../static/images/chemical_structure/FR3/[R1]4,4'-phloretin bisulfate.png" alt="[R1]4,4'-phloretin bisulfate" style="width:100%">
   </div>
 </div>
 </figure>
+
 
 ## References
 

@@ -42,7 +42,7 @@ None
 
 - **Reaction**
 
-[apigenin](https://pubchem.ncbi.nlm.nih.gov/compound/apigenin) &rArr; [apigenin  4'-O-glucoside](https://pubchem.ncbi.nlm.nih.gov/compound/apigenin%204'-O-glucoside) + [apigenin 7-O-glucoside](https://pubchem.ncbi.nlm.nih.gov/compound/apigenin%207-O-glucoside) + [apigenin 4',7-O-diglucoside]()
+[apigenin](https://pubchem.ncbi.nlm.nih.gov/compound/apigenin) &rArr; [apigenin  4'-O-glucoside](https://pubchem.ncbi.nlm.nih.gov/compound/apigenin%204'-O-glucoside) + [apigenin 7-O-glucoside](https://pubchem.ncbi.nlm.nih.gov/compound/apigenin%207-O-glucoside) + [apigenin 4',7-O-diglucoside](https://pubchem.ncbi.nlm.nih.gov/compound/Apigenin-7_4_-diglucoside)
 
 <figure>
 <div class="linerow">

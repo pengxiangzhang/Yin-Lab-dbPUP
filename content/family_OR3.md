@@ -86,12 +86,16 @@ Description:
 
    Proteins in this entry are a variety of NADH:flavin oxidoreductase/NADH oxidase enzymes, found mostly in bacteria or fungi, that contain a TIM-barrel fold. They commonly use FMN/FAD as cofactor and include:
    
-   - dimethylamine dehydrogenase
-   - trimethylamine dehydrogenase
-   - 12-oxophytodienoate reductase
-   - NADPH dehydrogenase
-   - NADH oxidase
-
+   &triangleright; dimethylamine dehydrogenase
+   
+   &triangleright; trimethylamine dehydrogenase
+   
+   &triangleright; 12-oxophytodienoate reductase
+   
+   &triangleright; NADPH dehydrogenase
+   
+   &triangleright; NADH oxidase
+   
 - **Reaction**
 
 [genistein](https://pubchem.ncbi.nlm.nih.gov/compound/genistein) &rArr; [dihydrogenistein](https://pubchem.ncbi.nlm.nih.gov/compound/dihydrogenistein)
@@ -195,11 +199,15 @@ Description:
 
    Proteins in this entry are a variety of NADH:flavin oxidoreductase/NADH oxidase enzymes, found mostly in bacteria or fungi, that contain a TIM-barrel fold. They commonly use FMN/FAD as cofactor and include:
 
-    - dimethylamine dehydrogenase
-    - trimethylamine dehydrogenase
-    - 12-oxophytodienoate reductase
-    - NADPH dehydrogenase
-    - NADH oxidase
+   &triangleright; dimethylamine dehydrogenase
+
+   &triangleright; trimethylamine dehydrogenase
+
+   &triangleright; 12-oxophytodienoate reductase
+
+   &triangleright; NADPH dehydrogenase
+
+   &triangleright; NADH oxidase
 
 - **Reaction**
 
@@ -322,11 +330,15 @@ Description:
 
    Proteins in this entry are a variety of NADH:flavin oxidoreductase/NADH oxidase enzymes, found mostly in bacteria or fungi, that contain a TIM-barrel fold. They commonly use FMN/FAD as cofactor and include:
 
-    - dimethylamine dehydrogenase
-    - trimethylamine dehydrogenase
-    - 12-oxophytodienoate reductase
-    - NADPH dehydrogenase
-    - NADH oxidase
+   &triangleright; dimethylamine dehydrogenase
+
+   &triangleright; trimethylamine dehydrogenase
+
+   &triangleright; 12-oxophytodienoate reductase
+
+   &triangleright; NADPH dehydrogenase
+
+   &triangleright; NADH oxidase
 
 - **Reaction**
 
@@ -449,11 +461,15 @@ Description:
 
    Proteins in this entry are a variety of NADH:flavin oxidoreductase/NADH oxidase enzymes, found mostly in bacteria or fungi, that contain a TIM-barrel fold. They commonly use FMN/FAD as cofactor and include:
 
-    - dimethylamine dehydrogenase
-    - trimethylamine dehydrogenase
-    - 12-oxophytodienoate reductase
-    - NADPH dehydrogenase
-    - NADH oxidase
+   &triangleright; dimethylamine dehydrogenase
+
+   &triangleright; trimethylamine dehydrogenase
+
+   &triangleright; 12-oxophytodienoate reductase
+
+   &triangleright; NADPH dehydrogenase
+
+   &triangleright; NADH oxidase
 
 - **Reaction**
 
@@ -576,11 +592,15 @@ Description:
 
    Proteins in this entry are a variety of NADH:flavin oxidoreductase/NADH oxidase enzymes, found mostly in bacteria or fungi, that contain a TIM-barrel fold. They commonly use FMN/FAD as cofactor and include:
 
-    - dimethylamine dehydrogenase
-    - trimethylamine dehydrogenase
-    - 12-oxophytodienoate reductase
-    - NADPH dehydrogenase
-    - NADH oxidase
+   &triangleright; dimethylamine dehydrogenase
+
+   &triangleright; trimethylamine dehydrogenase
+
+   &triangleright; 12-oxophytodienoate reductase
+
+   &triangleright; NADPH dehydrogenase
+
+   &triangleright; NADH oxidase
 
 - **Reaction**
 
@@ -685,15 +705,19 @@ Description:
 
    Proteins in this entry are a variety of NADH:flavin oxidoreductase/NADH oxidase enzymes, found mostly in bacteria or fungi, that contain a TIM-barrel fold. They commonly use FMN/FAD as cofactor and include:
 
-    - dimethylamine dehydrogenase
-    - trimethylamine dehydrogenase
-    - 12-oxophytodienoate reductase
-    - NADPH dehydrogenase
-    - NADH oxidase
+   &triangleright; dimethylamine dehydrogenase
+
+   &triangleright; trimethylamine dehydrogenase
+
+   &triangleright; 12-oxophytodienoate reductase
+
+   &triangleright; NADPH dehydrogenase
+
+   &triangleright; NADH oxidase
 
 - **Reaction**
 
-[naringenin](https://pubchem.ncbi.nlm.nih.gov/compound/naringenin) + [NADH](https://pubchem.ncbi.nlm.nih.gov/compound/439153) &rArr; [phloretin](https://pubchem.ncbi.nlm.nih.gov/compound/phloretin) + [NAD<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/5892) + [H<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/1038)
+[naringenin](https://pubchem.ncbi.nlm.nih.gov/compound/naringenin) + [NADH](https://pubchem.ncbi.nlm.nih.gov/compound/439153) + [H<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/1038) &rArr; [phloretin](https://pubchem.ncbi.nlm.nih.gov/compound/phloretin) + [NAD<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/5892)
 
 <figure>
 <div class="linerow">
@@ -707,6 +731,12 @@ Description:
     <img src="../static/images/chemical_structure/OR3/V9P074/[L2]NADH.png" alt="NADH" style="width:100%">
   </div>
   <div class="linecolumn">
+    <img src="../static/images/chemical_structure/common_symbol/plus.png" alt="plus" style="width:100%">
+  </div>
+  <div class="linecolumn">
+    <img src="../static/images/chemical_structure/OR3/V9P074/[L3]hydrogen cation.png" alt="h+" style="width:100%">
+  </div>
+  <div class="linecolumn">
     <img src="../static/images/chemical_structure/common_symbol/right_arrow.png" alt="right_arrow" style="width:100%">
   </div>
   <div class="linecolumn">
@@ -718,14 +748,9 @@ Description:
   <div class="linecolumn">
     <img src="../static/images/chemical_structure/OR3/V9P074/[R2]NAD+.png" alt="[R2]NAD+" style="width:100%">
   </div>
-  <div class="linecolumn">
-    <img src="../static/images/chemical_structure/common_symbol/plus.png" alt="plus" style="width:100%">
-  </div>
-  <div class="linecolumn">
-    <img src="../static/images/chemical_structure/OR3/V9P074/[R3]hydrogen cation.png" alt="h+" style="width:100%">
-  </div>
 </div>
 </figure>
+
 
 ## References
 

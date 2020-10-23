@@ -62,14 +62,20 @@ This TIM alpha/beta barrel structure is found in xylose isomerase ([P19148](http
 [**InterPro**](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR013022/)
 
 This entry represents a structural motif with a beta/alpha TIM barrel found in several proteins families:
- &triangleright; Endonuclease IV ([3.1.21.2](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=3.1.21.2)), an AP (apurinic/apyrimidinic) endonuclease that primes DNA repair synthesis by cleaving the DNA backbone 5' of AP sites[^2].
+
+&triangleright; Endonuclease IV ([3.1.21.2](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=3.1.21.2)), an AP (apurinic/apyrimidinic) endonuclease that primes DNA repair synthesis by cleaving the DNA backbone 5' of AP sites[^2].
+
 &triangleright; L-rhamnose isomerase ([5.3.1.14](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=5.3.1.14)), a tetramer of four TIM barrels that catalyses the isomerisation between aldoses and ketoses, such as between L-rhamnose and L-rhamnulose[^3].
+
 &triangleright; Xylose isomerase ([5.3.1.5](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=5.3.1.5)), which catalyses the first reaction in the catabolism of D-xylose by converting D-xylose to D-xylulose[^4].
+
 &triangleright; Mannonate dehydratase UxuA, which along with mannonate oxidoreductase converts D-fructuronate to 2-keto-3-deoxy-D-gluconate[^5].
 
 These proteins share similar, but not identical, metal-binding sites. In addition, xylose isomerase and L-rhamnose isomerase each have additional alpha-helical domains involved in tetramer formation.
 
 - **Reaction**
+
+*Recombined with [A0A0E3TJD6](https://www.uniprot.org/uniprot/A0A0E3TJD6)*
 
 [daidzin](https://pubchem.ncbi.nlm.nih.gov/compound/107971
 ) &rArr; [daidzein](https://pubchem.ncbi.nlm.nih.gov/compound/daidzein) + [glucose](https://pubchem.ncbi.nlm.nih.gov/compound/glucose)
@@ -152,14 +158,20 @@ This TIM alpha/beta barrel structure is found in xylose isomerase ([P19148](http
 [**InterPro**](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR013022/)
 
 This entry represents a structural motif with a beta/alpha TIM barrel found in several proteins families:
+
 &triangleright; Endonuclease IV ([3.1.21.2](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=3.1.21.2)), an AP (apurinic/apyrimidinic) endonuclease that primes DNA repair synthesis by cleaving the DNA backbone 5' of AP sites[^2].
+
 &triangleright; L-rhamnose isomerase ([5.3.1.14](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=5.3.1.14)), a tetramer of four TIM barrels that catalyses the isomerisation between aldoses and ketoses, such as between L-rhamnose and L-rhamnulose[^3].
+
 &triangleright; Xylose isomerase ([5.3.1.5](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=5.3.1.5)), which catalyses the first reaction in the catabolism of D-xylose by converting D-xylose to D-xylulose[^4].
+
 &triangleright; Mannonate dehydratase UxuA, which along with mannonate oxidoreductase converts D-fructuronate to 2-keto-3-deoxy-D-gluconate[^5].
 
 These proteins share similar, but not identical, metal-binding sites. In addition, xylose isomerase and L-rhamnose isomerase each have additional alpha-helical domains involved in tetramer formation.
 
 - **Reaction**
+
+*Catalyse  reaction with expression of  [I5AX46](https://www.uniprot.org/uniprot/I5AX46)/[I5AX47](https://www.uniprot.org/uniprot/I5AX47)/[I5AX48](https://www.uniprot.org/uniprot/I5AX48)/[I5AX49](https://www.uniprot.org/uniprot/I5AX49)/[I5AX50](https://www.uniprot.org/uniprot/I5AX50) simultaneously*
 
 [daidzin](https://pubchem.ncbi.nlm.nih.gov/compound/107971
 ) &rArr; [daidzein](https://pubchem.ncbi.nlm.nih.gov/compound/daidzein) + [glucose](https://pubchem.ncbi.nlm.nih.gov/compound/glucose)

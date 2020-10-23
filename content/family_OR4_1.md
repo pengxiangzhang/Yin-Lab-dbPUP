@@ -142,8 +142,6 @@ This domain is found in proteins that bind FAD, mainly in FAD-dependent oxidored
 
 [tetrahydrodaidzein](https://pubchem.ncbi.nlm.nih.gov/compound/tetrahydrodaidzein) &rArr; [equol](https://pubchem.ncbi.nlm.nih.gov/compound/equol)
 
-[tetrahydrodaidzein](https://pubchem.ncbi.nlm.nih.gov/compound/tetrahydrodaidzein) &rArr; [dihydrodaidzein](https://pubchem.ncbi.nlm.nih.gov/compound/dihydrodaidzein)[by-product]
-
 <figure>
 <div class="linerow">
   <div class="linecolumn">
@@ -157,6 +155,9 @@ This domain is found in proteins that bind FAD, mainly in FAD-dependent oxidored
   </div>
 </div>
 </figure>
+
+[tetrahydrodaidzein](https://pubchem.ncbi.nlm.nih.gov/compound/tetrahydrodaidzein) &rArr; [dihydrodaidzein](https://pubchem.ncbi.nlm.nih.gov/compound/dihydrodaidzein)[by-product]
+
 
 <figure>
 <div class="linerow">
@@ -301,6 +302,8 @@ This family includes members that bind FAD. This family includes the flavoprotei
 This domain is found in proteins that bind FAD, mainly in FAD-dependent oxidoreductase family 2 proteins, such as the flavoprotein subunits from succinate and fumarate dehydrogenase, and aspartate oxidase[^1].
 
 - **Reaction**
+
+*Recombined with [M9NYU8](https://www.uniprot.org/uniprot/M9NYU8)*
 
 [dihydrodaidzein](https://pubchem.ncbi.nlm.nih.gov/compound/dihydrodaidzein) &rArr; [equol](https://pubchem.ncbi.nlm.nih.gov/compound/equol)
 

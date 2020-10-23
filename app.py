@@ -192,16 +192,19 @@ def detail(unid):
 def tree(family_id):
     title = "Tree - " + family_id + " - "
     name = family_id
-    if family_id == 'all':
+    try:
+        with open('content/tree_page.md') as c:
+            c = c.read()
+    except Exception:
+        # abort(404)
+        pass
+    try:
+        with open('static/materials/tree/' + family_id + '.json') as f:
+            treeData = json.load(f)
+    except Exception:
+        treeData = None
         abort(404)
-    else:
-        try:
-            with open('static/materials/tree/' + family_id + '.json') as f:
-                treeData = json.load(f)
-        except Exception:
-            treeData = None
-            abort(404)
-    return render_template('tree.html', treeData=json.dumps(treeData), description="", title=title, name=name)
+    return render_template('tree.html',content=to_md(c), treeData=json.dumps(treeData), description="", title=title, name=name)
 
 
 @app.route("/dbpup/family/<family_id>")
@@ -328,19 +331,25 @@ def classes(class_id):
 def blast():
     form = InputForm()
     title = "Blast - "
+    try:
+        with open('content/blast_page.md') as c:
+            name = get_title(c)
+            next(c)
+            c = c.read()
+    except Exception:
+        abort(404)
     if request.method == 'POST':
         sequence = request.form.get('id_sequences')
         file = request.form.get('id_file_text')
-        print(file)
         if form.validate() == False:
             flash('All fields are required.')
-            return render_template('blast.html', form=form, title=title, description="")
+            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
         elif sequence == "" and file == "":
             flash('You need to at least have one input.')
-            return render_template('blast.html', form=form, title=title, description="")
+            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
         elif sequence != "" and file != "":
             flash('You can only have one input.')
-            return render_template('blast.html', form=form, title=title, description="")
+            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
         else:
             if sequence != "" and file == "":
                 query = sequence
@@ -350,7 +359,7 @@ def blast():
             return render_template('result_blastp.html', records = records, title=title, description="")
 
     elif request.method == 'GET':
-        return render_template('blast.html', form=form, title=title, description="")
+        return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
 
 def to_md(content):
     return markdown.markdown(content, extensions=['extra', 'toc', 'smarty', 'sane_lists', 'pymdownx.mark'])
