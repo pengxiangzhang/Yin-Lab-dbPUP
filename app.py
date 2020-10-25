@@ -38,7 +38,7 @@ dtbs = SQLAlchemy(app)
 # routing
 @app.route('/')
 def hello():
-    return redirect("/dbpup/", code=302)
+    return redirect("/dbpup/", code=301)
 # Error Page
 @app.errorhandler(404)
 def page_not_found(e):
@@ -62,7 +62,7 @@ def about():
             next(c)
             c = c.read()
     except Exception:
-        abort(404)
+        pass
     return render_template('main.html', content=to_md(c), description="", title=title, name=name)
 
 
@@ -76,7 +76,7 @@ def help():
             next(c)
             c = c.read()
     except Exception:
-        abort(404)
+        pass
     return render_template('main.html', content=to_md(c), description="", title=title, name=name)
 
 
@@ -90,7 +90,7 @@ def statistics():
             next(c)
             c = c.read()
     except Exception:
-        abort(404)
+        pass
     return render_template('main.html', content=to_md(c), description="", title=title, name=name)
 
 
@@ -104,7 +104,7 @@ def download():
             next(c)
             c = c.read()
     except Exception:
-        abort(404)
+        pass
     return render_template('main.html', content=to_md(c), description="", title=title, name=name)
 
 
@@ -123,14 +123,13 @@ def evidence():
 @app.route('/dbpup/swissport/<family_id>', methods=['GET', 'POST'])
 def swissport(family_id):
     title = "Swiss-Prot - " + family_id + " - "
-    name = family_id
     subfamily = False
     if '_' in family_id:
         subfamily = True
         records = swiRecord.SwiRecord.query.filter_by(family=family_id)
     else:
-        family_id = family_id + "%"
-        records = swiRecord.SwiRecord.query.filter(swiRecord.SwiRecord.family.like(family_id))
+        allfamily_id = family_id + "%"
+        records = swiRecord.SwiRecord.query.filter(swiRecord.SwiRecord.family.like(allfamily_id))
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
@@ -141,8 +140,14 @@ def swissport(family_id):
         break
     if not found:
         abort(404)
-
-    return render_template('swissport.html', records=records, ec=ec_link, rows=pdb_row, description="", title=title,
+    try:
+        with open('content/family_' + family_id + '.md') as c:
+            name = get_title(c)
+            c.close()
+    except Exception:
+        name = family_id
+        
+    return render_template('swissport.html',family_id=family_id, records=records, ec=ec_link, rows=pdb_row, description="", title=title,
                            name=name, subfamily=subfamily)
 
 
@@ -155,8 +160,8 @@ def trembl(family_id):
         subfamily = True
         records = treRecord.TreRecord.query.filter_by(family=family_id)
     else:
-        family_id = family_id + "%"
-        records = treRecord.TreRecord.query.filter(treRecord.TreRecord.family.like(family_id))
+        newfamily_id = family_id + "%"
+        records = treRecord.TreRecord.query.filter(treRecord.TreRecord.family.like(newfamily_id))
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
@@ -167,7 +172,12 @@ def trembl(family_id):
         break
     if not found:
         abort(404)
-
+    try:
+        with open('content/family_' + family_id + '.md') as c:
+            name = get_title(c)
+            c.close()
+    except Exception:
+        name = family_id
     return render_template("trembl.html", family_id=family_id, records=records, ec=ec_link, rows=pdb_row,
                            description="", title=title, name=name, subfamily=subfamily)
 
@@ -196,15 +206,20 @@ def tree(family_id):
         with open('content/tree_page.md') as c:
             c = c.read()
     except Exception:
-        # abort(404)
         pass
     try:
         with open('static/materials/tree/' + family_id + '.json') as f:
             treeData = json.load(f)
     except Exception:
-        treeData = None
         abort(404)
-    return render_template('tree.html',content=to_md(c), treeData=json.dumps(treeData), description="", title=title, name=name)
+        
+    try:
+        with open('content/family_' + family_id + '.md') as n:
+            name = get_title(n)
+            n.close()
+    except Exception:
+        name = family_id
+    return render_template('tree.html',content=to_md(c),family_id=family_id, treeData=json.dumps(treeData), description="", title=title, name=name)
 
 
 @app.route("/dbpup/family/<family_id>")
@@ -221,7 +236,7 @@ def family(family_id):
             c = c.read()
     except Exception:
         c = open('content/nothing.md', 'r').read()
-        name = "null"
+        name = "Subfamily for "+ family_id
 
     if family_id == 'OR4':
         amount = 4
@@ -291,8 +306,13 @@ def network(family_id):
     except Exception:
         abort(404)
     finalfile = [s[26:][:-4] for s in subfile]
-
-    return render_template('network.html', content=to_md(c), description="", finalfile=finalfile, title=title, name=name)
+    try:
+        with open('content/family_' + family_id + '.md') as n:
+            name = get_title(n)
+            n.close()
+    except Exception:
+        name = family_id
+    return render_template('network.html', content=to_md(c),family_id=family_id, description="", finalfile=finalfile, title=title, name=name)
 
 
 @app.route("/dbpup/classes/<class_id>")
@@ -307,7 +327,7 @@ def classes(class_id):
             c = c.read()
     except Exception:
         c = open('content/nothing.md', 'r').read()
-        name = "null"
+        name = "class_id"
     
     if class_id == 'ORs':
         amount = 9
