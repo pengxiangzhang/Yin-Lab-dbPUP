@@ -6,7 +6,7 @@
 
     <div class="row">
         <div class="page-header">
-            <h3>{{name}}</h3>
+            <h3>{{ name }}</h3>
 
         </div>
     </div>
@@ -31,22 +31,26 @@
                 <span style="font-size:1em;">Try <a id="id_example" href="#" style="color:blue;" value="protein"> example </a> sequences.</span>
             </div>
             {{ form.hidden_tag() }}
-<textarea placeholder= "DNA sequence in fasta format" style="min-height:100px" rows="10" name="id_sequences" id="id_sequences" oninput="validatePaste()">
+            <textarea placeholder="DNA sequence in fasta format" style="min-height:100px" rows="10" name="id_sequences"
+                      id="id_sequences" oninput="validatePaste()">
 </textarea>
-<br>
-	<div style="text-align:left;">
-	<label for="subject" style="color:blue"> <B> II. Or upload the sequence file. </B> </label> <br>
-	<span style="font-size: 1em;text-align:left;">File in Fasta format</span>
-	<input style="border-style: dotted;" type="file" id='id_file' name="id_file" value="" onchange='validateFasta(this.files)'/>
-	<input type="hidden" id="id_file_text" name="id_file_text">
-</div>
-<br>
+            <br>
+            <div style="text-align:left;">
+                <label for="subject" style="color:blue"> <B> II. Or upload the sequence file. </B> </label> <br>
+                <span style="font-size: 1em;text-align:left;">File in Fasta format</span>
+                <input style="border-style: dotted;" type="file" id='id_file' name="id_file" value=""
+                       onchange='validateFasta(this.files)'/>
+                <input type="hidden" id="id_file_text" name="id_file_text">
+            </div>
+            <br>
             {{ form.recaptcha(class="form-control") }}
         </form>
-                {% for message in form.recaptcha.errors %}
-                    <div style="color:red;">{{ message }}</div>
-                {% endfor %}
-            <a class="btn btn-primary" onclick="document.getElementById('id_file').value = ''; document.getElementById('blastx-form').submit();">Run Blastx</a>
+        {% for message in form.recaptcha.errors %}
+            <div style="color:red;">{{ message }}</div>
+        {% endfor %}
+        <a class="btn btn-primary"
+           onclick="document.getElementById('id_file').value = ''; document.getElementById('blastx-form').submit();">Run
+            Blastx</a>
 
         <script type="text/javascript">
             function validatePaste() {
@@ -111,7 +115,7 @@
                     }
                     if (seqs[0].length == 0) { //first array should be empty
                         seqs.shift();
-                        
+
                     } else {                   //there was stuff before first >
                         validFasta = false;
                         alert("File is not in FASTA format. There should be no data above the first header.");
@@ -182,6 +186,6 @@
                 })
             })
         </script>
-        </div>
+    </div>
 
 {% endblock %}

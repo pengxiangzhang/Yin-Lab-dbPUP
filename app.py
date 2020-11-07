@@ -39,6 +39,8 @@ dtbs = SQLAlchemy(app)
 @app.route('/')
 def hello():
     return redirect("/dbpup/", code=301)
+
+
 # Error Page
 @app.errorhandler(404)
 def page_not_found(e):
@@ -51,6 +53,7 @@ def index():
     title = ""
     c = open('content/Homepage.md', 'r').read()
     return render_template('index.html', content=to_md(c), description="", title=title, name=name)
+
 
 @app.route("/dbpup/about")
 def about():
@@ -117,7 +120,8 @@ def evidence():
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
     sub, prod = data_analyzer.substrate_product_split()
 
-    return render_template("evidence.html", records=records, rows=pdb_row, ec=ec_link, sub=sub, product=prod,description="", title=title, name=name)
+    return render_template("evidence.html", records=records, rows=pdb_row, ec=ec_link, sub=sub, product=prod,
+                           description="", title=title, name=name)
 
 
 @app.route('/dbpup/swissport/<family_id>', methods=['GET', 'POST'])
@@ -146,8 +150,9 @@ def swissport(family_id):
             c.close()
     except Exception:
         name = family_id
-        
-    return render_template('swissport.html',family_id=family_id, records=records, ec=ec_link, rows=pdb_row, description="", title=title,
+
+    return render_template('swissport.html', family_id=family_id, records=records, ec=ec_link, rows=pdb_row,
+                           description="", title=title,
                            name=name, subfamily=subfamily)
 
 
@@ -212,14 +217,15 @@ def tree(family_id):
             treeData = json.load(f)
     except Exception:
         abort(404)
-        
+
     try:
         with open('content/family_' + family_id + '.md') as n:
             name = get_title(n)
             n.close()
     except Exception:
         name = family_id
-    return render_template('tree.html',content=to_md(c),family_id=family_id, treeData=json.dumps(treeData), description="", title=title, name=name)
+    return render_template('tree.html', content=to_md(c), family_id=family_id, treeData=json.dumps(treeData),
+                           description="", title=title, name=name)
 
 
 @app.route("/dbpup/family/<family_id>")
@@ -236,7 +242,7 @@ def family(family_id):
             c = c.read()
     except Exception:
         c = open('content/nothing.md', 'r').read()
-        name = "Subfamily for "+ family_id
+        name = "Subfamily for " + family_id
 
     if family_id == 'OR4':
         amount = 4
@@ -270,7 +276,8 @@ def family(family_id):
         amount = 13
     elif family_id == 'UC2':
         amount = 8
-    return render_template('family.html', family_id=family_id, amount=amount, content=to_md(c), description="",title=title, name=name)
+    return render_template('family.html', family_id=family_id, amount=amount, content=to_md(c), description="",
+                           title=title, name=name)
 
 
 @app.route("/dbpup/subfamily/<family_id>")
@@ -312,7 +319,8 @@ def network(family_id):
             n.close()
     except Exception:
         name = family_id
-    return render_template('network.html', content=to_md(c),family_id=family_id, description="", finalfile=finalfile, title=title, name=name)
+    return render_template('network.html', content=to_md(c), family_id=family_id, description="", finalfile=finalfile,
+                           title=title, name=name)
 
 
 @app.route("/dbpup/classes/<class_id>")
@@ -328,7 +336,7 @@ def classes(class_id):
     except Exception:
         c = open('content/nothing.md', 'r').read()
         name = "class_id"
-    
+
     if class_id == 'ORs':
         amount = 9
     elif class_id == 'FRs':
@@ -347,9 +355,9 @@ def classes(class_id):
         amount = 2
     else:
         abort(404)
-    
 
-    return render_template('classes.html', class_id=class_id, content=to_md(c), description="", title=title, name=name, amount=amount)
+    return render_template('classes.html', class_id=class_id, content=to_md(c), description="", title=title, name=name,
+                           amount=amount)
 
 
 @app.route("/dbpup/blast", methods=["GET", "POST"])
@@ -382,10 +390,11 @@ def blast():
             elif sequence == '' and file != '':
                 query = file
             records = blastp(query)
-            return render_template('result_blastp.html', records = records, title=title, description="")
+            return render_template('result_blastp.html', records=records, title=title, description="")
 
     elif request.method == 'GET':
         return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
+
 
 def to_md(content):
     return markdown.markdown(content, extensions=['extra', 'toc', 'smarty', 'sane_lists', 'pymdownx.mark'])
@@ -399,26 +408,30 @@ def inject_now():
 def get_title(file):
     return file.readline()[2:]
 
+
 subfamilyfile = open("static/materials/subfamily.txt", "r")
-subfamily_list=(subfamilyfile.readline().split())
+subfamily_list = (subfamilyfile.readline().split())
 subfamilyfile.close()
 familyfile = open("static/materials/family.txt", "r")
-family_list=(familyfile.readline().split())
+family_list = (familyfile.readline().split())
 familyfile.close()
+
+
 def is_subfamily(family_id):
     if family_id in subfamily_list:
         return True
     else:
         return False
-        
+
+
 def is_family(family_id):
     if family_id in family_list:
         return True
     else:
         return False
-        
-def blastp(query):
 
+
+def blastp(query):
     with open('pup_blastp/search.fsa', 'w') as f:
         f.writelines(query)
     command = "./blast/blastp -db pup_blastp/PUP_db -query pup_blastp/search.fsa -out pup_blastp/results.blast -outfmt 6 -evalue 1e-5 -num_threads 2"
@@ -429,7 +442,7 @@ def blastp(query):
         data = f.readlines()
         if len(data) == 0:
             return []
-        
+
     data = pd.read_csv('pup_blastp/results.blast', sep="\t", header=None)
     index = 0
     processed_blastp = []
@@ -475,6 +488,7 @@ def blastp(query):
     # for item in processed_blastp:
     #     print(item)
     return processed_blastp
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
