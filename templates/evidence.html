@@ -1,18 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
     <div class="row">
         <div class="page-header">
             <h3>{{ name }}</h3>
 
-        </div>
-    </div>
-    <div class="abstractOfPage" style="margin-bottom: 50px">
-        <div class="informationOfGene">
-            <h1>
-                Family Introduction
-            </h1>
-            <p>We .......</p>
         </div>
     </div>
 
@@ -36,14 +29,24 @@
                             columns: [-1]
                         }
                     },
-                    'copy'
+                    {
+                        extend: 'copy',
+                        fieldBoundary: '',
+                        text: 'copy',
+                        title: '',
+                        header: '\n',
+                        exportOptions: {
+                            stripNewlines: false,
+                            columns: [-1]
+                        }
+                    }
                 ],
                 select: true
             });
         });
     </script>
     <div class="container-wrap">
-        <table class="table" id="data-table" class="display nowrap">
+        <table id="data-table" class="table display nowrap">
             <thead>
             <tr>
                 <th style="white-space: nowrap">Number</th>
@@ -61,7 +64,7 @@
                 <th style="white-space: nowrap">Family</th>
                 <th style="white-space: nowrap">Sequence</th>
                 <th style="white-space: nowrap">DOI</th>
-                <th>hide</th>
+                <th style="white-space: nowrap"><br></th>
 
             </tr>
             </thead>
@@ -143,12 +146,12 @@
                         <a href="{{ url_for('family', family_id = record.family) }}">{{ record.family }}</a>
                     </td>
                     <td>
-                        <a href={{ url_for('detail', unid = record.uniq_id) }}>view</a>
+                        <a href="{{ url_for('detail', unid = record.uniq_id) }}">view</a>
                     </td>
                     <td><a href="https://doi.org/{{ record.doi }}">{{ record.doi }}</a></td>
                     <td>
                         <p hidden>>{{ record.uniq_id }} {{ record.protein_name }} OS={{ record.strain }}</p>
-                        <p hidden style="max-width: 40ch; word-wrap:break-word;"> {{ record.seq }}</p>
+                        <p hidden style="max-width: 40ch; word-wrap:break-word;">{{ record.seq }}</p>
                     </td>
                 </tr>
             {% endfor %}

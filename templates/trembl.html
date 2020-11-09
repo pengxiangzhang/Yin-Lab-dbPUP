@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 
-{% block title %} treMBL Data {% endblock %}
+{% block title %} TrEMBL Data {% endblock %}
 {% block content %}
     <div class="row">
         <div class="page-header">
-            <h3>Trembl for {{ name }}</h3>
+            <h3>TrEMBL for {{ name }}</h3>
 
         </div>
     </div>
     {% if not subfamily %}
-        <a class="btn btn-primary btn-lg btn-block" href="/network/{{ name }}">Open Network for {{ name }}</a>
+        <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('network', family_id = family_id) }}">View sequence
+            similarity network</a>
     {% endif %}
     <div class="abstractOfPage">
         <div class="informationOfGene">
-            <p>1 C-ring cleavage quercetin Bacillus subtilis (strain 168) a tryptophan auxotroph isolated after X-rays
-                mutagenesis of B. subtilis>
+            <p></p>
         </div>
     </div>
 
@@ -24,8 +24,9 @@
                 $('#data-table').DataTable({
                     lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
                     dom: 'Bfrtip',
+                    "scrollX": true
                     columnDefs: [{
-                        targets: [7, 8],
+                        targets: [6],
                         searchable: true,
                         visible: false
                     }],
@@ -36,7 +37,7 @@
                             fieldBoundary: '',
                             text: 'export',
                             exportOptions: {
-                                columns: [-2]
+                                columns: [0, 1, 2, 3, 4, 5]
                             }
                         },
                         {
@@ -44,8 +45,9 @@
                             fieldBoundary: '',
                             text: 'copy',
                             title: '',
-                            header: '',
+                            header: '\n',
                             exportOptions: {
+                                stripNewlines: false,
                                 columns: [-2]
                             }
                         },
@@ -117,7 +119,7 @@
                 <th style="white-space: nowrap">Family</th>
                 <th style="white-space: nowrap">EC</th>
                 <th style="white-space: nowrap">Sequence</th>
-                <th style="white-space: nowrap">hidden</th>
+                <th style="white-space: nowrap"><br></th>
                 <th style="white-space: nowrap">type</th>
             </tr>
             </thead>
@@ -151,11 +153,11 @@
                         </td>
                     {% endif %}
                     <td>
-                        <a href={{ url_for('detail', unid = record.uniq_id) }}>view</a>
+                        <a href="{{ url_for('detail', unid = record.uniq_id) }}">view</a>
                     </td>
                     <td>
                         <p hidden>>{{ record.uniq_id }} {{ record.protein_enzyme }} OS={{ record.strain }}</p>
-                        <p hidden style="max-width: 40ch; word-wrap:break-word;"> {{ record.seq }}</p>
+                        <p hidden style="max-width: 40ch; word-wrap:break-word;">{{ record.seq }}</p>
                     </td>
                     <td>
                         <p>{{ record.type }}</p>

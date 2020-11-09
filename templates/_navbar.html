@@ -10,10 +10,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="https://www.unl.edu">
-                <img alt="Brand" src="https://ucomm.unl.edu/images/brand-book/Our-marks/R-UNL-Hex.svg"
+            <a href="www.unl.edu">
+                <img alt="Brand" src="{{ url_for('static', filename='images/unl.svg') }}"
                      class="navbar-brand"></a>
-            <a class="navbar-brand" href="/">{{ config['title'] }}</a>
+            <a class="navbar-brand" href="{{ url_for('index') }}">{{ config['title'] }}</a>
         </div>
 
         <!-- COLLAPSIBLE NAVBAR -->
@@ -21,32 +21,37 @@
 
             <!-- Links -->
             <ul class="nav navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/evidence/all">Evidence</a>
-                </li>
-
                 <li class="dropdown">
                     <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Class <span class="caret"></span></a>
                     <ul class="dropdown-menu" aria-labelledby="about-us">
-                        <li><a href="{{ url_for('classes', class_id = "ORs") }}">ORs</a></li>
-                        <li><a href="{{ url_for('classes', class_id = "FRs") }}">FRs</a></li>
-                        <li><a href="{{ url_for('classes', class_id = "HRs") }}">HRs</a></li>
-                        <li><a href="{{ url_for('classes', class_id = "NCRs") }}">NCRs</a></li>
-                        <li><a href="{{ url_for('classes', class_id = "IRs") }}">IRs</a></li>
-                        <li><a href="{{ url_for('classes', class_id = "SRs") }}">SRs</a></li>
-                        <li><a href="{{ url_for('classes', class_id = "TRs") }}">TRs</a></li>
-                        <li><a href="{{ url_for('classes', class_id = "UCs") }}">UCs</a></li>
+                        <li><a href="{{ url_for('classes', class_id = 'ORs') }}">ORs</a></li>
+                        <li><a href="{{ url_for('classes', class_id = 'FRs') }}">FRs</a></li>
+                        <li><a href="{{ url_for('classes', class_id = 'HRs') }}">HRs</a></li>
+                        <li><a href="{{ url_for('classes', class_id = 'NCRs') }}">NCRs</a></li>
+                        <li><a href="{{ url_for('classes', class_id = 'IRs') }}">IRs</a></li>
+                        <li><a href="{{ url_for('classes', class_id = 'SRs') }}">SRs</a></li>
+                        <li><a href="{{ url_for('classes', class_id = 'TRs') }}">TRs</a></li>
+                        <li><a href="{{ url_for('classes', class_id = 'UCs') }}">UCs</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/blastx">Blastx</a>
+                    <a class="nav-link" href="{{ url_for('evidence') }}">Evidence</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/download">Download</a>
+                    <a class="nav-link" href="{{ url_for('blast') }}">Blast</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/about">About</a>
+                    <a class="nav-link" href="{{ url_for('statistics') }}">Statistics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('download') }}">Download</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('help') }}">Help</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('about') }}">About</a>
                 </li>
             </ul>
 

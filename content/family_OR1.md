@@ -3,10 +3,10 @@
 ##  Literature Information
 
 | Title    | Discovery of the curcumin metabolic pathway involving a unique enzyme in an intestinal microorganism |
-| -------- | ------------------------------------------------------------ |
+| :------- | :----------------------------------------------------------- |
 | Author   | Azam Hassaninasab, Yoshiteru Hashimoto, Kaori Tomita-Yokotani, and Michihiko Kobayashi |
 | DOI      | [10.1073/pnas.1016217108](https://doi.org/10.1073/pnas.1016217108) |
-| Abstract | Polyphenol curcumin, a yellow pigment, derived from the rhizomes of a plant (Curcuma longa Linn) is a natural antioxidant exhibiting a variety of pharmacological activities and therapeutic properties. It has long been used as a traditional medicine and as a preservative and coloring agent in foods. Here, curcumin-converting microorganisms were isolated from human feces, the one exhibiting the highest activity being identified as Escherichia coli. We are thus unique in discovering that E. coli was able to act on curcumin. The curcumin-converting enzyme was purified from E. coli and characterized. The native enzyme had a molecular mass of about 82 kDa and consisted of two identical subunits. The enzyme has a narrow substrate spectrum, preferentially acting on curcumin. The microbial metabolism of curcumin by the purified enzyme was found to comprise a two-step reduction, ==curcumin== being converted NADPH-dependently into ==an intermediate product==, ==dihydrocurcumin==, and then the end product, ==tetrahydrocurcumin==. We named this enzyme “NADPH-dependent curcumin/dihydrocurcumin reductase” (CurA). The gene (curA) encoding this enzyme was also identified. A homology search with the BLAST program revealed that a unique enzyme involved in curcumin metabolism belongs to the medium-chain dehydrogenase/reductase superfamily. |
+| Abstract | Polyphenol curcumin, a yellow pigment, derived from the rhizomes of a plant (Curcuma longa Linn) is a natural antioxidant exhibiting a variety of pharmacological activities and therapeutic properties. It has long been used as a traditional medicine and as a preservative and coloring agent in foods. Here, curcumin-converting microorganisms were isolated from human feces, the one exhibiting the highest activity being identified as Escherichia coli. We are thus unique in discovering that E. coli was able to act on curcumin. The curcumin-converting enzyme was purified from E. coli and characterized. The native enzyme had a molecular mass of about 82 kDa and consisted of two identical subunits. The enzyme has a narrow substrate spectrum, preferentially acting on curcumin. The microbial metabolism of curcumin by the purified enzyme was found to comprise a two-step reduction, <mark>curcumin</mark> being converted NADPH-dependently into <mark>an intermediate product</mark>, <mark>dihydrocurcumin</mark>, and then the end product, <mark>tetrahydrocurcumin</mark>. We named this enzyme “NADPH-dependent curcumin/dihydrocurcumin reductase” (CurA). The gene (curA) encoding this enzyme was also identified. A homology search with the BLAST program revealed that a unique enzyme involved in curcumin metabolism belongs to the medium-chain dehydrogenase/reductase superfamily. |
 
 ---
 
@@ -57,21 +57,25 @@ Description:
 
    No Pfam abstract.
 
-   [**InterPro**](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR017941/)
+   [**InterPro**](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR013149/)
 
    Alcohol dehydrogenase ([1.1.1.1](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=1.1.1.1)) (ADH) catalyzes the reversible oxidation of alcohols to their corresponding acetaldehyde or ketone with the concomitant reduction of NAD: alcohol + NAD = aldehyde or ketone + NADH Currently three structurally and catalytically different types of alcohol dehydrogenases are known:
 
-   - Zinc-containing 'long-chain' alcohol dehydrogenases. 
-
-   * Insect-type, or 'short-chain' alcohol dehydrogenases.  
-   * Iron-containing alcohol dehydrogenases. 
-
+   &triangleright; Zinc-containing 'long-chain' alcohol dehydrogenases. 
+   
+   &triangleright; Insect-type, or 'short-chain' alcohol dehydrogenases. 
+   
+   &triangleright; Iron-containing alcohol dehydrogenases. 
+   
    Zinc-containing ADH's[^1][^2] are dimeric or tetrameric enzymes that bind two atoms of zinc per subunit. One of the zinc atom is essential for catalytic activity while the other is not. Both zinc atoms are coordinated by either cysteine or histidine residues; the catalytic zinc is coordinated by two cysteines and one histidine. Zinc-containing ADH's are found in bacteria, mammals, plants, and in fungi. In many species there is more than one isozyme (for example, humans have at least six isozymes, yeast have three, etc.). A number of other zinc-dependent dehydrogenases are closely related to zinc ADH[^3] and are included in this family.
 
-   - Sorbitol dehydrogenase ([1.1.1.14](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=1.1.1.14))
-   - L-threonine 3-dehydrogenase ([1.1.1.103](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=1.1.1.103))
-   - Glutathione-dependent formaldehyde dehydrogenase ([1.1.1.284](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=1.1.1.284))
-   - Mannitol dehydrogenase ([1.1.1.255](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=1.1.1.255))
+   &triangleright; Sorbitol dehydrogenase ([1.1.1.14](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=1.1.1.14))
+   
+   &triangleright; L-threonine 3-dehydrogenase ([1.1.1.103](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=1.1.1.103))
+   
+   &triangleright; Glutathione-dependent formaldehyde dehydrogenase ([1.1.1.284](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=1.1.1.284))
+   
+   &triangleright; Mannitol dehydrogenase ([1.1.1.255](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=1.1.1.255))
 
    In addition, this family includes NADP-dependent quinone oxidoreductase ([1.6.5.5](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=1.6.5.5)), an enzyme found in bacteria (gene qor), in yeast and in mammals where, in some species such as rodents, it has been recruited as an eye lens protein and is known as zeta-crystallin[^4]. The sequence of quinone oxidoreductase is distantly related to that other zinc-containing alcohol dehydrogenases and it lacks the zinc-ligand residues. The torpedo fish and mammalian synaptic vesicle membrane protein vat-1 is related to qor.
 
@@ -111,4 +115,3 @@ Description:
 [^5]: Pauly T A, Ekstrom J L, Beebe D A, et al. X-ray crystallographic and kinetic studies of human sorbitol dehydrogenase[J]. Structure, 2003, 11(9): 1071-1085.
 [^6]: Rubach J K, Plapp B V. Amino acid residues in the nicotinamide binding site contribute to catalysis by horse liver alcohol dehydrogenase[J]. Biochemistry, 2003, 42(10): 2907-2915.
 [^7]: Crystal structure of Escherichia coli QOR quinone oxidoreductase complexed with NADPH. Thorn JM, Barton JD, Dixon NE, Ollis DL, Edwards KJ. *J. Mol. Biol.* 249, 785-99, (1995
-

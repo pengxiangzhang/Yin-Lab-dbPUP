@@ -26,20 +26,16 @@
 
         </div>
     </div>
-    <a class="btn btn-primary btn-lg btn-block" href="/swissport/{{ name }}">Open Swissport for {{ name }}</a>
+    <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('swissport', family_id = family_id) }}">Open Swiss-Prot
+        for {{ name }}</a>
     <div id="introduction">
-        <p style="font-size: x-large">Tree diagrams originated in the medieval era to represent genealogical
-            relationships.
-
-            Phylogenetic tree diagrams in the evolutionary sense date back to at least the early 19th century.
-
-            The term phylogeny for the evolutionary relationships of species through time was coined by Ernst Haeckel,
-            who went further than Darwin in proposing phylogenic histories of life. In contemporary usage, tree of life
-            refers to the compilation of comprehensive phylogenetic databases rooted at the last universal common
-            ancestor of life on Earth. The Open Tree of Life, first published September 2015, is a project to compile
-            such a database for free publ{c access.</p>
+        <p style="font-size: x-large"></p>
     </div>
-
+    <br>
+    <div class="familyInformation">
+        {{ content|safe }}
+    </div>
+    <br>
     <style>
         .modal-dialog {
             width: 100%;
@@ -55,26 +51,9 @@
             overflow: hidden;
         }
     </style>
-    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modal"
-            id="open_tree">
-        Open Tree
-    </button>
-
-    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="tree" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="tree">Tree</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="treeDiagram" id="treeDiagram"
-                         style="width:100%;height:100%;overflow: hidden;border-radius: 25px;border: 1px solid #ccc!important;padding: 20px;"></div>
-                </div>
-            </div>
-        </div>
+    <div class="modal-body">
+        <div class="treeDiagram" id="treeDiagram"
+             style="width:85%;height:85%;overflow: hidden;border-radius: 25px;border: 1px solid #ccc!important;padding: 20px;"></div>
     </div>
 
 

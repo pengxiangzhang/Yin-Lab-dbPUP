@@ -53,12 +53,17 @@ Description:
 
    Rieske-type iron-sulphur clusters are common to electron transfer chains of mitochondria and chloroplast and to non-haem iron oxygenase systems:
 
-    \* The Rieske protein of the Ubiquinol-cytochrome c reductase ([1.10.2.2](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=1.10.2.2)) (also known as the bc1 complex or complex III), a complex of the electron transport chains of mitochondria and of some aerobic prokaryotes; it catalyses the oxidoreduction of ubiquinol and cytochrome c.
-    \* The Rieske protein of chloroplastic plastoquinone-plastocyanin reductase ([1.10.99.1](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=1.10.99.1)) (also known as the b6f complex). It is functionally similar to the bc1 complex and catalyses the oxidoreduction of plastoquinol and cytochrome f.
-    \* Bacterial naphthalene 1,2-dioxygenase subunit alpha, a component of the naphthalene dioxygenase (NDO) multicomponent enzyme system which catalyses the incorporation of both atoms of molecular oxygen into naphthalene to form cis-naphthalene dihydrodiol.
-    \* Bacterial 3-phenylpropionate dioxygenase ferredoxin subunit.
-    \* Bacterial toluene monoxygenase.
-    \* Bacterial biphenyl dioxygenase.
+   &triangleright; The Rieske protein of the Ubiquinol-cytochrome c reductase ([1.10.2.2](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=1.10.2.2)) (also known as the bc1 complex or complex III), a complex of the electron transport chains of mitochondria and of some aerobic prokaryotes; it catalyses the oxidoreduction of ubiquinol and cytochrome c.
+   
+   &triangleright; The Rieske protein of chloroplastic plastoquinone-plastocyanin reductase ([1.10.99.1](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=1.10.99.1)) (also known as the b6f complex). It is functionally similar to the bc1 complex and catalyses the oxidoreduction of plastoquinol and cytochrome f.
+   
+   &triangleright; Bacterial naphthalene 1,2-dioxygenase subunit alpha, a component of the naphthalene dioxygenase (NDO) multicomponent enzyme system which catalyses the incorporation of both atoms of molecular oxygen into naphthalene to form cis-naphthalene dihydrodiol.
+   
+   &triangleright; Bacterial 3-phenylpropionate dioxygenase ferredoxin subunit.
+   
+   &triangleright; Bacterial toluene monoxygenase.
+   
+   &triangleright; Bacterial biphenyl dioxygenase.
 
 2. Ring_hydroxyl_A
 

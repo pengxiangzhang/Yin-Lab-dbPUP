@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %} Blast Data {% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="page-header">
+            <h3>Blast Result</h3>
+
+        </div>
+    </div>
+    <div class="abstractOfPage">
+        <div class="informationOfGene">
+            <h1>
+                Result of blastp
+            </h1>
+            <p></p>
+        </div>
+    </div>
+
+    <div class="container-wrap">
+        <script defer type="text/javascript">
+            $(document).ready(function () {
+                $('#data-table').DataTable({
+                    lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
+                    dom: 'Bfrtip',
+                    buttons: [
+                        'pageLength',
+                        {
+                            extend: 'csvHtml5',
+                            fieldBoundary: '',
+                            text: 'export'
+                        }]
+                });
+            });
+        </script>
+
+        <table class="table" id="data-table">
+            <thead>
+            <tr>
+                <th style="white-space: nowrap">Query ID</th>
+                <th style="white-space: nowrap">Subject ID</th>
+                <th style="white-space: nowrap">Family</th>
+                <th style="white-space: nowrap">Identity</th>
+                <th style="white-space: nowrap">E-value</th>
+                <th style="white-space: nowrap">Protein Name</th>
+                <th style="white-space: nowrap">Strain</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for record in records %}
+                <tr>
+                    <td>{{ record[0] }}</td>
+                    <td>{{ record[1] }}</td>
+                    <td>{{ record[2] }}</td>
+                    <td>{{ record[3] }}</td>
+                    <td>{{ record[4] }}</td>
+                    <td>{{ record[5] }}</td>
+                    <td>
+                        <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={{ record[7] }}">{{ record[6] }}</a>
+                    </td>
+
+
+                </tr>
+            {% endfor %}
+
+            </tbody>
+
+        </table>
+    </div>
+{% endblock %}

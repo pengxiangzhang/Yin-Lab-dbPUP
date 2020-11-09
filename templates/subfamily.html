@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}subfamily{% endblock %}
 
 {% block content %}
     <div class="row">
@@ -10,23 +10,19 @@
         </div>
     </div>
     <div class="familyResource">
-        <h1>Family Resource</h1>
+        <h1>Subfamily Sequences</h1>
         <ul class="breadcrumb" style="font-size: medium">
             <li>
-                <button><a href="{{ url_for('swissport', family_id = family_id) }}">Swissport</a></button>
+                <button><a href="{{ url_for('swissport', family_id = family_id) }}">Swiss-Prot</a></button>
             </li>
             <li>
-                <button><a href="{{ url_for('trembl', family_id = family_id) }}">treMBL</a></button>
+                <button><a href="{{ url_for('trembl', family_id = family_id) }}">TrEMBL</a></button>
             </li>
         </ul>
     </div>
+    <br>
     <!-- Main Content Area-->
-    <div class="SubfamilyInformation">
-        <h1>Family Information</h1>
-        <p style="font-size: medium">Family (Latin: familia, plural familiae) is one of the eight major hierarchical
-            taxonomic ranks in Linnaean taxonomy; it is classified between order and genus. A family may be divided into
-            subfamilies, which are intermediate ranks between the ranks of family and genus. The official family names
-            are Latin in origin; however, popular names are often used: for example, walnut trees and hickory trees
-            belong to the family Juglandaceae, but that family is commonly referred to as being the "walnut family".</p>
+    <div class="familyInformation">
+        {{ content|safe }}
     </div>
 {% endblock %}

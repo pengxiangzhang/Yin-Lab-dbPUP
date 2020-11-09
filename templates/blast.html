@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+
+{% block title %}Blastx{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="page-header">
+            <h3>{{ name }}</h3>
+
+        </div>
+    </div>
+
+    <div class="familyInformation">
+        {{ content|safe }}
+    </div>
+    <br>
+    <div class="container">
+        <form id="blastx-form" name="blastx-form" action="{{ url_for('blast') }}" method="POST">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul style="color:red;" class=flashes>
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+            <div style="text-align:left;">
+                <label for="subject" style="color:blue"> <b> I. Paste the sequence in the textarea. </b> </label> <br>
+                <span style="font-size:1em;">Try <a id="id_example" href="#" style="color:blue;" value="protein"> example </a> sequences.</span>
+            </div>
+            {{ form.hidden_tag() }}
+            <textarea placeholder="DNA sequence in fasta format" style="min-height:100px" rows="10" name="id_sequences"
+                      id="id_sequences" oninput="validatePaste()">
+</textarea>
+            <br>
+            <div style="text-align:left;">
+                <label for="subject" style="color:blue"> <B> II. Or upload the sequence file. </B> </label> <br>
+                <span style="font-size: 1em;text-align:left;">File in Fasta format</span>
+                <input style="border-style: dotted;" type="file" id='id_file' name="id_file" value=""
+                       onchange='validateFasta(this.files)'/>
+                <input type="hidden" id="id_file_text" name="id_file_text">
+            </div>
+            <br>
+            {{ form.recaptcha(class="form-control") }}
+        </form>
+        {% for message in form.recaptcha.errors %}
+            <div style="color:red;">{{ message }}</div>
+        {% endfor %}
+        <a class="btn btn-primary"
+           onclick="document.getElementById('id_file').value = ''; document.getElementById('blastx-form').submit();">Run
+            Blastx</a>
+
+        <script type="text/javascript">
+            function validatePaste() {
+                var text = document.getElementById("id_sequences").value;
+                var v = document.getElementById("id_sequences");
+                var seqs = text.split(">");
+                //split by sequence
+                if (seqs.length < 2) {      //no > existed
+                    alert("Pasted sequence is not in FASTA format. No headers found.");
+                    v.value = "";
+                    return false;
+                }
+                if (seqs[0].length == 0) { //first array should be empty
+                    seqs.shift();
+                } else {                   //there was stuff before first >
+                    alert("Pasted sequence is not in FASTA format. There should be no data above the first header.");
+                    v.value = "";
+                    return false;
+                }
+                for (var i = 0; i < seqs.length; i++) {  //split each sequence by line
+                    seqs[i] = seqs[i].match(/[^\r\n]+/g);
+                    if (seqs[i].length < 2) {            //every sequence must be at least 2 lines (header and AA/NA)
+                        alert("Pasted sequence is not in FASTA format. No data found under header line.");
+                        v.value = "";
+                        return false;
+                    }
+                }
+                prot = false;
+                for (var i = 0; i < seqs.length; i++) {
+                    for (var j = 1; j < seqs[i].length; j++) {
+                        if (seqs[i][j].search(/[BDEFHIJKLMOPQRSUVWXYZ0123456789\s]/i) != -1) {
+                            alert("Illegal characters found in sequences. Nucleotides sequences can only contain A, T, C, G, or N characters.");
+                            v.value = "";
+                            return false;
+                        }
+                    }
+                }
+                return true;
+            }
+
+            // the end of the first funciton
+
+            function validateFasta(files) {
+                var validFasta = true;
+                var f = document.getElementById("id_file");
+                var file = files[0];
+                if (file.size / 1024 / 1024 > 20) {
+                    alert("Max file size is 20 MB. Please upload a smaller file.");
+                    f.value = "";
+                    return;
+                }
+                // for file size
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    var text = reader.result;
+                    var seqs = text.split(">"); //split by sequence
+                    if (seqs.length < 2) {      //no > existed
+                        validFasta = false;
+                        alert("File is not in FASTA format.");
+                        f.value = "";
+                        return;
+                    }
+                    if (seqs[0].length == 0) { //first array should be empty
+                        seqs.shift();
+
+                    } else {                   //there was stuff before first >
+                        validFasta = false;
+                        alert("File is not in FASTA format. There should be no data above the first header.");
+                        f.value = "";
+                        return;
+                    }
+                    for (var i = 0; i < seqs.length; i++) {  //split each sequence by line
+                        seqs[i] = seqs[i].match(/[^\r\n]+/g);
+                        if (seqs[i].length < 2) {            //every sequence must be at least 2 lines (header and AA/NA)
+                            validFasta = false;
+                            alert("File is not in FASTA format.");
+                            f.value = "";
+                            return;
+                        }
+                    }
+                    document.getElementById('id_file_text').value = text;
+                }
+                reader.readAsText(file)
+                return validFasta;
+                // justy the file is not in FASTA format
+
+            }
+        </script>
+
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            input[type=text], select, textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                margin-top: 6px;
+                margin-bottom: 16px;
+                resize: vertical;
+            }
+
+            input[type=submit] {
+                background-color: #4CAF50;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+            .container {
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('a#id_example').click(function () { // click event
+                    document.getElementById('id_sequences').value = ">tr|D7F2D8|D7F2D8_BACIU\nMFKFKKKFLVGLTAAFMSISMFSATASAAGTDYWQNWTDGGGTVNAVNGSGGNYSVNWSNTGNFVVGKGWTTGSPFRTINYNAGVWAPNGNGYLTLYGWTRSPLIEYYVVDSWGTYRPTGTYKGTVKSDGGTYDIYTTTRYNAPSIDGDNTTFTQYWSVRQSKRPTGSNAAITFSNHVNAWKSHGMNLGSNWAYQVLATEGYKSSGSSNVTVW"
+                })
+            })
+        </script>
+    </div>
+
+{% endblock %}

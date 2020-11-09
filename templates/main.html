@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <!-- Main Content Area-->
+    <div class="row">
+        <div class="page-header">
+            <h3>{{ name }}</h3>
+
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        {{ content| safe }}
+    </div>
+{% endblock %}
