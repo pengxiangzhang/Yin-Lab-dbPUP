@@ -77,12 +77,12 @@ def find_blastdb(name: str, is_prot: bool) -> str:
         if os.path.exists(alf) or os.path.exists(idxf):
             return os.path.join(os.environ["BLASTDB"], name)
 
-    paths = [ os.getcwd(), str(Path.home()) ]
+    paths = [os.getcwd(), str(Path.home())]
     if "NCBI" in os.environ:
         paths.append(os.path.join(os.environ["NCBI"]))
 
     for path in paths:
-        for fname in [ ".ncbirc", "ncbi.ini" ]:
+        for fname in [".ncbirc", "ncbi.ini"]:
             ncbirc = os.path.join(path, fname)
             if os.path.exists(ncbirc):
                 blastdb = get_blastdb_from_ncbi_config(ncbirc)
@@ -158,5 +158,5 @@ def create_arg_parser():
 
 if __name__ == "__main__":
     import sys
-    sys.exit(main())
 
+    sys.exit(main())
