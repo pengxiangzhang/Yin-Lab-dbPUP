@@ -22,7 +22,7 @@ with open('config.json') as json_file:
     app.config['RECAPTCHA_PUBLIC_KEY'] = configs['recaptcha']['RECAPTCHA_PUBLIC_KEY']
     app.config['RECAPTCHA_PRIVATE_KEY'] = configs['recaptcha']['RECAPTCHA_PRIVATE_KEY']
     app.secret_key = configs['website']['key']
-
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     # database
     connection_stat = "mysql+pymysql://" + configs['database']['username'] \
                       + ":" + configs['database']['password'] + "@" \
@@ -51,7 +51,7 @@ def page_not_found(e):
 def index():
     name = app.config['FullName'] + " (" + app.config['title'] + ")"
     title = ""
-    c = open('content/Homepage.md', 'r').read()
+    c = open('content/Homepage.md', 'r',encoding='utf-8').read()
     return render_template('index.html', content=to_md(c), description="", title=title, name=name)
 
 
@@ -60,7 +60,7 @@ def about():
     name = ""
     title = "About - "
     try:
-        with open('content/About.md') as c:
+        with open('content/About.md',encoding='utf-8') as c:
             name = get_title(c)
             next(c)
             c = c.read()
@@ -74,7 +74,7 @@ def help():
     name = ""
     title = "Help - "
     try:
-        with open('content/Helppage.md') as c:
+        with open('content/Helppage.md',encoding='utf-8') as c:
             name = get_title(c)
             next(c)
             c = c.read()
@@ -88,7 +88,7 @@ def statistics():
     name = ""
     title = "Statistics - "
     try:
-        with open('content/Statistics_page.md') as c:
+        with open('content/Statistics_page.md',encoding='utf-8') as c:
             name = get_title(c)
             next(c)
             c = c.read()
@@ -102,7 +102,7 @@ def download():
     name = ""
     title = "Download - "
     try:
-        with open('content/download.md') as c:
+        with open('content/download.md',encoding='utf-8') as c:
             name = get_title(c)
             next(c)
             c = c.read()
@@ -145,7 +145,7 @@ def swissport(family_id):
     if not found:
         abort(404)
     try:
-        with open('content/family_' + family_id + '.md') as c:
+        with open('content/family_' + family_id + '.md',encoding='utf-8') as c:
             name = get_title(c)
             c.close()
     except Exception:
@@ -178,7 +178,7 @@ def trembl(family_id):
     if not found:
         abort(404)
     try:
-        with open('content/family_' + family_id + '.md') as c:
+        with open('content/family_' + family_id + '.md',encoding='utf-8') as c:
             name = get_title(c)
             c.close()
     except Exception:
@@ -208,7 +208,7 @@ def tree(family_id):
     title = "Tree - " + family_id + " - "
     name = family_id
     try:
-        with open('content/tree_page.md') as c:
+        with open('content/tree_page.md',encoding='utf-8') as c:
             c = c.read()
     except Exception:
         pass
@@ -219,7 +219,7 @@ def tree(family_id):
         abort(404)
 
     try:
-        with open('content/family_' + family_id + '.md') as n:
+        with open('content/family_' + family_id + '.md',encoding='utf-8') as n:
             name = get_title(n)
             n.close()
     except Exception:
@@ -236,12 +236,12 @@ def family(family_id):
     if not is_family(family_id):
         abort(404)
     try:
-        with open('content/family_' + family_id + '.md') as c:
+        with open('content/family_' + family_id + '.md',encoding='utf-8') as c:
             name = get_title(c)
             next(c)
             c = c.read()
     except Exception:
-        c = open('content/nothing.md', 'r').read()
+        c = open('content/nothing.md', 'r',encoding='utf-8').read()
         name = "Subfamily for " + family_id
 
     if family_id == 'OR4':
@@ -286,12 +286,12 @@ def subfamily(family_id):
     if not is_subfamily(family_id):
         abort(404)
     try:
-        with open('content/family_' + family_id + '.md') as c:
+        with open('content/family_' + family_id + '.md',encoding='utf-8') as c:
             name = get_title(c)
             next(c)
             c = c.read()
     except Exception:
-        c = open('content/nothing.md', 'r').read()
+        c = open('content/nothing.md', 'r',encoding='utf-8').read()
         name = "Subfamily for " + family_id
     return render_template('subfamily.html', content=to_md(c), family_id=family_id, description="", title=title,
                            name=name)
@@ -308,13 +308,13 @@ def network(family_id):
     if subfile == [] and mainfile == []:
         abort(404)
     try:
-        with open('content/ssn_page.md') as c:
+        with open('content/ssn_page.md',encoding='utf-8') as c:
             c = c.read()
     except Exception:
         abort(404)
     finalfile = [s[26:][:-4] for s in subfile]
     try:
-        with open('content/family_' + family_id + '.md') as n:
+        with open('content/family_' + family_id + '.md',encoding='utf-8') as n:
             name = get_title(n)
             n.close()
     except Exception:
@@ -329,12 +329,12 @@ def classes(class_id):
     name = ""
     amount = 0
     try:
-        with open('content/class_' + class_id + '.md') as c:
+        with open('content/class_' + class_id + '.md',encoding='utf-8') as c:
             name = get_title(c)
             next(c)
             c = c.read()
     except Exception:
-        c = open('content/nothing.md', 'r').read()
+        c = open('content/nothing.md', 'r',encoding='utf-8').read()
         name = "class_id"
 
     if class_id == 'ORs':
@@ -365,7 +365,7 @@ def blast():
     form = InputForm()
     title = "Blast - "
     try:
-        with open('content/blast_page.md') as c:
+        with open('content/blast_page.md',encoding='utf-8') as c:
             name = get_title(c)
             next(c)
             c = c.read()
