@@ -22,7 +22,7 @@ with open('config.json') as json_file:
     app.config['RECAPTCHA_PUBLIC_KEY'] = configs['recaptcha']['RECAPTCHA_PUBLIC_KEY']
     app.config['RECAPTCHA_PRIVATE_KEY'] = configs['recaptcha']['RECAPTCHA_PRIVATE_KEY']
     app.secret_key = configs['website']['key']
-
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     # database
     connection_stat = "mysql+pymysql://" + configs['database']['username'] \
                       + ":" + configs['database']['password'] + "@" \
