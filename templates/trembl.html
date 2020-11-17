@@ -19,94 +19,94 @@
     </div>
 
     <div class="container-wrap">
-     <script defer type="text/javascript">
-        $(document).ready(function () {
-            $('#data-table').DataTable({
-                lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
-                dom: 'Bfrtip',
-                columnDefs: [{
-                    targets: [7, 8],
-                    searchable: true,
-                    visible: false
-                }],
-                buttons: [
-                    'pageLength',
-                    {
-                        extend: 'csvHtml5',
-                        fieldBoundary: '',
-                        text: 'export',
-                        exportOptions: {
-                            columns: [0, 1, 2, 3, 4, 5]
+        <script defer type="text/javascript">
+            $(document).ready(function () {
+                $('#data-table').DataTable({
+                    lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
+                    dom: 'Bfrtip',
+                    columnDefs: [{
+                        targets: [7, 8],
+                        searchable: true,
+                        visible: false
+                    }],
+                    buttons: [
+                        'pageLength',
+                        {
+                            extend: 'csvHtml5',
+                            fieldBoundary: '',
+                            text: 'export',
+                            exportOptions: {
+                                columns: [0, 1, 2, 3, 4, 5]
+                            }
+                        },
+                        {
+                            extend: 'copy',
+                            fieldBoundary: '',
+                            text: 'copy',
+                            title: '',
+                            header: '\n',
+                            exportOptions: {
+                                stripNewlines: false,
+                                columns: [-2]
+                            }
+                        },
+                        {
+                            text: 'All',
+                            action: function () {
+                                location.reload(true);
+                            }
+                        },
+                        {
+                            text: 'Bacteria',
+                            action: function () {
+                                var table = $('#data-table').DataTable();
+                                table.column(4).search('').draw();
+                                var table = $('#data-table').DataTable();
+                                table.column(-1).search('Bacteria').draw();
+                            }
+                        },
+                        {
+                            text: 'Archaea',
+                            action: function () {
+                                var table = $('#data-table').DataTable();
+                                table.column(4).search('').draw();
+                                var table = $('#data-table').DataTable();
+                                table.column(-1).search('Archaea').draw();
+                            }
+                        },
+                        {
+                            text: 'Eukaryota',
+                            action: function () {
+                                var table = $('#data-table').DataTable();
+                                table.column(4).search('').draw();
+                                var table = $('#data-table').DataTable();
+                                table.column(-1).search('Eukaryota').draw();
+                            }
+                        },
+                        {
+                            text: 'Viruses',
+                            action: function () {
+                                var table = $('#data-table').DataTable();
+                                table.column(4).search('').draw();
+                                var table = $('#data-table').DataTable();
+                                table.column(-1).search('Viruses').draw();
+                            }
+                        },
+                        {
+                            text: 'Unclassified',
+                            action: function () {
+                                var table = $('#data-table').DataTable();
+                                table.column(4).search('').draw();
+                                var table = $('#data-table').DataTable();
+                                table.column(-1).search('unclassified').draw();
+                            }
                         }
-                    },
-                    {
-                        extend: 'copy',
-                        fieldBoundary: '',
-                        text: 'copy',
-                        title: '',
-                        header: '\n',
-                        exportOptions: {
-                            stripNewlines: false,
-                            columns: [-2]
-                        }
-                    },
-                    {
-                        text: 'All',
-                        action: function () {
-                            location.reload(true);
-                        }
-                    },
-                    {
-                        text: 'Bacteria',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(4).search('').draw();
-                            var table = $('#data-table').DataTable();
-                            table.column(-1).search('Bacteria').draw();
-                        }
-                    },
-                    {
-                        text: 'Archaea',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(4).search('').draw();
-                            var table = $('#data-table').DataTable();
-                            table.column(-1).search('Archaea').draw();
-                        }
-                    },
-                    {
-                        text: 'Eukaryota',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(4).search('').draw();
-                            var table = $('#data-table').DataTable();
-                            table.column(-1).search('Eukaryota').draw();
-                        }
-                    },
-                    {
-                        text: 'Viruses',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(4).search('').draw();
-                            var table = $('#data-table').DataTable();
-                            table.column(-1).search('Viruses').draw();
-                        }
-                    },
-                    {
-                        text: 'Unclassified',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(4).search('').draw();
-                            var table = $('#data-table').DataTable();
-                            table.column(-1).search('unclassified').draw();
-                        }
-                    }
 
-                ],
-                select: true
+                    ],
+                    select: true
+                });
             });
-        });
-    </script>
+        </script>
         <table class="table" id="data-table">
             <thead>
             <tr>
