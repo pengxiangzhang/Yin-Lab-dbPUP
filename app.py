@@ -375,11 +375,7 @@ def blast():
         sequence = request.form.get('id_sequences')
         file = request.form.get('id_file_text')
         function = request.form.get('job')
-        print(file)
-        if form.validate() == False:
-            flash('All fields are required.')
-            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
-        elif sequence == "" and file == "":
+        if sequence == "" and file == "":
             flash('You need to at least have one input.')
             return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
         elif sequence != "" and file != "":
@@ -390,11 +386,15 @@ def blast():
                 query = sequence
             elif sequence == '' and file != '':
                 query = file
-            if function == 'blastp':
+            if function == 'p':
+                print('function p is running')
                 records = blastp(query)
-            elif function == 'blastx':
+                head = "Result of blastp"
+            elif function == 'x':
+                print('function x is running')
                 records = blastx(query)
-            return render_template('result_blastp.html', records=records, title=title, description="")
+                head = "Result of blastx"
+            return render_template('result_blastp.html', records=records, title=title, description="", head=head)
 
     elif request.method == 'GET':
         return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
