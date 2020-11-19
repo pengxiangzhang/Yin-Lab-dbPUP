@@ -3,7 +3,7 @@
 {% block title %}Blastx{% endblock %}
 
 {% block content %}
-
+<div class="form" id="form">
     <div class="row">
         <div class="page-header">
             <h3>{{ name }}</h3>
@@ -26,14 +26,19 @@
                     </ul>
                 {% endif %}
             {% endwith %}
+                        Program<select name="job" id="job">
+                <option value="no">--Please choose an option--</option>
+                <option value="p">blastp - (protein vs protein)</option>
+                <option value="x">blastx - (DNA vs protein)</option>
+                </select>
+                <br>
             <div style="text-align:left;">
                 <label for="subject" style="color:blue"> <b> I. Paste the sequence in the textarea. </b> </label> <br>
                 <span style="font-size:1em;">Try <a id="id_example" href="#" style="color:blue;" value="protein"> example </a> sequences.</span>
             </div>
             {{ form.hidden_tag() }}
-            <textarea placeholder="DNA sequence in fasta format" style="min-height:100px" rows="10" name="id_sequences"
-                      id="id_sequences" oninput="validatePaste()">
-</textarea>
+            <textarea placeholder="" style="min-height:100px" rows="10" name="id_sequences"
+                      id="id_sequences"></textarea>
             <br>
             <div style="text-align:left;">
                 <label for="subject" style="color:blue"> <B> II. Or upload the sequence file. </B> </label> <br>
@@ -49,50 +54,20 @@
             <div style="color:red;">{{ message }}</div>
         {% endfor %}
         <a class="btn btn-primary"
-           onclick="document.getElementById('id_file').value = ''; document.getElementById('blastx-form').submit();">Run
-            Blastx</a>
+           onclick="document.getElementById('id_file').value = ''; document.getElementById('blastx-form').submit();program()">Run Blastx</a>
 
         <script type="text/javascript">
-            function validatePaste() {
-                var text = document.getElementById("id_sequences").value;
-                var v = document.getElementById("id_sequences");
-                var seqs = text.split(">");
-                //split by sequence
-                if (seqs.length < 2) {      //no > existed
-                    alert("Pasted sequence is not in FASTA format. No headers found.");
-                    v.value = "";
-                    return false;
-                }
-                if (seqs[0].length == 0) { //first array should be empty
-                    seqs.shift();
-                } else {                   //there was stuff before first >
-                    alert("Pasted sequence is not in FASTA format. There should be no data above the first header.");
-                    v.value = "";
-                    return false;
-                }
-                for (var i = 0; i < seqs.length; i++) {  //split each sequence by line
-                    seqs[i] = seqs[i].match(/[^\r\n]+/g);
-                    if (seqs[i].length < 2) {            //every sequence must be at least 2 lines (header and AA/NA)
-                        alert("Pasted sequence is not in FASTA format. No data found under header line.");
-                        v.value = "";
-                        return false;
-                    }
-                }
-                prot = false;
-                for (var i = 0; i < seqs.length; i++) {
-                    for (var j = 1; j < seqs[i].length; j++) {
-                        if (seqs[i][j].search(/[BDEFHIJKLMOPQRSUVWXYZ0123456789\s]/i) != -1) {
-                            alert("Illegal characters found in sequences. Nucleotides sequences can only contain A, T, C, G, or N characters.");
-                            v.value = "";
-                            return false;
-                        }
-                    }
-                }
-                return true;
+        function program(){
+            var select = document.getElementById("job").value;
+            if (select=="no") {
+                alert("You must select a program you want to run")
+                return false 
             }
+            document.getElementById("form").style.display = "none";
+            document.getElementById("spinner").style.display = "inline";
 
-            // the end of the first funciton
-
+        }
+        
             function validateFasta(files) {
                 var validFasta = true;
                 var f = document.getElementById("id_file");
@@ -106,37 +81,10 @@
                 var reader = new FileReader();
                 reader.onload = function (e) {
                     var text = reader.result;
-                    var seqs = text.split(">"); //split by sequence
-                    if (seqs.length < 2) {      //no > existed
-                        validFasta = false;
-                        alert("File is not in FASTA format.");
-                        f.value = "";
-                        return;
-                    }
-                    if (seqs[0].length == 0) { //first array should be empty
-                        seqs.shift();
-
-                    } else {                   //there was stuff before first >
-                        validFasta = false;
-                        alert("File is not in FASTA format. There should be no data above the first header.");
-                        f.value = "";
-                        return;
-                    }
-                    for (var i = 0; i < seqs.length; i++) {  //split each sequence by line
-                        seqs[i] = seqs[i].match(/[^\r\n]+/g);
-                        if (seqs[i].length < 2) {            //every sequence must be at least 2 lines (header and AA/NA)
-                            validFasta = false;
-                            alert("File is not in FASTA format.");
-                            f.value = "";
-                            return;
-                        }
-                    }
                     document.getElementById('id_file_text').value = text;
                 }
                 reader.readAsText(file)
                 return validFasta;
-                // justy the file is not in FASTA format
-
             }
         </script>
 
@@ -187,5 +135,12 @@
             })
         </script>
     </div>
+</div>
+<div class="spinner" id="spinner" style="display: none;">
+  TODO: It might take a while, please do not leave the page
+</div>
 
+<style>
+
+</style>
 {% endblock %}
