@@ -374,6 +374,7 @@ def blast():
     if request.method == 'POST':
         sequence = request.form.get('id_sequences')
         file = request.form.get('id_file_text')
+        function = request.form.get('job')
         print(file)
         if form.validate() == False:
             flash('All fields are required.')
@@ -389,7 +390,10 @@ def blast():
                 query = sequence
             elif sequence == '' and file != '':
                 query = file
-            records = blastp(query)
+            if function == 'blastp':
+                records = blastp(query)
+            elif function == 'blastx':
+                records = blastx(query)
             return render_template('result_blastp.html', records=records, title=title, description="")
 
     elif request.method == 'GET':
