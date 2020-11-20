@@ -24,9 +24,8 @@
                 $('#data-table').DataTable({
                     lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
                     dom: 'Bfrtip',
-                    "scrollX": true
                     columnDefs: [{
-                        targets: [6],
+                        targets: [7, 8],
                         searchable: true,
                         visible: false
                     }],
@@ -101,14 +100,13 @@
                                 var table = $('#data-table').DataTable();
                                 table.column(-1).search('unclassified').draw();
                             }
-
                         }
+
                     ],
                     select: true
                 });
             });
         </script>
-
         <table class="table" id="data-table">
             <thead>
             <tr>

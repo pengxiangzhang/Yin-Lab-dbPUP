@@ -51,7 +51,7 @@ def page_not_found(e):
 def index():
     name = app.config['FullName'] + " (" + app.config['title'] + ")"
     title = ""
-    c = open('content/Homepage.md', 'r',encoding='utf-8').read()
+    c = open('content/Homepage.md', 'r', encoding='utf-8').read()
     return render_template('index.html', content=to_md(c), description="", title=title, name=name)
 
 
@@ -60,7 +60,7 @@ def about():
     name = ""
     title = "About - "
     try:
-        with open('content/About.md',encoding='utf-8') as c:
+        with open('content/About.md', encoding='utf-8') as c:
             name = get_title(c)
             next(c)
             c = c.read()
@@ -74,7 +74,7 @@ def help():
     name = ""
     title = "Help - "
     try:
-        with open('content/Helppage.md',encoding='utf-8') as c:
+        with open('content/Helppage.md', encoding='utf-8') as c:
             name = get_title(c)
             next(c)
             c = c.read()
@@ -88,7 +88,7 @@ def statistics():
     name = ""
     title = "Statistics - "
     try:
-        with open('content/Statistics_page.md',encoding='utf-8') as c:
+        with open('content/Statistics_page.md', encoding='utf-8') as c:
             name = get_title(c)
             next(c)
             c = c.read()
@@ -102,7 +102,7 @@ def download():
     name = ""
     title = "Download - "
     try:
-        with open('content/download.md',encoding='utf-8') as c:
+        with open('content/download.md', encoding='utf-8') as c:
             name = get_title(c)
             next(c)
             c = c.read()
@@ -145,7 +145,7 @@ def swissport(family_id):
     if not found:
         abort(404)
     try:
-        with open('content/family_' + family_id + '.md',encoding='utf-8') as c:
+        with open('content/family_' + family_id + '.md', encoding='utf-8') as c:
             name = get_title(c)
             c.close()
     except Exception:
@@ -178,7 +178,7 @@ def trembl(family_id):
     if not found:
         abort(404)
     try:
-        with open('content/family_' + family_id + '.md',encoding='utf-8') as c:
+        with open('content/family_' + family_id + '.md', encoding='utf-8') as c:
             name = get_title(c)
             c.close()
     except Exception:
@@ -208,7 +208,7 @@ def tree(family_id):
     title = "Tree - " + family_id + " - "
     name = family_id
     try:
-        with open('content/tree_page.md',encoding='utf-8') as c:
+        with open('content/tree_page.md', encoding='utf-8') as c:
             c = c.read()
     except Exception:
         pass
@@ -219,7 +219,7 @@ def tree(family_id):
         abort(404)
 
     try:
-        with open('content/family_' + family_id + '.md',encoding='utf-8') as n:
+        with open('content/family_' + family_id + '.md', encoding='utf-8') as n:
             name = get_title(n)
             n.close()
     except Exception:
@@ -236,12 +236,12 @@ def family(family_id):
     if not is_family(family_id):
         abort(404)
     try:
-        with open('content/family_' + family_id + '.md',encoding='utf-8') as c:
+        with open('content/family_' + family_id + '.md', encoding='utf-8') as c:
             name = get_title(c)
             next(c)
             c = c.read()
     except Exception:
-        c = open('content/nothing.md', 'r',encoding='utf-8').read()
+        c = open('content/nothing.md', 'r', encoding='utf-8').read()
         name = "Subfamily for " + family_id
 
     if family_id == 'OR4':
@@ -286,12 +286,12 @@ def subfamily(family_id):
     if not is_subfamily(family_id):
         abort(404)
     try:
-        with open('content/family_' + family_id + '.md',encoding='utf-8') as c:
+        with open('content/family_' + family_id + '.md', encoding='utf-8') as c:
             name = get_title(c)
             next(c)
             c = c.read()
     except Exception:
-        c = open('content/nothing.md', 'r',encoding='utf-8').read()
+        c = open('content/nothing.md', 'r', encoding='utf-8').read()
         name = "Subfamily for " + family_id
     return render_template('subfamily.html', content=to_md(c), family_id=family_id, description="", title=title,
                            name=name)
@@ -308,13 +308,13 @@ def network(family_id):
     if subfile == [] and mainfile == []:
         abort(404)
     try:
-        with open('content/ssn_page.md',encoding='utf-8') as c:
+        with open('content/ssn_page.md', encoding='utf-8') as c:
             c = c.read()
     except Exception:
         abort(404)
     finalfile = [s[26:][:-4] for s in subfile]
     try:
-        with open('content/family_' + family_id + '.md',encoding='utf-8') as n:
+        with open('content/family_' + family_id + '.md', encoding='utf-8') as n:
             name = get_title(n)
             n.close()
     except Exception:
@@ -329,12 +329,12 @@ def classes(class_id):
     name = ""
     amount = 0
     try:
-        with open('content/class_' + class_id + '.md',encoding='utf-8') as c:
+        with open('content/class_' + class_id + '.md', encoding='utf-8') as c:
             name = get_title(c)
             next(c)
             c = c.read()
     except Exception:
-        c = open('content/nothing.md', 'r',encoding='utf-8').read()
+        c = open('content/nothing.md', 'r', encoding='utf-8').read()
         name = "class_id"
 
     if class_id == 'ORs':
@@ -365,7 +365,7 @@ def blast():
     form = InputForm()
     title = "Blast - "
     try:
-        with open('content/blast_page.md',encoding='utf-8') as c:
+        with open('content/blast_page.md', encoding='utf-8') as c:
             name = get_title(c)
             next(c)
             c = c.read()
@@ -374,11 +374,8 @@ def blast():
     if request.method == 'POST':
         sequence = request.form.get('id_sequences')
         file = request.form.get('id_file_text')
-        print(file)
-        if form.validate() == False:
-            flash('All fields are required.')
-            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
-        elif sequence == "" and file == "":
+        function = request.form.get('job')
+        if sequence == "" and file == "":
             flash('You need to at least have one input.')
             return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
         elif sequence != "" and file != "":
@@ -389,8 +386,15 @@ def blast():
                 query = sequence
             elif sequence == '' and file != '':
                 query = file
-            records = blastp(query)
-            return render_template('result_blastp.html', records=records, title=title, description="")
+            if function == 'p':
+                print('function p is running')
+                records = blastp(query)
+                head = "Result of blastp"
+            elif function == 'x':
+                print('function x is running')
+                records = blastx(query)
+                head = "Result of blastx"
+            return render_template('result_blastp.html', records=records, title=title, description="", head=head)
 
     elif request.method == 'GET':
         return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
@@ -488,6 +492,63 @@ def blastp(query):
     # for item in processed_blastp:
     #     print(item)
     return processed_blastp
+
+
+def blastx(query):
+    with open('pup_blastp/search.fsa', 'w') as f:
+        f.writelines(query)
+    command = "./blast/blastp -db pup_blastp/PUP_db -query pup_blastx/search.fsa -out pup_blastx/results.blast -outfmt 6 -evalue 1e-5 -num_threads 2"
+    os.system(command)
+
+    with open('pup_blastp/results.blast', 'r') as f:
+        data = f.readlines()
+        if len(data) == 0:
+            return []
+
+    data = pd.read_csv('pup_blastp/results.blast', sep="\t", header=None)
+    index = 0
+    processed_blastx = []
+    for unid in data[1]:
+        char_record = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
+        swis_record = swiRecord.SwiRecord.query.filter_by(uniq_id=unid).first()
+        trem_record = treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
+        if char_record != None:
+            char_result = []
+            char_result.append(data[0][index])
+            char_result.append(unid)
+            char_result.append(char_record.family)
+            char_result.append(data[2][index])
+            char_result.append(data[10][index])
+            char_result.append(char_record.protein_name)
+            char_result.append(char_record.strain)
+            char_result.append("")
+            processed_blastx.append(char_result)
+        if swis_record != None:
+            swis_result = []
+            swis_result.append(data[0][index])
+            swis_result.append(unid)
+            swis_result.append(swis_record.family)
+            swis_result.append(data[2][index])
+            swis_result.append(data[10][index])
+            swis_result.append(swis_record.protein_enzyme)
+            swis_result.append(swis_record.strain)
+            swis_result.append(swis_record.web_id)
+            processed_blastx.append(swis_result)
+        if trem_record != None:
+            trem_result = []
+            trem_result.append(data[0][index])
+            trem_result.append(unid)
+            trem_result.append(trem_record.family)
+            trem_result.append(data[2][index])
+            trem_result.append(data[10][index])
+            trem_result.append(trem_record.protein_enzyme)
+            trem_result.append(trem_record.strain)
+            trem_result.append(trem_record.web_id)
+            processed_blastx.append(trem_result)
+
+        index += 1
+
+    return processed_blastx
 
 
 if __name__ == "__main__":

@@ -3,189 +3,271 @@
 {% block title %}Blastx{% endblock %}
 
 {% block content %}
+    <div class="form" id="form">
+        <div class="row">
+            <div class="page-header">
+                <h3>{{ name }}</h3>
 
-    <div class="row">
-        <div class="page-header">
-            <h3>{{ name }}</h3>
+            </div>
+        </div>
 
+        <div class="familyInformation">
+            {{ content|safe }}
+        </div>
+        <br>
+        <div class="container">
+            <form id="blastx-form" name="blastx-form" action="{{ url_for('blast') }}" method="POST">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <ul style="color:red;" class=flashes>
+                            {% for message in messages %}
+                                <li>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endwith %}
+                <lable style="color:blue"><b>Program</b></lable>
+                <select name="job" id="job">
+                    <option value="no">--Please choose an option--</option>
+                    <option value="p">blastp - (protein vs protein)</option>
+                    <option value="x">blastx - (DNA vs protein)</option>
+                </select>
+                <br>
+                <div style="text-align:left;">
+                    <label for="subject" style="color:blue"> <b> I. Paste the sequence in the textarea. </b> </label>
+                    <br>
+                    <span style="font-size:1em;">Try <a id="id_example" href="#" style="color:blue;" value="protein"> example </a> sequences.</span>
+                </div>
+                {{ form.hidden_tag() }}
+                <textarea placeholder="" style="min-height:100px" rows="10" name="id_sequences"
+                          id="id_sequences"></textarea>
+                <br>
+                <div style="text-align:left;">
+                    <label for="subject" style="color:blue"> <B> II. Or upload the sequence file. </B> </label> <br>
+                    <span style="font-size: 1em;text-align:left;">File in Fasta format</span>
+                    <input style="border-style: dotted;" type="file" id='id_file' name="id_file" value=""
+                           onchange='validateFasta(this.files)'/>
+                    <input type="hidden" id="id_file_text" name="id_file_text">
+                </div>
+                <br>
+                {{ form.recaptcha(class="form-control") }}
+            </form>
+            {% for message in form.recaptcha.errors %}
+                <div style="color:red;">{{ message }}</div>
+            {% endfor %}
+            <a class="btn btn-primary"
+               onclick="confirm('Please notice that blast may take upto 2 minutes to run.\nPlease be patient and do not refresh the page.');document.getElementById('id_file').value = ''; document.getElementById('blastx-form').submit();program();">Run
+                Blast</a>
+
+            <script type="text/javascript">
+                function program() {
+                    var select = document.getElementById("job").value;
+                    if (select == "no") {
+                        alert("You must select a program you want to run")
+                        return false
+                    }
+                    document.getElementById("spinner").style.display = "inline";
+                }
+
+                function validateFasta(files) {
+                    var validFasta = true;
+                    var f = document.getElementById("id_file");
+                    var file = files[0];
+                    if (file.size / 1024 / 1024 > 20) {
+                        alert("Max file size is 20 MB. Please upload a smaller file.");
+                        f.value = "";
+                        return;
+                    }
+                    // for file size
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var text = reader.result;
+                        document.getElementById('id_file_text').value = text;
+                    }
+                    reader.readAsText(file)
+                    return validFasta;
+                }
+            </script>
+
+            <style>
+                body {
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+
+                * {
+                    box-sizing: border-box;
+                }
+
+                input[type=text], select, textarea {
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    margin-top: 6px;
+                    margin-bottom: 16px;
+                    resize: vertical;
+                }
+
+                input[type=submit] {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 12px 20px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+
+                input[type=submit]:hover {
+                    background-color: #45a049;
+                }
+
+                .container {
+                    border-radius: 5px;
+                    background-color: #f2f2f2;
+                    padding: 20px;
+                }
+            </style>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('a#id_example').click(function () { // click event
+                        document.getElementById('id_sequences').value = ">tr|D7F2D8|D7F2D8_BACIU\nMFKFKKKFLVGLTAAFMSISMFSATASAAGTDYWQNWTDGGGTVNAVNGSGGNYSVNWSNTGNFVVGKGWTTGSPFRTINYNAGVWAPNGNGYLTLYGWTRSPLIEYYVVDSWGTYRPTGTYKGTVKSDGGTYDIYTTTRYNAPSIDGDNTTFTQYWSVRQSKRPTGSNAAITFSNHVNAWKSHGMNLGSNWAYQVLATEGYKSSGSSNVTVW"
+                    })
+                })
+            </script>
         </div>
     </div>
-
-    <div class="familyInformation">
-        {{ content|safe }}
-    </div>
-    <br>
-    <div class="container">
-        <form id="blastx-form" name="blastx-form" action="{{ url_for('blast') }}" method="POST">
-            {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    <ul style="color:red;" class=flashes>
-                        {% for message in messages %}
-                            <li>{{ message }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            {% endwith %}
-            <div style="text-align:left;">
-                <label for="subject" style="color:blue"> <b> I. Paste the sequence in the textarea. </b> </label> <br>
-                <span style="font-size:1em;">Try <a id="id_example" href="#" style="color:blue;" value="protein"> example </a> sequences.</span>
-            </div>
-            {{ form.hidden_tag() }}
-            <textarea placeholder="DNA sequence in fasta format" style="min-height:100px" rows="10" name="id_sequences"
-                      id="id_sequences" oninput="validatePaste()">
-</textarea>
-            <br>
-            <div style="text-align:left;">
-                <label for="subject" style="color:blue"> <B> II. Or upload the sequence file. </B> </label> <br>
-                <span style="font-size: 1em;text-align:left;">File in Fasta format</span>
-                <input style="border-style: dotted;" type="file" id='id_file' name="id_file" value=""
-                       onchange='validateFasta(this.files)'/>
-                <input type="hidden" id="id_file_text" name="id_file_text">
-            </div>
-            <br>
-            {{ form.recaptcha(class="form-control") }}
-        </form>
-        {% for message in form.recaptcha.errors %}
-            <div style="color:red;">{{ message }}</div>
-        {% endfor %}
-        <a class="btn btn-primary"
-           onclick="document.getElementById('id_file').value = ''; document.getElementById('blastx-form').submit();">Run
-            Blastx</a>
-
-        <script type="text/javascript">
-            function validatePaste() {
-                var text = document.getElementById("id_sequences").value;
-                var v = document.getElementById("id_sequences");
-                var seqs = text.split(">");
-                //split by sequence
-                if (seqs.length < 2) {      //no > existed
-                    alert("Pasted sequence is not in FASTA format. No headers found.");
-                    v.value = "";
-                    return false;
-                }
-                if (seqs[0].length == 0) { //first array should be empty
-                    seqs.shift();
-                } else {                   //there was stuff before first >
-                    alert("Pasted sequence is not in FASTA format. There should be no data above the first header.");
-                    v.value = "";
-                    return false;
-                }
-                for (var i = 0; i < seqs.length; i++) {  //split each sequence by line
-                    seqs[i] = seqs[i].match(/[^\r\n]+/g);
-                    if (seqs[i].length < 2) {            //every sequence must be at least 2 lines (header and AA/NA)
-                        alert("Pasted sequence is not in FASTA format. No data found under header line.");
-                        v.value = "";
-                        return false;
-                    }
-                }
-                prot = false;
-                for (var i = 0; i < seqs.length; i++) {
-                    for (var j = 1; j < seqs[i].length; j++) {
-                        if (seqs[i][j].search(/[BDEFHIJKLMOPQRSUVWXYZ0123456789\s]/i) != -1) {
-                            alert("Illegal characters found in sequences. Nucleotides sequences can only contain A, T, C, G, or N characters.");
-                            v.value = "";
-                            return false;
-                        }
-                    }
-                }
-                return true;
-            }
-
-            // the end of the first funciton
-
-            function validateFasta(files) {
-                var validFasta = true;
-                var f = document.getElementById("id_file");
-                var file = files[0];
-                if (file.size / 1024 / 1024 > 20) {
-                    alert("Max file size is 20 MB. Please upload a smaller file.");
-                    f.value = "";
-                    return;
-                }
-                // for file size
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    var text = reader.result;
-                    var seqs = text.split(">"); //split by sequence
-                    if (seqs.length < 2) {      //no > existed
-                        validFasta = false;
-                        alert("File is not in FASTA format.");
-                        f.value = "";
-                        return;
-                    }
-                    if (seqs[0].length == 0) { //first array should be empty
-                        seqs.shift();
-
-                    } else {                   //there was stuff before first >
-                        validFasta = false;
-                        alert("File is not in FASTA format. There should be no data above the first header.");
-                        f.value = "";
-                        return;
-                    }
-                    for (var i = 0; i < seqs.length; i++) {  //split each sequence by line
-                        seqs[i] = seqs[i].match(/[^\r\n]+/g);
-                        if (seqs[i].length < 2) {            //every sequence must be at least 2 lines (header and AA/NA)
-                            validFasta = false;
-                            alert("File is not in FASTA format.");
-                            f.value = "";
-                            return;
-                        }
-                    }
-                    document.getElementById('id_file_text').value = text;
-                }
-                reader.readAsText(file)
-                return validFasta;
-                // justy the file is not in FASTA format
-
-            }
-        </script>
-
+    <div class="spinner" id="spinner" style="display: none;">
+        <div class="loading">Loading&#8230;</div>
         <style>
-            body {
-                font-family: Arial, Helvetica, sans-serif;
+            /* Absolute Center Spinner */
+            .loading {
+                position: fixed;
+                z-index: 999;
+                height: 2em;
+                width: 2em;
+                overflow: show;
+                margin: auto;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
             }
 
-            * {
-                box-sizing: border-box;
-            }
-
-            input[type=text], select, textarea {
+            /* Transparent Overlay */
+            .loading:before {
+                content: '';
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
                 width: 100%;
-                padding: 12px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                box-sizing: border-box;
-                margin-top: 6px;
-                margin-bottom: 16px;
-                resize: vertical;
+                height: 100%;
+                background: radial-gradient(rgba(20, 20, 20, .8), rgba(0, 0, 0, .8));
+
+                background: -webkit-radial-gradient(rgba(20, 20, 20, .8), rgba(0, 0, 0, .8));
             }
 
-            input[type=submit] {
-                background-color: #4CAF50;
-                color: white;
-                padding: 12px 20px;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
+            /* :not(:required) hides these rules from IE9 and below */
+            .loading:not(:required) {
+                /* hide "loading..." text */
+                font: 0/0 a;
+                color: transparent;
+                text-shadow: none;
+                background-color: transparent;
+                border: 0;
             }
 
-            input[type=submit]:hover {
-                background-color: #45a049;
+            .loading:not(:required):after {
+                content: '';
+                display: block;
+                font-size: 10px;
+                width: 1em;
+                height: 1em;
+                margin-top: -0.5em;
+                -webkit-animation: spinner 150ms infinite linear;
+                -moz-animation: spinner 150ms infinite linear;
+                -ms-animation: spinner 150ms infinite linear;
+                -o-animation: spinner 150ms infinite linear;
+                animation: spinner 150ms infinite linear;
+                border-radius: 0.5em;
+                -webkit-box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0, rgba(255, 255, 255, 0.75) 1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) 0 1.5em 0 0, rgba(255, 255, 255, 0.75) -1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) -1.5em 0 0 0, rgba(255, 255, 255, 0.75) -1.1em -1.1em 0 0, rgba(255, 255, 255, 0.75) 0 -1.5em 0 0, rgba(255, 255, 255, 0.75) 1.1em -1.1em 0 0;
+                box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0, rgba(255, 255, 255, 0.75) 1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) 0 1.5em 0 0, rgba(255, 255, 255, 0.75) -1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) -1.5em 0 0 0, rgba(255, 255, 255, 0.75) -1.1em -1.1em 0 0, rgba(255, 255, 255, 0.75) 0 -1.5em 0 0, rgba(255, 255, 255, 0.75) 1.1em -1.1em 0 0;
             }
 
-            .container {
-                border-radius: 5px;
-                background-color: #f2f2f2;
-                padding: 20px;
+            /* Animation */
+
+            @-webkit-keyframes spinner {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                    -moz-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                    -o-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+                100% {
+                    -webkit-transform: rotate(360deg);
+                    -moz-transform: rotate(360deg);
+                    -ms-transform: rotate(360deg);
+                    -o-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+
+            @-moz-keyframes spinner {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                    -moz-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                    -o-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+                100% {
+                    -webkit-transform: rotate(360deg);
+                    -moz-transform: rotate(360deg);
+                    -ms-transform: rotate(360deg);
+                    -o-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+
+            @-o-keyframes spinner {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                    -moz-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                    -o-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+                100% {
+                    -webkit-transform: rotate(360deg);
+                    -moz-transform: rotate(360deg);
+                    -ms-transform: rotate(360deg);
+                    -o-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes spinner {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                    -moz-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                    -o-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+                100% {
+                    -webkit-transform: rotate(360deg);
+                    -moz-transform: rotate(360deg);
+                    -ms-transform: rotate(360deg);
+                    -o-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
             }
         </style>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('a#id_example').click(function () { // click event
-                    document.getElementById('id_sequences').value = ">tr|D7F2D8|D7F2D8_BACIU\nMFKFKKKFLVGLTAAFMSISMFSATASAAGTDYWQNWTDGGGTVNAVNGSGGNYSVNWSNTGNFVVGKGWTTGSPFRTINYNAGVWAPNGNGYLTLYGWTRSPLIEYYVVDSWGTYRPTGTYKGTVKSDGGTYDIYTTTRYNAPSIDGDNTTFTQYWSVRQSKRPTGSNAAITFSNHVNAWKSHGMNLGSNWAYQVLATEGYKSSGSSNVTVW"
-                })
-            })
-        </script>
     </div>
 
+    <style>
+
+    </style>
 {% endblock %}

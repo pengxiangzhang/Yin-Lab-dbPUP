@@ -6,21 +6,21 @@
 
 Proteins in Evidence (seeds) are classified into corresponding class based on their EC numbers and annotations, while proteins have no significant Pfam will be assigned into class Unclassified(UCs).
 
-&#9658; [**Oxidation/Reduction Reactions (ORs)**](/classes/ORs): EC 1.-.-.- in the EC number classification of enzymes.
+&#9658; [**Oxidation/Reduction Reactions (ORs)**](./classes/ORs): EC 1.-.-.- in the EC number classification of enzymes.
 
-&#9658;  [**Functional Group Transfer Reactions (FRs)**](/classes/FRs) : EC 2.-.-.- in the EC number classification of enzymes.
+&#9658;  [**Functional Group Transfer Reactions (FRs)**](./classes/FRs) : EC 2.-.-.- in the EC number classification of enzymes.
 
-&#9658; [**Hydrolysis Reactions (HRs)**](/classes/HRs) : EC 3.-.-.- in the EC number classification of enzymes.
+&#9658; [**Hydrolysis Reactions (HRs)**](./classes/HRs) : EC 3.-.-.- in the EC number classification of enzymes.
 
-&#9658;​ [**Non-hydrolytic Cleaving Reactions (NCRs)**](/classes/NCRs) : EC 4.-.-.- in the EC number classification of enzymes.
+&#9658;​ [**Non-hydrolytic Cleaving Reactions (NCRs)**](./classes/NCRs) : EC 4.-.-.- in the EC number classification of enzymes.
 
-&#9658;​ [**Isomerization Reactions (IRs)**](/classes/IRs) : EC 5.-.-.- in the EC number classification of enzymes.
+&#9658;​ [**Isomerization Reactions (IRs)**](./classes/IRs) : EC 5.-.-.- in the EC number classification of enzymes.
 
-&#9658;​ [**Synthesis Reactions (SRs)**](/classes/SRs) : EC 6.-.-.- in the EC number classification of enzymes.
+&#9658;​ [**Synthesis Reactions (SRs)**](./classes/SRs) : EC 6.-.-.- in the EC number classification of enzymes.
 
-&#9658;​ [**Translocation Reactions (TRs)**](/classes/TRs) : EC 7.-.-.- in the EC number classification of enzymes.
+&#9658;​ [**Translocation Reactions (TRs)**](./classes/TRs) : EC 7.-.-.- in the EC number classification of enzymes.
 
-&#9658;​ [**Unclassified (UCs)**](/classes/UCs)
+&#9658;​ [**Unclassified (UCs)**](./classes/UCs)
 
 ![family_count](./static/images/text_content/figures/family_count.jpg){: .fit}
 
