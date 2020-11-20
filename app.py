@@ -493,6 +493,7 @@ def blastp(query):
     #     print(item)
     return processed_blastp
 
+
 def blastx(query):
     with open('pup_blastp/search.fsa', 'w') as f:
         f.writelines(query)
@@ -548,6 +549,7 @@ def blastx(query):
         index += 1
 
     return processed_blastx
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
