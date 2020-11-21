@@ -1,18 +1,14 @@
-workers = 5
+workers = 2
 
 threads = 2
 
-bind = '0.0.0.0:8888'
+bind = '0.0.0.0:8787'
 
-worker_class = 'gevent'
+pidfile = '/www/log/BiologyLabWeb.pid'
 
-worker_connections = 2000
+accesslog = '/www/log/BiologyLabWeb_access.log'
 
-pidfile = '/home/bo/BiologyLabWeb.pid'
-
-accesslog = '/home/bo/BiologyLabWeb_access.log'
-
-errorlog = '/home/bo/BiologyLabWeb_error.log'
+errorlog = '/www/log/BiologyLabWeb_error.log'
 
 loglevel = 'warning'
 
