@@ -372,6 +372,7 @@ def blast():
     except Exception:
         abort(404)
     if request.method == 'POST':
+        records = []
         sequence = request.form.get('id_sequences')
         file = request.form.get('id_file_text')
         function = request.form.get('job')
