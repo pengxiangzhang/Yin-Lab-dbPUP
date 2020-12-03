@@ -4,24 +4,54 @@
 
 ## Introduction
 
-Hydrolysis reactions catalyzed by hydrolases commonly break a chemical bond in order to divide a large molecule into two smaller ones. Some common examples of hydrolase enzymes are esterases including lipases, phosphatases, glycosidases, peptidases, and nucleosidases.
+Hydrolysis reactions catalyzed by hydrolases commonly break a chemical bond in order to divide a large molecule into two
+smaller ones. Some common examples of hydrolase enzymes are esterases including lipases, phosphatases, glycosidases,
+peptidases, and nucleosidases.
 
-Hydrolase enzymes are important for the body because they have degradative properties. In lipids, lipases contribute to the breakdown of fats and lipoproteins and other larger molecules into smaller molecules like fatty acids and glycerol. Fatty acids and other small molecules are used for synthesis and as a source of energy.<sup class="md-footnote"><a href="#dfref-footnote-1" name="ref-footnote-1">1</a></sup> 
+Hydrolase enzymes are important for the body because they have degradative properties. In lipids, lipases contribute to
+the breakdown of fats and lipoproteins and other larger molecules into smaller molecules like fatty acids and glycerol.
+Fatty acids and other small molecules are used for synthesis and as a source of
+energy.<sup class="md-footnote"><a href="#dfref-footnote-1" name="ref-footnote-1">1</a></sup>
 
-Esterases cleave ester bonds in lipids and phosphatases cleave phosphate groups off molecules. An example of crucial esterase is the acetylcholine esterase, which assists in transforming the neuron impulse into acetic acid after it the hydrolase breaks the acetylcholine into choline and acetic acid. <sup class="md-footnote"><a href="#dfref-footnote-1" name="ref-footnote-1">1</a></sup> Acetic acid is an important metabolite in the body and a critical intermediate for other reactions such as glycolysis. Lipases hydrolyze glycerides. Glycosidases cleave sugar molecules off carbohydrates and peptidases hydrolyze peptide bonds. Nucleosidases hydrolyze the bonds of nucleotides.<sup class="md-footnote"><a href="#dfref-footnote-2" name="ref-footnote-2">2</a></sup>
+Esterases cleave ester bonds in lipids and phosphatases cleave phosphate groups off molecules. An example of crucial
+esterase is the acetylcholine esterase, which assists in transforming the neuron impulse into acetic acid after it the
+hydrolase breaks the acetylcholine into choline and acetic
+acid. <sup class="md-footnote"><a href="#dfref-footnote-1" name="ref-footnote-1">1</a></sup> Acetic acid is an important
+metabolite in the body and a critical intermediate for other reactions such as glycolysis. Lipases hydrolyze glycerides.
+Glycosidases cleave sugar molecules off carbohydrates and peptidases hydrolyze peptide bonds. Nucleosidases hydrolyze
+the bonds of nucleotides.<sup class="md-footnote"><a href="#dfref-footnote-2" name="ref-footnote-2">2</a></sup>
 
 ---
 
 ## Reaction
 
-In biochemistry, a hydrolase is an enzyme that catalyzes the hydrolysis of a chemical bond. For example, any enzyme that catalyzes the following reaction is a hydrolase:
+In biochemistry, a hydrolase is an enzyme that catalyzes the hydrolysis of a chemical bond. For example, any enzyme that
+catalyzes the following reaction is a hydrolase:
 
-A–B + H<sub>2</sub>O → A–OH + B–H
-where A–B represents a chemical bond of unspecified molecules.
+A–B + H<sub>2</sub>O → A–OH + B–H where A–B represents a chemical bond of unspecified molecules.
 
-Hydrolases belong to **EC 3** in the EC classification system and can be further grouped into thirteen subclasses on the basis of the bonds they act upon. EC 3.1 represents a kind of enzymes rupturing ester bonds, which are called esterases. Some common esterases include nucleosidases, phosphatases, proteases, and lipases, among which phosphatases cut phosphate groups off molecules. Acetylcholine esterase is a potent neurotransmitter for voluntary muscle and it as one of the most crucial esterases contributes to the transform of the neuron impulse into acetic acid after it degrades acetylcholine into choline and acetic acid. Some dangerous toxins such as the exotoxin and saxitoxin could impede with the action of cholinesterase, and many nerve agents react by hindering the hydrolytic efficacy of cholinesterase. Nucleosidases are capable of hydrolyzing the bonds of nucleotides. Glycerides could be hydrolyzed by lipases, which also make contribution to the breakdown of fats, lipoproteins and other larger molecules into smaller molecules like fatty acids that are used for synthesis and as a source of energy. Hydrolases in EC 3.2 mainly act upon sugars such as DNA glycosylases and glycoside hydrolase. Acetic acid has become a nice intermediate for glycolysis catalyzed by glycosidases that chop sugar molecules into carbohydrates and peptidases hydrolyze peptide bonds. EC 3.3 includes ether bonds destroying enzymes. EC 3.4 covers hydrolases that act upon peptide bonds like proteases and peptidases. For example, acylpeptide hydrolase as a member of the peptidase family could deacetylate the acetylated N-terminus of polypeptides. Some other type of hydrolases comprise enzymes breaking carbon-nitrogen bonds, not peptide bonds, acid anhydrides (acid anhydride hydrolases, including helicases and GTPase), carbon-carbon bonds, halide bonds, phosphorus-nitrogen bonds, sulphur-nitrogen bonds, carbon-phosphorus bonds, sulfur-sulfur bonds, and carbon-sulfur bonds, with EC number sequentially ranging from 3.5 to 3.13.<sup class="md-footnote"><a href="#dfref-footnote-3" name="ref-footnote-3">3</a></sup>
+Hydrolases belong to **EC 3** in the EC classification system and can be further grouped into thirteen subclasses on the
+basis of the bonds they act upon. EC 3.1 represents a kind of enzymes rupturing ester bonds, which are called esterases.
+Some common esterases include nucleosidases, phosphatases, proteases, and lipases, among which phosphatases cut
+phosphate groups off molecules. Acetylcholine esterase is a potent neurotransmitter for voluntary muscle and it as one
+of the most crucial esterases contributes to the transform of the neuron impulse into acetic acid after it degrades
+acetylcholine into choline and acetic acid. Some dangerous toxins such as the exotoxin and saxitoxin could impede with
+the action of cholinesterase, and many nerve agents react by hindering the hydrolytic efficacy of cholinesterase.
+Nucleosidases are capable of hydrolyzing the bonds of nucleotides. Glycerides could be hydrolyzed by lipases, which also
+make contribution to the breakdown of fats, lipoproteins and other larger molecules into smaller molecules like fatty
+acids that are used for synthesis and as a source of energy. Hydrolases in EC 3.2 mainly act upon sugars such as DNA
+glycosylases and glycoside hydrolase. Acetic acid has become a nice intermediate for glycolysis catalyzed by
+glycosidases that chop sugar molecules into carbohydrates and peptidases hydrolyze peptide bonds. EC 3.3 includes ether
+bonds destroying enzymes. EC 3.4 covers hydrolases that act upon peptide bonds like proteases and peptidases. For
+example, acylpeptide hydrolase as a member of the peptidase family could deacetylate the acetylated N-terminus of
+polypeptides. Some other type of hydrolases comprise enzymes breaking carbon-nitrogen bonds, not peptide bonds, acid
+anhydrides (acid anhydride hydrolases, including helicases and GTPase), carbon-carbon bonds, halide bonds,
+phosphorus-nitrogen bonds, sulphur-nitrogen bonds, carbon-phosphorus bonds, sulfur-sulfur bonds, and carbon-sulfur
+bonds, with EC number sequentially ranging from 3.5 to
+3.13.<sup class="md-footnote"><a href="#dfref-footnote-3" name="ref-footnote-3">3</a></sup>
 
-For a detailed  information on class, subclass or sub-subclass of hydrolase, please visit [**ExplorEnz**](https://www.enzyme-database.org/class.php).
+For a detailed information on class, subclass or sub-subclass of hydrolase, please visit [**
+ExplorEnz**](https://www.enzyme-database.org/class.php).
 
 ---
 
@@ -57,19 +87,62 @@ For a detailed  information on class, subclass or sub-subclass of hydrolase, ple
 ## EC in HRs Families (sorted by counts)
 
 **HR1**
-[3.2.1.21](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.21); [3.2.1.85](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.85); [3.2.1.147](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.147); [3.2.1.86](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.86); [3.2.1.182](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.182); [3.2.1.31](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.31); [3.2.1.62](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.62); [3.2.1.108](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.108); [3.2.1.74](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.74); [3.2.1.188](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.188); [3.2.1.161](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.161); [2.4.1.219](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.219); [3.2.1.125](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.125); [2.4.1.300](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.300); [3.2.1.175](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.175); [3.2.1.126](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.126); [3.2.1.186](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.186); [3.2.1.38](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.38); [2.4.1.299](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.299); [3.2.1.206](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.206); [3.2.1.119](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.119); [3.5.2.17](https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.2.17); [3.2.1.105](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.105)
+[3.2.1.21](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.21)
+; [3.2.1.85](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.85)
+; [3.2.1.147](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.147)
+; [3.2.1.86](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.86)
+; [3.2.1.182](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.182)
+; [3.2.1.31](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.31)
+; [3.2.1.62](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.62)
+; [3.2.1.108](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.108)
+; [3.2.1.74](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.74)
+; [3.2.1.188](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.188)
+; [3.2.1.161](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.161)
+; [2.4.1.219](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.219)
+; [3.2.1.125](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.125)
+; [2.4.1.300](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.300)
+; [3.2.1.175](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.175)
+; [3.2.1.126](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.126)
+; [3.2.1.186](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.186)
+; [3.2.1.38](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.38)
+; [2.4.1.299](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.299)
+; [3.2.1.206](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.206)
+; [3.2.1.119](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.119)
+; [3.5.2.17](https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.2.17)
+; [3.2.1.105](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.105)
 
 **HR2**
-[3.2.1.8](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.8); [3.1.1.72](https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.72)
+[3.2.1.8](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.8)
+; [3.1.1.72](https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.72)
 
 **HR3**
-[3.2.1.21](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.21); [3.2.1.37](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.37); [3.2.1.55](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.55)
+[3.2.1.21](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.21)
+; [3.2.1.37](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.37)
+; [3.2.1.55](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.55)
 
 **HR4**
-[3.1.21.2](https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.21.2); [4.2.1.8](https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.8); [5.1.3.22](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.22); [4.2.1.44](https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.44); [5.3.1.5](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.5); [5.3.1.22](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.22); [5.3.99.11](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.99.11); [5.3.1.35](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.35); [5.1.3.41](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.41); [5.1.3.30](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.30); [5.1.3.31](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.31); [4.2.1.118](https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.118); [5.1.3.35](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.35)
+[3.1.21.2](https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.21.2)
+; [4.2.1.8](https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.8)
+; [5.1.3.22](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.22)
+; [4.2.1.44](https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.44)
+; [5.3.1.5](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.5)
+; [5.3.1.22](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.22)
+; [5.3.99.11](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.99.11)
+; [5.3.1.35](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.35)
+; [5.1.3.41](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.41)
+; [5.1.3.30](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.30)
+; [5.1.3.31](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.31)
+; [4.2.1.118](https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.118)
+; [5.1.3.35](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.35)
 
 **HR5**
-[1.1.1.18](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.18); [1.1.1.179](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.179); [1.3.1.20](https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.20); [1.1.1.369](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.369); [3.2.1.49](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.49); [1.1.1.371](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.371); [1.1.1.370](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.370)
+[1.1.1.18](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.18)
+; [1.1.1.179](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.179)
+; [1.3.1.20](https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.20)
+; [1.1.1.369](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.369)
+; [3.2.1.49](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.49)
+; [1.1.1.371](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.371)
+; [1.1.1.370](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.370)
 
 **HR6**
 [3.2.1.31](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.31)
@@ -78,7 +151,8 @@ For a detailed  information on class, subclass or sub-subclass of hydrolase, ple
 [3.2.1.40](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.40)
 
 **HR8**
-[3.7.1.24](https://www.brenda-enzymes.org/enzyme.php?ecno=3.7.1.24); [3.7.1.4](https://www.brenda-enzymes.org/enzyme.php?ecno=3.7.1.4)
+[3.7.1.24](https://www.brenda-enzymes.org/enzyme.php?ecno=3.7.1.24)
+; [3.7.1.4](https://www.brenda-enzymes.org/enzyme.php?ecno=3.7.1.4)
 
 ---
 

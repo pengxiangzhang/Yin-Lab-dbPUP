@@ -1,14 +1,21 @@
 # Isomerization Reactions (IRs) Family 1
 
-##  Literature Information
+## Literature Information
 
-| Title    | Identification of a Novel Dihydrodaidzein Racemase Essential for Biosynthesis of Equol from Daidzein in *Lactococcus* sp. Strain 20-92 |
+| Title    | Identification of a Novel Dihydrodaidzein Racemase Essential for Biosynthesis of Equol from Daidzein in *
+Lactococcus* sp. Strain 20-92 |
 | :------- | :----------------------------------------------------------- |
 | Author   | Yoshikazu Shimada, Masayuki Takahashi, Norihiro Miyazawa, Yasuhiro Abiru, Shigeto Uchiyama, Haretsugu Hishigaki |
 | DOI      | [10.1128/AEM.00410-12](https://doi.org/10.1128/AEM.00410-12) |
-| Abstract | Equol is metabolized from daidzein, a soy isoflavone, by the gut microflora. In this study, we identified a novel dihydrodaidzein racemase (l-DDRC) that is involved in equol biosynthesis in a lactic acid bacterium, *Lactococcus* sp. strain 20-92, and confirmed that histidine-tagged recombinant l-DDRC (l-DDRC-His) was able to convert both the (*R*)- and (*S*)-enantiomers of dihydrodaidzein to the racemate. Moreover, we showed that recombinant l-DDRC-His was essential for *in vitro* equol production from ==daidzein== by a recombinant enzyme mixture and that efficient *in vitro* equol production from daidzein was possible using at least four enzymes, including l-DDRC. We also proposed a model of the metabolic pathway from daidzein to equol in *Lactococcus* strain 20-92. |
+| Abstract | Equol is metabolized from daidzein, a soy isoflavone, by the gut microflora. In this study, we identified a novel dihydrodaidzein racemase (l-DDRC) that is involved in equol biosynthesis in a lactic acid bacterium, *
+Lactococcus* sp. strain 20-92, and confirmed that histidine-tagged recombinant l-DDRC (l-DDRC-His) was able to convert both the (*
+R*)- and (*
+S*)-enantiomers of dihydrodaidzein to the racemate. Moreover, we showed that recombinant l-DDRC-His was essential for *
+in vitro* equol production from ==daidzein== by a recombinant enzyme mixture and that efficient *in
+vitro* equol production from daidzein was possible using at least four enzymes, including l-DDRC. We also proposed a model of the metabolic pathway from daidzein to equol in *
+Lactococcus* strain 20-92. |
 
-##  Experimental results
+## Experimental results
 
 - **Enzyme**
 
@@ -20,7 +27,8 @@ Organism: *Lactococcus garvieae*
 
 Length: 158 AA
 
-Taxonomic identifier: [1363](https://www.uniprot.org/taxonomy/1363) [[NCBI](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?lvl=0&id=1363)]
+Taxonomic
+identifier: [1363](https://www.uniprot.org/taxonomy/1363) [[NCBI](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?lvl=0&id=1363)]
 
 - **Pfam**
 
@@ -50,7 +58,8 @@ No InterPro results.
 
 - **Reaction**
 
-[(R)-dihydrodaidzein](https://pubchem.ncbi.nlm.nih.gov/compound/11579739) &rArr; [(S)-dihydrodaidzein](https://pubchem.ncbi.nlm.nih.gov/compound/(S)-dihydrodaidzein)
+[(R)-dihydrodaidzein](https://pubchem.ncbi.nlm.nih.gov/compound/11579739)
+&rArr; [(S)-dihydrodaidzein](https://pubchem.ncbi.nlm.nih.gov/compound/(S)-dihydrodaidzein)
 
 <figure>
 <div class="linerow">

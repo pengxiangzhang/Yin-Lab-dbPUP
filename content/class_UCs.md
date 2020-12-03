@@ -4,7 +4,9 @@
 
 ## Introduction
 
-Some seeds in Evidence have no significant pfams, while experiments  have strong evidences supporting their participation in polyphenol metabolism. These sequences were classified into Unclassified (UCs) and subsequently were expanded by `PSI-Blast` rather than `hmmsearch` under a unified threshold (E-value 0.001 and run until convergence). 
+Some seeds in Evidence have no significant pfams, while experiments have strong evidences supporting their participation
+in polyphenol metabolism. These sequences were classified into Unclassified (UCs) and subsequently were expanded
+by `PSI-Blast` rather than `hmmsearch` under a unified threshold (E-value 0.001 and run until convergence).
 
 ---
 
@@ -35,7 +37,12 @@ Not applicable for this class.
 
 **UC2**
 
-[2.4.1.227](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.227); [2.4.1.17](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.17); [2.4.1.324](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.324); [2.4.1.63](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.63); [2.4.1.91](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.91); [2.4.1.237](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.237)
+[2.4.1.227](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.227)
+; [2.4.1.17](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.17)
+; [2.4.1.324](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.324)
+; [2.4.1.63](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.63)
+; [2.4.1.91](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.91)
+; [2.4.1.237](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.237)
 
 ---
 
