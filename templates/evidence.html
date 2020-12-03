@@ -12,6 +12,7 @@
     <script defer type="text/javascript">
         $(document).ready(function () {
             $('#data-table').DataTable({
+                "scrollX": true,
                 lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
                 dom: 'Bfrtip',
                 columnDefs: [{
@@ -45,16 +46,16 @@
             });
         });
     </script>
-    <div class="container-wrap">
-        <table id="data-table" class="table display nowrap">
+    <div>
+        <table id="data-table" class="table display">
             <thead>
             <tr>
                 <th style="white-space: nowrap">Number</th>
-                <th style="white-space: nowrap">Strain</th>
                 <th style="white-space: nowrap">Protein Name</th>
                 <th style="white-space: nowrap">Gene Name</th>
                 <th style="white-space: nowrap">Uniprot</th>
                 <th style="white-space: nowrap">EC</th>
+                <th style="white-space: nowrap">Strain</th>
                 <th style="white-space: nowrap">Substrate</th>
                 <th style="white-space: nowrap">Product</th>
                 <th style="white-space: nowrap">PDB</th>
@@ -72,7 +73,6 @@
             {% for record in records %}
                 <tr>
                     <td>{{ record.number }}</td>
-                    <td>{{ record.strain }}</td>
                     <td>{{ record.protein_name }}</td>
                     <td>{{ record.gene_name }}</td>
                     <td><a href="https://www.uniprot.org/uniprot/{{ record.uniq_id }}">{{ record.uniq_id }}</a></td>
@@ -86,6 +86,7 @@
                         </td>
 
                     {% endif %}
+                    <td>{{ record.strain }}</td>
                     <td>
                         {% for element in sub[record.number] %}
                             {% if element[2] == '' %}
