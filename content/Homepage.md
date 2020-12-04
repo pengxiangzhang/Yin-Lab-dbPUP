@@ -29,7 +29,7 @@ enzymes.
 
 &#9658;​ [**Unclassified (UCs)**](./classes/UCs)
 
-![family_count](./static/images/text_content/figures/family_count.jpg){: .fit}
+![family_count](./static/images/text_content/figures/family_count.jpg){: .fit .rounded-border}
 
 ## Family
 
@@ -40,7 +40,7 @@ approximately-maximum-likelihood phylogenetic tree was constructed (`FastTree`2.
 each family. Sequences collected from TrEMBL were further filtered out by `PIS-BLAST` with a unified threshold  (E-value
 0.001 and iteration number 5).
 
-![characterized_protein](./static/images/text_content/figures/characterized_protein.jpg){: .fit}
+![characterized_protein](./static/images/text_content/figures/characterized_protein.jpg){: .fit2 .rounded-border}
 
 ## Subfamily
 
