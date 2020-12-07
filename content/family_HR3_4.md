@@ -2,21 +2,34 @@
 
 ## Literature Information
 
-| Title    | Characterization of four β-glucosidases acting on isoflavone-glycosides from *Bifidobacterium
-pseudocatenulatum* IPLA 36007 |
-| :------- | :----------------------------------------------------------- |
-| Author   | Lucía Guadamuro, Ana Belén Flórez, Ángel Alegría, Lucía Vázquez, Baltasar Mayo |
-| DOI      | [10.1016/j.foodres.2017.07.024](https://doi.org/10.1016/j.foodres.2017.07.024) |
-| Abstract | *Bifidobacterium
-pseudocatenulatum* IPLA 36007 acts on [isoflavone](https://www.sciencedirect.com/topics/food-science/isoflavones) [glycosides](https://www.sciencedirect.com/topics/food-science/glycoside), releasing their corresponding aglycones. This strain-specific activity might be a key step in making isoflavones bioavailable and harnessing their oestrogenic activity. To investigate the molecular mechanisms involved in this activity, four glycosyl hydrolase-encoding genes in the IPLA 36007 genome (*
+| Title | Characterization of four β-glucosidases acting on isoflavone-glycosides from *Bifidobacterium
+pseudocatenulatum* IPLA 36007 | | :------- | :----------------------------------------------------------- | | Author |
+Lucía Guadamuro, Ana Belén Flórez, Ángel Alegría, Lucía Vázquez, Baltasar Mayo | | DOI
+| [10.1016/j.foodres.2017.07.024](https://doi.org/10.1016/j.foodres.2017.07.024) | | Abstract | *Bifidobacterium
+pseudocatenulatum* IPLA 36007 acts
+on [isoflavone](https://www.sciencedirect.com/topics/food-science/isoflavones) [glycosides](https://www.sciencedirect.com/topics/food-science/glycoside)
+, releasing their corresponding aglycones. This strain-specific activity might be a key step in making isoflavones
+bioavailable and harnessing their oestrogenic activity. To investigate the molecular mechanisms involved in this
+activity, four glycosyl hydrolase-encoding genes in the IPLA 36007 genome (*
 AW18_01575*, *AW18_09810*, *AW18_08145*, and *
 AW18_08090*) were selected, synthesized with heterologous promoter and terminator signals (r-β-*gluA*, r-β-*gluB*, r-β-*
-gluD* and r-β-*gluE*, respectively), cloned into *Escherichia
-coli*, overexpressed as His-tagged proteins, and the enzymes purified and characterized. All four enzymes – GluAHis, GluBHis, GluDHis and GluEHis – proved to have β-glucosidase activity and deglycosylated (although at different rates) the isoflavone glycosides daidzin and genistin, releasing the aglycone moieties daidzein and genistein, respectively. GluDHis and GluEHis were also shown to hydrolyse β-glucosyl [disaccharides](https://www.sciencedirect.com/topics/food-science/disaccharides) such as cellobiose and gentiobiose, while GluAHis and GluBHis did not. Differences in activity were recorded for all four β-glucosidases at different pHs and temperatures under otherwise similar assay conditions, suggesting they have complementary activities under different environmental conditions. Two of the recombinant genes, r-β-*
+gluD* and r-β-*gluE*, respectively), cloned into *Escherichia coli*, overexpressed as His-tagged proteins, and the
+enzymes purified and characterized. All four enzymes – GluAHis, GluBHis, GluDHis and GluEHis – proved to have
+β-glucosidase activity and deglycosylated (although at different rates) the isoflavone glycosides daidzin and genistin,
+releasing the aglycone moieties daidzein and genistein, respectively. GluDHis and GluEHis were also shown to hydrolyse
+β-glucosyl [disaccharides](https://www.sciencedirect.com/topics/food-science/disaccharides) such as cellobiose and
+gentiobiose, while GluAHis and GluBHis did not. Differences in activity were recorded for all four β-glucosidases at
+different pHs and temperatures under otherwise similar assay conditions, suggesting they have complementary activities
+under different environmental conditions. Two of the recombinant genes, r-β-*
 gluA*, and r-β-*
-gluD*, were cloned and expressed in the model [lactic acid bacterium](https://www.sciencedirect.com/topics/food-science/lactic-acid-bacteria) *
+gluD*, were cloned and expressed in the
+model [lactic acid bacterium](https://www.sciencedirect.com/topics/food-science/lactic-acid-bacteria) *
 Lactococcus lactis*, suggesting starter and probiotic organisms could be endowed with β-glucosidase activity. *B.
-pseudocatenulatum* IPLA 36007 contains additional β-glucosidases to those studied in this work, indicating a high level of redundancy for this enzymatic activity. Knowledge of glycoside-degrading enzymes should facilitate the development of novel, more effective or more selective prebiotics or functional foods for the promotion of bifidobacterial numbers in the human gut. It might also be of interest in the development of novel probiotics with specific health-promoting activities. |
+pseudocatenulatum* IPLA 36007 contains additional β-glucosidases to those studied in this work, indicating a high level
+of redundancy for this enzymatic activity. Knowledge of glycoside-degrading enzymes should facilitate the development of
+novel, more effective or more selective prebiotics or functional foods for the promotion of bifidobacterial numbers in
+the human gut. It might also be of interest in the development of novel probiotics with specific health-promoting
+activities. |
 
 ## Experimental results
 
@@ -114,6 +127,7 @@ family 3, C-terminal domain [IPR002772](http://www.ebi.ac.uk/interpro/entry/Inte
 
 [p-nitrophenyl-β-D-glucopyranoside](https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl-beta-D-glucopyranoside)
 &rArr; [p-nitrophenyl](https://pubchem.ncbi.nlm.nih.gov/compound/p-nitrophenyl)
+
 + [β-D-Glucopyranose](https://pubchem.ncbi.nlm.nih.gov/compound/64689)
 
 <figure>

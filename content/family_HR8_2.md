@@ -2,16 +2,25 @@
 
 ## Literature Information
 
-| Title    | Discovery and structural analysis of a phloretin hydrolase from the opportunistic human pathogen *
-Mycobacterium abscessus* |
-| :------- | :----------------------------------------------------------- |
-| Author   | Jian‐Ting Han  Si‐Ping Zhang  Wen‐Juan Jia  Zhang Zhang  Yong Wang  Yong‐Xing He |
-| DOI      | [10.1111/febs.14792](https://doi.org/10.1111/febs.14792)     |
-| Abstract | The family of PhlG proteins catalyses the hydrolysis of carbon‐carbon bonds and is widely distributed across diverse bacterial species. Two members of the PhlG family have been separately identified as 2,4‐diacetylphloroglucinol (2,4‐DAPG) hydrolase and phloretin hydrolase; however, the extent of functional divergence and catalytic substrates for most members of this family is still unknown. Here, using sequence similarity network and gene co‐occurrence analysis, we categorized PhlG proteins into several subgroups and inferred that PhlG proteins from *
-Mycobacterium
-abscessus* (MaPhlG) are likely to be functionally equivalent to phloretin hydrolase. Indeed, we confirmed the hydrolytic activity of MaPhlG towards phloretin and its analog monoacetylphloroglucinol (MAPG), and the crystal structure of MaPhlG in complex with MAPG revealed the key residues involved in catalysis and substrate binding. Through mutagenesis and enzymatic assays, we demonstrated that H160, I162, A213 and Q266, which are substituted in 2,4‐DAPG hydrolase, are essential for the activity towards phloretin. Based on the conservation of these residues, potential phloretin hydrolases were identified from *
-Frankia*, *Colletotrichum tofieldiae* and *Magnaporthe
-grisea*, which are rhizosphere inhabitants. These enzymes may be important for rhizosphere adaptation of the producing microbes by providing a carbon source through anaerobic degradation of flavonoids. Taken together, our results provided a framework for understanding the mechanism of functional divergence of PhlG proteins. |
+| Title | Discovery and structural analysis of a phloretin hydrolase from the opportunistic human pathogen *
+Mycobacterium abscessus* | | :------- | :----------------------------------------------------------- | | Author |
+Jian‐Ting Han Si‐Ping Zhang Wen‐Juan Jia Zhang Zhang Yong Wang Yong‐Xing He | | DOI
+| [10.1111/febs.14792](https://doi.org/10.1111/febs.14792)     | | Abstract | The family of PhlG proteins catalyses the
+hydrolysis of carbon‐carbon bonds and is widely distributed across diverse bacterial species. Two members of the PhlG
+family have been separately identified as 2,4‐diacetylphloroglucinol (2,4‐DAPG) hydrolase and phloretin hydrolase;
+however, the extent of functional divergence and catalytic substrates for most members of this family is still unknown.
+Here, using sequence similarity network and gene co‐occurrence analysis, we categorized PhlG proteins into several
+subgroups and inferred that PhlG proteins from *
+Mycobacterium abscessus* (MaPhlG) are likely to be functionally equivalent to phloretin hydrolase. Indeed, we confirmed
+the hydrolytic activity of MaPhlG towards phloretin and its analog monoacetylphloroglucinol (MAPG), and the crystal
+structure of MaPhlG in complex with MAPG revealed the key residues involved in catalysis and substrate binding. Through
+mutagenesis and enzymatic assays, we demonstrated that H160, I162, A213 and Q266, which are substituted in 2,4‐DAPG
+hydrolase, are essential for the activity towards phloretin. Based on the conservation of these residues, potential
+phloretin hydrolases were identified from *
+Frankia*, *Colletotrichum tofieldiae* and *Magnaporthe grisea*, which are rhizosphere inhabitants. These enzymes may be
+important for rhizosphere adaptation of the producing microbes by providing a carbon source through anaerobic
+degradation of flavonoids. Taken together, our results provided a framework for understanding the mechanism of
+functional divergence of PhlG proteins. |
 
 ## Experimental results
 
@@ -68,8 +77,9 @@ v1-like fold, rather than the classical alpha/beta-fold hydrolases[^1].
 - **Reaction**
 
 [phloretin](https://pubchem.ncbi.nlm.nih.gov/compound/phloretin)
+
 + [H<sub>2</sub>O](https://pubchem.ncbi.nlm.nih.gov/compound/Water)
-&rArr; [Phloretic acid](https://pubchem.ncbi.nlm.nih.gov/compound/Phloretic%20acid)
+  &rArr; [Phloretic acid](https://pubchem.ncbi.nlm.nih.gov/compound/Phloretic%20acid)
 + [phloroglucinol](https://pubchem.ncbi.nlm.nih.gov/compound/phloroglucinol)
 
 <figure>

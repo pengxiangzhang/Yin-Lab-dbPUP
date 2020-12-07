@@ -7,10 +7,18 @@
 | Author   | Taro Ozaki, Satoshi Mishima, Makoto Nishiyama & Tomohisa Kuzuyama |
 | DOI      | [10.1038/ja.2009.48](https://doi.org/10.1038/ja.2009.48)     |
 | Abstract | NovQ is a member of a recently identified CloQ/NphB class of prenyltransferases. Although NphB has been well characterized as a prenyltransferase with flexibility against aromatic substrates, few studies have been carried out on characterization of NovQ. Hence, in this study, we investigate the kinetics, substrate specificity and regiospecificity of NovQ. The corresponding *
-novQ* gene was cloned from *Streptomyces
-niveus,* which produces an aminocoumarin antibiotic, novobiocin. Recombinant NovQ was overexpressed in *Escherichia
-coli* and purified to homogeneity. The purified enzyme was a soluble monomeric 40-kDa protein that catalyzed the transfer of a dimethylallyl group to ==4-hydroxyphenylpyruvate (4-HPP)== independently of divalent cations to yield ==3-dimethylallyl-4-HPP==, an intermediate of novobiocin. Steady-state kinetic constants for NovQ with the two substrates, 4-HPP and dimethylallyl diphosphate, were also calculated. In addition to the prenylation of 4-HPP, NovQ catalyzed carbon–carbon-based and carbon–oxygen-based prenylations of a diverse collection of phenylpropanoids, flavonoids and dihydroxynaphthalenes. Despite its catalytic promiscuity, the NovQ-catalyzed prenylation occurred in a regiospecific manner. NovQ is the first reported prenyltransferase capable of catalyzing the transfer of a dimethylallyl group to both phenylpropanoids, such as *
-p*-coumaric acid and caffeic acid, and the B-ring of flavonoids. This study shows that NovQ can serve as a useful biocatalyst for the synthesis of prenylated phenylpropanoids and prenylated flavonoids. |
+
+novQ* gene was cloned from *Streptomyces niveus,* which produces an aminocoumarin antibiotic, novobiocin. Recombinant
+NovQ was overexpressed in *Escherichia coli* and purified to homogeneity. The purified enzyme was a soluble monomeric
+40-kDa protein that catalyzed the transfer of a dimethylallyl group to ==4-hydroxyphenylpyruvate (4-HPP)== independently
+of divalent cations to yield ==3-dimethylallyl-4-HPP==, an intermediate of novobiocin. Steady-state kinetic constants
+for NovQ with the two substrates, 4-HPP and dimethylallyl diphosphate, were also calculated. In addition to the
+prenylation of 4-HPP, NovQ catalyzed carbon–carbon-based and carbon–oxygen-based prenylations of a diverse collection of
+phenylpropanoids, flavonoids and dihydroxynaphthalenes. Despite its catalytic promiscuity, the NovQ-catalyzed
+prenylation occurred in a regiospecific manner. NovQ is the first reported prenyltransferase capable of catalyzing the
+transfer of a dimethylallyl group to both phenylpropanoids, such as *
+p*-coumaric acid and caffeic acid, and the B-ring of flavonoids. This study shows that NovQ can serve as a useful
+biocatalyst for the synthesis of prenylated phenylpropanoids and prenylated flavonoids. |
 
 ## Experimental results
 
@@ -71,8 +79,9 @@ in the biosynthesis of prenylated phenazines. It catalyses the transfer of a dim
 - **Reaction**
 
 [4-hydroxyphenylpyruvate](https://pubchem.ncbi.nlm.nih.gov/compound/4-hydroxyphenylpyruvate)
+
 + [dimethylallyl diphosphate](https://pubchem.ncbi.nlm.nih.gov/compound/647)
-&rArr; [diphosphate](https://pubchem.ncbi.nlm.nih.gov/compound/644102)
+  &rArr; [diphosphate](https://pubchem.ncbi.nlm.nih.gov/compound/644102)
 + [3-dimethylallyl-4-hydroxyphenylpyruvate](https://pubchem.ncbi.nlm.nih.gov/compound/3-dimethylallyl-4-hydroxyphenylpyruvate)
 
 <figure>

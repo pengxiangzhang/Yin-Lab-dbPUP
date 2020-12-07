@@ -2,26 +2,32 @@
 
 ## Literature Information
 
-| Title    | Physiological and biochemical characterization of the two *α*-L-rhamnosidases of *Lactobacillus
-plantarum* NCC245 |
-| :------- | :----------------------------------------------------------- |
-| Author   | Marta Ávila, Muriel Jaquet, Deborah Moine, Teresa Requena, Carmen Peláez, Fabrizio Arigoni, Ivana Jankovic |
-| DOI      | [10.1099/mic.0.027789-0](https://doi.org/10.1099/mic.0.027789-0) |
-| Abstract | This work is believed to be the first report on the physiological and biochemical characterization of *
-α*-l-rhamnosidases in lactic acid bacteria. A total of 216 strains representing 37 species and eight genera of food-grade bacteria were screened for *
-α*-l-rhamnosidase activity. The majority of positive bacteria (25 out of 35) were *Lactobacillus
-plantarum* strains, and activity of the *L. plantarum* strain NCC245 was examined in more detail. The analysis of *
-α*-l-rhamnosidase activity under different growth conditions revealed dual regulation of the enzyme activity, involving carbon catabolite repression and induction: the enzyme activity was downregulated by glucose and upregulated by l-rhamnose. The expression of the two *
+| Title | Physiological and biochemical characterization of the two *α*-L-rhamnosidases of *Lactobacillus plantarum*
+NCC245 | | :------- | :----------------------------------------------------------- | | Author | Marta Ávila, Muriel
+Jaquet, Deborah Moine, Teresa Requena, Carmen Peláez, Fabrizio Arigoni, Ivana Jankovic | | DOI
+| [10.1099/mic.0.027789-0](https://doi.org/10.1099/mic.0.027789-0) | | Abstract | This work is believed to be the first
+report on the physiological and biochemical characterization of *
+α*-l-rhamnosidases in lactic acid bacteria. A total of 216 strains representing 37 species and eight genera of
+food-grade bacteria were screened for *
+α*-l-rhamnosidase activity. The majority of positive bacteria (25 out of 35) were *Lactobacillus plantarum* strains, and
+activity of the *L. plantarum* strain NCC245 was examined in more detail. The analysis of *
+α*-l-rhamnosidase activity under different growth conditions revealed dual regulation of the enzyme activity, involving
+carbon catabolite repression and induction: the enzyme activity was downregulated by glucose and upregulated by
+l-rhamnose. The expression of the two *
 α*-l-rhamnosidase genes *rhaB1* and *rhaB2* and two predicted permease genes *rhaP1* and *
 rhaP2*, identified in a probable operon *
-rhaP2B2P1B1*, was repressed by glucose and induced by l-rhamnose, showing regulation at the transcriptional level. The two *
-α*-l-rhamnosidase genes were overexpressed and purified from *Escherichia
-coli*. RhaB1 activity was maximal at 50 °C and at neutral pH and RhaB2 maximal activity was detected at 60 °C and at pH 5, with high residual activity at 70 °C. Both enzymes showed a preference for the *
+rhaP2B2P1B1*, was repressed by glucose and induced by l-rhamnose, showing regulation at the transcriptional level. The
+two *
+α*-l-rhamnosidase genes were overexpressed and purified from *Escherichia coli*. RhaB1 activity was maximal at 50 °C and
+at neutral pH and RhaB2 maximal activity was detected at 60 °C and at pH 5, with high residual activity at 70 °C. Both
+enzymes showed a preference for the *
 α*-1,6 linkage of l-rhamnose to *
-β*-d-glucose, ==hesperidin== and ==rutin== being their best substrates, but, surprisingly, no activity was detected towards the *
+β*-d-glucose, ==hesperidin== and ==rutin== being their best substrates, but, surprisingly, no activity was detected
+towards the *
 α*-1,2 linkage in naringin under the tested conditions. In conclusion, we identified and characterized the strain *L.
 plantarum* NCC245 and its two *
-α*-l-rhamnosidase enzymes, which might be applied for improvement of bioavailability of health-beneficial polyphenols, such as hesperidin, in humans. |
+α*-l-rhamnosidase enzymes, which might be applied for improvement of bioavailability of health-beneficial polyphenols,
+such as hesperidin, in humans. |
 
 ## Experimental results
 
@@ -78,6 +84,7 @@ rhamnosylated terpenoids, as signal substances in plants or play a role in the a
 [p-nitrophenyl-α-L-rhamnopyranoside](https://pubchem.ncbi.nlm.nih.gov/compound/4-Nitrophenyl-beta-D-glucopyranoside
 ) + [H<sub>2</sub>O](https://pubchem.ncbi.nlm.nih.gov/compound/Water)
 &rArr; [L-rhamnose](https://pubchem.ncbi.nlm.nih.gov/compound/L-rhamnose)
+
 + [p-nitrophenyl](https://pubchem.ncbi.nlm.nih.gov/compound/p-nitrophenyl)
 
 <figure>

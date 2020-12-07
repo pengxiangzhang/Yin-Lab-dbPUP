@@ -2,13 +2,19 @@
 
 ## Literature Information
 
-| Title    | Enzymatic carboxylation of hydroxystilbenes by the γ-resorcylic acid decarboxylase from *Rhizobium
-radiobacter* WU-0108 under reverse reaction conditions |
-| :------- | :----------------------------------------------------------- |
-| Author   | Masaru Sato, Nozomu Sakurai, Hideyuki Suzuki, Daisuke Shibata, Kuniki Kino |
-| DOI      | [10.1016/j.molcatb.2015.10.006](https://doi.org/10.1016/j.molcatb.2015.10.006) |
+| Title | Enzymatic carboxylation of hydroxystilbenes by the γ-resorcylic acid decarboxylase from *Rhizobium
+radiobacter* WU-0108 under reverse reaction conditions | | :------- | :
+----------------------------------------------------------- | | Author | Masaru Sato, Nozomu Sakurai, Hideyuki Suzuki,
+Daisuke Shibata, Kuniki Kino | | DOI | [10.1016/j.molcatb.2015.10.006](https://doi.org/10.1016/j.molcatb.2015.10.006) |
 | Abstract | We examined 66 aromatics for carboxylation by the γ-resorcylic acid decarboxylase from *Rhizobium
-radiobacter* WU-0108 under reverse reaction conditions. The enzyme carboxylated ==resorcinol, catechol, 5-methylresorcinol== and three hydroxystilbenes (==resveratrol==, ==gnetol==, and ==piceatannol==) with high yields. Except for catechol, the structures of these substrates include a 1,3-dihydroxybenzene moiety. Other compounds gave no reaction products. The reaction products from resveratrol and gnetol were 2,6-dihydroxy-4-[(E)-2-(4-hydroxyphenyl)ethenyl]benzoic acid and 2,6-dihydroxy-4-[(E)-2-(2,6-dihydroxyphenyl)ethenyl]benzoic acid, respectively, as determined by mass spectrometry and nuclear magnetic resonance analyses. Kinetic analyses of the carboxylation reactions indicated that resveratrol and gnetol are better substrates than resorcinol or catechol. |
+radiobacter* WU-0108 under reverse reaction conditions. The enzyme carboxylated ==resorcinol, catechol,
+5-methylresorcinol== and three hydroxystilbenes (==resveratrol==, ==gnetol==, and ==piceatannol==) with high yields.
+Except for catechol, the structures of these substrates include a 1,3-dihydroxybenzene moiety. Other compounds gave no
+reaction products. The reaction products from resveratrol and gnetol were
+2,6-dihydroxy-4-[(E)-2-(4-hydroxyphenyl)ethenyl]benzoic acid and 2,6-dihydroxy-4-[(E)-2-(2,6-dihydroxyphenyl)ethenyl]
+benzoic acid, respectively, as determined by mass spectrometry and nuclear magnetic resonance analyses. Kinetic analyses
+of the carboxylation reactions indicated that resveratrol and gnetol are better substrates than resorcinol or catechol.
+|
 
 ## Experimental results
 

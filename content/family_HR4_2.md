@@ -2,12 +2,12 @@
 
 ## Literature Information
 
-| Title    | Identification and functional expression of genes encoding flavonoid *O*‐ and *
-C*‐glycosidases in intestinal bacteria |
-| :------- | :----------------------------------------------------------- |
-| Author   | Annett Braune, Wolfram Engst, Michael Blaut                  |
-| DOI      | [10.1111/1462-2920.12864](https://doi.org/10.1111/1462-2920.12864) |
-| Abstract | Gut bacteria play a crucial role in the metabolism of dietary flavonoids and thereby influence the bioactivity of these compounds in the host. The intestinal *
+| Title | Identification and functional expression of genes encoding flavonoid *O*‐ and *
+C*‐glycosidases in intestinal bacteria | | :------- | :----------------------------------------------------------- | |
+Author | Annett Braune, Wolfram Engst, Michael Blaut | | DOI
+| [10.1111/1462-2920.12864](https://doi.org/10.1111/1462-2920.12864) | | Abstract | Gut bacteria play a crucial role in
+the metabolism of dietary flavonoids and thereby influence the bioactivity of these compounds in the host. The
+intestinal *
 Lachnospiraceae* strain CG19‐1 and *Eubacterium cellulosolvens* are able to deglycosylate *C*‐ and *
 O*‐coupled flavonoid glucosides. Growth of strain CG19‐1 in the presence of the isoflavone *
 C*‐glucoside puerarin (daidzein 8‐*
@@ -15,13 +15,14 @@ C*‐glucoside) led to the induction of two proteins (DfgC, DfgD). Heterologous 
 dfgC*, *dfgD*) in *Escherichia coli* revealed no *
 C*‐deglycosylating activity in the resulting cell extracts but cleavage of flavonoid *
 O*‐glucosides such as daidzin (daidzein 7‐*
-O*‐glucoside). The recombinant DfgC and DfgD proteins were purified and characterized with respect to their quaternary structure, substrate and cofactor specificity. The products of the corresponding genes (*
+O*‐glucoside). The recombinant DfgC and DfgD proteins were purified and characterized with respect to their quaternary
+structure, substrate and cofactor specificity. The products of the corresponding genes (*
 dfgC*, *dfgD*) from *E. cellulosolvens* also catalysed the ==*
-O*‐deglycosylation of daidzin== following their expression in *E.
-coli*. In combination with three recombinant proteins encoded by adjacent genes in *E. cellulosolvens* (*dfgA*, *
+O*‐deglycosylation of daidzin== following their expression in *E. coli*. In combination with three recombinant proteins
+encoded by adjacent genes in *E. cellulosolvens* (*dfgA*, *
 dfgB*, *dfgE*), DfgC and DfgD from *E. cellulosolvens* catalysed the deglycosylation of the flavone *
 C*‐glucosides homoorientin (luteolin 6‐*C*‐glucoside) and isovitexin (apigenin 6‐*C*‐glucoside). Even intact cells of *
-E**. coli* expressing the five *E. cellulosolvens* genes cleaved these flavone *C*‐glucosides and, also, flavonoid *
+E**. coli* expressing the five *E. cellulosolvens* genes cleaved these flavone *C*‐glucosides and, also, flavonoid *
 O*‐glucosides to the corresponding aglycones. |
 
 ## Experimental results
@@ -87,6 +88,7 @@ simultaneously*
 
 [daidzin](https://pubchem.ncbi.nlm.nih.gov/compound/107971
 ) &rArr; [daidzein](https://pubchem.ncbi.nlm.nih.gov/compound/daidzein)
+
 + [glucose](https://pubchem.ncbi.nlm.nih.gov/compound/glucose)
 
 <figure>

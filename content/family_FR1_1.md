@@ -70,8 +70,9 @@ domain[^3].
 - **Reaction**
 
 [resveratrol](https://pubchem.ncbi.nlm.nih.gov/compound/resveratrol)
+
 + [sucrose](https://pubchem.ncbi.nlm.nih.gov/compound/sucrose)
-&rArr; [3-O-α-D-glucopyranosyl-(E)-resveratrol](https://pubchem.ncbi.nlm.nih.gov/compound/5281718)
+  &rArr; [3-O-α-D-glucopyranosyl-(E)-resveratrol](https://pubchem.ncbi.nlm.nih.gov/compound/5281718)
 + [β-fructose](https://pubchem.ncbi.nlm.nih.gov/compound/2723872)
 
 <figure>

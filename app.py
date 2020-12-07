@@ -46,13 +46,16 @@ def hello():
 def page_not_found(e):
     return render_template('404.html'), 404
 
+
 @app.errorhandler(410)
 def page_not_found(e):
     return render_template('410.html'), 410
-    
+
+
 @app.errorhandler(500)
 def page_not_found(e):
     return render_template('500.html'), 500
+
 
 @app.route('/dbpup/')
 def index():
@@ -406,7 +409,8 @@ def blast():
                 abort(410)
             if hmmrecord == 3:
                 abort(410)
-            return render_template('result_blast.html', records=records, title=title, description="", head=head, hmmrecord=hmmrecord)
+            return render_template('result_blast.html', records=records, title=title, description="", head=head,
+                                   hmmrecord=hmmrecord)
 
     elif request.method == 'GET':
         return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
@@ -450,19 +454,19 @@ def is_family(family_id):
 def blastp(query):
     try:
         uuidname = str(uuid.uuid1())
-        with open('tmp/'+uuidname+'.fsa', 'w') as f:
+        with open('tmp/' + uuidname + '.fsa', 'w') as f:
             f.writelines(query)
-        command = "./blast/blastp -db pup_blastp/PUP_db -query tmp/"+uuidname+".fsa -out tmp/"+uuidname+".blast -outfmt 6 -evalue 1e-5 -num_threads 2"
+        command = "./blast/blastp -db pup_blastp/PUP_db -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue 1e-5 -num_threads 2"
         os.system(command)
-        
-        with open('tmp/'+uuidname+'.blast', 'r') as f:
+
+        with open('tmp/' + uuidname + '.blast', 'r') as f:
             data = f.readlines()
             if len(data) == 0:
-                os.remove('tmp/'+uuidname+'.fsa')
-                os.remove('tmp/'+uuidname+'.blast')
+                os.remove('tmp/' + uuidname + '.fsa')
+                os.remove('tmp/' + uuidname + '.blast')
                 return 3
-    
-        data = pd.read_csv('tmp/'+uuidname+'.blast', sep="\t", header=None)
+
+        data = pd.read_csv('tmp/' + uuidname + '.blast', sep="\t", header=None)
         index = 0
         processed_blastp = []
         for unid in data[1]:
@@ -502,64 +506,66 @@ def blastp(query):
                 trem_result.append(trem_record.strain)
                 trem_result.append(trem_record.web_id)
                 processed_blastp.append(trem_result)
-    
+
             index += 1
 
-        os.remove('tmp/'+uuidname+'.fsa')
-        os.remove('tmp/'+uuidname+'.blast')
+        os.remove('tmp/' + uuidname + '.fsa')
+        os.remove('tmp/' + uuidname + '.blast')
         return processed_blastp
-        
+
     except:
-        os.remove('tmp/'+uuidname+'.fsa')
-        os.remove('tmp/'+uuidname+'.blast')
+        os.remove('tmp/' + uuidname + '.fsa')
+        os.remove('tmp/' + uuidname + '.blast')
         return 3
+
 
 def hmmscan(query):
     try:
         uuidname = str(uuid.uuid1())
-        with open('tmp/'+uuidname+'.fsa', 'w') as f:
-            f.writelines(query) 
-            
-        command = "hmmscan --domtblout tmp/"+uuidname+".tbl --noali -E 1e-5 pfam/Pfam-A.hmm tmp/"+uuidname+".fsa > tmp/"+uuidname+".log"
+        with open('tmp/' + uuidname + '.fsa', 'w') as f:
+            f.writelines(query)
+
+        command = "hmmscan --domtblout tmp/" + uuidname + ".tbl --noali -E 1e-5 pfam/Pfam-A.hmm tmp/" + uuidname + ".fsa > tmp/" + uuidname + ".log"
         os.system(command)
         result = ""
-        i=0
-        with open('tmp/'+uuidname+'.tbl','r') as hmmscan:
+        i = 0
+        with open('tmp/' + uuidname + '.tbl', 'r') as hmmscan:
             for line in hmmscan:
                 i += 1
                 if i <= 3:
                     result += line
                 elif not line.lstrip().startswith('#'):
                     result += line
-        print(result)             
+        print(result)
 
-        os.remove('tmp/'+uuidname+'.fsa')
-        os.remove('tmp/'+uuidname+'.tbl')
-        os.remove('tmp/'+uuidname+'.log')
+        os.remove('tmp/' + uuidname + '.fsa')
+        os.remove('tmp/' + uuidname + '.tbl')
+        os.remove('tmp/' + uuidname + '.log')
         return result
-        
+
     except:
-        os.remove('tmp/'+uuidname+'.fsa')
-        os.remove('tmp/'+uuidname+'.tbl')
-        os.remove('tmp/'+uuidname+'.log')
+        os.remove('tmp/' + uuidname + '.fsa')
+        os.remove('tmp/' + uuidname + '.tbl')
+        os.remove('tmp/' + uuidname + '.log')
         return 3
-        
+
+
 def blastx(query):
     try:
         uuidname = str(uuid.uuid1())
-        with open('tmp/'+uuidname+'.fsa', 'w') as f:
+        with open('tmp/' + uuidname + '.fsa', 'w') as f:
             f.writelines(query)
-        command = "./blast/blastp -db pup_blastp/PUP_db -query tmp/"+uuidname+".fsa -out tmp/"+uuidname+".blast -outfmt 6 -evalue 1e-5 -num_threads 2"
+        command = "./blast/blastp -db pup_blastp/PUP_db -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue 1e-5 -num_threads 2"
         os.system(command)
-    
-        with open('tmp/'+uuidname+'.blast', 'r') as f:
+
+        with open('tmp/' + uuidname + '.blast', 'r') as f:
             data = f.readlines()
             if len(data) == 0:
-                os.remove('tmp/'+uuidname+'.fsa')
-                os.remove('tmp/'+uuidname+'.blast')
+                os.remove('tmp/' + uuidname + '.fsa')
+                os.remove('tmp/' + uuidname + '.blast')
                 return 3
-    
-        data = pd.read_csv('tmp/'+uuidname+'.blast', sep="\t", header=None)
+
+        data = pd.read_csv('tmp/' + uuidname + '.blast', sep="\t", header=None)
         index = 0
         processed_blastx = []
         for unid in data[1]:
@@ -600,13 +606,14 @@ def blastx(query):
                 trem_result.append(trem_record.web_id)
                 processed_blastx.append(trem_result)
             index += 1
-        os.remove('tmp/'+uuidname+'.fsa')
-        os.remove('tmp/'+uuidname+'.blast')
+        os.remove('tmp/' + uuidname + '.fsa')
+        os.remove('tmp/' + uuidname + '.blast')
         return processed_blastx
     except:
-        os.remove('tmp/'+uuidname+'.fsa')
-        os.remove('tmp/'+uuidname+'.blast')    
+        os.remove('tmp/' + uuidname + '.fsa')
+        os.remove('tmp/' + uuidname + '.blast')
         return 3
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')

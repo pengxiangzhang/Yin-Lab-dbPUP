@@ -2,13 +2,18 @@
 
 ## Literature Information
 
-| Title    | Characterization of a Novel Polyphenol-Specific Oligoxyloside Transfer Reaction by a Family 11 Xylanase from *
-Bacillus* sp. KT12 |
-| :------- | :----------------------------------------------------------- |
-| Author   | Kazuhiro CHIKU, Jun UZAWA, Hiroko SEKI, Seigo AMACHI, Takaaki FUJII & Hirofumi SHINOYAMA |
-| DOI      | [10.1271/bbb.80116](https://doi.org/10.1271/bbb.80116)       |
-| Abstract | A culture filtrate of *
-Bacillus* sp. KT12 was used to prepare polyphenyl β-oligoxylosides from xylan and polyphenols in a one-step reaction. One oligoxyloside transfer enzyme was purified from multiple xylanolytic enzymes in the culture filtrate. N-terminal amino acid sequence determination classified the enzyme as a glycosyl hydrolase family 11 (endo-xylanase). The xylanolytic enzyme activities could be markedly altered; its hydrolytic activity was almost entirely inhibited at acidic pH, whereas near constant transxylosylation activity was observed at pH 4–11. Further, metal ions activated transxylosylation and almost completely inhibited hydrolysis. The enzyme specifically induced a β-xylosyl transfer reaction to acceptor molecules, such as divalent and trivalent phenolic hydroxyl groups, and displayed no activity toward alcoholic compounds. The *
+| Title | Characterization of a Novel Polyphenol-Specific Oligoxyloside Transfer Reaction by a Family 11 Xylanase from *
+Bacillus* sp. KT12 | | :------- | :----------------------------------------------------------- | | Author | Kazuhiro
+CHIKU, Jun UZAWA, Hiroko SEKI, Seigo AMACHI, Takaaki FUJII & Hirofumi SHINOYAMA | | DOI
+| [10.1271/bbb.80116](https://doi.org/10.1271/bbb.80116)       | | Abstract | A culture filtrate of *
+Bacillus* sp. KT12 was used to prepare polyphenyl β-oligoxylosides from xylan and polyphenols in a one-step reaction.
+One oligoxyloside transfer enzyme was purified from multiple xylanolytic enzymes in the culture filtrate. N-terminal
+amino acid sequence determination classified the enzyme as a glycosyl hydrolase family 11 (endo-xylanase). The
+xylanolytic enzyme activities could be markedly altered; its hydrolytic activity was almost entirely inhibited at acidic
+pH, whereas near constant transxylosylation activity was observed at pH 4–11. Further, metal ions activated
+transxylosylation and almost completely inhibited hydrolysis. The enzyme specifically induced a β-xylosyl transfer
+reaction to acceptor molecules, such as divalent and trivalent phenolic hydroxyl groups, and displayed no activity
+toward alcoholic compounds. The *
 Bacillus* sp. KT12 xylanolytic enzyme was a suitable enzyme for the synthesis of polyphenyl β-oligoxylosides. |
 
 ## Experimental results
@@ -67,8 +72,9 @@ nucleophile.
 - **Reaction**
 
 [catechol](https://pubchem.ncbi.nlm.nih.gov/compound/catechol)
+
 + [xylan](https://pubchem.ncbi.nlm.nih.gov/compound/125409)
-&rArr; [2-hydroxyphenyl O-β-D-xylopyranoside](https://pubchem.ncbi.nlm.nih.gov/compound/101378878)
+  &rArr; [2-hydroxyphenyl O-β-D-xylopyranoside](https://pubchem.ncbi.nlm.nih.gov/compound/101378878)
 
 <figure>
 <div class="linerow">

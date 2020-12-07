@@ -55,6 +55,7 @@ the degradation pathway of flavone naringenin[^1].
 
 [naringenin chalcone](https://pubchem.ncbi.nlm.nih.gov/compound/naringenin%20chalcone)
 &rArr; [3-(4-hydroxyphenyl)propionic acid](https://pubchem.ncbi.nlm.nih.gov/compound/3-(4-hydroxyphenyl)propionic%20acid)
+
 + [phloroglucinol](https://pubchem.ncbi.nlm.nih.gov/compound/phloroglucinol)
 
 <figure>

@@ -2,16 +2,20 @@
 
 ## Literature Information
 
-| Title    | Enzymatic synthesis of apigenin glucosides by glucosyltransferase (YjiC) from *Bacillus
-licheniformis* DSM 13 |
-| :------- | :----------------------------------------------------------- |
-| Author   | Rit Bahadur Gurung, Eun-Hee Kim, Tae-Jin Oh & Jae Kyung Sohng |
-| DOI      | [10.1007/s10059-013-0164-0](https://doi.org/10.1007/s10059-013-0164-0) |
-| Abstract | Apigenin, a member of the flavone subclass of flavonoids, has long been considered to have various biological activities. Its glucosides, in particular, have been reported to have higher water solubility, increased chemical stability, and enhanced biological activities. Here, the synthesis of apigenin glucosides by the *
+| Title | Enzymatic synthesis of apigenin glucosides by glucosyltransferase (YjiC) from *Bacillus licheniformis* DSM 13
+| | :------- | :----------------------------------------------------------- | | Author | Rit Bahadur Gurung, Eun-Hee
+Kim, Tae-Jin Oh & Jae Kyung Sohng | | DOI | [10.1007/s10059-013-0164-0](https://doi.org/10.1007/s10059-013-0164-0) | |
+Abstract | Apigenin, a member of the flavone subclass of flavonoids, has long been considered to have various biological
+activities. Its glucosides, in particular, have been reported to have higher water solubility, increased chemical
+stability, and enhanced biological activities. Here, the synthesis of apigenin glucosides by the *
 in vitro* glucosylation reaction was successfully performed using a UDP-glucosyltransferase YjiC, from *Bacillus
-licheniformis* DSM 13. The glucosylation has been confirmed at the phenolic groups of C-4′ and C-7 positions ensuing ==apigenin 4′-*
+licheniformis* DSM 13. The glucosylation has been confirmed at the phenolic groups of C-4′ and C-7 positions ensuing
+==apigenin 4′-*
 O*-glucoside==, ==apigenin 7-*O*-glucoside== and ==apigenin 4′,7-*
-O*-diglucoside== as the products leaving the C-5 position unglucosylated. The position of glucosylation and the chemical structures of glucosides were elucidated by liquid chromatography/mass spectroscopy and nuclear magnetic resonance spectroscopy. The parameters such as pH, UDP glucose concentration and time of incubation were also analyzed during this study. |
+O*-diglucoside== as the products leaving the C-5 position unglucosylated. The position of glucosylation and the chemical
+structures of glucosides were elucidated by liquid chromatography/mass spectroscopy and nuclear magnetic resonance
+spectroscopy. The parameters such as pH, UDP glucose concentration and time of incubation were also analyzed during this
+study. |
 
 ## Experimental results
 
@@ -51,6 +55,7 @@ None
 
 [apigenin](https://pubchem.ncbi.nlm.nih.gov/compound/apigenin)
 &rArr; [apigenin  4'-O-glucoside](https://pubchem.ncbi.nlm.nih.gov/compound/apigenin%204'-O-glucoside)
+
 + [apigenin 7-O-glucoside](https://pubchem.ncbi.nlm.nih.gov/compound/apigenin%207-O-glucoside)
 + [apigenin 4',7-O-diglucoside]()
 

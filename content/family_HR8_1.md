@@ -2,24 +2,31 @@
 
 ## Literature Information
 
-| Title    | Cloning and Expression of a Phloretin Hydrolase Gene from *Eubacterium
-ramulus* and Characterization of the Recombinant Enzyme |
-| :------- | :----------------------------------------------------------- |
-| Author   | Lilian Schoefer, Annett Braune, Michael Blaut                |
-| DOI      | [10.1128/AEM.70.10.6131-6137.2004](https://doi.org/10.1128/AEM.70.10.6131-6137.2004) |
-| Abstract | Phloretin hydrolase catalyzes the hydrolytic C-C cleavage of phloretin to phloroglucinol and 3-(4-hydroxyphenyl)propionic acid during flavonoid degradation in *
-Eubacterium
-ramulus*. The gene encoding the enzyme was cloned by screening a gene library for hydrolase activity. The insert of a clone conferring phloretin hydrolase activity was sequenced. Sequence analysis revealed an open reading frame of 822 bp (*
+| Title | Cloning and Expression of a Phloretin Hydrolase Gene from *Eubacterium ramulus* and Characterization of the
+Recombinant Enzyme | | :------- | :----------------------------------------------------------- | | Author | Lilian
+Schoefer, Annett Braune, Michael Blaut | | DOI
+| [10.1128/AEM.70.10.6131-6137.2004](https://doi.org/10.1128/AEM.70.10.6131-6137.2004) | | Abstract | Phloretin
+hydrolase catalyzes the hydrolytic C-C cleavage of phloretin to phloroglucinol and 3-(4-hydroxyphenyl)propionic acid
+during flavonoid degradation in *
+Eubacterium ramulus*. The gene encoding the enzyme was cloned by screening a gene library for hydrolase activity. The
+insert of a clone conferring phloretin hydrolase activity was sequenced. Sequence analysis revealed an open reading
+frame of 822 bp (*
 phy*), a putative promoter region, and a terminating stem-loop structure. The deduced amino acid sequence of *
 phy* showed similarities to a putative protein of the 2,4-diacetylphloroglucinol biosynthetic operon from *Pseudomonas
-fluorescens*. The phloretin hydrolase was heterologously expressed in *Escherichia
-coli* and purified. The molecular mass of the native enzyme was approximately 55 kDa as determined by gel filtration. The results of sodium dodecyl sulfate-polyacrylamide gel electrophoresis and the deduced amino acid sequence of *
-phy* indicated molecular masses of 30 and 30.8 kDa, respectively, suggesting that the enzyme is a homodimer. The recombinant phloretin hydrolase catalyzed the hydrolysis of phloretin to equimolar amounts of phloroglucinol and 3-(4-hydroxyphenyl)propionic acid. The optimal temperature and pH of the catalyzed reaction mixture were 37°C and 7.0, respectively. The *
+fluorescens*. The phloretin hydrolase was heterologously expressed in *Escherichia coli* and purified. The molecular
+mass of the native enzyme was approximately 55 kDa as determined by gel filtration. The results of sodium dodecyl
+sulfate-polyacrylamide gel electrophoresis and the deduced amino acid sequence of *
+phy* indicated molecular masses of 30 and 30.8 kDa, respectively, suggesting that the enzyme is a homodimer. The
+recombinant phloretin hydrolase catalyzed the hydrolysis of phloretin to equimolar amounts of phloroglucinol and 3-(
+4-hydroxyphenyl)propionic acid. The optimal temperature and pH of the catalyzed reaction mixture were 37°C and 7.0,
+respectively. The *
 Km* for phloretin was 13 ± 3 μM and the *
-k*cat was 10 ± 2 s−1. The enzyme did not transform phloretin-2′-glucoside (phloridzin), neohesperidin dihydrochalcone, 1,3-diphenyl-1,3-propandione, or *
+k*cat was 10 ± 2 s−1. The enzyme did not transform phloretin-2′-glucoside (phloridzin), neohesperidin dihydrochalcone,
+1,3-diphenyl-1,3-propandione, or *
 trans*-1,3-diphenyl-2,3-epoxy-propan-1-one. The catalytic activity of the phloretin hydrolase was reduced by *
 N*-bromosuccinimide, *o*-phenanthroline, *
-N*-ethylmaleimide, and CuCl2 to 3, 20, 35, and 85%, respectively. Phloroglucinol and 3-(4-hydroxyphenyl)propionic acid reduced the activity to 54 and 70%, respectively. |
+N*-ethylmaleimide, and CuCl2 to 3, 20, 35, and 85%, respectively. Phloroglucinol and 3-(4-hydroxyphenyl)propionic acid
+reduced the activity to 54 and 70%, respectively. |
 
 ## Experimental results
 
@@ -75,8 +82,9 @@ v1-like fold, rather than the classical alpha/beta-fold hydrolases[^1].
 - **Reaction**
 
 [phloretin](https://pubchem.ncbi.nlm.nih.gov/compound/phloretin)
+
 + [H<sub>2</sub>O](https://pubchem.ncbi.nlm.nih.gov/compound/Water)
-&rArr; [Phloretic acid](https://pubchem.ncbi.nlm.nih.gov/compound/Phloretic%20acid)
+  &rArr; [Phloretic acid](https://pubchem.ncbi.nlm.nih.gov/compound/Phloretic%20acid)
 + [phloroglucinol](https://pubchem.ncbi.nlm.nih.gov/compound/phloroglucinol)
 
 <figure>

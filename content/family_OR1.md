@@ -101,14 +101,16 @@ Description:
 - **Reaction**
 
 [curcumin](https://pubchem.ncbi.nlm.nih.gov/compound/curcumin) + [NADPH](https://pubchem.ncbi.nlm.nih.gov/compound/5884)
+
 + [H<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/1038)
-&rArr; [dihydrocurcumin](https://pubchem.ncbi.nlm.nih.gov/compound/dihydrocurcumin)[intermediate product]
+  &rArr; [dihydrocurcumin](https://pubchem.ncbi.nlm.nih.gov/compound/dihydrocurcumin)[intermediate product]
 + [NADP<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/15938972)
 
 [dihydrocurcumin](https://pubchem.ncbi.nlm.nih.gov/compound/dihydrocurcumin)
+
 + [NADPH](https://pubchem.ncbi.nlm.nih.gov/compound/5884)
 + [H<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/1038)
-&rArr; [tetrahydrocurcumin](https://pubchem.ncbi.nlm.nih.gov/compound/tetrahydrocurcumin)
+  &rArr; [tetrahydrocurcumin](https://pubchem.ncbi.nlm.nih.gov/compound/tetrahydrocurcumin)
 + [NADP<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/15938972)
 
 <figure>

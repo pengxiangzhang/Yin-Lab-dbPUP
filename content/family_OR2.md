@@ -7,13 +7,22 @@
 | Author   | Jaehong Han, Song-Young Kim, Jihyun Jung, Yoongho Lim, Joong-Hoon Ahn, Su-Il Kim, Hor-Gil Hur |
 | DOI      | [10.1128/AEM.71.9.5354-5361.2005](https://doi.org/10.1128/AEM.71.9.5354-5361.2005) |
 | Abstract | Prokaryotic dioxygenase is known to catalyze aromatic compounds into their corresponding *
+
 cis*-dihydrodiols without the formation of an epoxide intermediate. Biphenyl dioxygenase from *Pseudomonas
 pseudoalcaligenes* KF707 showed novel monooxygenase activity by converting 2(*R*)- and 2(*
 S*)-flavanone to their corresponding epoxides (2-(7-oxabicyclo[4.1.0]hepta-2,4-dien-2-yl)-2, 3-dihydro-4*
-H*-chromen-4-one), whereby the epoxide bond was formed between C2′ and C3′ on the B ring of the flavanone. The enzyme also converted 6-hydroxyflavanone and 7-hydroxyflavanone, which do not contain a hydroxyl group on the B-ring, to their corresponding epoxides. In a previous report (S.-Y. Kim, J. Jung, Y. Lim, J.-H. Ahn, S.-I. Kim, and H.-G. Hur, Antonie Leeuwenhoek 84:261-268, 2003), however, we found that the same enzyme showed dioxygenase activity toward ==flavone==, resulting in the production of ==flavone *
-cis*-2′,3′-dihydrodiol==. Extensive structural identification of the metabolites of flavanone by using high-pressure liquid chromatography, liquid chromatography/mass spectrometry, and nuclear magnetic resonance confirmed the presence of an epoxide functional group on the metabolites. Epoxide formation as the initial activation step of aromatic compounds by oxygenases has been reported to occur only by eukaryotic monooxygenases. To the best of our knowledge, biphenyl dioxygenase from *
-P.
-pseudoalcaligenes* KF707 is the first prokaryotic enzyme detected that can produce an epoxide derivative on the aromatic ring structure of flavanone. |
+H*-chromen-4-one), whereby the epoxide bond was formed between C2′ and C3′ on the B ring of the flavanone. The enzyme
+also converted 6-hydroxyflavanone and 7-hydroxyflavanone, which do not contain a hydroxyl group on the B-ring, to their
+corresponding epoxides. In a previous report (S.-Y. Kim, J. Jung, Y. Lim, J.-H. Ahn, S.-I. Kim, and H.-G. Hur, Antonie
+Leeuwenhoek 84:261-268, 2003), however, we found that the same enzyme showed dioxygenase activity toward ==flavone==,
+resulting in the production of ==flavone *
+cis*-2′,3′-dihydrodiol==. Extensive structural identification of the metabolites of flavanone by using high-pressure
+liquid chromatography, liquid chromatography/mass spectrometry, and nuclear magnetic resonance confirmed the presence of
+an epoxide functional group on the metabolites. Epoxide formation as the initial activation step of aromatic compounds
+by oxygenases has been reported to occur only by eukaryotic monooxygenases. To the best of our knowledge, biphenyl
+dioxygenase from *
+P. pseudoalcaligenes* KF707 is the first prokaryotic enzyme detected that can produce an epoxide derivative on the
+aromatic ring structure of flavanone. |
 
 ---
 
