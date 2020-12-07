@@ -392,7 +392,7 @@ def blast():
         elif sequence != "" and file != "":
             flash('You can only have one input.')
             return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
-        elif function=="no":
+        elif function == "no":
             flash('You must select a program to run.')
             return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
         elif form.validate() == False:
@@ -416,12 +416,13 @@ def blast():
             if hmmrecord == 3:
                 abort(410)
             if hmmrecord == "":
-                hmmrecord ="Your input does not match any record in our database. Please check your input exist and make sure you are using the correct format. You can contact us if the problem persists."
+                hmmrecord = "Your input does not match any record in our database. Please check your input exist and make sure you are using the correct format. You can contact us if the problem persists."
             return render_template('result_blast.html', records=records, title=title, description="", head=head,
                                    hmmrecord=hmmrecord)
 
     elif request.method == 'GET':
         return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
+
 
 def to_md(content):
     return markdown.markdown(content, extensions=['extra', 'toc', 'smarty', 'sane_lists', 'pymdownx.mark'])
