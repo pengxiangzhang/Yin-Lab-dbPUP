@@ -46,6 +46,13 @@ def hello():
 def page_not_found(e):
     return render_template('404.html'), 404
 
+@app.errorhandler(410)
+def page_not_found(e):
+    return render_template('410.html'), 410
+    
+@app.errorhandler(500)
+def page_not_found(e):
+    return render_template('500.html'), 500
 
 @app.route('/dbpup/')
 def index():
@@ -389,11 +396,17 @@ def blast():
                 query = file
             if function == 'p':
                 records = blastp(query)
-                head = "Result of blastp"
+                hmmrecord = hmmscan(query)
+                head = "Result of Blastp"
             elif function == 'x':
                 records = blastx(query)
-                head = "Result of blastx"
-            return render_template('result_blastp.html', records=records, title=title, description="", head=head)
+                hmmrecord = 0
+                head = "Result of Blastx"
+            if records == 3:
+                abort(410)
+            if hmmrecord == 3:
+                abort(410)
+            return render_template('result_blast.html', records=records, title=title, description="", head=head, hmmrecord=hmmrecord)
 
     elif request.method == 'GET':
         return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
@@ -435,122 +448,165 @@ def is_family(family_id):
 
 
 def blastp(query):
-    uuidname = str(uuid.uuid1())
-    with open('tmp/'+uuidname+'.fsa', 'w') as f:
-        f.writelines(query)
-    command = "./blast/blastp -db pup_blastp/PUP_db -query tmp/"+uuidname+".fsa -out tmp/"+uuidname+".blast -outfmt 6 -evalue 1e-5 -num_threads 2"
-    os.system(command)
+    try:
+        uuidname = str(uuid.uuid1())
+        with open('tmp/'+uuidname+'.fsa', 'w') as f:
+            f.writelines(query)
+        command = "./blast/blastp -db pup_blastp/PUP_db -query tmp/"+uuidname+".fsa -out tmp/"+uuidname+".blast -outfmt 6 -evalue 1e-5 -num_threads 2"
+        os.system(command)
+        
+        with open('tmp/'+uuidname+'.blast', 'r') as f:
+            data = f.readlines()
+            if len(data) == 0:
+                os.remove('tmp/'+uuidname+'.fsa')
+                os.remove('tmp/'+uuidname+'.blast')
+                return 3
     
+        data = pd.read_csv('tmp/'+uuidname+'.blast', sep="\t", header=None)
+        index = 0
+        processed_blastp = []
+        for unid in data[1]:
+            char_record = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
+            swis_record = swiRecord.SwiRecord.query.filter_by(uniq_id=unid).first()
+            trem_record = treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
+            if char_record != None:
+                char_result = []
+                char_result.append(data[0][index])
+                char_result.append(unid)
+                char_result.append(char_record.family)
+                char_result.append(data[2][index])
+                char_result.append(data[10][index])
+                char_result.append(char_record.protein_name)
+                char_result.append(char_record.strain)
+                char_result.append("")
+                processed_blastp.append(char_result)
+            if swis_record != None:
+                swis_result = []
+                swis_result.append(data[0][index])
+                swis_result.append(unid)
+                swis_result.append(swis_record.family)
+                swis_result.append(data[2][index])
+                swis_result.append(data[10][index])
+                swis_result.append(swis_record.protein_enzyme)
+                swis_result.append(swis_record.strain)
+                swis_result.append(swis_record.web_id)
+                processed_blastp.append(swis_result)
+            if trem_record != None:
+                trem_result = []
+                trem_result.append(data[0][index])
+                trem_result.append(unid)
+                trem_result.append(trem_record.family)
+                trem_result.append(data[2][index])
+                trem_result.append(data[10][index])
+                trem_result.append(trem_record.protein_enzyme)
+                trem_result.append(trem_record.strain)
+                trem_result.append(trem_record.web_id)
+                processed_blastp.append(trem_result)
     
-    with open('tmp/'+uuidname+'.blast', 'r') as f:
-        data = f.readlines()
-        if len(data) == 0:
-            return []
+            index += 1
 
-    data = pd.read_csv('tmp/'+uuidname+'.blast', sep="\t", header=None)
-    index = 0
-    processed_blastp = []
-    for unid in data[1]:
-        char_record = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
-        swis_record = swiRecord.SwiRecord.query.filter_by(uniq_id=unid).first()
-        trem_record = treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
-        if char_record != None:
-            char_result = []
-            char_result.append(data[0][index])
-            char_result.append(unid)
-            char_result.append(char_record.family)
-            char_result.append(data[2][index])
-            char_result.append(data[10][index])
-            char_result.append(char_record.protein_name)
-            char_result.append(char_record.strain)
-            char_result.append("")
-            processed_blastp.append(char_result)
-        if swis_record != None:
-            swis_result = []
-            swis_result.append(data[0][index])
-            swis_result.append(unid)
-            swis_result.append(swis_record.family)
-            swis_result.append(data[2][index])
-            swis_result.append(data[10][index])
-            swis_result.append(swis_record.protein_enzyme)
-            swis_result.append(swis_record.strain)
-            swis_result.append(swis_record.web_id)
-            processed_blastp.append(swis_result)
-        if trem_record != None:
-            trem_result = []
-            trem_result.append(data[0][index])
-            trem_result.append(unid)
-            trem_result.append(trem_record.family)
-            trem_result.append(data[2][index])
-            trem_result.append(data[10][index])
-            trem_result.append(trem_record.protein_enzyme)
-            trem_result.append(trem_record.strain)
-            trem_result.append(trem_record.web_id)
-            processed_blastp.append(trem_result)
+        os.remove('tmp/'+uuidname+'.fsa')
+        os.remove('tmp/'+uuidname+'.blast')
+        return processed_blastp
+        
+    except:
+        os.remove('tmp/'+uuidname+'.fsa')
+        os.remove('tmp/'+uuidname+'.blast')
+        return 3
 
-        index += 1
-    os.remove('tmp/'+uuidname+'.fsa')
-    os.remove('tmp/'+uuidname+'.blast')
-    return processed_blastp
+def hmmscan(query):
+    try:
+        uuidname = str(uuid.uuid1())
+        with open('tmp/'+uuidname+'.fsa', 'w') as f:
+            f.writelines(query) 
+            
+        command = "hmmscan --domtblout tmp/"+uuidname+".tbl --noali -E 1e-5 pfam/Pfam-A.hmm tmp/"+uuidname+".fsa > tmp/"+uuidname+".log"
+        os.system(command)
+        result = ""
+        i=0
+        with open('tmp/'+uuidname+'.tbl','r') as hmmscan:
+            for line in hmmscan:
+                i += 1
+                if i <= 3:
+                    result += line
+                elif not line.lstrip().startswith('#'):
+                    result += line
+        print(result)             
 
-
+        os.remove('tmp/'+uuidname+'.fsa')
+        os.remove('tmp/'+uuidname+'.tbl')
+        os.remove('tmp/'+uuidname+'.log')
+        return result
+        
+    except:
+        os.remove('tmp/'+uuidname+'.fsa')
+        os.remove('tmp/'+uuidname+'.tbl')
+        os.remove('tmp/'+uuidname+'.log')
+        return 3
+        
 def blastx(query):
-    uuidname = str(uuid.uuid1())
-    with open('tmp/'+uuidname+'.fsa', 'w') as f:
-        f.writelines(query)
-    command = "./blast/blastp -db pup_blastp/PUP_db -query tmp/"+uuidname+".fsa -out tmp/"+uuidname+".blast -outfmt 6 -evalue 1e-5 -num_threads 2"
-    os.system(command)
-
-    with open('tmp/'+uuidname+'.blast', 'r') as f:
-        data = f.readlines()
-        if len(data) == 0:
-            return []
-
-    data = pd.read_csv('tmp/'+uuidname+'.blast', sep="\t", header=None)
-    index = 0
-    processed_blastx = []
-    for unid in data[1]:
-        char_record = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
-        swis_record = swiRecord.SwiRecord.query.filter_by(uniq_id=unid).first()
-        trem_record = treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
-        if char_record != None:
-            char_result = []
-            char_result.append(data[0][index])
-            char_result.append(unid)
-            char_result.append(char_record.family)
-            char_result.append(data[2][index])
-            char_result.append(data[10][index])
-            char_result.append(char_record.protein_name)
-            char_result.append(char_record.strain)
-            char_result.append("")
-            processed_blastx.append(char_result)
-        if swis_record != None:
-            swis_result = []
-            swis_result.append(data[0][index])
-            swis_result.append(unid)
-            swis_result.append(swis_record.family)
-            swis_result.append(data[2][index])
-            swis_result.append(data[10][index])
-            swis_result.append(swis_record.protein_enzyme)
-            swis_result.append(swis_record.strain)
-            swis_result.append(swis_record.web_id)
-            processed_blastx.append(swis_result)
-        if trem_record != None:
-            trem_result = []
-            trem_result.append(data[0][index])
-            trem_result.append(unid)
-            trem_result.append(trem_record.family)
-            trem_result.append(data[2][index])
-            trem_result.append(data[10][index])
-            trem_result.append(trem_record.protein_enzyme)
-            trem_result.append(trem_record.strain)
-            trem_result.append(trem_record.web_id)
-            processed_blastx.append(trem_result)
-        index += 1
-    os.remove('tmp/'+uuidname+'.fsa')
-    os.remove('tmp/'+uuidname+'.blast')
-    return processed_blastx
-
+    try:
+        uuidname = str(uuid.uuid1())
+        with open('tmp/'+uuidname+'.fsa', 'w') as f:
+            f.writelines(query)
+        command = "./blast/blastp -db pup_blastp/PUP_db -query tmp/"+uuidname+".fsa -out tmp/"+uuidname+".blast -outfmt 6 -evalue 1e-5 -num_threads 2"
+        os.system(command)
+    
+        with open('tmp/'+uuidname+'.blast', 'r') as f:
+            data = f.readlines()
+            if len(data) == 0:
+                os.remove('tmp/'+uuidname+'.fsa')
+                os.remove('tmp/'+uuidname+'.blast')
+                return 3
+    
+        data = pd.read_csv('tmp/'+uuidname+'.blast', sep="\t", header=None)
+        index = 0
+        processed_blastx = []
+        for unid in data[1]:
+            char_record = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
+            swis_record = swiRecord.SwiRecord.query.filter_by(uniq_id=unid).first()
+            trem_record = treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
+            if char_record != None:
+                char_result = []
+                char_result.append(data[0][index])
+                char_result.append(unid)
+                char_result.append(char_record.family)
+                char_result.append(data[2][index])
+                char_result.append(data[10][index])
+                char_result.append(char_record.protein_name)
+                char_result.append(char_record.strain)
+                char_result.append("")
+                processed_blastx.append(char_result)
+            if swis_record != None:
+                swis_result = []
+                swis_result.append(data[0][index])
+                swis_result.append(unid)
+                swis_result.append(swis_record.family)
+                swis_result.append(data[2][index])
+                swis_result.append(data[10][index])
+                swis_result.append(swis_record.protein_enzyme)
+                swis_result.append(swis_record.strain)
+                swis_result.append(swis_record.web_id)
+                processed_blastx.append(swis_result)
+            if trem_record != None:
+                trem_result = []
+                trem_result.append(data[0][index])
+                trem_result.append(unid)
+                trem_result.append(trem_record.family)
+                trem_result.append(data[2][index])
+                trem_result.append(data[10][index])
+                trem_result.append(trem_record.protein_enzyme)
+                trem_result.append(trem_record.strain)
+                trem_result.append(trem_record.web_id)
+                processed_blastx.append(trem_result)
+            index += 1
+        os.remove('tmp/'+uuidname+'.fsa')
+        os.remove('tmp/'+uuidname+'.blast')
+        return processed_blastx
+    except:
+        os.remove('tmp/'+uuidname+'.fsa')
+        os.remove('tmp/'+uuidname+'.blast')    
+        return 3
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')

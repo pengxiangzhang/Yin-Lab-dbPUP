@@ -1,0 +1,42 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.3 (Nov 2019); http://hmmer.org/
+# Copyright (C) 2019 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             tmp/faf3c4ea-3846-11eb-a84b-997f2c6eae67.fsa
+# target HMM database:             pfam/Pfam-A.hmm
+# per-dom hits tabular output:     tmp/faf3c4ea-3846-11eb-a84b-997f2c6eae67.tbl
+# show alignments in output:       no
+# profile reporting threshold:     E-value <= 1e-05
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       tr|D7F2D8|D7F2D8_BACIU  [L=213]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+      3e-69  232.2  21.4    3.4e-69  232.0  21.4    1.0  1  Glyco_hydro_11  Glycosyl hydrolases family 11
+
+
+Domain annotation for each model:
+>> Glyco_hydro_11  Glycosyl hydrolases family 11
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  232.0  21.4   1.9e-73   3.4e-69       3     178 .]      31     211 ..      29     211 .. 0.94
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (213 residues searched)
+Target model(s):                       18259  (3090017 nodes)
+Passed MSV filter:                       416  (0.0227833); expected 365.2 (0.02)
+Passed bias filter:                      220  (0.0120489); expected 365.2 (0.02)
+Passed Vit filter:                        15  (0.000821513); expected 18.3 (0.001)
+Passed Fwd filter:                         1  (5.47675e-05); expected 0.2 (1e-05)
+Initial search space (Z):              18259  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.59u 0.39s 00:00:00.98 Elapsed: 00:00:01.42
+# Mc/sec: 462.94
+//
+[ok]
