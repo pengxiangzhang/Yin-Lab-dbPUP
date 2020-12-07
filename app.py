@@ -3,7 +3,7 @@ from flask import Flask, request, send_from_directory, flash, render_template, a
 from flask_sqlalchemy import SQLAlchemy
 from forms import InputForm
 from models import charRecord, swiRecord, treRecord
-import markdown, json, glob, os
+import markdown, json, glob, os, uuid
 from datetime import datetime
 import pandas as pd
 
@@ -388,11 +388,9 @@ def blast():
             elif sequence == '' and file != '':
                 query = file
             if function == 'p':
-                print('function p is running')
                 records = blastp(query)
                 head = "Result of blastp"
             elif function == 'x':
-                print('function x is running')
                 records = blastx(query)
                 head = "Result of blastx"
             return render_template('result_blastp.html', records=records, title=title, description="", head=head)
@@ -437,18 +435,19 @@ def is_family(family_id):
 
 
 def blastp(query):
-    with open('pup_blastp/search.fsa', 'w') as f:
+    uuidname = str(uuid.uuid1())
+    with open('tmp/'+uuidname+'.fsa', 'w') as f:
         f.writelines(query)
-    command = "./blast/blastp -db pup_blastp/PUP_db -query pup_blastp/search.fsa -out pup_blastp/results.blast -outfmt 6 -evalue 1e-5 -num_threads 2"
-    # command = "./blast/blastp -db pup_blastp/PUP_db -query " + query + " -out pup_blastp/results.blast -outfmt 6 -evalue 1e-5 -num_threads 4"
+    command = "./blast/blastp -db pup_blastp/PUP_db -query tmp/"+uuidname+".fsa -out tmp/"+uuidname+".blast -outfmt 6 -evalue 1e-5 -num_threads 2"
     os.system(command)
-
-    with open('pup_blastp/results.blast', 'r') as f:
+    
+    
+    with open('tmp/'+uuidname+'.blast', 'r') as f:
         data = f.readlines()
         if len(data) == 0:
             return []
 
-    data = pd.read_csv('pup_blastp/results.blast', sep="\t", header=None)
+    data = pd.read_csv('tmp/'+uuidname+'.blast', sep="\t", header=None)
     index = 0
     processed_blastp = []
     for unid in data[1]:
@@ -490,23 +489,24 @@ def blastp(query):
             processed_blastp.append(trem_result)
 
         index += 1
-    # for item in processed_blastp:
-    #     print(item)
+    os.remove('tmp/'+uuidname+'.fsa')
+    os.remove('tmp/'+uuidname+'.blast')
     return processed_blastp
 
 
 def blastx(query):
-    with open('pup_blastp/search.fsa', 'w') as f:
+    uuidname = str(uuid.uuid1())
+    with open('tmp/'+uuidname+'.fsa', 'w') as f:
         f.writelines(query)
-    command = "./blast/blastp -db pup_blastp/PUP_db -query pup_blastx/search.fsa -out pup_blastx/results.blast -outfmt 6 -evalue 1e-5 -num_threads 2"
+    command = "./blast/blastp -db pup_blastp/PUP_db -query tmp/"+uuidname+".fsa -out tmp/"+uuidname+".blast -outfmt 6 -evalue 1e-5 -num_threads 2"
     os.system(command)
 
-    with open('pup_blastp/results.blast', 'r') as f:
+    with open('tmp/'+uuidname+'.blast', 'r') as f:
         data = f.readlines()
         if len(data) == 0:
             return []
 
-    data = pd.read_csv('pup_blastp/results.blast', sep="\t", header=None)
+    data = pd.read_csv('tmp/'+uuidname+'.blast', sep="\t", header=None)
     index = 0
     processed_blastx = []
     for unid in data[1]:
@@ -546,9 +546,9 @@ def blastx(query):
             trem_result.append(trem_record.strain)
             trem_result.append(trem_record.web_id)
             processed_blastx.append(trem_result)
-
         index += 1
-
+    os.remove('tmp/'+uuidname+'.fsa')
+    os.remove('tmp/'+uuidname+'.blast')
     return processed_blastx
 
 

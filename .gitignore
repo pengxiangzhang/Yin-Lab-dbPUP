@@ -20,10 +20,11 @@ config.json
 test.*
 
 bioenv/
-static/materials/network_data/uniprot_ssn
 
 static/Download/Characterization.tar.gz
 static/Download/Sequence_Similarity_Network.tar.gz
 static/Download/Swiss-Prot.tar.gz
 static/Download/TrEMBL.tar.gz
 
+pfam/*
+! tmp/

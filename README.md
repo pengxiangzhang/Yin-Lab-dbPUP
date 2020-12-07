@@ -7,10 +7,12 @@ the [University of Nebraska - Lincoln](https://www.unl.edu) and founded by [NSF]
 
 ## Installation
 
-1. Make sure you have python3 and python3-pip installed.
+1. Make sure you have python3, python3-pip and [hmmer](http://hmmer.org/) installed.
 2. Make sure you have clone the website and ready to deploy.
 3. run `pip3 install -r requirements.txt` to install all the requirement.
-4. We recommand to serve pn Nginx, but here is the
+4. Put `TrEMBL.tar.gz`, `Swiss-Prot.tar.gz`, `Sequence_Similarity_Network.tar.gz` and `Characterization.tar.gz` into `static/Download/`
+6. put [fam-A](ftp://ftp.ebi.ac.uk/pub/databases/Pfam/releases/Pfam33.1/Pfam-A.hmm.gz) database to `pfam/` then run `hmmpress Pfam-A.hmm`
+7. We recommand to serve pn Nginx, but here is the
    instruction: [Instruction to serve on nginx](https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uswgi-and-nginx-on-ubuntu-18-04)
    ; [Instruction to serve on Apache](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
    .
