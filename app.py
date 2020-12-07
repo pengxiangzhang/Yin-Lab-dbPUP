@@ -392,29 +392,36 @@ def blast():
         elif sequence != "" and file != "":
             flash('You can only have one input.')
             return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
+        elif function=="no":
+            flash('You must select a program to run.')
+            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
+        elif form.validate() == False:
+            flash('Please complete the Recaptcha.')
+            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
         else:
             if sequence != "" and file == "":
                 query = sequence
             elif sequence == '' and file != '':
                 query = file
+            hmmrecord = 0
             if function == 'p':
                 records = blastp(query)
                 hmmrecord = hmmscan(query)
                 head = "Result of Blastp"
             elif function == 'x':
                 records = blastx(query)
-                hmmrecord = 0
                 head = "Result of Blastx"
             if records == 3:
                 abort(410)
             if hmmrecord == 3:
                 abort(410)
+            if hmmrecord == "":
+                hmmrecord ="Your input does not match any record in our database. Please check your input exist and make sure you are using the correct format. You can contact us if the problem persists."
             return render_template('result_blast.html', records=records, title=title, description="", head=head,
                                    hmmrecord=hmmrecord)
 
     elif request.method == 'GET':
         return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
-
 
 def to_md(content):
     return markdown.markdown(content, extensions=['extra', 'toc', 'smarty', 'sane_lists', 'pymdownx.mark'])
@@ -462,8 +469,10 @@ def blastp(query):
         with open('tmp/' + uuidname + '.blast', 'r') as f:
             data = f.readlines()
             if len(data) == 0:
-                os.remove('tmp/' + uuidname + '.fsa')
-                os.remove('tmp/' + uuidname + '.blast')
+                if os.path.exists('tmp/' + uuidname + '.fsa'):
+                    os.remove('tmp/' + uuidname + '.fsa')
+                if os.path.exists('tmp/' + uuidname + '.blast'):
+                    os.remove('tmp/' + uuidname + '.blast')
                 return 3
 
         data = pd.read_csv('tmp/' + uuidname + '.blast', sep="\t", header=None)
@@ -509,13 +518,17 @@ def blastp(query):
 
             index += 1
 
-        os.remove('tmp/' + uuidname + '.fsa')
-        os.remove('tmp/' + uuidname + '.blast')
+        if os.path.exists('tmp/' + uuidname + '.fsa'):
+            os.remove('tmp/' + uuidname + '.fsa')
+        if os.path.exists('tmp/' + uuidname + '.blast'):
+            os.remove('tmp/' + uuidname + '.blast')
         return processed_blastp
 
     except:
-        os.remove('tmp/' + uuidname + '.fsa')
-        os.remove('tmp/' + uuidname + '.blast')
+        if os.path.exists('tmp/' + uuidname + '.fsa'):
+            os.remove('tmp/' + uuidname + '.fsa')
+        if os.path.exists('tmp/' + uuidname + '.blast'):
+            os.remove('tmp/' + uuidname + '.blast')
         return 3
 
 
@@ -537,16 +550,21 @@ def hmmscan(query):
                 elif not line.lstrip().startswith('#'):
                     result += line
         print(result)
-
-        os.remove('tmp/' + uuidname + '.fsa')
-        os.remove('tmp/' + uuidname + '.tbl')
-        os.remove('tmp/' + uuidname + '.log')
+        if os.path.exists('tmp/' + uuidname + '.fsa'):
+            os.remove('tmp/' + uuidname + '.fsa')
+        if os.path.exists('tmp/' + uuidname + '.tbl'):
+            os.remove('tmp/' + uuidname + '.tbl')
+        if os.path.exists('tmp/' + uuidname + '.log'):
+            os.remove('tmp/' + uuidname + '.log')
         return result
 
     except:
-        os.remove('tmp/' + uuidname + '.fsa')
-        os.remove('tmp/' + uuidname + '.tbl')
-        os.remove('tmp/' + uuidname + '.log')
+        if os.path.exists('tmp/' + uuidname + '.fsa'):
+            os.remove('tmp/' + uuidname + '.fsa')
+        if os.path.exists('tmp/' + uuidname + '.tbl'):
+            os.remove('tmp/' + uuidname + '.tbl')
+        if os.path.exists('tmp/' + uuidname + '.log'):
+            os.remove('tmp/' + uuidname + '.log')
         return 3
 
 
@@ -561,8 +579,10 @@ def blastx(query):
         with open('tmp/' + uuidname + '.blast', 'r') as f:
             data = f.readlines()
             if len(data) == 0:
-                os.remove('tmp/' + uuidname + '.fsa')
-                os.remove('tmp/' + uuidname + '.blast')
+                if os.path.exists('tmp/' + uuidname + '.fsa'):
+                    os.remove('tmp/' + uuidname + '.fsa')
+                if os.path.exists('tmp/' + uuidname + '.blast'):
+                    os.remove('tmp/' + uuidname + '.blast')
                 return 3
 
         data = pd.read_csv('tmp/' + uuidname + '.blast', sep="\t", header=None)
@@ -606,12 +626,16 @@ def blastx(query):
                 trem_result.append(trem_record.web_id)
                 processed_blastx.append(trem_result)
             index += 1
-        os.remove('tmp/' + uuidname + '.fsa')
-        os.remove('tmp/' + uuidname + '.blast')
+        if os.path.exists('tmp/' + uuidname + '.fsa'):
+            os.remove('tmp/' + uuidname + '.fsa')
+        if os.path.exists('tmp/' + uuidname + '.blast'):
+            os.remove('tmp/' + uuidname + '.blast')
         return processed_blastx
     except:
-        os.remove('tmp/' + uuidname + '.fsa')
-        os.remove('tmp/' + uuidname + '.blast')
+        if os.path.exists('tmp/' + uuidname + '.fsa'):
+            os.remove('tmp/' + uuidname + '.fsa')
+        if os.path.exists('tmp/' + uuidname + '.blast'):
+            os.remove('tmp/' + uuidname + '.blast')
         return 3
 
 
