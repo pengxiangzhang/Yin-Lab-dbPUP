@@ -121,16 +121,16 @@ def download():
     return render_template('main.html', content=to_md(c), description="", title=title, name=name)
 
 
-@app.route('/dbpup/evidence/all')
-def evidence():
-    title = "Evidence - "
-    name = "Evidence"
+@app.route('/dbpup/characterized/all')
+def characterized():
+    title = "Characterized - "
+    name = "Characterized"
     records = charRecord.CharRecord.query.all()
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
     sub, prod = data_analyzer.substrate_product_split()
 
-    return render_template("evidence.html", records=records, rows=pdb_row, ec=ec_link, sub=sub, product=prod,
+    return render_template("characterized.html", records=records, rows=pdb_row, ec=ec_link, sub=sub, product=prod,
                            description="", title=title, name=name)
 
 
