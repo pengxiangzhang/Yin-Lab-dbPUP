@@ -106,21 +106,6 @@ def statistics():
         pass
     return render_template('main.html', content=to_md(c), description="", title=title, name=name)
 
-
-@app.route("/dbpup/download")
-def download():
-    name = ""
-    title = "Download - "
-    try:
-        with open('content/download.md', encoding='utf-8') as c:
-            name = get_title(c)
-            next(c)
-            c = c.read()
-    except Exception:
-        pass
-    return render_template('main.html', content=to_md(c), description="", title=title, name=name)
-
-
 @app.route('/dbpup/characterized/all')
 def characterized():
     title = "Characterized - "
