@@ -3,7 +3,7 @@ from flask import Flask, request, send_from_directory, flash, render_template, a
 from flask_sqlalchemy import SQLAlchemy
 from forms import InputForm
 from models import charRecord, swiRecord, treRecord
-import markdown, json, glob, os
+import markdown, json, glob, os, uuid
 from datetime import datetime
 import pandas as pd
 
@@ -45,6 +45,16 @@ def hello():
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
+
+
+@app.errorhandler(410)
+def page_not_found(e):
+    return render_template('410.html'), 410
+
+
+@app.errorhandler(500)
+def page_not_found(e):
+    return render_template('500.html'), 500
 
 
 @app.route('/dbpup/')
@@ -97,30 +107,16 @@ def statistics():
     return render_template('main.html', content=to_md(c), description="", title=title, name=name)
 
 
-@app.route("/dbpup/download")
-def download():
-    name = ""
-    title = "Download - "
-    try:
-        with open('content/download.md', encoding='utf-8') as c:
-            name = get_title(c)
-            next(c)
-            c = c.read()
-    except Exception:
-        pass
-    return render_template('main.html', content=to_md(c), description="", title=title, name=name)
-
-
-@app.route('/dbpup/evidence/all')
-def evidence():
-    title = "Evidence - "
-    name = "Evidence"
+@app.route('/dbpup/characterized/all')
+def characterized():
+    title = "Characterized - "
+    name = "Characterized"
     records = charRecord.CharRecord.query.all()
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
     sub, prod = data_analyzer.substrate_product_split()
 
-    return render_template("evidence.html", records=records, rows=pdb_row, ec=ec_link, sub=sub, product=prod,
+    return render_template("characterized.html", records=records, rows=pdb_row, ec=ec_link, sub=sub, product=prod,
                            description="", title=title, name=name)
 
 
@@ -372,6 +368,7 @@ def blast():
     except Exception:
         abort(404)
     if request.method == 'POST':
+        records = []
         sequence = request.form.get('id_sequences')
         file = request.form.get('id_file_text')
         function = request.form.get('job')
@@ -381,20 +378,33 @@ def blast():
         elif sequence != "" and file != "":
             flash('You can only have one input.')
             return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
+        elif function == "no":
+            flash('You must select a program to run.')
+            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
+        elif form.validate() == False:
+            flash('Please complete the Recaptcha.')
+            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
         else:
             if sequence != "" and file == "":
                 query = sequence
             elif sequence == '' and file != '':
                 query = file
+            hmmrecord = 0
             if function == 'p':
-                print('function p is running')
                 records = blastp(query)
-                head = "Result of blastp"
+                hmmrecord = hmmscan(query)
+                head = "Result of Blastp"
             elif function == 'x':
-                print('function x is running')
                 records = blastx(query)
-                head = "Result of blastx"
-            return render_template('result_blastp.html', records=records, title=title, description="", head=head)
+                head = "Result of Blastx"
+            if records == 3:
+                abort(410)
+            if hmmrecord == 3:
+                abort(410)
+            if hmmrecord == "":
+                hmmrecord = "Your input does not match any record in our database. Please check your input exist and make sure you are using the correct format. You can contact us if the problem persists."
+            return render_template('result_blast.html', records=records, title=title, description="", head=head,
+                                   hmmrecord=hmmrecord)
 
     elif request.method == 'GET':
         return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
@@ -436,119 +446,184 @@ def is_family(family_id):
 
 
 def blastp(query):
-    with open('pup_blastp/search.fsa', 'w') as f:
-        f.writelines(query)
-    command = "./blast/blastp -db pup_blastp/PUP_db -query pup_blastp/search.fsa -out pup_blastp/results.blast -outfmt 6 -evalue 1e-5 -num_threads 2"
-    # command = "./blast/blastp -db pup_blastp/PUP_db -query " + query + " -out pup_blastp/results.blast -outfmt 6 -evalue 1e-5 -num_threads 4"
-    os.system(command)
+    try:
+        uuidname = str(uuid.uuid1())
+        with open('tmp/' + uuidname + '.fsa', 'w') as f:
+            f.writelines(query)
+        command = "./blast/blastp -db pup_blastp/PUP_db -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue 1e-5 -num_threads 2"
+        os.system(command)
 
-    with open('pup_blastp/results.blast', 'r') as f:
-        data = f.readlines()
-        if len(data) == 0:
-            return []
+        with open('tmp/' + uuidname + '.blast', 'r') as f:
+            data = f.readlines()
+            if len(data) == 0:
+                if os.path.exists('tmp/' + uuidname + '.fsa'):
+                    os.remove('tmp/' + uuidname + '.fsa')
+                if os.path.exists('tmp/' + uuidname + '.blast'):
+                    os.remove('tmp/' + uuidname + '.blast')
+                return 3
 
-    data = pd.read_csv('pup_blastp/results.blast', sep="\t", header=None)
-    index = 0
-    processed_blastp = []
-    for unid in data[1]:
-        char_record = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
-        swis_record = swiRecord.SwiRecord.query.filter_by(uniq_id=unid).first()
-        trem_record = treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
-        if char_record != None:
-            char_result = []
-            char_result.append(data[0][index])
-            char_result.append(unid)
-            char_result.append(char_record.family)
-            char_result.append(data[2][index])
-            char_result.append(data[10][index])
-            char_result.append(char_record.protein_name)
-            char_result.append(char_record.strain)
-            char_result.append("")
-            processed_blastp.append(char_result)
-        if swis_record != None:
-            swis_result = []
-            swis_result.append(data[0][index])
-            swis_result.append(unid)
-            swis_result.append(swis_record.family)
-            swis_result.append(data[2][index])
-            swis_result.append(data[10][index])
-            swis_result.append(swis_record.protein_enzyme)
-            swis_result.append(swis_record.strain)
-            swis_result.append(swis_record.web_id)
-            processed_blastp.append(swis_result)
-        if trem_record != None:
-            trem_result = []
-            trem_result.append(data[0][index])
-            trem_result.append(unid)
-            trem_result.append(trem_record.family)
-            trem_result.append(data[2][index])
-            trem_result.append(data[10][index])
-            trem_result.append(trem_record.protein_enzyme)
-            trem_result.append(trem_record.strain)
-            trem_result.append(trem_record.web_id)
-            processed_blastp.append(trem_result)
+        data = pd.read_csv('tmp/' + uuidname + '.blast', sep="\t", header=None)
+        index = 0
+        processed_blastp = []
+        for unid in data[1]:
+            char_record = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
+            swis_record = swiRecord.SwiRecord.query.filter_by(uniq_id=unid).first()
+            trem_record = treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
+            if char_record != None:
+                char_result = []
+                char_result.append(data[0][index])
+                char_result.append(unid)
+                char_result.append(char_record.family)
+                char_result.append(data[2][index])
+                char_result.append(data[10][index])
+                char_result.append(char_record.protein_name)
+                char_result.append(char_record.strain)
+                char_result.append("")
+                processed_blastp.append(char_result)
+            if swis_record != None:
+                swis_result = []
+                swis_result.append(data[0][index])
+                swis_result.append(unid)
+                swis_result.append(swis_record.family)
+                swis_result.append(data[2][index])
+                swis_result.append(data[10][index])
+                swis_result.append(swis_record.protein_enzyme)
+                swis_result.append(swis_record.strain)
+                swis_result.append(swis_record.web_id)
+                processed_blastp.append(swis_result)
+            if trem_record != None:
+                trem_result = []
+                trem_result.append(data[0][index])
+                trem_result.append(unid)
+                trem_result.append(trem_record.family)
+                trem_result.append(data[2][index])
+                trem_result.append(data[10][index])
+                trem_result.append(trem_record.protein_enzyme)
+                trem_result.append(trem_record.strain)
+                trem_result.append(trem_record.web_id)
+                processed_blastp.append(trem_result)
 
-        index += 1
-    # for item in processed_blastp:
-    #     print(item)
-    return processed_blastp
+            index += 1
+
+        if os.path.exists('tmp/' + uuidname + '.fsa'):
+            os.remove('tmp/' + uuidname + '.fsa')
+        if os.path.exists('tmp/' + uuidname + '.blast'):
+            os.remove('tmp/' + uuidname + '.blast')
+        return processed_blastp
+
+    except:
+        if os.path.exists('tmp/' + uuidname + '.fsa'):
+            os.remove('tmp/' + uuidname + '.fsa')
+        if os.path.exists('tmp/' + uuidname + '.blast'):
+            os.remove('tmp/' + uuidname + '.blast')
+        return 3
+
+
+def hmmscan(query):
+    try:
+        uuidname = str(uuid.uuid1())
+        with open('tmp/' + uuidname + '.fsa', 'w') as f:
+            f.writelines(query)
+
+        command = "hmmscan --domtblout tmp/" + uuidname + ".tbl --noali -E 1e-5 pfam/Pfam-A.hmm tmp/" + uuidname + ".fsa > tmp/" + uuidname + ".log"
+        os.system(command)
+        result = ""
+        i = 0
+        with open('tmp/' + uuidname + '.tbl', 'r') as hmmscan:
+            for line in hmmscan:
+                i += 1
+                if i <= 3:
+                    result += line
+                elif not line.lstrip().startswith('#'):
+                    result += line
+        print(result)
+        if os.path.exists('tmp/' + uuidname + '.fsa'):
+            os.remove('tmp/' + uuidname + '.fsa')
+        if os.path.exists('tmp/' + uuidname + '.tbl'):
+            os.remove('tmp/' + uuidname + '.tbl')
+        if os.path.exists('tmp/' + uuidname + '.log'):
+            os.remove('tmp/' + uuidname + '.log')
+        return result
+
+    except:
+        if os.path.exists('tmp/' + uuidname + '.fsa'):
+            os.remove('tmp/' + uuidname + '.fsa')
+        if os.path.exists('tmp/' + uuidname + '.tbl'):
+            os.remove('tmp/' + uuidname + '.tbl')
+        if os.path.exists('tmp/' + uuidname + '.log'):
+            os.remove('tmp/' + uuidname + '.log')
+        return 3
 
 
 def blastx(query):
-    with open('pup_blastp/search.fsa', 'w') as f:
-        f.writelines(query)
-    command = "./blast/blastp -db pup_blastp/PUP_db -query pup_blastx/search.fsa -out pup_blastx/results.blast -outfmt 6 -evalue 1e-5 -num_threads 2"
-    os.system(command)
+    try:
+        uuidname = str(uuid.uuid1())
+        with open('tmp/' + uuidname + '.fsa', 'w') as f:
+            f.writelines(query)
+        command = "./blast/blastp -db pup_blastp/PUP_db -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue 1e-5 -num_threads 2"
+        os.system(command)
 
-    with open('pup_blastp/results.blast', 'r') as f:
-        data = f.readlines()
-        if len(data) == 0:
-            return []
+        with open('tmp/' + uuidname + '.blast', 'r') as f:
+            data = f.readlines()
+            if len(data) == 0:
+                if os.path.exists('tmp/' + uuidname + '.fsa'):
+                    os.remove('tmp/' + uuidname + '.fsa')
+                if os.path.exists('tmp/' + uuidname + '.blast'):
+                    os.remove('tmp/' + uuidname + '.blast')
+                return 3
 
-    data = pd.read_csv('pup_blastp/results.blast', sep="\t", header=None)
-    index = 0
-    processed_blastx = []
-    for unid in data[1]:
-        char_record = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
-        swis_record = swiRecord.SwiRecord.query.filter_by(uniq_id=unid).first()
-        trem_record = treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
-        if char_record != None:
-            char_result = []
-            char_result.append(data[0][index])
-            char_result.append(unid)
-            char_result.append(char_record.family)
-            char_result.append(data[2][index])
-            char_result.append(data[10][index])
-            char_result.append(char_record.protein_name)
-            char_result.append(char_record.strain)
-            char_result.append("")
-            processed_blastx.append(char_result)
-        if swis_record != None:
-            swis_result = []
-            swis_result.append(data[0][index])
-            swis_result.append(unid)
-            swis_result.append(swis_record.family)
-            swis_result.append(data[2][index])
-            swis_result.append(data[10][index])
-            swis_result.append(swis_record.protein_enzyme)
-            swis_result.append(swis_record.strain)
-            swis_result.append(swis_record.web_id)
-            processed_blastx.append(swis_result)
-        if trem_record != None:
-            trem_result = []
-            trem_result.append(data[0][index])
-            trem_result.append(unid)
-            trem_result.append(trem_record.family)
-            trem_result.append(data[2][index])
-            trem_result.append(data[10][index])
-            trem_result.append(trem_record.protein_enzyme)
-            trem_result.append(trem_record.strain)
-            trem_result.append(trem_record.web_id)
-            processed_blastx.append(trem_result)
-
-        index += 1
-
-    return processed_blastx
+        data = pd.read_csv('tmp/' + uuidname + '.blast', sep="\t", header=None)
+        index = 0
+        processed_blastx = []
+        for unid in data[1]:
+            char_record = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
+            swis_record = swiRecord.SwiRecord.query.filter_by(uniq_id=unid).first()
+            trem_record = treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
+            if char_record != None:
+                char_result = []
+                char_result.append(data[0][index])
+                char_result.append(unid)
+                char_result.append(char_record.family)
+                char_result.append(data[2][index])
+                char_result.append(data[10][index])
+                char_result.append(char_record.protein_name)
+                char_result.append(char_record.strain)
+                char_result.append("")
+                processed_blastx.append(char_result)
+            if swis_record != None:
+                swis_result = []
+                swis_result.append(data[0][index])
+                swis_result.append(unid)
+                swis_result.append(swis_record.family)
+                swis_result.append(data[2][index])
+                swis_result.append(data[10][index])
+                swis_result.append(swis_record.protein_enzyme)
+                swis_result.append(swis_record.strain)
+                swis_result.append(swis_record.web_id)
+                processed_blastx.append(swis_result)
+            if trem_record != None:
+                trem_result = []
+                trem_result.append(data[0][index])
+                trem_result.append(unid)
+                trem_result.append(trem_record.family)
+                trem_result.append(data[2][index])
+                trem_result.append(data[10][index])
+                trem_result.append(trem_record.protein_enzyme)
+                trem_result.append(trem_record.strain)
+                trem_result.append(trem_record.web_id)
+                processed_blastx.append(trem_result)
+            index += 1
+        if os.path.exists('tmp/' + uuidname + '.fsa'):
+            os.remove('tmp/' + uuidname + '.fsa')
+        if os.path.exists('tmp/' + uuidname + '.blast'):
+            os.remove('tmp/' + uuidname + '.blast')
+        return processed_blastx
+    except:
+        if os.path.exists('tmp/' + uuidname + '.fsa'):
+            os.remove('tmp/' + uuidname + '.fsa')
+        if os.path.exists('tmp/' + uuidname + '.blast'):
+            os.remove('tmp/' + uuidname + '.blast')
+        return 3
 
 
 if __name__ == "__main__":

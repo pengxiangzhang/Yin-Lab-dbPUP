@@ -18,10 +18,11 @@
         </div>
     </div>
 
-    <div class="container-wrap">
+    <div>
         <script defer type="text/javascript">
             $(document).ready(function () {
                 $('#data-table').DataTable({
+                    "scrollX": true,
                     lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
                     dom: 'Bfrtip',
                     columnDefs: [{
@@ -107,7 +108,7 @@
                 });
             });
         </script>
-        <table class="table" id="data-table">
+        <table class="table display" id="data-table">
             <thead>
             <tr>
                 <th style="white-space: nowrap">Protein Name</th>
