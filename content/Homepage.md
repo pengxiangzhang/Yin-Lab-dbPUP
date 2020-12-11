@@ -29,7 +29,9 @@ enzymes.
 
 &#9658;​ [**Unclassified (UCs)**](./classes/UCs)
 
-![family_count](./static/images/text_content/figures/family_count.jpg){: .fit .rounded-border}
+<figure class="fit">
+    <embed type="image/svg+xml" src="./static/images/text_content/figures/family_count.svg" />
+</figure>
 
 ## Family
 
