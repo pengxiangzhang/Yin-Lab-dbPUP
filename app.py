@@ -106,6 +106,7 @@ def statistics():
         pass
     return render_template('main.html', content=to_md(c), description="", title=title, name=name)
 
+
 @app.route('/dbpup/characterized/all')
 def characterized():
     title = "Characterized - "
