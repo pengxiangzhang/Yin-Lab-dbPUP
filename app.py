@@ -33,7 +33,7 @@ with open('config.json') as json_file:
     app.config['SQLALCHEMY_DATABASE_URI'] = connection_stat
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SQLALCHEMY_POOL_SIZE'] = 2
-    app.config['SQLALCHEMY_POOL_RECYCLE'] = 2
+    app.config['SQLALCHEMY_POOL_RECYCLE'] = 4
 
 dtbs = SQLAlchemy(app)
 
