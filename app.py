@@ -22,7 +22,7 @@ with open('config.json') as json_file:
     app.config['RECAPTCHA_PUBLIC_KEY'] = configs['recaptcha']['RECAPTCHA_PUBLIC_KEY']
     app.config['RECAPTCHA_PRIVATE_KEY'] = configs['recaptcha']['RECAPTCHA_PRIVATE_KEY']
     app.secret_key = configs['website']['key']
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    
     # database
     connection_stat = "mysql+pymysql://" + configs['database']['username'] \
                       + ":" + configs['database']['password'] + "@" \
@@ -31,9 +31,11 @@ with open('config.json') as json_file:
     print("Load connection information:")
     print(connection_stat)
     app.config['SQLALCHEMY_DATABASE_URI'] = connection_stat
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    app.config['SQLALCHEMY_POOL_SIZE'] = 2
+    app.config['SQLALCHEMY_POOL_RECYCLE'] = 2
 
 dtbs = SQLAlchemy(app)
-
 
 # routing
 @app.route('/')
@@ -115,7 +117,7 @@ def characterized():
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
     sub, prod = data_analyzer.substrate_product_split()
-
+    
     return render_template("characterized.html", records=records, rows=pdb_row, ec=ec_link, sub=sub, product=prod,
                            description="", title=title, name=name)
 
