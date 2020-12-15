@@ -86,7 +86,7 @@
                         </td>
 
                     {% endif %}
-                    <td>{{ record.strain }}</td>
+                    <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={{ record.tax_id }}">{{ record.strain }}</a></td>
                     <td>
                         {% for element in sub[record.number] %}
                             {% if element[2] == '' %}
