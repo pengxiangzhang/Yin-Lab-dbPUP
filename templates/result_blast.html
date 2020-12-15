@@ -59,9 +59,11 @@
                         <td>{{ record[0] }}</td>
                         <td>{{ record[1] }}</td>
                         {% if record[2].find("_")== -1 %}
-                        <td><a href="{{ url_for('family', family_id = record[2]) }} " target="_blank">{{ record[2] }}</a></td>
+                            <td><a href="{{ url_for('family', family_id = record[2]) }} "
+                                   target="_blank">{{ record[2] }}</a></td>
                         {% else %}
-                        <td><a href="{{ url_for('subfamily', family_id = record[2]) }}" target="_blank">{{ record[2] }}</a></td>
+                            <td><a href="{{ url_for('subfamily', family_id = record[2]) }}"
+                                   target="_blank">{{ record[2] }}</a></td>
                         {% endif %}
                         <td>{{ record[3] }}</td>
                         <td>{{ record[4] }}</td>
