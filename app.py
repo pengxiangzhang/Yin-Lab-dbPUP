@@ -34,6 +34,7 @@ with open('config.json') as json_file:
 
 dtbs = SQLAlchemy(app)
 
+
 # routing
 @app.route('/')
 def hello():
@@ -117,6 +118,7 @@ def characterized():
 
     return render_template("characterized.html", records=records, rows=pdb_row, ec=ec_link, sub=sub, product=prod,
                            description="", title=title, name=name)
+
 
 @app.route('/dbpup/swissport/<family_id>', methods=['GET', 'POST'])
 def swissport(family_id):
@@ -623,6 +625,7 @@ def blastx(query):
             os.remove('tmp/' + uuidname + '.blast')
         return 3
 
+
 class CharRecord(dtbs.Model):
     __tablename__ = 'characterize'
     number = dtbs.Column(dtbs.VARCHAR(5))
@@ -645,6 +648,7 @@ class CharRecord(dtbs.Model):
     pubchem_s = dtbs.Column(dtbs.VARCHAR(300))
     pubchem_p = dtbs.Column(dtbs.VARCHAR(2000))
 
+
 class SwiRecord(dtbs.Model):
     __tablename__ = 'swiss'
     number = dtbs.Column(dtbs.Integer, primary_key=True)
@@ -658,7 +662,8 @@ class SwiRecord(dtbs.Model):
     seq = dtbs.Column(dtbs.VARCHAR(5500))
     type = dtbs.Column(dtbs.VARCHAR(20))
     web_id = dtbs.Column(dtbs.VARCHAR(500))
-    
+
+
 class TreRecord(dtbs.Model):
     __tablename__ = 'trembl'
     number = dtbs.Column(dtbs.Integer, primary_key=True)
@@ -672,6 +677,7 @@ class TreRecord(dtbs.Model):
     seq = dtbs.Column(dtbs.VARCHAR(5500))
     type = dtbs.Column(dtbs.VARCHAR(20))
     web_id = dtbs.Column(dtbs.VARCHAR(500))
-    
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
