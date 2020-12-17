@@ -2,7 +2,6 @@ from data_analyzer import Data_analyzer
 from flask import Flask, request, send_from_directory, flash, render_template, abort, redirect
 from flask_sqlalchemy import SQLAlchemy
 from forms import InputForm
-from models import charRecord, swiRecord, treRecord
 import markdown, json, glob, os, uuid
 from datetime import datetime
 import pandas as pd
@@ -22,7 +21,7 @@ with open('config.json') as json_file:
     app.config['RECAPTCHA_PUBLIC_KEY'] = configs['recaptcha']['RECAPTCHA_PUBLIC_KEY']
     app.config['RECAPTCHA_PRIVATE_KEY'] = configs['recaptcha']['RECAPTCHA_PRIVATE_KEY']
     app.secret_key = configs['website']['key']
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
     # database
     connection_stat = "mysql+pymysql://" + configs['database']['username'] \
                       + ":" + configs['database']['password'] + "@" \
@@ -31,6 +30,7 @@ with open('config.json') as json_file:
     print("Load connection information:")
     print(connection_stat)
     app.config['SQLALCHEMY_DATABASE_URI'] = connection_stat
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 dtbs = SQLAlchemy(app)
 
@@ -111,7 +111,7 @@ def statistics():
 def characterized():
     title = "Characterized - "
     name = "Characterized"
-    records = charRecord.CharRecord.query.all()
+    records = CharRecord.query.all()
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
     sub, prod = data_analyzer.substrate_product_split()
@@ -126,10 +126,10 @@ def swissport(family_id):
     subfamily = False
     if '_' in family_id:
         subfamily = True
-        records = swiRecord.SwiRecord.query.filter_by(family=family_id)
+        records = SwiRecord.query.filter_by(family=family_id)
     else:
         allfamily_id = family_id + "%"
-        records = swiRecord.SwiRecord.query.filter(swiRecord.SwiRecord.family.like(allfamily_id))
+        records = SwiRecord.query.filter(SwiRecord.family.like(allfamily_id))
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
@@ -159,10 +159,10 @@ def trembl(family_id):
     subfamily = False
     if '_' in family_id:
         subfamily = True
-        records = treRecord.TreRecord.query.filter_by(family=family_id)
+        records = TreRecord.query.filter_by(family=family_id)
     else:
         newfamily_id = family_id + "%"
-        records = treRecord.TreRecord.query.filter(treRecord.TreRecord.family.like(newfamily_id))
+        records = TreRecord.query.filter(TreRecord.family.like(newfamily_id))
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
@@ -187,11 +187,11 @@ def trembl(family_id):
 def detail(unid):
     title = "Sequence - " + unid + " - "
     name = "Sequence for " + unid
-    records = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
+    records = CharRecord.query.filter_by(uniq_id=unid).first()
     if records is None:
-        records = treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
+        records = TreRecord.query.filter_by(uniq_id=unid).first()
     if records is None:
-        records = swiRecord.SwiRecord.query.filter_by(uniq_id=unid).first()
+        records = SwiRecord.query.filter_by(uniq_id=unid).first()
     if records is None:
         abort(404)
     else:
@@ -466,9 +466,9 @@ def blastp(query):
         index = 0
         processed_blastp = []
         for unid in data[1]:
-            char_record = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
-            swis_record = swiRecord.SwiRecord.query.filter_by(uniq_id=unid).first()
-            trem_record = treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
+            char_record = CharRecord.query.filter_by(uniq_id=unid).first()
+            swis_record = SwiRecord.query.filter_by(uniq_id=unid).first()
+            trem_record = TreRecord.query.filter_by(uniq_id=unid).first()
             if char_record != None:
                 char_result = []
                 char_result.append(data[0][index])
@@ -576,9 +576,9 @@ def blastx(query):
         index = 0
         processed_blastx = []
         for unid in data[1]:
-            char_record = charRecord.CharRecord.query.filter_by(uniq_id=unid).first()
-            swis_record = swiRecord.SwiRecord.query.filter_by(uniq_id=unid).first()
-            trem_record = treRecord.TreRecord.query.filter_by(uniq_id=unid).first()
+            char_record = CharRecord.query.filter_by(uniq_id=unid).first()
+            swis_record = SwiRecord.query.filter_by(uniq_id=unid).first()
+            trem_record = TreRecord.query.filter_by(uniq_id=unid).first()
             if char_record != None:
                 char_result = []
                 char_result.append(data[0][index])
@@ -624,6 +624,59 @@ def blastx(query):
         if os.path.exists('tmp/' + uuidname + '.blast'):
             os.remove('tmp/' + uuidname + '.blast')
         return 3
+
+
+class CharRecord(dtbs.Model):
+    __tablename__ = 'characterize'
+    number = dtbs.Column(dtbs.VARCHAR(5))
+    strain = dtbs.Column(dtbs.VARCHAR(150))
+    protein_name = dtbs.Column(dtbs.VARCHAR(150))
+    gene_name = dtbs.Column(dtbs.VARCHAR(30))
+    uniq_id = dtbs.Column(dtbs.VARCHAR(30), primary_key=True)
+    ec = dtbs.Column(dtbs.VARCHAR(50))
+    substrate = dtbs.Column(dtbs.VARCHAR(100))
+    product = dtbs.Column(dtbs.VARCHAR(200))
+    pdb = dtbs.Column(dtbs.VARCHAR(100))
+    km = dtbs.Column(dtbs.VARCHAR(30))
+    vmax = dtbs.Column(dtbs.VARCHAR(30))
+    kcat = dtbs.Column(dtbs.VARCHAR(30))
+    family = dtbs.Column(dtbs.VARCHAR(20))
+    seq = dtbs.Column(dtbs.VARCHAR(5500))
+    doi = dtbs.Column(dtbs.VARCHAR(50))
+    tax_id = dtbs.Column(dtbs.VARCHAR(10))
+    type = dtbs.Column(dtbs.VARCHAR(10))
+    pubchem_s = dtbs.Column(dtbs.VARCHAR(300))
+    pubchem_p = dtbs.Column(dtbs.VARCHAR(2000))
+
+
+class SwiRecord(dtbs.Model):
+    __tablename__ = 'swiss'
+    number = dtbs.Column(dtbs.Integer, primary_key=True)
+    protein_enzyme = dtbs.Column(dtbs.VARCHAR(150))
+    strain = dtbs.Column(dtbs.VARCHAR(150))
+    db = dtbs.Column(dtbs.VARCHAR(2))
+    uniq_id = dtbs.Column(dtbs.VARCHAR(20))
+    pdb = dtbs.Column(dtbs.VARCHAR(500))
+    ec = dtbs.Column(dtbs.VARCHAR(50))
+    family = dtbs.Column(dtbs.VARCHAR(20))
+    seq = dtbs.Column(dtbs.VARCHAR(5500))
+    type = dtbs.Column(dtbs.VARCHAR(20))
+    web_id = dtbs.Column(dtbs.VARCHAR(500))
+
+
+class TreRecord(dtbs.Model):
+    __tablename__ = 'trembl'
+    number = dtbs.Column(dtbs.Integer, primary_key=True)
+    protein_enzyme = dtbs.Column(dtbs.VARCHAR(150))
+    strain = dtbs.Column(dtbs.VARCHAR(150))
+    db = dtbs.Column(dtbs.VARCHAR(2))
+    uniq_id = dtbs.Column(dtbs.VARCHAR(20))
+    pdb = dtbs.Column(dtbs.VARCHAR(500))
+    ec = dtbs.Column(dtbs.VARCHAR(50))
+    family = dtbs.Column(dtbs.VARCHAR(20))
+    seq = dtbs.Column(dtbs.VARCHAR(5500))
+    type = dtbs.Column(dtbs.VARCHAR(20))
+    web_id = dtbs.Column(dtbs.VARCHAR(500))
 
 
 if __name__ == "__main__":
