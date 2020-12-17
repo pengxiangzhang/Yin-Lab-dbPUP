@@ -121,6 +121,8 @@ def characterized():
 @app.route('/dbpup/swissport/<family_id>', methods=['GET', 'POST'])
 def swissport(family_id):
     title = "Swiss-Prot - " + family_id + " - "
+    if not hasNumbers(family_id):
+        abort(404)
     subfamily = False
     if '_' in family_id:
         subfamily = True
@@ -154,6 +156,8 @@ def swissport(family_id):
 def trembl(family_id):
     title = "TrEMBL - " + family_id + " - "
     name = family_id
+    if not hasNumbers(family_id):
+        abort(404)
     subfamily = False
     if '_' in family_id:
         subfamily = True
@@ -442,6 +446,8 @@ def is_family(family_id):
     else:
         return False
 
+def hasNumbers(inputString):
+    return any(char.isdigit() for char in inputString)
 
 def blastp(query):
     try:
