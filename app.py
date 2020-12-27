@@ -448,8 +448,10 @@ def is_family(family_id):
     else:
         return False
 
+
 def hasNumbers(inputString):
     return any(char.isdigit() for char in inputString)
+
 
 def blastp(query):
     try:

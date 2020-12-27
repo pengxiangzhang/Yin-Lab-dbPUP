@@ -95,14 +95,16 @@ Additionally, nodes have a light yellow border indicate the seeds.
 
 ## BLAST
 
-Users can enter a protein or nucleotide sequence of interest in FASTA format to perform a BLAST search against dbPUP. This can be done in following ways:
+Users can enter a protein or nucleotide sequence of interest in FASTA format to perform a BLAST search against dbPUP.
+This can be done in following ways:
 
 1. Enter a protein or nucleotide sequence into the form field.
 2. Upload a FASTA format file
 
 ![help8](./static/images/text_content/figures/help9.png){: .fit .rounded-border}
 
-Results are displayed as a sortable table including `hmmscan` result (only applicable for protein sequence), protein information, scores, and E-values obtained from BLAST.
+Results are displayed as a sortable table including `hmmscan` result (only applicable for protein sequence), protein
+information, scores, and E-values obtained from BLAST.
 
 ![help8](./static/images/text_content/figures/help10.png){: .fit .rounded-border}
 

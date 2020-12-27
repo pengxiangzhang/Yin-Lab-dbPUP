@@ -14,4 +14,4 @@ errorlog = '/home/bo/BiologyLabWeb_error.log'
 loglevel = 'debug'
 
 #Development
-reload = True
+#reload = True
