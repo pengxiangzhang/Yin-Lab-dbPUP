@@ -8,7 +8,9 @@
 
         </div>
     </div>
-    
+    {% if subfamily %}
+        <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('swissport', family_id=family_id) }}">View Swiss-Prot</a>
+    {% endif %}
     <div class="abstractOfPage">
         <div class="informationOfGene">
             <p></p>

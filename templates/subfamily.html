@@ -3,6 +3,11 @@
 {% block title %}subfamily{% endblock %}
 
 {% block content %}
+    {% if content=="<p>redirect</p>"%}
+    <script>
+        window.location.replace("{{ url_for('swissport', family_id = family_id) }}");
+    </script>
+    {% else %}
     <div class="row">
         <div class="page-header">
             <h3>{{ name }}</h3>
@@ -25,4 +30,5 @@
     <div class="familyInformation">
         {{ content|safe }}
     </div>
+    {% endif %}
 {% endblock %}

@@ -1,5 +1,5 @@
 from data_analyzer import Data_analyzer
-from flask import Flask, request, send_from_directory, flash, render_template, abort, redirect
+from flask import Flask, request, send_from_directory, flash, render_template, abort, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from forms import InputForm
 import markdown, json, glob, os, uuid
@@ -291,7 +291,7 @@ def subfamily(family_id):
             next(c)
             c = c.read()
     except Exception:
-        c = open('content/nothing.md', 'r', encoding='utf-8').read()
+        c = open('content/redirect.md', 'r', encoding='utf-8').read()
         name = "Subfamily for " + family_id
     return render_template('subfamily.html', content=to_md(c), family_id=family_id, description="", title=title,
                            name=name)
