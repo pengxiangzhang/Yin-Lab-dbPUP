@@ -20,9 +20,15 @@
             <ul class="breadcrumb" style="font-size: medium">
                 {% for i in range(amount) %}
                     {% set family_id = family_id + '_' + (i + 1)|string() %}
+                    {% if is_family_char(family_id)%}
+                    <li><a href="{{ url_for('subfamily', family_id = family_id) }}">{{ family_id }}(Characterized)</a> <span
+                            class="divider"></span>
+                    </li>
+                    {% else %}
                     <li><a href="{{ url_for('subfamily', family_id = family_id) }}">{{ family_id }}</a> <span
                             class="divider"></span>
                     </li>
+                    {% endif %}
                 {% endfor %}
             </ul>
         </div>

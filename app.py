@@ -433,6 +433,9 @@ subfamilyfile.close()
 familyfile = open("static/materials/family.txt", "r")
 family_list = (familyfile.readline().split())
 familyfile.close()
+subfamilycharfile = open("static/materials/subfamily_charactorized.txt", "r")
+subfamilychar_list = (subfamilycharfile.readline().split())
+subfamilycharfile.close()
 
 
 def is_subfamily(family_id):
@@ -448,6 +451,15 @@ def is_family(family_id):
     else:
         return False
 
+
+def is_family_char(family_id):
+    if family_id in subfamilychar_list:
+        return True
+    else:
+        return False
+        
+app.jinja_env.globals.update(is_family_char=is_family_char)
+        
 
 def hasNumbers(inputString):
     return any(char.isdigit() for char in inputString)
