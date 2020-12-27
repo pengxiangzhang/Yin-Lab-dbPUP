@@ -11,6 +11,9 @@
         </div>
     </div>
     <!-- Main Content Area-->
+        <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('network', family_id = family_id) }}">View sequence	
+            similarity network</a>
+            
     {% if amount != 0 %}
         <div class="subFamily">
             <h2>Subfamily</h2>
@@ -32,9 +35,6 @@
             </li>
             <li>
                 <button><a href="{{ url_for('trembl', family_id = family_id) }}">TrEMBL</a></button>
-            </li>
-            <li>
-                <button><a href="{{ url_for('network', family_id = family_id) }}">Network</a></button>
             </li>
         </ul>
     </div>
