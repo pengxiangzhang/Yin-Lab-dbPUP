@@ -3,26 +3,36 @@
 {% block title %}subfamily{% endblock %}
 
 {% block content %}
-    <div class="row">
-        <div class="page-header">
-            <h3>{{ name }}</h3>
+    {% if content=="<p>redirect</p>" %}
+        <script>
+            window.location.replace("{{ url_for('swissport', family_id = family_id) }}");
+        </script>
+        <h4>Redirecting...</h4>
+        <p>You should be redirected automatically to target URL: <a
+                href="{{ url_for('swissport', family_id = family_id) }}">{{ url_for('swissport', family_id = family_id) }}</a>.
+            If not click the link.</p>
+    {% else %}
+        <div class="row">
+            <div class="page-header">
+                <h3>{{ name }}</h3>
 
+            </div>
         </div>
-    </div>
-    <div class="familyResource">
-        <h1>Subfamily Sequences</h1>
-        <ul class="breadcrumb" style="font-size: medium">
-            <li>
-                <button><a href="{{ url_for('swissport', family_id = family_id) }}">Swiss-Prot</a></button>
-            </li>
-            <li>
-                <button><a href="{{ url_for('trembl', family_id = family_id) }}">TrEMBL</a></button>
-            </li>
-        </ul>
-    </div>
-    <br>
-    <!-- Main Content Area-->
-    <div class="familyInformation">
-        {{ content|safe }}
-    </div>
+        <div class="familyResource">
+            <h1>Subfamily Sequences</h1>
+            <ul class="breadcrumb" style="font-size: medium">
+                <li>
+                    <button><a href="{{ url_for('swissport', family_id = family_id) }}">Swiss-Prot</a></button>
+                </li>
+                <li>
+                    <button><a href="{{ url_for('trembl', family_id = family_id) }}">TrEMBL</a></button>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <!-- Main Content Area-->
+        <div class="familyInformation">
+            {{ content|safe }}
+        </div>
+    {% endif %}
 {% endblock %}

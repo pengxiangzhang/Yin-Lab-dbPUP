@@ -11,7 +11,10 @@
     {% if not subfamily %}
         <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('tree', family_id=family_id) }}">View phylogenetic
             tree</a>
+    {% else %}
+        <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('trembl', family_id=family_id) }}">View TrEMBL</a>
     {% endif %}
+
     <div class="abstractOfPage">
         <div class="informationOfGene">
             <p></p>

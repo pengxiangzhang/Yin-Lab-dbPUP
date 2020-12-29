@@ -1,5 +1,5 @@
 from data_analyzer import Data_analyzer
-from flask import Flask, request, send_from_directory, flash, render_template, abort, redirect
+from flask import Flask, request, send_from_directory, flash, render_template, abort, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from forms import InputForm
 import markdown, json, glob, os, uuid
@@ -123,6 +123,8 @@ def characterized():
 @app.route('/dbpup/swissport/<family_id>', methods=['GET', 'POST'])
 def swissport(family_id):
     title = "Swiss-Prot - " + family_id + " - "
+    if not hasNumbers(family_id):
+        abort(404)
     subfamily = False
     if '_' in family_id:
         subfamily = True
@@ -156,6 +158,8 @@ def swissport(family_id):
 def trembl(family_id):
     title = "TrEMBL - " + family_id + " - "
     name = family_id
+    if not hasNumbers(family_id):
+        abort(404)
     subfamily = False
     if '_' in family_id:
         subfamily = True
@@ -287,7 +291,7 @@ def subfamily(family_id):
             next(c)
             c = c.read()
     except Exception:
-        c = open('content/nothing.md', 'r', encoding='utf-8').read()
+        c = open('content/redirect.md', 'r', encoding='utf-8').read()
         name = "Subfamily for " + family_id
     return render_template('subfamily.html', content=to_md(c), family_id=family_id, description="", title=title,
                            name=name)
@@ -429,6 +433,9 @@ subfamilyfile.close()
 familyfile = open("static/materials/family.txt", "r")
 family_list = (familyfile.readline().split())
 familyfile.close()
+subfamilycharfile = open("static/materials/subfamily_charactorized.txt", "r")
+subfamilychar_list = (subfamilycharfile.readline().split())
+subfamilycharfile.close()
 
 
 def is_subfamily(family_id):
@@ -443,6 +450,19 @@ def is_family(family_id):
         return True
     else:
         return False
+
+
+def is_family_char(family_id):
+    if family_id in subfamilychar_list:
+        return True
+    else:
+        return False
+        
+app.jinja_env.globals.update(is_family_char=is_family_char)
+        
+
+def hasNumbers(inputString):
+    return any(char.isdigit() for char in inputString)
 
 
 def blastp(query):
