@@ -123,25 +123,19 @@ def characterized():
 @app.route('/dbpup/swissport/<family_id>', methods=['GET', 'POST'])
 def swissport(family_id):
     title = "Swiss-Prot - " + family_id + " - "
-    if not hasNumbers(family_id):
-        abort(404)
-    subfamily = False
-    if '_' in family_id:
+    if is_family(family_id):
+        allfamily_id = family_id + "%"
+        records = SwiRecord.query.filter(SwiRecord.family.like(allfamily_id))
+        subfamily = False
+    elif is_subfamily(family_id):
         subfamily = True
         records = SwiRecord.query.filter_by(family=family_id)
     else:
-        allfamily_id = family_id + "%"
-        records = SwiRecord.query.filter(SwiRecord.family.like(allfamily_id))
+        abort(404)
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
 
-    found = False
-    for record in records:
-        found = True
-        break
-    if not found:
-        abort(404)
     try:
         with open('content/family_' + family_id + '.md', encoding='utf-8') as c:
             name = get_title(c)
@@ -158,25 +152,19 @@ def swissport(family_id):
 def trembl(family_id):
     title = "TrEMBL - " + family_id + " - "
     name = family_id
-    if not hasNumbers(family_id):
-        abort(404)
-    subfamily = False
-    if '_' in family_id:
-        subfamily = True
-        records = TreRecord.query.filter_by(family=family_id)
-    else:
+    if is_family(family_id):
         newfamily_id = family_id + "%"
         records = TreRecord.query.filter(TreRecord.family.like(newfamily_id))
+        subfamily = False
+    elif is_subfamily(family_id):
+        records = TreRecord.query.filter_by(family=family_id)
+        subfamily = True
+    else:
+        abort(404)
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
 
-    found = False
-    for record in records:
-        found = True
-        break
-    if not found:
-        abort(404)
     try:
         with open('content/family_' + family_id + '.md', encoding='utf-8') as c:
             name = get_title(c)
@@ -459,10 +447,6 @@ def is_family_char(family_id):
         return False
         
 app.jinja_env.globals.update(is_family_char=is_family_char)
-        
-
-def hasNumbers(inputString):
-    return any(char.isdigit() for char in inputString)
 
 
 def blastp(query):

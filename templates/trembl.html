@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 
-{% block title %} TrEMBL Data {% endblock %}
+{% block title %}TrEMBL Data{% endblock %}
 {% block content %}
+<style>
+scrollX: "100%"
+</style>
     <div class="row">
         <div class="page-header">
             <h3>TrEMBL for {{ name }}</h3>
@@ -18,13 +21,13 @@
         </div>
     </div>
 
-    <div>
         <script defer type="text/javascript">
             $(document).ready(function () {
                 $('#data-table').DataTable({
                     "scrollX": true,
                     lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
                     dom: 'Bfrtip',
+                    
                     columnDefs: [{
                         targets: [7, 8],
                         searchable: true,
@@ -108,6 +111,7 @@
                 });
             });
         </script>
+        <div>
         <table class="table display" id="data-table">
             <thead>
             <tr>
