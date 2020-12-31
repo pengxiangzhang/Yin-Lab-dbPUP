@@ -1,5 +1,5 @@
 from data_analyzer import Data_analyzer
-from flask import Flask, request, send_from_directory, flash, render_template, abort, redirect, url_for
+from flask import Flask, request, send_from_directory, flash, render_template, abort
 from flask_sqlalchemy import SQLAlchemy
 from forms import InputForm
 import markdown, json, glob, os, uuid
@@ -36,10 +36,6 @@ dtbs = SQLAlchemy(app)
 
 
 # routing
-@app.route('/')
-def hello():
-    return redirect("/dbpup/", code=301)
-
 
 # Error Page
 @app.errorhandler(404)
@@ -62,7 +58,9 @@ def index():
     name = app.config['FullName'] + " (" + app.config['title'] + ")"
     title = ""
     c = open('content/Homepage.md', 'r', encoding='utf-8').read()
-    return render_template('index.html', content=to_md(c), description="", title=title, name=name)
+
+    description = "dbPUP is the first exploratory database of polyphenol utilized proteins that have been experimentally validated to catalyze or modify a polyphenol substrate. The database contains 60 proteins from microbiome that characterized by heterologous or homologous expression with one or more specific polyphenol substrates. These data are recruited from scientific publications and search results on BRENDA. Each of the publications has been carefully vetted before inclusion in Characterized."
+    return render_template('index.html', content=to_md(c), description=description, title=title, name=name)
 
 
 @app.route("/dbpup/about")
@@ -76,7 +74,8 @@ def about():
             c = c.read()
     except Exception:
         pass
-    return render_template('main.html', content=to_md(c), description="", title=title, name=name)
+    description = "PUP database team"
+    return render_template('main.html', content=to_md(c), description=description, title=title, name=name)
 
 
 @app.route('/dbpup/help')
@@ -90,7 +89,8 @@ def help():
             c = c.read()
     except Exception:
         pass
-    return render_template('main.html', content=to_md(c), description="", title=title, name=name)
+    description = "dbPUP is the first database to collect polyphenol utilization proteins that have been experimentally validated to catalyze or modify a polyphenol substrate. The database currently contains 60 proteins from gut microbiota that are manually curated from literature and enzyme database. These proteins have been characterized by different experimental approaches targeting one or more specific polyphenol substrates. These experimentally characterized proteins are also called seed proteins. Using these seed proteins, we also collected over 24,000 proteins that share conserved Pfam domains and significant sequence similarities with the seed proteins, and thus are potentially capable of metabolizing polyphenols. These proteins are also called computationally predicted proteins. All these seed proteins and computationally predicted proteins are compiled together and classified into protein families based on sequence homology and further categorized into classes according to EC numbers that the seed proteins have."
+    return render_template('main.html', content=to_md(c), description=description, title=title, name=name)
 
 
 @app.route('/dbpup/statistics')
@@ -104,10 +104,11 @@ def statistics():
             c = c.read()
     except Exception:
         pass
-    return render_template('main.html', content=to_md(c), description="", title=title, name=name)
+    description = "Currently the dbPUP database contains, Characterized Proteins Statistics, General Statistics, Class Statistics. Database for Polyphenol Utilized Proteins from gut microbiota"
+    return render_template('main.html', content=to_md(c), description=description, title=title, name=name)
 
 
-@app.route('/dbpup/characterized/all')
+@app.route('/dbpup/characterized')
 def characterized():
     title = "Characterized - "
     name = "Characterized"
@@ -116,32 +117,27 @@ def characterized():
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
     sub, prod = data_analyzer.substrate_product_split()
 
+    description = "Characterization for Database for Polyphenol Utilized Proteins from gut microbiota"
     return render_template("characterized.html", records=records, rows=pdb_row, ec=ec_link, sub=sub, product=prod,
-                           description="", title=title, name=name)
+                           description=description, title=title, name=name)
 
 
 @app.route('/dbpup/swissport/<family_id>', methods=['GET', 'POST'])
 def swissport(family_id):
     title = "Swiss-Prot - " + family_id + " - "
-    if not hasNumbers(family_id):
-        abort(404)
-    subfamily = False
-    if '_' in family_id:
+    if is_family(family_id):
+        allfamily_id = family_id + "%"
+        records = SwiRecord.query.filter(SwiRecord.family.like(allfamily_id))
+        subfamily = False
+    elif is_subfamily(family_id):
         subfamily = True
         records = SwiRecord.query.filter_by(family=family_id)
     else:
-        allfamily_id = family_id + "%"
-        records = SwiRecord.query.filter(SwiRecord.family.like(allfamily_id))
+        abort(404)
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
 
-    found = False
-    for record in records:
-        found = True
-        break
-    if not found:
-        abort(404)
     try:
         with open('content/family_' + family_id + '.md', encoding='utf-8') as c:
             name = get_title(c)
@@ -149,8 +145,9 @@ def swissport(family_id):
     except Exception:
         name = family_id
 
+    description = "Database for Polyphenol Utilized Proteins from gut microbiota. Swiss-Prot data for " + family_id
     return render_template('swissport.html', family_id=family_id, records=records, ec=ec_link, rows=pdb_row,
-                           description="", title=title,
+                           description=description, title=title,
                            name=name, subfamily=subfamily)
 
 
@@ -158,33 +155,29 @@ def swissport(family_id):
 def trembl(family_id):
     title = "TrEMBL - " + family_id + " - "
     name = family_id
-    if not hasNumbers(family_id):
-        abort(404)
-    subfamily = False
-    if '_' in family_id:
-        subfamily = True
-        records = TreRecord.query.filter_by(family=family_id)
-    else:
+    if is_family(family_id):
         newfamily_id = family_id + "%"
         records = TreRecord.query.filter(TreRecord.family.like(newfamily_id))
+        subfamily = False
+    elif is_subfamily(family_id):
+        records = TreRecord.query.filter_by(family=family_id)
+        subfamily = True
+    else:
+        abort(404)
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
 
-    found = False
-    for record in records:
-        found = True
-        break
-    if not found:
-        abort(404)
     try:
         with open('content/family_' + family_id + '.md', encoding='utf-8') as c:
             name = get_title(c)
             c.close()
     except Exception:
         name = family_id
+
+    description = "Database for Polyphenol Utilized Proteins from gut microbiota. TrEMBL data for " + family_id
     return render_template("trembl.html", family_id=family_id, records=records, ec=ec_link, rows=pdb_row,
-                           description="", title=title, name=name, subfamily=subfamily)
+                           description=description, title=title, name=name, subfamily=subfamily)
 
 
 @app.route("/dbpup/detail/<unid>")
@@ -200,7 +193,9 @@ def detail(unid):
         abort(404)
     else:
         seq = records.seq
-    return render_template('detail.html', seq=seq, unid=unid, description="", title=title, name=name)
+
+    description = "Database for Polyphenol Utilized Proteins from gut microbiota. Sequence for " + unid
+    return render_template('detail.html', seq=seq, unid=unid, description=description, title=title, name=name)
 
 
 @app.route("/dbpup/tree/<family_id>")
@@ -224,8 +219,10 @@ def tree(family_id):
             n.close()
     except Exception:
         name = family_id
+
+    description = "Database for Polyphenol Utilized Proteins from gut microbiota. Tree for Swiss-Prot " + family_id
     return render_template('tree.html', content=to_md(c), family_id=family_id, treeData=json.dumps(treeData),
-                           description="", title=title, name=name)
+                           description=description, title=title, name=name)
 
 
 @app.route("/dbpup/family/<family_id>")
@@ -240,6 +237,7 @@ def family(family_id):
             name = get_title(c)
             next(c)
             c = c.read()
+
     except Exception:
         c = open('content/nothing.md', 'r', encoding='utf-8').read()
         name = "Subfamily for " + family_id
@@ -276,7 +274,9 @@ def family(family_id):
         amount = 13
     elif family_id == 'UC2':
         amount = 8
-    return render_template('family.html', family_id=family_id, amount=amount, content=to_md(c), description="",
+
+    description = "Database for Polyphenol Utilized Proteins from gut microbiota. Family for " + family_id
+    return render_template('family.html', family_id=family_id, amount=amount, content=to_md(c), description=description,
                            title=title, name=name)
 
 
@@ -293,7 +293,10 @@ def subfamily(family_id):
     except Exception:
         c = open('content/redirect.md', 'r', encoding='utf-8').read()
         name = "Subfamily for " + family_id
-    return render_template('subfamily.html', content=to_md(c), family_id=family_id, description="", title=title,
+
+    description = "Database for Polyphenol Utilized Proteins from gut microbiota. Subfamily for " + family_id
+    return render_template('subfamily.html', content=to_md(c), family_id=family_id, description=description,
+                           title=title,
                            name=name)
 
 
@@ -319,7 +322,10 @@ def network(family_id):
             n.close()
     except Exception:
         name = family_id
-    return render_template('network.html', content=to_md(c), family_id=family_id, description="", finalfile=finalfile,
+
+    description = "Database for Polyphenol Utilized Proteins from gut microbiota. Subfamily for " + family_id
+    return render_template('network.html', content=to_md(c), family_id=family_id, description=description,
+                           finalfile=finalfile,
                            title=title, name=name)
 
 
@@ -356,7 +362,9 @@ def classes(class_id):
     else:
         abort(404)
 
-    return render_template('classes.html', class_id=class_id, content=to_md(c), description="", title=title, name=name,
+    description = "Database for Polyphenol Utilized Proteins from gut microbiota. Class for " + class_id
+    return render_template('classes.html', class_id=class_id, content=to_md(c), description=description, title=title,
+                           name=name,
                            amount=amount)
 
 
@@ -378,16 +386,20 @@ def blast():
         function = request.form.get('job')
         if sequence == "" and file == "":
             flash('You need to at least have one input.')
-            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
+            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title,
+                                   description=description)
         elif sequence != "" and file != "":
             flash('You can only have one input.')
-            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
+            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title,
+                                   description=description)
         elif function == "no":
             flash('You must select a program to run.')
-            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
+            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title,
+                                   description=description)
         elif form.validate() == False:
             flash('Please complete the Recaptcha.')
-            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
+            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title,
+                                   description=description)
         else:
             if sequence != "" and file == "":
                 query = sequence
@@ -407,11 +419,15 @@ def blast():
                 abort(410)
             if hmmrecord == "":
                 hmmrecord = "Your input does not match any record in our database. Please check your input exist and make sure you are using the correct format. You can contact us if the problem persists."
-            return render_template('result_blast.html', records=records, title=title, description="", head=head,
+            description = ""
+            return render_template('result_blast.html', records=records, title=title, description=description,
+                                   head=head,
                                    hmmrecord=hmmrecord)
 
     elif request.method == 'GET':
-        return render_template('blast.html', content=to_md(c), name=name, form=form, title=title, description="")
+        description = "The Basic Local Alignment Search Tool (BLAST) finds regions of local similarity between sequences. The program compares nucleotide or protein sequences to dbPUP databases and calculates the statistical significance of matches. We provide an integrated BLAST service to find homologs in our dbPUP and infer a putative family with your protein sequences."
+        return render_template('blast.html', content=to_md(c), name=name, form=form, title=title,
+                               description=description)
 
 
 def to_md(content):
@@ -457,12 +473,9 @@ def is_family_char(family_id):
         return True
     else:
         return False
-        
-app.jinja_env.globals.update(is_family_char=is_family_char)
-        
 
-def hasNumbers(inputString):
-    return any(char.isdigit() for char in inputString)
+
+app.jinja_env.globals.update(is_family_char=is_family_char)
 
 
 def blastp(query):

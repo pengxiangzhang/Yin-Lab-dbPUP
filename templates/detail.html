@@ -1,17 +1,19 @@
 {% extends 'base.html' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Sequence{% endblock %}
 
 {% block content %}
+    <!-- Main Content Area-->
     <div class="row">
         <div class="page-header">
             <h3>{{ name }}</h3>
 
         </div>
     </div>
-    <h1 style="max-width: 50ch; word-wrap:break-word; text-align: left;">
-        > {{ unid }} {{ seq }}
-    </h1>
-
+    <br>
+    <div class="familyInformation">
+        <h2 style="max-width: 50ch; word-wrap:break-word; text-align: left;">
+            > {{ unid }} {{ seq }}
+        </h2>
+    </div>
 {% endblock %}
-
