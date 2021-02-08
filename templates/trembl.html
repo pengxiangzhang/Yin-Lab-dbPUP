@@ -26,10 +26,11 @@
     <script defer type="text/javascript">
         $(document).ready(function () {
             $('#data-table').DataTable({
-                "scrollX": true,
                 lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
                 dom: 'Bfrtip',
-
+                "initComplete": function () {
+                    $("#data-table").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
+                },
                 columnDefs: [{
                     targets: [7, 8],
                     searchable: true,
