@@ -370,6 +370,7 @@ def classes(class_id):
 def blast():
     form = InputForm()
     title = "Blast - "
+    description = "The Basic Local Alignment Search Tool (BLAST) finds regions of local similarity between sequences. The program compares nucleotide or protein sequences to dbPUP databases and calculates the statistical significance of matches. We provide an integrated BLAST service to find homologs in our dbPUP and infer a putative family with your protein sequences."
     try:
         with open('content/blast_page.md', encoding='utf-8') as c:
             name = get_title(c)
@@ -422,7 +423,6 @@ def blast():
                                    head=head,
                                    hmmrecord=hmmrecord)
 
-    description = "The Basic Local Alignment Search Tool (BLAST) finds regions of local similarity between sequences. The program compares nucleotide or protein sequences to dbPUP databases and calculates the statistical significance of matches. We provide an integrated BLAST service to find homologs in our dbPUP and infer a putative family with your protein sequences."
     return render_template('blast.html', content=to_md(c), name=name, form=form, title=title,
                            description=description)
 
