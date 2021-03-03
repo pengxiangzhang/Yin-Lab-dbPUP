@@ -56,7 +56,7 @@
                 <div style="color:red;">{{ message }}</div>
             {% endfor %}
             <a class="btn btn-primary"
-               onclick="if(confirm('Please notice that blast may take upto 2 minutes to run.\nPlease be patient and do not refresh the page.')){document.getElementById('id_file').value = ''; document.getElementById('blastx-form').submit();program();}">Run
+               onclick="if(confirm('Please notice that blast may take upto 2 minutes to run.\nPlease be patient and do not refresh the page.')){document.getElementById('id_file').value = '';program(); document.getElementById('blastx-form').submit();}">Run
                 Blast</a>
 
             <script type="text/javascript">

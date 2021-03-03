@@ -403,7 +403,7 @@ def blast():
             if sequence != "" and file == "":
                 query = sequence
             elif sequence == '' and file != '':
-                query = file
+                query = file.replace('\\n', '\n')
             hmmrecord = 0
             if function == 'p':
                 records = blastp(query)
