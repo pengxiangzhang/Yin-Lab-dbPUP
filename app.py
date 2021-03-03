@@ -31,25 +31,23 @@ with open('config.json') as json_file:
     print(connection_stat)
     app.config['SQLALCHEMY_DATABASE_URI'] = connection_stat
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
 dtbs = SQLAlchemy(app)
 
 
 # routing
-
 # Error Page
 @app.errorhandler(404)
-def page_not_found(e):
+def page_not_found():
     return render_template('404.html'), 404
 
 
 @app.errorhandler(410)
-def page_not_found(e):
+def page_not_found():
     return render_template('410.html'), 410
 
 
 @app.errorhandler(500)
-def page_not_found(e):
+def page_not_found():
     return render_template('500.html'), 500
 
 
@@ -424,10 +422,9 @@ def blast():
                                    head=head,
                                    hmmrecord=hmmrecord)
 
-    elif request.method == 'GET':
-        description = "The Basic Local Alignment Search Tool (BLAST) finds regions of local similarity between sequences. The program compares nucleotide or protein sequences to dbPUP databases and calculates the statistical significance of matches. We provide an integrated BLAST service to find homologs in our dbPUP and infer a putative family with your protein sequences."
-        return render_template('blast.html', content=to_md(c), name=name, form=form, title=title,
-                               description=description)
+    description = "The Basic Local Alignment Search Tool (BLAST) finds regions of local similarity between sequences. The program compares nucleotide or protein sequences to dbPUP databases and calculates the statistical significance of matches. We provide an integrated BLAST service to find homologs in our dbPUP and infer a putative family with your protein sequences."
+    return render_template('blast.html', content=to_md(c), name=name, form=form, title=title,
+                           description=description)
 
 
 def to_md(content):
