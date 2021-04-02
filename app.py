@@ -54,7 +54,7 @@ def page_not_found(e):
 @app.route('/dbpup/')
 def index():
     name = app.config['FullName'] + " (" + app.config['title'] + ")"
-    title = ""
+    title = "Database for Polyphenol Utilized Proteins from gut microbiota - "
     c = open('content/Homepage.md', 'r', encoding='utf-8').read()
 
     description = "dbPUP is the first exploratory database of polyphenol utilized proteins that have been experimentally validated to catalyze or modify a polyphenol substrate. The database contains 60 proteins from microbiome that characterized by heterologous or homologous expression with one or more specific polyphenol substrates. These data are recruited from scientific publications and search results on BRENDA. Each of the publications has been carefully vetted before inclusion in Characterized."
