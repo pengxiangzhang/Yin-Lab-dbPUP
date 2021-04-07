@@ -12,10 +12,10 @@
 		"keywords":"Keywords for SEO",
 		"key":"Something Random here"
 	},
-	"recaptcha":{
-	# Apply at https://www.google.com/recaptcha/admin, V2
-	    "RECAPTCHA_PUBLIC_KEY":"key-wXv5P7101gC",
-	    "RECAPTCHA_PRIVATE_KEY":"key-zkklxfw3HkIcdyk"
-	}
+	"captcha":{
+	    # Apply at hcaptcha.com
+        "hcaptcha_public_key":"xxxxx-xxxx-xxxx-xxxxx-xxxxxxxxx",
+        "hcaptcha_private_key":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    }
 }
 

@@ -1,13 +1,12 @@
 from data_analyzer import Data_analyzer
 from flask import Flask, request, send_from_directory, flash, render_template, abort
 from flask_sqlalchemy import SQLAlchemy
-from forms import InputForm
 import markdown, json, glob, os, uuid
 from datetime import datetime
 import pandas as pd
+import requests
 
 # Application configurations
-
 app = Flask(__name__, static_url_path='/dbpup/static')
 
 # read configurations
@@ -18,8 +17,8 @@ with open('config.json') as json_file:
     app.config['title'] = configs['website']['title']
     app.config['FullName'] = configs['website']['FullName']
     app.config['keywords'] = configs['website']['keywords']
-    app.config['RECAPTCHA_PUBLIC_KEY'] = configs['recaptcha']['RECAPTCHA_PUBLIC_KEY']
-    app.config['RECAPTCHA_PRIVATE_KEY'] = configs['recaptcha']['RECAPTCHA_PRIVATE_KEY']
+    app.config['public_key'] = configs['captcha']['hcaptcha_public_key']
+    app.config['private_key'] = configs['captcha']['hcaptcha_private_key']
     app.secret_key = configs['website']['key']
 
     # database
@@ -368,7 +367,6 @@ def classes(class_id):
 
 @app.route("/dbpup/blast", methods=["GET", "POST"])
 def blast():
-    form = InputForm()
     title = "Blast - "
     description = "The Basic Local Alignment Search Tool (BLAST) finds regions of local similarity between sequences. The program compares nucleotide or protein sequences to dbPUP databases and calculates the statistical significance of matches. We provide an integrated BLAST service to find homologs in our dbPUP and infer a putative family with your protein sequences."
     try:
@@ -383,22 +381,23 @@ def blast():
         sequence = request.form.get('id_sequences')
         file = request.form.get('id_file_text')
         function = request.form.get('job')
+        captcha_response = request.form['h-captcha-response']
         if sequence == "" and file == "":
             flash('You need to at least have one input.')
-            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title,
-                                   description=description)
+            return render_template('blast.html', content=to_md(c), name=name, title=title,
+                                   description=description, site_key=app.config['public_key'])
         elif sequence != "" and file != "":
             flash('You can only have one input.')
-            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title,
-                                   description=description)
+            return render_template('blast.html', content=to_md(c), name=name, title=title,
+                                   description=description, site_key=app.config['public_key'])
         elif function == "no":
             flash('You must select a program to run.')
-            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title,
-                                   description=description)
-        elif form.validate() == False:
-            flash('Please complete the Recaptcha.')
-            return render_template('blast.html', content=to_md(c), name=name, form=form, title=title,
-                                   description=description)
+            return render_template('blast.html', content=to_md(c), name=name, title=title,
+                                   description=description, site_key=app.config['public_key'])
+        elif not is_human(captcha_response):
+            flash('Please complete the captcha.')
+            return render_template('blast.html', content=to_md(c), name=name, title=title, description=description,
+                                   site_key=app.config['public_key'])
         else:
             if sequence != "" and file == "":
                 query = sequence
@@ -423,8 +422,8 @@ def blast():
                                    head=head,
                                    hmmrecord=hmmrecord)
 
-    return render_template('blast.html', content=to_md(c), name=name, form=form, title=title,
-                           description=description)
+    return render_template('blast.html', content=to_md(c), name=name, title=title,
+                           description=description, site_key=app.config['public_key'])
 
 
 def to_md(content):
@@ -654,6 +653,17 @@ def blastx(query):
         if os.path.exists('tmp/' + uuidname + '.blast'):
             os.remove('tmp/' + uuidname + '.blast')
         return 3
+
+
+def is_human(captcha_response):
+    """ Validating recaptcha response from google server
+        Returns True captcha test passed for submitted form else returns False.
+    """
+    secret = app.config['private_key']
+    payload = {'response': captcha_response, 'secret': secret}
+    response = requests.post("https://hcaptcha.com/siteverify", payload)
+    response_text = json.loads(response.text)
+    return response_text['success']
 
 
 class CharRecord(dtbs.Model):
