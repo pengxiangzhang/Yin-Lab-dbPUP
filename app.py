@@ -1,13 +1,17 @@
 from data_analyzer import Data_analyzer
 from flask import Flask, request, send_from_directory, flash, render_template, abort
 from flask_sqlalchemy import SQLAlchemy
-import markdown, json, glob, os, uuid
+from flask_caching import Cache
+from flask_minify import minify
+import markdown, json, glob, os, uuid, requests
 from datetime import datetime
 import pandas as pd
-import requests
 
 # Application configurations
 app = Flask(__name__, static_url_path='/dbpup/static')
+cache = Cache(app, config={'CACHE_TYPE': 'FileSystemCache', 'CACHE_DIR': 'cache', 'CACHE_IGNORE_ERRORS': 'True',
+                           'CACHE_THRESHOLD': '500'})
+minify(app=app, html=True, js=True, cssless=True)
 
 # read configurations
 with open('config.json') as json_file:
@@ -71,7 +75,20 @@ def about():
             c = c.read()
     except Exception:
         pass
-    description = "PUP database team"
+    description = "dbPUP database team"
+    return render_template('main.html', content=to_md(c), description=description, title=title, name=name)
+
+
+@app.route("/dbpup/download")
+def download():
+    name = "Download"
+    title = "Download - "
+    try:
+        with open('content/download.md', encoding='utf-8') as c:
+            c = c.read()
+    except Exception:
+        pass
+    description = "dbPUP data download"
     return render_template('main.html', content=to_md(c), description=description, title=title, name=name)
 
 

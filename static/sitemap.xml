@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+<url>
+ <loc>http://bcb.unl.edu/dbpup/classes/UCs</loc>
+ <lastmod>2021-04-24</lastmod>
+</url>
+
+<url>
+ <loc>http://bcb.unl.edu/dbpup/download</loc>
+ <lastmod>2021-04-24</lastmod>
+</url>
+
+<url>
+ <loc>http://bcb.unl.edu/dbpup/classes/ORs</loc>
+ <lastmod>2021-04-24</lastmod>
+</url>
+
+<url>
+ <loc>http://bcb.unl.edu/dbpup/about</loc>
+ <lastmod>2021-04-24</lastmod>
+</url>
+
+<url>
+ <loc>http://bcb.unl.edu/dbpup/blast</loc>
+ <lastmod>2021-04-24</lastmod>
+</url>
+
+<url>
+ <loc>http://bcb.unl.edu/dbpup</loc>
+ <lastmod>2021-04-24</lastmod>
+ <priority>0.8</priority>
+</url>
+
+<url>
+ <loc>http://bcb.unl.edu/dbpup/help</loc>
+ <lastmod>2021-04-24</lastmod>
+</url>
+
+<url>
+ <loc>http://bcb.unl.edu/dbpup/classes/IRs</loc>
+ <lastmod>2021-04-24</lastmod>
+</url>
+
+<url>
+ <loc>http://bcb.unl.edu/dbpup/classes/TRs</loc>
+ <lastmod>2021-04-24</lastmod>
+</url>
+
+<url>
+ <loc>http://bcb.unl.edu/dbpup/classes/NCRs</loc>
+ <lastmod>2021-04-24</lastmod>
+</url>
+
+<url>
+ <loc>http://bcb.unl.edu/dbpup/classes/FRs</loc>
+ <lastmod>2021-04-24</lastmod>
+</url>
+
+<url>
+ <loc>http://bcb.unl.edu/dbpup/characterized</loc>
+ <lastmod>2021-04-24</lastmod>
+</url>
+
+<url>
+ <loc>http://bcb.unl.edu/dbpup/statistics</loc>
+ <lastmod>2021-04-24</lastmod>
+</url>
+
+<url>
+ <loc>http://bcb.unl.edu/dbpup/classes/HRs</loc>
+ <lastmod>2021-04-24</lastmod>
+</url>
+
+<url>
+ <loc>http://bcb.unl.edu/dbpup/classes/SRs</loc>
+ <lastmod>2021-04-24</lastmod>
+</url>
+
+<url>
+ <loc>http://bcb.unl.edu/dbpup_download/</loc>
+ <lastmod>2021-04-24</lastmod>
+</url>
+
+</urlset>

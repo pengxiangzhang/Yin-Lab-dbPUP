@@ -78,29 +78,29 @@
                     <td>
                         <a href="{{ url_for('family', family_id = record.family) }}">{{ record.family }}</a>
                     </td>
-                    <td><a href="https://doi.org/{{ record.doi }}">{{ record.doi }}</a></td>
+                    <td><a href="https://doi.org/{{ record.doi }}" rel="noopener noreferrer" target="_blank">{{ record.doi }}</a></td>
                     <td>{{ record.protein_name }}</td>
                     <td>{{ record.gene_name }}</td>
-                    <td><a href="https://www.uniprot.org/uniprot/{{ record.uniq_id }}">{{ record.uniq_id }}</a></td>
+                    <td><a href="https://www.uniprot.org/uniprot/{{ record.uniq_id }}" rel="noopener noreferrer" target="_blank">{{ record.uniq_id }}</a></td>
                     {% if record.ec == '-1' %}
                         <td>{{ ' ' }}</td>
                     {% else %}
                         <td>
                             {% for element in ec[record.number] %}
-                                <a href="https://www.brenda-enzymes.org/enzyme.php?ecno={{ element }}">{{ element }}</a>
+                                <a href="https://www.brenda-enzymes.org/enzyme.php?ecno={{ element }}" rel="noopener noreferrer" target="_blank">{{ element }}</a>
                             {% endfor %}
                         </td>
 
                     {% endif %}
                     <td>
-                        <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={{ record.tax_id }}">{{ record.strain }}</a>
+                        <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={{ record.tax_id }}" rel="noopener noreferrer" target="_blank">{{ record.strain }}</a>
                     </td>
                     <td>
                         {% for element in sub[record.number] %}
                             {% if element[2] == '' %}
                                 {{ element[0] }}{{ element[1] }};
                             {% else %}
-                                <a href= {{ element[2] }}>{{ element[0] }}</a>{{ element[1] }};
+                                <a href="{{ element[2] }}" rel="noopener noreferrer" target="_blank">{{ element[0] }}</a>{{ element[1] }};
                             {% endif %}
                         {% endfor %}
                     </td>
@@ -110,7 +110,7 @@
                         {% elif (element[1] == '') %}
                             {{ element[0] }};
                         {% else %}
-                            <a href= {{ element[1] }}>{{ element[0] }};</a>
+                            <a href="{{ element[1] }}" rel="noopener noreferrer" target="_blank">{{ element[0] }};</a>
                         {% endif %}
                     {% endfor %}
                     </td>
@@ -119,7 +119,7 @@
                     {% else %}
                         <td>
                             {% for element in rows[record.number] %}
-                                <a href="https://www.rcsb.org/structure/{{ element[1] }}">{{ element[0] }}</a>
+                                <a href="https://www.rcsb.org/structure/{{ element[1] }}" rel="noopener noreferrer" target="_blank">{{ element[0] }}</a>
                             {% endfor %}
                         </td>
                     {% endif %}
