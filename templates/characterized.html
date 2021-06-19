@@ -76,7 +76,11 @@
                 <tr>
                     <td>{{ record.number }}</td>
                     <td>
+                        {% if "_" in record.family: %}
+                        <a href="{{ url_for('subfamily', family_id = record.family) }}">{{ record.family }}</a>
+                        {% else %}
                         <a href="{{ url_for('family', family_id = record.family) }}">{{ record.family }}</a>
+                        {% endif %}
                     </td>
                     <td><a href="https://doi.org/{{ record.doi }}" rel="noopener noreferrer" target="_blank">{{ record.doi }}</a></td>
                     <td>{{ record.protein_name }}</td>
