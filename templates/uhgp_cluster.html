@@ -43,35 +43,36 @@
     <br>
     <div class="familyInformation">
         {{ content| safe }}
-            <div>
-        <table id="data-table" class="table display">
-            <thead>
-            <tr>
-                <th style="white-space: nowrap">Cluster ID</th>
-                <th style="white-space: nowrap">Gene ID</th>
-                <th style="white-space: nowrap">Name</th>
-                <th style="white-space: nowrap">Pfam</th>
-                <th style="white-space: nowrap">Type</th>
-                <th style="white-space: nowrap">Continent</th>
-                <th style="white-space: nowrap">Sequence</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for record in records %}
+        <div>
+            <table id="data-table" class="table display">
+                <thead>
                 <tr>
+                    <th style="white-space: nowrap">Cluster ID</th>
+                    <th style="white-space: nowrap">Gene ID</th>
+                    <th style="white-space: nowrap">Name</th>
+                    <th style="white-space: nowrap">Pfam</th>
+                    <th style="white-space: nowrap">Type</th>
+                    <th style="white-space: nowrap">Continent</th>
+                    <th style="white-space: nowrap">Sequence</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for record in records %}
+                    <tr>
                     <td>{{ record.cluster_id }}</td>
                     <td>{{ record.gene_id }}</td>
                     <td>{{ record.name }}</td>
                     <td>{{ record.pfam }}</td>
                     <td>{{ record.type }}</td>
                     <td>{{ record.continent }}</td>
-                    <td><a href="{{ url_for('detail',mode='cluster', unid = record.gene_id) }}" target="_blank">view</a></td>
-            {% endfor %}
-            </tbody>
-        </table>
+                    <td><a href="{{ url_for('detail',mode='cluster', unid = record.gene_id) }}" target="_blank">view</a>
+                    </td>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
-    </div>
-    
+
     <script defer type="text/javascript">
         $(document).ready(function () {
             $('#data-table').DataTable({
