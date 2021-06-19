@@ -91,17 +91,17 @@ def download():
     description = "dbPUP data download"
     return render_template('main.html', content=to_md(c), description=description, title=title, name=name)
     
-@app.route("/dbpup/clusters")
-def clusters():
-    name = "Clusters"
-    title = "Clusters - "
+@app.route("/dbpup/uhgp_home")
+def uhgp_home():
+    name = "UHGP"
+    title = "UHGP - "
     try:
-        with open('content/clusters.md', encoding='utf-8') as c:
+        with open('content/uhgp_home.md', encoding='utf-8') as c:
             c = c.read()
     except Exception:
         pass
-    description = "Clusters for dbPUP"
-    return render_template('clusters.html', content=to_md(c), description=description, title=title, name=name)
+    description = "UHGP for dbPUP"
+    return render_template('uhgp.html', content=to_md(c), description=description, title=title, name=name)
     
 @app.route('/dbpup/uhgp/<name_id>')
 def uhgp(name_id):

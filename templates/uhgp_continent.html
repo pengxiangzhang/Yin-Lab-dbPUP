@@ -10,8 +10,37 @@
 
         </div>
     </div>
-    <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('clusters') }}">View Clusters</a>
-    <br>
+    <div class="familyList">
+        <h2>
+            UHGP List
+        </h2>
+        <ul class="breadcrumb" style="font-size: medium">
+            <li><a href="{{ url_for('uhgp', name_id = 'Africa') }}">Africa</a> <span
+                    class="divider"></span>
+            </li>
+            <li><a href="{{ url_for('uhgp', name_id = 'Asia') }}">Asia</a> <span
+                    class="divider"></span>
+            </li>
+            <li><a href="{{ url_for('uhgp', name_id = 'Europe') }}">Europe</a> <span
+                    class="divider"></span>
+            </li>
+            <li><a href="{{ url_for('uhgp', name_id = 'North America') }}">North America</a> <span
+                    class="divider"></span>
+            </li>
+            <li><a href="{{ url_for('uhgp', name_id = 'Oceania') }}">Oceania</a> <span
+                    class="divider"></span>
+            </li>
+            <li><a href="{{ url_for('uhgp', name_id = 'South America') }}">South America</a> <span
+                    class="divider"></span>
+            </li>
+            <li><a href="{{ url_for('uhgp', name_id = 'Others') }}">Others</a> <span
+                    class="divider"></span>
+            </li>
+            <li><a href="{{ url_for('uhgp', name_id = 'Cluster') }}">Cluster</a> <span
+                    class="divider"></span>
+            </li>
+        </ul>
+    </div>    <br>
     <div class="familyInformation">
         {{ content| safe }}
             <div>
