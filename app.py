@@ -90,6 +90,43 @@ def download():
         pass
     description = "dbPUP data download"
     return render_template('main.html', content=to_md(c), description=description, title=title, name=name)
+    
+@app.route("/dbpup/clusters")
+def clusters():
+    name = "Clusters"
+    title = "Clusters - "
+    try:
+        with open('content/clusters.md', encoding='utf-8') as c:
+            c = c.read()
+    except Exception:
+        pass
+    description = "Clusters for dbPUP"
+    return render_template('clusters.html', content=to_md(c), description=description, title=title, name=name)
+    
+@app.route('/dbpup/uhgp/<name_id>')
+def uhgp(name_id):
+    if name_id == "Cluster":
+        name = "UHGP "+name_id
+        title = "UHGP "+name_id+" - "
+        try:
+            with open('content/uhgp.md', encoding='utf-8') as c:
+                c = c.read()
+        except Exception:
+            pass
+        description = "UHGP - "+name_id+" for dbPUP"
+        records = ClusRecord.query.all()
+        return render_template('uhgp_cluster.html', content=to_md(c), description=description, title=title, name=name,records=records)
+    else:
+        name = "UHGP for Continent: "+name_id
+        title = "UHGP for Continent: "+name_id+" - "
+        try:
+            with open('content/uhgp.md', encoding='utf-8') as c:
+                c = c.read()
+        except Exception:
+            pass
+        description = "UHGP - "+name_id+" for dbPUP"
+        records = UhgpRecord.query.filter_by(continent=name_id)
+        return render_template('uhgp_continent.html', content=to_md(c), description=description, title=title, name=name,records=records)
 
 
 @app.route('/dbpup/help')
@@ -194,19 +231,27 @@ def trembl(family_id):
                            description=description, title=title, name=name, subfamily=subfamily)
 
 
-@app.route("/dbpup/detail/<unid>")
-def detail(unid):
+@app.route("/dbpup/detail/<mode>/<unid>")
+def detail(mode,unid):
     title = "Sequence - " + unid + " - "
     name = "Sequence for " + unid
-    records = CharRecord.query.filter_by(uniq_id=unid).first()
-    if records is None:
+    if mode=="char":
+        records = CharRecord.query.filter_by(uniq_id=unid).first()
+    elif mode=="trembl":
         records = TreRecord.query.filter_by(uniq_id=unid).first()
-    if records is None:
+    elif mode=="swiss":
         records = SwiRecord.query.filter_by(uniq_id=unid).first()
+    elif mode=="uhpg":
+        records = UhgpRecord.query.filter_by(gene_id=unid).first()
+    elif mode=="cluster":
+        records = ClusRecord.query.filter_by(gene_id=unid).first()
+    else:
+        abort(404)
+    
     if records is None:
         abort(404)
     else:
-        seq = records.seq
+        seq=records.seq
 
     description = "Database for Polyphenol Utilized Proteins from gut microbiota. Sequence for " + unid
     return render_template('detail.html', seq=seq, unid=unid, description=description, title=title, name=name)
@@ -734,7 +779,30 @@ class TreRecord(dtbs.Model):
     seq = dtbs.Column(dtbs.VARCHAR(5500))
     type = dtbs.Column(dtbs.VARCHAR(20))
     web_id = dtbs.Column(dtbs.VARCHAR(500))
+    
+class UhgpRecord(dtbs.Model):
+    __tablename__ = 'uhgp'
+    number = dtbs.Column(dtbs.Integer, primary_key=True)
+    gene_id = dtbs.Column(dtbs.VARCHAR(50))
+    name = dtbs.Column(dtbs.VARCHAR(200))
+    cluster_id = dtbs.Column(dtbs.VARCHAR(50))
+    type = dtbs.Column(dtbs.VARCHAR(50))
+    lineage = dtbs.Column(dtbs.VARCHAR(200))
+    country = dtbs.Column(dtbs.VARCHAR(50))
+    continent = dtbs.Column(dtbs.VARCHAR(50))
+    seq = dtbs.Column(dtbs.VARCHAR(5500))
 
+class ClusRecord(dtbs.Model):
+    __tablename__ = 'cluster'
+    number = dtbs.Column(dtbs.Integer, primary_key=True)
+    cluster_id = dtbs.Column(dtbs.VARCHAR(50))
+    gene_id = dtbs.Column(dtbs.VARCHAR(50))
+    name = dtbs.Column(dtbs.VARCHAR(200))
+    pfam = dtbs.Column(dtbs.VARCHAR(50))
+    type = dtbs.Column(dtbs.VARCHAR(50))
+    phylum = dtbs.Column(dtbs.VARCHAR(50))
+    continent = dtbs.Column(dtbs.VARCHAR(50))
+    seq = dtbs.Column(dtbs.VARCHAR(5500))
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')

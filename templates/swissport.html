@@ -156,7 +156,7 @@
                         </td>
                     {% endif %}
                     <td>
-                        <a href="{{ url_for('detail', unid = record.uniq_id) }}">view</a>
+                        <a href="{{ url_for('detail',mode='swiss', unid = record.uniq_id) }}" target="_blank">view</a>
                     </td>
                     <td>
                         <p hidden>>{{ record.uniq_id }} {{ record.protein_enzyme }} OS={{ record.strain }}</p>
