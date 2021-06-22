@@ -105,6 +105,19 @@ def uhgp_home():
     return render_template('uhgp.html', content=to_md(c), description=description, title=title, name=name)
 
 
+@app.route("/dbpup/cluster/<cluster_id>")
+def cluster_detail(cluster_id):
+    name = cluster_id
+    title = "Cluster "+cluster_id+" - "
+    try:
+        with open('content/cluster/'+cluster_id+'.md', encoding='utf-8') as c:
+            c = c.read()
+    except Exception:
+        abort(404)
+    description = "Cluster Detail for "+cluster_id
+    return render_template('main.html', content=to_md(c), description=description, title=title, name=name)
+
+
 @app.route('/dbpup/uhgp/<name_id>')
 def uhgp(name_id):
     if name_id == "Cluster":
