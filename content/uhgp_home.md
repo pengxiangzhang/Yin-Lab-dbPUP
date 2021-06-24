@@ -1,25 +1,30 @@
-# UHGP
-
 ## UHGG/UHGP
 
-The Unified Human Gastrointestinal Protein (**UHGP**) was collated from the Unified Human Gastrointestinal Genome (**UHGG**) collection, which comprising 204,938 nonredundant prokaryotic genomes from human gut microbiome. All the genomes in UHGP were retrieved from different dataset (IMG, NCBI, PATRIC, HBC, CGR, CIBIO, EBI and HGM), and generated a nonredundant protein catalog from all coding sequences at 90% (UHGP-90, n=13,907,849) protein identity. The functional annotations, metadata and UHGP catalogs are available from the [MGnify FTP site](http://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_genomes/).
+The Unified Human Gastrointestinal Protein (**UHGP**) was collated from the [Unified Human Gastrointestinal Genome (**UHGG**) collection](https://www.nature.com/articles/s41587-020-0603-3), which contains 204,938 nonredundant prokaryotic genomes from human gut microbiome. UHGG genomes were retrieved from different dataset (IMG, NCBI, PATRIC, HBC, CGR, CIBIO, EBI and HGM). UHGP contains all the proteins from UHGG. From UHGP (n=???), protein sequences were processed to remove redundancy at 90% sequence identity to create UHGP-90 database (n=13,907,849). The UHGG sequences, functional annotations, and metadata are available from the [MGnify FTP site](http://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_genomes/).
 
-## UHGP Hits
+## UHGP Homologs
 
-Initially, 31 Pfams and proteins in UCs were used to search against UHGP-90 dataset via `HMMSEARCH` and `PSI_BLAST`. The obtained sequences were further filtered by `PSI-BLAST` and generated a  nonredundant protein catalog with **12,180** sequences. 
+As described in the [homepage](http://bcb.unl.edu/dbpup/), the 31 Pfam signature domains of 60 seed proteins (including 2 proteins in UCs) were used to search against UHGP-90 using `HMMSEARCH` and `PSI_BLAST`. The obtained sequences were further filtered by `PSI-BLAST` and in total **12,180** UHGP homologs are found. 
 
-All of the collated protein sequences alongside functional annotation, taxonomic lineage, geographic metadata were retrieved from UHGP and corresponding metadata.
+The protein sequences, functional annotation, taxonomic lineage, and geographic metadata were extracted and presented.
 
-## Clusters
+<figure class="fit">
+    <embed type="image/svg+xml" src="./static/images/text_content/figures/UHGP_count.svg" />
+</figure>
 
-Enzymes responsible for the utilization of polyphenols are often encoded by genes located within a cluster. Genes that were obtained from UHGP were manually curated using the following criteria:
+## Physically linked PUP gene clusters (PGCs)
 
-- the number of CDS between genes from UHGP Hits was no more than three
-- genes at both ends of a cluster were from UHGP Hits
-- the intergenic length was less than 1 kb
-- genes in a cluster on the same strand
+The [UHGP](https://www.nature.com/articles/s41587-020-0603-3) protein data are derived from the Unified Human Gastrointestinal Genomes (UHGG), which contain over 200,000 nonredundant genomes from the human gut microbiome. By locating the PUP homologs of UHGP in the genomes, we have identified physically linked PUP gene clusters (PGCs) in the gut microbiome, which potentially are involved in polyphenols utilization in human gut. The concept of PGCs is the same as the [polysaccharide utilization loci (PULs)](https://pubmed.ncbi.nlm.nih.gov/28138099/) or [CAZyme gene clusters (CGCs)](https://academic.oup.com/nar/article/46/W1/W95/4996582) for carbohydrate utilization. The idea/hypothesis is that for more efficient polyphenol utilization, PUP encoding genes might be clustered with each other and with other genes in the microbial genomes to form an operon or physically linked gene clusters for cooridinated gene expression. 
 
-As a result, a total of **103** clusters were yield regarding the above criteria, and the whole set of genes responsible for the utilization of polyphenols are encoded in a gene cluster spanning 2-11kb.
+By locating the PUP homologs of UHGP in the genomes, we have defined physically linked PUP gene clusters (PGCs) using the following algorithm:
+
+- all genes in the cluster are on the same strand
+- at least two UHGP homologs in the gene cluster
+- no more than three other genes are allowed between two adjacent UHGP homologs
+- all the intergenic lengths are less than 1 kb
+
+Using the simple algorithm described above, a total of **103** [PGCs](./uhgp/Cluster) were identified with PGC sizes ranging from 2 kb to 11 kb.
+
 
 | Gene cluster size | Number | UHGP cluster ID                    |
 | :---------------- | :----- | :--------------------------------- |

@@ -142,6 +142,7 @@ def uhgp(name_id):
             pass
         description = "UHGP - " + name_id + " for dbPUP"
         records = UhgpRecord.query.filter_by(continent=name_id)
+        print("haha: "+name_id)
         return render_template('uhgp_continent.html', content=to_md(c), description=description, title=title, name=name,
                                records=records)
 
@@ -781,6 +782,7 @@ class SwiRecord(dtbs.Model):
     seq = dtbs.Column(dtbs.VARCHAR(5500))
     type = dtbs.Column(dtbs.VARCHAR(20))
     web_id = dtbs.Column(dtbs.VARCHAR(500))
+    lineage = dtbs.Column(dtbs.VARCHAR(500))
 
 
 class TreRecord(dtbs.Model):
@@ -796,6 +798,7 @@ class TreRecord(dtbs.Model):
     seq = dtbs.Column(dtbs.VARCHAR(5500))
     type = dtbs.Column(dtbs.VARCHAR(20))
     web_id = dtbs.Column(dtbs.VARCHAR(500))
+    lineage = dtbs.Column(dtbs.VARCHAR(500))
 
 
 class UhgpRecord(dtbs.Model):

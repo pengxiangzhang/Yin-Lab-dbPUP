@@ -47,7 +47,6 @@
             <table id="data-table" class="table display">
                 <thead>
                 <tr>
-                    <th style="white-space: nowrap">Number</th>
                     <th style="white-space: nowrap">Cluster ID</th>
                     <th style="white-space: nowrap">Gene ID</th>
                     <th style="white-space: nowrap">Name</th>
@@ -61,7 +60,6 @@
                 <tbody>
                 {% for record in records %}
                     <tr>
-                    <td>{{ record.number }}</td>
                     <td>{{ record.cluster_id }}</td>
                     <td>{{ record.gene_id }}</td>
                     <td>{{ record.name }}</td>

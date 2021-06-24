@@ -47,7 +47,6 @@
             <table id="data-table" class="table display">
                 <thead>
                 <tr>
-                    <th style="white-space: nowrap">Number</th>
                     <th style="white-space: nowrap">Gene ID</th>
                     <th style="white-space: nowrap">Name</th>
                     <th style="white-space: nowrap">Cluster ID</th>
@@ -62,11 +61,14 @@
                 <tbody>
                 {% for record in records %}
                     <tr>
-                    <td>{{ record.number }}</td>
                     <td><a href="{{record.MGnify}}" rel="noopener noreferrer"
                            target="_blank">{{ record.gene_id }}</a></td>
                     <td>{{ record.name }}</td>
-                    <td>{{ record.cluster_id }}</td>
+                    <td>{% if record.cluster_id == "NA" %}
+                        &nbsp;
+                        {% else %}
+                        <a href="{{ url_for('cluster_detail', cluster_id = record.cluster_id) }}">{{ record.cluster_id }}</a></td>
+                        {% endif %}
                     <td>{{ record.type }}</td>
                     <td>{{ record.lineage }}</td>
                     <td>{{ record.country }}</td>

@@ -1,7 +1,5 @@
-This page displays the visualization of Sequence Similarity Network (SSN) from Cytoscape. The first figure is a overview
-of sequences in this family. Nodes in dark color indicate a subgroup containing seeds, while the light ones indicates
-individuals that distant with seeds.
+This page displays the visualization of Sequence Similarity Network (SSN) from Cytoscape. All the seeds+Swiss-Prot+TrEMBL homologs are included. The first figure is an overview of sequences in this family. Nodes in dark color indicate a subgroup/subfam containing seeds, while nodess in light color indicates PUP homologs that are distant from seeds.
 
-The others are enlarged pictures for each subfamily or high confidence (HC) if they don’t have a subfamily. Nodes are
-filled by different color depending on their taxonomic rank **order**. Additionally, nodes have a light yellow border
+The others are enlarged figures for each subfamily or high confidence cluster (HC) if they don’t have a subfamily. Nodes are
+filled by different color according to their taxonomic rank **order**. Additionally, nodes have a light yellow border
 indicate the seeds.

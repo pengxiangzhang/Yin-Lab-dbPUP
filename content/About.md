@@ -8,5 +8,5 @@ Pengxiang Zhang: Undergraduate Student of UNL
 
 Yanbin Yin: (yanbin.yin@gmail.com): Associate Professor of UNL
 
-Funding:
+Funding: (refer to http://bcb.unl.edu/dbCAN2/about.php, add links)
 
