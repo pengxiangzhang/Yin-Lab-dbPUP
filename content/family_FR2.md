@@ -83,6 +83,7 @@
 <p><a href="http://www.ebi.ac.uk/interpro/entry/InterPro/IPR003318/"><strong>InterPro</strong></a></p>
 <p>O-Glycosyl hydrolases (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.">3.2.1.</a>) are a widespread group of enzymes that hydrolyse the glycosidic bond between two or more carbohydrates, or between a carbohydrate and a non-carbohydrate moiety. A classification system for glycosyl hydrolases, based on sequence similarity, has led to the definition of 85 different families <sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup><sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>. This classification is available on the CAZy (CArbohydrate-Active EnZymes) website.</p>
 <p>Glucosyltransferases or sucrose 6-glycosyl transferases (GTF-S) (<a href="http://www.ebi.ac.uk/intenz/query?md=SearchEC&amp;ec=2.4.1.5">2.4.1.5</a>, <a href="http://www.cazy.org/fam/GH70.html">GH70</a>) catalyse the transfer of D-glucopyramnosyl units from sucrose onto acceptor molecules <sup class="footnote-ref"><a href="#fn2" id="fnref2:1">[2:1]</a></sup>. This entry represents a domain that roughly corresponds to the N-terminal catalytic domain of the enzyme. Members of this family also contain the putative cell wall binding domain <a href="http://www.ebi.ac.uk/interpro/entry/pfam/PF01473/">PF01473</a> which corresponds with the C-terminal glucan-binding domain.</p>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>
@@ -173,6 +174,7 @@
 <p><a href="http://www.ebi.ac.uk/interpro/entry/InterPro/IPR003318/"><strong>InterPro</strong></a></p>
 <p>O-Glycosyl hydrolases (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.">3.2.1.</a>) are a widespread group of enzymes that hydrolyse the glycosidic bond between two or more carbohydrates, or between a carbohydrate and a non-carbohydrate moiety. A classification system for glycosyl hydrolases, based on sequence similarity, has led to the definition of 85 different families <sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup><sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>. This classification is available on the CAZy (CArbohydrate-Active EnZymes) website.</p>
 <p>Glucosyltransferases or sucrose 6-glycosyl transferases (GTF-S) (<a href="http://www.ebi.ac.uk/intenz/query?md=SearchEC&amp;ec=2.4.1.5">2.4.1.5</a>, <a href="http://www.cazy.org/fam/GH70.html">GH70</a>) catalyse the transfer of D-glucopyramnosyl units from sucrose onto acceptor molecules <sup class="footnote-ref"><a href="#fn2" id="fnref2:1">[2:1]</a></sup>. This entry represents a domain that roughly corresponds to the N-terminal catalytic domain of the enzyme. Members of this family also contain the putative cell wall binding domain <a href="http://www.ebi.ac.uk/interpro/entry/pfam/PF01473/">PF01473</a> which corresponds with the C-terminal glucan-binding domain.</p>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>

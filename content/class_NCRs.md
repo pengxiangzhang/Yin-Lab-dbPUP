@@ -70,7 +70,7 @@ ExplorEnz**](https://www.enzyme-database.org/class.php).
 
 ## NCRs Subfamily Number
 
-No subfamilies are found.
+No subfamily.
 
 ---
 
@@ -78,8 +78,7 @@ No subfamilies are found.
 
 **NCR1**
 
-[4.1.1.91](https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.91)
-; [4.1.1.46](https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.46)
+[4.1.1.91](https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.91); [4.1.1.46](https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.46)
 
 ---
 

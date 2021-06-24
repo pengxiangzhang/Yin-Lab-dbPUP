@@ -84,6 +84,7 @@
 <p><a href="http://www.ebi.ac.uk/interpro/entry/InterPro/IPR001360/"><strong>InterPro</strong></a></p>
 <p>O-Glycosyl hydrolases (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.">3.2.1.</a>) are a widespread group of enzymes that hydrolyse the glycosidic bond between two or more carbohydrates, or between a carbohydrate and a non-carbohydrate moiety. A classification system for glycosyl hydrolases, based on sequence similarity, has led to the definition of 85 different families <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup><sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>. This classification is available on the CAZy (CArbohydrate-Active EnZymes) website.</p>
 <p>Glycoside hydrolase family 1 <a href="http://www.cazy.org/fam/GH1.html">GH1</a> comprises enzymes with a number of known activities; beta-glucosidase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.21">3.2.1.21</a>); beta-galactosidase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.23">3.2.1.23</a>); 6-phospho-beta-galactosidase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.85">3.2.1.85</a>); 6-phospho-beta-glucosidase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.86">3.2.1.86</a>); lactase-phlorizin hydrolase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.62">3.2.1.62</a>), (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.108">3.2.1.108</a>); beta-mannosidase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.25">3.2.1.25</a>); myrosinase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.147">3.2.1.147</a>).</p>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>
@@ -183,6 +184,7 @@
 <p><a href="http://www.ebi.ac.uk/interpro/entry/InterPro/IPR001360/"><strong>InterPro</strong></a></p>
 <p>O-Glycosyl hydrolases (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.">3.2.1.</a>) are a widespread group of enzymes that hydrolyse the glycosidic bond between two or more carbohydrates, or between a carbohydrate and a non-carbohydrate moiety. A classification system for glycosyl hydrolases, based on sequence similarity, has led to the definition of 85 different families <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup><sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>. This classification is available on the CAZy (CArbohydrate-Active EnZymes) website.</p>
 <p>Glycoside hydrolase family 1 <a href="http://www.cazy.org/fam/GH1.html">GH1</a> comprises enzymes with a number of known activities; beta-glucosidase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.21">3.2.1.21</a>); beta-galactosidase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.23">3.2.1.23</a>); 6-phospho-beta-galactosidase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.85">3.2.1.85</a>); 6-phospho-beta-glucosidase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.86">3.2.1.86</a>); lactase-phlorizin hydrolase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.62">3.2.1.62</a>), (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.108">3.2.1.108</a>); beta-mannosidase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.25">3.2.1.25</a>); myrosinase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.147">3.2.1.147</a>).</p>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>
@@ -296,6 +298,7 @@
 <p><a href="http://www.ebi.ac.uk/interpro/entry/InterPro/IPR001360/"><strong>InterPro</strong></a></p>
 <p>O-Glycosyl hydrolases (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.">3.2.1.</a>) are a widespread group of enzymes that hydrolyse the glycosidic bond between two or more carbohydrates, or between a carbohydrate and a non-carbohydrate moiety. A classification system for glycosyl hydrolases, based on sequence similarity, has led to the definition of 85 different families <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup><sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>. This classification is available on the CAZy (CArbohydrate-Active EnZymes) website.</p>
 <p>Glycoside hydrolase family 1 <a href="http://www.cazy.org/fam/GH1.html">GH1</a> comprises enzymes with a number of known activities; beta-glucosidase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.21">3.2.1.21</a>); beta-galactosidase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.23">3.2.1.23</a>); 6-phospho-beta-galactosidase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.85">3.2.1.85</a>); 6-phospho-beta-glucosidase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.86">3.2.1.86</a>); lactase-phlorizin hydrolase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.62">3.2.1.62</a>), (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.108">3.2.1.108</a>); beta-mannosidase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.25">3.2.1.25</a>); myrosinase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=3.2.1.147">3.2.1.147</a>).</p>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>
@@ -335,6 +338,6 @@
 </li>
 </ol>
 </section>
-
   </div>
 </div>
+

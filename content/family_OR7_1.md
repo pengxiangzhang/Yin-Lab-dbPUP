@@ -83,6 +83,7 @@
 <p><a href="http://www.ebi.ac.uk/interpro/entry/InterPro/IPR005025/"><strong>InterPro</strong></a></p>
 <p>This domain in found in several flavoproteins such as FMN-dependent NADPH-azoreductase, which catalyses the reductive cleavage of azo bond in aromatic azo compounds to the corresponding amines<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>, and NAD§H:quinone oxidoreductase, which reduces quinones to the hydroquinone state to prevent interaction of the semiquinone with O2 and production of superoxide<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>. In Arabidopsis NADPH:quinone oxidoreductase is involved in detoxification pathways<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>. NAD§H:quinone oxidoreductase prefers NADH over NADPH, while FMN-dependent NADPH-azoreductase requires NADPH, but not NADH, as an electron donor for its activity.</p>
 <p>Other proteins with this domain include iron-sulfur flavoproteins<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup> and chromate reductase<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup>.</p>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>
@@ -206,6 +207,7 @@
 <p><a href="http://www.ebi.ac.uk/interpro/entry/InterPro/IPR005025/"><strong>InterPro</strong></a></p>
 <p>This domain in found in several flavoproteins such as FMN-dependent NADPH-azoreductase, which catalyses the reductive cleavage of azo bond in aromatic azo compounds to the corresponding amines<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>, and NAD§H:quinone oxidoreductase, which reduces quinones to the hydroquinone state to prevent interaction of the semiquinone with O2 and production of superoxide<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>. In Arabidopsis NADPH:quinone oxidoreductase is involved in detoxification pathways<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>. NAD§H:quinone oxidoreductase prefers NADH over NADPH, while FMN-dependent NADPH-azoreductase requires NADPH, but not NADH, as an electron donor for its activity.</p>
 <p>Other proteins with this domain include iron-sulfur flavoproteins<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup> and chromate reductase<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup>.</p>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>

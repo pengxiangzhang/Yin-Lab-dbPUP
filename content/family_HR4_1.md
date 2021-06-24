@@ -87,6 +87,7 @@
 <p>▹ Xylose isomerase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=5.3.1.5">5.3.1.5</a>), which catalyses the first reaction in the catabolism of D-xylose by converting D-xylose to D-xylulose<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>.</p>
 <p>▹ Mannonate dehydratase UxuA, which along with mannonate oxidoreductase converts D-fructuronate to 2-keto-3-deoxy-D-gluconate<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup>.</p>
 <p>These proteins share similar, but not identical, metal-binding sites. In addition, xylose isomerase and L-rhamnose isomerase each have additional alpha-helical domains involved in tetramer formation.</p>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>
@@ -203,6 +204,7 @@
 <p>▹ Xylose isomerase (<a href="http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&amp;ec=5.3.1.5">5.3.1.5</a>), which catalyses the first reaction in the catabolism of D-xylose by converting D-xylose to D-xylulose<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>.</p>
 <p>▹ Mannonate dehydratase UxuA, which along with mannonate oxidoreductase converts D-fructuronate to 2-keto-3-deoxy-D-gluconate<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup>.</p>
 <p>These proteins share similar, but not identical, metal-binding sites. In addition, xylose isomerase and L-rhamnose isomerase each have additional alpha-helical domains involved in tetramer formation.</p>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>

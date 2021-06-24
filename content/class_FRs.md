@@ -17,6 +17,8 @@ group transferred by a peptidyl transferase. The transfer involves the removal o
 tRNA molecule in the A-site of the ribosome and its subsequent addition to the amino acid attached to the tRNA in the
 P-site.[^4]
 
+*Information is taken from *
+
 ---
 
 ## Reaction
@@ -52,6 +54,8 @@ ExplorEnz**](https://www.enzyme-database.org/class.php).
 
 **FR1**: FR1_1 / FR1_2 / FR1_3 / FR1_4
 
+**FR2**: No subfamily
+
 **FR3**: FR3_1 / FR3_2 / FR3_3 / FR3_4
 
 **FR4**: FR4_1 / FR4_2 / FR4_3 / FR4_4
@@ -61,24 +65,13 @@ ExplorEnz**](https://www.enzyme-database.org/class.php).
 ## EC in FRs Families (sorted by counts)
 
 **FR1**
-[3.2.1.1](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.1)
-; [2.4.1.19](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.19)
-; [5.4.99.16](https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.99.16)
-; [2.4.1.352](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.352)
-; [2.4.1.7](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.7)
-; [2.4.1.4](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.4)
-; [3.2.1.133](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.133)
-; [3.2.1.2](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.2)
+[3.2.1.1](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.1); [2.4.1.19](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.19); [5.4.99.16](https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.99.16); [2.4.1.352](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.352); [2.4.1.7](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.7); [2.4.1.4](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.4); [3.2.1.133](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.133); [3.2.1.2](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.2)
 
 **FR2**
 [2.4.1.5](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.5)
 
 **FR4**
-[2.5.1.111](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.111)
-; [2.5.1.123](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.123)
-; [2.5.1.121](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.121)
-; [2.5.1.124](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.124)
-; [2.5.1.125](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.125)
+[2.5.1.111](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.111); [2.5.1.123](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.123); [2.5.1.121](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.121); [2.5.1.124](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.124); [2.5.1.125](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.125)
 
 ---
 

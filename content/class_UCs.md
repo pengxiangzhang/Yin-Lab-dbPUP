@@ -37,12 +37,7 @@ Not applicable for this class.
 
 **UC2**
 
-[2.4.1.227](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.227)
-; [2.4.1.17](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.17)
-; [2.4.1.324](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.324)
-; [2.4.1.63](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.63)
-; [2.4.1.91](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.91)
-; [2.4.1.237](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.237)
+[2.4.1.227](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.227); [2.4.1.17](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.17); [2.4.1.324](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.324); [2.4.1.63](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.63); [2.4.1.91](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.91); [2.4.1.237](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.237)
 
 ---
 

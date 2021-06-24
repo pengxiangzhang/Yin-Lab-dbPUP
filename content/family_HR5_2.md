@@ -82,6 +82,7 @@
 <p><a href="http://www.ebi.ac.uk/interpro/entry/InterPro/IPR000683/"><strong>InterPro</strong></a></p>
 <p>This group of enzymes utilise NADP or NAD, and is known as the GFO/IDH/MOCA family in UniProtKB/Swiss-Prot. GFO is a glucose–fructose oxidoreductase, which converts D-glucose and D-fructose into D-gluconolactone and D-glucitol in the sorbitol-gluconate pathway. MOCA is a rhizopine catabolism protein which may catalyse the NADH-dependent dehydrogenase reaction involved in rhizopine catabolism. Other proteins belonging to this family include Gal80, a negative regulator for the expression of lactose and galactose metabolic genes; and several hypothetical proteins from yeast, Escherichia coli and Bacillus subtilis.</p>
 <p>The oxidoreductase, N-terminal domain is almost always associated with the oxidoreductase, C-terminal domain (see <a href="http://www.ebi.ac.uk/interpro/entry/InterPro/IPR004104/">IPR004104</a>).</p>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>
@@ -178,6 +179,7 @@
 <p><a href="http://www.ebi.ac.uk/interpro/entry/InterPro/IPR000683/"><strong>InterPro</strong></a></p>
 <p>This group of enzymes utilise NADP or NAD, and is known as the GFO/IDH/MOCA family in UniProtKB/Swiss-Prot. GFO is a glucose–fructose oxidoreductase, which converts D-glucose and D-fructose into D-gluconolactone and D-glucitol in the sorbitol-gluconate pathway. MOCA is a rhizopine catabolism protein which may catalyse the NADH-dependent dehydrogenase reaction involved in rhizopine catabolism. Other proteins belonging to this family include Gal80, a negative regulator for the expression of lactose and galactose metabolic genes; and several hypothetical proteins from yeast, Escherichia coli and Bacillus subtilis.</p>
 <p>The oxidoreductase, N-terminal domain is almost always associated with the oxidoreductase, C-terminal domain (see <a href="http://www.ebi.ac.uk/interpro/entry/InterPro/IPR004104/">IPR004104</a>).</p>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>

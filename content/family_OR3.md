@@ -114,6 +114,7 @@
 <p>▹ NADH oxidase</p>
 </li>
 </ol>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>
@@ -260,6 +261,7 @@
 <p>▹ NADH oxidase</p>
 </li>
 </ol>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>
@@ -424,6 +426,7 @@
 <p>▹ NADH oxidase</p>
 </li>
 </ol>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>
@@ -588,6 +591,7 @@
 <p>▹ NADH oxidase</p>
 </li>
 </ol>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>
@@ -752,6 +756,7 @@
 <p>▹ NADH oxidase</p>
 </li>
 </ol>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>
@@ -898,6 +903,7 @@
 <p>▹ NADH oxidase</p>
 </li>
 </ol>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>

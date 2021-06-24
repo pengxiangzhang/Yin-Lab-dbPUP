@@ -84,6 +84,7 @@
 <p>This family includes members that bind FAD. This family includes the flavoprotein subunits from succinate and fumarate dehydrogenase, aspartate oxidase and the alpha subunit of adenylylsulphate reductase.</p>
 <p><a href="http://www.ebi.ac.uk/interpro/entry/InterPro/IPR003953/"><strong>InterPro</strong></a></p>
 <p>This domain is found in proteins that bind FAD, mainly in FAD-dependent oxidoreductase family 2 proteins, such as the flavoprotein subunits from succinate and fumarate dehydrogenase, and aspartate oxidase<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>
@@ -180,6 +181,7 @@
 <p>This family includes members that bind FAD. This family includes the flavoprotein subunits from succinate and fumarate dehydrogenase, aspartate oxidase and the alpha subunit of adenylylsulphate reductase.</p>
 <p><a href="http://www.ebi.ac.uk/interpro/entry/InterPro/IPR003953/"><strong>InterPro</strong></a></p>
 <p>This domain is found in proteins that bind FAD, mainly in FAD-dependent oxidoreductase family 2 proteins, such as the flavoprotein subunits from succinate and fumarate dehydrogenase, and aspartate oxidase<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>
@@ -290,6 +292,7 @@
 <p>This family includes members that bind FAD. This family includes the flavoprotein subunits from succinate and fumarate dehydrogenase, aspartate oxidase and the alpha subunit of adenylylsulphate reductase.</p>
 <p><a href="http://www.ebi.ac.uk/interpro/entry/InterPro/IPR003953/"><strong>InterPro</strong></a></p>
 <p>This domain is found in proteins that bind FAD, mainly in FAD-dependent oxidoreductase family 2 proteins, such as the flavoprotein subunits from succinate and fumarate dehydrogenase, and aspartate oxidase<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>
@@ -386,6 +389,7 @@
 <p>This family includes members that bind FAD. This family includes the flavoprotein subunits from succinate and fumarate dehydrogenase, aspartate oxidase and the alpha subunit of adenylylsulphate reductase.</p>
 <p><a href="http://www.ebi.ac.uk/interpro/entry/InterPro/IPR003953/"><strong>InterPro</strong></a></p>
 <p>This domain is found in proteins that bind FAD, mainly in FAD-dependent oxidoreductase family 2 proteins, such as the flavoprotein subunits from succinate and fumarate dehydrogenase, and aspartate oxidase<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>

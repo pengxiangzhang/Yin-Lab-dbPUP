@@ -94,6 +94,7 @@
 <p>▹C-terminal domain of the transcriptional repressor Rex<sup class="footnote-ref"><a href="#fn10" id="fnref10">[10]</a></sup></p>
 <p>▹Ornithine cyclodeaminase<sup class="footnote-ref"><a href="#fn11" id="fnref11">[11]</a></sup></p>
 <p>▹CoA-binding N-terminal domain of the alpha chain of succinyl-CoA synthetase<sup class="footnote-ref"><a href="#fn12" id="fnref12">[12]</a></sup></p>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>
@@ -242,6 +243,7 @@
 <p>▹C-terminal domain of the transcriptional repressor Rex<sup class="footnote-ref"><a href="#fn10" id="fnref10">[10]</a></sup></p>
 <p>▹Ornithine cyclodeaminase<sup class="footnote-ref"><a href="#fn11" id="fnref11">[11]</a></sup></p>
 <p>▹CoA-binding N-terminal domain of the alpha chain of succinyl-CoA synthetase<sup class="footnote-ref"><a href="#fn12" id="fnref12">[12]</a></sup></p>
+<p><em>Information is taken from Pfam and InterPro web site.</em></p>
 <ul>
 <li><strong>Reaction</strong></li>
 </ul>
