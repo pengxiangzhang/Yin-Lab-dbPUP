@@ -125,6 +125,7 @@
         <table class="table display" id="data-table">
             <thead>
             <tr>
+                <th style="white-space: nowrap">db</th>
                 <th style="white-space: nowrap">Protein Name</th>
                 <th style="white-space: nowrap">Strain</th>
                 <th style="white-space: nowrap">Uniprot</th>
@@ -140,6 +141,7 @@
             <tbody>
             {% for record in records %}
                 <tr>
+                    <td>{{record.db}}</td>
                     <td>{{ record.protein_enzyme }}</td>
                     <td>
                         <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={{ record.web_id }}">{{ record.strain }}</a>
