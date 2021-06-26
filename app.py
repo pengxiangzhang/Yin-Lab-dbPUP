@@ -185,10 +185,11 @@ def characterized():
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
     sub, prod = data_analyzer.substrate_product_split()
+    pfam_dic = data_analyzer.pfam_dic()
 
     description = "Characterization for Database for Polyphenol Utilized Proteins from gut microbiota"
     return render_template("characterized.html", records=records, rows=pdb_row, ec=ec_link, sub=sub, product=prod,
-                           description=description, title=title, name=name)
+                           description=description, title=title, name=name, pfam_dic = pfam_dic)
 
 
 @app.route('/dbpup/swissport/<family_id>', methods=['GET', 'POST'])
