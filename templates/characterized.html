@@ -58,6 +58,7 @@
                 <th style="white-space: nowrap">Family</th>
                 <th style="white-space: nowrap">DOI</th>
                 <th style="white-space: nowrap">Protein Name</th>
+                <th style="white-space: nowrap">pfam</th>
                 <th style="white-space: nowrap">Gene Name</th>
                 <th style="white-space: nowrap">Uniprot</th>
                 <th style="white-space: nowrap">EC</th>
@@ -85,6 +86,12 @@
                     <td><a href="https://doi.org/{{ record.doi }}" rel="noopener noreferrer"
                            target="_blank">{{ record.doi }}</a></td>
                     <td>{{ record.protein_name }}</td>
+                    <td>
+                        {% for pfam in pfam_dic[record.number] %}
+                                <a href={{ pfam[1] }}>
+                                   rel="noopener noreferrer" target="_blank">{{pfam[0]}}</a>
+                        {% endfor %}
+                    </td>
                     <td>{{ record.gene_name }}</td>
                     <td><a href="https://www.uniprot.org/uniprot/{{ record.uniq_id }}" rel="noopener noreferrer"
                            target="_blank">{{ record.uniq_id }}</a></td>

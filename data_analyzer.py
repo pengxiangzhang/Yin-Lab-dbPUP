@@ -75,3 +75,23 @@ class Data_analyzer:
             prod[record.number] = product
 
         return sub, prod
+
+    def pfam_dic(self):
+        pfam_metas = []
+        for record in self.records:
+            pfam_meta = []
+            pfam_info = record.pfam #pfam position
+            pfam_link_info = record.pfam_link #pfam_link position
+
+            pfams = pfam_info.split('; ')
+            pfam_links = pfam_link_info.split(';')
+
+            i = 0
+            while i < len(pfams):
+                pfam_dic = [pfams[i], pfam_links[i]]
+                pfam_meta.append(pfam_dic)
+                i += 1
+            pfam_metas.append(pfam_meta)
+
+        return pfam_metas
+
