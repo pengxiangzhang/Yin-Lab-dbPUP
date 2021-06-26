@@ -1,5 +1,14 @@
 # Hydrolysis Reactions (HRs) Family 3 / Subfamily 2
 
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#tab1" data-toggle="tab">A1S0B1</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content" markdown="1">
+  <div class="tab-pane fade in active" id="tab1" markdown="1">
+
+
 ## Literature Information
 
 | Title    | Characterization and application of an acidophilic and thermostable β-glucosidase from Thermofilum pendens |
@@ -108,3 +117,5 @@ exo-1,3-1,4-glucanase ([3.2.1](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec
 [^3]:Henrissat B, Callebaut I, Fabrega S, et al. Conserved catalytic machinery and the prediction of a common fold for several families of glycosyl hydrolases[J]. Proceedings of the National Academy of Sciences, 1995, 92(15): 7090-7094.
 [^4]:Davies G, Henrissat B. Structures and mechanisms of glycosyl hydrolases[J]. Structure, 1995, 3(9): 853-859.
 
+  </div>
+</div>

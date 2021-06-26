@@ -1,5 +1,14 @@
 # Hydrolysis Reactions (HRs) Family 4 / Subfamily 2
 
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#tab1" data-toggle="tab">I5AX50</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content" markdown="1">
+  <div class="tab-pane fade in active" id="tab1" markdown="1">
+
+
 ## Literature Information
 
 | Title | Identification and functional expression of genes encoding flavonoid *O*‐ and *C*‐glycosidases in intestinal bacteria |
@@ -86,3 +95,6 @@ isomerase each have additional alpha-helical domains involved in tetramer format
 [^3]:Yoshida H, Yamada M, Ohyama Y, et al. The structures of L-rhamnose isomerase from Pseudomonas stutzeri in complexes with L-rhamnose and D-allose provide insights into broad substrate specificity[J]. Journal of molecular biology, 2007, 365(5): 1505-1516.
 [^4]:Meilleur F, Snell E H, Van der Woerd M J, et al. A quasi-Laue neutron crystallographic study of D-xylose isomerase[J]. European Biophysics Journal, 2006, 35(7): 601-609.
 [^5]:Robert-Baudouy J, Portalier R, Stoeber F. Regulation of hexuronate system genes in Escherichia coli K-12: multiple regulation of the uxu operon by exuR and uxuR gene products[J]. Journal of Bacteriology, 1981, 145(1): 211-220.
+
+  </div>
+</div>

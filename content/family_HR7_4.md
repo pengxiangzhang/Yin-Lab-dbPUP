@@ -1,5 +1,14 @@
 # Hydrolysis Reactions (HRs) Family 7 / Subfamily 4
 
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#tab1" data-toggle="tab">Q6RCI8</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content" markdown="1">
+  <div class="tab-pane fade in active" id="tab1" markdown="1">
+
+
 ## Literature Information
 
 | Title    | Two new thermostable α-l-rhamnosidases from a novel thermophilic bacterium |
@@ -83,3 +92,6 @@ The six-hairpin glycoside transferase domain contains up to seven alpha-hairpins
 ## References
 
 [^1]:Zverlov V V, Hertel C, Bronnenmeier K, et al. The thermostable α‐L‐rhamnosidase RamA of Clostridium stercorarium: biochemical characterization and primary structure of a bacterial α‐L‐rhamnoside hydrolase, a new type of inverting glycoside hydrolase[J]. Molecular microbiology, 2000, 35(1): 173-179.
+
+  </div>
+</div>

@@ -1,5 +1,14 @@
 # Hydrolysis Reactions (HRs) Family 8 / Subfamily 1
 
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#tab1" data-toggle="tab">Q715L4</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content" markdown="1">
+  <div class="tab-pane fade in active" id="tab1" markdown="1">
+
+
 ## Literature Information
 
 | Title | Cloning and Expression of a Phloretin Hydrolase Gene from *Eubacterium ramulus* and Characterization of the Recombinant Enzyme |
@@ -83,3 +92,5 @@ This domain is found in 2,4-diacetylphloroglucinol hydrolase PhiG present in Pse
 
 [^1]:He Y X, Huang L, Xue Y, et al. Crystal structure and computational analyses provide insights into the catalytic mechanism of 2, 4-diacetylphloroglucinol hydrolase PhlG from Pseudomonas fluorescens[J]. Journal of Biological Chemistry, 2010, 285(7): 4603-4611.
 
+  </div>
+</div>

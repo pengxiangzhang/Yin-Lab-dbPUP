@@ -1,5 +1,14 @@
 # Hydrolysis Reactions (HRs) Family 5 / Subfamily 1
 
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#tab1" data-toggle="tab">I5AX46</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content" markdown="1">
+  <div class="tab-pane fade in active" id="tab1" markdown="1">
+
+
 ## Literature Information
 
 | Title | Identification and functional expression of genes encoding flavonoid *O*‐ and *C*‐glycosidases in intestinal bacteria |
@@ -79,3 +88,6 @@ The oxidoreductase, N-terminal domain is almost always associated with the oxido
 </figure>
 
 ## References
+
+  </div>
+</div>

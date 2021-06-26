@@ -1,5 +1,14 @@
 # Oxidation/Reduction Reactions (ORs) Family 2
 
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#tab1" data-toggle="tab">Q52028</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content" markdown="1">
+  <div class="tab-pane fade in active" id="tab1" markdown="1">
+
+
 ## Literature Information
 
 | Title    | Epoxide Formation on the Aromatic B Ring of Flavanone by Biphenyl Dioxygenase of Pseudomonas pseudoalcaligenes KF707 |
@@ -102,3 +111,6 @@ Description:
 [^3]:Schneider D, Schmidt C L. Multiple Rieske proteins in prokaryotes: where and why?[J]. Biochimica et Biophysica Acta (BBA)-Bioenergetics, 2005, 1710(1): 1-12.
 [^4]:Iwata S, Saynovits M, Link T A, et al. Structure of a water soluble fragment of the ‘Rieske’iron–sulfur protein of the bovine heart mitochondrial cytochrome bc1 complex determined by MAD phasing at 1.5 Å resolution[J]. Structure, 1996, 4(5): 567-579.
 [^5]:Neidle E L, Hartnett C, Ornston L N, et al. Nucleotide sequences of the Acinetobacter calcoaceticus benABC genes for benzoate 1, 2-dioxygenase reveal evolutionary relationships among multicomponent oxygenases[J]. Journal of Bacteriology, 1991, 173(17): 5385-5395.
+
+  </div>
+</div>

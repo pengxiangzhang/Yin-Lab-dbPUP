@@ -74,7 +74,7 @@
             .size([height, width]);
 
         var svg = d3.select("#treeDiagram").append("svg")
-            .attr("width", "90%")//width + margin.right + margin.left)
+            .attr("width", "98%")//width + margin.right + margin.left)
             .attr("height", "1200")//height + margin.top + margin.bottom)
             .call(d3.behavior.zoom().on("zoom", function () {
                 svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")

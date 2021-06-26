@@ -1,5 +1,13 @@
 # Functional Group Transfer Reactions (FRs) Family 1 / Subfamily 2
 
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#tab1" data-toggle="tab">OR1</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content" markdown="1">
+  <div class="tab-pane fade in active" id="tab1" markdown="1">
+
 ## Literature Information
 
 | Title    | Characteristics of transglycosylation reaction of cyclodextrin glucanotransferase in the heterogeneous enzyme reaction system using extrusion starch as a glucosyl donor |
@@ -85,3 +93,6 @@ This entry represents the catalytic domain found in several protein members of t
 [^1]:Henrissat B, Callebaut I, Fabrega S, et al. Conserved catalytic machinery and the prediction of a common fold for several families of glycosyl hydrolases[J]. Proceedings of the National Academy of Sciences, 1995, 92(15): 7090-7094.
 [^2]:Davies G, Henrissat B. Structures and mechanisms of glycosyl hydrolases[J]. Structure, 1995, 3(9): 853-859.
 [^3]:Abe A, Yoshida H, Tonozuka T, et al. Complexes of Thermoactinomyces vulgaris R‐47 α‐amylase 1 and pullulan model oligossacharides provide new insight into the mechanism for recognizing substrates with α‐(1, 6) glycosidic linkages[J]. The FEBS journal, 2005, 272(23): 6145-6153.
+
+  </div>
+</div>

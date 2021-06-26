@@ -1,5 +1,14 @@
 # Functional Group Transfer Reactions (FRs) Family 3 / Subfamily 1
 
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#tab1" data-toggle="tab">B8FRJ0</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content" markdown="1">
+  <div class="tab-pane fade in active" id="tab1" markdown="1">
+
+
 ## Literature Information
 
 | Title    | Enzymatic Sulfation of Phenolic Hydroxy Groups of Various Plant Metabolites by an Arylsulfotransferase |
@@ -114,3 +123,5 @@ phenolic sulphate esters to a phenolic acceptor substrate[^1].
 
 [^1]:Baek M C, Kim S K, Kim D H, et al. Cloning and sequencing of the Klebsiella K‐36 astA gene, encoding an arylsulfate sulfotransferase[J]. Microbiology and immunology, 1996, 40(8): 531-537.
 
+  </div>
+</div>

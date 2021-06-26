@@ -1,5 +1,14 @@
 # Oxidation/Reduction Reactions (ORs) Family 1
 
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#tab1" data-toggle="tab">B1XDG0</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content" markdown="1">
+  <div class="tab-pane fade in active" id="tab1" markdown="1">
+
+
 ## Literature Information
 
 | Title    | Discovery of the curcumin metabolic pathway involving a unique enzyme in an intestinal microorganism |
@@ -120,4 +129,8 @@ Description:
 [^4]: Jörnvall H, Persson B, Du Bois G C, et al. ζ‐Crystallin versus other members of the alcohol dehydrogenase super‐family Variability as a functional characteristic[J]. FEBS letters, 1993, 322(3): 240-244.
 [^5]: Pauly T A, Ekstrom J L, Beebe D A, et al. X-ray crystallographic and kinetic studies of human sorbitol dehydrogenase[J]. Structure, 2003, 11(9): 1071-1085.
 [^6]: Rubach J K, Plapp B V. Amino acid residues in the nicotinamide binding site contribute to catalysis by horse liver alcohol dehydrogenase[J]. Biochemistry, 2003, 42(10): 2907-2915.
-[^7]: Crystal structure of Escherichia coli QOR quinone oxidoreductase complexed with NADPH. Thorn JM, Barton JD, Dixon NE, Ollis DL, Edwards KJ. *J. Mol. Biol.* 249, 785-99, (1995
+[^7]: Crystal structure of Escherichia coli QOR quinone oxidoreductase complexed with NADPH. Thorn JM, Barton JD, Dixon NE, Ollis DL, Edwards KJ. *J. Mol. Biol.* 249, 785-99, (1995)
+
+
+  </div>
+</div>

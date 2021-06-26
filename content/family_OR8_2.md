@@ -1,5 +1,14 @@
 # Oxidation/Reduction Reactions (ORs) Family 8 / Subfamily 2
 
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#tab1" data-toggle="tab">Q2EYY8</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content" markdown="1">
+  <div class="tab-pane fade in active" id="tab1" markdown="1">
+
+
 ## Literature Information
 
 | Title | A new monocupin quercetinase of *Streptomyces* sp. FLA: identification and heterologous expression of the *queD* gene and activity of the recombinant enzyme towards different flavonols |
@@ -90,8 +99,5 @@ This family represents the conserved barrel domain of the cupin superfamily[^1] 
 
 [^1]:Dunwell J M. Cupins: a new superfamily of functionally diverse proteins that include germins and plant storage proteins[J]. Biotechnology and Genetic Engineering Reviews, 1998, 15(1): 1-32.
 
-
-
-
-
-
+  </div>
+</div>

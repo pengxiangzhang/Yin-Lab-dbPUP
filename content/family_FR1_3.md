@@ -1,5 +1,14 @@
 # Functional Group Transfer Reactions (FRs) Family 1 / Subfamily 3
 
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#tab1" data-toggle="tab">OR1</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content" markdown="1">
+  <div class="tab-pane fade in active" id="tab1" markdown="1">
+
+
 ## Literature Information
 
 | Title    | Biotransformation of phloretin by amylosucrase yields three novel dihydrochalcone glucosides |
@@ -64,4 +73,5 @@ This entry represents the catalytic domain found in several protein members of t
 [^2]:Davies G, Henrissat B. Structures and mechanisms of glycosyl hydrolases[J]. Structure, 1995, 3(9): 853-859.
 [^3]:Abe A, Yoshida H, Tonozuka T, et al. Complexes of Thermoactinomyces vulgaris R‐47 α‐amylase 1 and pullulan modeloligossacharides provide new insight into the mechanism for recognizing substrates with α‐(1, 6) glycosidic linkages[J]. The FEBS journal, 2005, 272(23): 6145-6153.
 
-
+  </div>
+</div>

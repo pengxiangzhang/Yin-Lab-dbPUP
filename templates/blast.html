@@ -34,6 +34,25 @@
                     <option value="x">blastx - (DNA vs protein)</option>
                 </select>
                 <br>
+                <lable style="color:blue"><b>Database</b></lable>
+                <select id="db" name="db">
+                    <option value="no">--Please choose an option--</option>
+                    <option value="a">All</option>
+                    <option value="c">characterzied</option>
+                </select>
+                <br>
+                <lable style="color:blue"><b>E-value</b></lable>
+                <select id="evalue" name="evalue">
+                    <option value="0.0001">0.0001</option>
+                    <option value="0.001">0.001</option>
+                    <option value="0.01">0.01</option>
+                    <option value="0.1">0.1</option>
+                    <option value="1">1</option>
+                    <option value="10">10</option>
+                    <option value="100">100</option>
+                    <option value="1000">1000</option>
+                </select>
+                <br>
                 <div style="text-align:left;">
                     <label for="subject" style="color:blue"> <b> I. Paste the sequence in the textarea. </b> </label>
                     <br>
@@ -63,6 +82,11 @@
                     var select = document.getElementById("job").value;
                     if (select == "no") {
                         alert("You must select a program you want to run")
+                        return false
+                    }
+                var select = document.getElementById("db").value;
+                    if (select == "no") {
+                        alert("You must select a database you want to run")
                         return false
                     }
                     document.getElementById("spinner").style.display = "inline";

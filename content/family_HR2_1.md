@@ -1,5 +1,14 @@
 # Hydrolysis Reactions (HRs) Family 2 / Subfamily 1
 
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#tab1" data-toggle="tab">Q45VU2</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content" markdown="1">
+  <div class="tab-pane fade in active" id="tab1" markdown="1">
+ 
+
 ## Literature Information
 
 | Title | Characterization of a Novel Polyphenol-Specific Oligoxyloside Transfer Reaction by a Family 11 Xylanase from *Bacillus* sp. KT12 |
@@ -80,3 +89,6 @@ The GH11 domain folds into a jelly-roll shape likened to a partially closed righ
 [^2]:Gilkes N R, Henrissat B, Kilburn D G, et al. Domains in microbial beta-1, 4-glycanases: sequence conservation, function, and enzyme families[J]. Microbiology and Molecular Biology Reviews, 1991, 55(2): 303-315.
 [^3]:Henrissat B, Claeyssens M, Tomme P, et al. Cellulase families revealed by hydrophobic cluster analysi[J]. Gene, 1989, 81(1): 83-95.
 [^4]:Henrissat B. A classification of glycosyl hydrolases based on amino acid sequence similarities[J]. Biochemical journal, 1991, 280(2): 309-316.
+
+  </div>
+</div>

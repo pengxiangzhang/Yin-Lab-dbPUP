@@ -1,5 +1,14 @@
 # Functional Group Transfer Reactions (FRs) Family 1 / Subfamily 1
 
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#tab1" data-toggle="tab">A0ZZH6</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content" markdown="1">
+  <div class="tab-pane fade in active" id="tab1" markdown="1">
+
+
 ## Literature Information
 
 | Title    | Ionic liquids as cosolvents for glycosylation by sucrose phosphorylase: balancing acceptor solubility and enzyme stability |
@@ -91,3 +100,5 @@ This entry represents the catalytic domain found in several protein members of t
 [^3]:Abe A, Yoshida H, Tonozuka T, et al. Complexes of Thermoactinomyces vulgaris R‐47 α‐amylase 1 and pullulan modeloligossacharides provide new insight into the mechanism for recognizing substrates with α‐(1, 6) glycosidic linkages[J]. The FEBS journal, 2005, 272(23): 6145-6153.
 
 
+  </div>
+</div>

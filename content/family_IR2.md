@@ -1,5 +1,14 @@
 # Isomerization Reactions (IRs) Family 2
 
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#tab1" data-toggle="tab">V9P0A9</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content" markdown="1">
+  <div class="tab-pane fade in active" id="tab1" markdown="1">
+
+
 ## Literature Information
 
 | Title    | First bacterial chalcone isomerase isolated from Eubacterium ramulus |
@@ -75,3 +84,7 @@ This is the N-terminal domain of chalcone isomerase present in Eubacterium ramul
 ## References
 
 [^1]:Herles C, Braune A, Blaut M. First bacterial chalcone isomerase isolated from Eubacterium ramulus[J]. Archives of microbiology, 2004, 181(6): 428-434.
+
+
+  </div>
+</div>

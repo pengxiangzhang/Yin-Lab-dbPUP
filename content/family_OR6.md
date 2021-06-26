@@ -1,5 +1,14 @@
 # Oxidation/Reduction Reactions (ORs) Family 6
 
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#tab1" data-toggle="tab">Q2EYY8</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content" markdown="1">
+  <div class="tab-pane fade in active" id="tab1" markdown="1">
+
+
 ## Literature Information
 
 | Title    | Production of bioactive hydroxyflavones by using monooxygenase from Saccharothrix espanaensis |
@@ -85,4 +94,5 @@ This domain is found in the N terminus of HpaB, which encodes part of the 4-hydr
 [^2]:Stintzi A, Johnson Z, Stonehouse M, et al. The pvc gene cluster ofPseudomonas aeruginosa: role in synthesis of the pyoverdine chromophore and regulation by PtxR and PvdS[J]. Journal of bacteriology, 1999, 181(13): 4118-4124.
 [^3]:SCHERF U, BUCKEL W. Purification and properties of an iron‐sulfur and FAD‐containing 4‐hydroxybutyryl‐CoA dehydratase/vinylacetyl‐CoA delta 3‐delta 2‐isomerase from Clostridium aminobutyricum[J]. European journal of biochemistry, 1993, 215(2): 421-429.
 
-
+  </div>
+</div>

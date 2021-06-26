@@ -27,7 +27,7 @@
         $(document).ready(function () {
             $('#data-table').DataTable({
                 lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
-                dom: 'Bfrtip',
+                dom: 'PBfrtip',
                 "initComplete": function () {
                     $("#data-table").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
                 },
@@ -39,7 +39,27 @@
                     targets: [-1],
                     searchable: true,
                     visible: false  
-                }],
+                },
+            {
+                searchPanes: {
+                    show: false
+                },
+                targets: [0, 1, 2,3,4,5,6,7,9]
+            },{
+            searchPanes: {
+                    show: true,
+                    options: [
+                        {
+                            label: 'Bacteria',
+                            value: function(rowData, rowIdx) {
+                                return rowData[8] === 'Bacteria';
+                            },
+                        }
+                    ],
+                },
+                targets: [8]
+            }
+                ],
                 buttons: [
                     'pageLength',
                     {
@@ -125,7 +145,6 @@
         <table class="table display" id="data-table">
             <thead>
             <tr>
-                <th style="white-space: nowrap">db</th>
                 <th style="white-space: nowrap">Protein Name</th>
                 <th style="white-space: nowrap">Strain</th>
                 <th style="white-space: nowrap">Uniprot</th>
@@ -141,7 +160,6 @@
             <tbody>
             {% for record in records %}
                 <tr>
-                    <td>{{record.db}}</td>
                     <td>{{ record.protein_enzyme }}</td>
                     <td>
                         <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={{ record.web_id }}">{{ record.strain }}</a>

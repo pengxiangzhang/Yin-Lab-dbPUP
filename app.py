@@ -10,8 +10,8 @@ import pandas as pd
 # Application configurations
 app = Flask(__name__, static_url_path='/dbpup/static')
 # cache = Cache(app, config={'CACHE_TYPE': 'FileSystemCache', 'CACHE_DIR': 'cache', 'CACHE_IGNORE_ERRORS': 'True',
-                        #   'CACHE_THRESHOLD': '500'})
-minify(app=app, html=True, js=True, cssless=True)
+#                           'CACHE_THRESHOLD': '500'})
+# minify(app=app, html=True, js=True, cssless=True)
 
 # read configurations
 with open('config.json') as json_file:
@@ -461,6 +461,8 @@ def blast():
         sequence = request.form.get('id_sequences')
         file = request.form.get('id_file_text')
         function = request.form.get('job')
+        db = request.form.get('db')
+        evalue = request.form.get('evalue')
         captcha_response = request.form['h-captcha-response']
         if sequence == "" and file == "":
             flash('You need to at least have one input.')
@@ -470,7 +472,7 @@ def blast():
             flash('You can only have one input.')
             return render_template('blast.html', content=to_md(c), name=name, title=title,
                                    description=description, site_key=app.config['public_key'])
-        elif function == "no":
+        elif function not in ["p","x"]:
             flash('You must select a program to run.')
             return render_template('blast.html', content=to_md(c), name=name, title=title,
                                    description=description, site_key=app.config['public_key'])
@@ -478,6 +480,15 @@ def blast():
             flash('Please complete the captcha.')
             return render_template('blast.html', content=to_md(c), name=name, title=title, description=description,
                                    site_key=app.config['public_key'])
+        elif db not in ["a","c"]:
+            flash('You must select a database to run.')
+            return render_template('blast.html', content=to_md(c), name=name, title=title,
+                                    description=description, site_key=app.config['public_key'])
+                                    
+        elif evalue not in ["0.0001","0.001","0.01","0.1","1","10","100","1000"]:
+            flash('You must select a vaild evalue.')
+            return render_template('blast.html', content=to_md(c), name=name, title=title,
+                                    description=description, site_key=app.config['public_key'])
         else:
             if sequence != "" and file == "":
                 query = sequence
@@ -485,11 +496,11 @@ def blast():
                 query = file.replace('\\n', '\n')
             hmmrecord = 0
             if function == 'p':
-                records = blastp(query)
+                records = blastp(query, db, evalue)
                 hmmrecord = hmmscan(query)
                 head = "Result of Blastp"
             elif function == 'x':
-                records = blastx(query)
+                records = blastx(query, db, evalue)
                 head = "Result of Blastx"
             if records == 3:
                 abort(410)
@@ -554,12 +565,15 @@ def is_family_char(family_id):
 app.jinja_env.globals.update(is_family_char=is_family_char)
 
 
-def blastp(query):
+def blastp(query, db, evalue):
     try:
         uuidname = str(uuid.uuid1())
         with open('tmp/' + uuidname + '.fsa', 'w') as f:
             f.writelines(query)
-        command = "./blast/blastp -db pup_blastp/PUP_db -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue 1e-5 -num_threads 2"
+        if db == "a":
+            command = "./blast/blastp -db blastdb/pup_blastp/PUP_db -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue "+evalue+" -num_threads 2"
+        if db == "c":
+            command = "./blast/blastp -db blastdb/characterzied/characterzied -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue "+evalue+" -num_threads 2"
         os.system(command)
 
         with open('tmp/' + uuidname + '.blast', 'r') as f:
@@ -664,12 +678,15 @@ def hmmscan(query):
         return 3
 
 
-def blastx(query):
+def blastx(query, db,evalue):
     try:
         uuidname = str(uuid.uuid1())
         with open('tmp/' + uuidname + '.fsa', 'w') as f:
             f.writelines(query)
-        command = "./blast/blastp -db pup_blastp/PUP_db -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue 1e-5 -num_threads 2"
+        if db == "a":
+            command = "./blast/blastp -db blastdb/pup_blastp/PUP_db -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue "+evalue+" -num_threads 2"
+        if db == "c":
+            command = "./blast/blastp -db blastdb/characterzied/characterzied -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue "+evalue+" -num_threads 2"
         os.system(command)
 
         with open('tmp/' + uuidname + '.blast', 'r') as f:
@@ -826,6 +843,8 @@ class ClusRecord(dtbs.Model):
     phylum = dtbs.Column(dtbs.VARCHAR(50))
     continent = dtbs.Column(dtbs.VARCHAR(50))
     seq = dtbs.Column(dtbs.VARCHAR(5500))
+    Pfam_link = dtbs.Column(dtbs.VARCHAR(255))
+    mgnify = dtbs.Column(dtbs.VARCHAR(255))
 
 
 if __name__ == "__main__":

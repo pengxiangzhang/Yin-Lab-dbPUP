@@ -8,11 +8,14 @@
 
         </div>
     </div>
-    {% if not subfamily %}
-        <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('tree', family_id=family_id) }}">View phylogenetic
+    {% if subfamily %}
+        <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('trembl', family_id=family_id) }}">View TrEMBL</a>
+    {% elif family_id in ["HR6","HR8","IR2","UC1"]%}
+    <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('tree', family_id=family_id) }}">View phylogenetic
             tree</a>
     {% else %}
-        <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('trembl', family_id=family_id) }}">View TrEMBL</a>
+    <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('tree', family_id=family_id) }}">View phylogenetic
+            tree</a>
     {% endif %}
 
     <div class="abstractOfPage">
@@ -126,7 +129,6 @@
             <tr>
                 <th style="white-space: nowrap">Protein Name</th>
                 <th style="white-space: nowrap">Strain</th>
-                <th style="white-space: nowrap">db</th>
                 <th style="white-space: nowrap">Uniprot</th>
                 <th style="white-space: nowrap">PDB</th>
                 <th style="white-space: nowrap">Family</th>
@@ -144,7 +146,6 @@
                     <td>
                         <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={{ record.web_id }}">{{ record.strain }}</a>
                     </td>
-                    <td>{{record.db}}</td>
                     <td><a href="https://www.uniprot.org/uniprot/{{ record.uniq_id }}">{{ record.uniq_id }}</a></td>
 
                     {% if record.pdb  == '-1' %}

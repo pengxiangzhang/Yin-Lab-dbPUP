@@ -1,5 +1,14 @@
 # Hydrolysis Reactions (HRs) Family 3 / Subfamily 3
 
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#tab1" data-toggle="tab">A0A072MRT2</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content" markdown="1">
+  <div class="tab-pane fade in active" id="tab1" markdown="1">
+
+
 ## Literature Information
 
 | Title | Characterization of four β-glucosidases acting on isoflavone-glycosides from *Bifidobacterium pseudocatenulatum* IPLA 36007 |
@@ -107,3 +116,5 @@ Glycoside hydrolase family 3 [GH3](http://www.cazy.org/fam/GH3.html) comprises e
 [^3]:Henrissat B, Callebaut I, Fabrega S, et al. Conserved catalytic machinery and the prediction of a common fold for several families of glycosyl hydrolases[J]. Proceedings of the National Academy of Sciences, 1995, 92(15): 7090-7094.
 [^4]:Davies G, Henrissat B. Structures and mechanisms of glycosyl hydrolases[J]. Structure, 1995, 3(9): 853-859.
 
+  </div>
+</div>

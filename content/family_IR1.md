@@ -1,5 +1,14 @@
 # Isomerization Reactions (IRs) Family 1
 
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#tab1" data-toggle="tab">I7H868</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content" markdown="1">
+  <div class="tab-pane fade in active" id="tab1" markdown="1">
+
+
 ## Literature Information
 
 | Title | Identification of a Novel Dihydrodaidzein Racemase Essential for Biosynthesis of Equol from Daidzein in *Lactococcus* sp. Strain 20-92 |
@@ -69,3 +78,6 @@ No InterPro results.
 </figure>
 
 ## References
+
+  </div>
+</div>

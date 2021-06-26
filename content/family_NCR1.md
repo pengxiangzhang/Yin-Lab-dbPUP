@@ -1,5 +1,14 @@
 # Non-hydrolytic Cleaving Reactions (NCRs) Family 1
 
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#tab1" data-toggle="tab">Q60FX6</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content" markdown="1">
+  <div class="tab-pane fade in active" id="tab1" markdown="1">
+
+
 ## Literature Information
 
 | Title | Enzymatic carboxylation of hydroxystilbenes by the γ-resorcylic acid decarboxylase from *Rhizobium radiobacter* WU-0108 under reverse reaction conditions |
@@ -75,3 +84,6 @@ deacetylases ([3.5.1.25](http://www.ebi.ac.uk/intenz/query?cmd=SearchEC&ec=3.5.1
 [^1]:Holm L, Sander C. An evolutionary treasure: unification of a broad set of amidohydrolases related to urease[J]. Proteins: Structure, Function, and Bioinformatics, 1997, 28(1): 72-82.
 [^2]:Nygaard P, Duckert P, Saxild H H. Role of adenine deaminase in purine salvage and nitrogen metabolism and characterization of the ade gene in Bacillus subtilis[J]. Journal of Bacteriology, 1996, 178(3): 846-853.
 [^3]:Jabri E, Carr M B, Hausinger R P, et al. The crystal structure of urease from Klebsiella aerogenes[J]. Science, 1995, 268(5213): 998-1004.
+
+  </div>
+</div>
