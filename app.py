@@ -503,9 +503,13 @@ def blast():
                 records = blastx(query, db, evalue)
                 head = "Result of Blastx"
             if records == 3:
-                abort(410)
+                flash('Your input does not match any record in our database. Please check your input exist and make sure you are using the correct format. You can contact us if the problem persists.')
+                return render_template('blast.html', content=to_md(c), name=name, title=title,
+                                    description=description, site_key=app.config['public_key'])
             if hmmrecord == 3:
-                abort(410)
+                flash('Your input does not match any record in our database. Please check your input exist and make sure you are using the correct format. You can contact us if the problem persists.')
+                return render_template('blast.html', content=to_md(c), name=name, title=title,
+                                    description=description, site_key=app.config['public_key'])
             if hmmrecord == "":
                 hmmrecord = "Your input does not match any record in our database. Please check your input exist and make sure you are using the correct format. You can contact us if the problem persists."
             description = ""
@@ -768,6 +772,7 @@ class CharRecord(dtbs.Model):
     number = dtbs.Column(dtbs.VARCHAR(5))
     strain = dtbs.Column(dtbs.VARCHAR(150))
     protein_name = dtbs.Column(dtbs.VARCHAR(150))
+    pfam = dtbs.Column(dtbs.VARCHAR(100))
     gene_name = dtbs.Column(dtbs.VARCHAR(30))
     uniq_id = dtbs.Column(dtbs.VARCHAR(30), primary_key=True)
     ec = dtbs.Column(dtbs.VARCHAR(50))
@@ -784,6 +789,7 @@ class CharRecord(dtbs.Model):
     type = dtbs.Column(dtbs.VARCHAR(10))
     pubchem_s = dtbs.Column(dtbs.VARCHAR(300))
     pubchem_p = dtbs.Column(dtbs.VARCHAR(2000))
+    pfam_link = dtbs.Column(dtbs.VARCHAR(500))
 
 
 class SwiRecord(dtbs.Model):
@@ -800,6 +806,7 @@ class SwiRecord(dtbs.Model):
     type = dtbs.Column(dtbs.VARCHAR(20))
     web_id = dtbs.Column(dtbs.VARCHAR(500))
     lineage = dtbs.Column(dtbs.VARCHAR(500))
+    number_pdb = dtbs.Column(dtbs.Integer)
 
 
 class TreRecord(dtbs.Model):
@@ -816,6 +823,7 @@ class TreRecord(dtbs.Model):
     type = dtbs.Column(dtbs.VARCHAR(20))
     web_id = dtbs.Column(dtbs.VARCHAR(500))
     lineage = dtbs.Column(dtbs.VARCHAR(500))
+    number_pdb = dtbs.Column(dtbs.Integer)
 
 
 class UhgpRecord(dtbs.Model):

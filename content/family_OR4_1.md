@@ -103,7 +103,6 @@
 </div>
 </figure>
 <h2>References</h2>
-<hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Mittl P R E, Schulz G E. Structure of glutathione reductase from Escherichia coli at 1.86 Å resolution: comparison with the enzyme from human erythrocytes[J]. Protein Science, 1994, 3(5): 799-809. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
@@ -214,7 +213,6 @@
 </div>
 </figure>
 <h2>References</h2>
-<hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Mittl P R E, Schulz G E. Structure of glutathione reductase from Escherichia coli at 1.86 Å resolution: comparison with the enzyme from human erythrocytes[J]. Protein Science, 1994, 3(5): 799-809. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
@@ -311,7 +309,6 @@
 </div>
 </figure>
 <h2>References</h2>
-<hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Mittl P R E, Schulz G E. Structure of glutathione reductase from Escherichia coli at 1.86 Å resolution: comparison with the enzyme from human erythrocytes[J]. Protein Science, 1994, 3(5): 799-809. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
@@ -409,7 +406,6 @@
 </div>
 </figure>
 <h2>References</h2>
-<hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Mittl P R E, Schulz G E. Structure of glutathione reductase from Escherichia coli at 1.86 Å resolution: comparison with the enzyme from human erythrocytes[J]. Protein Science, 1994, 3(5): 799-809. <a href="#fnref1" class="footnote-backref">↩︎</a></p>

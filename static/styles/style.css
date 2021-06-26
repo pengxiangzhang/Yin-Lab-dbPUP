@@ -82,6 +82,9 @@ html {
 	-webkit-overflow-scrolling: touch;
 	text-align: justify
 }
+.footnotes-sep{
+    display: none;
+}
 
 &::-webkit-scrollbar {
 	display: none

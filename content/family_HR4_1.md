@@ -113,7 +113,6 @@
 </div>
 </figure>
 <h2>References</h2>
-<hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Fry J, Wood M, Poole P S. Investigation of myo-inositol catabolism in Rhizobium leguminosarum bv. viciae and its effect on nodulation competitiveness[J]. Molecular plant-microbe interactions, 2001, 14(8): 1016-1025. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
@@ -230,7 +229,6 @@
 </div>
 </figure>
 <h2>References</h2>
-<hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Fry J, Wood M, Poole P S. Investigation of myo-inositol catabolism in Rhizobium leguminosarum bv. viciae and its effect on nodulation competitiveness[J]. Molecular plant-microbe interactions, 2001, 14(8): 1016-1025. <a href="#fnref1" class="footnote-backref">↩︎</a></p>

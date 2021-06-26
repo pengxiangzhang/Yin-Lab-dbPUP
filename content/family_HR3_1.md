@@ -136,7 +136,6 @@
 </div>
 </figure>
 <h2>References</h2>
-<hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Varghese J N, Hrmova M, Fincher G B. Three-dimensional structure of a barley β-D-glucan exohydrolase, a family 3 glycosyl hydrolase[J]. Structure, 1999, 7(2): 179-190. <a href="#fnref1" class="footnote-backref">↩︎</a> <a href="#fnref1:1" class="footnote-backref">↩︎</a> <a href="#fnref1:2" class="footnote-backref">↩︎</a> <a href="#fnref1:3" class="footnote-backref">↩︎</a></p>
@@ -273,7 +272,6 @@
 </div>
 </figure>
 <h2>References</h2>
-<hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Varghese J N, Hrmova M, Fincher G B. Three-dimensional structure of a barley β-D-glucan exohydrolase, a family 3 glycosyl hydrolase[J]. Structure, 1999, 7(2): 179-190. <a href="#fnref1" class="footnote-backref">↩︎</a> <a href="#fnref1:1" class="footnote-backref">↩︎</a> <a href="#fnref1:2" class="footnote-backref">↩︎</a> <a href="#fnref1:3" class="footnote-backref">↩︎</a></p>

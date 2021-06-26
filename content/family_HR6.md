@@ -112,8 +112,7 @@
   </div>
 </div>
 </figure>
-
-
+<h2>References</h2>
   </div>
   <div class="tab-pane fade" id="tab2" markdown="1">
 
@@ -214,7 +213,6 @@
   </div>
 </div>
 </figure>
-
-
+<h2>References</h2>
   </div>
 </div>

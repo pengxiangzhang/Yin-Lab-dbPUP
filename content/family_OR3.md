@@ -133,7 +133,6 @@
 </div>
 </figure>
 <h2>References</h2>
-<hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Mande S S, Sarfaty S, Allen M D, et al. Protein–protein interactions in the pyruvate dehydrogenase multienzyme complex: dihydrolipoamide dehydrogenase complexed with the binding domain of dihydrolipoamide acetyltransferase[J]. Structure, 1996, 4(3): 277-286. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
@@ -298,7 +297,6 @@
 </div>
 </figure>
 <h2>References</h2>
-<hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Mande S S, Sarfaty S, Allen M D, et al. Protein–protein interactions in the pyruvate dehydrogenase multienzyme complex: dihydrolipoamide dehydrogenase complexed with the binding domain of dihydrolipoamide acetyltransferase[J]. Structure, 1996, 4(3): 277-286. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
@@ -463,7 +461,6 @@
 </div>
 </figure>
 <h2>References</h2>
-<hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Mande S S, Sarfaty S, Allen M D, et al. Protein–protein interactions in the pyruvate dehydrogenase multienzyme complex: dihydrolipoamide dehydrogenase complexed with the binding domain of dihydrolipoamide acetyltransferase[J]. Structure, 1996, 4(3): 277-286. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
@@ -628,7 +625,6 @@
 </div>
 </figure>
 <h2>References</h2>
-<hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Mande S S, Sarfaty S, Allen M D, et al. Protein–protein interactions in the pyruvate dehydrogenase multienzyme complex: dihydrolipoamide dehydrogenase complexed with the binding domain of dihydrolipoamide acetyltransferase[J]. Structure, 1996, 4(3): 277-286. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
@@ -775,7 +771,6 @@
 </div>
 </figure>
 <h2>References</h2>
-<hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Mande S S, Sarfaty S, Allen M D, et al. Protein–protein interactions in the pyruvate dehydrogenase multienzyme complex: dihydrolipoamide dehydrogenase complexed with the binding domain of dihydrolipoamide acetyltransferase[J]. Structure, 1996, 4(3): 277-286. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
@@ -940,7 +935,6 @@
 </div>
 </figure>
 <h2>References</h2>
-<hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Mande S S, Sarfaty S, Allen M D, et al. Protein–protein interactions in the pyruvate dehydrogenase multienzyme complex: dihydrolipoamide dehydrogenase complexed with the binding domain of dihydrolipoamide acetyltransferase[J]. Structure, 1996, 4(3): 277-286. <a href="#fnref1" class="footnote-backref">↩︎</a></p>

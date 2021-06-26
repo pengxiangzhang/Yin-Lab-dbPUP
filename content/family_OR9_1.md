@@ -131,7 +131,6 @@
 </div>
 </figure>
 <h2>References</h2>
-<hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Gibbons B J, Hurley T D. Structure of three class I human alcohol dehydrogenases complexed with isoenzyme specific formamide inhibitors[J]. Biochemistry, 2004, 43(39): 12555-12562. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
@@ -280,7 +279,6 @@
 </div>
 </figure>
 <h2>References</h2>
-<hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Gibbons B J, Hurley T D. Structure of three class I human alcohol dehydrogenases complexed with isoenzyme specific formamide inhibitors[J]. Biochemistry, 2004, 43(39): 12555-12562. <a href="#fnref1" class="footnote-backref">↩︎</a></p>

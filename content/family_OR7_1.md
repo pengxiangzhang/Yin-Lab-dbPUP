@@ -120,7 +120,6 @@
 </div>
 </figure>
 <h2>References</h2>
-<hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Deller S, Sollner S, Trenker-El-Toukhy R, et al. Characterization of a thermostable NADPH: FMN oxidoreductase from the mesophilic bacterium Bacillus subtilis[J]. Biochemistry, 2006, 45(23): 7083-7091. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
@@ -244,7 +243,6 @@
 </div>
 </figure>
 <h2>References</h2>
-<hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Deller S, Sollner S, Trenker-El-Toukhy R, et al. Characterization of a thermostable NADPH: FMN oxidoreductase from the mesophilic bacterium Bacillus subtilis[J]. Biochemistry, 2006, 45(23): 7083-7091. <a href="#fnref1" class="footnote-backref">↩︎</a></p>

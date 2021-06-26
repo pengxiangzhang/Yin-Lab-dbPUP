@@ -20,11 +20,16 @@
             <form action="{{ url_for('blast') }}" id="blastx-form" method="POST" name="blastx-form">
                 {% with messages = get_flashed_messages() %}
                     {% if messages %}
-                        <ul class=flashes style="color:red;">
+                        
                             {% for message in messages %}
-                                <li>{{ message }}</li>
+                            <script>
+                            Swal.fire({
+                              icon: 'error',
+                              title: 'Oops...',
+                              text: '{{message}}',
+                            })
+                            </script>
                             {% endfor %}
-                        </ul>
                     {% endif %}
                 {% endwith %}
                 <lable style="color:blue"><b>Program</b></lable>
@@ -73,23 +78,24 @@
                 <br>
                 <div class="h-captcha" data-sitekey="{{ site_key }}" data-theme="light"></div>
                 <a class="btn btn-primary"
-                   onclick="if(confirm('Please notice that blast may take upto 2 minutes to run.\nPlease be patient and do not refresh the page.')){document.getElementById('id_file').value = '';program(); document.getElementById('blastx-form').submit();}">Run
-                    Blast</a>
+                   onclick="fire_run();">Run Blast</a>
             </form>
 
             <script type="text/javascript">
-                function program() {
-                    var select = document.getElementById("job").value;
-                    if (select == "no") {
-                        alert("You must select a program you want to run")
-                        return false
-                    }
-                var select = document.getElementById("db").value;
-                    if (select == "no") {
-                        alert("You must select a database you want to run")
-                        return false
-                    }
-                    document.getElementById("spinner").style.display = "inline";
+                function fire_run(){
+                    Swal.fire({
+                      title: '<strong>Please notice that blast may take upto 2 minutes to run.</strong>',
+                      icon: 'info',
+                      html:
+                        'Please be patient and do not refresh the page',
+                      showCancelButton: true,
+                      confirmButtonText: `Ok`,
+                    }).then((result) => {
+                      if (result.isConfirmed) {
+                         document.getElementById('id_file').value = '';
+                         document.getElementById('blastx-form').submit();
+                      }
+                    })
                 }
 
                 function validateFasta(files) {

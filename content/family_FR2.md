@@ -89,7 +89,6 @@
 </ul>
 <p><a href="https://pubchem.ncbi.nlm.nih.gov/compound/luteolin">luteolin</a> ⇒ <a href="https://pubchem.ncbi.nlm.nih.gov/compound/Luteolin-3_-glucoside">luteolin-3’-O-α-D-glucopyranoside</a> + <a href="https://pubchem.ncbi.nlm.nih.gov/compound/Luteolin-4_-o-glucoside">luteolin-4’-O-α-Dglucopyranoside</a> + luteolin-4’-O-α-D-tri-glucoside + luteolin-4’-O-α-di-glucosides</p>
 <h2>References</h2>
-<hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Henrissat B. A classification of glycosyl hydrolases based on amino acid sequence similarities[J]. Biochemical journal, 1991, 280(2): 309-316. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
@@ -201,7 +200,6 @@
 </figure>
 
 <h2>References</h2>
-<hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>Henrissat B. A classification of glycosyl hydrolases based on amino acid sequence similarities[J]. Biochemical journal, 1991, 280(2): 309-316. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
