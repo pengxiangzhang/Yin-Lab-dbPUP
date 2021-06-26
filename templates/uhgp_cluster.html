@@ -64,7 +64,11 @@
                     <td><a href="{{record.mgnify}}" rel="noopener noreferrer"
                            target="_blank">{{ record.gene_id }}</a></td>
                     <td>{{ record.name }}</td>
-                    <td>{{ record.pfam }}</td>
+                    <td>
+                        {% for pfam in pfam_dic[record.number] %}
+                                <a href="{{ pfam[1] }}" rel="noopener noreferrer" target="_blank">{{pfam[0]}}</a>
+                        {% endfor %}
+                    </td>
                     <td>{{ record.type }}</td>
                     <td>{{ record.continent }}</td>
                     <td><a href="{{ url_for('detail',mode='cluster', unid = record.gene_id) }}" target="_blank">view</a>
