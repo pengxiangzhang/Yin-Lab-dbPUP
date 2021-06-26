@@ -88,8 +88,7 @@
                     <td>{{ record.protein_name }}</td>
                     <td>
                         {% for pfam in pfam_dic[record.number] %}
-                                <a href={{ pfam[1] }}>
-                                   rel="noopener noreferrer" target="_blank">{{pfam[0]}}</a>
+                                <a href="{{ pfam[1] }}" rel="noopener noreferrer" target="_blank">{{pfam[0]}}</a>
                         {% endfor %}
                     </td>
                     <td>{{ record.gene_name }}</td>
