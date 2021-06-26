@@ -65,11 +65,6 @@
                     <td><a href="{{record.MGnify}}" rel="noopener noreferrer"
                            target="_blank">{{ record.gene_id }}</a></td>
                     <td>{{ record.name }}</td>
-                    <td>
-                        {% for pfam in pfam_dic[record.number] %}
-                                <a href="{{ pfam[1] }}" rel="noopener noreferrer" target="_blank">{{pfam[0]}}</a>
-                        {% endfor %}
-                    </td>
                     <td>{% if record.cluster_id == "NA" %}
                         &nbsp;
                         {% else %}
