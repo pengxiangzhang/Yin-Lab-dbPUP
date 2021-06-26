@@ -142,9 +142,12 @@ def uhgp(name_id):
             pass
         description = "UHGP - " + name_id + " for dbPUP"
         records = UhgpRecord.query.filter_by(continent=name_id)
+        data_analyzer = Data_analyzer(records)
+        pfam_dic = data_analyzer.pfam_dic()
+
         print("haha: "+name_id)
         return render_template('uhgp_continent.html', content=to_md(c), description=description, title=title, name=name,
-                               records=records)
+                               records=records, pfam_dic = pfam_dic )
 
 
 @app.route('/dbpup/help')
