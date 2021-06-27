@@ -9,7 +9,7 @@
             <h3>{{ name }}</h3>
         </div>
     </div>
-        <div class="familyList">
+    <div class="familyList">
         <h2>
             UHGP Hits
         </h2>
@@ -60,13 +60,15 @@
                 <tbody>
                 {% for record in records %}
                     <tr>
-                    <td><a href="{{ url_for('cluster_detail', cluster_id = record.cluster_id) }}">{{ record.cluster_id }}</a></td>
-                    <td><a href="{{record.mgnify}}" rel="noopener noreferrer"
+                    <td>
+                        <a href="{{ url_for('cluster_detail', cluster_id = record.cluster_id) }}">{{ record.cluster_id }}</a>
+                    </td>
+                    <td><a href="{{ record.mgnify }}" rel="noopener noreferrer"
                            target="_blank">{{ record.gene_id }}</a></td>
                     <td>{{ record.name }}</td>
                     <td>
                         {% for pfam in pfam_dic[record.number] %}
-                                <a href="{{ pfam[1] }}" rel="noopener noreferrer" target="_blank">{{pfam[0]}}</a>
+                            <a href="{{ pfam[1] }}" rel="noopener noreferrer" target="_blank">{{ pfam[0] }}</a>
                         {% endfor %}
                     </td>
                     <td>{{ record.type }}</td>

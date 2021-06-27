@@ -80,8 +80,8 @@ class Data_analyzer:
         pfam_metas = []
         for record in self.records:
             pfam_meta = []
-            pfam_info = record.pfam #pfam position
-            pfam_link_info = record.pfam_link #pfam_link position
+            pfam_info = record.pfam  # pfam position
+            pfam_link_info = record.pfam_link  # pfam_link position
 
             pfams = pfam_info.split('; ')
             pfam_links = pfam_link_info.split(';')
@@ -94,4 +94,3 @@ class Data_analyzer:
             pfam_metas.append(pfam_meta)
 
         return pfam_metas
-

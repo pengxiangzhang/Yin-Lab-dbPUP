@@ -20,16 +20,16 @@
             <form action="{{ url_for('blast') }}" id="blastx-form" method="POST" name="blastx-form">
                 {% with messages = get_flashed_messages() %}
                     {% if messages %}
-                        
-                            {% for message in messages %}
+
+                        {% for message in messages %}
                             <script>
-                            Swal.fire({
-                              icon: 'error',
-                              title: 'Oops...',
-                              text: '{{message}}',
-                            })
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Oops...',
+                                    text: '{{message}}',
+                                })
                             </script>
-                            {% endfor %}
+                        {% endfor %}
                     {% endif %}
                 {% endwith %}
                 <lable style="color:blue"><b>Program</b></lable>
@@ -83,19 +83,19 @@
             </form>
 
             <script type="text/javascript">
-                function fire_run(){
+                function fire_run() {
                     Swal.fire({
-                      title: '<strong>Please notice that blast may take up to 2 minutes to run.</strong>',
-                      icon: 'info',
-                      html:
-                        'Please be patient and do not refresh the page',
-                      showCancelButton: true,
-                      confirmButtonText: `Ok`,
+                        title: '<strong>Please notice that blast may take up to 2 minutes to run.</strong>',
+                        icon: 'info',
+                        html:
+                            'Please be patient and do not refresh the page',
+                        showCancelButton: true,
+                        confirmButtonText: `Ok`,
                     }).then((result) => {
-                      if (result.isConfirmed) {
-                         document.getElementById('id_file').value = '';
-                         document.getElementById('blastx-form').submit();
-                      }
+                        if (result.isConfirmed) {
+                            document.getElementById('id_file').value = '';
+                            document.getElementById('blastx-form').submit();
+                        }
                     })
                 }
 

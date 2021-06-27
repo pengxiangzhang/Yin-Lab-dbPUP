@@ -62,15 +62,16 @@
                 <tbody>
                 {% for record in records %}
                     <tr>
-                    <td><a href="{{record.MGnify}}" rel="noopener noreferrer"
+                    <td><a href="{{ record.MGnify }}" rel="noopener noreferrer"
                            target="_blank">{{ record.gene_id }}</a></td>
                     <td><a href="{{ url_for('family', family_id = record.family) }}">{{ record.family }}</a></td>
                     <td>{{ record.name }}</td>
                     <td>{% if record.cluster_id == "NA" %}
                         &nbsp;
-                        {% else %}
-                        <a href="{{ url_for('cluster_detail', cluster_id = record.cluster_id) }}">{{ record.cluster_id }}</a></td>
-                        {% endif %}
+                    {% else %}
+                        <a href="{{ url_for('cluster_detail', cluster_id = record.cluster_id) }}">{{ record.cluster_id }}</a>
+                        </td>
+                    {% endif %}
                     <td>{{ record.type }}</td>
                     <td>{{ record.lineage }}</td>
                     <td>{{ record.country }}</td>

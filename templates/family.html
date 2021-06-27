@@ -14,11 +14,11 @@
     <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('network', family_id = family_id) }}">View sequence
         similarity network</a>
 
-    
-        <div class="subFamily">
-            <h2>Subfamily</h2>
-            <ul class="breadcrumb" style="font-size: medium">
-                {% if amount != 0 %}
+
+    <div class="subFamily">
+        <h2>Subfamily</h2>
+        <ul class="breadcrumb" style="font-size: medium">
+            {% if amount != 0 %}
                 {% for i in range(amount) %}
                     {% set family_id = family_id + '_' + (i + 1)|string() %}
                     {% if is_family_char(family_id) %}
@@ -33,12 +33,12 @@
                         </li>
                     {% endif %}
                 {% endfor %}
-                {% else %}
-                    <li>This family does not contain subfamilies</li>
-                 {% endif %}
-            </ul>
-        </div>
-    
+            {% else %}
+                <li>This family does not contain subfamilies</li>
+            {% endif %}
+        </ul>
+    </div>
+
 
     <div class="familyResource">
         <h2>Family Sequences</h2>

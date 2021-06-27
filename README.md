@@ -59,4 +59,9 @@ When change number Subfamily:
 
 The title of Class, Family and Subfamily will be reading from the first line of the content file. If a new page does not
 have a markdown file, it may display the default title name or return 404. Having a content page for each page is highly
-recommended. 
+recommended.
+
+# Update Dependencies
+
+DO NOT directly run `pip install` or `pip freeze`. Instead, add the library to `requirements.in` then run `pip-compile`
+for better dependency management (need to run `pip install pip-tools` first)

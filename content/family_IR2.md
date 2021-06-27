@@ -8,7 +8,6 @@
 <div id="myTabContent" class="tab-content" markdown="1">
   <div class="tab-pane fade in active" id="tab1" markdown="1">
 
-
 ## Literature Information
 
 | Title    | First bacterial chalcone isomerase isolated from Eubacterium ramulus |
@@ -29,7 +28,8 @@ Organism: *Eubacterium ramulus*
 
 Length: 283 AA
 
-Taxonomic identifier: [39490](https://www.uniprot.org/taxonomy/39490) [[NCBI](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?lvl=0&id=39490)]
+Taxonomic
+identifier: [39490](https://www.uniprot.org/taxonomy/39490) [[NCBI](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?lvl=0&id=39490)]
 
 - **Pfam**
 
@@ -51,15 +51,19 @@ Chalcone_N
 
 [**Pfam**](https://pfam.xfam.org/family/Chalcone_N)
 
-This is the N-terminal domain of chalcone isomerase present in Eubacterium ramulus. Chalcone isomerase is involved in the degradation pathway of flavone naringenin[^1].
+This is the N-terminal domain of chalcone isomerase present in Eubacterium ramulus. Chalcone isomerase is involved in
+the degradation pathway of flavone naringenin[^1].
 
 [**InterPro**](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR040518/)
 
-This is the N-terminal domain of chalcone isomerase present in Eubacterium ramulus. Chalcone isomerase is involved in the degradation pathway of flavone naringenin[^1]. 
+This is the N-terminal domain of chalcone isomerase present in Eubacterium ramulus. Chalcone isomerase is involved in
+the degradation pathway of flavone naringenin[^1].
 
 - **Reaction**
 
-[naringenin chalcone](https://pubchem.ncbi.nlm.nih.gov/compound/naringenin%20chalcone) &rArr; [3-(4-hydroxyphenyl)propionic acid](https://pubchem.ncbi.nlm.nih.gov/compound/3-(4-hydroxyphenyl)propionic%20acid) + [phloroglucinol](https://pubchem.ncbi.nlm.nih.gov/compound/phloroglucinol)
+[naringenin chalcone](https://pubchem.ncbi.nlm.nih.gov/compound/naringenin%20chalcone)
+&rArr; [3-(4-hydroxyphenyl)propionic acid](https://pubchem.ncbi.nlm.nih.gov/compound/3-(4-hydroxyphenyl)propionic%20acid)
++ [phloroglucinol](https://pubchem.ncbi.nlm.nih.gov/compound/phloroglucinol)
 
 <figure>
 <div class="linerow">
@@ -83,7 +87,8 @@ This is the N-terminal domain of chalcone isomerase present in Eubacterium ramul
 
 ## References
 
-[^1]:Herles C, Braune A, Blaut M. First bacterial chalcone isomerase isolated from Eubacterium ramulus[J]. Archives of microbiology, 2004, 181(6): 428-434.
+[^1]:Herles C, Braune A, Blaut M. First bacterial chalcone isomerase isolated from Eubacterium ramulus[J]. Archives of
+microbiology, 2004, 181(6): 428-434.
 
 
   </div>

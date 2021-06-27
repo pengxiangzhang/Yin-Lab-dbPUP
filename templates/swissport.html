@@ -10,11 +10,11 @@
     </div>
     {% if subfamily %}
         <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('trembl', family_id=family_id) }}">View TrEMBL</a>
-    {% elif family_id in ["HR6","HR8","IR2","UC1"]%}
-    <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('tree', family_id=family_id) }}">View phylogenetic
+    {% elif family_id in ["HR6","HR8","IR2","UC1"] %}
+        <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('tree', family_id=family_id) }}">View phylogenetic
             tree</a>
     {% else %}
-    <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('tree', family_id=family_id) }}">View phylogenetic
+        <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('tree', family_id=family_id) }}">View phylogenetic
             tree</a>
     {% endif %}
 
@@ -35,10 +35,10 @@
                     targets: [7, 8],
                     searchable: true,
                     visible: false
-                },{
+                }, {
                     targets: [-1],
                     searchable: true,
-                    visible: false  
+                    visible: false
                 }
                 ],
                 buttons: [
@@ -63,60 +63,61 @@
                         }
                     },
                     {
-                    extend: 'collection',
-                    text: 'Filter',
-                    buttons: [
-                    {
-                        text: 'All',
-                        action: function () {
-                            location.reload(true);
-                        }
-                    },
-                    {
-                        text: 'Bacteria',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(4).search('').draw();
-                            var table = $('#data-table').DataTable();
-                            table.column(-2).search('Bacteria').draw();
-                        }
-                    },
-                    {
-                        text: 'Archaea',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(4).search('').draw();
-                            var table = $('#data-table').DataTable();
-                            table.column(-2).search('Archaea').draw();
-                        }
-                    },
-                    {
-                        text: 'Eukaryota',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(4).search('').draw();
-                            var table = $('#data-table').DataTable();
-                            table.column(-2).search('Eukaryota').draw();
-                        }
-                    },
-                    {
-                        text: 'Viruses',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(4).search('').draw();
-                            var table = $('#data-table').DataTable();
-                            table.column(-2).search('Viruses').draw();
-                        }
-                    },
-                    {
-                        text: 'Unclassified',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(4).search('').draw();
-                            var table = $('#data-table').DataTable();
-                            table.column(-2).search('unclassified').draw();
-                        }
-                    }]}
+                        extend: 'collection',
+                        text: 'Filter',
+                        buttons: [
+                            {
+                                text: 'All',
+                                action: function () {
+                                    location.reload(true);
+                                }
+                            },
+                            {
+                                text: 'Bacteria',
+                                action: function () {
+                                    var table = $('#data-table').DataTable();
+                                    table.column(4).search('').draw();
+                                    var table = $('#data-table').DataTable();
+                                    table.column(-2).search('Bacteria').draw();
+                                }
+                            },
+                            {
+                                text: 'Archaea',
+                                action: function () {
+                                    var table = $('#data-table').DataTable();
+                                    table.column(4).search('').draw();
+                                    var table = $('#data-table').DataTable();
+                                    table.column(-2).search('Archaea').draw();
+                                }
+                            },
+                            {
+                                text: 'Eukaryota',
+                                action: function () {
+                                    var table = $('#data-table').DataTable();
+                                    table.column(4).search('').draw();
+                                    var table = $('#data-table').DataTable();
+                                    table.column(-2).search('Eukaryota').draw();
+                                }
+                            },
+                            {
+                                text: 'Viruses',
+                                action: function () {
+                                    var table = $('#data-table').DataTable();
+                                    table.column(4).search('').draw();
+                                    var table = $('#data-table').DataTable();
+                                    table.column(-2).search('Viruses').draw();
+                                }
+                            },
+                            {
+                                text: 'Unclassified',
+                                action: function () {
+                                    var table = $('#data-table').DataTable();
+                                    table.column(4).search('').draw();
+                                    var table = $('#data-table').DataTable();
+                                    table.column(-2).search('unclassified').draw();
+                                }
+                            }]
+                    }
 
                 ],
                 select: true
@@ -178,7 +179,7 @@
                     <td>
                         <p>{{ record.type }}</p>
                     </td>
-                    <td>{{record.lineage}}</td>
+                    <td>{{ record.lineage }}</td>
                 </tr>
             {% endfor %}
 

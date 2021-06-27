@@ -27,9 +27,14 @@ Not applicable for this class.
 
 ## UCs Subfamily Number
 
-**UR1**: [UC1_1](../subfamily/UC1_1) / [UC1_2](../subfamily/UC1_2) / [UC1_3](../subfamily/UC1_3) / [UC1_4](../subfamily/UC1_4) / [UC1_5](../subfamily/UC1_5) / [UC1_6](../subfamily/UC1_6) / [UC1_7](../subfamily/UC1_7) / [UC1_8](../subfamily/UC1_8) / [UC1_9](../subfamily/UC1_9) / [UC1_10](../subfamily/UC1_10) / [UC1_11](../subfamily/UC1_11) / [UC1_12](../subfamily/UC1_12) / [UC1_13](../subfamily/UC1_13)
+**UR1**: [UC1_1](../subfamily/UC1_1) / [UC1_2](../subfamily/UC1_2) / [UC1_3](../subfamily/UC1_3)
+/ [UC1_4](../subfamily/UC1_4) / [UC1_5](../subfamily/UC1_5) / [UC1_6](../subfamily/UC1_6) / [UC1_7](../subfamily/UC1_7)
+/ [UC1_8](../subfamily/UC1_8) / [UC1_9](../subfamily/UC1_9) / [UC1_10](../subfamily/UC1_10)
+/ [UC1_11](../subfamily/UC1_11) / [UC1_12](../subfamily/UC1_12) / [UC1_13](../subfamily/UC1_13)
 
-**UR2**: [UC2_1](../subfamily/UC2_1) / [UC2_2](../subfamily/UC2_1) / [UC2_3](../subfamily/UC2_3) / [UC2_4](../subfamily/UC2_4) / [UC2_5](../subfamily/UC2_5) / [UC2_6](../subfamily/UC2_6) / [UC2_7](../subfamily/UC2_7) / [UC2_8](../subfamily/UC2_8)
+**UR2**: [UC2_1](../subfamily/UC2_1) / [UC2_2](../subfamily/UC2_1) / [UC2_3](../subfamily/UC2_3)
+/ [UC2_4](../subfamily/UC2_4) / [UC2_5](../subfamily/UC2_5) / [UC2_6](../subfamily/UC2_6) / [UC2_7](../subfamily/UC2_7)
+/ [UC2_8](../subfamily/UC2_8)
 
 ---
 
@@ -37,7 +42,12 @@ Not applicable for this class.
 
 **UC2**
 
-[2.4.1.227](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.227); [2.4.1.17](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.17); [2.4.1.324](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.324); [2.4.1.63](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.63); [2.4.1.91](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.91); [2.4.1.237](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.237)
+[2.4.1.227](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.227)
+; [2.4.1.17](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.17)
+; [2.4.1.324](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.324)
+; [2.4.1.63](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.63)
+; [2.4.1.91](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.91)
+; [2.4.1.237](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.237)
 
 ---
 

@@ -49,7 +49,11 @@ No subfamily.
 ## EC in IRs Families (sorted by counts)
 
 **IR1**
-[4.4.1.5](https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.5); [5.1.99.1](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.99.1); [1.13.11.27](https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.27); [1.13.11.46](https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.46); [5.1.3.33](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.33)
+[4.4.1.5](https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.5)
+; [5.1.99.1](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.99.1)
+; [1.13.11.27](https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.27)
+; [1.13.11.46](https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.46)
+; [5.1.3.33](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.33)
 
 ---
 

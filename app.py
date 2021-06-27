@@ -91,7 +91,7 @@ def download():
     description = "dbPUP data download"
     return render_template('main.html', content=to_md(c), description=description, title=title, name=name)
 
-    
+
 @app.route("/dbpup/uhgp_home")
 def uhgp_home():
     name = "UHGP"
@@ -108,13 +108,13 @@ def uhgp_home():
 @app.route("/dbpup/cluster/<cluster_id>")
 def cluster_detail(cluster_id):
     name = cluster_id
-    title = "Cluster "+cluster_id+" - "
+    title = "Cluster " + cluster_id + " - "
     try:
-        with open('content/cluster/'+cluster_id+'.md', encoding='utf-8') as c:
+        with open('content/cluster/' + cluster_id + '.md', encoding='utf-8') as c:
             c = c.read()
     except Exception:
         abort(404)
-    description = "Cluster Detail for "+cluster_id
+    description = "Cluster Detail for " + cluster_id
     return render_template('main.html', content=to_md(c), description=description, title=title, name=name)
 
 
@@ -134,7 +134,7 @@ def uhgp(name_id):
         pfam_dic = data_analyzer.pfam_dic()
 
         return render_template('uhgp_cluster.html', content=to_md(c), description=description, title=title, name=name,
-                               records=records, pfam_dic = pfam_dic )
+                               records=records, pfam_dic=pfam_dic)
     else:
         name = "UHGP for Continent: " + name_id
         title = "UHGP for Continent: " + name_id + " - "
@@ -146,8 +146,7 @@ def uhgp(name_id):
         description = "UHGP - " + name_id + " for dbPUP"
         records = UhgpRecord.query.filter_by(continent=name_id)
 
-
-        print("haha: "+name_id)
+        print("haha: " + name_id)
         return render_template('uhgp_continent.html', content=to_md(c), description=description, title=title, name=name,
                                records=records)
 
@@ -194,7 +193,7 @@ def characterized():
 
     description = "Characterization for Database for Polyphenol Utilized Proteins from gut microbiota"
     return render_template("characterized.html", records=records, rows=pdb_row, ec=ec_link, sub=sub, product=prod,
-                           description=description, title=title, name=name, pfam_dic = pfam_dic)
+                           description=description, title=title, name=name, pfam_dic=pfam_dic)
 
 
 @app.route('/dbpup/swissport/<family_id>', methods=['GET', 'POST'])
@@ -478,7 +477,7 @@ def blast():
             flash('You can only have one input.')
             return render_template('blast.html', content=to_md(c), name=name, title=title,
                                    description=description, site_key=app.config['public_key'])
-        elif function not in ["p","x"]:
+        elif function not in ["p", "x"]:
             flash('You must select a program to run.')
             return render_template('blast.html', content=to_md(c), name=name, title=title,
                                    description=description, site_key=app.config['public_key'])
@@ -486,15 +485,15 @@ def blast():
             flash('Please complete the captcha.')
             return render_template('blast.html', content=to_md(c), name=name, title=title, description=description,
                                    site_key=app.config['public_key'])
-        elif db not in ["a","c","u"]:
+        elif db not in ["a", "c", "u"]:
             flash('You must select a database to run.')
             return render_template('blast.html', content=to_md(c), name=name, title=title,
-                                    description=description, site_key=app.config['public_key'])
-                                    
-        elif evalue not in ["0.0001","0.001","0.01","0.1","1","10","100","1000"]:
+                                   description=description, site_key=app.config['public_key'])
+
+        elif evalue not in ["0.0001", "0.001", "0.01", "0.1", "1", "10", "100", "1000"]:
             flash('You must select a vaild evalue.')
             return render_template('blast.html', content=to_md(c), name=name, title=title,
-                                    description=description, site_key=app.config['public_key'])
+                                   description=description, site_key=app.config['public_key'])
         else:
             if sequence != "" and file == "":
                 query = sequence
@@ -509,24 +508,26 @@ def blast():
                 records = blastx(query, db, evalue)
                 head = "Result of Blastx"
             if records == 3:
-                flash('Your input does not match any record in our database. Please check your input exist and make sure you are using the correct format. You can contact us if the problem persists.')
+                flash(
+                    'Your input does not match any record in our database. Please check your input exist and make sure you are using the correct format. You can contact us if the problem persists.')
                 return render_template('blast.html', content=to_md(c), name=name, title=title,
-                                    description=description, site_key=app.config['public_key'])
+                                       description=description, site_key=app.config['public_key'])
             if hmmrecord == 3:
-                flash('Your input does not match any record in our database. Please check your input exist and make sure you are using the correct format. You can contact us if the problem persists.')
+                flash(
+                    'Your input does not match any record in our database. Please check your input exist and make sure you are using the correct format. You can contact us if the problem persists.')
                 return render_template('blast.html', content=to_md(c), name=name, title=title,
-                                    description=description, site_key=app.config['public_key'])
+                                       description=description, site_key=app.config['public_key'])
             if hmmrecord == "":
                 hmmrecord = "Your input does not match any record in our database. Please check your input exist and make sure you are using the correct format. You can contact us if the problem persists."
             description = ""
             if db == "u":
                 return render_template('result_blast_uhgp.html', records=records, title=title, description=description,
-                                   head=head,
-                                   hmmrecord=hmmrecord)
+                                       head=head,
+                                       hmmrecord=hmmrecord)
             else:
                 return render_template('result_blast.html', records=records, title=title, description=description,
-                                   head=head,
-                                   hmmrecord=hmmrecord)
+                                       head=head,
+                                       hmmrecord=hmmrecord)
 
     return render_template('blast.html', content=to_md(c), name=name, title=title,
                            description=description, site_key=app.config['public_key'])
@@ -586,11 +587,11 @@ def blastp(query, db, evalue):
         with open('tmp/' + uuidname + '.fsa', 'w') as f:
             f.writelines(query)
         if db == "a":
-            command = "./blast/blastp -db blastdb/pup_blastp/PUP_db -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue "+evalue+" -num_threads 2"
+            command = "./blast/blastp -db blastdb/pup_blastp/PUP_db -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue " + evalue + " -num_threads 2"
         if db == "c":
-            command = "./blast/blastp -db blastdb/characterzied/characterzied -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue "+evalue+" -num_threads 2"
+            command = "./blast/blastp -db blastdb/characterzied/characterzied -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue " + evalue + " -num_threads 2"
         if db == "u":
-            command = "./blast/blastp -db blastdb/uhgp/uhgp_hits -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue "+evalue+" -num_threads 2"
+            command = "./blast/blastp -db blastdb/uhgp/uhgp_hits -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue " + evalue + " -num_threads 2"
         os.system(command)
 
         with open('tmp/' + uuidname + '.blast', 'r') as f:
@@ -613,7 +614,7 @@ def blastp(query, db, evalue):
                 trem_record = TreRecord.query.filter_by(uniq_id=unid).first()
             if db == "u":
                 uhgp_record = UhgpRecord.query.filter_by(gene_id=unid).first()
-                
+
             if db == "c":
                 if char_record != None:
                     char_result = []
@@ -650,7 +651,7 @@ def blastp(query, db, evalue):
                     trem_result.append(trem_record.web_id)
                     processed_blastp.append(trem_result)
             if db == "u":
-                if uhgp_record!=None:
+                if uhgp_record != None:
                     uhgp_result = []
                     uhgp_result.append(data[0][index])
                     uhgp_result.append(unid)
@@ -712,17 +713,17 @@ def hmmscan(query):
         return 3
 
 
-def blastx(query, db,evalue):
+def blastx(query, db, evalue):
     try:
         uuidname = str(uuid.uuid1())
         with open('tmp/' + uuidname + '.fsa', 'w') as f:
             f.writelines(query)
         if db == "a":
-            command = "./blast/blastx -db blastdb/pup_blastp/PUP_db -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue "+evalue+" -num_threads 2"
+            command = "./blast/blastx -db blastdb/pup_blastp/PUP_db -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue " + evalue + " -num_threads 2"
         if db == "c":
-            command = "./blast/blastx -db blastdb/characterzied/characterzied -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue "+evalue+" -num_threads 2"
+            command = "./blast/blastx -db blastdb/characterzied/characterzied -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue " + evalue + " -num_threads 2"
         if db == "u":
-            command = "./blast/blastx -db blastdb/uhgp/uhgp_hits -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue "+evalue+" -num_threads 2"
+            command = "./blast/blastx -db blastdb/uhgp/uhgp_hits -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue " + evalue + " -num_threads 2"
         os.system(command)
         with open('tmp/' + uuidname + '.blast', 'r') as f:
             data = f.readlines()
@@ -744,7 +745,7 @@ def blastx(query, db,evalue):
                 trem_record = TreRecord.query.filter_by(uniq_id=unid).first()
             if db == "u":
                 uhgp_record = UhgpRecord.query.filter_by(gene_id=unid).first()
-                
+
             if db == "c":
                 if char_record != None:
                     char_result = []
@@ -781,7 +782,7 @@ def blastx(query, db,evalue):
                     trem_result.append(trem_record.web_id)
                     processed_blastx.append(trem_result)
             if db == "u":
-                if uhgp_record!=None:
+                if uhgp_record != None:
                     uhgp_result = []
                     uhgp_result.append(data[0][index])
                     uhgp_result.append(unid)

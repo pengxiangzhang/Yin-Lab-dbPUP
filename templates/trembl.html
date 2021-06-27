@@ -35,30 +35,30 @@
                     targets: [7, 8],
                     searchable: true,
                     visible: false
-                },{
+                }, {
                     targets: [-1],
                     searchable: true,
-                    visible: false  
+                    visible: false
                 },
-            {
-                searchPanes: {
-                    show: false
-                },
-                targets: [0, 1, 2,3,4,5,6,7,9]
-            },{
-            searchPanes: {
-                    show: true,
-                    options: [
-                        {
-                            label: 'Bacteria',
-                            value: function(rowData, rowIdx) {
-                                return rowData[8] === 'Bacteria';
-                            },
-                        }
-                    ],
-                },
-                targets: [8]
-            }
+                    {
+                        searchPanes: {
+                            show: false
+                        },
+                        targets: [0, 1, 2, 3, 4, 5, 6, 7, 9]
+                    }, {
+                        searchPanes: {
+                            show: true,
+                            options: [
+                                {
+                                    label: 'Bacteria',
+                                    value: function (rowData, rowIdx) {
+                                        return rowData[8] === 'Bacteria';
+                                    },
+                                }
+                            ],
+                        },
+                        targets: [8]
+                    }
                 ],
                 buttons: [
                     'pageLength',
@@ -82,60 +82,61 @@
                         }
                     },
                     {
-                    extend: 'collection',
-                    text: 'Filter',
-                    buttons: [
-                    {
-                        text: 'All',
-                        action: function () {
-                            location.reload(true);
-                        }
-                    },
-                    {
-                        text: 'Bacteria',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(4).search('').draw();
-                            var table = $('#data-table').DataTable();
-                            table.column(-2).search('Bacteria').draw();
-                        }
-                    },
-                    {
-                        text: 'Archaea',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(4).search('').draw();
-                            var table = $('#data-table').DataTable();
-                            table.column(-2).search('Archaea').draw();
-                        }
-                    },
-                    {
-                        text: 'Eukaryota',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(4).search('').draw();
-                            var table = $('#data-table').DataTable();
-                            table.column(-2).search('Eukaryota').draw();
-                        }
-                    },
-                    {
-                        text: 'Viruses',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(4).search('').draw();
-                            var table = $('#data-table').DataTable();
-                            table.column(-2).search('Viruses').draw();
-                        }
-                    },
-                    {
-                        text: 'Unclassified',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.column(4).search('').draw();
-                            var table = $('#data-table').DataTable();
-                            table.column(-2).search('unclassified').draw();
-                        }
-                    }]}
+                        extend: 'collection',
+                        text: 'Filter',
+                        buttons: [
+                            {
+                                text: 'All',
+                                action: function () {
+                                    location.reload(true);
+                                }
+                            },
+                            {
+                                text: 'Bacteria',
+                                action: function () {
+                                    var table = $('#data-table').DataTable();
+                                    table.column(4).search('').draw();
+                                    var table = $('#data-table').DataTable();
+                                    table.column(-2).search('Bacteria').draw();
+                                }
+                            },
+                            {
+                                text: 'Archaea',
+                                action: function () {
+                                    var table = $('#data-table').DataTable();
+                                    table.column(4).search('').draw();
+                                    var table = $('#data-table').DataTable();
+                                    table.column(-2).search('Archaea').draw();
+                                }
+                            },
+                            {
+                                text: 'Eukaryota',
+                                action: function () {
+                                    var table = $('#data-table').DataTable();
+                                    table.column(4).search('').draw();
+                                    var table = $('#data-table').DataTable();
+                                    table.column(-2).search('Eukaryota').draw();
+                                }
+                            },
+                            {
+                                text: 'Viruses',
+                                action: function () {
+                                    var table = $('#data-table').DataTable();
+                                    table.column(4).search('').draw();
+                                    var table = $('#data-table').DataTable();
+                                    table.column(-2).search('Viruses').draw();
+                                }
+                            },
+                            {
+                                text: 'Unclassified',
+                                action: function () {
+                                    var table = $('#data-table').DataTable();
+                                    table.column(4).search('').draw();
+                                    var table = $('#data-table').DataTable();
+                                    table.column(-2).search('unclassified').draw();
+                                }
+                            }]
+                    }
                 ],
                 select: true
             });

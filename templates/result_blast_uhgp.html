@@ -59,13 +59,14 @@
                         <td>{{ record[0] }}</td>
                         <td>{{ record[1] }}</td>
                         <td>
-                           {% if record[2] =="NA" %} 
-                           &nbsp;
-                           {% else %}
-                            <a href="{{ url_for('cluster_detail', cluster_id = record[2]) }}" target="_blank">{{record[2]}}</a>
+                            {% if record[2] =="NA" %}
+                                &nbsp;
+                            {% else %}
+                                <a href="{{ url_for('cluster_detail', cluster_id = record[2]) }}"
+                                   target="_blank">{{ record[2] }}</a>
                             {% endif %}
-                            
-                            </td>
+
+                        </td>
                         {% if record[3].find("_")== -1 %}
                             <td><a href="{{ url_for('family', family_id = record[3]) }} "
                                    target="_blank">{{ record[3] }}</a></td>
