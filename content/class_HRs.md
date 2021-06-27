@@ -72,19 +72,19 @@ ExplorEnz**](https://www.enzyme-database.org/class.php).
 
 **HR1**: No subfamily
 
-**HR2**: HR2_1 / HR2_2 / HR2_3
+**HR2**: [HR2_1](../subfamily/HR2_1) / [HR2_2](../subfamily/HR2_2) / [HR2_3](../subfamily/HR2_3)
 
-**HR3**: HR3_1 / HR3_2 / HR3_3 / HR3_4 / HR3_5 / HR3_6 / HR3_7 / HR3_8
+**HR3**: [HR3_1](../subfamily/HR3_1) / [HR3_2](../subfamily/HR3_2) / [HR3_3](../subfamily/HR3_3) / [HR3_4](../subfamily/HR3_4) / [HR3_5](../subfamily/HR3_5) / [HR3_6](../subfamily/HR3_6) / [HR3_7](../subfamily/HR3_7) / [HR3_8](../subfamily/HR3_8)
 
-**HR4**: HR4_1 / HR4_10 / HR4_2 / HR4_3 / HR4_4 / HR4_6 / HR4_7 / HR4_8 / HR4_9 / HR4_10 / HR4_11
+**HR4**: [HR4_1](../subfamily/HR4_1) / [HR4_2](../subfamily/HR4_2) / [HR4_3](../subfamily/HR4_3) / [HR4_4](../subfamily/HR4_4) / [HR4_5](../subfamily/HR4_5) /[HR4_6](../subfamily/HR4_6) / [HR4_7](../subfamily/HR4_7) / [HR4_8](../subfamily/HR4_8) / [HR4_9](../subfamily/HR4_9) / [HR4_10](../subfamily/HR4_10) / [HR4_11](../subfamily/HR4_11)
 
-**HR5**: HR5_1 / HR5_2 / HR5_3 / HR5_4 / HR5_5
+**HR5**: [HR5_1](../subfamily/HR5_1) / [HR5_2](../subfamily/HR5_2) / [HR5_3](../subfamily/HR5_3) / [HR5_4](../subfamily/HR5_4) / [HR5_5](../subfamily/HR5_5)
 
 **HR6**: No subfamily
 
-**HR7**: HR7_1 / HR7_2 / HR7_3 / HR7_4 / HR7_5
+**HR7**: [HR7_1](../subfamily/HR7_1) / [HR7_2](../subfamily/HR7_2) / [HR7_3](../subfamily/HR7_3) / [HR7_4](../subfamily/HR7_4) / [HR7_5](../subfamily/HR7_5)
 
-**HR8**: HR8_1 / HR8_2 / HR8_3 / HR8_4 / HR8_5 / HR8_6
+**HR8**: [HR8_1](../subfamily/HR8_1) / [HR8_2](../subfamily/HR8_2) / [HR8_3](../subfamily/HR8_3) / [HR8_4](../subfamily/HR8_4) / [HR8_5](../subfamily/HR8_5) / [HR8_6](../subfamily/HR8_6)
 
 ---
 

@@ -52,13 +52,13 @@ ExplorEnz**](https://www.enzyme-database.org/class.php).
 
 ## FRs Subfamily Number
 
-**FR1**: FR1_1 / FR1_2 / FR1_3 / FR1_4
+**FR1**: [FR1_1](../subfamily/FR1_1) / [FR1_2](../subfamily/FR1_2) / [FR1_3](../subfamily/FR1_3) / [FR1_4](../subfamily/FR1_4)
 
 **FR2**: No subfamily
 
-**FR3**: FR3_1 / FR3_2 / FR3_3 / FR3_4
+**FR3**: [FR3_1](../subfamily/FR3_1) / [FR3_2](../subfamily/FR3_2) / [FR3_3](../subfamily/FR3_3) / [FR3_4](../subfamily/FR3_4)
 
-**FR4**: FR4_1 / FR4_2 / FR4_3 / FR4_4
+**FR4**: [FR4_1](../subfamily/FR4_1) / [FR4_2](../subfamily/FR4_2) / [FR4_3](../subfamily/FR4_3) / [FR4_4](../subfamily/FR4_4)
 
 ---
 

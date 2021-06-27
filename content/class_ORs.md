@@ -70,18 +70,17 @@ ExplorEnz**](https://www.enzyme-database.org/class.php).
 
 **OR3**: No subfamily
 
-**OR4**: OR4_1 / OR4_2 / OR4_3 / OR4_4
+**OR4**: [OR4_1](../subfamily/OR4_1) / [OR4_2](../subfamily/OR4_2) / [OR4_3](../subfamily/OR4_3) / [OR4_4](../subfamily/OR4_4)
 
-**OR5**: OR5_1 / OR5_2 / OR5_3 / OR5_4 / OR5_5 / OR5_6 / OR5_7 / OR5_8 / OR5_9 / OR5_10 / OR5_11 / OR5_12
+**OR5**: [OR5_1](../subfamily/OR5_1) / [OR5_2](../subfamily/OR5_2) / [OR5_3](../subfamily/OR5_3) / [OR5_4](../subfamily/OR5_4) / [OR5_5](../subfamily/OR5_5) / [OR5_6](../subfamily/OR5_6) / [OR5_7](../subfamily/OR5_7) / [OR5_8](../subfamily/OR5_8) / [OR5_9](../subfamily/OR5_9) / [OR5_10](../subfamily/OR5_10) / [OR5_11](../subfamily/OR5_11) / [OR5_12](../subfamily/OR5_12)
 
 **OR6**: No subfamily
 
-**OR7**: OR7_1 / OR7_2 / OR7_3 / OR7_4 / OR7_5
+**OR7**: [OR7_1](../subfamily/OR7_1) / [OR7_2](../subfamily/OR7_2) / [OR7_3](../subfamily/OR7_3) / [OR7_4](../subfamily/OR7_4) / [OR7_5](../subfamily/OR7_5)
 
-**OR8**: OR8_1 / OR8_2 / OR8_3 / OR8_4 / OR8_5 / OR8_6 / OR8_7 / OR8_8 / OR8_9 / OR8_10 / OR8_11 / OR8_12 / OR8_13 /
-OR8_14
+**OR8**: [OR8_1](../subfamily/OR8_1) / [OR8_2](../subfamily/OR8_2) / [OR8_3](../subfamily/OR8_3) / [OR8_4](../subfamily/OR8_4) / [OR8_5](../subfamily/OR8_5) / [OR8_6](../subfamily/OR8_6) / [OR8_7](../subfamily/OR8_7) / [OR8_8](../subfamily/OR8_8) / [OR8_9](../subfamily/OR8_9) / [OR8_10](../subfamily/OR8_10) / [OR8_11](../subfamily/OR8_11) / [OR8_12](../subfamily/OR8_12) / [OR8_13](../subfamily/OR8_13) / [OR8_14](../subfamily/OR8_14)
 
-**OR9**: OR9_1 / OR9_2 / OR9_3 / OR9_4 / OR9_5 / OR9_6 / OR9_7
+**OR9**: [OR9_1](../subfamily/OR9_1) / [OR9_2](../subfamily/OR9_2) / [OR9_3](../subfamily/OR9_3) / [OR9_4](../subfamily/OR9_4) / [OR9_5](../subfamily/OR9_5) / [OR9_6](../subfamily/OR9_6) / [OR9_7](../subfamily/OR9_7)
 
 ---
 

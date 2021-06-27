@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block title %}Blast Result{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="page-header">
+            <h3>Blast Result</h3>
+
+        </div>
+    </div>
+    <div class="abstractOfPage">
+        <div class="informationOfGene">
+            <h1>
+                Result
+            </h1>
+            <br>
+        </div>
+    </div>
+    <ul id="myTab" class="nav nav-tabs">
+        <li class="active">
+            <a href="#tab1" data-toggle="tab">Blast</a></li>
+        {% if hmmrecord != 0 %}
+            <li><a href="#tab2" data-toggle="tab">hmmscan</a></li>
+        {% endif %}
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="tab1">
+            <script defer type="text/javascript">
+                $(document).ready(function () {
+                    $('#data-table').DataTable({
+                        lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
+                        dom: 'Bfrtip',
+                        buttons: [
+                            'pageLength',
+                            {
+                                extend: 'csvHtml5',
+                                fieldBoundary: '',
+                                text: 'Export'
+                            }]
+                    });
+                });
+            </script>
+            <br>
+            <table class="table" id="data-table">
+                <thead>
+                <tr>
+                    <th style="white-space: nowrap">Query ID</th>
+                    <th style="white-space: nowrap">Subject ID</th>
+                    <th style="white-space: nowrap">Cluster ID</th>
+                    <th style="white-space: nowrap">Family</th>
+                    <th style="white-space: nowrap">Identity</th>
+                    <th style="white-space: nowrap">E-value</th>
+                    <th style="white-space: nowrap">Name</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for record in records %}
+                    <tr>
+                        <td>{{ record[0] }}</td>
+                        <td>{{ record[1] }}</td>
+                        <td>
+                           {% if record[2] =="NA" %} 
+                           &nbsp;
+                           {% else %}
+                            <a href="{{ url_for('cluster_detail', cluster_id = record[2]) }}" target="_blank">{{record[2]}}</a>
+                            {% endif %}
+                            
+                            </td>
+                        {% if record[3].find("_")== -1 %}
+                            <td><a href="{{ url_for('family', family_id = record[3]) }} "
+                                   target="_blank">{{ record[3] }}</a></td>
+                        {% else %}
+                            <td><a href="{{ url_for('subfamily', family_id = record[3]) }}"
+                                   target="_blank">{{ record[3] }}</a></td>
+                        {% endif %}
+                        <td>{{ record[4] }}</td>
+                        <td>{{ record[5] }}</td>
+                        <td>{{ record[6] }}</td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+
+            </table>
+        </div>
+        {% if hmmrecord != 0 %}
+            <div class="tab-pane fade" id="tab2">
+                <br>
+                <script src="{{ url_for('static', filename='scripts/prism.js') }}"></script>
+                <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet">
+                <style>
+                    .displaya {
+                        overflow: display;
+                        word-wrap: normal;
+                        white-space: pre;
+                    }
+                </style>
+                <td>
+                    <div class="container">
+                        <pre><code class="displaya">{{ hmmrecord }}</code></pre>
+                    </div>
+                </td>
+            </div>
+        {% endif %}
+    </div>
+
+{% endblock %}
