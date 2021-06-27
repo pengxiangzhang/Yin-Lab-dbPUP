@@ -48,8 +48,8 @@
                 <thead>
                 <tr>
                     <th style="white-space: nowrap">Gene ID</th>
+                    <th style="white-space: nowrap">Family</th>
                     <th style="white-space: nowrap">Name</th>
-                    <th style="white-space: nowrap">pfam</th>
                     <th style="white-space: nowrap">Cluster ID</th>
                     <th style="white-space: nowrap">Type</th>
                     <th style="white-space: nowrap">Lineage</th>
@@ -64,6 +64,7 @@
                     <tr>
                     <td><a href="{{record.MGnify}}" rel="noopener noreferrer"
                            target="_blank">{{ record.gene_id }}</a></td>
+                    <td><a href="{{ url_for('family', family_id = record.family) }}">{{ record.family }}</a></td>
                     <td>{{ record.name }}</td>
                     <td>{% if record.cluster_id == "NA" %}
                         &nbsp;

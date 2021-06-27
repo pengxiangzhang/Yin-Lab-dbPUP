@@ -791,7 +791,7 @@ class CharRecord(dtbs.Model):
     family = dtbs.Column(dtbs.VARCHAR(20))
     seq = dtbs.Column(dtbs.VARCHAR(5500))
     doi = dtbs.Column(dtbs.VARCHAR(50))
-    tax_id = dtbs.Column(dtbs.VARCHAR(10))
+    web_id = dtbs.Column(dtbs.VARCHAR(10))
     type = dtbs.Column(dtbs.VARCHAR(10))
     pubchem_s = dtbs.Column(dtbs.VARCHAR(300))
     pubchem_p = dtbs.Column(dtbs.VARCHAR(2000))
@@ -844,6 +844,7 @@ class UhgpRecord(dtbs.Model):
     continent = dtbs.Column(dtbs.VARCHAR(50))
     seq = dtbs.Column(dtbs.VARCHAR(5500))
     MGnify = dtbs.Column(dtbs.VARCHAR(200))
+    family = dtbs.Column(dtbs.VARCHAR(10))
 
 
 class ClusRecord(dtbs.Model):
@@ -857,7 +858,7 @@ class ClusRecord(dtbs.Model):
     phylum = dtbs.Column(dtbs.VARCHAR(50))
     continent = dtbs.Column(dtbs.VARCHAR(50))
     seq = dtbs.Column(dtbs.VARCHAR(5500))
-    Pfam_link = dtbs.Column(dtbs.VARCHAR(255))
+    pfam_link = dtbs.Column(dtbs.VARCHAR(255))
     mgnify = dtbs.Column(dtbs.VARCHAR(255))
 
 

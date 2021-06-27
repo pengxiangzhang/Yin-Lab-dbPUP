@@ -20,6 +20,7 @@
 <p>Pfam: <a href="http://pfam.xfam.org/family/FIVAR">FIVAR</a>, <a href="http://pfam.xfam.org/family/Glyco_hydro_106">Glyco_hydro_106</a>, <a href="http://pfam.xfam.org/family/F5_F8_type_C">F5_F8_type_C</a></p>
 <p>Lineage: Bacteria; Firmicutes_A; Clostridia; Oscillospirales; Ruminococcaceae; Massilioclostridium; Massilioclostridium methylpentosum</p>
 <p>Geography: Canada, North America</p>
+<p>Comment: Despite the 1.9kb intergenic length, this cluster was retained because no BLAST hits found for this intergenic sequence in NCBI nr database.</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
@@ -35,6 +36,7 @@
 <p>Pfam: <a href="http://pfam.xfam.org/family/Bac_rhamnosid6H">Bac_rhamnosid6H</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid_N">Bac_rhamnosid_N</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid_C">Bac_rhamnosid_C</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid">Bac_rhamnosid</a>, <a href="http://pfam.xfam.org/family/FIVAR">FIVAR</a></p>
 <p>Lineage: Bacteria; Firmicutes_A; Clostridia; Oscillospirales; Ruminococcaceae; Massilioclostridium; Massilioclostridium methylpentosum</p>
 <p>Geography: Canada, North America</p>
+<p>Comment: Despite the 1.9kb intergenic length, this cluster was retained because no BLAST hits found for this intergenic sequence in NCBI nr database.</p>
 
   </div>
 </div>

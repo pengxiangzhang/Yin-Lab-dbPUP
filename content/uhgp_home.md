@@ -26,12 +26,12 @@ By locating the PUP homologs of UHGP in the genomes, we have defined physically 
 Using the simple algorithm described above, a total of **103** [PGCs](./uhgp/Cluster) were identified with PGC sizes ranging from 2 kb to 11 kb.
 
 
-| Gene cluster size | Number | Cluster ID       |
-| :---------------- | :----- | :--------------- |
-| 2                 | 53     | PGC_1 ~ PGC_53   |
-| 3                 | 28     | PGC_54 ~ PGC_81  |
-| 4                 | 16     | PGC_82 ~ PGC_97  |
-| >= 5              | 6      | PGC_98 ~ PGC_103 |
+| Gene cluster size | Number | Cluster ID                                                   |
+| :---------------- | :----- | :----------------------------------------------------------- |
+| 2                 | 53     | [PGC_1](http://bcb.unl.edu/dbpup/cluster/PGC_1) ~ [PGC_53](http://bcb.unl.edu/dbpup/cluster/PGC_53) |
+| 3                 | 28     | [PGC_54](http://bcb.unl.edu/dbpup/cluster/PGC_54) ~ [PGC_81](http://bcb.unl.edu/dbpup/cluster/PGC_81) |
+| 4                 | 16     | [PGC_82](http://bcb.unl.edu/dbpup/cluster/PGC_82) ~ [PGC_97](http://bcb.unl.edu/dbpup/cluster/PGC_97) |
+| >= 5              | 6      | [PGC_98](http://bcb.unl.edu/dbpup/cluster/PGC_98) ~ [PGC_103](http://bcb.unl.edu/dbpup/cluster/PGC_103) |
 
 
 
