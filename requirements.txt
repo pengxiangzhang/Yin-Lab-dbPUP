@@ -30,8 +30,14 @@ flask-minify==0.32
     # via -r requirements.in
 flask-sqlalchemy==2.5.1
     # via -r requirements.in
+gevent==21.1.2
+    # via -r requirements.in
 greenlet==1.1.0
-    # via sqlalchemy
+    # via
+    #   gevent
+    #   sqlalchemy
+gunicorn==20.1.0
+    # via -r requirements.in
 htmlmin==0.1.12
     # via flask-minify
 idna==2.10
@@ -67,13 +73,13 @@ markupsafe==2.0.1
     #   jinja2
 more-itertools==8.8.0
     # via -r requirements.in
-numpy==1.21.0
+numpy==1.19.5
     # via pandas
 packaging==20.9
     # via
     #   -r requirements.in
     #   pytest
-pandas==1.2.4
+pandas==1.1.5
     # via -r requirements.in
 pluggy==0.13.1
     # via
@@ -128,3 +134,10 @@ xxhash==2.0.2
     # via flask-minify
 zipp==3.4.1
     # via importlib-metadata
+zope.event==4.5.0
+    # via gevent
+zope.interface==5.4.0
+    # via gevent
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools
