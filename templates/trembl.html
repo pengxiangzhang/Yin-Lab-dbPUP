@@ -63,61 +63,62 @@
                             columns: [-3]
                         }
                     },
-                            {
-                                text: 'All({{count[0]}})',
-                                action: function () {
-                                    var table = $('#data-table').DataTable();
-                                    table.columns().search("").draw();
-                                    table.columns().search("").draw();
-                                }
-                            },
-                            {
-                                text: 'Archaea({{count[1]}})',
-                                action: function () {
-                                    var table = $('#data-table').DataTable();
-                                    table.columns().search("").draw();
-                                    table.column(-2).search('Archaea').draw();
-                                }
-                            },
-                            {
-                                text: 'Bacteria({{count[2]}})',
-                                action: function () {
-                                    var table = $('#data-table').DataTable();
-                                    table.columns().search("").draw();
-                                    table.column(-2).search('Bacteria').draw();
-                                }
-                            },
-                            {
-                                text: 'Eukaryota({{count[3]}})',
-                                action: function () {
-                                    var table = $('#data-table').DataTable();
-                                    table.columns().search("").draw();
-                                    table.column(-2).search('Eukaryota').draw();
-                                }
-                            },
-                            {
-                                text: 'Viruses({{count[4]}})',
-                                action: function () {
-                                    var table = $('#data-table').DataTable();
-                                    table.columns().search("").draw();
-                                    table.column(-2).search('Viruses').draw();
-                                }
-                            },
-                            {
-                                text: 'Unclassified({{count[5]}})',
-                                action: function () {
-                                    var table = $('#data-table').DataTable();
-                                    table.columns().search("").draw();
-                                    table.column(-2).search('unclassified').draw();
-                                }
+                    {
+                        text: 'All({{count[0]}})',
+                        action: function () {
+                            var table = $('#data-table').DataTable();
+                            table.columns().search("").draw();
+                            table.columns().search("").draw();
+                        }
                     },
-                        {
-                                text: 'Structure({{number}})',
-                                action: function () {
-                                    var table = $('#data-table').DataTable();
-                                    table.columns().search("").draw();
-                                    table.column(3).search( '^(?!\s*$).+', true, false ).draw();
-                                }}
+                    {
+                        text: 'Archaea({{count[1]}})',
+                        action: function () {
+                            var table = $('#data-table').DataTable();
+                            table.columns().search("").draw();
+                            table.column(-2).search('Archaea').draw();
+                        }
+                    },
+                    {
+                        text: 'Bacteria({{count[2]}})',
+                        action: function () {
+                            var table = $('#data-table').DataTable();
+                            table.columns().search("").draw();
+                            table.column(-2).search('Bacteria').draw();
+                        }
+                    },
+                    {
+                        text: 'Eukaryota({{count[3]}})',
+                        action: function () {
+                            var table = $('#data-table').DataTable();
+                            table.columns().search("").draw();
+                            table.column(-2).search('Eukaryota').draw();
+                        }
+                    },
+                    {
+                        text: 'Viruses({{count[4]}})',
+                        action: function () {
+                            var table = $('#data-table').DataTable();
+                            table.columns().search("").draw();
+                            table.column(-2).search('Viruses').draw();
+                        }
+                    },
+                    {
+                        text: 'Unclassified({{count[5]}})',
+                        action: function () {
+                            var table = $('#data-table').DataTable();
+                            table.columns().search("").draw();
+                            table.column(-2).search('unclassified').draw();
+                        }
+                    },
+                    {
+                        text: 'Structure({{number}})',
+                        action: function () {
+                            var table = $('#data-table').DataTable();
+                            table.columns().search("").draw();
+                            table.column(3).search('^(?!\s*$).+', true, false).draw();
+                        }
+                    }
                 ],
                 select: true
             });

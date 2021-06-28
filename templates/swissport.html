@@ -9,7 +9,7 @@
         </div>
     </div>
     {% if subfamily %}
-    <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('tree', family_id=family_id) }}">View phylogenetic
+        <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('tree', family_id=family_id) }}">View phylogenetic
             tree</a>
     {% elif family_id in ["FR3","HR6","HR8","IR2","UC1"] %}
         &nbsp;
@@ -62,59 +62,61 @@
                             columns: [-3]
                         }
                     },
-                            {
-                                text: 'All({{count[0]}})',
-                                action: function () {
-                                    var table = $('#data-table').DataTable();
-                                    table.columns().search("").draw();
-                                }
-                            },
-                            {
-                                text: 'Archaea({{count[1]}})',
-                                action: function () {
-                                    var table = $('#data-table').DataTable();
-                                    table.columns().search("").draw();
-                                    table.column(-2).search('Archaea').draw();
-                                }
-                            },
-                            {
-                                text: 'Bacteria({{count[2]}})',
-                                action: function () {
-                                    var table = $('#data-table').DataTable();
-                                    table.columns().search("").draw();
-                                    table.column(-2).search('Bacteria').draw();
-                                }
-                            },
-                            {
-                                text: 'Eukaryota({{count[3]}})',
-                                action: function () {
-                                     var table = $('#data-table').DataTable();
-                                     table.columns().search("").draw();
-                                    table.column(-2).search('Eukaryota').draw();
-                                }
-                            },
-                            {
-                                text: 'Viruses({{count[4]}})',
-                                action: function () {
-                                    var table = $('#data-table').DataTable();
-                                    table.columns().search("").draw();
-                                    table.column(-2).search('Viruses').draw();
-                                }
-                            },
-                            {
-                                text: 'Unclassified({{count[5]}})',
-                                action: function () {
-                                    var table = $('#data-table').DataTable();
-                                    table.columns().search("").draw();
-                                    table.column(-2).search('unclassified').draw();
-                                }},
-                        {
-                                text: 'Structure({{number}})',
-                                action: function () {
-                                    var table = $('#data-table').DataTable();
-                                    table.columns().search("").draw();
-                                    table.column(3).search( '^(?!\s*$).+', true, false ).draw();
-                                }}
+                    {
+                        text: 'All({{count[0]}})',
+                        action: function () {
+                            var table = $('#data-table').DataTable();
+                            table.columns().search("").draw();
+                        }
+                    },
+                    {
+                        text: 'Archaea({{count[1]}})',
+                        action: function () {
+                            var table = $('#data-table').DataTable();
+                            table.columns().search("").draw();
+                            table.column(-2).search('Archaea').draw();
+                        }
+                    },
+                    {
+                        text: 'Bacteria({{count[2]}})',
+                        action: function () {
+                            var table = $('#data-table').DataTable();
+                            table.columns().search("").draw();
+                            table.column(-2).search('Bacteria').draw();
+                        }
+                    },
+                    {
+                        text: 'Eukaryota({{count[3]}})',
+                        action: function () {
+                            var table = $('#data-table').DataTable();
+                            table.columns().search("").draw();
+                            table.column(-2).search('Eukaryota').draw();
+                        }
+                    },
+                    {
+                        text: 'Viruses({{count[4]}})',
+                        action: function () {
+                            var table = $('#data-table').DataTable();
+                            table.columns().search("").draw();
+                            table.column(-2).search('Viruses').draw();
+                        }
+                    },
+                    {
+                        text: 'Unclassified({{count[5]}})',
+                        action: function () {
+                            var table = $('#data-table').DataTable();
+                            table.columns().search("").draw();
+                            table.column(-2).search('unclassified').draw();
+                        }
+                    },
+                    {
+                        text: 'Structure({{number}})',
+                        action: function () {
+                            var table = $('#data-table').DataTable();
+                            table.columns().search("").draw();
+                            table.column(3).search('^(?!\s*$).+', true, false).draw();
+                        }
+                    }
                 ],
                 select: true
             });
