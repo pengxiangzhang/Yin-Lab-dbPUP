@@ -22,12 +22,13 @@
             <p></p>
         </div>
     </div>
+    <br>
 
     <script defer type="text/javascript">
         $(document).ready(function () {
             $('#data-table').DataTable({
                 lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
-                dom: 'PBfrtip',
+                dom: 'Bfrtip',
                 "initComplete": function () {
                     $("#data-table").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
                 },
@@ -40,25 +41,6 @@
                     searchable: true,
                     visible: false
                 },
-                    {
-                        searchPanes: {
-                            show: false
-                        },
-                        targets: [0, 1, 2, 3, 4, 5, 6, 7, 9]
-                    }, {
-                        searchPanes: {
-                            show: true,
-                            options: [
-                                {
-                                    label: 'Bacteria',
-                                    value: function (rowData, rowIdx) {
-                                        return rowData[8] === 'Bacteria';
-                                    },
-                                }
-                            ],
-                        },
-                        targets: [8]
-                    }
                 ],
                 buttons: [
                     'pageLength',
@@ -81,62 +63,61 @@
                             columns: [-3]
                         }
                     },
-                    {
-                        extend: 'collection',
-                        text: 'Filter',
-                        buttons: [
                             {
-                                text: 'All',
+                                text: 'All({{count[0]}})',
                                 action: function () {
-                                    location.reload(true);
+                                    var table = $('#data-table').DataTable();
+                                    table.columns().search("").draw();
+                                    table.columns().search("").draw();
                                 }
                             },
                             {
-                                text: 'Bacteria',
+                                text: 'Archaea({{count[1]}})',
                                 action: function () {
                                     var table = $('#data-table').DataTable();
-                                    table.column(4).search('').draw();
-                                    var table = $('#data-table').DataTable();
-                                    table.column(-2).search('Bacteria').draw();
-                                }
-                            },
-                            {
-                                text: 'Archaea',
-                                action: function () {
-                                    var table = $('#data-table').DataTable();
-                                    table.column(4).search('').draw();
-                                    var table = $('#data-table').DataTable();
+                                    table.columns().search("").draw();
                                     table.column(-2).search('Archaea').draw();
                                 }
                             },
                             {
-                                text: 'Eukaryota',
+                                text: 'Bacteria({{count[2]}})',
                                 action: function () {
                                     var table = $('#data-table').DataTable();
-                                    table.column(4).search('').draw();
+                                    table.columns().search("").draw();
+                                    table.column(-2).search('Bacteria').draw();
+                                }
+                            },
+                            {
+                                text: 'Eukaryota({{count[3]}})',
+                                action: function () {
                                     var table = $('#data-table').DataTable();
+                                    table.columns().search("").draw();
                                     table.column(-2).search('Eukaryota').draw();
                                 }
                             },
                             {
-                                text: 'Viruses',
+                                text: 'Viruses({{count[4]}})',
                                 action: function () {
                                     var table = $('#data-table').DataTable();
-                                    table.column(4).search('').draw();
-                                    var table = $('#data-table').DataTable();
+                                    table.columns().search("").draw();
                                     table.column(-2).search('Viruses').draw();
                                 }
                             },
                             {
-                                text: 'Unclassified',
+                                text: 'Unclassified({{count[5]}})',
                                 action: function () {
                                     var table = $('#data-table').DataTable();
-                                    table.column(4).search('').draw();
-                                    var table = $('#data-table').DataTable();
+                                    table.columns().search("").draw();
                                     table.column(-2).search('unclassified').draw();
                                 }
-                            }]
-                    }
+                    },
+                        {
+                                text: 'Structure({{number}})',
+                                action: function () {
+                                    var table = $('#data-table').DataTable();
+                                    table.columns().search("").draw();
+                                    table.column(3).search( '^(?!\s*$).+', true, false ).draw();
+                                }}
                 ],
                 select: true
             });

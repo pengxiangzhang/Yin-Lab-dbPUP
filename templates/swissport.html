@@ -9,10 +9,10 @@
         </div>
     </div>
     {% if subfamily %}
-        <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('trembl', family_id=family_id) }}">View TrEMBL</a>
-    {% elif family_id in ["HR6","HR8","IR2","UC1"] %}
-        <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('tree', family_id=family_id) }}">View phylogenetic
+    <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('tree', family_id=family_id) }}">View phylogenetic
             tree</a>
+    {% elif family_id in ["FR3","HR6","HR8","IR2","UC1"] %}
+        &nbsp;
     {% else %}
         <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('tree', family_id=family_id) }}">View phylogenetic
             tree</a>
@@ -62,63 +62,59 @@
                             columns: [-3]
                         }
                     },
-                    {
-                        extend: 'collection',
-                        text: 'Filter',
-                        buttons: [
                             {
-                                text: 'All',
+                                text: 'All({{count[0]}})',
                                 action: function () {
-                                    location.reload(true);
+                                    var table = $('#data-table').DataTable();
+                                    table.columns().search("").draw();
                                 }
                             },
                             {
-                                text: 'Bacteria',
+                                text: 'Archaea({{count[1]}})',
                                 action: function () {
                                     var table = $('#data-table').DataTable();
-                                    table.column(4).search('').draw();
-                                    var table = $('#data-table').DataTable();
-                                    table.column(-2).search('Bacteria').draw();
-                                }
-                            },
-                            {
-                                text: 'Archaea',
-                                action: function () {
-                                    var table = $('#data-table').DataTable();
-                                    table.column(4).search('').draw();
-                                    var table = $('#data-table').DataTable();
+                                    table.columns().search("").draw();
                                     table.column(-2).search('Archaea').draw();
                                 }
                             },
                             {
-                                text: 'Eukaryota',
+                                text: 'Bacteria({{count[2]}})',
                                 action: function () {
                                     var table = $('#data-table').DataTable();
-                                    table.column(4).search('').draw();
-                                    var table = $('#data-table').DataTable();
+                                    table.columns().search("").draw();
+                                    table.column(-2).search('Bacteria').draw();
+                                }
+                            },
+                            {
+                                text: 'Eukaryota({{count[3]}})',
+                                action: function () {
+                                     var table = $('#data-table').DataTable();
+                                     table.columns().search("").draw();
                                     table.column(-2).search('Eukaryota').draw();
                                 }
                             },
                             {
-                                text: 'Viruses',
+                                text: 'Viruses({{count[4]}})',
                                 action: function () {
                                     var table = $('#data-table').DataTable();
-                                    table.column(4).search('').draw();
-                                    var table = $('#data-table').DataTable();
+                                    table.columns().search("").draw();
                                     table.column(-2).search('Viruses').draw();
                                 }
                             },
                             {
-                                text: 'Unclassified',
+                                text: 'Unclassified({{count[5]}})',
                                 action: function () {
                                     var table = $('#data-table').DataTable();
-                                    table.column(4).search('').draw();
-                                    var table = $('#data-table').DataTable();
+                                    table.columns().search("").draw();
                                     table.column(-2).search('unclassified').draw();
-                                }
-                            }]
-                    }
-
+                                }},
+                        {
+                                text: 'Structure({{number}})',
+                                action: function () {
+                                    var table = $('#data-table').DataTable();
+                                    table.columns().search("").draw();
+                                    table.column(3).search( '^(?!\s*$).+', true, false ).draw();
+                                }}
                 ],
                 select: true
             });
@@ -150,7 +146,7 @@
                     <td><a href="https://www.uniprot.org/uniprot/{{ record.uniq_id }}">{{ record.uniq_id }}</a></td>
 
                     {% if record.pdb  == '-1' %}
-                        <td>{{ ' ' }}</td>
+                        <td></td>
                     {% else %}
                         <td>
                             {% for element in rows[record.number] %}

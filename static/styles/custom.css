@@ -364,10 +364,6 @@ table tr {
     padding: 0
 }
 
-table tr:nth-child(2n),
-thead {
-    background-color: var(--mid-3)
-}
 
 table tr th {
     font-weight: 700;

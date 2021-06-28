@@ -13,21 +13,21 @@
 
 <h2 id="GUT_GENOME095262_02142">GUT_GENOME095262_02142</h2>
 <p>Gene: <em>iolG_3</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00014">GUT_GENOME095262</a></p>
+<p>Representative genome: <a href="Europe">GUT_GENOME095262</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 3799..4869</p>
 <p>Protein length: 357</p>
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.18">1.1.1.18</a></p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Clostridiales; Clostridiaceae; Clostridium; Clostridium butyricum</p>
-<p>Geography: Italy, Europe</p>
+<p>Lineage: _IDH_MocA</p>
+<p>Geography: p__Firmicutes_A, d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Clostridiales;f__Clostridiaceae;g__Clostridium;s__Clostridium butyricum</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
 <h2 id="GUT_GENOME095262_02143">GUT_GENOME095262_02143</h2>
 <p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00014">GUT_GENOME095262</a></p>
+<p>Representative genome: <a href="Europe">GUT_GENOME095262</a></p>
 <p>Gene type: other genes</p>
 <p>Position: 4897..5856</p>
 <p>Protein length: 320</p>
@@ -35,23 +35,24 @@
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
 
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Clostridiales; Clostridiaceae; Clostridium; Clostridium butyricum</p>
-<p>Geography: Italy, Europe</p>
+<p>Lineage: er</p>
+<p>Geography: p__Firmicutes_A, d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Clostridiales;f__Clostridiaceae;g__Clostridium;s__Clostridium butyricum</p>
 
   </div>
   <div class="tab-pane fade" id="tab3">
 
 <h2 id="GUT_GENOME095262_02144">GUT_GENOME095262_02144</h2>
 <p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00014">GUT_GENOME095262</a></p>
+<p>Representative genome: <a href="Europe">GUT_GENOME095262</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 5917..6309</p>
 <p>Protein length: 131</p>
 <p>Product: hypothetical protein</p>
 <p>EC: NA</p>
-<p>Pfam: No Pfam-A matched</p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Clostridiales; Clostridiaceae; Clostridium; Clostridium butyricum</p>
-<p>Geography: Italy, Europe</p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/ns">ns</a></p>
+
+<p>Lineage: X49</p>
+<p>Geography: p__Firmicutes_A, d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Clostridiales;f__Clostridiaceae;g__Clostridium;s__Clostridium butyricum</p>
 
   </div>
 </div>

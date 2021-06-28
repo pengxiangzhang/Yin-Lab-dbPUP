@@ -14,10 +14,9 @@
   <div class="tab-pane fade in active" id="tab1" markdown="1">
 
 # B1XDG0
-
 # Oxidation/Reduction Reactions (ORs) Family 1
 
-## Literature Information
+##  Literature Information
 
 | Title    | Discovery of the curcumin metabolic pathway involving a unique enzyme in an intestinal microorganism |
 | -------- | ------------------------------------------------------------ |
@@ -27,7 +26,7 @@
 
 ---
 
-## Experimental results
+##  Experimental results
 
 - **Enzyme**
 
@@ -39,8 +38,7 @@ Organism: *Escherichia coli (strain K12 / DH10B)*
 
 Length: 345 AA
 
-Taxonomic
-identifier: [316385](https://www.uniprot.org/taxonomy/316385) [[NCBI](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?lvl=0&id=316385)]
+Taxonomic identifier: [316385](https://www.uniprot.org/taxonomy/316385) [[NCBI](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?lvl=0&id=316385)]
 
 - **Pfam**
 
@@ -59,27 +57,19 @@ Date: Mon Jul 20 14:32:16 2020
 
 Description:
 
-1. ADH_N_2 (View in [Pfam](https://pfam.xfam.org/family/ADH_N_2#tabview=tab0)
-   and [InterPro](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR041694/))
+1. ADH_N_2 (View in [Pfam](https://pfam.xfam.org/family/ADH_N_2#tabview=tab0) and [InterPro](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR041694/))
 
-   N-terminal region of oxidoreductase and prostaglandin reductase and alcohol dehydrogenase.
+   N-terminal region of oxidoreductase and prostaglandin reductase and alcohol dehydrogenase. 
 
-2. ADH_zinc_N (View in [Pfam](https://pfam.xfam.org/family/ADH_zinc_N)
-   and [InterPro](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR013149/))
+2. ADH_zinc_N (View in [Pfam](https://pfam.xfam.org/family/ADH_zinc_N) and [InterPro](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR013149/))
 
    No Pfam abstract.s
 
 - **Reaction**
 
-[curcumin](https://pubchem.ncbi.nlm.nih.gov/compound/curcumin) + [NADPH](https://pubchem.ncbi.nlm.nih.gov/compound/5884)
-+ [H<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/1038)
-&rArr; [dihydrocurcumin](https://pubchem.ncbi.nlm.nih.gov/compound/dihydrocurcumin)[intermediate product]
-+ [NADP<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/15938972)
+[curcumin](https://pubchem.ncbi.nlm.nih.gov/compound/curcumin) + [NADPH](https://pubchem.ncbi.nlm.nih.gov/compound/5884) + [H<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/1038) &rArr; [dihydrocurcumin](https://pubchem.ncbi.nlm.nih.gov/compound/dihydrocurcumin)[intermediate product] + [NADP<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/15938972)
 
-[dihydrocurcumin](https://pubchem.ncbi.nlm.nih.gov/compound/dihydrocurcumin)  [NADPH](https://pubchem.ncbi.nlm.nih.gov/compound/5884)
-+ [H<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/1038)
-&rArr; [tetrahydrocurcumin](https://pubchem.ncbi.nlm.nih.gov/compound/tetrahydrocurcumin)
-+ [NADP<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/15938972)
+[dihydrocurcumin](https://pubchem.ncbi.nlm.nih.gov/compound/dihydrocurcumin)  [NADPH](https://pubchem.ncbi.nlm.nih.gov/compound/5884) + [H<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/1038) &rArr; [tetrahydrocurcumin](https://pubchem.ncbi.nlm.nih.gov/compound/tetrahydrocurcumin) + [NADP<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/15938972)
 
 <figure>
 <div class="linerow">
@@ -104,10 +94,9 @@ Description:
   <div class="tab-pane fade" id="tab2" markdown="1">
 
 # B1XDG0_2
-
 # Oxidation/Reduction Reactions (ORs) Family 1
 
-## Literature Information
+##  Literature Information
 
 | Title    | Discovery of the curcumin metabolic pathway involving a unique enzyme in an intestinal microorganism |
 | -------- | ------------------------------------------------------------ |
@@ -117,7 +106,7 @@ Description:
 
 ---
 
-## Experimental results
+##  Experimental results
 
 - **Enzyme**
 
@@ -129,8 +118,7 @@ Organism: *Escherichia coli (strain K12 / DH10B)*
 
 Length: 345 AA
 
-Taxonomic
-identifier: [316385](https://www.uniprot.org/taxonomy/316385) [[NCBI](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?lvl=0&id=316385)]
+Taxonomic identifier: [316385](https://www.uniprot.org/taxonomy/316385) [[NCBI](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?lvl=0&id=316385)]
 
 - **Pfam**
 
@@ -149,27 +137,19 @@ Date: Mon Jul 20 14:32:16 2020
 
 Description:
 
-1. ADH_N_2 (View in [Pfam](https://pfam.xfam.org/family/ADH_N_2#tabview=tab0)
-   and [InterPro](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR041694/))
+1. ADH_N_2 (View in [Pfam](https://pfam.xfam.org/family/ADH_N_2#tabview=tab0) and [InterPro](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR041694/))
 
-   N-terminal region of oxidoreductase and prostaglandin reductase and alcohol dehydrogenase.
+   N-terminal region of oxidoreductase and prostaglandin reductase and alcohol dehydrogenase. 
 
-2. ADH_zinc_N (View in [Pfam](https://pfam.xfam.org/family/ADH_zinc_N)
-   and [InterPro](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR013149/))
+2. ADH_zinc_N (View in [Pfam](https://pfam.xfam.org/family/ADH_zinc_N) and [InterPro](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR013149/))
 
    No Pfam abstract.s
 
 - **Reaction**
 
-[curcumin](https://pubchem.ncbi.nlm.nih.gov/compound/curcumin) + [NADPH](https://pubchem.ncbi.nlm.nih.gov/compound/5884)
-+ [H<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/1038)
-&rArr; [dihydrocurcumin](https://pubchem.ncbi.nlm.nih.gov/compound/dihydrocurcumin)[intermediate product]
-+ [NADP<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/15938972)
+[curcumin](https://pubchem.ncbi.nlm.nih.gov/compound/curcumin) + [NADPH](https://pubchem.ncbi.nlm.nih.gov/compound/5884) + [H<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/1038) &rArr; [dihydrocurcumin](https://pubchem.ncbi.nlm.nih.gov/compound/dihydrocurcumin)[intermediate product] + [NADP<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/15938972)
 
-[dihydrocurcumin](https://pubchem.ncbi.nlm.nih.gov/compound/dihydrocurcumin)  [NADPH](https://pubchem.ncbi.nlm.nih.gov/compound/5884)
-+ [H<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/1038)
-&rArr; [tetrahydrocurcumin](https://pubchem.ncbi.nlm.nih.gov/compound/tetrahydrocurcumin)
-+ [NADP<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/15938972)
+[dihydrocurcumin](https://pubchem.ncbi.nlm.nih.gov/compound/dihydrocurcumin)  [NADPH](https://pubchem.ncbi.nlm.nih.gov/compound/5884) + [H<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/1038) &rArr; [tetrahydrocurcumin](https://pubchem.ncbi.nlm.nih.gov/compound/tetrahydrocurcumin) + [NADP<sup>+</sup>](https://pubchem.ncbi.nlm.nih.gov/compound/15938972)
 
 <figure>
 <div class="linerow">

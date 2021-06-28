@@ -1,6 +1,7 @@
 from data_analyzer import Data_analyzer
 from flask import Flask, request, send_from_directory, flash, render_template, abort
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import func
 from flask_caching import Cache
 from flask_minify import minify
 import markdown, json, glob, os, uuid, requests
@@ -35,7 +36,6 @@ with open('config.json') as json_file:
     app.config['SQLALCHEMY_DATABASE_URI'] = connection_stat
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 dtbs = SQLAlchemy(app)
-
 
 # routing
 # Error Page
@@ -200,14 +200,21 @@ def characterized():
 def swissport(family_id):
     title = "Swiss-Prot - " + family_id + " - "
     if is_family(family_id):
-        allfamily_id = family_id + "%"
-        records = SwiRecord.query.filter(SwiRecord.family.like(allfamily_id))
+        newfamily_id = family_id + "%"
+        records = SwiRecord.query.filter(SwiRecord.family.like(newfamily_id))
+        number = dtbs.session.query(func.sum(SwiRecord.number_pdb)).filter(SwiRecord.family.like(newfamily_id)).scalar()
         subfamily = False
     elif is_subfamily(family_id):
-        subfamily = True
         records = SwiRecord.query.filter_by(family=family_id)
+        number = dtbs.session.query(func.sum(SwiRecord.number_pdb)).filter(SwiRecord.family==family_id).scalar()
+        subfamily = True
     else:
         abort(404)
+        
+    count = [records.count(),records.filter_by(type="Archaea").count(),records.filter_by(type="Bacteria").count(),records.filter_by(type="Eukaryota").count(),records.filter_by(type="Viruses").count(),records.filter_by(type="unclassified").count()]
+
+    if number is None:
+        number = 0
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
@@ -222,7 +229,7 @@ def swissport(family_id):
     description = "Database for Polyphenol Utilized Proteins from gut microbiota. Swiss-Prot data for " + family_id
     return render_template('swissport.html', family_id=family_id, records=records, ec=ec_link, rows=pdb_row,
                            description=description, title=title,
-                           name=name, subfamily=subfamily)
+                           name=name, subfamily=subfamily,count=count,number=number)
 
 
 @app.route('/dbpup/Trembl/<family_id>', methods=['GET', 'POST'])
@@ -232,12 +239,19 @@ def trembl(family_id):
     if is_family(family_id):
         newfamily_id = family_id + "%"
         records = TreRecord.query.filter(TreRecord.family.like(newfamily_id))
+        number = dtbs.session.query(func.sum(TreRecord.number_pdb)).filter(TreRecord.family.like(newfamily_id)).scalar()
         subfamily = False
     elif is_subfamily(family_id):
         records = TreRecord.query.filter_by(family=family_id)
+        number = dtbs.session.query(func.sum(TreRecord.number_pdb)).filter(TreRecord.family==family_id).scalar()
+
         subfamily = True
     else:
         abort(404)
+    
+    if number is None:
+        number = 0
+    count = [records.count(),records.filter_by(type="Archaea").count(),records.filter_by(type="Bacteria").count(),records.filter_by(type="Eukaryota").count(),records.filter_by(type="Viruses").count(),records.filter_by(type="unclassified").count()]
 
     data_analyzer = Data_analyzer(records)
     ec_link, pdb_row = data_analyzer.ec_pdb_split()
@@ -251,7 +265,7 @@ def trembl(family_id):
 
     description = "Database for Polyphenol Utilized Proteins from gut microbiota. TrEMBL data for " + family_id
     return render_template("trembl.html", family_id=family_id, records=records, ec=ec_link, rows=pdb_row,
-                           description=description, title=title, name=name, subfamily=subfamily)
+                           description=description, title=title, name=name, subfamily=subfamily,count=count,number=number)
 
 
 @app.route("/dbpup/detail/<mode>/<unid>")
@@ -904,6 +918,7 @@ class ClusRecord(dtbs.Model):
     seq = dtbs.Column(dtbs.VARCHAR(5500))
     pfam_link = dtbs.Column(dtbs.VARCHAR(255))
     mgnify = dtbs.Column(dtbs.VARCHAR(255))
+    color = dtbs.Column(dtbs.VARCHAR(10))
 
 
 if __name__ == "__main__":

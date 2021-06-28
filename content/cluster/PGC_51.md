@@ -2,40 +2,39 @@
 
 <ul id="myTab" class="nav nav-tabs">
   <li class="active">
-        <a href="#tab1" data-toggle="tab">GUT_GENOME258397_02067</a>
+        <a href="#tab1" data-toggle="tab">GUT_GENOME260147_00587</a>
   </li>
-<li><a href="#tab2" data-toggle="tab">GUT_GENOME258397_02068</a></li>
+<li><a href="#tab2" data-toggle="tab">GUT_GENOME260147_00588</a></li>
 </ul>
 
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="tab1">
 
-<h2 id="GUT_GENOME258397_02067">GUT_GENOME258397_02067</h2>
+<h2 id="GUT_GENOME260147_00587">GUT_GENOME260147_00587</h2>
 <p>Gene: <em>NA</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-04168">GUT_GENOME258397</a></p>
+<p>Representative genome: <a href="Europe">GUT_GENOME260147</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 25236..26057</p>
-<p>Protein length: 274</p>
+<p>Position: 4478..7324</p>
+<p>Protein length: 949</p>
 <p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
-
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Christensenellales; CAG-74; ; </p>
-<p>Geography: United Kingdom, Europe</p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/Bac_rhamnosid_C">Bac_rhamnosid_C</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid6H">Bac_rhamnosid6H</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid">Bac_rhamnosid</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid_N">Bac_rhamnosid_N</a></p>
+<p>Lineage: _rhamnosid6H</p>
+<p>Geography: p__Firmicutes_A, d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Peptostreptococcales;f__Peptostreptococcaceae;g__Terrisporobacter;s__</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
-<h2 id="GUT_GENOME258397_02068">GUT_GENOME258397_02068</h2>
-<p>Gene: <em>iolG_11</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-04168">GUT_GENOME258397</a></p>
+<h2 id="GUT_GENOME260147_00588">GUT_GENOME260147_00588</h2>
+<p>Gene: <em>NA</em></p>
+<p>Representative genome: <a href="Europe">GUT_GENOME260147</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 26105..27262</p>
-<p>Protein length: 386</p>
-<p>Product: Inositol 2-dehydrogenase/D-chiro-inositol 3-dehydrogenase</p>
-<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.18">1.1.1.18</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Christensenellales; CAG-74; ; </p>
-<p>Geography: United Kingdom, Europe</p>
+<p>Position: 7340..10180</p>
+<p>Protein length: 947</p>
+<p>Product: hypothetical protein</p>
+<p>EC: NA</p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/Bac_rhamnosid6H">Bac_rhamnosid6H</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid_C">Bac_rhamnosid_C</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid">Bac_rhamnosid</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid_N">Bac_rhamnosid_N</a></p>
+<p>Lineage: _rhamnosid6H</p>
+<p>Geography: p__Firmicutes_A, d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Peptostreptococcales;f__Peptostreptococcaceae;g__Terrisporobacter;s__</p>
 
   </div>
 </div>

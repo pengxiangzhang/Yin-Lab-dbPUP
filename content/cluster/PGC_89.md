@@ -14,21 +14,21 @@
 
 <h2 id="GUT_GENOME029225_00752">GUT_GENOME029225_00752</h2>
 <p>Gene: <em>NA</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00002">GUT_GENOME029225</a></p>
+<p>Representative genome: <a href="Asia">GUT_GENOME029225</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 44686..47808</p>
 <p>Protein length: 1041</p>
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_3">Glyco_hydro_3</a>, <a href="http://pfam.xfam.org/family/Glyco_hydro_3_C">Glyco_hydro_3_C</a>, <a href="http://pfam.xfam.org/family/Fn3-like">Fn3-like</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Blautia_A; Blautia_A sp900066165</p>
-<p>Geography: China, Asia</p>
+<p>Lineage: 0933_PF14310_PF01915</p>
+<p>Geography: p__Firmicutes_A, d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A;s__Blautia_A sp900066165</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
 <h2 id="GUT_GENOME029225_00753">GUT_GENOME029225_00753</h2>
 <p>Gene: <em>aes_3</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00002">GUT_GENOME029225</a></p>
+<p>Representative genome: <a href="Asia">GUT_GENOME029225</a></p>
 <p>Gene type: other genes</p>
 <p>Position: 47872..48921</p>
 <p>Protein length: 350</p>
@@ -36,15 +36,15 @@
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.-">3.1.1.-</a></p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Abhydrolase_3">Abhydrolase_3</a></p>
 
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Blautia_A; Blautia_A sp900066165</p>
-<p>Geography: China, Asia</p>
+<p>Lineage: er</p>
+<p>Geography: p__Firmicutes_A, d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A;s__Blautia_A sp900066165</p>
 
   </div>
   <div class="tab-pane fade" id="tab3">
 
 <h2 id="GUT_GENOME029225_00754">GUT_GENOME029225_00754</h2>
 <p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00002">GUT_GENOME029225</a></p>
+<p>Representative genome: <a href="Asia">GUT_GENOME029225</a></p>
 <p>Gene type: other genes</p>
 <p>Position: 48944..50521</p>
 <p>Protein length: 526</p>
@@ -52,23 +52,23 @@
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/MFS_2">MFS_2</a></p>
 
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Blautia_A; Blautia_A sp900066165</p>
-<p>Geography: China, Asia</p>
+<p>Lineage: er</p>
+<p>Geography: p__Firmicutes_A, d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A;s__Blautia_A sp900066165</p>
 
   </div>
   <div class="tab-pane fade" id="tab4">
 
 <h2 id="GUT_GENOME029225_00755">GUT_GENOME029225_00755</h2>
 <p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00002">GUT_GENOME029225</a></p>
+<p>Representative genome: <a href="Asia">GUT_GENOME029225</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 50499..53069</p>
 <p>Protein length: 857</p>
 <p>Product: hypothetical protein</p>
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Bac_rhamnosid_C">Bac_rhamnosid_C</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid6H">Bac_rhamnosid6H</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid">Bac_rhamnosid</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid_N">Bac_rhamnosid_N</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Blautia_A; Blautia_A sp900066165</p>
-<p>Geography: China, Asia</p>
+<p>Lineage: _rhamnosid6H</p>
+<p>Geography: p__Firmicutes_A, d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A;s__Blautia_A sp900066165</p>
 
   </div>
 </div>

@@ -59,7 +59,7 @@
                 </thead>
                 <tbody>
                 {% for record in records %}
-                    <tr>
+                    <tr bgcolor="{{record.color}}">
                     <td>
                         <a href="{{ url_for('cluster_detail', cluster_id = record.cluster_id) }}">{{ record.cluster_id }}</a>
                     </td>
