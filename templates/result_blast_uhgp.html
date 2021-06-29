@@ -65,15 +65,16 @@
                                 <a href="{{ url_for('cluster_detail', cluster_id = record[2]) }}"
                                    target="_blank">{{ record[2] }}</a>
                             {% endif %}
-
                         </td>
-                        {% if record[3].find("_")== -1 %}
-                            <td><a href="{{ url_for('family', family_id = record[3]) }} "
-                                   target="_blank">{{ record[3] }}</a></td>
+                        <td>
+                        {% if "unclassified" in record[3]: %}
+                        <a href="{{ url_for('family', family_id = record[3].split('-', 1)[0]) }}">{{ record[3] }}</a>
+                        {% elif "_" in record.family: %}
+                            <a href="{{ url_for('subfamily', family_id = record[3]) }}">{{ record[3] }}</a>
                         {% else %}
-                            <td><a href="{{ url_for('subfamily', family_id = record[3]) }}"
-                                   target="_blank">{{ record[3] }}</a></td>
+                            <a href="{{ url_for('family', family_id = record[3]) }}">{{ record[3] }}</a>
                         {% endif %}
+                        </td>
                         <td>{{ record[4] }}</td>
                         <td>{{ record[5] }}</td>
                         <td>{{ record[6] }}</td>

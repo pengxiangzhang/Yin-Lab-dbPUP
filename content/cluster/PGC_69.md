@@ -13,22 +13,22 @@
 
 <h2 id="GUT_GENOME055203_00997">GUT_GENOME055203_00997</h2>
 <p>Gene: <em>NA</em>
-<p>Representative genome: <a href="Europe">GUT_GENOME055203</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-04469">GUT_GENOME055203</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 11100..14012</p>
 <p>Protein length: 971</p>
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_106">Glyco_hydro_106</a></p>
 
-<p>Lineage: co_hydro_106</p>
-<p>Geography: p__Bacteroidota, d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Rikenellaceae;g__Alistipes_A;s__</p>
+<p>Lineage: Bacteria; Bacteroidota; Bacteroidia; Bacteroidales; Rikenellaceae; Alistipes_A; </p>
+<p>Geography: Denmark, Europe</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
 <h2 id="GUT_GENOME055203_00998">GUT_GENOME055203_00998</h2>
 <p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="Europe">GUT_GENOME055203</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-04469">GUT_GENOME055203</a></p>
 <p>Gene type: other genes</p>
 <p>Position: 14149..15636</p>
 <p>Protein length: 496</p>
@@ -36,15 +36,15 @@
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_28">Glyco_hydro_28</a></p>
 
-<p>Lineage: er</p>
-<p>Geography: p__Bacteroidota, d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Rikenellaceae;g__Alistipes_A;s__</p>
+<p>Lineage: Bacteria; Bacteroidota; Bacteroidia; Bacteroidales; Rikenellaceae; Alistipes_A; </p>
+<p>Geography: Denmark, Europe</p>
 
   </div>
   <div class="tab-pane fade" id="tab3">
 
 <h2 id="GUT_GENOME055203_00999">GUT_GENOME055203_00999</h2>
 <p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="Europe">GUT_GENOME055203</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-04469">GUT_GENOME055203</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 15695..18586</p>
 <p>Protein length: 964</p>
@@ -52,8 +52,8 @@
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_106">Glyco_hydro_106</a></p>
 
-<p>Lineage: co_hydro_106</p>
-<p>Geography: p__Bacteroidota, d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Rikenellaceae;g__Alistipes_A;s__</p>
+<p>Lineage: Bacteria; Bacteroidota; Bacteroidia; Bacteroidales; Rikenellaceae; Alistipes_A; </p>
+<p>Geography: Denmark, Europe</p>
 
   </div>
 </div>

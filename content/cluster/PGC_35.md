@@ -12,30 +12,30 @@
 
 <h2 id="GUT_GENOME137451_00335">GUT_GENOME137451_00335</h2>
 <p>Gene: <em>NA</em>
-<p>Representative genome: <a href="Europe">GUT_GENOME137451</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-02196">GUT_GENOME137451</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 16923..17774</p>
 <p>Protein length: 284</p>
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
 
-<p>Lineage: endonuc_2</p>
-<p>Geography: p__Firmicutes_A, d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__UBA1691;s__</p>
+<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Oscillospirales; Acutalibacteraceae; UBA1691; </p>
+<p>Geography: Spain, Europe</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
 <h2 id="GUT_GENOME137451_00336">GUT_GENOME137451_00336</h2>
 <p>Gene: <em>iolG_2</em></p>
-<p>Representative genome: <a href="Europe">GUT_GENOME137451</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-02196">GUT_GENOME137451</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 17788..18861</p>
 <p>Protein length: 358</p>
 <p>Product: Inositol 2-dehydrogenase/D-chiro-inositol 3-dehydrogenase</p>
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.18">1.1.1.18</a></p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a></p>
-<p>Lineage: _IDH_MocA</p>
-<p>Geography: p__Firmicutes_A, d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__UBA1691;s__</p>
+<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Oscillospirales; Acutalibacteraceae; UBA1691; </p>
+<p>Geography: Spain, Europe</p>
 
   </div>
 </div>

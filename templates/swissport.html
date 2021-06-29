@@ -56,7 +56,7 @@
                         fieldBoundary: '',
                         text: 'Copy',
                         title: '',
-                        header: '\n',
+                        header: '',
                         exportOptions: {
                             stripNewlines: false,
                             columns: [-3]
@@ -157,7 +157,15 @@
                         </td>
                     {% endif %}
 
-                    <td>{{ record.family }}</td>
+                    <td>
+                        {% if "unclassified" in record.family: %}
+                        <a href="{{ url_for('family', family_id = record.family.split('-', 1)[0]) }}">{{ record.family }}</a>
+                        {% elif "_" in record.family: %}
+                            <a href="{{ url_for('subfamily', family_id = record.family) }}">{{ record.family }}</a>
+                        {% else %}
+                            <a href="{{ url_for('family', family_id = record.family) }}">{{ record.family }}</a>
+                        {% endif %}
+                    </td>
                     {% if record.ec == '-1' %}
                         <td>{{ ' ' }}</td>
                     {% else %}
@@ -170,10 +178,7 @@
                     <td>
                         <a href="{{ url_for('detail',mode='swiss', unid = record.uniq_id) }}" target="_blank">view</a>
                     </td>
-                    <td>
-                        <p hidden>>{{ record.uniq_id }} {{ record.protein_enzyme }} OS={{ record.strain }}</p>
-                        <p hidden style="max-width: 40ch; word-wrap:break-word;">{{ record.seq }}</p>
-                    </td>
+                    <td>>{{ record.uniq_id }} {{ record.protein_enzyme }} OS={{ record.strain }}&#10;{{ record.seq }</td>
                     <td>
                         <p>{{ record.type }}</p>
                     </td>

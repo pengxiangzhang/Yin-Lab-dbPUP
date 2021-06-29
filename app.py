@@ -10,9 +10,9 @@ import pandas as pd
 
 # Application configurations
 app = Flask(__name__, static_url_path='/dbpup/static')
-# cache = Cache(app, config={'CACHE_TYPE': 'FileSystemCache', 'CACHE_DIR': 'cache', 'CACHE_IGNORE_ERRORS': 'True',
-#                           'CACHE_THRESHOLD': '500'})
-# minify(app=app, html=True, js=True, cssless=True)
+cache = Cache(app, config={'CACHE_TYPE': 'FileSystemCache', 'CACHE_DIR': 'cache', 'CACHE_IGNORE_ERRORS': 'True',
+                          'CACHE_THRESHOLD': '500'})
+minify(app=app, html=True, js=True, cssless=True)
 
 # read configurations
 with open('config.json') as json_file:
@@ -147,7 +147,6 @@ def uhgp(name_id):
         description = "UHGP - " + name_id + " for dbPUP"
         records = UhgpRecord.query.filter_by(continent=name_id)
 
-        print("haha: " + name_id)
         return render_template('uhgp_continent.html', content=to_md(c), description=description, title=title, name=name,
                                records=records)
 
@@ -714,7 +713,6 @@ def hmmscan(query):
                     result += line
                 elif not line.lstrip().startswith('#'):
                     result += line
-        print(result)
         if os.path.exists('tmp/' + uuidname + '.fsa'):
             os.remove('tmp/' + uuidname + '.fsa')
         if os.path.exists('tmp/' + uuidname + '.tbl'):
@@ -744,6 +742,7 @@ def blastx(query, db, evalue):
             command = "./blast/blastx -db blastdb/characterzied/characterzied -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue " + evalue + " -num_threads 2"
         if db == "u":
             command = "./blast/blastx -db blastdb/uhgp/uhgp_hits -query tmp/" + uuidname + ".fsa -out tmp/" + uuidname + ".blast -outfmt 6 -evalue " + evalue + " -num_threads 2"
+        print(command)
         os.system(command)
         with open('tmp/' + uuidname + '.blast', 'r') as f:
             data = f.readlines()

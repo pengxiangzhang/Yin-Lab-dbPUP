@@ -13,21 +13,21 @@
 
 <h2 id="GUT_GENOME215926_00905">GUT_GENOME215926_00905</h2>
 <p>Gene: <em>NA</em>
-<p>Representative genome: <a href="North America">GUT_GENOME215926</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-03226">GUT_GENOME215926</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 3946..7095</p>
 <p>Protein length: 1050</p>
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_3">Glyco_hydro_3</a>, <a href="http://pfam.xfam.org/family/Glyco_hydro_3_C">Glyco_hydro_3_C</a>, <a href="http://pfam.xfam.org/family/Fn3-like">Fn3-like</a></p>
-<p>Lineage: 0933_PF14310_PF01915</p>
-<p>Geography: p__Firmicutes_A, d__Bacteria;p__Firmicutes_A;c__Clostridia;o__4C28d-15;f__CAG-727;g__QALS01;s__</p>
+<p>Lineage: Bacteria; Firmicutes_A; Clostridia; 4C28d-15; CAG-727; QALS01; </p>
+<p>Geography: United States, North America</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
 <h2 id="GUT_GENOME215926_00906">GUT_GENOME215926_00906</h2>
 <p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="North America">GUT_GENOME215926</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-03226">GUT_GENOME215926</a></p>
 <p>Gene type: other genes</p>
 <p>Position: 7097..7585</p>
 <p>Protein length: 163</p>
@@ -35,23 +35,23 @@
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/ns">ns</a></p>
 
-<p>Lineage: er</p>
-<p>Geography: p__Firmicutes_A, d__Bacteria;p__Firmicutes_A;c__Clostridia;o__4C28d-15;f__CAG-727;g__QALS01;s__</p>
+<p>Lineage: Bacteria; Firmicutes_A; Clostridia; 4C28d-15; CAG-727; QALS01; </p>
+<p>Geography: United States, North America</p>
 
   </div>
   <div class="tab-pane fade" id="tab3">
 
 <h2 id="GUT_GENOME215926_00907">GUT_GENOME215926_00907</h2>
 <p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="North America">GUT_GENOME215926</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-03226">GUT_GENOME215926</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 7692..10247</p>
 <p>Protein length: 852</p>
 <p>Product: hypothetical protein</p>
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Bac_rhamnosid6H">Bac_rhamnosid6H</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid_C">Bac_rhamnosid_C</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid">Bac_rhamnosid</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid_N">Bac_rhamnosid_N</a></p>
-<p>Lineage: _rhamnosid6H</p>
-<p>Geography: p__Firmicutes_A, d__Bacteria;p__Firmicutes_A;c__Clostridia;o__4C28d-15;f__CAG-727;g__QALS01;s__</p>
+<p>Lineage: Bacteria; Firmicutes_A; Clostridia; 4C28d-15; CAG-727; QALS01; </p>
+<p>Geography: United States, North America</p>
 
   </div>
 </div>

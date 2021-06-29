@@ -75,9 +75,8 @@
                     <td>{{ record.continent }}</td>
                     <td><a href="{{ url_for('detail',mode='cluster', unid = record.gene_id) }}" target="_blank">view</a>
                     </td>
-                    <td><p hidden>>{{ record.gene_id }} </p>
-                        <p hidden style="max-width: 40ch; word-wrap:break-word;">{{ record.seq }}</p></td>
-                {% endfor %}
+                    <td>>{{ record.gene_id }}}&#10;{{ record.seq }}</td>                
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
@@ -108,7 +107,7 @@
                         fieldBoundary: '',
                         text: 'Copy',
                         title: '',
-                        header: '\n',
+                        header: '',
                         exportOptions: {
                             stripNewlines: false,
                             columns: [-1]

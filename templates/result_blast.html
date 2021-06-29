@@ -58,13 +58,15 @@
                     <tr>
                         <td>{{ record[0] }}</td>
                         <td>{{ record[1] }}</td>
-                        {% if record[2].find("_")== -1 %}
-                            <td><a href="{{ url_for('family', family_id = record[2]) }} "
-                                   target="_blank">{{ record[2] }}</a></td>
+                        <td>
+                        {% if "unclassified" in record[2]: %}
+                        <a href="{{ url_for('family', family_id = record[2].split('-', 1)[0]) }}">{{ record[2] }}</a>
+                        {% elif "_" in record.family: %}
+                            <a href="{{ url_for('subfamily', family_id = record[2]) }}">{{ record[2] }}</a>
                         {% else %}
-                            <td><a href="{{ url_for('subfamily', family_id = record[2]) }}"
-                                   target="_blank">{{ record[2] }}</a></td>
+                            <a href="{{ url_for('family', family_id = record[2]) }}">{{ record[2] }}</a>
                         {% endif %}
+                        </td>
                         <td>{{ record[3] }}</td>
                         <td>{{ record[4] }}</td>
                         <td>{{ record[5] }}</td>

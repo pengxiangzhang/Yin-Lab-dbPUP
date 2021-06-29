@@ -12,30 +12,30 @@
 
 <h2 id="GUT_GENOME093114_00060">GUT_GENOME093114_00060</h2>
 <p>Gene: <em>NA</em>
-<p>Representative genome: <a href="Europe">GUT_GENOME093114</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-04044">GUT_GENOME093114</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 6083..6934</p>
 <p>Protein length: 284</p>
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
 
-<p>Lineage: endonuc_2</p>
-<p>Geography: p__Firmicutes_A, d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Christensenellales;f__CAG-74;g__;s__</p>
+<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Christensenellales; CAG-74; ; </p>
+<p>Geography: Austria, Europe</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
 <h2 id="GUT_GENOME093114_00061">GUT_GENOME093114_00061</h2>
 <p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="Europe">GUT_GENOME093114</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-04044">GUT_GENOME093114</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 7166..8437</p>
 <p>Protein length: 424</p>
 <p>Product: hypothetical protein</p>
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/tRNA_edit">tRNA_edit</a>, <a href="http://pfam.xfam.org/family/Amidohydro_2">Amidohydro_2</a></p>
-<p>Lineage: dohydro_2</p>
-<p>Geography: p__Firmicutes_A, d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Christensenellales;f__CAG-74;g__;s__</p>
+<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Christensenellales; CAG-74; ; </p>
+<p>Geography: Austria, Europe</p>
 
   </div>
 </div>

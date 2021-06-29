@@ -39,7 +39,7 @@
                         fieldBoundary: '',
                         text: 'Copy',
                         title: '',
-                        header: '\n',
+                        header: '',
                         exportOptions: {
                             stripNewlines: false,
                             columns: [-1]
@@ -77,7 +77,9 @@
                 <tr>
                     <td>{{ record.number }}</td>
                     <td>
-                        {% if "_" in record.family: %}
+                        {% if "unclassified" in record.family: %}
+                        <a href="{{ url_for('family', family_id = record.family.split('-', 1)[0]) }}">{{ record.family }}</a>
+                        {% elif "_" in record.family: %}
                             <a href="{{ url_for('subfamily', family_id = record.family) }}">{{ record.family }}</a>
                         {% else %}
                             <a href="{{ url_for('family', family_id = record.family) }}">{{ record.family }}</a>
@@ -167,9 +169,7 @@
                             <td>{{ record.km }}</td>
                         {% endif %}
                     {% endif %}
-                    <td>
-                        <p hidden>>{{ record.uniq_id }} {{ record.protein_name }} OS={{ record.strain }}</p>
-                        <p hidden style="max-width: 40ch; word-wrap:break-word;">{{ record.seq }}</p>
+                    <td>>{{ record.uniq_id }} {{ record.protein_name }} OS={{ record.strain }}&#10;{{ record.seq }}
                     </td>
                 </tr>
             {% endfor %}

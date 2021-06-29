@@ -2,7 +2,7 @@
 
 Currently the dbPUP database contains:
 
-## Characterized Proteins Statistics
+### Characterized Proteins Statistics
 
 | Total number of proteins          | 60   |
 | :-------------------------------- | :--- |
@@ -12,7 +12,7 @@ Currently the dbPUP database contains:
 | Number of sequences from Archaea  | 3    |
 | Number of sequences from Bacteria | 57   |
 
-## General Statistics
+### General Statistics (Homologs from UniProt)
 
 | Total number of sequences           | 24120 |
 | :---------------------------------- | :---- |
@@ -25,7 +25,7 @@ Currently the dbPUP database contains:
 | Number of sequences from Eukaryota  | 2087  |
 | Number of sequences from Viruses    | 12    |
 
-## Class Statistics
+### Class Statistics
 
 - ORs
 
@@ -97,34 +97,6 @@ Currently the dbPUP database contains:
 | Number of sequences from Eukaryota  | 213  |
 | Number of sequences from Viruses    | 18   |
 
-- SRs
-
-| Total number of sequences           | 0    |
-| :---------------------------------- | :--- |
-|   Number of family | 0 |
-| Number of sequences from Swiss-Prot | 0    |
-| Number of sequences from TrEMBL     | 0    |
-| Number of sequences with PDB code   | 0    |
-| Number of sequences with EC         | 0    |
-| Number of sequences from Archaea    | 0    |
-| Number of sequences from Bacteria   | 0    |
-| Number of sequences from Eukaryota  | 0    |
-| Number of sequences from Viruses    | 0    |
-
-- TRs
-
-| Total number of sequences           | 0    |
-| :---------------------------------- | :--- |
-|   Number of family | 0 |
-| Number of sequences from Swiss-Prot | 0    |
-| Number of sequences from TrEMBL     | 0    |
-| Number of sequences with PDB code   | 0    |
-| Number of sequences with EC         | 0    |
-| Number of sequences from Archaea    | 0    |
-| Number of sequences from Bacteria   | 0    |
-| Number of sequences from Eukaryota  | 0    |
-| Number of sequences from Viruses    | 0    |
-
 - UCs
 
 | Total number of sequences           | 1501 |
@@ -138,3 +110,61 @@ Currently the dbPUP database contains:
 | Number of sequences from Bacteria   | 1460 |
 | Number of sequences from Eukaryota  | 39   |
 | Number of sequences from Viruses    | 0    |
+
+### General Statistics (Homologs from UHGP)
+
+| Total number of sequences         | 12180 |
+| :-------------------------------- | :---- |
+| Number of genomes                 | 9145  |
+| Number of classes                 | 6     |
+| Number of families                | 25    |
+| Number of sequences from Archaea  | 11    |
+| Number of sequences from Bacteria | 12169 |
+
+- ORs
+
+| Total number of sequences         | 4018 |
+| :-------------------------------- | :--- |
+| Number of genomes                 | 3590 |
+| Number of sequences from Archaea  | 8    |
+| Number of sequences from Bacteria | 4010 |
+
+- FRs
+
+| Total number of sequences         | 1641 |
+| :-------------------------------- | :--- |
+| Number of genomes                 | 1540 |
+| Number of sequences from Archaea  | 0    |
+| Number of sequences from Bacteria | 1641 |
+
+- HRs
+
+| Total number of sequences         | 4860 |
+| :-------------------------------- | :--- |
+| Number of genomes                 | 3141 |
+| Number of sequences from Archaea  | 3    |
+| Number of sequences from Bacteria | 4857 |
+
+- NCRs
+
+| Total number of sequences         | 500  |
+| :-------------------------------- | :--- |
+| Number of genomes                 | 491  |
+| Number of sequences from Archaea  | 0    |
+| Number of sequences from Bacteria | 500  |
+
+- IRs
+
+| Total number of sequences         | 514  |
+| :-------------------------------- | :--- |
+| Number of genomes                 | 506  |
+| Number of sequences from Archaea  | 0    |
+| Number of sequences from Bacteria | 514  |
+
+- UCs
+
+| Total number of sequences         | 591  |
+| :-------------------------------- | :--- |
+| Number of genomes                 | 586  |
+| Number of sequences from Archaea  | 0    |
+| Number of sequences from Bacteria | 591  |
