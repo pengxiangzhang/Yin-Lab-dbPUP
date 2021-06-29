@@ -61,7 +61,7 @@
                         <td>
                             {% if "unclassified" in record[2]: %}
                                 <a href="{{ url_for('family', family_id = record[2].split('-', 1)[0]) }}">{{ record[2] }}</a>
-                            {% elif "_" in record.family: %}
+                            {% elif "_" in record[2]: %}
                                 <a href="{{ url_for('subfamily', family_id = record[2]) }}">{{ record[2] }}</a>
                             {% else %}
                                 <a href="{{ url_for('family', family_id = record[2]) }}">{{ record[2] }}</a>

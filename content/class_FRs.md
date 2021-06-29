@@ -17,8 +17,6 @@ group transferred by a peptidyl transferase. The transfer involves the removal o
 tRNA molecule in the A-site of the ribosome and its subsequent addition to the amino acid attached to the tRNA in the
 P-site.[^4]
 
-*Information is taken from *
-
 ---
 
 ## Reaction
