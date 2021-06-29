@@ -11,8 +11,7 @@ import pandas as pd
 # Application configurations
 app = Flask(__name__, static_url_path='/dbpup/static')
 cache = Cache(app, config={'CACHE_TYPE': 'FileSystemCache', 'CACHE_DIR': 'cache', 'CACHE_IGNORE_ERRORS': 'True',
-                           'CACHE_THRESHOLD': '500'})
-minify(app=app, html=True, js=True, cssless=True)
+                           'CACHE_THRESHOLD': '1000',"CACHE_DEFAULT_TIMEOUT": 300})
 
 # read configurations
 with open('config.json') as json_file:

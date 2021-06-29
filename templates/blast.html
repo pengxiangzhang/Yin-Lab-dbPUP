@@ -94,6 +94,7 @@
                         confirmButtonText: `Ok`,
                     }).then((result) => {
                         if (result.isConfirmed) {
+                            document.getElementById("spinner").style.display = "inline";
                             document.getElementById('id_file').value = '';
                             document.getElementById('blastx-form').submit();
                         }

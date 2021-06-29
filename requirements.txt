@@ -26,8 +26,6 @@ flask==2.0.1
     #   flask-sqlalchemy
 flask-caching==1.10.1
     # via -r requirements.in
-flask-minify==0.32
-    # via -r requirements.in
 flask-sqlalchemy==2.5.1
     # via -r requirements.in
 gevent==21.1.2
