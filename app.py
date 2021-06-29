@@ -11,7 +11,7 @@ import pandas as pd
 # Application configurations
 app = Flask(__name__, static_url_path='/dbpup/static')
 cache = Cache(app, config={'CACHE_TYPE': 'FileSystemCache', 'CACHE_DIR': 'cache', 'CACHE_IGNORE_ERRORS': 'True',
-                          'CACHE_THRESHOLD': '500'})
+                           'CACHE_THRESHOLD': '500'})
 minify(app=app, html=True, js=True, cssless=True)
 
 # read configurations

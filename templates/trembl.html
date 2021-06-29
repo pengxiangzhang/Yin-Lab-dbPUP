@@ -161,7 +161,7 @@
 
                     <td>
                         {% if "unclassified" in record.family: %}
-                        <a href="{{ url_for('family', family_id = record.family.split('-', 1)[0]) }}">{{ record.family }}</a>
+                            <a href="{{ url_for('family', family_id = record.family.split('-', 1)[0]) }}">{{ record.family }}</a>
                         {% elif "_" in record.family: %}
                             <a href="{{ url_for('subfamily', family_id = record.family) }}">{{ record.family }}</a>
                         {% else %}
@@ -180,7 +180,8 @@
                     <td>
                         <a href="{{ url_for('detail',mode='trembl', unid = record.uniq_id) }}" target="_blank">view</a>
                     </td>
-                    <td>>{{ record.uniq_id }} {{ record.protein_enzyme }} OS={{ record.strain }}&#10;{{ record.seq }}</td>
+                    <td>>{{ record.uniq_id }} {{ record.protein_enzyme }}
+                        OS={{ record.strain }}&#10;{{ record.seq }}</td>
                     <td>
                         <p>{{ record.type }}</p>
                     </td>

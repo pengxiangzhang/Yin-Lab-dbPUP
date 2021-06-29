@@ -62,7 +62,8 @@
                 <div style="text-align:left;">
                     <label for="subject" style="color:blue"> <b> I. Paste the sequence in the textarea. </b> </label>
                     <br>
-                    <span style="font-size:1em;">Try example <a id="example_blastp" style="color:blue;" value="protein">blastp</a>  <a id="example_blastx" style="color:blue;" value="protein">blastx </a> sequences.</span>
+                    <span style="font-size:1em;">Try example <a id="example_blastp" style="color:blue;" value="protein">blastp</a>  <a
+                            id="example_blastx" style="color:blue;" value="protein">blastx </a> sequences.</span>
                 </div>
                 <textarea id="id_sequences" name="id_sequences" placeholder="" rows="10"
                           style="min-height:100px"></textarea>
@@ -161,15 +162,15 @@
             <script type="text/javascript">
                 $(document).ready(function () {
                     $('a#example_blastp').click(function () {
-                        document.getElementById('job').value="p"
-                        document.getElementById('evalue').value="1";
-                        document.getElementById('db').value="a";
+                        document.getElementById('job').value = "p"
+                        document.getElementById('evalue').value = "1";
+                        document.getElementById('db').value = "a";
                         document.getElementById('id_sequences').value = ">tr|Q9S3L0|Q9S3L0_THEST\nMMRVYNLKTNRIKNPMGFVINKPKLSWLVESDTAKHQVAAQVEISADINFENIIFDSGKRTDIDSISYSPQVELKPRTRYYWRVRVWGDDGSEAVSEAAWFETSKMDEPWKAKWITPDFDPSVHPVVFTDFSIERDVADARAYVCGLGLYEMSVNGEKTGDEYLAPGLVAYDKWIPYQTYDITSQLKKGINTAEFLLGNGWYKGRYGLNRKQPFRYGNEFALICEIHITYQDGTADVIYTDTSWKARKSKVIDSGIYDGEIYDDTFCDDAVYPVRIADLDVNKLEPRRSPGIKIKERIKPAEIIRTPEGETVIDMGQNMVGWLEFTNRAPKGAEIMLQFGEVLQDGNFYRDNLRTAKCEFHYISDGKVKKVRPHFTFYGFRYVKLTKWEGEVNPEDFTGLVLYSDLERTGNITTDNSLVNRLFLNALWSQKGNFLDVPTDCPQRDERMGWTGDAQVFSGAAAFNMDVFAFFGKYLYDLKQEQKARGGNVPVVVPAHDVKQNGACGWGDAAVIIPWNMYLHYGDVSILEQQYKSMKGWVDYIKSKDDAAGGRRLWLNDFHYGDCVSLDVEDPFNRFGGTEHAYLASAFYSYSAGIVSKAAKILNKKEDAEYYRKLSEEVKNAIRKEYFTPTGRLAVNTQTAYVIALYMDLVPDEWKERVAFELRKKLKETKYHLRTGFLGTPYLCRVLSEYGSNDIAYRLLTNTDYPGWLYPVTMGATTIWERWNSMLPDGKVSDTGMNSFNHYSYGSIVEWIYRNAAGIQPVEDAPGFRRFRLKPQPHYLLKSLDAEFLSPAEKIISRWNINENGSVSFYFRIPFNTTAELVLPDTEVQDWKEFMSLNVVNILILTCLKDLTRKCTEQILQCGKFMKMRGQKKL"
                     })
-                        $('a#example_blastx').click(function () {
-                        document.getElementById('job').value="x";
-                        document.getElementById('evalue').value="1";
-                        document.getElementById('db').value="a";
+                    $('a#example_blastx').click(function () {
+                        document.getElementById('job').value = "x";
+                        document.getElementById('evalue').value = "1";
+                        document.getElementById('db').value = "a";
                         document.getElementById('id_sequences').value = ">example_seq\nATGAAAAGTAGGGAAAAGAAGAAGCCTATACTGATAAAAGGGGTGTGTAAAATGAAAAGAATGACCAGGCTGTTGAGTCTGTTGTTGGCCGGTCTGATGTGCGTGCAGATGACGGGGGTTGTCACTCAGGCACAGTCAGCGCCATCCGATCCTCTCTACCAAGAATTTCAGACCCCGGCGGATGACACCAAACCCCGCCCGCTGTGGTTCTGGAACCGGGAAGTTGAGGACATGACCACCGAGCAGGTGCGGGAAATTGTGCGGGAATCCTATCTCCAGAGCGGATACAACGGGTTTGGAATCCTGCCGCAGTGGCAGGGGGAATATCTGTCGGATGAGTATTTTGAGCTCTACGAAGCAGCGCTCGACGAGGGGAGTAAATACGGCATGCATTTCTCCCTCTATGAC"
                     })
                 })

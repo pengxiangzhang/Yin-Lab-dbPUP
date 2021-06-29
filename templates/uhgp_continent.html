@@ -78,8 +78,8 @@
                     <td>{{ record.continent }}</td>
                     <td><a href="{{ url_for('detail',mode='uhpg', unid = record.gene_id) }}" target="_blank">view</a>
                     </td>
-                    <td>>{{ record.gene_id }}&#10;{{ record.seq }}</td>                
-                    {% endfor %}
+                    <td>>{{ record.gene_id }}&#10;{{ record.seq }}</td>
+                {% endfor %}
                 </tbody>
             </table>
         </div>
