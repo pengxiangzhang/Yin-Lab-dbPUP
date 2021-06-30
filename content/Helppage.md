@@ -18,7 +18,7 @@ Workflow of dbPUP
 
 ![Workflow](./static/images/text_content/figures/Workflow.jpg){: .fit .rounded-border}
 
-## Evidence Page (change this to Characterized Protein Page)
+## Characterized Protein Page
 
 This page displays a table with all the seed proteins and associated metadata in dbPUP. Users can sort in ascending or
 descending order the number, strain, protein name, gene name, uniprot id, EC, substrate, product, PDB, Km, Vmax and
@@ -93,6 +93,26 @@ Additionally, nodes have a light yellow border indicate the seeds.
 
 ![help8](./static/images/text_content/figures/help8.png){: .fit .rounded-border}
 
+## UHGP
+
+In the navigation menu, clicking on UHGP will open a new page, where users can find information about UHGP Hits list, UHGP introduction, UHGP homologs, physically linked PUP gene clusters (PGCs). The homologs found in UHGP-90 dataset are classified by continent, clicking the corresponding continent will redirect users to a new page, where present metadata about each homolog.
+
+![help11](./static/images/text_content/figures/help11.png){: .fit .rounded-border}
+
+Users can browse the whole PGCs in tabular format by clicking the Cluster. The cluster ID will redirect the users to the corresponding PGC page, where exhibits the functional annotation about each gene in the PGC.
+
+![help13](./static/images/text_content/figures/help13.png){: .fit .rounded-border}
+
+![help12](./static/images/text_content/figures/help12.png){: .fit .rounded-border}
+
+
+
+
+
+Clicking the Family name (e.g. OR1) will redirect users to Family page, where exhibits experimental results in very detail.
+
+
+
 ## BLAST
 
 Users can enter a protein or nucleotide sequence of interest in FASTA format to perform a BLAST search against dbPUP. This can be done in following ways:
@@ -110,10 +130,11 @@ Results are displayed as a sortable table including `hmmscan` result (only appli
 
 All data for dbPUP are available for download. Data files for each zip file include:
 
-- Characterization Data: Biochemically validated proteins in FASTA and UniProt format
-- Sequence Similarity Network: `PSI-BLAST` results for each family
-- Swiss-Prot Data: Protein sequences from Swiss-Prot dataset for each family
-- TrEMBL Data: Protein sequences from TrEMBL dataset for each family
+- Characterization.tar.gz : Biochemically validated proteins in FASTA and UniProt format
+- Sequence_Similarity_Network.tar.gz: `PSI-BLAST` results for each family
+- Swiss-Prot.tar.gz: Protein sequences from Swiss-Prot dataset for each family
+- TrEMBL.tar.gz: Protein sequences from TrEMBL dataset for each family
+- UHGP: including homologs from UHGP and identified PGCs
 
 ## Statistics
 
