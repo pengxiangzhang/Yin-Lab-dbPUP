@@ -89,7 +89,7 @@
                            target="_blank">{{ record.doi }}</a></td>
                     <td>{{ record.protein_name }}</td>
                     <td>
-                        {% for pfam in pfam_dic[record.number] %}
+                        {% for pfam in pfam_dic[record.number -1] %}
                             <a href="{{ pfam[1] }}" rel="noopener noreferrer" target="_blank">{{ pfam[0] }}</a>
                         {% endfor %}
                     </td>
