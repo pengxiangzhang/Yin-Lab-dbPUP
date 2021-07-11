@@ -3,7 +3,6 @@ from flask import Flask, request, send_from_directory, flash, render_template, a
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import func
 from flask_caching import Cache
-from flask_minify import minify
 import markdown, json, glob, os, uuid, requests
 from datetime import datetime
 import pandas as pd
