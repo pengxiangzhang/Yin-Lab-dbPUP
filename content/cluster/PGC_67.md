@@ -2,55 +2,39 @@
 
 <ul id="myTab" class="nav nav-tabs">
   <li class="active">
-        <a href="#tab1" data-toggle="tab">GUT_GENOME014402_01348</a>
+        <a href="#tab1" data-toggle="tab">GUT_GENOME017790_00763</a>
   </li>
-<li><a href="#tab2" data-toggle="tab">GUT_GENOME014402_01349</a></li>
-<li><a href="#tab3" data-toggle="tab">GUT_GENOME014402_01350</a></li>
+<li><a href="#tab2" data-toggle="tab">GUT_GENOME017790_00764</a></li>
 </ul>
 
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="tab1">
 
-<h2 id="GUT_GENOME014402_01348">GUT_GENOME014402_01348</h2>
+<h2 id="GUT_GENOME017790_00763">GUT_GENOME017790_00763</h2>
 <p>Gene: <em>NA</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00524">GUT_GENOME014402</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00576">GUT_GENOME017790</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 2696..5704</p>
-<p>Protein length: 1003</p>
+<p>Position: 34096..35337</p>
+<p>Protein length: 414</p>
 <p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_3">Glyco_hydro_3</a>, <a href="http://pfam.xfam.org/family/Glyco_hydro_3_C">Glyco_hydro_3_C</a>, <a href="http://pfam.xfam.org/family/Fn3-like">Fn3-like</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; 4C28d-15; CAG-727; UBA4636; </p>
-<p>Geography: Fiji, Oceania</p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a>, <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; </p>
+<p>Geography: hypothetical protein, Africa</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
-<h2 id="GUT_GENOME014402_01349">GUT_GENOME014402_01349</h2>
-<p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00524">GUT_GENOME014402</a></p>
-<p>Gene type: other genes</p>
-<p>Position: 5725..7140</p>
-<p>Protein length: 472</p>
-<p>Product: hypothetical protein</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Flg_new">Flg_new</a>, <a href="http://pfam.xfam.org/family/Big_3">Big_3</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; 4C28d-15; CAG-727; UBA4636; </p>
-<p>Geography: Fiji, Oceania</p>
-
-  </div>
-  <div class="tab-pane fade" id="tab3">
-
-<h2 id="GUT_GENOME014402_01350">GUT_GENOME014402_01350</h2>
-<p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00524">GUT_GENOME014402</a></p>
+<h2 id="GUT_GENOME017790_00764">GUT_GENOME017790_00764</h2>
+<p>Gene: <em>nfr2</em></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00576">GUT_GENOME017790</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 7244..11107</p>
-<p>Protein length: 1288</p>
-<p>Product: hypothetical protein</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_3">Glyco_hydro_3</a>, <a href="http://pfam.xfam.org/family/Glyco_hydro_3_C">Glyco_hydro_3_C</a>, <a href="http://pfam.xfam.org/family/Fn3-like">Fn3-like</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; 4C28d-15; CAG-727; UBA4636; </p>
-<p>Geography: Fiji, Oceania</p>
+<p>Position: 35361..35963</p>
+<p>Protein length: 201</p>
+<p>Product: NADH-dependent flavin reductase subunit 2</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.36">1.5.1.36</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a>, <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; </p>
+<p>Geography: NADH-dependent flavin reductase subunit 2, Africa</p>
 
   </div>
 </div>

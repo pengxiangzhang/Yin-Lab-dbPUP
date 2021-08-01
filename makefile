@@ -1,5 +1,6 @@
 .ONESHELL:
 development: app.py
+	. venv/bin/activate
 	export FLASK_APP=app.py
 	export FLASK_DEBUG=1
 	export FLASK_ENV=development
@@ -7,5 +8,6 @@ development: app.py
 
 .ONESHELL:
 production: app.py
+	. venv/bin/activate
 	export FLASK_APP=app.py
 	flask run --host=0.0.0.0

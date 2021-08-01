@@ -2,40 +2,41 @@
 
 <ul id="myTab" class="nav nav-tabs">
   <li class="active">
-        <a href="#tab1" data-toggle="tab">GUT_GENOME079363_00525</a>
+        <a href="#tab1" data-toggle="tab">GUT_GENOME000843_02597</a>
   </li>
-<li><a href="#tab2" data-toggle="tab">GUT_GENOME079363_00526</a></li>
+<li><a href="#tab2" data-toggle="tab">GUT_GENOME000843_02598</a></li>
 </ul>
 
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="tab1">
 
-<h2 id="GUT_GENOME079363_00525">GUT_GENOME079363_00525</h2>
-<p>Gene: <em>iolG_4</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00992">GUT_GENOME079363</a></p>
+<h2 id="GUT_GENOME000843_02597">GUT_GENOME000843_02597</h2>
+<p>Gene: <em>NA</em>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00174">GUT_GENOME000843</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 51440..52594</p>
-<p>Protein length: 385</p>
-<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.18">1.1.1.18</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Oscillospirales; Acutalibacteraceae; UBA737; </p>
-<p>Geography: Sweden, Europe</p>
+<p>Position: 155055..158339</p>
+<p>Protein length: 1095</p>
+<p>EC: NA</p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_106">Glyco_hydro_106</a></p>
+
+<p>Lineage: Bacteria; Bacteroidota; Bacteroidia; Bacteroidales; Tannerellaceae; Parabacteroides; </p>
+<p>Geography: hypothetical protein, Asia</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
-<h2 id="GUT_GENOME079363_00526">GUT_GENOME079363_00526</h2>
-<p>Gene: <em>iolE</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00992">GUT_GENOME079363</a></p>
+<h2 id="GUT_GENOME000843_02598">GUT_GENOME000843_02598</h2>
+<p>Gene: <em>NA</em></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00174">GUT_GENOME000843</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 52657..53472</p>
-<p>Protein length: 272</p>
-<p>Product: Inosose dehydratase</p>
-<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.44">4.2.1.44</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
+<p>Position: 158417..161698</p>
+<p>Protein length: 1094</p>
+<p>Product: hypothetical protein</p>
+<p>EC: NA</p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_106">Glyco_hydro_106</a></p>
 
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Oscillospirales; Acutalibacteraceae; UBA737; </p>
-<p>Geography: Sweden, Europe</p>
+<p>Lineage: Bacteria; Bacteroidota; Bacteroidia; Bacteroidales; Tannerellaceae; Parabacteroides; </p>
+<p>Geography: hypothetical protein, Asia</p>
 
   </div>
 </div>

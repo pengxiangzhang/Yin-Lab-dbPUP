@@ -31,3 +31,6 @@ static/Download/TrEMBL.tar.gz
 
 pfam/*
 ! tmp/
+
+.user.ini
+.htaccess

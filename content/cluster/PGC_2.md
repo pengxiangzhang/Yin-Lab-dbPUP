@@ -2,40 +2,39 @@
 
 <ul id="myTab" class="nav nav-tabs">
   <li class="active">
-        <a href="#tab1" data-toggle="tab">GUT_GENOME104639_00486</a>
+        <a href="#tab1" data-toggle="tab">GUT_GENOME000085_03016</a>
   </li>
-<li><a href="#tab2" data-toggle="tab">GUT_GENOME104639_00487</a></li>
+<li><a href="#tab2" data-toggle="tab">GUT_GENOME000085_03017</a></li>
 </ul>
 
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="tab1">
 
-<h2 id="GUT_GENOME104639_00486">GUT_GENOME104639_00486</h2>
-<p>Gene: <em>iolE</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-01728">GUT_GENOME104639</a></p>
+<h2 id="GUT_GENOME000085_03016">GUT_GENOME000085_03016</h2>
+<p>Gene: <em>phy</em>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-01434">GUT_GENOME000085</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 3080..3898</p>
-<p>Protein length: 273</p>
-<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.44">4.2.1.44</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
-
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; UBA1390; UBA1390; UBA1390 sp002305315</p>
-<p>Geography: Sweden, Europe</p>
+<p>Position: 34598..35389</p>
+<p>Protein length: 264</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.7.1.4">3.7.1.4</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/DAPG_hydrolase">DAPG_hydrolase</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a></p>
+<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Oscillospirales; Butyricicoccaceae; Butyricicoccus; Butyricicoccus pullicaecorum</p>
+<p>Geography: Phloretin hydrolase, Europe</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
-<h2 id="GUT_GENOME104639_00487">GUT_GENOME104639_00487</h2>
-<p>Gene: <em>iolG_1</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-01728">GUT_GENOME104639</a></p>
+<h2 id="GUT_GENOME000085_03017">GUT_GENOME000085_03017</h2>
+<p>Gene: <em>iolW</em></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-01434">GUT_GENOME000085</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 3910..5064</p>
-<p>Protein length: 385</p>
-<p>Product: Inositol 2-dehydrogenase/D-chiro-inositol 3-dehydrogenase</p>
-<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.18">1.1.1.18</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; UBA1390; UBA1390; UBA1390 sp002305315</p>
-<p>Geography: Sweden, Europe</p>
+<p>Position: 35778..36824</p>
+<p>Protein length: 349</p>
+<p>Product: scyllo-inositol 2-dehydrogenase (NADP(+)) IolW</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.371">1.1.1.371</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/DAPG_hydrolase">DAPG_hydrolase</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a></p>
+<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Oscillospirales; Butyricicoccaceae; Butyricicoccus; Butyricicoccus pullicaecorum</p>
+<p>Geography: scyllo-inositol 2-dehydrogenase (NADP(+)) IolW, Europe</p>
 
   </div>
 </div>

@@ -2,40 +2,39 @@
 
 <ul id="myTab" class="nav nav-tabs">
   <li class="active">
-        <a href="#tab1" data-toggle="tab">GUT_GENOME123310_01587</a>
+        <a href="#tab1" data-toggle="tab">GUT_GENOME001523_00958</a>
   </li>
-<li><a href="#tab2" data-toggle="tab">GUT_GENOME123310_01588</a></li>
+<li><a href="#tab2" data-toggle="tab">GUT_GENOME001523_00959</a></li>
 </ul>
 
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="tab1">
 
-<h2 id="GUT_GENOME123310_01587">GUT_GENOME123310_01587</h2>
-<p>Gene: <em>iolG_13</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-02038">GUT_GENOME123310</a></p>
+<h2 id="GUT_GENOME001523_00958">GUT_GENOME001523_00958</h2>
+<p>Gene: <em>nfr2</em>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00199">GUT_GENOME001523</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 4091..5254</p>
-<p>Protein length: 388</p>
-<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.18">1.1.1.18</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Oscillospirales; Acutalibacteraceae; ; </p>
-<p>Geography: China, Asia</p>
+<p>Position: 1077728..1078333</p>
+<p>Protein length: 202</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.36">1.5.1.36</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a>, <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus parasanguinis_B</p>
+<p>Geography: NADH-dependent flavin reductase subunit 2, Asia</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
-<h2 id="GUT_GENOME123310_01588">GUT_GENOME123310_01588</h2>
-<p>Gene: <em>iolE_3</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-02038">GUT_GENOME123310</a></p>
+<h2 id="GUT_GENOME001523_00959">GUT_GENOME001523_00959</h2>
+<p>Gene: <em>NA</em></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00199">GUT_GENOME001523</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 5282..6103</p>
-<p>Protein length: 274</p>
-<p>Product: Inosose dehydratase</p>
-<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.44">4.2.1.44</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
-
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Oscillospirales; Acutalibacteraceae; ; </p>
-<p>Geography: China, Asia</p>
+<p>Position: 1078352..1079596</p>
+<p>Protein length: 415</p>
+<p>Product: hypothetical protein</p>
+<p>EC: NA</p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a>, <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus parasanguinis_B</p>
+<p>Geography: hypothetical protein, Asia</p>
 
   </div>
 </div>

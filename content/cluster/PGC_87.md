@@ -2,74 +2,39 @@
 
 <ul id="myTab" class="nav nav-tabs">
   <li class="active">
-        <a href="#tab1" data-toggle="tab">GUT_GENOME057588_01169</a>
+        <a href="#tab1" data-toggle="tab">GUT_GENOME027834_01084</a>
   </li>
-<li><a href="#tab2" data-toggle="tab">GUT_GENOME057588_01170</a></li>
-<li><a href="#tab3" data-toggle="tab">GUT_GENOME057588_01171</a></li>
-<li><a href="#tab4" data-toggle="tab">GUT_GENOME057588_01172</a></li>
+<li><a href="#tab2" data-toggle="tab">GUT_GENOME027834_01085</a></li>
 </ul>
 
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="tab1">
 
-<h2 id="GUT_GENOME057588_01169">GUT_GENOME057588_01169</h2>
-<p>Gene: <em>NA</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-02279">GUT_GENOME057588</a></p>
+<h2 id="GUT_GENOME027834_01084">GUT_GENOME027834_01084</h2>
+<p>Gene: <em>gtfC_3</em>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00113">GUT_GENOME027834</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 26019..26411</p>
-<p>Protein length: 131</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/ns">ns</a></p>
-
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Dorea; Dorea longicatena_B</p>
-<p>Geography: Spain, Europe</p>
+<p>Position: 27456..31931</p>
+<p>Protein length: 1492</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.5">2.4.1.5</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_70">Glyco_hydro_70</a>, <a href="http://pfam.xfam.org/family/Choline_bind_3">Choline_bind_3</a>, <a href="http://pfam.xfam.org/family/Choline_bind_1">Choline_bind_1</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus salivarius</p>
+<p>Geography: Glucosyltransferase-SI, Asia</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
-<h2 id="GUT_GENOME057588_01170">GUT_GENOME057588_01170</h2>
-<p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-02279">GUT_GENOME057588</a></p>
-<p>Gene type: other genes</p>
-<p>Position: 26429..27490</p>
-<p>Protein length: 354</p>
-<p>Product: hypothetical protein</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
-
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Dorea; Dorea longicatena_B</p>
-<p>Geography: Spain, Europe</p>
-
-  </div>
-  <div class="tab-pane fade" id="tab3">
-
-<h2 id="GUT_GENOME057588_01171">GUT_GENOME057588_01171</h2>
-<p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-02279">GUT_GENOME057588</a></p>
-<p>Gene type: other genes</p>
-<p>Position: 27495..28415</p>
-<p>Protein length: 307</p>
-<p>Product: hypothetical protein</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
-
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Dorea; Dorea longicatena_B</p>
-<p>Geography: Spain, Europe</p>
-
-  </div>
-  <div class="tab-pane fade" id="tab4">
-
-<h2 id="GUT_GENOME057588_01172">GUT_GENOME057588_01172</h2>
-<p>Gene: <em>iolW</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-02279">GUT_GENOME057588</a></p>
+<h2 id="GUT_GENOME027834_01085">GUT_GENOME027834_01085</h2>
+<p>Gene: <em>gtfC_4</em></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00113">GUT_GENOME027834</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 28432..29484</p>
-<p>Protein length: 351</p>
-<p>Product: scyllo-inositol 2-dehydrogenase (NADP(+)) IolW</p>
-<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.371">1.1.1.371</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Dorea; Dorea longicatena_B</p>
-<p>Geography: Spain, Europe</p>
+<p>Position: 32361..36917</p>
+<p>Protein length: 1519</p>
+<p>Product: Glucosyltransferase-SI</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.5">2.4.1.5</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_70">Glyco_hydro_70</a>, <a href="http://pfam.xfam.org/family/Choline_bind_3">Choline_bind_3</a>, <a href="http://pfam.xfam.org/family/Choline_bind_1">Choline_bind_1</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus salivarius</p>
+<p>Geography: Glucosyltransferase-SI, Asia</p>
 
   </div>
 </div>

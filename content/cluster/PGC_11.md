@@ -2,41 +2,39 @@
 
 <ul id="myTab" class="nav nav-tabs">
   <li class="active">
-        <a href="#tab1" data-toggle="tab">GUT_GENOME158598_00137</a>
+        <a href="#tab1" data-toggle="tab">GUT_GENOME000535_00542</a>
   </li>
-<li><a href="#tab2" data-toggle="tab">GUT_GENOME158598_00138</a></li>
+<li><a href="#tab2" data-toggle="tab">GUT_GENOME000535_00543</a></li>
 </ul>
 
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="tab1">
 
-<h2 id="GUT_GENOME158598_00137">GUT_GENOME158598_00137</h2>
-<p>Gene: <em>NA</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-01332">GUT_GENOME158598</a></p>
+<h2 id="GUT_GENOME000535_00542">GUT_GENOME000535_00542</h2>
+<p>Gene: <em>nfr2</em>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-01362">GUT_GENOME000535</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 529..4449</p>
-<p>Protein length: 1307</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/FIVAR">FIVAR</a>, <a href="http://pfam.xfam.org/family/Glyco_hydro_106">Glyco_hydro_106</a>, <a href="http://pfam.xfam.org/family/F5_F8_type_C">F5_F8_type_C</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Oscillospirales; Ruminococcaceae; Massilioclostridium; Massilioclostridium methylpentosum</p>
-<p>Geography: Canada, North America</p>
-<p>Comment: Despite the 1.9kb intergenic length, this cluster was retained because no BLAST hits found for this intergenic sequence in NCBI nr database.</p>
+<p>Position: 542612..543220</p>
+<p>Protein length: 203</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.36">1.5.1.36</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a>, <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus anginosus</p>
+<p>Geography: NADH-dependent flavin reductase subunit 2, North America</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
-<h2 id="GUT_GENOME158598_00138">GUT_GENOME158598_00138</h2>
+<h2 id="GUT_GENOME000535_00543">GUT_GENOME000535_00543</h2>
 <p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-01332">GUT_GENOME158598</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-01362">GUT_GENOME000535</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 6349..11709</p>
-<p>Protein length: 1787</p>
+<p>Position: 543239..544483</p>
+<p>Protein length: 415</p>
 <p>Product: hypothetical protein</p>
 <p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Bac_rhamnosid6H">Bac_rhamnosid6H</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid_N">Bac_rhamnosid_N</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid_C">Bac_rhamnosid_C</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid">Bac_rhamnosid</a>, <a href="http://pfam.xfam.org/family/FIVAR">FIVAR</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Oscillospirales; Ruminococcaceae; Massilioclostridium; Massilioclostridium methylpentosum</p>
-<p>Geography: Canada, North America</p>
-<p>Comment: Despite the 1.9kb intergenic length, this cluster was retained because no BLAST hits found for this intergenic sequence in NCBI nr database.</p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a>, <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus anginosus</p>
+<p>Geography: hypothetical protein, North America</p>
 
   </div>
 </div>

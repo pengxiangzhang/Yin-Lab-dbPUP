@@ -2,40 +2,39 @@
 
 <ul id="myTab" class="nav nav-tabs">
   <li class="active">
-        <a href="#tab1" data-toggle="tab">GUT_GENOME097932_00143</a>
+        <a href="#tab1" data-toggle="tab">GUT_GENOME000094_00756</a>
   </li>
-<li><a href="#tab2" data-toggle="tab">GUT_GENOME097932_00144</a></li>
+<li><a href="#tab2" data-toggle="tab">GUT_GENOME000094_00757</a></li>
 </ul>
 
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="tab1">
 
-<h2 id="GUT_GENOME097932_00143">GUT_GENOME097932_00143</h2>
-<p>Gene: <em>NA</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-01362">GUT_GENOME097932</a></p>
+<h2 id="GUT_GENOME000094_00756">GUT_GENOME000094_00756</h2>
+<p>Gene: <em>glpB</em>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00023">GUT_GENOME000094</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 43804..44718</p>
-<p>Protein length: 305</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
-
-<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus anginosus</p>
-<p>Geography: China, Asia</p>
+<p>Position: 781415..783826</p>
+<p>Protein length: 804</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.5.3">1.1.5.3</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/DAO">DAO</a>, <a href="http://pfam.xfam.org/family/FMN_bind">FMN_bind</a>, <a href="http://pfam.xfam.org/family/FAD_binding_2">FAD_binding_2</a>, <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus parasanguinis</p>
+<p>Geography: Anaerobic glycerol-3-phosphate dehydrogenase subunit B, Europe</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
-<h2 id="GUT_GENOME097932_00144">GUT_GENOME097932_00144</h2>
-<p>Gene: <em>iolW</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-01362">GUT_GENOME097932</a></p>
+<h2 id="GUT_GENOME000094_00757">GUT_GENOME000094_00757</h2>
+<p>Gene: <em>nfr1</em></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00023">GUT_GENOME000094</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 44782..45852</p>
-<p>Protein length: 357</p>
-<p>Product: scyllo-inositol 2-dehydrogenase (NADP(+)) IolW</p>
-<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.371">1.1.1.371</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a></p>
-<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus anginosus</p>
-<p>Geography: China, Asia</p>
+<p>Position: 783852..784460</p>
+<p>Protein length: 203</p>
+<p>Product: NADH-dependent flavin reductase subunit 1</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.36">1.5.1.36</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/DAO">DAO</a>, <a href="http://pfam.xfam.org/family/FMN_bind">FMN_bind</a>, <a href="http://pfam.xfam.org/family/FAD_binding_2">FAD_binding_2</a>, <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus parasanguinis</p>
+<p>Geography: NADH-dependent flavin reductase subunit 1, Europe</p>
 
   </div>
 </div>

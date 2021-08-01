@@ -63,6 +63,18 @@ def index():
     return render_template('index.html', content=to_md(c), description=description, title=title, name=name)
 
 
+@app.route('/dbpup/taxonomy')
+def taxonomy():
+    name = "Taxonomy"
+    title = "Taxonomy - "
+    try:
+        with open('content/taxonomy.md', encoding='utf-8') as c:
+            c = c.read()
+    except Exception:
+        pass
+    description = "dbPUP data of taxonomy"
+    return render_template('main.html', content=to_md(c), description=description, title=title, name=name)
+
 @app.route("/dbpup/about")
 def about():
     name = ""
@@ -866,8 +878,8 @@ class SwiRecord(dtbs.Model):
     strain = dtbs.Column(dtbs.VARCHAR(150))
     db = dtbs.Column(dtbs.VARCHAR(2))
     uniq_id = dtbs.Column(dtbs.VARCHAR(20))
-    pdb = dtbs.Column(dtbs.VARCHAR(500))
-    ec = dtbs.Column(dtbs.VARCHAR(50))
+    pdb = dtbs.Column(dtbs.VARCHAR(600))
+    ec = dtbs.Column(dtbs.VARCHAR(100))
     family = dtbs.Column(dtbs.VARCHAR(20))
     seq = dtbs.Column(dtbs.VARCHAR(5500))
     type = dtbs.Column(dtbs.VARCHAR(20))
@@ -879,14 +891,14 @@ class SwiRecord(dtbs.Model):
 class TreRecord(dtbs.Model):
     __tablename__ = 'trembl'
     number = dtbs.Column(dtbs.Integer, primary_key=True)
-    protein_enzyme = dtbs.Column(dtbs.VARCHAR(150))
+    protein_enzyme = dtbs.Column(dtbs.VARCHAR(210))
     strain = dtbs.Column(dtbs.VARCHAR(150))
     db = dtbs.Column(dtbs.VARCHAR(2))
     uniq_id = dtbs.Column(dtbs.VARCHAR(20))
     pdb = dtbs.Column(dtbs.VARCHAR(500))
     ec = dtbs.Column(dtbs.VARCHAR(50))
     family = dtbs.Column(dtbs.VARCHAR(20))
-    seq = dtbs.Column(dtbs.VARCHAR(5500))
+    seq = dtbs.Column(dtbs.VARCHAR(7000))
     type = dtbs.Column(dtbs.VARCHAR(20))
     web_id = dtbs.Column(dtbs.VARCHAR(500))
     lineage = dtbs.Column(dtbs.VARCHAR(500))
@@ -914,12 +926,12 @@ class ClusRecord(dtbs.Model):
     cluster_id = dtbs.Column(dtbs.VARCHAR(50))
     gene_id = dtbs.Column(dtbs.VARCHAR(50))
     name = dtbs.Column(dtbs.VARCHAR(200))
-    pfam = dtbs.Column(dtbs.VARCHAR(50))
+    pfam = dtbs.Column(dtbs.VARCHAR(200))
     type = dtbs.Column(dtbs.VARCHAR(50))
     phylum = dtbs.Column(dtbs.VARCHAR(50))
     continent = dtbs.Column(dtbs.VARCHAR(50))
     seq = dtbs.Column(dtbs.VARCHAR(5500))
-    pfam_link = dtbs.Column(dtbs.VARCHAR(255))
+    pfam_link = dtbs.Column(dtbs.VARCHAR(800))
     mgnify = dtbs.Column(dtbs.VARCHAR(255))
     color = dtbs.Column(dtbs.VARCHAR(10))
 

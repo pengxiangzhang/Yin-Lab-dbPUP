@@ -2,55 +2,39 @@
 
 <ul id="myTab" class="nav nav-tabs">
   <li class="active">
-        <a href="#tab1" data-toggle="tab">GUT_GENOME078838_03068</a>
+        <a href="#tab1" data-toggle="tab">GUT_GENOME017794_00887</a>
   </li>
-<li><a href="#tab2" data-toggle="tab">GUT_GENOME078838_03069</a></li>
-<li><a href="#tab3" data-toggle="tab">GUT_GENOME078838_03070</a></li>
+<li><a href="#tab2" data-toggle="tab">GUT_GENOME017794_00888</a></li>
 </ul>
 
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="tab1">
 
-<h2 id="GUT_GENOME078838_03068">GUT_GENOME078838_03068</h2>
-<p>Gene: <em>assT_1</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-01063">GUT_GENOME078838</a></p>
+<h2 id="GUT_GENOME017794_00887">GUT_GENOME017794_00887</h2>
+<p>Gene: <em>NA</em>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-02347">GUT_GENOME017794</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 4770..6809</p>
-<p>Protein length: 680</p>
-<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.2.22">2.8.2.22</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Arylsulfotran_N">Arylsulfotran_N</a>, <a href="http://pfam.xfam.org/family/Arylsulfotrans">Arylsulfotrans</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Robinsoniella; </p>
-<p>Geography: Sweden, Europe</p>
+<p>Position: 41..1288</p>
+<p>Protein length: 416</p>
+<p>EC: NA</p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a>, <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus anginosus_C</p>
+<p>Geography: hypothetical protein, Africa</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
-<h2 id="GUT_GENOME078838_03069">GUT_GENOME078838_03069</h2>
-<p>Gene: <em>assT_2</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-01063">GUT_GENOME078838</a></p>
-<p>Gene type: other genes</p>
-<p>Position: 7112..9217</p>
-<p>Protein length: 702</p>
-<p>Product: Arylsulfate sulfotransferase AssT</p>
-<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.2.22">2.8.2.22</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Arylsulfotran_N">Arylsulfotran_N</a>, <a href="http://pfam.xfam.org/family/Arylsulfotrans">Arylsulfotrans</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Robinsoniella; </p>
-<p>Geography: Sweden, Europe</p>
-
-  </div>
-  <div class="tab-pane fade" id="tab3">
-
-<h2 id="GUT_GENOME078838_03070">GUT_GENOME078838_03070</h2>
-<p>Gene: <em>assT_3</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-01063">GUT_GENOME078838</a></p>
+<h2 id="GUT_GENOME017794_00888">GUT_GENOME017794_00888</h2>
+<p>Gene: <em>nfr2</em></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-02347">GUT_GENOME017794</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 9289..11376</p>
-<p>Protein length: 696</p>
-<p>Product: Arylsulfate sulfotransferase AssT</p>
-<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.2.22">2.8.2.22</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Arylsulfotran_N">Arylsulfotran_N</a>, <a href="http://pfam.xfam.org/family/Arylsulfotrans">Arylsulfotrans</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Robinsoniella; </p>
-<p>Geography: Sweden, Europe</p>
+<p>Position: 1307..1915</p>
+<p>Protein length: 203</p>
+<p>Product: NADH-dependent flavin reductase subunit 2</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.36">1.5.1.36</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a>, <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus anginosus_C</p>
+<p>Geography: NADH-dependent flavin reductase subunit 2, Africa</p>
 
   </div>
 </div>

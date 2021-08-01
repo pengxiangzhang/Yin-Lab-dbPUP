@@ -2,72 +2,39 @@
 
 <ul id="myTab" class="nav nav-tabs">
   <li class="active">
-        <a href="#tab1" data-toggle="tab">GUT_GENOME214580_01986</a>
+        <a href="#tab1" data-toggle="tab">GUT_GENOME030631_00897</a>
   </li>
-<li><a href="#tab2" data-toggle="tab">GUT_GENOME214580_01987</a></li>
-<li><a href="#tab3" data-toggle="tab">GUT_GENOME214580_01988</a></li>
-<li><a href="#tab4" data-toggle="tab">GUT_GENOME214580_01989</a></li>
+<li><a href="#tab2" data-toggle="tab">GUT_GENOME030631_00898</a></li>
 </ul>
 
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="tab1">
 
-<h2 id="GUT_GENOME214580_01986">GUT_GENOME214580_01986</h2>
-<p>Gene: <em>NA</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00344">GUT_GENOME214580</a></p>
+<h2 id="GUT_GENOME030631_00897">GUT_GENOME030631_00897</h2>
+<p>Gene: <em>nfr2</em>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00199">GUT_GENOME030631</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 76941..79952</p>
-<p>Protein length: 1004</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_3">Glyco_hydro_3</a>, <a href="http://pfam.xfam.org/family/Glyco_hydro_3_C">Glyco_hydro_3_C</a>, <a href="http://pfam.xfam.org/family/Fn3-like">Fn3-like</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; 4C28d-15; CAG-727; QALS01; </p>
-<p>Geography: United States, North America</p>
+<p>Position: 4242..4847</p>
+<p>Protein length: 202</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.36">1.5.1.36</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a>, <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus parasanguinis_B</p>
+<p>Geography: NADH-dependent flavin reductase subunit 2, Asia</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
-<h2 id="GUT_GENOME214580_01987">GUT_GENOME214580_01987</h2>
+<h2 id="GUT_GENOME030631_00898">GUT_GENOME030631_00898</h2>
 <p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00344">GUT_GENOME214580</a></p>
-<p>Gene type: other genes</p>
-<p>Position: 79975..81330</p>
-<p>Protein length: 452</p>
-<p>Product: hypothetical protein</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/HATPase_c_5">HATPase_c_5</a></p>
-
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; 4C28d-15; CAG-727; QALS01; </p>
-<p>Geography: United States, North America</p>
-
-  </div>
-  <div class="tab-pane fade" id="tab3">
-
-<h2 id="GUT_GENOME214580_01988">GUT_GENOME214580_01988</h2>
-<p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00344">GUT_GENOME214580</a></p>
-<p>Gene type: other genes</p>
-<p>Position: 81330..82073</p>
-<p>Protein length: 248</p>
-<p>Product: Transcriptional regulatory protein NatR</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Response_reg">Response_reg</a>, <a href="http://pfam.xfam.org/family/LytTR">LytTR</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; 4C28d-15; CAG-727; QALS01; </p>
-<p>Geography: United States, North America</p>
-
-  </div>
-  <div class="tab-pane fade" id="tab4">
-
-<h2 id="GUT_GENOME214580_01989">GUT_GENOME214580_01989</h2>
-<p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00344">GUT_GENOME214580</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00199">GUT_GENOME030631</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 82155..85058</p>
-<p>Protein length: 968</p>
+<p>Position: 4866..6110</p>
+<p>Protein length: 415</p>
 <p>Product: hypothetical protein</p>
 <p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_3">Glyco_hydro_3</a>, <a href="http://pfam.xfam.org/family/Glyco_hydro_3_C">Glyco_hydro_3_C</a>, <a href="http://pfam.xfam.org/family/Fn3-like">Fn3-like</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; 4C28d-15; CAG-727; QALS01; </p>
-<p>Geography: United States, North America</p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a>, <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus parasanguinis_B</p>
+<p>Geography: hypothetical protein, Asia</p>
 
   </div>
 </div>

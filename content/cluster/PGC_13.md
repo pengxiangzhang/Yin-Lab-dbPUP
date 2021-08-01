@@ -2,41 +2,39 @@
 
 <ul id="myTab" class="nav nav-tabs">
   <li class="active">
-        <a href="#tab1" data-toggle="tab">GUT_GENOME185609_00063</a>
+        <a href="#tab1" data-toggle="tab">GUT_GENOME000574_00742</a>
   </li>
-<li><a href="#tab2" data-toggle="tab">GUT_GENOME185609_00064</a></li>
+<li><a href="#tab2" data-toggle="tab">GUT_GENOME000574_00743</a></li>
 </ul>
 
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="tab1">
 
-<h2 id="GUT_GENOME185609_00063">GUT_GENOME185609_00063</h2>
+<h2 id="GUT_GENOME000574_00742">GUT_GENOME000574_00742</h2>
 <p>Gene: <em>NA</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00268">GUT_GENOME185609</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00106">GUT_GENOME000574</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 64419..64862</p>
-<p>Protein length: 148</p>
+<p>Position: 800371..801627</p>
+<p>Protein length: 419</p>
 <p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/ns">ns</a></p>
-
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Faecalicatena; Faecalicatena sp900066545</p>
-<p>Geography: United States, North America</p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a>, <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Enterococcaceae; Enterococcus_D; Enterococcus_D gallinarum</p>
+<p>Geography: hypothetical protein, North America</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
-<h2 id="GUT_GENOME185609_00064">GUT_GENOME185609_00064</h2>
-<p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00268">GUT_GENOME185609</a></p>
+<h2 id="GUT_GENOME000574_00743">GUT_GENOME000574_00743</h2>
+<p>Gene: <em>nfr1_2</em></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00106">GUT_GENOME000574</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 64873..65745</p>
-<p>Protein length: 291</p>
-<p>Product: hypothetical protein</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
-
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Faecalicatena; Faecalicatena sp900066545</p>
-<p>Geography: United States, North America</p>
+<p>Position: 801649..802254</p>
+<p>Protein length: 202</p>
+<p>Product: NADH-dependent flavin reductase subunit 1</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.36">1.5.1.36</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a>, <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Enterococcaceae; Enterococcus_D; Enterococcus_D gallinarum</p>
+<p>Geography: NADH-dependent flavin reductase subunit 1, North America</p>
 
   </div>
 </div>

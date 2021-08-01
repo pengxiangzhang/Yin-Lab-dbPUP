@@ -2,40 +2,39 @@
 
 <ul id="myTab" class="nav nav-tabs">
   <li class="active">
-        <a href="#tab1" data-toggle="tab">GUT_GENOME084608_00935</a>
+        <a href="#tab1" data-toggle="tab">GUT_GENOME000862_00779</a>
   </li>
-<li><a href="#tab2" data-toggle="tab">GUT_GENOME084608_00936</a></li>
+<li><a href="#tab2" data-toggle="tab">GUT_GENOME000862_00780</a></li>
 </ul>
 
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="tab1">
 
-<h2 id="GUT_GENOME084608_00935">GUT_GENOME084608_00935</h2>
-<p>Gene: <em>NA</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-04022">GUT_GENOME084608</a></p>
+<h2 id="GUT_GENOME000862_00779">GUT_GENOME000862_00779</h2>
+<p>Gene: <em>nfr1</em>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00166">GUT_GENOME000862</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 1444..2298</p>
-<p>Protein length: 285</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
-
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Oscillospirales; Ruminococcaceae; ; </p>
-<p>Geography: China, Asia</p>
+<p>Position: 76413..77024</p>
+<p>Protein length: 204</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.36">1.5.1.36</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a>, <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Lactobacillaceae; Lactobacillus_H; Lactobacillus_H fermentum</p>
+<p>Geography: NADH-dependent flavin reductase subunit 1, Asia</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
-<h2 id="GUT_GENOME084608_00936">GUT_GENOME084608_00936</h2>
-<p>Gene: <em>iolG_2</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-04022">GUT_GENOME084608</a></p>
+<h2 id="GUT_GENOME000862_00780">GUT_GENOME000862_00780</h2>
+<p>Gene: <em>NA</em></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00166">GUT_GENOME000862</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 2365..3432</p>
-<p>Protein length: 356</p>
-<p>Product: Inositol 2-dehydrogenase/D-chiro-inositol 3-dehydrogenase</p>
-<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.18">1.1.1.18</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Oscillospirales; Ruminococcaceae; ; </p>
-<p>Geography: China, Asia</p>
+<p>Position: 77044..78396</p>
+<p>Protein length: 451</p>
+<p>Product: hypothetical protein</p>
+<p>EC: NA</p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a>, <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Lactobacillaceae; Lactobacillus_H; Lactobacillus_H fermentum</p>
+<p>Geography: hypothetical protein, Asia</p>
 
   </div>
 </div>

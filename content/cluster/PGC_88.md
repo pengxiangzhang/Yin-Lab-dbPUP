@@ -2,74 +2,39 @@
 
 <ul id="myTab" class="nav nav-tabs">
   <li class="active">
-        <a href="#tab1" data-toggle="tab">GUT_GENOME018979_00055</a>
+        <a href="#tab1" data-toggle="tab">GUT_GENOME029159_00035</a>
   </li>
-<li><a href="#tab2" data-toggle="tab">GUT_GENOME018979_00056</a></li>
-<li><a href="#tab3" data-toggle="tab">GUT_GENOME018979_00057</a></li>
-<li><a href="#tab4" data-toggle="tab">GUT_GENOME018979_00058</a></li>
+<li><a href="#tab2" data-toggle="tab">GUT_GENOME029159_00036</a></li>
 </ul>
 
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="tab1">
 
-<h2 id="GUT_GENOME018979_00055">GUT_GENOME018979_00055</h2>
-<p>Gene: <em>bglH_1</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00244">GUT_GENOME018979</a></p>
+<h2 id="GUT_GENOME029159_00035">GUT_GENOME029159_00035</h2>
+<p>Gene: <em>iolG_1</em>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-03702">GUT_GENOME029159</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 37..1503</p>
-<p>Protein length: 489</p>
-<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.86">3.2.1.86</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_1">Glyco_hydro_1</a></p>
-
-<p>Lineage: Bacteria; Firmicutes; Bacilli; Erysipelotrichales; Erysipelatoclostridiaceae; Catenibacterium; Catenibacterium sp000437715</p>
-<p>Geography: Madagascar, Africa</p>
+<p>Position: 42389..43651</p>
+<p>Protein length: 421</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.18">1.1.1.18</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a>, <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
+<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Eisenbergiella; Eisenbergiella sp900066775</p>
+<p>Geography: Inositol 2-dehydrogenase/D-chiro-inositol 3-dehydrogenase, Asia</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
-<h2 id="GUT_GENOME018979_00056">GUT_GENOME018979_00056</h2>
-<p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00244">GUT_GENOME018979</a></p>
-<p>Gene type: other genes</p>
-<p>Position: 1496..1711</p>
-<p>Protein length: 72</p>
-<p>Product: hypothetical protein</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/ns">ns</a></p>
-
-<p>Lineage: Bacteria; Firmicutes; Bacilli; Erysipelotrichales; Erysipelatoclostridiaceae; Catenibacterium; Catenibacterium sp000437715</p>
-<p>Geography: Madagascar, Africa</p>
-
-  </div>
-  <div class="tab-pane fade" id="tab3">
-
-<h2 id="GUT_GENOME018979_00057">GUT_GENOME018979_00057</h2>
-<p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00244">GUT_GENOME018979</a></p>
-<p>Gene type: other genes</p>
-<p>Position: 1750..2700</p>
-<p>Protein length: 317</p>
-<p>Product: hypothetical protein</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Peptidase_S9">Peptidase_S9</a></p>
-
-<p>Lineage: Bacteria; Firmicutes; Bacilli; Erysipelotrichales; Erysipelatoclostridiaceae; Catenibacterium; Catenibacterium sp000437715</p>
-<p>Geography: Madagascar, Africa</p>
-
-  </div>
-  <div class="tab-pane fade" id="tab4">
-
-<h2 id="GUT_GENOME018979_00058">GUT_GENOME018979_00058</h2>
-<p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00244">GUT_GENOME018979</a></p>
+<h2 id="GUT_GENOME029159_00036">GUT_GENOME029159_00036</h2>
+<p>Gene: <em>iolE_1</em></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-03702">GUT_GENOME029159</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 2693..5428</p>
-<p>Protein length: 912</p>
-<p>Product: hypothetical protein</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Bac_rhamnosid_C">Bac_rhamnosid_C</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid6H">Bac_rhamnosid6H</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid">Bac_rhamnosid</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid_N">Bac_rhamnosid_N</a></p>
-<p>Lineage: Bacteria; Firmicutes; Bacilli; Erysipelotrichales; Erysipelatoclostridiaceae; Catenibacterium; Catenibacterium sp000437715</p>
-<p>Geography: Madagascar, Africa</p>
+<p>Position: 43801..44637</p>
+<p>Protein length: 279</p>
+<p>Product: Inosose dehydratase</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.44">4.2.1.44</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a>, <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
+<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Eisenbergiella; Eisenbergiella sp900066775</p>
+<p>Geography: Inosose dehydratase, Asia</p>
 
   </div>
 </div>

@@ -2,58 +2,41 @@
 
 <ul id="myTab" class="nav nav-tabs">
   <li class="active">
-        <a href="#tab1" data-toggle="tab">GUT_GENOME230528_00877</a>
+        <a href="#tab1" data-toggle="tab">GUT_GENOME023061_00386</a>
   </li>
-<li><a href="#tab2" data-toggle="tab">GUT_GENOME230528_00878</a></li>
-<li><a href="#tab3" data-toggle="tab">GUT_GENOME230528_00879</a></li>
+<li><a href="#tab2" data-toggle="tab">GUT_GENOME023061_00387</a></li>
 </ul>
 
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="tab1">
 
-<h2 id="GUT_GENOME230528_00877">GUT_GENOME230528_00877</h2>
-<p>Gene: <em>NA</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-02593">GUT_GENOME230528</a></p>
+<h2 id="GUT_GENOME023061_00386">GUT_GENOME023061_00386</h2>
+<p>Gene: <em>nfr1</em>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-02384">GUT_GENOME023061</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 24994..26574</p>
-<p>Protein length: 527</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Bac_rhamnosid6H">Bac_rhamnosid6H</a></p>
+<p>Position: 8457..8996</p>
+<p>Protein length: 180</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.36">1.5.1.36</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
 
-<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Lactobacillaceae; Lactobacillus_H; </p>
-<p>Geography: China, Asia</p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Lactobacillaceae; Lactobacillus; Lactobacillus helveticus</p>
+<p>Geography: NADH-dependent flavin reductase subunit 1, Asia</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
-<h2 id="GUT_GENOME230528_00878">GUT_GENOME230528_00878</h2>
-<p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-02593">GUT_GENOME230528</a></p>
-<p>Gene type: other genes</p>
-<p>Position: 26588..27841</p>
-<p>Protein length: 418</p>
-<p>Product: hypothetical protein</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/MFS_1">MFS_1</a></p>
-
-<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Lactobacillaceae; Lactobacillus_H; </p>
-<p>Geography: China, Asia</p>
-
-  </div>
-  <div class="tab-pane fade" id="tab3">
-
-<h2 id="GUT_GENOME230528_00879">GUT_GENOME230528_00879</h2>
-<p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-02593">GUT_GENOME230528</a></p>
+<h2 id="GUT_GENOME023061_00387">GUT_GENOME023061_00387</h2>
+<p>Gene: <em>nfr2</em></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-02384">GUT_GENOME023061</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 27899..29854</p>
-<p>Protein length: 652</p>
-<p>Product: hypothetical protein</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Bac_rhamnosid6H">Bac_rhamnosid6H</a></p>
+<p>Position: 9010..9558</p>
+<p>Protein length: 183</p>
+<p>Product: NADH-dependent flavin reductase subunit 2</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.36">1.5.1.36</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
 
-<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Lactobacillaceae; Lactobacillus_H; </p>
-<p>Geography: China, Asia</p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Lactobacillaceae; Lactobacillus; Lactobacillus helveticus</p>
+<p>Geography: NADH-dependent flavin reductase subunit 2, Asia</p>
 
   </div>
 </div>

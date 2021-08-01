@@ -2,57 +2,39 @@
 
 <ul id="myTab" class="nav nav-tabs">
   <li class="active">
-        <a href="#tab1" data-toggle="tab">GUT_GENOME026811_01708</a>
+        <a href="#tab1" data-toggle="tab">GUT_GENOME017790_01404</a>
   </li>
-<li><a href="#tab2" data-toggle="tab">GUT_GENOME026811_01709</a></li>
-<li><a href="#tab3" data-toggle="tab">GUT_GENOME026811_01710</a></li>
+<li><a href="#tab2" data-toggle="tab">GUT_GENOME017790_01405</a></li>
 </ul>
 
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="tab1">
 
-<h2 id="GUT_GENOME026811_01708">GUT_GENOME026811_01708</h2>
-<p>Gene: <em>iolG_6</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00752">GUT_GENOME026811</a></p>
+<h2 id="GUT_GENOME017790_01404">GUT_GENOME017790_01404</h2>
+<p>Gene: <em>glpB</em>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00576">GUT_GENOME017790</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 12204..13262</p>
-<p>Protein length: 353</p>
-<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.18">1.1.1.18</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Oscillospirales; Acutalibacteraceae; UBA737; </p>
-<p>Geography: Kazakhstan, Asia</p>
+<p>Position: 7055..9466</p>
+<p>Protein length: 804</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.5.3">1.1.5.3</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/FMN_bind">FMN_bind</a>, <a href="http://pfam.xfam.org/family/FAD_binding_2">FAD_binding_2</a>, <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; </p>
+<p>Geography: Anaerobic glycerol-3-phosphate dehydrogenase subunit B, Africa</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
-<h2 id="GUT_GENOME026811_01709">GUT_GENOME026811_01709</h2>
-<p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00752">GUT_GENOME026811</a></p>
-<p>Gene type: other genes</p>
-<p>Position: 13285..14136</p>
-<p>Protein length: 284</p>
-<p>Product: hypothetical protein</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/ns">ns</a></p>
-
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Oscillospirales; Acutalibacteraceae; UBA737; </p>
-<p>Geography: Kazakhstan, Asia</p>
-
-  </div>
-  <div class="tab-pane fade" id="tab3">
-
-<h2 id="GUT_GENOME026811_01710">GUT_GENOME026811_01710</h2>
-<p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00752">GUT_GENOME026811</a></p>
+<h2 id="GUT_GENOME017790_01405">GUT_GENOME017790_01405</h2>
+<p>Gene: <em>nfr1</em></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00576">GUT_GENOME017790</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 14133..14996</p>
-<p>Protein length: 288</p>
-<p>Product: hypothetical protein</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
-
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Oscillospirales; Acutalibacteraceae; UBA737; </p>
-<p>Geography: Kazakhstan, Asia</p>
+<p>Position: 9479..10081</p>
+<p>Protein length: 201</p>
+<p>Product: NADH-dependent flavin reductase subunit 1</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.36">1.5.1.36</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/FMN_bind">FMN_bind</a>, <a href="http://pfam.xfam.org/family/FAD_binding_2">FAD_binding_2</a>, <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; </p>
+<p>Geography: NADH-dependent flavin reductase subunit 1, Africa</p>
 
   </div>
 </div>

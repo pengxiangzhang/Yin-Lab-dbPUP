@@ -2,39 +2,39 @@
 
 <ul id="myTab" class="nav nav-tabs">
   <li class="active">
-        <a href="#tab1" data-toggle="tab">GUT_GENOME260147_00587</a>
+        <a href="#tab1" data-toggle="tab">GUT_GENOME007099_01082</a>
   </li>
-<li><a href="#tab2" data-toggle="tab">GUT_GENOME260147_00588</a></li>
+<li><a href="#tab2" data-toggle="tab">GUT_GENOME007099_01083</a></li>
 </ul>
 
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade in active" id="tab1">
 
-<h2 id="GUT_GENOME260147_00587">GUT_GENOME260147_00587</h2>
-<p>Gene: <em>NA</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-04232">GUT_GENOME260147</a></p>
+<h2 id="GUT_GENOME007099_01082">GUT_GENOME007099_01082</h2>
+<p>Gene: <em>iolW</em>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-03702">GUT_GENOME007099</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 4478..7324</p>
-<p>Protein length: 949</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Bac_rhamnosid_C">Bac_rhamnosid_C</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid6H">Bac_rhamnosid6H</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid">Bac_rhamnosid</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid_N">Bac_rhamnosid_N</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Peptostreptococcales; Peptostreptococcaceae; Terrisporobacter; </p>
-<p>Geography: United Kingdom, Europe</p>
+<p>Position: 9229..10278</p>
+<p>Protein length: 350</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.371">1.1.1.371</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a>, <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
+<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Eisenbergiella; Eisenbergiella sp900066775</p>
+<p>Geography: scyllo-inositol 2-dehydrogenase (NADP(+)) IolW, Europe</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
-<h2 id="GUT_GENOME260147_00588">GUT_GENOME260147_00588</h2>
-<p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-04232">GUT_GENOME260147</a></p>
+<h2 id="GUT_GENOME007099_01083">GUT_GENOME007099_01083</h2>
+<p>Gene: <em>iolG_1</em></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-03702">GUT_GENOME007099</a></p>
 <p>Gene type: PUP genes</p>
-<p>Position: 7340..10180</p>
-<p>Protein length: 947</p>
-<p>Product: hypothetical protein</p>
-<p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Bac_rhamnosid6H">Bac_rhamnosid6H</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid_C">Bac_rhamnosid_C</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid">Bac_rhamnosid</a>, <a href="http://pfam.xfam.org/family/Bac_rhamnosid_N">Bac_rhamnosid_N</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Peptostreptococcales; Peptostreptococcaceae; Terrisporobacter; </p>
-<p>Geography: United Kingdom, Europe</p>
+<p>Position: 10348..12201</p>
+<p>Protein length: 618</p>
+<p>Product: Inositol 2-dehydrogenase/D-chiro-inositol 3-dehydrogenase</p>
+<p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.18">1.1.1.18</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a>, <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
+<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Eisenbergiella; Eisenbergiella sp900066775</p>
+<p>Geography: Inositol 2-dehydrogenase/D-chiro-inositol 3-dehydrogenase, Europe</p>
 
   </div>
 </div>
