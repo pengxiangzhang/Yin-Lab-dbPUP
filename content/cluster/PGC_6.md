@@ -16,11 +16,12 @@
 <p>Gene type: PUP genes</p>
 <p>Position: 63635..64819</p>
 <p>Protein length: 395</p>
+<p>Product: Oleandomycin glycosyltransferase</p>
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.-">2.4.1.-</a></p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Not Detected">Not Detected</a></p>
 
 <p>Lineage: Bacteria; Firmicutes_A; Clostridia; Clostridiales; Clostridiaceae; Clostridium_P; Clostridium_P ventriculi</p>
-<p>Geography: Oleandomycin glycosyltransferase, Europe</p>
+<p>Geography: United Kingdom, Europe</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
@@ -36,7 +37,7 @@
 <p>Pfam: <a href="http://pfam.xfam.org/family/Not Detected">Not Detected</a></p>
 
 <p>Lineage: Bacteria; Firmicutes_A; Clostridia; Clostridiales; Clostridiaceae; Clostridium_P; Clostridium_P ventriculi</p>
-<p>Geography: Oleandomycin glycosyltransferase, Europe</p>
+<p>Geography: United Kingdom, Europe</p>
 
   </div>
 </div>

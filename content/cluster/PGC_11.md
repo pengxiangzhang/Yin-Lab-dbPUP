@@ -16,10 +16,11 @@
 <p>Gene type: PUP genes</p>
 <p>Position: 542612..543220</p>
 <p>Protein length: 203</p>
+<p>Product: NADH-dependent flavin reductase subunit 2</p>
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.36">1.5.1.36</a></p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a>, <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a></p>
 <p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus anginosus</p>
-<p>Geography: NADH-dependent flavin reductase subunit 2, North America</p>
+<p>Geography: Canada, North America</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
@@ -34,7 +35,7 @@
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a>, <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a></p>
 <p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus anginosus</p>
-<p>Geography: hypothetical protein, North America</p>
+<p>Geography: Canada, North America</p>
 
   </div>
 </div>

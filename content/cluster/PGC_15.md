@@ -16,10 +16,11 @@
 <p>Gene type: PUP genes</p>
 <p>Position: 688208..690163</p>
 <p>Protein length: 652</p>
+<p>Product: NADH oxidase</p>
 <p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Pyr_redox_2">Pyr_redox_2</a>, <a href="http://pfam.xfam.org/family/Oxidored_FMN">Oxidored_FMN</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/DUF3502">DUF3502</a>, <a href="http://pfam.xfam.org/family/Amidohydro_2">Amidohydro_2</a></p>
 <p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; UBA7096; </p>
-<p>Geography: NADH oxidase, North America</p>
+<p>Geography: Canada, North America</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
@@ -32,9 +33,9 @@
 <p>Protein length: 657</p>
 <p>Product: Cinnamate reductase</p>
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.-">1.3.1.-</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Pyr_redox_2">Pyr_redox_2</a>, <a href="http://pfam.xfam.org/family/Oxidored_FMN">Oxidored_FMN</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/DUF3502">DUF3502</a>, <a href="http://pfam.xfam.org/family/Amidohydro_2">Amidohydro_2</a></p>
 <p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; UBA7096; </p>
-<p>Geography: Cinnamate reductase, North America</p>
+<p>Geography: Canada, North America</p>
 
   </div>
 </div>

@@ -16,10 +16,11 @@
 <p>Gene type: PUP genes</p>
 <p>Position: 98225..99688</p>
 <p>Protein length: 488</p>
+<p>Product: Fumarate reductase flavoprotein subunit</p>
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.5.4">1.3.5.4</a></p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/FAD_binding_2">FAD_binding_2</a>, <a href="http://pfam.xfam.org/family/adh_short_C2">adh_short_C2</a></p>
 <p>Lineage: Bacteria; Actinobacteriota; Coriobacteriia; Coriobacteriales; Eggerthellaceae; Adlercreutzia; Adlercreutzia equolifaciens</p>
-<p>Geography: Fumarate reductase flavoprotein subunit, Europe</p>
+<p>Geography: United Kingdom, Europe</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
@@ -34,7 +35,7 @@
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.100">1.1.1.100</a></p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/FAD_binding_2">FAD_binding_2</a>, <a href="http://pfam.xfam.org/family/adh_short_C2">adh_short_C2</a></p>
 <p>Lineage: Bacteria; Actinobacteriota; Coriobacteriia; Coriobacteriales; Eggerthellaceae; Adlercreutzia; Adlercreutzia equolifaciens</p>
-<p>Geography: 3-oxoacyl-[acyl-carrier-protein] reductase FabG, Europe</p>
+<p>Geography: United Kingdom, Europe</p>
 
   </div>
 </div>

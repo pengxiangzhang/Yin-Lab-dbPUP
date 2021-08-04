@@ -16,11 +16,12 @@
 <p>Gene type: PUP genes</p>
 <p>Position: 11619..12140</p>
 <p>Protein length: 174</p>
+<p>Product: hypothetical protein</p>
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
 
 <p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Enterococcaceae; Enterococcus_D; Enterococcus_D casseliflavus</p>
-<p>Geography: hypothetical protein, North America</p>
+<p>Geography: Canada, North America</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
@@ -36,7 +37,7 @@
 <p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
 
 <p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Enterococcaceae; Enterococcus_D; Enterococcus_D casseliflavus</p>
-<p>Geography: hypothetical protein, North America</p>
+<p>Geography: Canada, North America</p>
 
   </div>
 </div>

@@ -16,10 +16,11 @@
 <p>Gene type: PUP genes</p>
 <p>Position: 53043..54494</p>
 <p>Protein length: 484</p>
+<p>Product: Fumarate reductase flavoprotein subunit</p>
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.5.4">1.3.5.4</a></p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/FAD_binding_2">FAD_binding_2</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a></p>
 <p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Faecalicatena; Faecalicatena sp900066545</p>
-<p>Geography: Fumarate reductase flavoprotein subunit, Europe</p>
+<p>Geography: United Kingdom, Europe</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
@@ -34,7 +35,7 @@
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.371">1.1.1.371</a></p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/FAD_binding_2">FAD_binding_2</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a></p>
 <p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Faecalicatena; Faecalicatena sp900066545</p>
-<p>Geography: scyllo-inositol 2-dehydrogenase (NADP(+)) IolW, Europe</p>
+<p>Geography: United Kingdom, Europe</p>
 
   </div>
 </div>

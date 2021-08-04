@@ -16,10 +16,11 @@
 <p>Gene type: PUP genes</p>
 <p>Position: 233..4759</p>
 <p>Protein length: 1509</p>
+<p>Product: hypothetical protein</p>
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_70">Glyco_hydro_70</a>, <a href="http://pfam.xfam.org/family/Choline_bind_1">Choline_bind_1</a>, <a href="http://pfam.xfam.org/family/Choline_bind_3">Choline_bind_3</a></p>
 <p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Lactobacillaceae; Lactobacillus_B; Lactobacillus_B animalis</p>
-<p>Geography: hypothetical protein, North America</p>
+<p>Geography: Canada, North America</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
@@ -34,7 +35,7 @@
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_70">Glyco_hydro_70</a>, <a href="http://pfam.xfam.org/family/Choline_bind_1">Choline_bind_1</a>, <a href="http://pfam.xfam.org/family/Choline_bind_3">Choline_bind_3</a></p>
 <p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Lactobacillaceae; Lactobacillus_B; Lactobacillus_B animalis</p>
-<p>Geography: hypothetical protein, North America</p>
+<p>Geography: Canada, North America</p>
 
   </div>
 </div>

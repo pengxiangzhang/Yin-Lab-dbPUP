@@ -16,11 +16,12 @@
 <p>Gene type: PUP genes</p>
 <p>Position: 177821..178360</p>
 <p>Protein length: 180</p>
+<p>Product: NADH-dependent flavin reductase subunit 1</p>
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.36">1.5.1.36</a></p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
 
 <p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Lactobacillaceae; Lactobacillus; Lactobacillus intestinalis</p>
-<p>Geography: NADH-dependent flavin reductase subunit 1, Europe</p>
+<p>Geography: United Kingdom, Europe</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
@@ -36,7 +37,7 @@
 <p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
 
 <p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Lactobacillaceae; Lactobacillus; Lactobacillus intestinalis</p>
-<p>Geography: NADH-dependent flavin reductase subunit 2, Europe</p>
+<p>Geography: United Kingdom, Europe</p>
 
   </div>
 </div>

@@ -16,11 +16,11 @@
 <p>Gene type: PUP genes</p>
 <p>Position: 175160..176068</p>
 <p>Protein length: 303</p>
+<p>Product: hypothetical protein</p>
 <p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
-
+<p>Pfam: <a href="http://pfam.xfam.org/family/Pyr_redox_2">Pyr_redox_2</a>, <a href="http://pfam.xfam.org/family/Oxidored_FMN">Oxidored_FMN</a>, <a href="http://pfam.xfam.org/family/HTH_1">HTH_1</a>, <a href="http://pfam.xfam.org/family/LysR_substrate">LysR_substrate</a>, <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
 <p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; UBA7096; </p>
-<p>Geography: hypothetical protein, North America</p>
+<p>Geography: Canada, North America</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
@@ -33,10 +33,9 @@
 <p>Protein length: 146</p>
 <p>Product: hypothetical protein</p>
 <p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
-
+<p>Pfam: <a href="http://pfam.xfam.org/family/Pyr_redox_2">Pyr_redox_2</a>, <a href="http://pfam.xfam.org/family/Oxidored_FMN">Oxidored_FMN</a>, <a href="http://pfam.xfam.org/family/HTH_1">HTH_1</a>, <a href="http://pfam.xfam.org/family/LysR_substrate">LysR_substrate</a>, <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
 <p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; UBA7096; </p>
-<p>Geography: hypothetical protein, North America</p>
+<p>Geography: Canada, North America</p>
 
   </div>
 </div>

@@ -16,10 +16,11 @@
 <p>Gene type: PUP genes</p>
 <p>Position: 781415..783826</p>
 <p>Protein length: 804</p>
+<p>Product: Anaerobic glycerol-3-phosphate dehydrogenase subunit B</p>
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.5.3">1.1.5.3</a></p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/DAO">DAO</a>, <a href="http://pfam.xfam.org/family/FMN_bind">FMN_bind</a>, <a href="http://pfam.xfam.org/family/FAD_binding_2">FAD_binding_2</a>, <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
 <p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus parasanguinis</p>
-<p>Geography: Anaerobic glycerol-3-phosphate dehydrogenase subunit B, Europe</p>
+<p>Geography: United Kingdom, Europe</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
@@ -34,7 +35,7 @@
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.36">1.5.1.36</a></p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/DAO">DAO</a>, <a href="http://pfam.xfam.org/family/FMN_bind">FMN_bind</a>, <a href="http://pfam.xfam.org/family/FAD_binding_2">FAD_binding_2</a>, <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
 <p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus parasanguinis</p>
-<p>Geography: NADH-dependent flavin reductase subunit 1, Europe</p>
+<p>Geography: United Kingdom, Europe</p>
 
   </div>
 </div>

@@ -16,11 +16,12 @@
 <p>Gene type: PUP genes</p>
 <p>Position: 18703..21966</p>
 <p>Protein length: 1088</p>
+<p>Product: hypothetical protein</p>
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_106">Glyco_hydro_106</a></p>
 
 <p>Lineage: Bacteria; Bacteroidota; Bacteroidia; Bacteroidales; Bacteroidaceae; Prevotella; Prevotella sp002251385</p>
-<p>Geography: hypothetical protein, Asia</p>
+<p>Geography: Kazakhstan, Asia</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
@@ -36,7 +37,7 @@
 <p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_106">Glyco_hydro_106</a></p>
 
 <p>Lineage: Bacteria; Bacteroidota; Bacteroidia; Bacteroidales; Bacteroidaceae; Prevotella; Prevotella sp002251385</p>
-<p>Geography: hypothetical protein, Asia</p>
+<p>Geography: Kazakhstan, Asia</p>
 
   </div>
 </div>

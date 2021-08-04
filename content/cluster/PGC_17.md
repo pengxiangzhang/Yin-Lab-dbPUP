@@ -16,11 +16,11 @@
 <p>Gene type: PUP genes</p>
 <p>Position: 11963..12406</p>
 <p>Protein length: 148</p>
+<p>Product: hypothetical protein</p>
 <p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
-
+<p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a></p>
 <p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; UBA7096; </p>
-<p>Geography: hypothetical protein, North America</p>
+<p>Geography: Canada, North America</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
@@ -33,10 +33,9 @@
 <p>Protein length: 291</p>
 <p>Product: hypothetical protein</p>
 <p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
-
+<p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a></p>
 <p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; UBA7096; </p>
-<p>Geography: hypothetical protein, North America</p>
+<p>Geography: Canada, North America</p>
 
   </div>
 </div>

@@ -16,10 +16,11 @@
 <p>Gene type: PUP genes</p>
 <p>Position: 81110..81715</p>
 <p>Protein length: 202</p>
+<p>Product: NADH-dependent flavin reductase subunit 2</p>
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.36">1.5.1.36</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a>, <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a>, <a href="http://pfam.xfam.org/family/SnoaL">SnoaL</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a></p>
 <p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Enterococcaceae; Enterococcus_D; Enterococcus_D casseliflavus</p>
-<p>Geography: NADH-dependent flavin reductase subunit 2, Asia</p>
+<p>Geography: China, Asia</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
@@ -32,9 +33,9 @@
 <p>Protein length: 407</p>
 <p>Product: hypothetical protein</p>
 <p>EC: NA</p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a>, <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a></p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a>, <a href="http://pfam.xfam.org/family/SnoaL">SnoaL</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a></p>
 <p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Enterococcaceae; Enterococcus_D; Enterococcus_D casseliflavus</p>
-<p>Geography: hypothetical protein, Asia</p>
+<p>Geography: China, Asia</p>
 
   </div>
 </div>

@@ -12,29 +12,30 @@
 
 <h2 id="GUT_GENOME018624_00464">GUT_GENOME018624_00464</h2>
 <p>Gene: <em>iolW</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-03702">GUT_GENOME018624</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00576">GUT_GENOME018624</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 4198..5247</p>
 <p>Protein length: 350</p>
+<p>Product: scyllo-inositol 2-dehydrogenase (NADP(+)) IolW</p>
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.371">1.1.1.371</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a>, <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Eisenbergiella; Eisenbergiella sp900066775</p>
-<p>Geography: scyllo-inositol 2-dehydrogenase (NADP(+)) IolW, Africa</p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/FMN_bind">FMN_bind</a>, <a href="http://pfam.xfam.org/family/FAD_binding_2">FAD_binding_2</a>, <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; </p>
+<p>Geography: Madagascar, Africa</p>
   </div>
 
   <div class="tab-pane fade" id="tab2">
 
 <h2 id="GUT_GENOME018624_00465">GUT_GENOME018624_00465</h2>
 <p>Gene: <em>iolG_3</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-03702">GUT_GENOME018624</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00576">GUT_GENOME018624</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 5317..7170</p>
 <p>Protein length: 618</p>
 <p>Product: Inositol 2-dehydrogenase/D-chiro-inositol 3-dehydrogenase</p>
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.18">1.1.1.18</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a>, <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Eisenbergiella; Eisenbergiella sp900066775</p>
-<p>Geography: Inositol 2-dehydrogenase/D-chiro-inositol 3-dehydrogenase, Africa</p>
+<p>Pfam: <a href="http://pfam.xfam.org/family/FMN_bind">FMN_bind</a>, <a href="http://pfam.xfam.org/family/FAD_binding_2">FAD_binding_2</a>, <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; </p>
+<p>Geography: Madagascar, Africa</p>
 
   </div>
 </div>
