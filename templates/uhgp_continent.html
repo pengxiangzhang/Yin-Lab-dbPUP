@@ -62,7 +62,7 @@
                 <tbody>
                 {% for record in records %}
                     <tr>
-                    <td><a href="{{ record.MGnify }}" rel="noopener noreferrer"
+                    <td><a href="https://www.ebi.ac.uk/metagenomics/genomes/{{ record.MGnify }}" rel="noopener noreferrer"
                            target="_blank">{{ record.gene_id }}</a></td>
                     <td><a href="{{ url_for('family', family_id = record.family) }}">{{ record.family }}</a></td>
                     <td>{{ record.name }}</td>
