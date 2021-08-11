@@ -41,8 +41,7 @@ Pi + glyceraldehyde-3-phosphate + NAD<sup>+</sup> &rarr; NADH + H<sup>+</sup> + 
 where NAD<sup>+</sup> is the oxidant (electron acceptor), and glyceraldehyde-3-phosphate functions as reductant (
 electron donor).
 
-For a detailed information on class, subclass or sub-subclass of oxidoreductases, please visit [**
-ExplorEnz**](https://www.enzyme-database.org/class.php).
+For a detailed information on class, subclass or sub-subclass of oxidoreductases, please visit [**ExplorEnz**](https://www.enzyme-database.org/class.php).
 
 ---
 
@@ -64,23 +63,23 @@ ExplorEnz**](https://www.enzyme-database.org/class.php).
 
 ## ORs Subfamily Number
 
-**OR1**: No subfamily
+**OR1**: [OR1_1](../subfamily/OR1_1) / [OR1_2](../subfamily/OR1_2) / [OR1_3](../subfamily/OR1_3) / [OR1_4](../subfamily/OR1_4) / [OR1_5](../subfamily/OR1_5) / [OR1_6](../subfamily/OR1_6) / [OR1_7](../subfamily/OR1_7) / [OR1_8](../subfamily/OR1_8) / [OR1_9](../subfamily/OR1_9)
 
 **OR2**: No subfamily
 
 **OR3**: No subfamily
 
-**OR4**: [OR4_1](../subfamily/OR4_1) / [OR4_2](../subfamily/OR4_2) / [OR4_3](../subfamily/OR4_3) / [OR4_4](../subfamily/OR4_4)
+**OR4**: [OR4_1](../subfamily/OR4_1) / [OR4_2](../subfamily/OR4_2) / [OR4_3](../subfamily/OR4_3) / [OR4_4](../subfamily/OR4_4) / [OR4_5](../subfamily/OR4_5) / [OR4_6](../subfamily/OR4_6) / [OR4_7](../subfamily/OR4_7) / [OR4_8](../subfamily/OR4_8)
 
-**OR5**: [OR5_1](../subfamily/OR5_1) / [OR5_2](../subfamily/OR5_2) / [OR5_3](../subfamily/OR5_3) / [OR5_4](../subfamily/OR5_4) / [OR5_5](../subfamily/OR5_5) / [OR5_6](../subfamily/OR5_6) / [OR5_7](../subfamily/OR5_7) / [OR5_8](../subfamily/OR5_8) / [OR5_9](../subfamily/OR5_9) / [OR5_10](../subfamily/OR5_10) / [OR5_11](../subfamily/OR5_11) / [OR5_12](../subfamily/OR5_12)
+**OR5**: [OR5_1](../subfamily/OR5_1) / [OR5_2](../subfamily/OR5_2) / [OR5_3](../subfamily/OR5_3) / [OR5_4](../subfamily/OR5_4) / [OR5_5](../subfamily/OR5_5) / [OR5_6](../subfamily/OR5_6) / [OR5_7](../subfamily/OR5_7) / [OR5_8](../subfamily/OR5_8) / [OR5_9](../subfamily/OR5_9)
 
-**OR6**: No subfamily
+**OR6**: [OR6_1](../subfamily/OR6_1) [OR6_2](../subfamily/OR6_2) [OR6_3](../subfamily/OR6_3) [OR6_4](../subfamily/OR6_4) [OR6_5](../subfamily/OR6_5) [OR6_6](../subfamily/OR6_6) [OR6_7](../subfamily/OR6_7) [OR6_8](../subfamily/OR6_8) [OR6_9](../subfamily/OR6_9)
 
-**OR7**: [OR7_1](../subfamily/OR7_1) / [OR7_2](../subfamily/OR7_2) / [OR7_3](../subfamily/OR7_3) / [OR7_4](../subfamily/OR7_4) / [OR7_5](../subfamily/OR7_5)
+**OR7**: No subfamily
 
-**OR8**: [OR8_1](../subfamily/OR8_1) / [OR8_2](../subfamily/OR8_2) / [OR8_3](../subfamily/OR8_3) / [OR8_4](../subfamily/OR8_4) / [OR8_5](../subfamily/OR8_5) / [OR8_6](../subfamily/OR8_6) / [OR8_7](../subfamily/OR8_7) / [OR8_8](../subfamily/OR8_8) / [OR8_9](../subfamily/OR8_9) / [OR8_10](../subfamily/OR8_10) / [OR8_11](../subfamily/OR8_11) / [OR8_12](../subfamily/OR8_12) / [OR8_13](../subfamily/OR8_13) / [OR8_14](../subfamily/OR8_14)
+**OR8**: [OR8_1](../subfamily/OR8_1) / [OR8_2](../subfamily/OR8_2) / [OR8_3](../subfamily/OR8_3) / [OR8_4](../subfamily/OR8_4) / [OR8_5](../subfamily/OR8_5) / [OR8_6](../subfamily/OR8_6) / [OR8_7](../subfamily/OR8_7) / [OR8_8](../subfamily/OR8_8) / [OR8_9](../subfamily/OR8_9) / [OR8_10](../subfamily/OR8_10) / [OR8_11](../subfamily/OR8_11) / [OR8_12](../subfamily/OR8_12) / [OR8_13](../subfamily/OR8_13) / [OR8_14](../subfamily/OR8_14) / [OR8_15](../subfamily/OR8_15) / [OR8_16](../subfamily/OR8_16) /[OR8_17](../subfamily/OR8_17) / [OR8_18](../subfamily/OR8_18) / [OR8_19](../subfamily/OR8_19) / [OR8_20](../subfamily/OR8_20) / [OR8_21](../subfamily/OR8_21) / [OR8_22](../subfamily/OR8_22) / [OR8_23](../subfamily/OR8_23) / [OR8_24](../subfamily/OR8_24) / [OR8_25](../subfamily/OR8_25) / [OR8_26](../subfamily/OR8_26)
 
-**OR9**: [OR9_1](../subfamily/OR9_1) / [OR9_2](../subfamily/OR9_2) / [OR9_3](../subfamily/OR9_3) / [OR9_4](../subfamily/OR9_4) / [OR9_5](../subfamily/OR9_5) / [OR9_6](../subfamily/OR9_6) / [OR9_7](../subfamily/OR9_7)
+**OR9**: [OR9_1](../subfamily/OR9_1) / [OR9_2](../subfamily/OR9_2) / [OR9_3](../subfamily/OR9_3) / [OR9_4](../subfamily/OR9_4) / [OR9_5](../subfamily/OR9_5) / [OR9_6](../subfamily/OR9_6) / [OR9_7](../subfamily/OR9_7) / [OR9_8](../subfamily/OR9_8) / [OR9_9](../subfamily/OR9_9)
 
 ---
 
@@ -117,7 +116,5 @@ ExplorEnz**](https://www.enzyme-database.org/class.php).
 
 ## References
 
-[^1]:Eric J. Toone (2006). Advances in Enzymology and Related Areas of Molecular Biology, Protein Evolution (Volume 75
-ed.). Wiley-Interscience. ISBN 0471205036.
-[^2]:Nicholas C. Price; Lewis Stevens (1999). Fundamentals of Enzymology: The Cell and Molecular Biology of Catalytic
-Proteins (Third ed.). USA: Oxford University Press. ISBN 019850229X.
+[^1]:Eric J. Toone (2006). Advances in Enzymology and Related Areas of Molecular Biology, Protein Evolution (Volume 75 ed.). Wiley-Interscience. ISBN 0471205036.
+[^2]:Nicholas C. Price; Lewis Stevens (1999). Fundamentals of Enzymology: The Cell and Molecular Biology of Catalytic Proteins (Third ed.). USA: Oxford University Press. ISBN 019850229X.

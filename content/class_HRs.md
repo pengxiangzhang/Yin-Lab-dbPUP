@@ -30,28 +30,10 @@ catalyzes the following reaction is a hydrolase:
 
 A–B + H<sub>2</sub>O → A–OH + B–H where A–B represents a chemical bond of unspecified molecules.
 
-Hydrolases belong to **EC 3** in the EC classification system and can be further grouped into thirteen subclasses on the
-basis of the bonds they act upon. EC 3.1 represents a kind of enzymes rupturing ester bonds, which are called esterases.
-Some common esterases include nucleosidases, phosphatases, proteases, and lipases, among which phosphatases cut
-phosphate groups off molecules. Acetylcholine esterase is a potent neurotransmitter for voluntary muscle and it as one
-of the most crucial esterases contributes to the transform of the neuron impulse into acetic acid after it degrades
-acetylcholine into choline and acetic acid. Some dangerous toxins such as the exotoxin and saxitoxin could impede with
-the action of cholinesterase, and many nerve agents react by hindering the hydrolytic efficacy of cholinesterase.
-Nucleosidases are capable of hydrolyzing the bonds of nucleotides. Glycerides could be hydrolyzed by lipases, which also
-make contribution to the breakdown of fats, lipoproteins and other larger molecules into smaller molecules like fatty
-acids that are used for synthesis and as a source of energy. Hydrolases in EC 3.2 mainly act upon sugars such as DNA
-glycosylases and glycoside hydrolase. Acetic acid has become a nice intermediate for glycolysis catalyzed by
-glycosidases that chop sugar molecules into carbohydrates and peptidases hydrolyze peptide bonds. EC 3.3 includes ether
-bonds destroying enzymes. EC 3.4 covers hydrolases that act upon peptide bonds like proteases and peptidases. For
-example, acylpeptide hydrolase as a member of the peptidase family could deacetylate the acetylated N-terminus of
-polypeptides. Some other type of hydrolases comprise enzymes breaking carbon-nitrogen bonds, not peptide bonds, acid
-anhydrides (acid anhydride hydrolases, including helicases and GTPase), carbon-carbon bonds, halide bonds,
-phosphorus-nitrogen bonds, sulphur-nitrogen bonds, carbon-phosphorus bonds, sulfur-sulfur bonds, and carbon-sulfur
-bonds, with EC number sequentially ranging from 3.5 to
-3.13.<sup class="md-footnote"><a href="#dfref-footnote-3" name="ref-footnote-3">3</a></sup>
+Hydrolases belong to **EC 3** in the EC classification system and can be further grouped into thirteen subclasses on the basis of the bonds they act upon. EC 3.1 represents a kind of enzymes rupturing ester bonds, which are called esterases. Some common esterases include nucleosidases, phosphatases, proteases, and lipases, among which phosphatases cut phosphate groups off molecules. Acetylcholine esterase is a potent neurotransmitter for voluntary muscle and it as one of the most crucial esterases contributes to the transform of the neuron impulse into acetic acid after it degrades acetylcholine into choline and acetic acid. Some dangerous toxins such as the exotoxin and saxitoxin could impede with the action of cholinesterase, and many nerve agents react by hindering the hydrolytic efficacy of cholinesterase.
+Nucleosidases are capable of hydrolyzing the bonds of nucleotides. Glycerides could be hydrolyzed by lipases, which also make contribution to the breakdown of fats, lipoproteins and other larger molecules into smaller molecules like fatty acids that are used for synthesis and as a source of energy. Hydrolases in EC 3.2 mainly act upon sugars such as DNA glycosylases and glycoside hydrolase. Acetic acid has become a nice intermediate for glycolysis catalyzed by glycosidases that chop sugar molecules into carbohydrates and peptidases hydrolyze peptide bonds. EC 3.3 includes ether bonds destroying enzymes. EC 3.4 covers hydrolases that act upon peptide bonds like proteases and peptidases. For example, acylpeptide hydrolase as a member of the peptidase family could deacetylate the acetylated N-terminus of polypeptides. Some other type of hydrolases comprise enzymes breaking carbon-nitrogen bonds, not peptide bonds, acid anhydrides (acid anhydride hydrolases, including helicases and GTPase), carbon-carbon bonds, halide bonds, phosphorus-nitrogen bonds, sulphur-nitrogen bonds, carbon-phosphorus bonds, sulfur-sulfur bonds, and carbon-sulfur bonds, with EC number sequentially ranging from 3.5 to 3.13.<sup class="md-footnote"><a href="#dfref-footnote-3" name="ref-footnote-3">3</a></sup>
 
-For a detailed information on class, subclass or sub-subclass of hydrolase, please visit [**
-ExplorEnz**](https://www.enzyme-database.org/class.php).
+For a detailed information on class, subclass or sub-subclass of hydrolase, please visit [**ExplorEnz**](https://www.enzyme-database.org/class.php).
 
 ---
 
@@ -72,17 +54,17 @@ ExplorEnz**](https://www.enzyme-database.org/class.php).
 
 **HR1**: No subfamily
 
-**HR2**: [HR2_1](../subfamily/HR2_1) / [HR2_2](../subfamily/HR2_2) / [HR2_3](../subfamily/HR2_3)
+**HR2**: [HR2_1](../subfamily/HR2_1) / [HR2_2](../subfamily/HR2_2) / [HR2_3](../subfamily/HR2_3) / [HR2_4](../subfamily/HR2_4) / [HR2_5](../subfamily/HR2_5) / [HR2_6](../subfamily/HR2_6) / [HR2_7](../subfamily/HR2_7) / [HR2_8](../subfamily/HR2_8) / [HR2_9](../subfamily/HR2_9) / [HR2_10](../subfamily/HR2_10) / [HR2_11](../subfamily/HR2_11) / [HR2_12](../subfamily/HR2_12) / [HR2_13](../subfamily/HR2_13) / [HR2_14](../subfamily/HR2_14) / [HR2_15](../subfamily/HR2_15) / [HR2_16](../subfamily/HR2_16) / [HR2_17](../subfamily/HR2_17) / [HR2_18](../subfamily/HR2_18) / [HR2_19](../subfamily/HR2_19) / [HR2_20](../subfamily/HR2_20)
 
-**HR3**: [HR3_1](../subfamily/HR3_1) / [HR3_2](../subfamily/HR3_2) / [HR3_3](../subfamily/HR3_3) / [HR3_4](../subfamily/HR3_4) / [HR3_5](../subfamily/HR3_5) / [HR3_6](../subfamily/HR3_6) / [HR3_7](../subfamily/HR3_7) / [HR3_8](../subfamily/HR3_8)
+**HR3**: [HR3_1](../subfamily/HR3_1) / [HR3_2](../subfamily/HR3_2) / [HR3_3](../subfamily/HR3_3) / [HR3_4](../subfamily/HR3_4) / [HR3_5](../subfamily/HR3_5) / [HR3_6](../subfamily/HR3_6)
 
 **HR4**: [HR4_1](../subfamily/HR4_1) / [HR4_2](../subfamily/HR4_2) / [HR4_3](../subfamily/HR4_3) / [HR4_4](../subfamily/HR4_4) / [HR4_5](../subfamily/HR4_5) /[HR4_6](../subfamily/HR4_6) / [HR4_7](../subfamily/HR4_7) / [HR4_8](../subfamily/HR4_8) / [HR4_9](../subfamily/HR4_9) / [HR4_10](../subfamily/HR4_10) / [HR4_11](../subfamily/HR4_11)
 
-**HR5**: [HR5_1](../subfamily/HR5_1) / [HR5_2](../subfamily/HR5_2) / [HR5_3](../subfamily/HR5_3) / [HR5_4](../subfamily/HR5_4) / [HR5_5](../subfamily/HR5_5)
+**HR5**: [HR5_1](../subfamily/HR5_1) / [HR5_2](../subfamily/HR5_2) / [HR5_3](../subfamily/HR5_3) / [HR5_4](../subfamily/HR5_4) / [HR5_5](../subfamily/HR5_5) / [HR5_6](../subfamily/HR5_6) / [HR5_7](../subfamily/HR5_7) / [HR5_8](../subfamily/HR5_8) / [HR5_9](../subfamily/HR5_9) / [HR5_10](../subfamily/HR5_10)
 
 **HR6**: No subfamily
 
-**HR7**: [HR7_1](../subfamily/HR7_1) / [HR7_2](../subfamily/HR7_2) / [HR7_3](../subfamily/HR7_3) / [HR7_4](../subfamily/HR7_4) / [HR7_5](../subfamily/HR7_5)
+**HR7**: [HR7_1](../subfamily/HR7_1) / [HR7_2](../subfamily/HR7_2) / [HR7_3](../subfamily/HR7_3) / [HR7_4](../subfamily/HR7_4)
 
 **HR8**: [HR8_1](../subfamily/HR8_1) / [HR8_2](../subfamily/HR8_2) / [HR8_3](../subfamily/HR8_3) / [HR8_4](../subfamily/HR8_4) / [HR8_5](../subfamily/HR8_5) / [HR8_6](../subfamily/HR8_6)
 
@@ -122,5 +104,3 @@ ExplorEnz**](https://www.enzyme-database.org/class.php).
 <div class="footnote-line"><span class="md-fn-count">2</span> <span> "Hydrolase." Britannica Academic, Encyclopædia Britannica, 9 Apr. 2018. academic-eb-com.proxy.wexler.hunter.cuny.edu/levels/collegiate/article/hydrolase/41737. Accessed 29 Apr. 2018.</span> <a name="dfref-footnote-2" href="#ref-footnote-2" title="back to document" class="reversefootnote">↩</a></div>
 <div class="footnote-line"><span class="md-fn-count">3</span> <span> "Hydrolase Introduction
 ." https://www.creative-enzymes.com/resource/Hydrolase-Introduction_21.html. Retrieved 2020-09-15</span> <a name="dfref-footnote-3" href="#ref-footnote-3" title="back to document" class="reversefootnote">↩</a></div>
-
-

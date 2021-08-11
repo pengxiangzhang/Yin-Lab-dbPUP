@@ -353,32 +353,30 @@ def family(family_id):
         c = open('content/nothing.md', 'r', encoding='utf-8').read()
         name = "Subfamily for " + family_id
 
-    if family_id == 'OR4':
-        amount = 4
+    if family_id == 'OR1':
+        amount = 9
+    elif family_id == 'OR4':
+        amount = 8
     elif family_id == 'OR5':
         amount = 12
-    elif family_id == 'OR7':
-        amount = 5
     elif family_id == 'OR8':
-        amount = 14
+        amount = 26
     elif family_id == 'OR9':
-        amount = 7
+        amount = 9
     elif family_id == 'FR1':
-        amount = 4
+        amount = 15
     elif family_id == 'FR3':
-        amount = 4
-    elif family_id == 'FR4':
-        amount = 4
+        amount = 2
     elif family_id == 'HR2':
-        amount = 3
+        amount = 20
     elif family_id == 'HR3':
-        amount = 8
+        amount = 6
     elif family_id == 'HR4':
         amount = 11
     elif family_id == 'HR5':
-        amount = 5
+        amount = 10
     elif family_id == 'HR7':
-        amount = 5
+        amount = 4
     elif family_id == 'HR8':
         amount = 6
     elif family_id == 'UC1':
@@ -427,6 +425,7 @@ def network(family_id):
     except Exception:
         abort(404)
     finalfile = [s[26:][:-4] for s in subfile]
+    finalfile.sort()
     try:
         with open('content/family_' + family_id + '.md', encoding='utf-8') as n:
             name = get_title(n)
