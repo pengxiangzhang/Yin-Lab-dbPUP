@@ -1,3 +1,4 @@
+import os.path
 from data_analyzer import Data_analyzer
 from flask import Flask, request, send_from_directory, flash, render_template, abort
 from flask_sqlalchemy import SQLAlchemy
@@ -63,9 +64,9 @@ def index():
     return render_template('index.html', content=to_md(c), description=description, title=title, name=name)
 
 
-@app.route('/dbpup/taxonomy')
+@app.route('/dbpup/taxonomy/home')
 def taxonomy():
-    name = "Taxonomy"
+    name = "Taxonomy Distribution for dbPUP"
     title = "Taxonomy - "
     try:
         with open('content/taxonomy.md', encoding='utf-8') as c:
@@ -73,6 +74,18 @@ def taxonomy():
     except Exception:
         pass
     description = "dbPUP data of taxonomy"
+    return render_template('main.html', content=to_md(c), description=description, title=title, name=name)
+
+
+@app.route('/dbpup/taxonomy/<family_id>')
+def taxonomy_family(family_id):
+    name = f"Taxonomy Distribution for {family_id}"
+    title = f"Taxonomy for {family_id} - "
+    if os.path.exists(f"static/taxonomy/{family_id}.html"):
+        c = f'<iframe src ="/dbpup/static/taxonomy/{family_id}.html" frameborder="0" scrolling="no" id="external-frame" style="width:100%; height:80vh"></iframe>'
+    else:
+        abort(404)
+    description = f"dbPUP data of taxonomy for {family_id}"
     return render_template('main.html', content=to_md(c), description=description, title=title, name=name)
 
 @app.route("/dbpup/about")
@@ -383,10 +396,14 @@ def family(family_id):
         amount = 13
     elif family_id == 'UC2':
         amount = 8
+    
+    show_taxonomy = False
+    if os.path.exists(f"static/taxonomy/{family_id}.html"):
+        show_taxonomy = True
 
     description = "Database for Polyphenol Utilized Proteins from gut microbiota. Family for " + family_id
     return render_template('family.html', family_id=family_id, amount=amount, content=to_md(c), description=description,
-                           title=title, name=name)
+                           title=title, name=name, show_taxonomy=show_taxonomy)
 
 
 @app.route("/dbpup/subfamily/<family_id>")
@@ -402,11 +419,15 @@ def subfamily(family_id):
     except Exception:
         c = open('content/redirect.md', 'r', encoding='utf-8').read()
         name = "Subfamily for " + family_id
+        
+    show_taxonomy = False
+    if os.path.exists(f"static/taxonomy/{family_id}.html"):
+        show_taxonomy = True
 
     description = "Database for Polyphenol Utilized Proteins from gut microbiota. Subfamily for " + family_id
     return render_template('subfamily.html', content=to_md(c), family_id=family_id, description=description,
                            title=title,
-                           name=name)
+                           name=name,show_taxonomy=show_taxonomy)
 
 
 @app.route("/dbpup/network/<family_id>")
