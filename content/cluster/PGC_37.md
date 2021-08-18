@@ -27,7 +27,7 @@
 
 <h2 id="GUT_GENOME001676_00198">GUT_GENOME001676_00198</h2>
 <p>Gene: <em>nfr2</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-01342">GUT_GENOME001676</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00199">GUT_GENOME001676</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 177397..178002</p>
 <p>Protein length: 202</p>
@@ -35,7 +35,7 @@
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.36">1.5.1.36</a></p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a></p>
 
-<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus gordonii</p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus parasanguinis_B</p>
 <p>Geography: China, Asia</p>
 
   </div>

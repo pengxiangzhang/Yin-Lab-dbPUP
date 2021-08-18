@@ -12,14 +12,14 @@
 
 <h2 id="GUT_GENOME001584_01119">GUT_GENOME001584_01119</h2>
 <p>Gene: <em>NA</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-01379">GUT_GENOME001584</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00199">GUT_GENOME001584</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 69040..70275</p>
 <p>Protein length: 412</p>
 <p>Product: hypothetical protein</p>
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/GFO_IDH_MocA">GFO_IDH_MocA</a>, <a href="http://pfam.xfam.org/family/GFO_IDH_MocA_C">GFO_IDH_MocA_C</a>, <a href="http://pfam.xfam.org/family/AP_endonuc_2">AP_endonuc_2</a></p>
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Faecalicatena; Faecalicatena glycyrrhizinilyticum</p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus parasanguinis_B</p>
 <p>Geography: China, Asia</p>
   </div>
 

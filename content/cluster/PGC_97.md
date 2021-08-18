@@ -12,14 +12,14 @@
 
 <h2 id="GUT_GENOME030964_00184">GUT_GENOME030964_00184</h2>
 <p>Gene: <em>iolW</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00113">GUT_GENOME030964</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-03702">GUT_GENOME030964</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 949..1998</p>
 <p>Protein length: 350</p>
 <p>Product: scyllo-inositol 2-dehydrogenase (NADP(+)) IolW</p>
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.371">1.1.1.371</a></p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_70">Glyco_hydro_70</a>, <a href="http://pfam.xfam.org/family/Choline_bind_3">Choline_bind_3</a>, <a href="http://pfam.xfam.org/family/Choline_bind_1">Choline_bind_1</a></p>
-<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus salivarius</p>
+<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Eisenbergiella; Eisenbergiella sp900066775</p>
 <p>Geography: China, Asia</p>
   </div>
 

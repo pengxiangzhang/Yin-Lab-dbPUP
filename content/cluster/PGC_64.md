@@ -12,14 +12,14 @@
 
 <h2 id="GUT_GENOME015071_00915">GUT_GENOME015071_00915</h2>
 <p>Gene: <em>NA</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-03683">GUT_GENOME015071</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-04371">GUT_GENOME015071</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 10575..13832</p>
 <p>Protein length: 1086</p>
 <p>Product: hypothetical protein</p>
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Fn3-like">Fn3-like</a>, <a href="http://pfam.xfam.org/family/Glyco_hydro_3_C">Glyco_hydro_3_C</a>, <a href="http://pfam.xfam.org/family/Glyco_hydro_3">Glyco_hydro_3</a>, <a href="http://pfam.xfam.org/family/TetR_N">TetR_N</a>, <a href="http://pfam.xfam.org/family/Gly_kinase">Gly_kinase</a></p>
-<p>Lineage: Bacteria; Actinobacteriota; Actinobacteria; Actinomycetales; Bifidobacteriaceae; Bifidobacterium; Bifidobacterium pseudocatenulatum</p>
+<p>Lineage: Bacteria; Bacteroidota; Bacteroidia; Bacteroidales; Bacteroidaceae; Prevotella; Prevotella sp002251385</p>
 <p>Geography: Fiji, Oceania</p>
   </div>
 
@@ -27,14 +27,14 @@
 
 <h2 id="GUT_GENOME015071_00916">GUT_GENOME015071_00916</h2>
 <p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-03683">GUT_GENOME015071</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-04371">GUT_GENOME015071</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 13983..17261</p>
 <p>Protein length: 1093</p>
 <p>Product: hypothetical protein</p>
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Fn3-like">Fn3-like</a>, <a href="http://pfam.xfam.org/family/Glyco_hydro_3_C">Glyco_hydro_3_C</a>, <a href="http://pfam.xfam.org/family/Glyco_hydro_3">Glyco_hydro_3</a>, <a href="http://pfam.xfam.org/family/TetR_N">TetR_N</a>, <a href="http://pfam.xfam.org/family/Gly_kinase">Gly_kinase</a></p>
-<p>Lineage: Bacteria; Actinobacteriota; Actinobacteria; Actinomycetales; Bifidobacteriaceae; Bifidobacterium; Bifidobacterium pseudocatenulatum</p>
+<p>Lineage: Bacteria; Bacteroidota; Bacteroidia; Bacteroidales; Bacteroidaceae; Prevotella; Prevotella sp002251385</p>
 <p>Geography: Fiji, Oceania</p>
 
   </div>

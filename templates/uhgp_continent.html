@@ -91,13 +91,14 @@
                 "initComplete": function () {
                     $("#data-table").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
                 },
-                lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
+                lengthMenu: [[10, 25, 50, 100], ['10 rows', '25 rows', '50 rows', '100 rows']],
                 dom: 'Bfrtip',
                 columnDefs: [{
                     targets: -1,
                     searchable: true,
                     visible: false
                 }],
+                "deferRender": true,
                 buttons: [
                     'pageLength',
                     {

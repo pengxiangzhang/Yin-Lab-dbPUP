@@ -12,14 +12,14 @@
 
 <h2 id="GUT_GENOME006401_02638">GUT_GENOME006401_02638</h2>
 <p>Gene: <em>ifcA</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00106">GUT_GENOME006401</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-01493">GUT_GENOME006401</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 147..1634</p>
 <p>Protein length: 496</p>
 <p>Product: Fumarate reductase flavoprotein subunit</p>
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.5.4">1.3.5.4</a></p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a>, <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a></p>
-<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Enterococcaceae; Enterococcus_D; Enterococcus_D gallinarum</p>
+<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Clostridium_M; Clostridium_M bolteae</p>
 <p>Geography: Sweden, Europe</p>
   </div>
 
@@ -27,14 +27,14 @@
 
 <h2 id="GUT_GENOME006401_02639">GUT_GENOME006401_02639</h2>
 <p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00106">GUT_GENOME006401</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-01493">GUT_GENOME006401</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 1679..3694</p>
 <p>Protein length: 672</p>
 <p>Product: NADH oxidase</p>
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/FMN_red">FMN_red</a>, <a href="http://pfam.xfam.org/family/PAS_10">PAS_10</a></p>
-<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Enterococcaceae; Enterococcus_D; Enterococcus_D gallinarum</p>
+<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Clostridium_M; Clostridium_M bolteae</p>
 <p>Geography: Sweden, Europe</p>
 
   </div>

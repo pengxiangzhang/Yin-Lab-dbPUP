@@ -12,14 +12,14 @@
 
 <h2 id="GUT_GENOME000843_02597">GUT_GENOME000843_02597</h2>
 <p>Gene: <em>NA</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00113">GUT_GENOME000843</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00174">GUT_GENOME000843</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 155055..158339</p>
 <p>Protein length: 1095</p>
 <p>Product: hypothetical protein</p>
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_70">Glyco_hydro_70</a>, <a href="http://pfam.xfam.org/family/Choline_bind_3">Choline_bind_3</a>, <a href="http://pfam.xfam.org/family/Choline_bind_1">Choline_bind_1</a></p>
-<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus salivarius</p>
+<p>Lineage: Bacteria; Bacteroidota; Bacteroidia; Bacteroidales; Tannerellaceae; Parabacteroides; </p>
 <p>Geography: China, Asia</p>
   </div>
 
@@ -27,14 +27,14 @@
 
 <h2 id="GUT_GENOME000843_02598">GUT_GENOME000843_02598</h2>
 <p>Gene: <em>NA</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00113">GUT_GENOME000843</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00174">GUT_GENOME000843</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 158417..161698</p>
 <p>Protein length: 1094</p>
 <p>Product: hypothetical protein</p>
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_70">Glyco_hydro_70</a>, <a href="http://pfam.xfam.org/family/Choline_bind_3">Choline_bind_3</a>, <a href="http://pfam.xfam.org/family/Choline_bind_1">Choline_bind_1</a></p>
-<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus salivarius</p>
+<p>Lineage: Bacteria; Bacteroidota; Bacteroidia; Bacteroidales; Tannerellaceae; Parabacteroides; </p>
 <p>Geography: China, Asia</p>
 
   </div>

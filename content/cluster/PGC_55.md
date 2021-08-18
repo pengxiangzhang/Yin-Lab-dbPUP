@@ -12,7 +12,7 @@
 
 <h2 id="GUT_GENOME009672_00523">GUT_GENOME009672_00523</h2>
 <p>Gene: <em>iolW_1</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00377">GUT_GENOME009672</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-03702">GUT_GENOME009672</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 3976..5025</p>
 <p>Protein length: 350</p>
@@ -20,7 +20,7 @@
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.371">1.1.1.371</a></p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/DAPG_hydrolase">DAPG_hydrolase</a></p>
 
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Oscillospirales; Oscillospiraceae; ; </p>
+<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Eisenbergiella; Eisenbergiella sp900066775</p>
 <p>Geography: Sweden, Europe</p>
   </div>
 
@@ -28,7 +28,7 @@
 
 <h2 id="GUT_GENOME009672_00524">GUT_GENOME009672_00524</h2>
 <p>Gene: <em>iolG_1</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00377">GUT_GENOME009672</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-03702">GUT_GENOME009672</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 5095..6948</p>
 <p>Protein length: 618</p>
@@ -36,7 +36,7 @@
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.18">1.1.1.18</a></p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/DAPG_hydrolase">DAPG_hydrolase</a></p>
 
-<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Oscillospirales; Oscillospiraceae; ; </p>
+<p>Lineage: Bacteria; Firmicutes_A; Clostridia; Lachnospirales; Lachnospiraceae; Eisenbergiella; Eisenbergiella sp900066775</p>
 <p>Geography: Sweden, Europe</p>
 
   </div>

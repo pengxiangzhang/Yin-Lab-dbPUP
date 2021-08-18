@@ -12,14 +12,14 @@
 
 <h2 id="GUT_GENOME000574_00742">GUT_GENOME000574_00742</h2>
 <p>Gene: <em>NA</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00113">GUT_GENOME000574</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00106">GUT_GENOME000574</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 800371..801627</p>
 <p>Protein length: 419</p>
 <p>Product: hypothetical protein</p>
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_70">Glyco_hydro_70</a>, <a href="http://pfam.xfam.org/family/Choline_bind_3">Choline_bind_3</a>, <a href="http://pfam.xfam.org/family/Choline_bind_1">Choline_bind_1</a></p>
-<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus salivarius</p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Enterococcaceae; Enterococcus_D; Enterococcus_D gallinarum</p>
 <p>Geography: Canada, North America</p>
   </div>
 

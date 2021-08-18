@@ -12,7 +12,7 @@
 
 <h2 id="GUT_GENOME016864_00138">GUT_GENOME016864_00138</h2>
 <p>Gene: <em>NA</em>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-04371">GUT_GENOME016864</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00113">GUT_GENOME016864</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 8407..9657</p>
 <p>Protein length: 417</p>
@@ -20,7 +20,7 @@
 <p>EC: NA</p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_106">Glyco_hydro_106</a></p>
 
-<p>Lineage: Bacteria; Bacteroidota; Bacteroidia; Bacteroidales; Bacteroidaceae; Prevotella; Prevotella sp002251385</p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus salivarius</p>
 <p>Geography: Fiji, Oceania</p>
   </div>
 
@@ -28,7 +28,7 @@
 
 <h2 id="GUT_GENOME016864_00139">GUT_GENOME016864_00139</h2>
 <p>Gene: <em>nfr2</em></p>
-<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-04371">GUT_GENOME016864</a></p>
+<p>Representative genome: <a href="https://www.ebi.ac.uk/metagenomics/genomes/MGYG-HGUT-00113">GUT_GENOME016864</a></p>
 <p>Gene type: PUP genes</p>
 <p>Position: 9676..10221</p>
 <p>Protein length: 182</p>
@@ -36,7 +36,7 @@
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.36">1.5.1.36</a></p>
 <p>Pfam: <a href="http://pfam.xfam.org/family/Glyco_hydro_106">Glyco_hydro_106</a></p>
 
-<p>Lineage: Bacteria; Bacteroidota; Bacteroidia; Bacteroidales; Bacteroidaceae; Prevotella; Prevotella sp002251385</p>
+<p>Lineage: Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus salivarius</p>
 <p>Geography: Fiji, Oceania</p>
 
   </div>
