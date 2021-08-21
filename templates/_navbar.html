@@ -47,8 +47,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('statistics') }}">Statistics</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('taxonomy') }}">Taxonomy</a>
+                <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Taxonomy <span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="about-us">
+                        <li><a href="{{ url_for('taxonomy_family', family_id = 'UHGP') }}">Homologs from UHGP</a></li>
+                        <li><a href="{{ url_for('taxonomy_family', family_id = 'UniProt') }}">Homologs from UniProt</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('download') }}">Download</a>

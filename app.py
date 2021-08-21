@@ -64,29 +64,21 @@ def index():
     return render_template('index.html', content=to_md(c), description=description, title=title, name=name)
 
 
-@app.route('/dbpup/taxonomy/home')
-def taxonomy():
-    name = "Taxonomy Distribution for dbPUP"
-    title = "Taxonomy - "
-    try:
-        with open('content/taxonomy.md', encoding='utf-8') as c:
-            c = c.read()
-    except Exception:
-        pass
-    description = "dbPUP data of taxonomy"
-    return render_template('main.html', content=to_md(c), description=description, title=title, name=name)
-
-
 @app.route('/dbpup/taxonomy/<family_id>')
 def taxonomy_family(family_id):
     name = f"Taxonomy Distribution for {family_id}"
     title = f"Taxonomy for {family_id} - "
     if os.path.exists(f"static/taxonomy/{family_id}.html"):
         c = f'<iframe src ="/dbpup/static/taxonomy/{family_id}.html" frameborder="0" scrolling="no" id="external-frame" style="width:100%; height:80vh"></iframe>'
+    elif family_id=="UHGP":
+        c = '<iframe src ="/dbpup/static/uhgp_homolog_taxonomy.html" frameborder="0" scrolling="no" id="external-frame" style="width:100%; height:80vh"></iframe>'
+    elif family_id=="UniProt":
+        c='<iframe src ="/dbpup/static/UniProt_homologs_taxonomy.html" frameborder="0" scrolling="no" id="external-frame" style="width:100%; height:80vh"></iframe>'
     else:
         abort(404)
     description = f"dbPUP data of taxonomy for {family_id}"
     return render_template('main.html', content=to_md(c), description=description, title=title, name=name)
+
 
 @app.route("/dbpup/about")
 def about():
