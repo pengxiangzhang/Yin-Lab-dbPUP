@@ -1,12 +1,13 @@
 import os.path
 from data_analyzer import Data_analyzer
-from flask import Flask, request, send_from_directory, flash, render_template, abort
+from flask import Flask, request, send_from_directory, flash, render_template, abort,jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import func
 from flask_caching import Cache
 import markdown, json, glob, os, uuid, requests
 from datetime import datetime
 import pandas as pd
+from datatables import ColumnDT, DataTables
 
 
 # Application configurations
@@ -54,6 +55,27 @@ def page_not_found(e):
 def page_not_found(e):
     return render_template('500.html'), 500
 
+@app.route("/dbpup/uhgp_continent_data/<name_id>")
+def uhgp_continent_data(name_id):
+    columns = [
+    ColumnDT(UhgpRecord.number, mData='number'),
+    ColumnDT(UhgpRecord.gene_id,mData='gene_id'),
+    ColumnDT(UhgpRecord.name, mData='name'),
+    ColumnDT(UhgpRecord.cluster_id, mData='cluster_id'),
+    ColumnDT(UhgpRecord.type, mData='type'),
+    ColumnDT(UhgpRecord.lineage, mData='lineage'),
+    ColumnDT(UhgpRecord.country, mData='country'),
+    ColumnDT(UhgpRecord.continent, mData='continent'),
+    ColumnDT(UhgpRecord.seq, mData='seq'),
+    ColumnDT(UhgpRecord.MGnify, mData='MGnify'),
+    ColumnDT(UhgpRecord.family, mData='family'),
+    ]
+    records = dtbs.session.query().select_from(UhgpRecord).filter_by(continent=name_id)
+
+    params = request.args.to_dict()
+    rowTable = DataTables(params, records, columns)
+    print(rowTable.output_result())
+    return jsonify(rowTable.output_result())
 
 @app.route('/dbpup/')
 def index():
@@ -164,7 +186,7 @@ def uhgp(name_id):
         records = UhgpRecord.query.filter_by(continent=name_id)
 
         return render_template('uhgp_continent.html', content=to_md(c), description=description, title=title, name=name,
-                               records=records)
+                               records=records,name_id=name_id)
 
 
 @app.route('/dbpup/help')

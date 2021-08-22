@@ -44,54 +44,51 @@
     <div class="familyInformation">
         {{ content| safe }}
         <div>
-            <table id="data-table" class="table display">
-                <thead>
-                <tr>
-                    <th style="white-space: nowrap">Gene ID</th>
-                    <th style="white-space: nowrap">Family</th>
-                    <th style="white-space: nowrap">Name</th>
-                    <th style="white-space: nowrap">Cluster ID</th>
-                    <th style="white-space: nowrap">Type</th>
-                    <th style="white-space: nowrap">Lineage</th>
-                    <th style="white-space: nowrap">Country</th>
-                    <th style="white-space: nowrap">Continent</th>
-                    <th style="white-space: nowrap">Sequence</th>
-                    <th style="white-space: nowrap"><br></th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for record in records %}
-                    <tr>
-                    <td><a href="https://www.ebi.ac.uk/metagenomics/genomes/{{ record.MGnify }}" rel="noopener noreferrer"
-                           target="_blank">{{ record.gene_id }}</a></td>
-                    <td><a href="{{ url_for('family', family_id = record.family) }}">{{ record.family }}</a></td>
-                    <td>{{ record.name }}</td>
-                    <td>{% if record.cluster_id == "NA" %}
-                        &nbsp;
-                    {% else %}
-                        <a href="{{ url_for('cluster_detail', cluster_id = record.cluster_id) }}">{{ record.cluster_id }}</a>
-                        </td>
-                    {% endif %}
-                    <td>{{ record.type }}</td>
-                    <td>{{ record.lineage }}</td>
-                    <td>{{ record.country }}</td>
-                    <td>{{ record.continent }}</td>
-                    <td><a href="{{ url_for('detail',mode='uhpg', unid = record.gene_id) }}" target="_blank">view</a>
-                    </td>
-                    <td>>{{ record.gene_id }}&#10;{{ record.seq }}</td>
-                {% endfor %}
-                </tbody>
-            </table>
-        </div>
-    </div>
+            <table id="data-table" class="table display"></table>
 
-    <script defer type="text/javascript">
-        $(document).ready(function () {
-            $('#data-table').DataTable({
-                "initComplete": function () {
-                    $("#data-table").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
-                },
-                lengthMenu: [[10, 25, 50, 100], ['10 rows', '25 rows', '50 rows', '100 rows']],
+    <script type="text/javascript">
+
+$(document).ready(function () {
+ var columns = [{
+     title: 'Gene ID',
+     target: 0,
+     data: function (item) {
+         return `<td><a href="https://www.ebi.ac.uk/metagenomics/genomes/${ item.MGnify }" rel="noopener noreferrer" target="_blank">${ item.gene_id }</a></td>`;
+     }
+ },{
+     title:'Family',
+     target: 1,
+     data:function (item) {
+         return `<td><a href="/dbpup/family/${item.family}">${ item.family }</a></td>`
+     }
+ },{
+     title:'Name',
+     target: 2,
+     data: function (item) {
+         return item.name;
+     }
+ },{
+     title: 'Cluster ID',
+     target: 3,
+     data:function (item) {
+        if (item.cluster_id == "NA"){
+            return "<td>&nbsp;</td>"
+        }
+        else{
+            return `<td><a href="/dbpup/cluster/${item.cluster_id}">${ item.cluster_id }</a>
+                        </td>`
+        }
+     }
+ }];
+  var table = $('#data-table').DataTable({
+     "initComplete": function () {
+        $("#data-table").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
+    },
+     "processing":true,
+     "serverSide":true,
+     "ajax":"{{ url_for('uhgp_continent_data', name_id=name_id) }}",
+     "columns":columns,
+                     lengthMenu: [[10, 25, 50, 100], ['10 rows', '25 rows', '50 rows', '100 rows']],
                 dom: 'Bfrtip',
                 columnDefs: [{
                     targets: -1,
@@ -121,5 +118,6 @@
                 select: true
             });
         });
+    
     </script>
 {% endblock %}
