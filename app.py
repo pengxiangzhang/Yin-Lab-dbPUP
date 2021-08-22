@@ -8,6 +8,7 @@ import markdown, json, glob, os, uuid, requests
 from datetime import datetime
 import pandas as pd
 
+
 # Application configurations
 app = Flask(__name__, static_url_path='/dbpup/static')
 cache = Cache(app, config={'CACHE_TYPE': 'FileSystemCache', 'CACHE_DIR': 'cache', 'CACHE_IGNORE_ERRORS': 'True',
@@ -230,6 +231,9 @@ def swissport(family_id):
              records.filter_by(type="Eukaryota").count(), records.filter_by(type="Viruses").count(),
              records.filter_by(type="unclassified").count()]
 
+    if os.path.exists(f"static/materials/tree/{family_id}.json"):
+        show_tree=True
+
     if number is None:
         number = 0
 
@@ -246,7 +250,7 @@ def swissport(family_id):
     description = "Database for Polyphenol Utilized Proteins from gut microbiota. Swiss-Prot data for " + family_id
     return render_template('swissport.html', family_id=family_id, records=records, ec=ec_link, rows=pdb_row,
                            description=description, title=title,
-                           name=name, subfamily=subfamily, count=count, number=number)
+                           name=name, subfamily=subfamily, count=count, number=number,show_tree=show_tree)
 
 
 @app.route('/dbpup/Trembl/<family_id>', methods=['GET', 'POST'])
@@ -364,6 +368,8 @@ def family(family_id):
         amount = 8
     elif family_id == 'OR5':
         amount = 12
+    elif family_id == 'OR6':
+        amount = 9
     elif family_id == 'OR8':
         amount = 26
     elif family_id == 'OR9':

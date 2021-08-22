@@ -8,12 +8,8 @@
 
         </div>
     </div>
-    {% if subfamily %}
-        <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('tree', family_id=family_id) }}">View phylogenetic
-            tree</a>
-    {% elif family_id in ["FR3","HR6","HR8","IR2","UC1"] %}
-        &nbsp;
-    {% else %}
+    {{show_tree}}
+    {% if show_tree %}
         <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('tree', family_id=family_id) }}">View phylogenetic
             tree</a>
     {% endif %}
