@@ -1,6 +1,6 @@
 import os.path
 from data_analyzer import Data_analyzer
-from flask import Flask, request, send_from_directory, flash, render_template, abort,jsonify
+from flask import Flask, request, send_from_directory, flash, render_template, abort, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import func
 from flask_caching import Cache
@@ -9,11 +9,10 @@ from datetime import datetime
 import pandas as pd
 from datatables import ColumnDT, DataTables
 
-
 # Application configurations
 app = Flask(__name__, static_url_path='/dbpup/static')
 cache = Cache(app, config={'CACHE_TYPE': 'FileSystemCache', 'CACHE_DIR': 'cache', 'CACHE_IGNORE_ERRORS': 'True',
-                           'CACHE_THRESHOLD': '1000',"CACHE_DEFAULT_TIMEOUT": 300})
+                           'CACHE_THRESHOLD': '1000', "CACHE_DEFAULT_TIMEOUT": 300})
 
 # read configurations
 with open('config.json') as json_file:
@@ -55,20 +54,21 @@ def page_not_found(e):
 def page_not_found(e):
     return render_template('500.html'), 500
 
+
 @app.route("/dbpup/uhgp_continent_data/<name_id>")
 def uhgp_continent_data(name_id):
     columns = [
-    ColumnDT(UhgpRecord.number, mData='number'),
-    ColumnDT(UhgpRecord.gene_id,mData='gene_id'),
-    ColumnDT(UhgpRecord.name, mData='name'),
-    ColumnDT(UhgpRecord.cluster_id, mData='cluster_id'),
-    ColumnDT(UhgpRecord.type, mData='type'),
-    ColumnDT(UhgpRecord.lineage, mData='lineage'),
-    ColumnDT(UhgpRecord.country, mData='country'),
-    ColumnDT(UhgpRecord.continent, mData='continent'),
-    ColumnDT(UhgpRecord.seq, mData='seq'),
-    ColumnDT(UhgpRecord.MGnify, mData='MGnify'),
-    ColumnDT(UhgpRecord.family, mData='family'),
+        ColumnDT(UhgpRecord.number, mData='number'),
+        ColumnDT(UhgpRecord.gene_id, mData='gene_id'),
+        ColumnDT(UhgpRecord.name, mData='name'),
+        ColumnDT(UhgpRecord.cluster_id, mData='cluster_id'),
+        ColumnDT(UhgpRecord.type, mData='type'),
+        ColumnDT(UhgpRecord.lineage, mData='lineage'),
+        ColumnDT(UhgpRecord.country, mData='country'),
+        ColumnDT(UhgpRecord.continent, mData='continent'),
+        ColumnDT(UhgpRecord.seq, mData='seq'),
+        ColumnDT(UhgpRecord.MGnify, mData='MGnify'),
+        ColumnDT(UhgpRecord.family, mData='family'),
     ]
     records = dtbs.session.query().select_from(UhgpRecord).filter_by(continent=name_id)
 
@@ -76,6 +76,7 @@ def uhgp_continent_data(name_id):
     rowTable = DataTables(params, records, columns)
     print(rowTable.output_result())
     return jsonify(rowTable.output_result())
+
 
 @app.route('/dbpup/')
 def index():
@@ -93,10 +94,10 @@ def taxonomy_family(family_id):
     title = f"Taxonomy for {family_id} - "
     if os.path.exists(f"static/taxonomy/{family_id}.html"):
         c = f'<iframe src ="/dbpup/static/taxonomy/{family_id}.html" frameborder="0" scrolling="no" id="external-frame" style="width:100%; height:80vh"></iframe>'
-    elif family_id=="UHGP":
+    elif family_id == "UHGP":
         c = '<iframe src ="/dbpup/static/uhgp_homolog_taxonomy.html" frameborder="0" scrolling="no" id="external-frame" style="width:100%; height:80vh"></iframe>'
-    elif family_id=="UniProt":
-        c='<iframe src ="/dbpup/static/UniProt_homologs_taxonomy.html" frameborder="0" scrolling="no" id="external-frame" style="width:100%; height:80vh"></iframe>'
+    elif family_id == "UniProt":
+        c = '<iframe src ="/dbpup/static/UniProt_homologs_taxonomy.html" frameborder="0" scrolling="no" id="external-frame" style="width:100%; height:80vh"></iframe>'
     else:
         abort(404)
     description = f"dbPUP data of taxonomy for {family_id}"
@@ -186,7 +187,7 @@ def uhgp(name_id):
         records = UhgpRecord.query.filter_by(continent=name_id)
 
         return render_template('uhgp_continent.html', content=to_md(c), description=description, title=title, name=name,
-                               records=records,name_id=name_id)
+                               records=records, name_id=name_id)
 
 
 @app.route('/dbpup/help')
@@ -254,7 +255,7 @@ def swissport(family_id):
              records.filter_by(type="unclassified").count()]
 
     if os.path.exists(f"static/materials/tree/{family_id}.json"):
-        show_tree=True
+        show_tree = True
 
     if number is None:
         number = 0
@@ -272,7 +273,7 @@ def swissport(family_id):
     description = "Database for Polyphenol Utilized Proteins from gut microbiota. Swiss-Prot data for " + family_id
     return render_template('swissport.html', family_id=family_id, records=records, ec=ec_link, rows=pdb_row,
                            description=description, title=title,
-                           name=name, subfamily=subfamily, count=count, number=number,show_tree=show_tree)
+                           name=name, subfamily=subfamily, count=count, number=number, show_tree=show_tree)
 
 
 @app.route('/dbpup/Trembl/<family_id>', methods=['GET', 'POST'])
@@ -416,7 +417,7 @@ def family(family_id):
         amount = 13
     elif family_id == 'UC2':
         amount = 8
-    
+
     show_taxonomy = False
     if os.path.exists(f"static/taxonomy/{family_id}.html"):
         show_taxonomy = True
@@ -439,7 +440,7 @@ def subfamily(family_id):
     except Exception:
         c = open('content/redirect.md', 'r', encoding='utf-8').read()
         name = "Subfamily for " + family_id
-        
+
     show_taxonomy = False
     if os.path.exists(f"static/taxonomy/{family_id}.html"):
         show_taxonomy = True
@@ -447,7 +448,7 @@ def subfamily(family_id):
     description = "Database for Polyphenol Utilized Proteins from gut microbiota. Subfamily for " + family_id
     return render_template('subfamily.html', content=to_md(c), family_id=family_id, description=description,
                            title=title,
-                           name=name,show_taxonomy=show_taxonomy)
+                           name=name, show_taxonomy=show_taxonomy)
 
 
 @app.route("/dbpup/network/<family_id>")

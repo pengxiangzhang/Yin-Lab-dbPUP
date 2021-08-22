@@ -27,11 +27,11 @@
                 <li>
                     <button><a href="{{ url_for('trembl', family_id = family_id) }}">TrEMBL</a></button>
                 </li>
-            {% if show_taxonomy %}
-            <li>
-                <button><a href="{{ url_for('taxonomy_family', family_id = family_id) }}">Taxonomy</a></button>
-            </li>
-            {% endif %}
+                {% if show_taxonomy %}
+                    <li>
+                        <button><a href="{{ url_for('taxonomy_family', family_id = family_id) }}">Taxonomy</a></button>
+                    </li>
+                {% endif %}
             </ul>
         </div>
         <br>

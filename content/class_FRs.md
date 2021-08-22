@@ -25,9 +25,14 @@ Mechanistically, an enzyme that catalyzed the following reaction would be a tran
 
 X<sub>group</sub> + Y &rarr; X + Y<sub>group</sub>
 
-where X is the donor that is often a coenzyme, and Y is the acceptor [^5]. Group would be the functional group that is transferred on account of transferase activity.
+where X is the donor that is often a coenzyme, and Y is the acceptor [^5]. Group would be the functional group that is
+transferred on account of transferase activity.
 
-Described primarily based on the type of biochemical group transferred, transferases can be divided into ten categories (based on the EC Number classification). These categories comprise over 450 different unique enzymes. In the EC numbering system, transferases have been given a classification of **EC2**. Hydrogen is not considered a functional group when it comes to transferase targets; instead, hydrogen transfer is included under oxidoreductases, due to electron transfer considerations.
+Described primarily based on the type of biochemical group transferred, transferases can be divided into ten
+categories (based on the EC Number classification). These categories comprise over 450 different unique enzymes. In the
+EC numbering system, transferases have been given a classification of **EC2**. Hydrogen is not considered a functional
+group when it comes to transferase targets; instead, hydrogen transfer is included under oxidoreductases, due to
+electron transfer considerations.
 
 For a detailed information on class, subclass or sub-subclass of Transferases, please visit **[
 ExplorEnz](https://www.enzyme-database.org/class.php)**.
@@ -45,7 +50,11 @@ ExplorEnz](https://www.enzyme-database.org/class.php)**.
 
 ## FRs Subfamily Number
 
-**FR1**: [FR1_1](../subfamily/FR1_1) / [FR1_2](../subfamily/FR1_2) / [FR1_3](../subfamily/FR1_3) / [FR1_4](../subfamily/FR1_4) / [FR1_5](../subfamily/FR1_5) / [FR1_6](../subfamily/FR1_6) / [FR1_7](../subfamily/FR1_7) / [FR1_8](../subfamily/FR1_8) / [FR1_9](../subfamily/FR1_9) / [FR1_10](../subfamily/FR1_10) / [FR1_11](../subfamily/FR1_11) / [FR1_12](../subfamily/FR1_12) / [FR1_13](../subfamily/FR1_13) / [FR1_14](../subfamily/FR1_14) / [FR1_15](../subfamily/FR1_15) 
+**FR1**: [FR1_1](../subfamily/FR1_1) / [FR1_2](../subfamily/FR1_2) / [FR1_3](../subfamily/FR1_3)
+/ [FR1_4](../subfamily/FR1_4) / [FR1_5](../subfamily/FR1_5) / [FR1_6](../subfamily/FR1_6) / [FR1_7](../subfamily/FR1_7)
+/ [FR1_8](../subfamily/FR1_8) / [FR1_9](../subfamily/FR1_9) / [FR1_10](../subfamily/FR1_10)
+/ [FR1_11](../subfamily/FR1_11) / [FR1_12](../subfamily/FR1_12) / [FR1_13](../subfamily/FR1_13)
+/ [FR1_14](../subfamily/FR1_14) / [FR1_15](../subfamily/FR1_15)
 
 **FR2**: No subfamily
 
@@ -58,13 +67,24 @@ ExplorEnz](https://www.enzyme-database.org/class.php)**.
 ## EC in FRs Families (sorted by counts)
 
 **FR1**
-[3.2.1.1](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.1); [2.4.1.19](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.19); [5.4.99.16](https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.99.16); [2.4.1.352](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.352); [2.4.1.7](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.7); [2.4.1.4](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.4); [3.2.1.133](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.133); [3.2.1.2](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.2)
+[3.2.1.1](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.1)
+; [2.4.1.19](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.19)
+; [5.4.99.16](https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.99.16)
+; [2.4.1.352](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.352)
+; [2.4.1.7](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.7)
+; [2.4.1.4](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.4)
+; [3.2.1.133](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.133)
+; [3.2.1.2](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.2)
 
 **FR2**
 [2.4.1.5](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.5)
 
 **FR4**
-[2.5.1.111](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.111); [2.5.1.123](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.123); [2.5.1.121](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.121); [2.5.1.124](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.124); [2.5.1.125](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.125)
+[2.5.1.111](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.111)
+; [2.5.1.123](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.123)
+; [2.5.1.121](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.121)
+; [2.5.1.124](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.124)
+; [2.5.1.125](https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.125)
 
 ---
 

@@ -8,7 +8,7 @@
 
         </div>
     </div>
-    {{show_tree}}
+    {{ show_tree }}
     {% if show_tree %}
         <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('tree', family_id=family_id) }}">View phylogenetic
             tree</a>
@@ -176,8 +176,8 @@
                     </td>
                     <td>>{{ record.uniq_id }} {{ record.protein_enzyme }}
                         OS={{ record.strain }}&#10;{{ record.seq }}</td>
-                                <td>
-                                <p>{{ record.type }}</p>
+                    <td>
+                        <p>{{ record.type }}</p>
                     </td>
                     <td>{{ record.lineage }}</td>
                 </tr>

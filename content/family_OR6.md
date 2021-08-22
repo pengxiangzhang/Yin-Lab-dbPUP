@@ -8,7 +8,6 @@
 <div id="myTabContent" class="tab-content" markdown="1">
   <div class="tab-pane fade in active" id="tab1" markdown="1">
 
-
 ## Literature Information
 
 | Title    | Production of bioactive hydroxyflavones by using monooxygenase from Saccharothrix espanaensis |
@@ -29,7 +28,8 @@ Organism: *Saccharothrix espanaensis*
 
 Length: 512 AA
 
-Taxonomic identifier: [103731](https://www.uniprot.org/taxonomy/103731) [[NCBI](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?lvl=0&id=103731)]
+Taxonomic
+identifier: [103731](https://www.uniprot.org/taxonomy/103731) [[NCBI](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?lvl=0&id=103731)]
 
 - **Pfam**
 
@@ -52,27 +52,42 @@ Description:
 
    [**Pfam**](https://pfam.xfam.org/family/HpaB)
 
-   HpaB [Q57160](http://www.uniprot.org/entry/Q57160) encodes part of the 4-hydroxyphenylacetate 3-hydroxylase from Escherichia coli [^1]. HpaB is part of a heterodimeric enzyme that also requires HpaC. The enzyme is NADH-dependent and uses FAD as the redox chromophore. This family also includes PvcC [O30372](http://www.uniprot.org/entry/O30372) may play a role in one of the proposed hydroxylation steps of pyoverdine chromophore biosynthesis [^2].
-   
+   HpaB [Q57160](http://www.uniprot.org/entry/Q57160) encodes part of the 4-hydroxyphenylacetate 3-hydroxylase from
+   Escherichia coli [^1]. HpaB is part of a heterodimeric enzyme that also requires HpaC. The enzyme is NADH-dependent
+   and uses FAD as the redox chromophore. This family also includes PvcC [O30372](http://www.uniprot.org/entry/O30372)
+   may play a role in one of the proposed hydroxylation steps of pyoverdine chromophore biosynthesis [^2].
+
    [**InterPro**](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR024719/)
-   
-   This C-terminal domain is found in HpaB, which encodes part of the 4-hydroxyphenylacetate 3-hydroxylase from Escherichia coli[^1]. The enzyme is NADH-dependent and uses FAD as the redox chromophore. This domain is also found in pyoverdin chromophore biosynthetic protein PvcC, which may play a role in one of the proposed hydroxylation steps of pyoverdine chromophore biosynthesis[^2] and in 4-hydroxybutyryl-CoA dehydratase (4-BUDH), a key enzyme in the metabolism of gamma-aminobutyrate[^3].
-   
+
+   This C-terminal domain is found in HpaB, which encodes part of the 4-hydroxyphenylacetate 3-hydroxylase from
+   Escherichia coli[^1]. The enzyme is NADH-dependent and uses FAD as the redox chromophore. This domain is also found
+   in pyoverdin chromophore biosynthetic protein PvcC, which may play a role in one of the proposed hydroxylation steps
+   of pyoverdine chromophore biosynthesis[^2] and in 4-hydroxybutyryl-CoA dehydratase (4-BUDH), a key enzyme in the
+   metabolism of gamma-aminobutyrate[^3].
+
 2. HpaB_N
 
    [**Pfam**](https://pfam.xfam.org/family/HpaB_N)
 
-   HpaB [Q57160](http://www.uniprot.org/entry/Q57160) encodes part of the 4-hydroxyphenylacetate 3-hydroxylase from Escherichia coli[^1]. HpaB is part of a heterodimeric enzyme that also requires HpaC. The enzyme is NADH-dependent and uses FAD as the redox chromophore. This family also includes PvcC [O30372](http://www.uniprot.org/entry/O30372) may play a role in one of the proposed hydroxylation steps of pyoverdine chromophore biosynthesis[^2].
-   
+   HpaB [Q57160](http://www.uniprot.org/entry/Q57160) encodes part of the 4-hydroxyphenylacetate 3-hydroxylase from
+   Escherichia coli[^1]. HpaB is part of a heterodimeric enzyme that also requires HpaC. The enzyme is NADH-dependent
+   and uses FAD as the redox chromophore. This family also includes PvcC [O30372](http://www.uniprot.org/entry/O30372)
+   may play a role in one of the proposed hydroxylation steps of pyoverdine chromophore biosynthesis[^2].
+
    [**InterPro**](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR024674/)
 
-This domain is found in the N terminus of HpaB, which encodes part of the 4-hydroxyphenylacetate 3-hydroxylase from Escherichia coli[^1]. The enzyme is NADH-dependent and uses FAD as the redox chromophore. The domain is also found in pyoverdin chromophore biosynthetic protein (PvcC), which may play a role in one of the proposed hydroxylation steps of pyoverdine chromophore biosynthesis[^2] and in 4-hydroxybutyryl-CoA dehydratase (4-BUDH), a key enzyme in the metabolism of gamma-aminobutyrate[^3].
+This domain is found in the N terminus of HpaB, which encodes part of the 4-hydroxyphenylacetate 3-hydroxylase from
+Escherichia coli[^1]. The enzyme is NADH-dependent and uses FAD as the redox chromophore. The domain is also found in
+pyoverdin chromophore biosynthetic protein (PvcC), which may play a role in one of the proposed hydroxylation steps of
+pyoverdine chromophore biosynthesis[^2] and in 4-hydroxybutyryl-CoA dehydratase (4-BUDH), a key enzyme in the metabolism
+of gamma-aminobutyrate[^3].
 
 *Information is taken from Pfam and InterPro web site.*
 
 - **Reaction**
 
-[luteolin](https://pubchem.ncbi.nlm.nih.gov/compound/luteolin) &rArr; [8-hydroxyluteolin](https://pubchem.ncbi.nlm.nih.gov/compound/8-hydroxyluteolin)
+[luteolin](https://pubchem.ncbi.nlm.nih.gov/compound/luteolin)
+&rArr; [8-hydroxyluteolin](https://pubchem.ncbi.nlm.nih.gov/compound/8-hydroxyluteolin)
 
 <figure>
 <div class="linerow">
@@ -90,9 +105,13 @@ This domain is found in the N terminus of HpaB, which encodes part of the 4-hydr
 
 ## References
 
-[^1]: Prieto M A, Garcia J L. Molecular characterization of 4-hydroxyphenylacetate 3-hydroxylase of Escherichia coli. A two-protein component enzyme[J]. Journal of Biological Chemistry, 1994, 269(36): 22823-22829.
-[^2]:Stintzi A, Johnson Z, Stonehouse M, et al. The pvc gene cluster ofPseudomonas aeruginosa: role in synthesis of the pyoverdine chromophore and regulation by PtxR and PvdS[J]. Journal of bacteriology, 1999, 181(13): 4118-4124.
-[^3]:SCHERF U, BUCKEL W. Purification and properties of an iron‐sulfur and FAD‐containing 4‐hydroxybutyryl‐CoA dehydratase/vinylacetyl‐CoA delta 3‐delta 2‐isomerase from Clostridium aminobutyricum[J]. European journal of biochemistry, 1993, 215(2): 421-429.
+[^1]: Prieto M A, Garcia J L. Molecular characterization of 4-hydroxyphenylacetate 3-hydroxylase of Escherichia coli. A
+two-protein component enzyme[J]. Journal of Biological Chemistry, 1994, 269(36): 22823-22829.
+[^2]:Stintzi A, Johnson Z, Stonehouse M, et al. The pvc gene cluster ofPseudomonas aeruginosa: role in synthesis of the
+pyoverdine chromophore and regulation by PtxR and PvdS[J]. Journal of bacteriology, 1999, 181(13): 4118-4124.
+[^3]:SCHERF U, BUCKEL W. Purification and properties of an iron‐sulfur and FAD‐containing 4‐hydroxybutyryl‐CoA
+dehydratase/vinylacetyl‐CoA delta 3‐delta 2‐isomerase from Clostridium aminobutyricum[J]. European journal of
+biochemistry, 1993, 215(2): 421-429.
 
   </div>
 </div>

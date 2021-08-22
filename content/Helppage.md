@@ -95,34 +95,42 @@ Additionally, nodes have a light yellow border indicate the seeds.
 
 ## UHGP
 
-In the navigation menu, clicking on UHGP will open a new page, where users can find information about UHGP Hits list, UHGP introduction, UHGP homologs, physically linked PUP gene clusters (PGCs). The homologs found in UHGP-100 dataset are classified by continent, clicking the corresponding continent will redirect users to a new page, where present metadata about each homolog.
+In the navigation menu, clicking on UHGP will open a new page, where users can find information about UHGP Hits list,
+UHGP introduction, UHGP homologs, physically linked PUP gene clusters (PGCs). The homologs found in UHGP-100 dataset are
+classified by continent, clicking the corresponding continent will redirect users to a new page, where present metadata
+about each homolog.
 
 ![help11](./static/images/text_content/figures/help11.png){: .fit .rounded-border}
 
-Users can browse the whole PGCs in tabular format by clicking the Cluster. The cluster ID will redirect the users to the corresponding PGC page, where exhibits the functional annotation about each gene in the PGC.
+Users can browse the whole PGCs in tabular format by clicking the Cluster. The cluster ID will redirect the users to the
+corresponding PGC page, where exhibits the functional annotation about each gene in the PGC.
 
 ![help13](./static/images/text_content/figures/help13.png){: .fit .rounded-border}
 
 ![help12](./static/images/text_content/figures/help12.png){: .fit .rounded-border}
 
-Clicking the Family name (e.g. OR1) will redirect users to Family page, where exhibits experimental results in very detail.
+Clicking the Family name (e.g. OR1) will redirect users to Family page, where exhibits experimental results in very
+detail.
 
 ## BLAST
 
-Users can enter a protein or nucleotide sequence of interest in FASTA format to perform a BLAST search against dbPUP. This can be done in following ways:
+Users can enter a protein or nucleotide sequence of interest in FASTA format to perform a BLAST search against dbPUP.
+This can be done in following ways:
 
 1. Enter a protein or nucleotide sequence into the form field.
 2. Upload a FASTA format file
 
 ![help8](./static/images/text_content/figures/help9.png){: .fit .rounded-border}
 
-Results are displayed as a sortable table including `hmmscan` result (only applicable for protein sequence), protein information, scores, and E-values obtained from BLAST.
+Results are displayed as a sortable table including `hmmscan` result (only applicable for protein sequence), protein
+information, scores, and E-values obtained from BLAST.
 
 ![help8](./static/images/text_content/figures/help10.png){: .fit .rounded-border}
 
 ## Taxonomy
 
-The Taxonomy page allows users to explore hierarchical data of taxonomic distribution of PUP homologs in dbPUP, with zooming, multi-layered pie charts.
+The Taxonomy page allows users to explore hierarchical data of taxonomic distribution of PUP homologs in dbPUP, with
+zooming, multi-layered pie charts.
 
 ![help14](./static/images/text_content/figures/help14.png){: .fit .rounded-border}
 

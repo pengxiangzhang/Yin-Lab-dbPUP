@@ -42,53 +42,52 @@
         </ul>
     </div>    <br>
     <div class="familyInformation">
-        {{ content| safe }}
-        <div>
-            <table id="data-table" class="table display"></table>
+    {{ content| safe }}
+    <div>
+    <table id="data-table" class="table display"></table>
 
     <script type="text/javascript">
 
-$(document).ready(function () {
- var columns = [{
-     title: 'Gene ID',
-     target: 0,
-     data: function (item) {
-         return `<td><a href="https://www.ebi.ac.uk/metagenomics/genomes/${ item.MGnify }" rel="noopener noreferrer" target="_blank">${ item.gene_id }</a></td>`;
-     }
- },{
-     title:'Family',
-     target: 1,
-     data:function (item) {
-         return `<td><a href="/dbpup/family/${item.family}">${ item.family }</a></td>`
-     }
- },{
-     title:'Name',
-     target: 2,
-     data: function (item) {
-         return item.name;
-     }
- },{
-     title: 'Cluster ID',
-     target: 3,
-     data:function (item) {
-        if (item.cluster_id == "NA"){
-            return "<td>&nbsp;</td>"
-        }
-        else{
-            return `<td><a href="/dbpup/cluster/${item.cluster_id}">${ item.cluster_id }</a>
+        $(document).ready(function () {
+            var columns = [{
+                title: 'Gene ID',
+                target: 0,
+                data: function (item) {
+                    return `<td><a href="https://www.ebi.ac.uk/metagenomics/genomes/${item.MGnify}" rel="noopener noreferrer" target="_blank">${item.gene_id}</a></td>`;
+                }
+            }, {
+                title: 'Family',
+                target: 1,
+                data: function (item) {
+                    return `<td><a href="/dbpup/family/${item.family}">${item.family}</a></td>`
+                }
+            }, {
+                title: 'Name',
+                target: 2,
+                data: function (item) {
+                    return item.name;
+                }
+            }, {
+                title: 'Cluster ID',
+                target: 3,
+                data: function (item) {
+                    if (item.cluster_id == "NA") {
+                        return "<td>&nbsp;</td>"
+                    } else {
+                        return `<td><a href="/dbpup/cluster/${item.cluster_id}">${item.cluster_id}</a>
                         </td>`
-        }
-     }
- }];
-  var table = $('#data-table').DataTable({
-     "initComplete": function () {
-        $("#data-table").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
-    },
-     "processing":true,
-     "serverSide":true,
-     "ajax":"{{ url_for('uhgp_continent_data', name_id=name_id) }}",
-     "columns":columns,
-                     lengthMenu: [[10, 25, 50, 100], ['10 rows', '25 rows', '50 rows', '100 rows']],
+                    }
+                }
+            }];
+            var table = $('#data-table').DataTable({
+                "initComplete": function () {
+                    $("#data-table").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
+                },
+                "processing": true,
+                "serverSide": true,
+                "ajax": "{{ url_for('uhgp_continent_data', name_id=name_id) }}",
+                "columns": columns,
+                lengthMenu: [[10, 25, 50, 100], ['10 rows', '25 rows', '50 rows', '100 rows']],
                 dom: 'Bfrtip',
                 columnDefs: [{
                     targets: -1,
@@ -118,6 +117,6 @@ $(document).ready(function () {
                 select: true
             });
         });
-    
+
     </script>
 {% endblock %}
