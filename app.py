@@ -55,29 +55,6 @@ def page_not_found(e):
     return render_template('500.html'), 500
 
 
-@app.route("/dbpup/uhgp_continent_data/<name_id>")
-def uhgp_continent_data(name_id):
-    columns = [
-        ColumnDT(UhgpRecord.number, mData='number'),
-        ColumnDT(UhgpRecord.gene_id, mData='gene_id'),
-        ColumnDT(UhgpRecord.name, mData='name'),
-        ColumnDT(UhgpRecord.cluster_id, mData='cluster_id'),
-        ColumnDT(UhgpRecord.type, mData='type'),
-        ColumnDT(UhgpRecord.lineage, mData='lineage'),
-        ColumnDT(UhgpRecord.country, mData='country'),
-        ColumnDT(UhgpRecord.continent, mData='continent'),
-        ColumnDT(UhgpRecord.seq, mData='seq'),
-        ColumnDT(UhgpRecord.MGnify, mData='MGnify'),
-        ColumnDT(UhgpRecord.family, mData='family'),
-    ]
-    records = dtbs.session.query().select_from(UhgpRecord).filter_by(continent=name_id)
-
-    params = request.args.to_dict()
-    rowTable = DataTables(params, records, columns)
-    print(rowTable.output_result())
-    return jsonify(rowTable.output_result())
-
-
 @app.route('/dbpup/')
 def index():
     name = app.config['FullName'] + " (" + app.config['title'] + ")"
@@ -203,6 +180,27 @@ def help():
         pass
     description = "dbPUP is the first database to collect polyphenol utilization proteins that have been experimentally validated to catalyze or modify a polyphenol substrate. The database currently contains 60 proteins from gut microbiota that are manually curated from literature and enzyme database. These proteins have been characterized by different experimental approaches targeting one or more specific polyphenol substrates. These experimentally characterized proteins are also called seed proteins. Using these seed proteins, we also collected over 24,000 proteins that share conserved Pfam domains and significant sequence similarities with the seed proteins, and thus are potentially capable of metabolizing polyphenols. These proteins are also called computationally predicted proteins. All these seed proteins and computationally predicted proteins are compiled together and classified into protein families based on sequence homology and further categorized into classes according to EC numbers that the seed proteins have."
     return render_template('main.html', content=to_md(c), description=description, title=title, name=name)
+
+
+@app.route("/dbpup/uhgp_continent_data/<name_id>")
+def uhgp_continent_data(name_id):
+    columns = [
+        ColumnDT(UhgpRecord.number, mData='number'),
+        ColumnDT(UhgpRecord.gene_id, mData='gene_id'),
+        ColumnDT(UhgpRecord.name, mData='name'),
+        ColumnDT(UhgpRecord.cluster_id, mData='cluster_id'),
+        ColumnDT(UhgpRecord.type, mData='type'),
+        ColumnDT(UhgpRecord.lineage, mData='lineage'),
+        ColumnDT(UhgpRecord.country, mData='country'),
+        ColumnDT(UhgpRecord.continent, mData='continent'),
+        ColumnDT(UhgpRecord.seq, mData='seq'),
+        ColumnDT(UhgpRecord.MGnify, mData='MGnify'),
+        ColumnDT(UhgpRecord.family, mData='family'),
+    ]
+    records = dtbs.session.query().select_from(UhgpRecord).filter_by(continent=name_id)
+    params = request.args.to_dict()
+    rowTable = DataTables(params, records, columns)
+    return jsonify(rowTable.output_result())
 
 
 @app.route('/dbpup/statistics')
