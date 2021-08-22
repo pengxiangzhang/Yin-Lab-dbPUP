@@ -78,6 +78,42 @@
                         </td>`
                     }
                 }
+            }, {
+                title: 'Type',
+                target: 4,
+                data: function (item) {
+                    return item.type
+                }
+            }, {
+                title: 'Lineage',
+                target: 5,
+                data: function (item) {
+                    return item.lineage
+                }
+            }, {
+                title: 'Country',
+                target: 6,
+                data: function (item) {
+                    return item.country
+                }
+            }, {
+                title: 'Continent',
+                target: 7,
+                data: function (item) {
+                    return item.continent
+                }
+            }, {
+                title: 'Sequence',
+                target: 8,
+                data: function (item) {
+                    return `<td><a href="/dbpup/detail/uhpg/${item.gene_id}" target="_blank">view</a>`
+                }
+            }, {
+                title: '&nbsp;',
+                target: 9,
+                data: function (item) {
+                    return `<td>>${ item.gene_id }&#10;${ item.seq }</td>`
+                }
             }];
             var table = $('#data-table').DataTable({
                 "initComplete": function () {
