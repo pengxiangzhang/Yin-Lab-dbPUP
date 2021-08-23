@@ -974,6 +974,8 @@ class ClusRecord(dtbs.Model):
     pfam_link = dtbs.Column(dtbs.VARCHAR(800))
     mgnify = dtbs.Column(dtbs.VARCHAR(255))
     color = dtbs.Column(dtbs.VARCHAR(10))
+    substrate = dtbs.Column(dtbs.VARCHAR(255))
+    pubchem_s = dtbs.Column(dtbs.VARCHAR(255))
 
 
 if __name__ == "__main__":
