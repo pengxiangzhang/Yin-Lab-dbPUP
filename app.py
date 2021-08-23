@@ -161,10 +161,8 @@ def uhgp(name_id):
         except Exception:
             pass
         description = "UHGP - " + name_id + " for dbPUP"
-        records = UhgpRecord.query.filter_by(continent=name_id)
 
-        return render_template('uhgp_continent.html', content=to_md(c), description=description, title=title, name=name,
-                               records=records, name_id=name_id)
+        return render_template('uhgp_continent.html', content=to_md(c), description=description, title=title, name=name, name_id=name_id)
 
 
 @app.route('/dbpup/help')
@@ -197,6 +195,8 @@ def uhgp_continent_data(name_id):
         ColumnDT(UhgpRecord.MGnify, mData='MGnify'),
         ColumnDT(UhgpRecord.family, mData='family'),
     ]
+    if name_id=="Others":
+        name_id="NA"
     records = dtbs.session.query().select_from(UhgpRecord).filter_by(continent=name_id)
     params = request.args.to_dict()
     rowTable = DataTables(params, records, columns)
@@ -251,7 +251,8 @@ def swissport(family_id):
     count = [records.count(), records.filter_by(type="Archaea").count(), records.filter_by(type="Bacteria").count(),
              records.filter_by(type="Eukaryota").count(), records.filter_by(type="Viruses").count(),
              records.filter_by(type="unclassified").count()]
-
+             
+    show_tree = False
     if os.path.exists(f"static/materials/tree/{family_id}.json"):
         show_tree = True
 
