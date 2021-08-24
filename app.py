@@ -147,11 +147,23 @@ def uhgp(name_id):
             pass
         description = "UHGP - " + name_id + " for dbPUP"
         records = ClusRecord.query.all()
+        all_pairs = []
+        for record in records:
+            pairs = []
+            substrates = record.substrate.split(';')
+            links = record.pubchem_s.split(';')
+            i = 0
+            while i < len(substrates):
+                pair = [substrates[i], links[i]]
+                pairs.append(pair)
+                i += 1
+            all_pairs.append(pairs)
         data_analyzer = Data_analyzer(records)
+
         pfam_dic = data_analyzer.pfam_dic()
 
         return render_template('uhgp_cluster.html', content=to_md(c), description=description, title=title, name=name,
-                               records=records, pfam_dic=pfam_dic)
+                               records=records, pfam_dic=pfam_dic, substrate_pairs=all_pairs)
     else:
         name = "UHGP for Continent: " + name_id
         title = "UHGP for Continent: " + name_id + " - "
@@ -952,7 +964,8 @@ class ClusRecord(dtbs.Model):
     pfam_link = dtbs.Column(dtbs.VARCHAR(800))
     mgnify = dtbs.Column(dtbs.VARCHAR(255))
     color = dtbs.Column(dtbs.VARCHAR(10))
-
+    substrate = dtbs.Column(dtbs.VARCHAR(50))
+    pubchem_s = dtbs.Column(dtbs.VARCHAR(50))
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')

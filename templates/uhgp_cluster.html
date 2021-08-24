@@ -51,6 +51,7 @@
                     <th style="white-space: nowrap">Gene ID</th>
                     <th style="white-space: nowrap">Name</th>
                     <th style="white-space: nowrap">Pfam</th>
+                    <th style="white-space: nowrap">Substrate</th>
                     <th style="white-space: nowrap">Type</th>
                     <th style="white-space: nowrap">Continent</th>
                     <th style="white-space: nowrap">Sequence</th>
@@ -73,6 +74,11 @@
                             {% else %}
                             <a href="{{ pfam[1] }}" rel="noopener noreferrer" target="_blank">{{ pfam[0] }}</a>
                             {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td>
+                        {% for substrate in substrate_pairs[record.number] %}
+                            <a href="{{ substrate[1] }}" > {{ substrate[0] }}</a>
                         {% endfor %}
                     </td>
                     <td>{{ record.type }}</td>
