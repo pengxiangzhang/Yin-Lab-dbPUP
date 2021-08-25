@@ -1,18 +1,18 @@
 import os.path
 from data_analyzer import Data_analyzer
-from flask import Flask, request, send_from_directory, flash, render_template, abort
+from flask import Flask, request, send_from_directory, flash, render_template, abort, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import func
 from flask_caching import Cache
 import markdown, json, glob, os, uuid, requests
 from datetime import datetime
 import pandas as pd
-
+from datatables import ColumnDT, DataTables
 
 # Application configurations
 app = Flask(__name__, static_url_path='/dbpup/static')
 cache = Cache(app, config={'CACHE_TYPE': 'FileSystemCache', 'CACHE_DIR': 'cache', 'CACHE_IGNORE_ERRORS': 'True',
-                           'CACHE_THRESHOLD': '1000',"CACHE_DEFAULT_TIMEOUT": 300})
+                           'CACHE_THRESHOLD': '1000', "CACHE_DEFAULT_TIMEOUT": 300})
 
 # read configurations
 with open('config.json') as json_file:
@@ -71,10 +71,10 @@ def taxonomy_family(family_id):
     title = f"Taxonomy for {family_id} - "
     if os.path.exists(f"static/taxonomy/{family_id}.html"):
         c = f'<iframe src ="/dbpup/static/taxonomy/{family_id}.html" frameborder="0" scrolling="no" id="external-frame" style="width:100%; height:80vh"></iframe>'
-    elif family_id=="UHGP":
+    elif family_id == "UHGP":
         c = '<iframe src ="/dbpup/static/uhgp_homolog_taxonomy.html" frameborder="0" scrolling="no" id="external-frame" style="width:100%; height:80vh"></iframe>'
-    elif family_id=="UniProt":
-        c='<iframe src ="/dbpup/static/UniProt_homologs_taxonomy.html" frameborder="0" scrolling="no" id="external-frame" style="width:100%; height:80vh"></iframe>'
+    elif family_id == "UniProt":
+        c = '<iframe src ="/dbpup/static/UniProt_homologs_taxonomy.html" frameborder="0" scrolling="no" id="external-frame" style="width:100%; height:80vh"></iframe>'
     else:
         abort(404)
     description = f"dbPUP data of taxonomy for {family_id}"
@@ -177,10 +177,8 @@ def uhgp(name_id):
         except Exception:
             pass
         description = "UHGP - " + name_id + " for dbPUP"
-        records = UhgpRecord.query.filter_by(continent=name_id)
 
-        return render_template('uhgp_continent.html', content=to_md(c), description=description, title=title, name=name,
-                               records=records)
+        return render_template('uhgp_continent.html', content=to_md(c), description=description, title=title, name=name, name_id=name_id)
 
 
 @app.route('/dbpup/help')
@@ -196,6 +194,29 @@ def help():
         pass
     description = "dbPUP is the first database to collect polyphenol utilization proteins that have been experimentally validated to catalyze or modify a polyphenol substrate. The database currently contains 60 proteins from gut microbiota that are manually curated from literature and enzyme database. These proteins have been characterized by different experimental approaches targeting one or more specific polyphenol substrates. These experimentally characterized proteins are also called seed proteins. Using these seed proteins, we also collected over 24,000 proteins that share conserved Pfam domains and significant sequence similarities with the seed proteins, and thus are potentially capable of metabolizing polyphenols. These proteins are also called computationally predicted proteins. All these seed proteins and computationally predicted proteins are compiled together and classified into protein families based on sequence homology and further categorized into classes according to EC numbers that the seed proteins have."
     return render_template('main.html', content=to_md(c), description=description, title=title, name=name)
+
+
+@app.route("/dbpup/uhgp_continent_data/<name_id>")
+def uhgp_continent_data(name_id):
+    columns = [
+        ColumnDT(UhgpRecord.number, mData='number'),
+        ColumnDT(UhgpRecord.gene_id, mData='gene_id'),
+        ColumnDT(UhgpRecord.name, mData='name'),
+        ColumnDT(UhgpRecord.cluster_id, mData='cluster_id'),
+        ColumnDT(UhgpRecord.type, mData='type'),
+        ColumnDT(UhgpRecord.lineage, mData='lineage'),
+        ColumnDT(UhgpRecord.country, mData='country'),
+        ColumnDT(UhgpRecord.continent, mData='continent'),
+        ColumnDT(UhgpRecord.seq, mData='seq'),
+        ColumnDT(UhgpRecord.MGnify, mData='MGnify'),
+        ColumnDT(UhgpRecord.family, mData='family'),
+    ]
+    if name_id=="Others":
+        name_id="NA"
+    records = dtbs.session.query().select_from(UhgpRecord).filter_by(continent=name_id)
+    params = request.args.to_dict()
+    rowTable = DataTables(params, records, columns)
+    return jsonify(rowTable.output_result())
 
 
 @app.route('/dbpup/statistics')
@@ -246,9 +267,10 @@ def swissport(family_id):
     count = [records.count(), records.filter_by(type="Archaea").count(), records.filter_by(type="Bacteria").count(),
              records.filter_by(type="Eukaryota").count(), records.filter_by(type="Viruses").count(),
              records.filter_by(type="unclassified").count()]
-
+             
+    show_tree = False
     if os.path.exists(f"static/materials/tree/{family_id}.json"):
-        show_tree=True
+        show_tree = True
 
     if number is None:
         number = 0
@@ -266,7 +288,7 @@ def swissport(family_id):
     description = "Database for Polyphenol Utilized Proteins from gut microbiota. Swiss-Prot data for " + family_id
     return render_template('swissport.html', family_id=family_id, records=records, ec=ec_link, rows=pdb_row,
                            description=description, title=title,
-                           name=name, subfamily=subfamily, count=count, number=number,show_tree=show_tree)
+                           name=name, subfamily=subfamily, count=count, number=number, show_tree=show_tree)
 
 
 @app.route('/dbpup/Trembl/<family_id>', methods=['GET', 'POST'])
@@ -410,7 +432,7 @@ def family(family_id):
         amount = 13
     elif family_id == 'UC2':
         amount = 8
-    
+
     show_taxonomy = False
     if os.path.exists(f"static/taxonomy/{family_id}.html"):
         show_taxonomy = True
@@ -433,7 +455,7 @@ def subfamily(family_id):
     except Exception:
         c = open('content/redirect.md', 'r', encoding='utf-8').read()
         name = "Subfamily for " + family_id
-        
+
     show_taxonomy = False
     if os.path.exists(f"static/taxonomy/{family_id}.html"):
         show_taxonomy = True
@@ -441,7 +463,7 @@ def subfamily(family_id):
     description = "Database for Polyphenol Utilized Proteins from gut microbiota. Subfamily for " + family_id
     return render_template('subfamily.html', content=to_md(c), family_id=family_id, description=description,
                            title=title,
-                           name=name,show_taxonomy=show_taxonomy)
+                           name=name, show_taxonomy=show_taxonomy)
 
 
 @app.route("/dbpup/network/<family_id>")
@@ -968,8 +990,8 @@ class ClusRecord(dtbs.Model):
     pfam_link = dtbs.Column(dtbs.VARCHAR(800))
     mgnify = dtbs.Column(dtbs.VARCHAR(255))
     color = dtbs.Column(dtbs.VARCHAR(10))
-    substrate = dtbs.Column(dtbs.VARCHAR(50))
-    pubchem_s = dtbs.Column(dtbs.VARCHAR(50))
+    substrate = dtbs.Column(dtbs.VARCHAR(255))
+    pubchem_s = dtbs.Column(dtbs.VARCHAR(255))
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')

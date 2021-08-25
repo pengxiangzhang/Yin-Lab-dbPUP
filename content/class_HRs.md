@@ -30,10 +30,28 @@ catalyzes the following reaction is a hydrolase:
 
 A–B + H<sub>2</sub>O → A–OH + B–H where A–B represents a chemical bond of unspecified molecules.
 
-Hydrolases belong to **EC 3** in the EC classification system and can be further grouped into thirteen subclasses on the basis of the bonds they act upon. EC 3.1 represents a kind of enzymes rupturing ester bonds, which are called esterases. Some common esterases include nucleosidases, phosphatases, proteases, and lipases, among which phosphatases cut phosphate groups off molecules. Acetylcholine esterase is a potent neurotransmitter for voluntary muscle and it as one of the most crucial esterases contributes to the transform of the neuron impulse into acetic acid after it degrades acetylcholine into choline and acetic acid. Some dangerous toxins such as the exotoxin and saxitoxin could impede with the action of cholinesterase, and many nerve agents react by hindering the hydrolytic efficacy of cholinesterase.
-Nucleosidases are capable of hydrolyzing the bonds of nucleotides. Glycerides could be hydrolyzed by lipases, which also make contribution to the breakdown of fats, lipoproteins and other larger molecules into smaller molecules like fatty acids that are used for synthesis and as a source of energy. Hydrolases in EC 3.2 mainly act upon sugars such as DNA glycosylases and glycoside hydrolase. Acetic acid has become a nice intermediate for glycolysis catalyzed by glycosidases that chop sugar molecules into carbohydrates and peptidases hydrolyze peptide bonds. EC 3.3 includes ether bonds destroying enzymes. EC 3.4 covers hydrolases that act upon peptide bonds like proteases and peptidases. For example, acylpeptide hydrolase as a member of the peptidase family could deacetylate the acetylated N-terminus of polypeptides. Some other type of hydrolases comprise enzymes breaking carbon-nitrogen bonds, not peptide bonds, acid anhydrides (acid anhydride hydrolases, including helicases and GTPase), carbon-carbon bonds, halide bonds, phosphorus-nitrogen bonds, sulphur-nitrogen bonds, carbon-phosphorus bonds, sulfur-sulfur bonds, and carbon-sulfur bonds, with EC number sequentially ranging from 3.5 to 3.13.<sup class="md-footnote"><a href="#dfref-footnote-3" name="ref-footnote-3">3</a></sup>
+Hydrolases belong to **EC 3** in the EC classification system and can be further grouped into thirteen subclasses on the
+basis of the bonds they act upon. EC 3.1 represents a kind of enzymes rupturing ester bonds, which are called esterases.
+Some common esterases include nucleosidases, phosphatases, proteases, and lipases, among which phosphatases cut
+phosphate groups off molecules. Acetylcholine esterase is a potent neurotransmitter for voluntary muscle and it as one
+of the most crucial esterases contributes to the transform of the neuron impulse into acetic acid after it degrades
+acetylcholine into choline and acetic acid. Some dangerous toxins such as the exotoxin and saxitoxin could impede with
+the action of cholinesterase, and many nerve agents react by hindering the hydrolytic efficacy of cholinesterase.
+Nucleosidases are capable of hydrolyzing the bonds of nucleotides. Glycerides could be hydrolyzed by lipases, which also
+make contribution to the breakdown of fats, lipoproteins and other larger molecules into smaller molecules like fatty
+acids that are used for synthesis and as a source of energy. Hydrolases in EC 3.2 mainly act upon sugars such as DNA
+glycosylases and glycoside hydrolase. Acetic acid has become a nice intermediate for glycolysis catalyzed by
+glycosidases that chop sugar molecules into carbohydrates and peptidases hydrolyze peptide bonds. EC 3.3 includes ether
+bonds destroying enzymes. EC 3.4 covers hydrolases that act upon peptide bonds like proteases and peptidases. For
+example, acylpeptide hydrolase as a member of the peptidase family could deacetylate the acetylated N-terminus of
+polypeptides. Some other type of hydrolases comprise enzymes breaking carbon-nitrogen bonds, not peptide bonds, acid
+anhydrides (acid anhydride hydrolases, including helicases and GTPase), carbon-carbon bonds, halide bonds,
+phosphorus-nitrogen bonds, sulphur-nitrogen bonds, carbon-phosphorus bonds, sulfur-sulfur bonds, and carbon-sulfur
+bonds, with EC number sequentially ranging from 3.5 to
+3.13.<sup class="md-footnote"><a href="#dfref-footnote-3" name="ref-footnote-3">3</a></sup>
 
-For a detailed information on class, subclass or sub-subclass of hydrolase, please visit [**ExplorEnz**](https://www.enzyme-database.org/class.php).
+For a detailed information on class, subclass or sub-subclass of hydrolase, please visit [**
+ExplorEnz**](https://www.enzyme-database.org/class.php).
 
 ---
 
@@ -54,38 +72,95 @@ For a detailed information on class, subclass or sub-subclass of hydrolase, plea
 
 **HR1**: No subfamily
 
-**HR2**: [HR2_1](../subfamily/HR2_1) / [HR2_2](../subfamily/HR2_2) / [HR2_3](../subfamily/HR2_3) / [HR2_4](../subfamily/HR2_4) / [HR2_5](../subfamily/HR2_5) / [HR2_6](../subfamily/HR2_6) / [HR2_7](../subfamily/HR2_7) / [HR2_8](../subfamily/HR2_8) / [HR2_9](../subfamily/HR2_9) / [HR2_10](../subfamily/HR2_10) / [HR2_11](../subfamily/HR2_11) / [HR2_12](../subfamily/HR2_12) / [HR2_13](../subfamily/HR2_13) / [HR2_14](../subfamily/HR2_14) / [HR2_15](../subfamily/HR2_15) / [HR2_16](../subfamily/HR2_16) / [HR2_17](../subfamily/HR2_17) / [HR2_18](../subfamily/HR2_18) / [HR2_19](../subfamily/HR2_19) / [HR2_20](../subfamily/HR2_20)
+**HR2**: [HR2_1](../subfamily/HR2_1) / [HR2_2](../subfamily/HR2_2) / [HR2_3](../subfamily/HR2_3)
+/ [HR2_4](../subfamily/HR2_4) / [HR2_5](../subfamily/HR2_5) / [HR2_6](../subfamily/HR2_6) / [HR2_7](../subfamily/HR2_7)
+/ [HR2_8](../subfamily/HR2_8) / [HR2_9](../subfamily/HR2_9) / [HR2_10](../subfamily/HR2_10)
+/ [HR2_11](../subfamily/HR2_11) / [HR2_12](../subfamily/HR2_12) / [HR2_13](../subfamily/HR2_13)
+/ [HR2_14](../subfamily/HR2_14) / [HR2_15](../subfamily/HR2_15) / [HR2_16](../subfamily/HR2_16)
+/ [HR2_17](../subfamily/HR2_17) / [HR2_18](../subfamily/HR2_18) / [HR2_19](../subfamily/HR2_19)
+/ [HR2_20](../subfamily/HR2_20)
 
-**HR3**: [HR3_1](../subfamily/HR3_1) / [HR3_2](../subfamily/HR3_2) / [HR3_3](../subfamily/HR3_3) / [HR3_4](../subfamily/HR3_4) / [HR3_5](../subfamily/HR3_5) / [HR3_6](../subfamily/HR3_6)
+**HR3**: [HR3_1](../subfamily/HR3_1) / [HR3_2](../subfamily/HR3_2) / [HR3_3](../subfamily/HR3_3)
+/ [HR3_4](../subfamily/HR3_4) / [HR3_5](../subfamily/HR3_5) / [HR3_6](../subfamily/HR3_6)
 
-**HR4**: [HR4_1](../subfamily/HR4_1) / [HR4_2](../subfamily/HR4_2) / [HR4_3](../subfamily/HR4_3) / [HR4_4](../subfamily/HR4_4) / [HR4_5](../subfamily/HR4_5) /[HR4_6](../subfamily/HR4_6) / [HR4_7](../subfamily/HR4_7) / [HR4_8](../subfamily/HR4_8) / [HR4_9](../subfamily/HR4_9) / [HR4_10](../subfamily/HR4_10) / [HR4_11](../subfamily/HR4_11)
+**HR4**: [HR4_1](../subfamily/HR4_1) / [HR4_2](../subfamily/HR4_2) / [HR4_3](../subfamily/HR4_3)
+/ [HR4_4](../subfamily/HR4_4) / [HR4_5](../subfamily/HR4_5) /[HR4_6](../subfamily/HR4_6) / [HR4_7](../subfamily/HR4_7)
+/ [HR4_8](../subfamily/HR4_8) / [HR4_9](../subfamily/HR4_9) / [HR4_10](../subfamily/HR4_10)
+/ [HR4_11](../subfamily/HR4_11)
 
-**HR5**: [HR5_1](../subfamily/HR5_1) / [HR5_2](../subfamily/HR5_2) / [HR5_3](../subfamily/HR5_3) / [HR5_4](../subfamily/HR5_4) / [HR5_5](../subfamily/HR5_5) / [HR5_6](../subfamily/HR5_6) / [HR5_7](../subfamily/HR5_7) / [HR5_8](../subfamily/HR5_8) / [HR5_9](../subfamily/HR5_9) / [HR5_10](../subfamily/HR5_10)
+**HR5**: [HR5_1](../subfamily/HR5_1) / [HR5_2](../subfamily/HR5_2) / [HR5_3](../subfamily/HR5_3)
+/ [HR5_4](../subfamily/HR5_4) / [HR5_5](../subfamily/HR5_5) / [HR5_6](../subfamily/HR5_6) / [HR5_7](../subfamily/HR5_7)
+/ [HR5_8](../subfamily/HR5_8) / [HR5_9](../subfamily/HR5_9) / [HR5_10](../subfamily/HR5_10)
 
 **HR6**: No subfamily
 
-**HR7**: [HR7_1](../subfamily/HR7_1) / [HR7_2](../subfamily/HR7_2) / [HR7_3](../subfamily/HR7_3) / [HR7_4](../subfamily/HR7_4)
+**HR7**: [HR7_1](../subfamily/HR7_1) / [HR7_2](../subfamily/HR7_2) / [HR7_3](../subfamily/HR7_3)
+/ [HR7_4](../subfamily/HR7_4)
 
-**HR8**: [HR8_1](../subfamily/HR8_1) / [HR8_2](../subfamily/HR8_2) / [HR8_3](../subfamily/HR8_3) / [HR8_4](../subfamily/HR8_4) / [HR8_5](../subfamily/HR8_5) / [HR8_6](../subfamily/HR8_6)
+**HR8**: [HR8_1](../subfamily/HR8_1) / [HR8_2](../subfamily/HR8_2) / [HR8_3](../subfamily/HR8_3)
+/ [HR8_4](../subfamily/HR8_4) / [HR8_5](../subfamily/HR8_5) / [HR8_6](../subfamily/HR8_6)
 
 ---
 
 ## EC in HRs Families (sorted by counts)
 
 **HR1**
-[3.2.1.21](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.21); [3.2.1.85](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.85); [3.2.1.147](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.147); [3.2.1.86](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.86); [3.2.1.182](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.182); [3.2.1.31](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.31); [3.2.1.62](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.62); [3.2.1.108](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.108); [3.2.1.74](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.74); [3.2.1.188](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.188); [3.2.1.161](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.161); [2.4.1.219](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.219); [3.2.1.125](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.125); [2.4.1.300](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.300); [3.2.1.175](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.175); [3.2.1.126](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.126); [3.2.1.186](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.186); [3.2.1.38](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.38); [2.4.1.299](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.299); [3.2.1.206](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.206); [3.2.1.119](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.119); [3.5.2.17](https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.2.17); [3.2.1.105](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.105)
+[3.2.1.21](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.21)
+; [3.2.1.85](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.85)
+; [3.2.1.147](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.147)
+; [3.2.1.86](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.86)
+; [3.2.1.182](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.182)
+; [3.2.1.31](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.31)
+; [3.2.1.62](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.62)
+; [3.2.1.108](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.108)
+; [3.2.1.74](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.74)
+; [3.2.1.188](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.188)
+; [3.2.1.161](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.161)
+; [2.4.1.219](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.219)
+; [3.2.1.125](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.125)
+; [2.4.1.300](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.300)
+; [3.2.1.175](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.175)
+; [3.2.1.126](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.126)
+; [3.2.1.186](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.186)
+; [3.2.1.38](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.38)
+; [2.4.1.299](https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.299)
+; [3.2.1.206](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.206)
+; [3.2.1.119](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.119)
+; [3.5.2.17](https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.2.17)
+; [3.2.1.105](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.105)
 
 **HR2**
-[3.2.1.8](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.8); [3.1.1.72](https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.72)
+[3.2.1.8](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.8)
+; [3.1.1.72](https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.72)
 
 **HR3**
-[3.2.1.21](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.21); [3.2.1.37](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.37); [3.2.1.55](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.55)
+[3.2.1.21](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.21)
+; [3.2.1.37](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.37)
+; [3.2.1.55](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.55)
 
 **HR4**
-[3.1.21.2](https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.21.2); [4.2.1.8](https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.8); [5.1.3.22](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.22); [4.2.1.44](https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.44); [5.3.1.5](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.5); [5.3.1.22](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.22); [5.3.99.11](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.99.11); [5.3.1.35](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.35); [5.1.3.41](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.41); [5.1.3.30](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.30); [5.1.3.31](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.31); [4.2.1.118](https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.118); [5.1.3.35](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.35)
+[3.1.21.2](https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.21.2)
+; [4.2.1.8](https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.8)
+; [5.1.3.22](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.22)
+; [4.2.1.44](https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.44)
+; [5.3.1.5](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.5)
+; [5.3.1.22](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.22)
+; [5.3.99.11](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.99.11)
+; [5.3.1.35](https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.35)
+; [5.1.3.41](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.41)
+; [5.1.3.30](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.30)
+; [5.1.3.31](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.31)
+; [4.2.1.118](https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.118)
+; [5.1.3.35](https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.35)
 
 **HR5**
-[1.1.1.18](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.18); [1.1.1.179](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.179); [1.3.1.20](https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.20); [1.1.1.369](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.369); [3.2.1.49](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.49); [1.1.1.371](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.371); [1.1.1.370](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.370)
+[1.1.1.18](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.18)
+; [1.1.1.179](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.179)
+; [1.3.1.20](https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.20)
+; [1.1.1.369](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.369)
+; [3.2.1.49](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.49)
+; [1.1.1.371](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.371)
+; [1.1.1.370](https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.370)
 
 **HR6**
 [3.2.1.31](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.31)
@@ -94,7 +169,8 @@ For a detailed information on class, subclass or sub-subclass of hydrolase, plea
 [3.2.1.40](https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.40)
 
 **HR8**
-[3.7.1.24](https://www.brenda-enzymes.org/enzyme.php?ecno=3.7.1.24); [3.7.1.4](https://www.brenda-enzymes.org/enzyme.php?ecno=3.7.1.4)
+[3.7.1.24](https://www.brenda-enzymes.org/enzyme.php?ecno=3.7.1.24)
+; [3.7.1.4](https://www.brenda-enzymes.org/enzyme.php?ecno=3.7.1.4)
 
 ---
 

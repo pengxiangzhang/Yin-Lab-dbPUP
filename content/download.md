@@ -6,7 +6,7 @@ if (iframeWin.document.body) {
 iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
 }
 }
-};
+}
 window.onload = function () {
 setIframeHeight(document.getElementById('external-frame'));
 };

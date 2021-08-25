@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="familyResource">
-            <h1>Subfamily Sequences</h1>
+            <h2>Subfamily Sequences</h2>
             <ul class="breadcrumb" style="font-size: medium">
                 <li>
                     <button><a href="{{ url_for('swissport', family_id = family_id) }}">Swiss-Prot</a></button>
@@ -27,11 +27,11 @@
                 <li>
                     <button><a href="{{ url_for('trembl', family_id = family_id) }}">TrEMBL</a></button>
                 </li>
-            {% if show_taxonomy %}
-            <li>
-                <button><a href="{{ url_for('taxonomy_family', family_id = family_id) }}">Taxonomy</a></button>
-            </li>
-            {% endif %}
+                {% if show_taxonomy %}
+                    <li>
+                        <button><a href="{{ url_for('taxonomy_family', family_id = family_id) }}">Taxonomy</a></button>
+                    </li>
+                {% endif %}
             </ul>
         </div>
         <br>
