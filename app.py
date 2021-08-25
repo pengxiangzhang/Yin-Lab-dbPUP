@@ -158,7 +158,10 @@ def uhgp(name_id):
             else:
                 i = 0
                 while i < len(substrates):
-                    pair = [substrates[i], links[i]]
+                    if 'unclassified' in substrates[i]:
+                        pair = [substrates[i], links[i]]
+                    else:
+                        pair = [substrates[i], "Not Detected"]
                     pairs.append(pair)
                     i += 1
             all_pairs.append(pairs)
