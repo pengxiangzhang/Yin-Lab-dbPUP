@@ -78,9 +78,9 @@
                     </td>
                     <td>
                         {% for substrate in substrate_pairs[record.number] %}
-                            {% if substrate[1] =="Not Detected" %}
+                            {% if substrate[0] =="Not Detected" %}
                             {{ substrate[0] }}
-                            {% elif substrate[1] == "NA" %}
+                            {% elif substrate[0] == "NA" %}
                             {{ substrate[0] }}
                             {% else %}
                             <a href="{{ substrate[1] }}" > {{ substrate[0] }}</a>
