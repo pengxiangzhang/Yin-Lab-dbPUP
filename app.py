@@ -152,11 +152,15 @@ def uhgp(name_id):
             pairs = []
             substrates = record.substrate.split(';')
             links = record.pubchem_s.split(';')
-            i = 0
-            while i < len(substrates):
-                pair = [substrates[i], links[i]]
+            if len(links) == 0:
+                pair = [substrates[i], "Not Detected"]
                 pairs.append(pair)
-                i += 1
+            else:
+                i = 0
+                while i < len(substrates):
+                    pair = [substrates[i], links[i]]
+                    pairs.append(pair)
+                    i += 1
             all_pairs.append(pairs)
         data_analyzer = Data_analyzer(records)
 
