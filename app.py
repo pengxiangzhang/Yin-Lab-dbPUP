@@ -771,7 +771,7 @@ def hmmscan(query):
         with open('tmp/' + uuidname + '.fsa', 'w') as f:
             f.writelines(query)
 
-        command = "hmmscan --domtblout tmp/" + uuidname + ".tbl --noali -E 1e-5 pfam/Pfam-A.hmm tmp/" + uuidname + ".fsa > tmp/" + uuidname + ".log"
+        command = "hmmscan --domtblout tmp/" + uuidname + ".tbl --noali -E 1e-5 pfam/dbPUP.hmm tmp/" + uuidname + ".fsa > tmp/" + uuidname + ".log"
         os.system(command)
         result = ""
         i = 0
