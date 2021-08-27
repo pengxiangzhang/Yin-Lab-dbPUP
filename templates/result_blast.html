@@ -69,8 +69,8 @@
                                 <a href="{{ url_for('family', family_id = record[2]) }}">{{ record[2] }}</a>
                             {% endif %}
                         </td>
-                        <td>{{ record[3] }}</td>
-                        <td>{{ record[4] }}</td>
+                        <td>{{ '%0.2f'| format(record[3]|float) }}</td>
+                        <td>{{ '%0.2f'| format(record[4]|float) }}</td>
                         <td>{{ record[5] }}</td>
                         <td>
                             <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={{ record[7] }}"
