@@ -77,8 +77,8 @@
                                 <a href="{{ url_for('family', family_id = record[3]) }}">{{ record[3] }}</a>
                             {% endif %}
                         </td>
-                        <td>{{ record[4] }}</td>
-                        <td>{{ record[5] }}</td>
+                        <td>{{ '%0.2f'| format(record[4]|float) }}</td>
+                        <td>{{ '%0.2f'| format(record[5]|float) }}</td>
                         <td>{{ record[6] }}</td>
                     </tr>
                 {% endfor %}
