@@ -94,6 +94,7 @@
                             {{ pfam[0] }}
                             {% else %}
                             <a href="{{ pfam[1] }}" rel="noopener noreferrer" target="_blank">{{ pfam[0] }}</a>
+                            {% endif %}
                         {% endfor %}
                     </td>
                     <td>{{ record.gene_name }}</td>
