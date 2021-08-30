@@ -68,7 +68,7 @@
                            target="_blank">{{ record.gene_id }}</a></td>
                     <td>{{ record.name }}</td>
                     <td>
-                        {% for pfam in pfam_dic[record.number] %}
+                        {% for pfam in pfam_dic[record.number-1] %}
                             {% if pfam[0]=="Not Detected" %}
                                 {{ pfam[0] }}
                             {% else %}
@@ -77,7 +77,8 @@
                         {% endfor %}
                     </td>
                     <td>
-                        {% for substrate in substrate_pairs[record.number] %}
+                        
+                        {% for substrate in substrate_pairs[record.number-1] %}
                             {% if substrate[0] =="Not Detected" %}
                             {{ substrate[0] }}
                             {% elif substrate[0] == "NA" %}
