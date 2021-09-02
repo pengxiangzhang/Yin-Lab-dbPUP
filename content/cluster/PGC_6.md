@@ -18,8 +18,7 @@
 <p>Protein length: 395</p>
 <p>Product: Oleandomycin glycosyltransferase</p>
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.-">2.4.1.-</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Not Detected">Not Detected</a></p>
-
+<p>Pfam: Not Detected</p>
 <p>Lineage: Bacteria; Firmicutes_A; Clostridia; Clostridiales; Clostridiaceae; Clostridium_P; Clostridium_P ventriculi</p>
 <p>Geography: United Kingdom, Europe</p>
   </div>
@@ -34,8 +33,7 @@
 <p>Protein length: 391</p>
 <p>Product: Oleandomycin glycosyltransferase</p>
 <p>EC: <a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.-">2.4.1.-</a></p>
-<p>Pfam: <a href="http://pfam.xfam.org/family/Not Detected">Not Detected</a></p>
-
+<p>Pfam: Not Detected</p>
 <p>Lineage: Bacteria; Firmicutes_A; Clostridia; Clostridiales; Clostridiaceae; Clostridium_P; Clostridium_P ventriculi</p>
 <p>Geography: United Kingdom, Europe</p>
 
