@@ -64,6 +64,23 @@ def index():
     description = "dbPUP is the first exploratory database of polyphenol utilized proteins that have been experimentally validated to catalyze or modify a polyphenol substrate. The database contains 60 proteins from microbiome that characterized by heterologous or homologous expression with one or more specific polyphenol substrates. These data are recruited from scientific publications and search results on BRENDA. Each of the publications has been carefully vetted before inclusion in Characterized."
     return render_template('index.html', content=to_md(c), description=description, title=title, name=name)
 
+#polyphenol page
+@app.route('/dbpup/polyphenol')
+def polyphenol():
+    name = f"polyphenol class"
+    title = f"polyphenol class"
+    Polyphenol_infos = []
+    data = pd.read_csv(r"Substrate_table.csv")
+    for i in range(len(data)):
+        info = {}
+        info["Name"] = data.iat[i, 0]
+        info["Polyphenol_class"] = data.iat[i, 1]
+        info["Polyphenol_sub_class"] = data.iat[i, 2]
+        info["PUP_family"] = data.iat[i, 3].split(";")
+        Polyphenol_infos.append(info)
+    description = f"dbPUP data of polyphenol class"
+    return render_template('.html', description=description, title=title, name=name)
+
 
 @app.route('/dbpup/taxonomy/<family_id>')
 def taxonomy_family(family_id):
