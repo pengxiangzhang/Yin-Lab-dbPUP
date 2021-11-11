@@ -1,0 +1,48 @@
+Name,Polyphenol class,Polyphenol sub-class,PUP family
+resveratrol,Stilbenes,Stilbenes,FR1_1;FR4_1;NCR1
+hesperidin,Flavonoids,Flavanones,FR1_2;HR1;HR6;HR7_1;HR7_2;HR7_3;HR7_4
+rutin,Flavonoids,Flavanones,FR1_2;HR1;HR6;HR7_1;HR7_2;HR7_3;HR7_4
+Phloretin,Flavonoids,Dihydrochalcones,FR1_3;HR8_1;HR8_2
+luteolin,Flavonoids,Flavones,FR2;OR6
+quercetin,Flavonoids,Flavonols,FR2;OR8_1;OR8_2
+Myricetin,Flavonoids,Flavonols,FR2;OR8_2
+6-Hydroxyflavone,Flavonoids,Flavones,FR3_1
+4-hydroxyphenylpyruvate,Other polyphenols,Other polyphenols,FR4_1
+Naringenin,Flavonoids,Flavanones,FR4_1;HR1;OR3;OR6
+apigenin,Flavonoids,Flavones,FR4_1;OR6;UC2_1
+daidzein,Flavonoids,Isoflavonoids,FR4_1;OR3;OR6
+genistein,Flavonoids,Isoflavonoids,FR4_1;OR3;OR6
+Ginsenoside Rb1,Other polyphenols,Other polyphenols,HR1
+daidzin,Flavonoids,Isoflavonoids,HR1;HR3_1;HR3_3;HR3_4;HR4_1;HR5_2;UC1_1
+genistin,Flavonoids,Isoflavonoids,HR1;HR3_1;HR3_2;HR3_4
+glycitin,Flavonoids,Isoflavonoids,HR1
+neohesperidin,Flavonoids,Flavanones,HR1
+Narirutin,Flavonoids,Flavanones,HR1
+naringin,Flavonoids,Flavanones,HR1;HR6;HR7_1;HR7_4
+poncirin,Flavonoids,Flavanones,HR1;HR7_1
+neoponcirin,Flavonoids,Flavanones,HR1
+diosmin,Flavonoids,Flavones,HR1
+Catechol,Other polyphenols,Other polyphenols,HR2_1
+Catechin,Flavonoids,Flavanols,HR2_1
+p-nitrophenyl-_-D-glucopyranoside,Other polyphenols,Other polyphenols,HR3_1;HR3_2;HR3_3;HR3_4
+puerarin,Other polyphenols,Other polyphenols,HR4_1;HR4_2;HR5_1;HR5_2;UC1_1
+quercitrin,Other polyphenols,Other polyphenols,HR6
+p-nitrophenyl-_-L-rhamnopyranoside,Other polyphenols,Other polyphenols,HR7_1;HR7_2;HR7_3;HR7_4
+ginsenoside Re,Other polyphenols,Other polyphenols,HR7_1
+(R)-dihydrodaidzein,Flavonoids,Isoflavonoids,IR1_1;OR4_1;OR5_1
+(S)-dihydrodaidzein ,Flavonoids,Isoflavonoids,IR1_1;OR4_1;OR5_1
+naringenin chalcone ,Flavonoids,Chalcones,IR2_1
+isoliquiritigenin,Flavonoids,Chalcones,IR2_1
+butein,Flavonoids,Chalcones,IR2_1
+gnetol,Other polyphenols,Other polyphenols,NCR1
+curcumin,Other polyphenols,Curcuminoids,OR1
+flavone,Flavonoids,Flavones,OR2
+eriodictyol,Flavonoids,Flavanones,OR3;OR6
+liquiritigenin,Other polyphenols,Other polyphenols,OR3
+homoeriodictyol,Other polyphenols,Other polyphenols,OR3
+dihydrokaempferol,Other polyphenols,Other polyphenols,OR3
+taxifolin,Other polyphenols,Other polyphenols,OR3
+tetrahydrodaidzein,Other polyphenols,Other polyphenols,OR4_1
+kaempferol,Flavonoids,Flavonols,OR8_2
+galangin,Flavonoids,Flavonols,OR8_2
+pinoresinol,Other polyphenols,Other polyphenols,OR9_1

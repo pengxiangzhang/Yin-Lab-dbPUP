@@ -70,7 +70,7 @@ def polyphenol():
     name = f"polyphenol class"
     title = f"polyphenol class"
     Polyphenol_infos = []
-    data = pd.read_csv(r"Substrate_table.csv")
+    data = pd.read_csv(r"static/materials/Substrate_table.csv")
     for i in range(len(data)):
         info = {}
         info["Name"] = data.iat[i, 0]
