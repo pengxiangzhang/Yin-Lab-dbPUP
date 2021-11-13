@@ -18,33 +18,15 @@
                     $("#data-table").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
                 },
                 lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
+                "pageLength": -1,
                 dom: 'Bfrtip',
-                columnDefs: [{
-                    targets: [14, -1],
-                    searchable: true,
-                    visible: false
-                }],
                 buttons: [
                     'pageLength',
                     {
                         extend: 'csvHtml5',
                         fieldBoundary: '',
                         text: 'Export',
-                        exportOptions: {
-                            columns: [-1]
-                        }
                     },
-                    {
-                        extend: 'copy',
-                        fieldBoundary: '',
-                        text: 'Copy',
-                        title: '',
-                        header: '',
-                        exportOptions: {
-                            stripNewlines: false,
-                            columns: [-1]
-                        }
-                    }
                 ],
                 select: true
             });
@@ -58,7 +40,6 @@
                 <th style="white-space: nowrap">Polyphenol class</th>
                 <th style="white-space: nowrap">Polyphenol sub-class</th>
                 <th style="white-space: nowrap">PUP family</th>
-                <th style="white-space: nowrap"><br></th>
             </tr>
             </thead>
             <tbody>
