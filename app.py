@@ -79,7 +79,7 @@ def polyphenol():
         info["PUP_family"] = data.iat[i, 3].split(";")
         Polyphenol_infos.append(info)
     description = f"dbPUP data of polyphenol class"
-    return render_template('.html', description=description, title=title, name=name)
+    return render_template('polyphenol.html', description=description, title=title, name=name, records=Polyphenol_infos)
 
 
 @app.route('/dbpup/taxonomy/<family_id>')

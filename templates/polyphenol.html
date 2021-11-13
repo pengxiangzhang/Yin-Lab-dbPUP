@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %}Characterized{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="page-header">
+            <h3>{{ name }}</h3>
+
+        </div>
+    </div>
+
+    <script defer type="text/javascript">
+        $(document).ready(function () {
+            $('#data-table').DataTable({
+                "initComplete": function () {
+                    $("#data-table").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
+                },
+                lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
+                dom: 'Bfrtip',
+                columnDefs: [{
+                    targets: [14, -1],
+                    searchable: true,
+                    visible: false
+                }],
+                buttons: [
+                    'pageLength',
+                    {
+                        extend: 'csvHtml5',
+                        fieldBoundary: '',
+                        text: 'Export',
+                        exportOptions: {
+                            columns: [-1]
+                        }
+                    },
+                    {
+                        extend: 'copy',
+                        fieldBoundary: '',
+                        text: 'Copy',
+                        title: '',
+                        header: '',
+                        exportOptions: {
+                            stripNewlines: false,
+                            columns: [-1]
+                        }
+                    }
+                ],
+                select: true
+            });
+        });
+    </script>
+    <div>
+        <table id="data-table" class="table display">
+            <thead>
+            <tr>
+                <th style="white-space: nowrap">Name</th>
+                <th style="white-space: nowrap">Polyphenol class</th>
+                <th style="white-space: nowrap">Polyphenol sub-class</th>
+                <th style="white-space: nowrap">PUP family</th>
+                <th style="white-space: nowrap"><br></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for record in records %}
+                <tr>
+                    <td>{{ record.Name }}</td>
+                    <td>{{ record.Polyphenol_class }}</td>
+                    <td>{{ record.Polyphenol_sub_class }}</td>
+                    <td>
+                        {% for family in record.PUP_family %}
+                            {% if "unclassified" in family %}
+                                {{ family }}
+                            {% elif "_" in family: %}
+                                <a href="{{ url_for('subfamily', family_id = family) }}">{{ family }}</a>;
+                            {% else %}
+                                <a href="{{ url_for('family', family_id = family) }}">{{ family }}</a>;
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
