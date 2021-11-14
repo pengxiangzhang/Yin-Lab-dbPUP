@@ -67,8 +67,8 @@ def index():
 #polyphenol page
 @app.route('/dbpup/polyphenol')
 def polyphenol():
-    name = f"polyphenol class"
-    title = f"polyphenol class"
+    name = f"Polyphenol"
+    title = f"Polyphenol - "
     Polyphenol_infos = []
     data = pd.read_csv(r"static/materials/Substrate_table.csv")
     for i in range(len(data)):
@@ -78,8 +78,13 @@ def polyphenol():
         info["Polyphenol_sub_class"] = data.iat[i, 2]
         info["PUP_family"] = data.iat[i, 3].split(";")
         Polyphenol_infos.append(info)
+    try:
+        with open('content/Polyphenols.md', encoding='utf-8') as c:
+            c = c.read()
+    except Exception:
+        pass
     description = f"dbPUP data of polyphenol class"
-    return render_template('polyphenol.html', description=description, title=title, name=name, records=Polyphenol_infos)
+    return render_template('polyphenol.html', description=description, title=title, name=name, records=Polyphenol_infos, content=to_md(c))
 
 
 @app.route('/dbpup/taxonomy/<family_id>')
