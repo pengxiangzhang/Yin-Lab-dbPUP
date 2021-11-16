@@ -78,13 +78,8 @@ def polyphenol():
         info["Polyphenol_sub_class"] = data.iat[i, 2]
         info["PUP_family"] = data.iat[i, 3].split(";")
         Polyphenol_infos.append(info)
-    try:
-        with open('content/Polyphenols.md', encoding='utf-8') as c:
-            c = c.read()
-    except Exception:
-        pass
     description = f"dbPUP data of polyphenol class"
-    return render_template('polyphenol.html', description=description, title=title, name=name, records=Polyphenol_infos, content=to_md(c))
+    return render_template('polyphenol.html', description=description, title=title, name=name, records=Polyphenol_infos)
 
 
 @app.route('/dbpup/taxonomy/<family_id>')
