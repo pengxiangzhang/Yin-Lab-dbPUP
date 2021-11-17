@@ -2,197 +2,198 @@
 
 {% block title %}TrEMBL Data{% endblock %}
 {% block content %}
-    <style>
-        scrollX:
+<style>
+    scrollX:
 
-        "100%"
-    </style>
-    <div class="row">
-        <div class="page-header">
-            <h3>TrEMBL for {{ name }}</h3>
+    "100%"
+</style>
+<div class="row">
+    <div class="page-header">
+        <h3>TrEMBL for {{ name }}</h3>
 
-        </div>
     </div>
-    {% if subfamily %}
-        <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('swissport', family_id=family_id) }}">View
-            Swiss-Prot</a>
-    {% endif %}
-    <div class="abstractOfPage">
-        <div class="informationOfGene">
-            <p></p>
-        </div>
+</div>
+{% if subfamily %}
+<a class="btn btn-primary btn-lg btn-block" href="{{ url_for('swissport', family_id=family_id) }}">View
+    Swiss-Prot</a>
+{% endif %}
+<div class="abstractOfPage">
+    <div class="informationOfGene">
+        <p></p>
     </div>
-    <br>
+</div>
+<br>
 
-    <script defer type="text/javascript">
-        $(document).ready(function () {
-            $('#data-table').DataTable({
-                lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
-                dom: 'Bfrtip',
-                "initComplete": function () {
-                    $("#data-table").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
-                },
-                columnDefs: [{
-                    targets: [7, 8],
-                    searchable: true,
-                    visible: false
-                }, {
-                    targets: [-1],
-                    searchable: true,
-                    visible: false
-                },
-                ],
-                buttons: [
-                    'pageLength',
-                    {
-                        extend: 'csvHtml5',
-                        fieldBoundary: '',
-                        text: 'Export',
-                        exportOptions: {
-                            columns: [0, 1, 2, 3, 4, 5]
-                        }
-                    },
-                    {
-                        extend: 'copy',
-                        fieldBoundary: '',
-                        text: 'Copy',
-                        title: '',
-                        header: '',
-                        exportOptions: {
-                            stripNewlines: false,
-                            columns: [-3]
-                        }
-                    },
-                    {
-                        text: 'All({{count[0]}})',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.columns().search("").draw();
-                            table.columns().search("").draw();
-                        }
-                    },
-                    {
-                        text: 'Archaea({{count[1]}})',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.columns().search("").draw();
-                            table.column(-2).search('Archaea').draw();
-                        }
-                    },
-                    {
-                        text: 'Bacteria({{count[2]}})',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.columns().search("").draw();
-                            table.column(-2).search('Bacteria').draw();
-                        }
-                    },
-                    {
-                        text: 'Eukaryota({{count[3]}})',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.columns().search("").draw();
-                            table.column(-2).search('Eukaryota').draw();
-                        }
-                    },
-                    {
-                        text: 'Viruses({{count[4]}})',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.columns().search("").draw();
-                            table.column(-2).search('Viruses').draw();
-                        }
-                    },
-                    {
-                        text: 'Unclassified({{count[5]}})',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.columns().search("").draw();
-                            table.column(-2).search('unclassified').draw();
-                        }
-                    },
-                    {
-                        text: 'Structure({{number}})',
-                        action: function () {
-                            var table = $('#data-table').DataTable();
-                            table.columns().search("").draw();
-                            table.column(3).search('^(?!\s*$).+', true, false).draw();
-                        }
+<script defer type="text/javascript">
+    $(document).ready(function () {
+        $('#data-table').DataTable({
+            lengthMenu: [[10, 25, 50, -1], ['10 rows', '25 rows', '50 rows', 'Show all']],
+            dom: 'Bfrtip',
+            "initComplete": function () {
+                $("#data-table").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
+            },
+            columnDefs: [{
+                targets: [7, 8],
+                searchable: true,
+                visible: false
+            }, {
+                targets: [-1],
+                searchable: true,
+                visible: false
+            },
+            ],
+            buttons: [
+                'pageLength',
+                {
+                    extend: 'csvHtml5',
+                    fieldBoundary: '',
+                    text: 'Export',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4, 5]
                     }
-                ],
-                select: true
-            });
+                },
+                {
+                    extend: 'copy',
+                    fieldBoundary: '',
+                    text: 'Copy',
+                    title: '',
+                    header: '',
+                    exportOptions: {
+                        stripNewlines: false,
+                        columns: [-3]
+                    }
+                },
+                {
+                    text: 'All({{count[0]}})',
+                    action: function () {
+                        var table = $('#data-table').DataTable();
+                        table.columns().search("").draw();
+                        table.columns().search("").draw();
+                    }
+                },
+                {
+                    text: 'Archaea({{count[1]}})',
+                    action: function () {
+                        var table = $('#data-table').DataTable();
+                        table.columns().search("").draw();
+                        table.column(-2).search('Archaea').draw();
+                    }
+                },
+                {
+                    text: 'Bacteria({{count[2]}})',
+                    action: function () {
+                        var table = $('#data-table').DataTable();
+                        table.columns().search("").draw();
+                        table.column(-2).search('Bacteria').draw();
+                    }
+                },
+                {
+                    text: 'Eukaryota({{count[3]}})',
+                    action: function () {
+                        var table = $('#data-table').DataTable();
+                        table.columns().search("").draw();
+                        table.column(-2).search('Eukaryota').draw();
+                    }
+                },
+                {
+                    text: 'Viruses({{count[4]}})',
+                    action: function () {
+                        var table = $('#data-table').DataTable();
+                        table.columns().search("").draw();
+                        table.column(-2).search('Viruses').draw();
+                    }
+                },
+                {
+                    text: 'Unclassified({{count[5]}})',
+                    action: function () {
+                        var table = $('#data-table').DataTable();
+                        table.columns().search("").draw();
+                        table.column(-2).search('unclassified').draw();
+                    }
+                },
+                {
+                    text: 'Structure({{number}})',
+                    action: function () {
+                        var table = $('#data-table').DataTable();
+                        table.columns().search("").draw();
+                        table.column(3).search('^(?!\s*$).+', true, false).draw();
+                    }
+                }
+            ],
+            select: true
         });
-    </script>
-    <div>
-        <table class="table display" id="data-table">
-            <thead>
-            <tr>
-                <th style="white-space: nowrap">Protein Name</th>
-                <th style="white-space: nowrap">Strain</th>
-                <th style="white-space: nowrap">Uniprot</th>
-                <th style="white-space: nowrap">PDB</th>
-                <th style="white-space: nowrap">Family</th>
-                <th style="white-space: nowrap">EC</th>
-                <th style="white-space: nowrap">Sequence</th>
-                <th style="white-space: nowrap"><br></th>
-                <th style="white-space: nowrap">type</th>
-                <th style="white-space: nowrap">lineage</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for record in records %}
-                <tr>
-                    <td>{{ record.protein_enzyme }}</td>
-                    <td>
-                        <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={{ record.web_id }}">{{ record.strain }}</a>
-                    </td>
-                    <td><a href="https://www.uniprot.org/uniprot/{{ record.uniq_id }}">{{ record.uniq_id }}</a></td>
+    });
+</script>
+<div>
+    <table class="table display" id="data-table">
+        <thead>
+        <tr>
+            <th style="white-space: nowrap">Protein Name</th>
+            <th style="white-space: nowrap">Strain</th>
+            <th style="white-space: nowrap">Uniprot</th>
+            <th style="white-space: nowrap">PDB</th>
+            <th style="white-space: nowrap">Family</th>
+            <th style="white-space: nowrap">EC</th>
+            <th style="white-space: nowrap">Sequence</th>
+            <th style="white-space: nowrap"><br></th>
+            <th style="white-space: nowrap">type</th>
+            <th style="white-space: nowrap">lineage</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for record in records %}
+        <tr>
+            <td>{{ record.protein_enzyme }}</td>
+            <td>
+                <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={{ record.web_id }}">{{
+                    record.strain }}</a>
+            </td>
+            <td><a href="https://www.uniprot.org/uniprot/{{ record.uniq_id }}">{{ record.uniq_id }}</a></td>
 
-                    {% if record.pdb  == '-1' %}
-                        <td>{{ ' ' }}</td>
-                    {% else %}
-                        <td>
-                            {% for element in rows[record.number] %}
-                                <a href="https://www.rcsb.org/structure/{{ element[1] }}">{{ element[0] }}</a>
-                            {% endfor %}
-                        </td>
-                    {% endif %}
+            {% if record.pdb == '-1' %}
+            <td>{{ ' ' }}</td>
+            {% else %}
+            <td>
+                {% for element in rows[record.number] %}
+                <a href="https://www.rcsb.org/structure/{{ element[1] }}">{{ element[0] }}</a>
+                {% endfor %}
+            </td>
+            {% endif %}
 
-                    <td>
-                        {% if "unclassified" in record.family: %}
-                            {{ record.family }}
-                        {% elif "_" in record.family: %}
-                            <a href="{{ url_for('subfamily', family_id = record.family) }}">{{ record.family }}</a>
-                        {% else %}
-                            <a href="{{ url_for('family', family_id = record.family) }}">{{ record.family }}</a>
-                        {% endif %}
-                    </td>
-                    {% if record.ec == '-1' %}
-                        <td>{{ ' ' }}</td>
-                    {% else %}
-                        <td>
-                            {% for element in ec[record.number] %}
-                                <a href="https://www.brenda-enzymes.org/enzyme.php?ecno={{ element }}">{{ element }}</a>
-                            {% endfor %}
-                        </td>
-                    {% endif %}
-                    <td>
-                        <a href="{{ url_for('detail',mode='trembl', unid = record.uniq_id) }}" target="_blank">view</a>
-                    </td>
-                    <td>
-                        >{{ record.uniq_id }} {{ record.protein_enzyme }} OS={{ record.strain }}&#10;{{ record.seq }}
-                    </td>
-                        
-                    <td>
-                        <p>{{ record.type }}</p>
-                    </td>
-                    <td>{{ record.lineage }}</td>
-                </tr>
-            {% endfor %}
+            <td>
+                {% if "unclassified" in record.family: %}
+                {{ record.family }}
+                {% elif "_" in record.family: %}
+                <a href="{{ url_for('subfamily', family_id = record.family) }}">{{ record.family }}</a>
+                {% else %}
+                <a href="{{ url_for('family', family_id = record.family) }}">{{ record.family }}</a>
+                {% endif %}
+            </td>
+            {% if record.ec == '-1' %}
+            <td>{{ ' ' }}</td>
+            {% else %}
+            <td>
+                {% for element in ec[record.number] %}
+                <a href="https://www.brenda-enzymes.org/enzyme.php?ecno={{ element }}">{{ element }}</a>
+                {% endfor %}
+            </td>
+            {% endif %}
+            <td>
+                <a href="{{ url_for('detail',mode='trembl', unid = record.uniq_id) }}" target="_blank">view</a>
+            </td>
+            <td>
+                >{{ record.uniq_id }} {{ record.protein_enzyme }} OS={{ record.strain }}&#10;{{ record.seq }}
+            </td>
 
-            </tbody>
+            <td>
+                <p>{{ record.type }}</p>
+            </td>
+            <td>{{ record.lineage }}</td>
+        </tr>
+        {% endfor %}
 
-        </table>
-    </div>
+        </tbody>
+
+    </table>
+</div>
 {% endblock %}

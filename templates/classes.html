@@ -3,28 +3,28 @@
 {% block title %}Class{% endblock %}
 
 {% block content %}
-    <div class="row">
-        <div class="page-header">
-            <h3>{{ name }}</h3>
+<div class="row">
+    <div class="page-header">
+        <h3>{{ name }}</h3>
 
-        </div>
     </div>
-    <!-- Main Content Area-->
-    <div class="Family">
-        <h2>Family</h2>
-        <ul class="breadcrumb" style="font-size: medium">
-            {% for i in range(amount) %}
-                {% set family_id = class_id[:-1] + (i + 1)|string() %}
-                <li><a href="{{ url_for('family', family_id = family_id) }}">{{ family_id }}</a> <span
-                        class="divider"></span>
-                </li>
-            {% endfor %}
+</div>
+<!-- Main Content Area-->
+<div class="Family">
+    <h2>Family</h2>
+    <ul class="breadcrumb" style="font-size: medium">
+        {% for i in range(amount) %}
+        {% set family_id = class_id[:-1] + (i + 1)|string() %}
+        <li><a href="{{ url_for('family', family_id = family_id) }}">{{ family_id }}</a> <span
+                class="divider"></span>
+        </li>
+        {% endfor %}
 
-        </ul>
-    </div>
-    <br>
-    <div class="familyInformation">
-        {{ content|safe }}
-    </div>
+    </ul>
+</div>
+<br>
+<div class="familyInformation">
+    {{ content|safe }}
+</div>
 
 {% endblock %}

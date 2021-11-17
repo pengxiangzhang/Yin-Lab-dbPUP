@@ -3,156 +3,156 @@
 {% block title %}Main{% endblock %}
 
 {% block content %}
-    <!-- Main Content Area-->
-    <div class="row">
-        <div class="page-header">
-            <h3>{{ name }}</h3>
+<!-- Main Content Area-->
+<div class="row">
+    <div class="page-header">
+        <h3>{{ name }}</h3>
 
-        </div>
     </div>
-    <div class="familyList">
-        <h2>
-            PUP homologs from UHGP
-        </h2>
-        <ul class="breadcrumb" style="font-size: medium">
-            <li><a href="{{ url_for('uhgp', name_id = 'Africa') }}">Africa</a> <span
-                    class="divider"></span>
-            </li>
-            <li><a href="{{ url_for('uhgp', name_id = 'Asia') }}">Asia</a> <span
-                    class="divider"></span>
-            </li>
-            <li><a href="{{ url_for('uhgp', name_id = 'Europe') }}">Europe</a> <span
-                    class="divider"></span>
-            </li>
-            <li><a href="{{ url_for('uhgp', name_id = 'North America') }}">North America</a> <span
-                    class="divider"></span>
-            </li>
-            <li><a href="{{ url_for('uhgp', name_id = 'Oceania') }}">Oceania</a> <span
-                    class="divider"></span>
-            </li>
-            <li><a href="{{ url_for('uhgp', name_id = 'South America') }}">South America</a> <span
-                    class="divider"></span>
-            </li>
-            <li><a href="{{ url_for('uhgp', name_id = 'Others') }}">Others</a> <span
-                    class="divider"></span>
-            </li>
-            <li><a href="{{ url_for('uhgp', name_id = 'Cluster') }}">Cluster</a> <span
-                    class="divider"></span>
-            </li>
-        </ul>
-    </div>    <br>
-    <div class="familyInformation">
+</div>
+<div class="familyList">
+    <h2>
+        PUP homologs from UHGP
+    </h2>
+    <ul class="breadcrumb" style="font-size: medium">
+        <li><a href="{{ url_for('uhgp', name_id = 'Africa') }}">Africa</a> <span
+                class="divider"></span>
+        </li>
+        <li><a href="{{ url_for('uhgp', name_id = 'Asia') }}">Asia</a> <span
+                class="divider"></span>
+        </li>
+        <li><a href="{{ url_for('uhgp', name_id = 'Europe') }}">Europe</a> <span
+                class="divider"></span>
+        </li>
+        <li><a href="{{ url_for('uhgp', name_id = 'North America') }}">North America</a> <span
+                class="divider"></span>
+        </li>
+        <li><a href="{{ url_for('uhgp', name_id = 'Oceania') }}">Oceania</a> <span
+                class="divider"></span>
+        </li>
+        <li><a href="{{ url_for('uhgp', name_id = 'South America') }}">South America</a> <span
+                class="divider"></span>
+        </li>
+        <li><a href="{{ url_for('uhgp', name_id = 'Others') }}">Others</a> <span
+                class="divider"></span>
+        </li>
+        <li><a href="{{ url_for('uhgp', name_id = 'Cluster') }}">Cluster</a> <span
+                class="divider"></span>
+        </li>
+    </ul>
+</div>    <br>
+<div class="familyInformation">
     {{ content| safe }}
     <div>
-    <table id="data-table" class="table display"></table>
+        <table class="table display" id="data-table"></table>
 
-    <script type="text/javascript">
+        <script type="text/javascript">
 
-        $(document).ready(function () {
-            var columns = [{
-                title: 'Gene ID',
-                target: 0,
-                data: function (item) {
-                    return `<td><a href="https://www.ebi.ac.uk/metagenomics/genomes/${item.MGnify}" rel="noopener noreferrer" target="_blank">${item.gene_id}</a></td>`;
-                }
-            }, {
-                title: 'Family',
-                target: 1,
-                data: function (item) {
-                    return `<td><a href="/dbpup/family/${item.family}">${item.family}</a></td>`
-                }
-            }, {
-                title: 'Name',
-                target: 2,
-                data: function (item) {
-                    return item.name;
-                }
-            }, {
-                title: 'Cluster ID',
-                target: 3,
-                data: function (item) {
-                    if (item.cluster_id == "NA") {
-                        return "<td>&nbsp;</td>"
-                    } else {
-                        return `<td><a href="/dbpup/cluster/${item.cluster_id}">${item.cluster_id}</a>
-                        </td>`
+            $(document).ready(function () {
+                var columns = [{
+                    title: 'Gene ID',
+                    target: 0,
+                    data: function (item) {
+                        return `<td><a href="https://www.ebi.ac.uk/metagenomics/genomes/${item.MGnify}" rel="noopener noreferrer" target="_blank">${item.gene_id}</a></td>`;
                     }
-                }
-            }, {
-                title: 'Type',
-                target: 4,
-                data: function (item) {
-                    return item.type
-                }
-            }, {
-                title: 'Lineage',
-                target: 5,
-                data: function (item) {
-                    return item.lineage
-                }
-            }, {
-                title: 'Country',
-                target: 6,
-                data: function (item) {
-                    return item.country
-                }
-            }, {
-                title: 'Continent',
-                target: 7,
-                data: function (item) {
-                    return item.continent
-                }
-            }, {
-                title: 'Sequence',
-                target: 8,
-                data: function (item) {
-                    return `<td><a href="/dbpup/detail/uhpg/${item.gene_id}" target="_blank">view</a>`
-                }
-            }, {
-                title: '&nbsp;',
-                target: 9,
-                data: function (item) {
-                    return `<td>>${item.gene_id}&#10;${item.seq}</td>`
-                }
-            }];
-            var table = $('#data-table').DataTable({
-                "initComplete": function () {
-                    $("#data-table").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
-                },
-                "processing": true,
-                "serverSide": true,
-                "ajax": "{{ url_for('uhgp_continent_data', name_id=name_id) }}",
-                "columns": columns,
-                lengthMenu: [[10, 25, 50, 100], ['10 rows', '25 rows', '50 rows', '100 rows']],
-                dom: 'Bfrtip',
-                columnDefs: [{
-                    targets: -1,
-                    searchable: true,
-                    visible: false
-                }],
-                "deferRender": true,
-                buttons: [
-                    'pageLength',
-                    {
-                        extend: 'csvHtml5',
-                        fieldBoundary: '',
-                        text: 'Export'
-                    },
-                    {
-                        extend: 'copy',
-                        fieldBoundary: '',
-                        text: 'Copy',
-                        title: '',
-                        header: '',
-                        exportOptions: {
-                            stripNewlines: false,
-                            columns: [-1]
+                }, {
+                    title: 'Family',
+                    target: 1,
+                    data: function (item) {
+                        return `<td><a href="/dbpup/family/${item.family}">${item.family}</a></td>`
+                    }
+                }, {
+                    title: 'Name',
+                    target: 2,
+                    data: function (item) {
+                        return item.name;
+                    }
+                }, {
+                    title: 'Cluster ID',
+                    target: 3,
+                    data: function (item) {
+                        if (item.cluster_id == "NA") {
+                            return "<td>&nbsp;</td>"
+                        } else {
+                            return `<td><a href="/dbpup/cluster/${item.cluster_id}">${item.cluster_id}</a>
+                        </td>`
                         }
                     }
-                ],
-                select: true
+                }, {
+                    title: 'Type',
+                    target: 4,
+                    data: function (item) {
+                        return item.type
+                    }
+                }, {
+                    title: 'Lineage',
+                    target: 5,
+                    data: function (item) {
+                        return item.lineage
+                    }
+                }, {
+                    title: 'Country',
+                    target: 6,
+                    data: function (item) {
+                        return item.country
+                    }
+                }, {
+                    title: 'Continent',
+                    target: 7,
+                    data: function (item) {
+                        return item.continent
+                    }
+                }, {
+                    title: 'Sequence',
+                    target: 8,
+                    data: function (item) {
+                        return `<td><a href="/dbpup/detail/uhpg/${item.gene_id}" target="_blank">view</a>`
+                    }
+                }, {
+                    title: '&nbsp;',
+                    target: 9,
+                    data: function (item) {
+                        return `<td>>${item.gene_id}&#10;${item.seq}</td>`
+                    }
+                }];
+                var table = $('#data-table').DataTable({
+                    "initComplete": function () {
+                        $("#data-table").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
+                    },
+                    "processing": true,
+                    "serverSide": true,
+                    "ajax": "{{ url_for('uhgp_continent_data', name_id=name_id) }}",
+                    "columns": columns,
+                    lengthMenu: [[10, 25, 50, 100], ['10 rows', '25 rows', '50 rows', '100 rows']],
+                    dom: 'Bfrtip',
+                    columnDefs: [{
+                        targets: -1,
+                        searchable: true,
+                        visible: false
+                    }],
+                    "deferRender": true,
+                    buttons: [
+                        'pageLength',
+                        {
+                            extend: 'csvHtml5',
+                            fieldBoundary: '',
+                            text: 'Export'
+                        },
+                        {
+                            extend: 'copy',
+                            fieldBoundary: '',
+                            text: 'Copy',
+                            title: '',
+                            header: '',
+                            exportOptions: {
+                                stripNewlines: false,
+                                columns: [-1]
+                            }
+                        }
+                    ],
+                    select: true
+                });
             });
-        });
 
-    </script>
-{% endblock %}
+        </script>
+        {% endblock %}

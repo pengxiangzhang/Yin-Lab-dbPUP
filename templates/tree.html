@@ -3,302 +3,306 @@
 {% block title %}Tree Data{% endblock %}
 {% block content %}
 
-    <style>
-        .node circle {
-            fill: #fff;
-            stroke: steelblue;
-            stroke-width: 3px;
-        }
+<style>
+    .node circle {
+        fill: #fff;
+        stroke: steelblue;
+        stroke-width: 3px;
+    }
 
-        .node text {
-            font: 12px sans-serif;
-        }
+    .node text {
+        font: 12px sans-serif;
+    }
 
-        .link {
-            fill: none;
-            stroke: #ccc;
-            stroke-width: 2px;
-        }
-    </style>
-    <div class="row">
-        <div class="page-header">
-            <h3>Tree for {{ name }}</h3>
+    .link {
+        fill: none;
+        stroke: #ccc;
+        stroke-width: 2px;
+    }
+</style>
+<div class="row">
+    <div class="page-header">
+        <h3>Tree for {{ name }}</h3>
 
-        </div>
     </div>
-    <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('swissport', family_id = family_id) }}">Open Swiss-Prot
-        for {{ name }}</a>
-    <div id="introduction">
-        <p style="font-size: x-large"></p>
-    </div>
-    <br>
-    <div class="familyInformation">
-        {{ content|safe }}
-    </div>
-    <br>
-    <style>
-        .modal-dialog {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
+</div>
+<a class="btn btn-primary btn-lg btn-block" href="{{ url_for('swissport', family_id = family_id) }}">Open Swiss-Prot
+    for {{ name }}</a>
+<div id="introduction">
+    <p style="font-size: x-large"></p>
+</div>
+<br>
+<div class="familyInformation">
+    {{ content|safe }}
+</div>
+<br>
+<style>
+    .modal-dialog {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
 
-        .modal-content {
-            height: 100%;
-            border-radius: 0;
-            overflow: hidden;
-        }
-    </style>
-    <div class="modal-body">
-        <div class="treeDiagram" id="treeDiagram"
-             style="width:85%;height:85%;overflow: hidden;border-radius: 25px;border: 1px solid #ccc!important;padding: 20px;"></div>
-    </div>
-
-
-
-    <script>
-        var treeData = JSON.parse({{treeData|tojson|safe}});
+    .modal-content {
+        height: 100%;
+        border-radius: 0;
+        overflow: hidden;
+    }
+</style>
+<div class="modal-body">
+    <div class="treeDiagram" id="treeDiagram"
+         style="width:85%;height:85%;overflow: hidden;border-radius: 25px;border: 1px solid #ccc!important;padding: 20px;"></div>
+</div>
 
 
-        // ************** Generate the tree diagram	 *****************
-        var children = [];
-        var margin = {top: 20, right: 120, bottom: 20, left: 120},
-            width = 2000 - margin.right - margin.let,
-            height = 3000 - margin.top - margin.bottom;
+<script>
+    var treeData = JSON.parse({
+    {
+        treeData | tojson | safe
+    }
+    })
 
-        var i = 0, duration = 750;
 
-        var tree = d3.layout.tree()
-            .size([height, width]);
 
-        var svg = d3.select("#treeDiagram").append("svg")
-            .attr("width", "98%")//width + margin.right + margin.left)
-            .attr("height", "1200")//height + margin.top + margin.bottom)
-            .call(d3.behavior.zoom().on("zoom", function () {
-                svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
-            }))
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    // ************** Generate the tree diagram	 *****************
+    var children = [];
+    var margin = {top: 20, right: 120, bottom: 20, left: 120},
+        width = 2000 - margin.right - margin.let,
+        height = 3000 - margin.top - margin.bottom;
 
-        root = treeData[0];
-        update(root);
-        addlink(root);
+    var i = 0, duration = 750;
 
-        function update(source) {
+    var tree = d3.layout.tree()
+        .size([height, width]);
 
-            // Compute the new tree layout.
-            var nodes = tree.nodes(root).reverse(),
-                links = tree.links(nodes);
+    var svg = d3.select("#treeDiagram").append("svg")
+        .attr("width", "98%")//width + margin.right + margin.left)
+        .attr("height", "1200")//height + margin.top + margin.bottom)
+        .call(d3.behavior.zoom().on("zoom", function () {
+            svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
+        }))
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-            //The most important function: Stipulate the x, y axises value.
-            nodes.forEach(function (d) {
-                d.y = d.y_value;
-                d.x = d.x_value;
-                if (!d.children) {
-                    var childrenNode = {};
-                    childrenNode["x_value"] = d.x;
-                    childrenNode["y_value"] = d.y;
-                    childrenNode["name"] = d.name;
-                    children.push(childrenNode);
-                }
+    root = treeData[0];
+    update(root);
+    addlink(root);
+
+    function update(source) {
+
+        // Compute the new tree layout.
+        var nodes = tree.nodes(root).reverse(),
+            links = tree.links(nodes);
+
+        //The most important function: Stipulate the x, y axises value.
+        nodes.forEach(function (d) {
+            d.y = d.y_value;
+            d.x = d.x_value;
+            if (!d.children) {
+                var childrenNode = {};
+                childrenNode["x_value"] = d.x;
+                childrenNode["y_value"] = d.y;
+                childrenNode["name"] = d.name;
+                children.push(childrenNode);
+            }
+        });
+
+
+        // Declare the nodes…
+        var node = svg.selectAll("g.node")
+            .data(nodes, function (d) {
+                return d.id || (d.id = ++i);
+            });
+
+        // Enter the nodes.
+        var nodeEnter = node.enter().append("g")
+            .attr("class", "node")
+            .attr("transform", function (d) {
+                return "translate(" + d.y + "," + d.x + ")";
+            })
+            .on("click", click);
+
+        nodeEnter.append("circle")
+            .attr("r", function (d) {
+                return d.children || d._children ? 0 : 10;
+            })
+            .style("stroke", function (d) {
+                return d.type;
+            })
+            .style("fill", function (d) {
+                return d.level;
             });
 
 
-            // Declare the nodes…
-            var node = svg.selectAll("g.node")
-                .data(nodes, function (d) {
-                    return d.id || (d.id = ++i);
-                });
+        nodeEnter.append("text")
+            .attr("y", function (d) {
+                return -18;
+            })
+            .attr("dy", ".35em")
+            .attr("text-anchor", "middle")
+            .text(function (d) {
+                return d.children || d._children ? d.name : null;
+            })
+            .style("fill-opacity", 1);
 
-            // Enter the nodes.
-            var nodeEnter = node.enter().append("g")
-                .attr("class", "node")
-                .attr("transform", function (d) {
-                    return "translate(" + d.y + "," + d.x + ")";
-                })
-                .on("click", click);
+        nodeEnter.append('a')
+            .attr('xlink:href', function (d) {
+                return d.children || d._children ? d.url : null;
+            });
 
-            nodeEnter.append("circle")
-                .attr("r", function (d) {
-                    return d.children || d._children ? 0 : 10;
-                })
-                .style("stroke", function (d) {
-                    return d.type;
-                })
-                .style("fill", function (d) {
-                    return d.level;
-                });
+        var line = d3.svg.line()
+            .x(function (d) {
+                return d.y;
+            })
+            .y(function (d) {
+                return d.x;
+            })
+            .interpolate("step-before");
+
+        var link = svg.selectAll("path.link")
+            .data(tree.links(nodes), function (d) {
+                return d.target.id;
+            });
+
+        link.enter().insert("path", "g")
+            .attr("class", "link")
+            .style("stroke", function (d) {
+                return d.target.meta.color.clade;
+            })
+            .style("stroke-width", "10")
+            .attr("d", function (d) {
+                return line([d.source, d.target]);
+            });
 
 
-            nodeEnter.append("text")
-                .attr("y", function (d) {
-                    return -18;
-                })
-                .attr("dy", ".35em")
-                .attr("text-anchor", "middle")
-                .text(function (d) {
-                    return d.children || d._children ? d.name : null;
-                })
-                .style("fill-opacity", 1);
+        var nodeUpdate = node.transition()
+            .duration(duration)
+            .attr("transform", function (d) {
+                return "translate(" + d.y + "," + d.x + ")";
+            });
 
-            nodeEnter.append('a')
+        nodeUpdate.select("circle")
+            .attr("r", function (d) {
+                return d.children || d._children ? 5 : 10;
+            })
+            .style("stroke", function (d) {
+                return d.children || d._children ? d.type : 'blue';
+            })
+            .style("fill", function (d) {
+                return d.level;
+            });
+
+
+        nodeUpdate.select("text")
+            .attr("y", function (d) {
+                return -18;
+            })
+            .attr("dy", ".35em")
+            .attr("text-anchor", "middle")
+            .text(function (d) {
+                return d.children || d._children ? d.name : null;
+            })
+            .style("fill-opacity", 1)
+            .style("font-size", root['nodefontsize']);
+
+        var nodeExit = node.exit().transition()
+            .duration(duration)
+            .attr("transform", function (d) {
+                return "translate(" + source.y + "," + source.x + ")";
+            })
+            .remove();
+
+        nodeExit.select("circle")
+            .attr("r", function (d) {
+                return d.children || d._children ? 0 : 10;
+            })
+            .style("stroke", function (d) {
+                return d.level;
+            })
+            .style("fill", function (d) {
+                return d.level;
+            });
+
+        nodeExit.select("text")
+            .attr("y", function (d) {
+                return -18;
+            })
+            .attr("dy", ".35em")
+            .attr("text-anchor", "middle")
+            .text(function (d) {
+                return d.children || d._children ? d.name : null;
+            })
+            .style("fill-opacity", 1);
+
+        // Transition links to their new position.
+        link.transition()
+            .duration(duration)
+            .attr("d", function (d) {
+                return line([d.source, d.target]);
+            });
+
+        // Transition exiting nodes to the parent's new position.
+        link.exit().transition()
+            .duration(duration)
+            .attr("d", function (d) {
+                var o = {x: source.x, y: source.y};
+                return line({source: o, target: o});
+            })
+            .remove();
+
+
+    }
+
+    function click(d) {
+        if (d.children) {
+            d._children = d.children;
+            d.children = null;
+        } else {
+            d.children = d._children;
+            d._children = null;
+        }
+        update(d);
+    }
+
+    function addlink(root) {
+        max_y = 0;
+        fontsize = root['idfontsize'];
+        console.log(root)
+        for (var i = 0; i < children.length; i++) {
+            if (max_y <= children[i]["y_value"]) {
+                max_y = children[i]["y_value"];
+            }
+
+        }
+        for (var i = 0; i < children.length; i++) {
+            var textList = svg.append("a")
                 .attr('xlink:href', function (d) {
-                    return d.children || d._children ? d.url : null;
-                });
+                    if (children[i].name.search('|') != -1) {
+                        var uniq_id = children[i].name.split('|')[1];
+                        return 'https://www.uniprot.org/uniprot/' + uniq_id
+                    }
 
-            var line = d3.svg.line()
-                .x(function (d) {
-                    return d.y;
                 })
-                .y(function (d) {
-                    return d.x;
-                })
-                .interpolate("step-before");
-
-            var link = svg.selectAll("path.link")
-                .data(tree.links(nodes), function (d) {
-                    return d.target.id;
-                });
-
-            link.enter().insert("path", "g")
-                .attr("class", "link")
-                .style("stroke", function (d) {
-                    return d.target.meta.color.clade;
-                })
-                .style("stroke-width", "10")
-                .attr("d", function (d) {
-                    return line([d.source, d.target]);
-                });
-
-
-            var nodeUpdate = node.transition()
-                .duration(duration)
-                .attr("transform", function (d) {
-                    return "translate(" + d.y + "," + d.x + ")";
-                });
-
-            nodeUpdate.select("circle")
-                .attr("r", function (d) {
-                    return d.children || d._children ? 5 : 10;
-                })
-                .style("stroke", function (d) {
-                    return d.children || d._children ? d.type : 'blue';
-                })
+                .append("svg:text")
+                .attr("x", max_y)
+                .attr("y", children[i]["x_value"])
+                .style("font-size", fontsize)
+                .text(children[i]["name"])
                 .style("fill", function (d) {
-                    return d.level;
-                });
-
-
-            nodeUpdate.select("text")
-                .attr("y", function (d) {
-                    return -18;
+                    if (root["nodecolor"][children[i]["name"]]) {
+                        return root["nodecolor"][children[i]["name"]]
+                    } else {
+                        return "blue"
+                    }
                 })
-                .attr("dy", ".35em")
-                .attr("text-anchor", "middle")
-                .text(function (d) {
-                    return d.children || d._children ? d.name : null;
-                })
-                .style("fill-opacity", 1)
-                .style("font-size", root['nodefontsize']);
-
-            var nodeExit = node.exit().transition()
-                .duration(duration)
-                .attr("transform", function (d) {
-                    return "translate(" + source.y + "," + source.x + ")";
-                })
-                .remove();
-
-            nodeExit.select("circle")
-                .attr("r", function (d) {
-                    return d.children || d._children ? 0 : 10;
-                })
-                .style("stroke", function (d) {
-                    return d.level;
-                })
-                .style("fill", function (d) {
-                    return d.level;
-                });
-
-            nodeExit.select("text")
-                .attr("y", function (d) {
-                    return -18;
-                })
-                .attr("dy", ".35em")
-                .attr("text-anchor", "middle")
-                .text(function (d) {
-                    return d.children || d._children ? d.name : null;
-                })
-                .style("fill-opacity", 1);
-
-            // Transition links to their new position.
-            link.transition()
-                .duration(duration)
-                .attr("d", function (d) {
-                    return line([d.source, d.target]);
-                });
-
-            // Transition exiting nodes to the parent's new position.
-            link.exit().transition()
-                .duration(duration)
-                .attr("d", function (d) {
-                    var o = {x: source.x, y: source.y};
-                    return line({source: o, target: o});
-                })
-                .remove();
-
-
+                .style("font-size", "85px")
         }
-
-        function click(d) {
-            if (d.children) {
-                d._children = d.children;
-                d.children = null;
-            } else {
-                d.children = d._children;
-                d._children = null;
-            }
-            update(d);
-        }
-
-        function addlink(root) {
-            max_y = 0;
-            fontsize = root['idfontsize'];
-            console.log(root)
-            for (var i = 0; i < children.length; i++) {
-                if (max_y <= children[i]["y_value"]) {
-                    max_y = children[i]["y_value"];
-                }
-
-            }
-            for (var i = 0; i < children.length; i++) {
-                var textList = svg.append("a")
-                    .attr('xlink:href', function (d) {
-                        if (children[i].name.search('|') != -1) {
-                            var uniq_id = children[i].name.split('|')[1];
-                            return 'https://www.uniprot.org/uniprot/' + uniq_id
-                        }
-
-                    })
-                    .append("svg:text")
-                    .attr("x", max_y)
-                    .attr("y", children[i]["x_value"])
-                    .style("font-size", fontsize)
-                    .text(children[i]["name"])
-                    .style("fill", function (d) {
-                        if (root["nodecolor"][children[i]["name"]]) {
-                            return root["nodecolor"][children[i]["name"]]
-                        } else {
-                            return "blue"
-                        }
-                    })
-                    .style("font-size", "85px")
-            }
-        }
-    </script>
-    <script>
-        document.getElementById("open_tree").click();
-    </script>
+    }
+</script>
+<script>
+    document.getElementById("open_tree").click();
+</script>
 {% endblock %}
 

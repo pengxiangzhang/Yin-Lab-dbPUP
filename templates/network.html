@@ -3,49 +3,49 @@
 {% block title %}Network{% endblock %}
 
 {% block content %}
-    <style>
-        .myimg {
-            border: 2px solid #ddd;
-            border-radius: 6px;
-            padding: 5px;
-            width: 60%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
-    <div class="row">
-        <div class="page-header">
-            <h3>Network for {{ name }}</h3>
-        </div>
+<style>
+    .myimg {
+        border: 2px solid #ddd;
+        border-radius: 6px;
+        padding: 5px;
+        width: 60%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+<div class="row">
+    <div class="page-header">
+        <h3>Network for {{ name }}</h3>
     </div>
+</div>
 
-    <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('trembl', family_id = family_id ) }}">Open TrEMBL
-        for {{ name }}</a>
+<a class="btn btn-primary btn-lg btn-block" href="{{ url_for('trembl', family_id = family_id ) }}">Open TrEMBL
+    for {{ name }}</a>
 
-    <div id="introduction">
-        {{ content|safe }}
+<div id="introduction">
+    {{ content|safe }}
+</div>
+
+<ul class="nav nav-tabs" id="myTab">
+    <li class="active">
+        <a data-toggle="tab" href="#{{ family_id }}">{{ family_id }}</a>
+    </li>
+    {% for i in finalfile %}
+    <li><a data-toggle="tab" href="#{{ i }}">{{ i }}</a></li>
+    {% endfor %}
+</ul>
+<div class="tab-content" id="myTabContent">
+    <br>
+    <div class="tab-pane fade in active" id="{{ family_id }}">
+        <img class="myimg" src="{{ url_for('static', filename='images/SSN_figures/') }}{{ family_id }}.jpg">
     </div>
-
-    <ul id="myTab" class="nav nav-tabs">
-        <li class="active">
-            <a href="#{{ family_id }}" data-toggle="tab">{{ family_id }}</a>
-        </li>
-        {% for i in finalfile %}
-            <li><a href="#{{ i }}" data-toggle="tab">{{ i }}</a></li>
-        {% endfor %}
-    </ul>
-    <div id="myTabContent" class="tab-content">
-        <br>
-        <div class="tab-pane fade in active" id="{{ family_id }}">
-            <img class="myimg" src="{{ url_for('static', filename='images/SSN_figures/') }}{{ family_id }}.jpg">
-        </div>
-        {% for i in finalfile %}
-            <div class="tab-pane fade" id="{{ i }}">
-                <img class="myimg" src="{{ url_for('static', filename='images/SSN_figures/') }}{{ i }}.jpg"
-                     alt="{{ i }}">
-            </div>
-        {% endfor %}
+    {% for i in finalfile %}
+    <div class="tab-pane fade" id="{{ i }}">
+        <img alt="{{ i }}" class="myimg"
+             src="{{ url_for('static', filename='images/SSN_figures/') }}{{ i }}.jpg">
     </div>
+    {% endfor %}
+</div>
 
 {% endblock %}

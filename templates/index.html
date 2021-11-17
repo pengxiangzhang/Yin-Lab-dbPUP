@@ -3,46 +3,46 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-    <!-- Main Content Area-->
-    <div class="row">
-        <div class="page-header">
-            <h3>{{ name }}</h3>
+<!-- Main Content Area-->
+<div class="row">
+    <div class="page-header">
+        <h3>{{ name }}</h3>
 
-        </div>
     </div>
-    <div class="familyList">
-        <h2>
-            Class List
-        </h2>
-        <ul class="breadcrumb" style="font-size: medium">
-            <li><a href="{{ url_for('classes', class_id = 'ORs') }}">ORs</a> <span
-                    class="divider"></span>
-            </li>
-            <li><a href="{{ url_for('classes', class_id = 'FRs') }}">FRs</a> <span
-                    class="divider"></span>
-            </li>
-            <li><a href="{{ url_for('classes', class_id = 'HRs') }}">HRs</a> <span
-                    class="divider"></span>
-            </li>
-            <li><a href="{{ url_for('classes', class_id = 'NCRs') }}">NCRs</a> <span
-                    class="divider"></span>
-            </li>
-            <li><a href="{{ url_for('classes', class_id = 'IRs') }}">IRs</a> <span
-                    class="divider"></span>
-            </li>
-            <!--<li><a href="{{ url_for('classes', class_id = 'SRs') }}">SRs</a> <span-->
-            <!--        class="divider"></span>-->
-            <!--</li>-->
-            <!--<li><a href="{{ url_for('classes', class_id = 'TRs') }}">TRs</a> <span-->
-            <!--        class="divider"></span>-->
-            <!--</li>-->
-            <li><a href="{{ url_for('classes', class_id = 'UCs') }}">UCs</a> <span
-                    class="divider"></span>
-            </li>
-        </ul>
-    </div>
-    <br>
-    <div class="familyInformation">
-        {{ content| safe }}
-    </div>
+</div>
+<div class="familyList">
+    <h2>
+        Class List
+    </h2>
+    <ul class="breadcrumb" style="font-size: medium">
+        <li><a href="{{ url_for('classes', class_id = 'ORs') }}">ORs</a> <span
+                class="divider"></span>
+        </li>
+        <li><a href="{{ url_for('classes', class_id = 'FRs') }}">FRs</a> <span
+                class="divider"></span>
+        </li>
+        <li><a href="{{ url_for('classes', class_id = 'HRs') }}">HRs</a> <span
+                class="divider"></span>
+        </li>
+        <li><a href="{{ url_for('classes', class_id = 'NCRs') }}">NCRs</a> <span
+                class="divider"></span>
+        </li>
+        <li><a href="{{ url_for('classes', class_id = 'IRs') }}">IRs</a> <span
+                class="divider"></span>
+        </li>
+        <!--<li><a href="{{ url_for('classes', class_id = 'SRs') }}">SRs</a> <span-->
+        <!--        class="divider"></span>-->
+        <!--</li>-->
+        <!--<li><a href="{{ url_for('classes', class_id = 'TRs') }}">TRs</a> <span-->
+        <!--        class="divider"></span>-->
+        <!--</li>-->
+        <li><a href="{{ url_for('classes', class_id = 'UCs') }}">UCs</a> <span
+                class="divider"></span>
+        </li>
+    </ul>
+</div>
+<br>
+<div class="familyInformation">
+    {{ content| safe }}
+</div>
 {% endblock %}

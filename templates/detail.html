@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<meta name="robots" content="noindex">
-    <!-- Main Content Area-->
-    <div class="row">
-        <div class="page-header">
-            <h3>{{ name }}</h3>
+<meta content="noindex" name="robots">
+<!-- Main Content Area-->
+<div class="row">
+    <div class="page-header">
+        <h3>{{ name }}</h3>
 
-        </div>
     </div>
-    <br>
-    <div class="familyInformation">
-        <h2 style="max-width: 50ch; word-wrap:break-word; text-align: left;">
-            > {{ unid }} {{ seq }}
-        </h2>
-    </div>
+</div>
+<br>
+<div class="familyInformation">
+    <h2 style="max-width: 50ch; word-wrap:break-word; text-align: left;">
+        > {{ unid }} {{ seq }}
+    </h2>
+</div>
 {% endblock %}

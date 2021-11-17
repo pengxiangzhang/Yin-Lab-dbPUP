@@ -4,60 +4,60 @@
 
 {% block content %}
 
-    <div class="row">
-        <div class="page-header">
-            <h3>{{ name }}</h3>
+<div class="row">
+    <div class="page-header">
+        <h3>{{ name }}</h3>
 
-        </div>
     </div>
-    <!-- Main Content Area-->
-    <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('network', family_id = family_id) }}">View sequence
-        similarity network</a>
+</div>
+<!-- Main Content Area-->
+<a class="btn btn-primary btn-lg btn-block" href="{{ url_for('network', family_id = family_id) }}">View sequence
+    similarity network</a>
 
 
-    <div class="subFamily">
-        <h2>Subfamily</h2>
-        <ul class="breadcrumb" style="font-size: medium">
-            {% if amount != 0 %}
-                {% for i in range(amount) %}
-                    {% set family_id = family_id + '_' + (i + 1)|string() %}
-                    {% if is_family_char(family_id) %}
-                        <li>
-                            <a href="{{ url_for('subfamily', family_id = family_id) }}">{{ family_id }}(Characterized)</a>
-                            <span
-                                    class="divider"></span>
-                        </li>
-                    {% else %}
-                        <li><a href="{{ url_for('subfamily', family_id = family_id) }}">{{ family_id }}</a> <span
-                                class="divider"></span>
-                        </li>
-                    {% endif %}
-                {% endfor %}
-            {% else %}
-                <li>This family does not contain subfamilies</li>
-            {% endif %}
-        </ul>
-    </div>
+<div class="subFamily">
+    <h2>Subfamily</h2>
+    <ul class="breadcrumb" style="font-size: medium">
+        {% if amount != 0 %}
+        {% for i in range(amount) %}
+        {% set family_id = family_id + '_' + (i + 1)|string() %}
+        {% if is_family_char(family_id) %}
+        <li>
+            <a href="{{ url_for('subfamily', family_id = family_id) }}">{{ family_id }}(Characterized)</a>
+            <span
+                    class="divider"></span>
+        </li>
+        {% else %}
+        <li><a href="{{ url_for('subfamily', family_id = family_id) }}">{{ family_id }}</a> <span
+                class="divider"></span>
+        </li>
+        {% endif %}
+        {% endfor %}
+        {% else %}
+        <li>This family does not contain subfamilies</li>
+        {% endif %}
+    </ul>
+</div>
 
 
-    <div class="familyResource">
-        <h2>Family Sequences</h2>
-        <ul class="breadcrumb" style="font-size: medium">
-            <li>
-                <button><a href="{{ url_for('swissport', family_id = family_id) }}">Swiss-Prot</a></button>
-            </li>
-            <li>
-                <button><a href="{{ url_for('trembl', family_id = family_id) }}">TrEMBL</a></button>
-            </li>
-            {% if show_taxonomy %}
-                <li>
-                    <button><a href="{{ url_for('taxonomy_family', family_id = family_id) }}">Taxonomy</a></button>
-                </li>
-            {% endif %}
-        </ul>
-    </div>
-    <br>
-    <div class="familyInformation">
-        {{ content|safe }}
-    </div>
+<div class="familyResource">
+    <h2>Family Sequences</h2>
+    <ul class="breadcrumb" style="font-size: medium">
+        <li>
+            <button><a href="{{ url_for('swissport', family_id = family_id) }}">Swiss-Prot</a></button>
+        </li>
+        <li>
+            <button><a href="{{ url_for('trembl', family_id = family_id) }}">TrEMBL</a></button>
+        </li>
+        {% if show_taxonomy %}
+        <li>
+            <button><a href="{{ url_for('taxonomy_family', family_id = family_id) }}">Taxonomy</a></button>
+        </li>
+        {% endif %}
+    </ul>
+</div>
+<br>
+<div class="familyInformation">
+    {{ content|safe }}
+</div>
 {% endblock %}
