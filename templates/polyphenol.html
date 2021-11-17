@@ -39,6 +39,8 @@
                 <th style="white-space: nowrap">Polyphenol class</th>
                 <th style="white-space: nowrap">Polyphenol sub-class</th>
                 <th style="white-space: nowrap">PUP family</th>
+                <th style="white-space: nowrap">UniProt</th>
+                <th style="white-space: nowrap">pubchem</th>
             </tr>
             </thead>
             <tbody>
@@ -58,6 +60,12 @@
                             {% endif %}
                         {% endfor %}
                     </td>
+                    <td>
+                        {% for UniProt in record.UniProt %}
+                            <a href="https://www.uniprot.org/uniprot/{{ UniProt }}">UniProt</a>;
+                        {% endfor %}
+                    </td>
+                    <td>{{ record.pubchem }}</td>
                 </tr>
             {% endfor %}
             </tbody>
