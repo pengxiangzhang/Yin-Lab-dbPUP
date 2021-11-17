@@ -21,7 +21,7 @@ Workflow of dbPUP
 ## Characterized Protein Page
 
 This page displays a table with all the seed proteins and associated metadata in dbPUP. Users can sort in ascending or
-descending order the number, strain, protein name, gene name, uniprot id, EC, substrate, product, PDB, Km, Vmax and
+descending order the number, strain, protein name, gene name, UniProt id, EC, substrate, product, PDB, Km, Vmax and
 Kcat.
 
 Users can jump to a specific page looking for more details by clicking on blue text links in cell.
@@ -57,7 +57,7 @@ text links redirects users to corresponding pages for more details.
 
 ### Table for Swiss-Prot/TrEMBL result
 
-Both Swiss-Prot and TrEMBL tables consist of seven major parts of protein name (a), strain (b), uniprot (c), PDB (d),
+Both Swiss-Prot and TrEMBL tables consist of seven major parts of protein name (a), strain (b), UniProt (c), PDB (d),
 family (e), EC (f) and sequence (g). Users view the taxa of interest in same table by clicking the buttons (h) above the
 table.
 
@@ -95,42 +95,40 @@ Additionally, nodes have a light yellow border indicate the seeds.
 
 ## UHGP
 
-In the navigation menu, clicking on UHGP will open a new page, where users can find information about UHGP Hits list,
-UHGP introduction, UHGP homologs, physically linked PUP gene clusters (PGCs). The homologs found in UHGP-100 dataset are
-classified by continent, clicking the corresponding continent will redirect users to a new page, where present metadata
-about each homolog.
+In the navigation menu, clicking on UHGP will open a new page, where users can find information about UHGP Hits list, UHGP introduction, UHGP homologs, physically linked PUP gene clusters (PGCs). The homologs found in UHGP-100 dataset are classified by continent, clicking the corresponding continent will redirect users to a new page, where present metadata about each homolog.
 
 ![help11](./static/images/text_content/figures/help11.png){: .fit .rounded-border}
 
-Users can browse the whole PGCs in tabular format by clicking the Cluster. The cluster ID will redirect the users to the
-corresponding PGC page, where exhibits the functional annotation about each gene in the PGC.
+Users can browse the whole PGCs in tabular format by clicking the Cluster. The cluster ID will redirect the users to the corresponding PGC page, where exhibits the functional annotation about each gene in the PGC.
 
 ![help13](./static/images/text_content/figures/help13.png){: .fit .rounded-border}
 
 ![help12](./static/images/text_content/figures/help12.png){: .fit .rounded-border}
 
-Clicking the Family name (e.g. OR1) will redirect users to Family page, where exhibits experimental results in very
-detail.
+Clicking the Family name (e.g. OR1) will redirect users to Family page, where exhibits experimental results in very detail.
 
 ## BLAST
 
-Users can enter a protein or nucleotide sequence of interest in FASTA format to perform a BLAST search against dbPUP.
-This can be done in following ways:
+Users can enter a protein or nucleotide sequence of interest in FASTA format to perform a BLAST search against dbPUP. This can be done in following ways:
 
 1. Enter a protein or nucleotide sequence into the form field.
 2. Upload a FASTA format file
 
 ![help8](./static/images/text_content/figures/help9.png){: .fit .rounded-border}
 
-Results are displayed as a sortable table including `hmmscan` result (only applicable for protein sequence), protein
-information, scores, and E-values obtained from BLAST.
+Results are displayed as a sortable table including `hmmscan` result (only applicable for protein sequence), protein information, scores, and E-values obtained from BLAST.
 
 ![help8](./static/images/text_content/figures/help10.png){: .fit .rounded-border}
 
+## Polyphenol
+
+The Polyphenol page presents 47 polyphenols which are classified in 3 classes and 10 sub-classes ([Rothwell, Joseph A., et al. *Database* 2013](https://academic.oup.com/database/article/doi/10.1093/database/bat070/342410)). Users can sort in ascending or descending order the name, polyphenol class, polyphenol sub-class, UniProt ID and associated PUP family. Clicking on the blue text link in cell will redirects users to specific page.
+
+![help15](./static/images/text_content/figures/help15.png){: .fit .rounded-border}
+
 ## Taxonomy
 
-The Taxonomy page allows users to explore hierarchical data of taxonomic distribution of PUP homologs in dbPUP, with
-zooming, multi-layered pie charts.
+The Taxonomy page allows users to explore hierarchical data of taxonomic distribution of PUP homologs in dbPUP, with zooming, multi-layered pie charts.
 
 ![help14](./static/images/text_content/figures/help14.png){: .fit .rounded-border}
 
