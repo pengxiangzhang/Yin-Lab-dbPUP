@@ -14,29 +14,21 @@
         PUP homologs from UHGP
     </h2>
     <ul class="breadcrumb" style="font-size: medium">
-        <li><a href="{{ url_for('uhgp', name_id = 'Africa') }}">Africa</a> <span
-                class="divider"></span>
+        <li><a href="{{ url_for('uhgp', name_id = 'Africa') }}">Africa</a> <span class="divider"></span>
         </li>
-        <li><a href="{{ url_for('uhgp', name_id = 'Asia') }}">Asia</a> <span
-                class="divider"></span>
+        <li><a href="{{ url_for('uhgp', name_id = 'Asia') }}">Asia</a> <span class="divider"></span>
         </li>
-        <li><a href="{{ url_for('uhgp', name_id = 'Europe') }}">Europe</a> <span
-                class="divider"></span>
+        <li><a href="{{ url_for('uhgp', name_id = 'Europe') }}">Europe</a> <span class="divider"></span>
         </li>
-        <li><a href="{{ url_for('uhgp', name_id = 'North America') }}">North America</a> <span
-                class="divider"></span>
+        <li><a href="{{ url_for('uhgp', name_id = 'North America') }}">North America</a> <span class="divider"></span>
         </li>
-        <li><a href="{{ url_for('uhgp', name_id = 'Oceania') }}">Oceania</a> <span
-                class="divider"></span>
+        <li><a href="{{ url_for('uhgp', name_id = 'Oceania') }}">Oceania</a> <span class="divider"></span>
         </li>
-        <li><a href="{{ url_for('uhgp', name_id = 'South America') }}">South America</a> <span
-                class="divider"></span>
+        <li><a href="{{ url_for('uhgp', name_id = 'South America') }}">South America</a> <span class="divider"></span>
         </li>
-        <li><a href="{{ url_for('uhgp', name_id = 'Others') }}">Others</a> <span
-                class="divider"></span>
+        <li><a href="{{ url_for('uhgp', name_id = 'Others') }}">Others</a> <span class="divider"></span>
         </li>
-        <li><a href="{{ url_for('uhgp', name_id = 'Cluster') }}">Cluster</a> <span
-                class="divider"></span>
+        <li><a href="{{ url_for('uhgp', name_id = 'Cluster') }}">Cluster</a> <span class="divider"></span>
         </li>
     </ul>
 </div>
@@ -46,55 +38,55 @@
     <div>
         <table class="table display" id="data-table">
             <thead>
-            <tr>
-                <th style="white-space: nowrap">Cluster ID</th>
-                <th style="white-space: nowrap">Gene ID</th>
-                <th style="white-space: nowrap">Name</th>
-                <th style="white-space: nowrap">Pfam</th>
-                <th style="white-space: nowrap">Substrate</th>
-                <th style="white-space: nowrap">Type</th>
-                <th style="white-space: nowrap">Continent</th>
-                <th style="white-space: nowrap">Sequence</th>
-                <th style="white-space: nowrap"><br></th>
-            </tr>
+                <tr>
+                    <th style="white-space: nowrap">Cluster ID</th>
+                    <th style="white-space: nowrap">Gene ID</th>
+                    <th style="white-space: nowrap">Name</th>
+                    <th style="white-space: nowrap">Pfam</th>
+                    <th style="white-space: nowrap">Substrate</th>
+                    <th style="white-space: nowrap">Type</th>
+                    <th style="white-space: nowrap">Continent</th>
+                    <th style="white-space: nowrap">Sequence</th>
+                    <th style="white-space: nowrap"><br></th>
+                </tr>
             </thead>
             <tbody>
-            {% for record in records %}
-            <tr bgcolor="{{ record.color }}">
-                <td>
-                    <a href="{{ url_for('cluster_detail', cluster_id = record.cluster_id) }}">{{ record.cluster_id
-                        }}</a>
-                </td>
-                <td><a href="{{ record.mgnify }}" rel="noopener noreferrer"
-                       target="_blank">{{ record.gene_id }}</a></td>
-                <td>{{ record.name }}</td>
-                <td>
-                    {% for pfam in pfam_dic[record.number-1] %}
-                    {% if pfam[0]=="Not Detected" %}
-                    {{ pfam[0] }}
-                    {% else %}
-                    <a href="{{ pfam[1] }}" rel="noopener noreferrer" target="_blank">{{ pfam[0] }}</a>
-                    {% endif %}
-                    {% endfor %}
-                </td>
-                <td>
+                {% for record in records %}
+                <tr bgcolor="{{ record.color }}">
+                    <td>
+                        <a href="{{ url_for('cluster_detail', cluster_id = record.cluster_id) }}">{{ record.cluster_id
+                            }}</a>
+                    </td>
+                    <td><a href="{{ record.mgnify }}" rel="noopener noreferrer" target="_blank">{{ record.gene_id }}</a>
+                    </td>
+                    <td>{{ record.name }}</td>
+                    <td>
+                        {% for pfam in pfam_dic[record.number-1] %}
+                        {% if pfam[0]=="Not Detected" %}
+                        {{ pfam[0] }}
+                        {% else %}
+                        <a href="{{ pfam[1] }}" rel="noopener noreferrer" target="_blank">{{ pfam[0] }}</a>
+                        {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td>
 
-                    {% for substrate in substrate_pairs[record.number-1] %}
-                    {% if substrate[0] =="Not Detected" %}
-                    {{ substrate[0] }}
-                    {% elif substrate[0] == "NA" %}
-                    {{ substrate[0] }}
-                    {% else %}
-                    <a href="{{ substrate[1] }}"> {{ substrate[0] }}</a>
-                    {% endif %}
+                        {% for substrate in substrate_pairs[record.number-1] %}
+                        {% if substrate[0] =="Not Detected" %}
+                        {{ substrate[0] }}
+                        {% elif substrate[0] == "NA" %}
+                        {{ substrate[0] }}
+                        {% else %}
+                        <a href="{{ substrate[1] }}"> {{ substrate[0] }}</a>
+                        {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td>{{ record.type }}</td>
+                    <td>{{ record.continent }}</td>
+                    <td><a href="{{ url_for('detail',mode='cluster', unid = record.gene_id) }}" target="_blank">view</a>
+                    </td>
+                    <td>>{{ record.gene_id }}&#10;{{ record.seq }}</td>
                     {% endfor %}
-                </td>
-                <td>{{ record.type }}</td>
-                <td>{{ record.continent }}</td>
-                <td><a href="{{ url_for('detail',mode='cluster', unid = record.gene_id) }}" target="_blank">view</a>
-                </td>
-                <td>>{{ record.gene_id }}&#10;{{ record.seq }}</td>
-                {% endfor %}
             </tbody>
         </table>
     </div>

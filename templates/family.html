@@ -24,8 +24,7 @@
         {% if is_family_char(family_id) %}
         <li>
             <a href="{{ url_for('subfamily', family_id = family_id) }}">{{ family_id }}(Characterized)</a>
-            <span
-                    class="divider"></span>
+            <span class="divider"></span>
         </li>
         {% else %}
         <li><a href="{{ url_for('subfamily', family_id = family_id) }}">{{ family_id }}</a> <span

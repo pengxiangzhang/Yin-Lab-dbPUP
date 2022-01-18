@@ -53,18 +53,19 @@
 </style>
 <div class="modal-body">
     <div class="treeDiagram" id="treeDiagram"
-         style="width:85%;height:85%;overflow: hidden;border-radius: 25px;border: 1px solid #ccc!important;padding: 20px;"></div>
+        style="width:85%;height:85%;overflow: hidden;border-radius: 25px;border: 1px solid #ccc!important;padding: 20px;">
+    </div>
 </div>
 
 
 <script>
-    var treeData = JSON.parse({{treeData | tojson | safe}})
+    var treeData = JSON.parse({{ treeData | tojson | safe}})
 
 
 
     // ************** Generate the tree diagram	 *****************
     var children = [];
-    var margin = {top: 20, right: 120, bottom: 20, left: 120},
+    var margin = { top: 20, right: 120, bottom: 20, left: 120 },
         width = 2000 - margin.right - margin.let,
         height = 3000 - margin.top - margin.bottom;
 
@@ -243,8 +244,8 @@
         link.exit().transition()
             .duration(duration)
             .attr("d", function (d) {
-                var o = {x: source.x, y: source.y};
-                return line({source: o, target: o});
+                var o = { x: source.x, y: source.y };
+                return line({ source: o, target: o });
             })
             .remove();
 

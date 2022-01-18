@@ -34,38 +34,38 @@
 <div>
     <table class="table display" id="data-table">
         <thead>
-        <tr>
-            <th style="white-space: nowrap">Name</th>
-            <th style="white-space: nowrap">Polyphenol class</th>
-            <th style="white-space: nowrap">Polyphenol sub-class</th>
-            <th style="white-space: nowrap">PUP family</th>
-            <th style="white-space: nowrap">UniProt</th>
-        </tr>
+            <tr>
+                <th style="white-space: nowrap">Name</th>
+                <th style="white-space: nowrap">Polyphenol class</th>
+                <th style="white-space: nowrap">Polyphenol sub-class</th>
+                <th style="white-space: nowrap">PUP family</th>
+                <th style="white-space: nowrap">UniProt</th>
+            </tr>
         </thead>
         <tbody>
-        {% for record in records %}
-        <tr>
-            <td><a href={{record.pubchem }}>{{ record.Name }}</td>
-            <td>{{ record.Polyphenol_class }}</td>
-            <td>{{ record.Polyphenol_sub_class }}</td>
-            <td>
-                {% for family in record.PUP_family %}
-                {% if "unclassified" in family %}
-                {{ family }}
-                {% elif "_" in family: %}
-                <a href="{{ url_for('subfamily', family_id = family) }}">{{ family }}</a>;
-                {% else %}
-                <a href="{{ url_for('family', family_id = family) }}">{{ family }}</a>;
-                {% endif %}
-                {% endfor %}
-            </td>
-            <td>
-                {% for UniProt in record.UniProt %}
-                <a href="https://www.uniprot.org/uniprot/{{ UniProt }}">{{ UniProt }}</a>;
-                {% endfor %}
-            </td>
-        </tr>
-        {% endfor %}
+            {% for record in records %}
+            <tr>
+                <td><a href={{record.pubchem }}>{{ record.Name }}</td>
+                <td>{{ record.Polyphenol_class }}</td>
+                <td>{{ record.Polyphenol_sub_class }}</td>
+                <td>
+                    {% for family in record.PUP_family %}
+                    {% if "unclassified" in family %}
+                    {{ family }}
+                    {% elif "_" in family: %}
+                    <a href="{{ url_for('subfamily', family_id = family) }}">{{ family }}</a>;
+                    {% else %}
+                    <a href="{{ url_for('family', family_id = family) }}">{{ family }}</a>;
+                    {% endif %}
+                    {% endfor %}
+                </td>
+                <td>
+                    {% for UniProt in record.UniProt %}
+                    <a href="https://www.uniprot.org/uniprot/{{ UniProt }}">{{ UniProt }}</a>;
+                    {% endfor %}
+                </td>
+            </tr>
+            {% endfor %}
         </tbody>
     </table>
 </div>

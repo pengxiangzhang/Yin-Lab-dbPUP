@@ -2,7 +2,11 @@
 
 <img src="https://ucomm.unl.edu/images/brand-book/Our-marks/R-UNL-Hex.svg" alt="UNL" width="250"> <img src="https://i.loli.net/2020/12/28/JFs9E86SkdfGpvK.png" alt="dbpup" width="300">
 
+DOI: [10.1128/AEM.01851-21](https://doi.org/10.1128/AEM.01851-21)
+Deploymeny: [bcb.unl.edu/dbpup/](https://bcb.unl.edu/dbpup/)
+
 ## Introduction
+
 
 This website is developed for [Yin's Lab](http://bcb.unl.edu/) located at
 the [University of Nebraska - Lincoln](https://www.unl.edu) and founded by [NSF](https://www.nsf.gov/).

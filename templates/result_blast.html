@@ -20,7 +20,8 @@
 </div>
 <ul class="nav nav-tabs" id="myTab">
     <li class="active">
-        <a data-toggle="tab" href="#tab1">Blast</a></li>
+        <a data-toggle="tab" href="#tab1">Blast</a>
+    </li>
     {% if hmmrecord != 0 %}
     <li><a data-toggle="tab" href="#tab2">hmmscan</a></li>
     {% endif %}
@@ -45,41 +46,41 @@
         <br>
         <table class="table" id="data-table">
             <thead>
-            <tr>
-                <th style="white-space: nowrap">Query ID</th>
-                <th style="white-space: nowrap">Subject ID</th>
-                <th style="white-space: nowrap">Family</th>
-                <th style="white-space: nowrap">Identity</th>
-                <th style="white-space: nowrap">E-value</th>
-                <th style="white-space: nowrap">Protein Name</th>
-                <th style="white-space: nowrap">Strain</th>
-            </tr>
+                <tr>
+                    <th style="white-space: nowrap">Query ID</th>
+                    <th style="white-space: nowrap">Subject ID</th>
+                    <th style="white-space: nowrap">Family</th>
+                    <th style="white-space: nowrap">Identity</th>
+                    <th style="white-space: nowrap">E-value</th>
+                    <th style="white-space: nowrap">Protein Name</th>
+                    <th style="white-space: nowrap">Strain</th>
+                </tr>
             </thead>
             <tbody>
-            {% for record in records %}
-            <tr>
-                <td>{{ record[0] }}</td>
-                <td>{{ record[1] }}</td>
-                <td>
-                    {% if "unclassified" in record[2]: %}
-                    <a href="{{ url_for('family', family_id = record[2].split('-', 1)[0]) }}">{{ record[2] }}</a>
-                    {% elif "_" in record[2]: %}
-                    <a href="{{ url_for('subfamily', family_id = record[2]) }}">{{ record[2] }}</a>
-                    {% else %}
-                    <a href="{{ url_for('family', family_id = record[2]) }}">{{ record[2] }}</a>
-                    {% endif %}
-                </td>
-                <td>{{ '%0.2f'| format(record[3]|float) }}</td>
-                <td>{{ '%0.2f'| format(record[4]|float) }}</td>
-                <td>{{ record[5] }}</td>
-                <td>
-                    <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={{ record[7] }}"
-                       rel="noopener noreferrer" target="_blank">{{ record[6] }}</a>
-                </td>
+                {% for record in records %}
+                <tr>
+                    <td>{{ record[0] }}</td>
+                    <td>{{ record[1] }}</td>
+                    <td>
+                        {% if "unclassified" in record[2]: %}
+                        <a href="{{ url_for('family', family_id = record[2].split('-', 1)[0]) }}">{{ record[2] }}</a>
+                        {% elif "_" in record[2]: %}
+                        <a href="{{ url_for('subfamily', family_id = record[2]) }}">{{ record[2] }}</a>
+                        {% else %}
+                        <a href="{{ url_for('family', family_id = record[2]) }}">{{ record[2] }}</a>
+                        {% endif %}
+                    </td>
+                    <td>{{ '%0.2f'| format(record[3]|float) }}</td>
+                    <td>{{ '%0.2f'| format(record[4]|float) }}</td>
+                    <td>{{ record[5] }}</td>
+                    <td>
+                        <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={{ record[7] }}"
+                            rel="noopener noreferrer" target="_blank">{{ record[6] }}</a>
+                    </td>
 
 
-            </tr>
-            {% endfor %}
+                </tr>
+                {% endfor %}
 
             </tbody>
 

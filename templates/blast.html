@@ -62,25 +62,23 @@
             <div style="text-align:left;">
                 <label for="subject" style="color:blue"> <b> I. Paste the sequence in the textarea. </b> </label>
                 <br>
-                <span style="font-size:1em;">Try example <a id="example_blastp" style="color:blue;" value="protein">blastp</a>  <a
-                        id="example_blastx" style="color:blue;" value="protein">blastx </a> sequences.</span>
+                <span style="font-size:1em;">Try example <a id="example_blastp" style="color:blue;"
+                        value="protein">blastp</a> <a id="example_blastx" style="color:blue;" value="protein">blastx
+                    </a> sequences.</span>
             </div>
             <textarea id="id_sequences" name="id_sequences" placeholder="" rows="10"
-                      style="min-height:100px"></textarea>
+                style="min-height:100px"></textarea>
             <br>
             <div style="text-align:left;">
                 <label for="subject" style="color:blue"> <B> II. Or upload the sequence file. </B> </label> <br>
                 <span style="font-size: 1em;text-align:left;">File in Fasta format</span>
-                <input id='id_file' name="id_file" onchange='validateFasta(this.files)'
-                       style="border-style: dotted;"
-                       type="file"
-                       value=""/>
+                <input id='id_file' name="id_file" onchange='validateFasta(this.files)' style="border-style: dotted;"
+                    type="file" value="" />
                 <input id="id_file_text" name="id_file_text" type="hidden">
             </div>
             <br>
             <div class="h-captcha" data-sitekey="{{ site_key }}" data-theme="light"></div>
-            <a class="btn btn-primary"
-               onclick="fire_run();">Run Blast</a>
+            <a class="btn btn-primary" onclick="fire_run();">Run Blast</a>
         </form>
 
         <script type="text/javascript">
@@ -130,7 +128,9 @@
                 box-sizing: border-box;
             }
 
-            input[type=text], select, textarea {
+            input[type=text],
+            select,
+            textarea {
                 width: 100%;
                 padding: 12px;
                 border: 1px solid #ccc;
@@ -246,6 +246,7 @@
                 -o-transform: rotate(0deg);
                 transform: rotate(0deg);
             }
+
             100% {
                 -webkit-transform: rotate(360deg);
                 -moz-transform: rotate(360deg);
@@ -263,6 +264,7 @@
                 -o-transform: rotate(0deg);
                 transform: rotate(0deg);
             }
+
             100% {
                 -webkit-transform: rotate(360deg);
                 -moz-transform: rotate(360deg);
@@ -280,6 +282,7 @@
                 -o-transform: rotate(0deg);
                 transform: rotate(0deg);
             }
+
             100% {
                 -webkit-transform: rotate(360deg);
                 -moz-transform: rotate(360deg);
@@ -297,6 +300,7 @@
                 -o-transform: rotate(0deg);
                 transform: rotate(0deg);
             }
+
             100% {
                 -webkit-transform: rotate(360deg);
                 -moz-transform: rotate(360deg);

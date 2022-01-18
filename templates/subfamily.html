@@ -8,8 +8,8 @@
     window.location.replace("{{ url_for('swissport', family_id = family_id) }}");
 </script>
 <h4>Redirecting...</h4>
-<p>You should be redirected automatically to target URL: <a
-        href="{{ url_for('swissport', family_id = family_id) }}">{{ url_for('swissport', family_id = family_id) }}</a>.
+<p>You should be redirected automatically to target URL: <a href="{{ url_for('swissport', family_id = family_id) }}">{{
+        url_for('swissport', family_id = family_id) }}</a>.
     If not click the link.</p>
 {% else %}
 <div class="row">

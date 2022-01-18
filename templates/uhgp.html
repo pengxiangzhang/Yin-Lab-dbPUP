@@ -5,44 +5,38 @@
 {% block content %}
 <!-- Main Content Area-->
 <div class="row">
-    <div class="page-header">
-        <h3>{{ name }}</h3>
+        <div class="page-header">
+                <h3>{{ name }}</h3>
 
-    </div>
+        </div>
 </div>
 <div class="familyList">
-    <h2>
-        PUP homologs from UHGP
-    </h2>
-    <ul class="breadcrumb" style="font-size: medium">
-        <li><a href="{{ url_for('uhgp', name_id = 'Africa') }}">Africa</a> <span
-                class="divider"></span>
-        </li>
-        <li><a href="{{ url_for('uhgp', name_id = 'Asia') }}">Asia</a> <span
-                class="divider"></span>
-        </li>
-        <li><a href="{{ url_for('uhgp', name_id = 'Europe') }}">Europe</a> <span
-                class="divider"></span>
-        </li>
-        <li><a href="{{ url_for('uhgp', name_id = 'North America') }}">North America</a> <span
-                class="divider"></span>
-        </li>
-        <li><a href="{{ url_for('uhgp', name_id = 'Oceania') }}">Oceania</a> <span
-                class="divider"></span>
-        </li>
-        <li><a href="{{ url_for('uhgp', name_id = 'South America') }}">South America</a> <span
-                class="divider"></span>
-        </li>
-        <li><a href="{{ url_for('uhgp', name_id = 'Others') }}">Others</a> <span
-                class="divider"></span>
-        </li>
-        <li><a href="{{ url_for('uhgp', name_id = 'Cluster') }}">Cluster</a> <span
-                class="divider"></span>
-        </li>
-    </ul>
+        <h2>
+                PUP homologs from UHGP
+        </h2>
+        <ul class="breadcrumb" style="font-size: medium">
+                <li><a href="{{ url_for('uhgp', name_id = 'Africa') }}">Africa</a> <span class="divider"></span>
+                </li>
+                <li><a href="{{ url_for('uhgp', name_id = 'Asia') }}">Asia</a> <span class="divider"></span>
+                </li>
+                <li><a href="{{ url_for('uhgp', name_id = 'Europe') }}">Europe</a> <span class="divider"></span>
+                </li>
+                <li><a href="{{ url_for('uhgp', name_id = 'North America') }}">North America</a> <span
+                                class="divider"></span>
+                </li>
+                <li><a href="{{ url_for('uhgp', name_id = 'Oceania') }}">Oceania</a> <span class="divider"></span>
+                </li>
+                <li><a href="{{ url_for('uhgp', name_id = 'South America') }}">South America</a> <span
+                                class="divider"></span>
+                </li>
+                <li><a href="{{ url_for('uhgp', name_id = 'Others') }}">Others</a> <span class="divider"></span>
+                </li>
+                <li><a href="{{ url_for('uhgp', name_id = 'Cluster') }}">Cluster</a> <span class="divider"></span>
+                </li>
+        </ul>
 </div>
 <br>
 <div class="familyInformation">
-    {{ content| safe }}
+        {{ content| safe }}
 </div>
 {% endblock %}
