@@ -4,8 +4,6 @@
 #
 #    pip-compile
 #
---trusted-host pypi.org
-
 attrs==21.2.0
     # via
     #   -r requirements.in
@@ -59,7 +57,7 @@ markupsafe==2.0.1
     #   jinja2
 more-itertools==8.8.0
     # via -r requirements.in
-numpy==1.19.5
+numpy==1.22.0
     # via pandas
 packaging==20.9
     # via
@@ -114,9 +112,9 @@ werkzeug==2.0.1
     # via
     #   -r requirements.in
     #   flask
-zope.event==4.5.0
+zope-event==4.5.0
     # via gevent
-zope.interface==5.4.0
+zope-interface==5.4.0
     # via gevent
 
 # The following packages are considered to be unsafe in a requirements file:
