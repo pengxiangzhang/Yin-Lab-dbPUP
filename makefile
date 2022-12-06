@@ -1,6 +1,6 @@
 .ONESHELL:
 development: app.py
-	. venv/bin/activate
+	. bioenv/bin/activate
 	export FLASK_APP=app.py
 	export FLASK_DEBUG=1
 	export FLASK_ENV=development
